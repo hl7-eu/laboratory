@@ -1,0 +1,71 @@
+/* Define colors here */
+
+:root {
+
+  --ig-status-text-color: #002060; /* 1. IG Title and status text color */
+  /* --navbar-bg-color: #26407e; 2. Header container color */
+  --navbar-bg-color: #505050; /* 2. Header container color */
+  /* --footer-bg-color: #777799;  3. Footer background color*/
+  --footer-bg-color: #707070; /* 3. Footer background color*/
+  /* 4 --footer-container-bg-color: #2d457e; . Footer container color */
+  --footer-container-bg-color:#505050; /* 4. Footer container color */
+
+  --stripe-bg-color: #999999; /* 5. Header strip color */
+
+  --btn-hover-color: #808080;  /* 6. Menu button hover color */
+  --btn-active-color: #da0c23; /* 7. Menu button active color */
+  --btn-text-color: #e6e6e6; /* 8. Menu button text color */
+  --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
+  --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
+  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
+  --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
+  --link-color: #334c99; /* 13. Hyperlink text color */
+  --link-hover-color: #492f7a; /* 14. Hyperlink text hover color */
+
+  --publish-box-bg-color: #ffff99; /* 15. Publish box background color */
+  --publish-box-border: 1px solid #aaaa00; /* 16.  Publish box border definition */
+
+  --toc-box-bg-color: #ddeeff; /* 17.  TOC box background color */
+  --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
+  
+  --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
+  --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+
+  --ig-header-color: #e6e6e6; /* 21. Header color (sides) */
+  --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
+  --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
+  --footer-text-color: #ffffff; /* 24. Footer highlight font color */
+  --footer-hyperlink-text-color: #dadacc; /* 25. Footer hyperlinks font color */
+  --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
+  --breadcrumb-bg-color: #e7e7e7  ; /* 27. Breadcrumb background color */
+  --breadcrumb-text-color: #000000; /* 28. Breadcrumb font color */
+  --dragon-background-color: #ebe7ee; /* 29. Dragon background color */
+  --dragon-font-color: #c76139; /* 30. Dragon font color */
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.4em 0;
+  color: #2d457e;
+}
+
+p, li {
+  font-size: 13px;
+}
+
+table.grid td {
+  font-size: 13px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.4em 0;
+  color: #2d457e;
+}
+
+p, li {
+  font-size: 13px;
+}
+
+table.grid td {
+  font-size: 13px;
+}

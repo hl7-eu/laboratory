@@ -1,0 +1,49 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" lang="en">
+
+<a name="scope">  </a>
+<h3>Scope</h3>
+<p>
+    This is the HL7 FHIR Implementation Guide for Laboratory Report HL7 Europe project, created to assist work with pilot product list product data in FHIR. 
+</p>
+
+	<p>
+    The specification herewith documented is a demo working specification, and may not be used for any implementation purposes. 
+    No liability can be inferred from the use or misuse of this specification, or its consequences.
+  </p>
+
+<a name="project">  </a>
+<h3>The project</h3>
+<p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a hendrerit ante, a efficitur neque. Fusce pulvinar pellentesque risus, vel aliquet ante aliquet eu. Pellentesque non dui accumsan, feugiat augue in, sollicitudin felis. Curabitur dignissim venenatis leo, ut finibus lacus ornare at. Quisque sem diam, mollis vel luctus et, egestas rutrum arcu. Maecenas placerat, nisi sit amet faucibus dapibus, ante ex imperdiet enim, at porttitor erat tortor et felis. Maecenas auctor, elit at fermentum pellentesque, libero magna elementum leo, id molestie neque nisi fermentum odio. Suspendisse potenti. Quisque luctus ligula nec sapien tincidunt sodales.
+
+Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In tempor felis eget eros eleifend egestas. Integer a tellus tortor. Ut auctor metus justo, ut fermentum tellus dapibus id. Phasellus convallis rutrum est nec consequat. Vivamus in libero quis ex blandit euismod a eu arcu. Phasellus sollicitudin dui blandit eros malesuada maximus. Curabitur mollis metus vitae turpis semper blandit. Cras eu mi eget ex posuere aliquet quis rhoncus mauris. Donec hendrerit urna eget purus ultrices ullamcorper. Vivamus eget porttitor mi.
+
+In velit nulla, iaculis sed lorem ut, interdum imperdiet mauris. Quisque interdum diam purus, vel faucibus risus vulputate sit amet. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut maximus nulla ac nisi condimentum, ac ornare orci gravida. Nullam convallis tincidunt pretium. Ut ac nisi dolor. Donec efficitur orci pellentesque, rutrum ipsum vel, iaculis ante.
+
+Quisque at mauris rutrum, pellentesque ex eu, volutpat mauris. Suspendisse potenti. In tortor mi, volutpat eget malesuada quis, pulvinar vel lectus. Nulla facilisi. Morbi in arcu mauris. Duis lobortis vehicula dui vel dapibus. Ut molestie nisi id eros tincidunt aliquam. Cras vulputate neque sed feugiat finibus.
+
+Donec accumsan tempor enim, vel fermentum magna imperdiet vel. Nunc quis nisi id orci sodales lobortis. Vestibulum massa purus, tincidunt nec congue pharetra, ultrices ac velit. Duis in convallis neque. Integer elementum, purus at viverra mattis, tellus arcu rutrum ex, a aliquam lacus turpis a justo. Nam id mi magna. Maecenas sed elementum ligula.
+
+</p>
+
+<a name="dependencies">  </a>
+<h3>Dependencies</h3>
+
+{% include dependency-table.xhtml %}
+
+<a name="x-versions">  </a>
+<h3>Cross Version Analysis</h3>
+
+{% include cross-version-analysis.xhtml %}
+
+<a name="global">  </a>
+<h3>Global Profiles</h3>
+
+{% include globals-table.xhtml %}
+
+<a name="authors">  </a>
+<h3>Authors and Contributors</h3>
+
+
+</div>
