@@ -27,7 +27,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^definition = "{def}" 
 
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
-// SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamXpandh)
+// SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
 
 * entry contains {name} 0..1
 * entry[{name}] {card} MS
@@ -54,7 +54,7 @@ RuleSet: AlertSectionRules
   * entry 0..
   * insert SectionEntrySliceComRules(Alerts, Alerts)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagXpandh)
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEu)
   * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
     Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
     DetectedIssue)
@@ -76,6 +76,6 @@ RuleSet: CareTeamSectionRules
 
   * entry 0..
   * insert SectionEntrySliceComRules(Care Teams, Care Teams)
-  * insert SectionEntrySliceDefRules (cteam, 0.. , Care Team , Care Team , CareTeamXpandh)
+  * insert SectionEntrySliceDefRules (cteam, 0.. , Care Team , Care Team , CareTeamEu)
   * insert NoSubSectionsRules
 

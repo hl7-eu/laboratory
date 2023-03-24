@@ -1,5 +1,5 @@
-ValueSet: LabOrderCodesXeH
-Id: lab-orderCodes-xpandh
+ValueSet: LabOrderCodesEu
+Id: lab-orderCodes-eu-lab
 Title: "Lab Order Codes"
 Description: "Laboratory Order Codes for use in  HL7 Europe."
 * ^experimental = true

@@ -1,5 +1,5 @@
-ValueSet:      LabTechniqueXpandh
-Id:	       lab-technique-xpandh
+ValueSet:      LabTechniqueEu
+Id:	       lab-technique-eu-lab
 Title:	       "Lab Technique"
 Description:   "Laboratory Technique [SNOMED CT]"
 * ^status = #draft

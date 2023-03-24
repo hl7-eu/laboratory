@@ -1,10 +1,10 @@
-Profile: CompositionLabReportXpandh
+Profile: CompositionLabReportEu
 Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Id: Composition-lab-xpandh
+Id: Composition-eu-lab
 Title: "Composition: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-* ^publisher = "HL7 Europe Project"
-* ^copyright = "HL7 Europe Project"
+* ^publisher = "HL7 Europe"
+* ^copyright = "HL7 Europe"
 * . ^short = "Laboratory Report composition"
 * . ^definition = "Laboratory Report composition.
 \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
@@ -12,17 +12,17 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // should we make it 0.. ?
 // or have text repeated here and in the sections ?
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
-* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabXpandh)
+* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 /*
 * extension contains DiagnosticReportReference named diagnostic-report 1..1
- * extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabXpandh)
+ * extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabEu)
 * extension[diagnostic-report].valueReference 1..1 
 */
 
 /*  TO DO Header
 - add optional data enterer
-- add optional Xpandh Information Recipient
+- add optional Eu Information Recipient
 - defiend rules for attester to distiguish  Authenticators and Legal Auth 
 - ordering provider mapped into the order details 
 - addc Lab DocumentationOf.serviceEvent details
@@ -37,7 +37,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^short = "Kind of composition (\"Laboratory Report\")"
   * ^definition = "Specifies that this composition refer to a Laboratory Report"  
   // slice the subject tp cover the three cases of human ; non-human and mixed
-* subject only Reference(PatientXpandh or Patient or Group or Location or Device)
+* subject only Reference(PatientEu or Patient or Group or Location or Device)
 * subject 1..1
 * encounter only Reference (Encounter)  // profile defined for other scopes to be checked
 * author 1..
@@ -90,46 +90,46 @@ How to manage the annotation section ? should it be a separate section ?
 // Single section  0 .. 1
 // -------------------------------------
 
-// RH - Add 'xeh-' to the slice name, to clarify that there are potentially other "non-xpandh" sections that do not meet the "xeh" sets of constraints
-* section contains xeh-no-subsections ..* // check if ..1 or ..*
-* section[xeh-no-subsections] ^short = "Variant 1: XeH section with text and entry"
+// RH - Add 'lab-' to the slice name, to clarify that there are potentially other "non-eu-lab" sections that do not meet the "EU Laboratory Report" sets of constraints
+* section contains lab-no-subsections ..* // check if ..1 or ..*
+* section[lab-no-subsections] ^short = "Variant 1: EU Laboratory Report section with text and entry"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
 
-* section[xeh-no-subsections].code from LabStudyTypesXpandh (preferred)
+* section[lab-no-subsections].code from LabStudyTypesEu (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-* section[xeh-no-subsections].text ^short = "Text summary of the section, for human interpretation."
+* section[lab-no-subsections].text ^short = "Text summary of the section, for human interpretation."
 
 // add slices check the needed resources
 // check structure of XD-LAB
 // RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-// * section[xeh-no-subsections].entry only Reference (DiagnosticReportLabXpandh or ObservationResultsLaboratoryXpandh)
+// * section[lab-no-subsections].entry only Reference (DiagnosticReportLabEu or ObservationResultsLaboratoryEu)
  // GC - decided to move the DiagnosticReport reference to an extension, instead
-* section[xeh-no-subsections].entry only Reference (ObservationResultsLaboratoryXpandh)
-* section[xeh-no-subsections].section ..0
+* section[lab-no-subsections].entry only Reference (ObservationResultsLaboratoryEu)
+* section[lab-no-subsections].section ..0
 
 // -------------------------------------
 // Structured sections  0 .. 1
 // -------------------------------------
 
-// RH - Add 'xeh-' to the slice name, to clarify that there are potentially other "non-xpandh" sections that do not meet the "xeh" sets of constraints
-* section contains xeh-subsections ..* // check if ..1 or ..*
-* section[xeh-subsections] ^short = "Variant 2: XeH section with one to many subsections Laboratory Report Item"
+// RH - Add 'lab-' to the slice name, to clarify that there are potentially other "non-eu-lab" sections that do not meet the "EU Laboratory Report" sets of constraints
+* section contains lab-subsections ..* // check if ..1 or ..*
+* section[lab-subsections] ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
 // * section ^definition = "This section contains data describing an interest or worry about a health state or process that could possibly require attention, intervention, or management. A Health Concern is a health related matter that is of interest, importance or worry to someone, who may be the patient, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR (such as Problem List, Family History, Social History, Social Worker Note, etc.). Health concerns can be medical, surgical, nursing, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members."
-/* * section[xeh-subsections].title 1..
-* section[xeh-subsections].code 1.. */
-* section[xeh-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-// Should we also include the LabStudyTypesXpandh (preferred) binding here?
-* section[xeh-subsections].code from LabStudyTypesXpandh (preferred)
+/* * section[lab-subsections].title 1..
+* section[lab-subsections].code 1.. */
+* section[lab-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// Should we also include the LabStudyTypesEu (preferred) binding here?
+* section[lab-subsections].code from LabStudyTypesEu (preferred)
 // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-* section[xeh-subsections].text 0..0
-* section[xeh-subsections].entry 0..0
-// * section[xeh-subsections].text only Narrative
+* section[lab-subsections].text 0..0
+* section[lab-subsections].entry 0..0
+// * section[lab-subsections].text only Narrative
 // add slices check the needed resoucres
-* section[xeh-subsections].section 1..
+* section[lab-subsections].section 1..
   * code 1..
   * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-  // And include the LabStudyTypesXpandh (preferred) binding for the subsection here?
-  * code from LabStudyTypesXpandh (preferred)
+  // And include the LabStudyTypesEu (preferred) binding for the subsection here?
+  * code from LabStudyTypesEu (preferred)
   // * section.code = http://loinc.org#75310-3 (exactly) // add binding
   * text ^short = "Text summary of the section, for human interpretation."
   * entry 1..
@@ -137,8 +137,8 @@ How to manage the annotation section ? should it be a separate section ?
   //* text only Narrative
   // add slices check the needed resoucres
   // check structure of XD-LAB
-  * entry only Reference (ObservationResultsLaboratoryXpandh)
-  // * section.entry only Reference (DiagnosticReportLabXpandh or ObservationResultsLaboratoryXpandh)
+  * entry only Reference (ObservationResultsLaboratoryEu)
+  // * section.entry only Reference (DiagnosticReportLabEu or ObservationResultsLaboratoryEu)
 
 // -------------------------------------
 // Payer section  0 .. 1

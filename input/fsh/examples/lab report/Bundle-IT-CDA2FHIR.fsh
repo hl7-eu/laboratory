@@ -1,5 +1,5 @@
 Instance: IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883
-InstanceOf: BundleLabReportXpandh
+InstanceOf: BundleLabReportEu
 Title: "Bundle Converted from CDA"
 Description: "Example of FHIR bundle converted from a CDA Lab report"
 Usage: #example

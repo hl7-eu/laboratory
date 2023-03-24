@@ -1,11 +1,11 @@
-Profile: PatientXpandh
+Profile: PatientEu
 Parent: $Patient-uv-ips 
-Id: Patient-eu-xpandh
+Id: Patient-eu-lab
 Title:    "Patient"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the  HL7 Europe project."
 * identifier MS
 * name 1..* MS
-* name obeys xeh-pat-1
+* name obeys eu-pat-1
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
 * name.text MS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
@@ -21,7 +21,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * contact.relationship only $CodeableConcept-uv-ips
 * generalPractitioner MS
 
-Invariant: xeh-pat-1
+Invariant: eu-pat-1
 Description: "Patient.name.given, Patient.name.family or Patient.name.text SHALL be present"
 Severity: #error
 Expression: "family.exists() or given.exists() or text.exists()"

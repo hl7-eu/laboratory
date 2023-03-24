@@ -39,8 +39,8 @@ Title: "eHN Lab Order model to FHIR R4 Map"
 Source: Order				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "Composition.extension('http://hl7.eu/fhir/ig/xpandh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
-* orderDetails -> "Composition.extension('http://hl7.eu/fhir/ig/xpandh/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
+* -> "Composition.extension('http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
+* orderDetails -> "Composition.extension('http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
 * orderDetails.identifier -> "ServiceRequest.identifier"				
 * orderDetails.dateTime -> "ServiceRequest.authoredOn"				
 * orderDetails.orderPlacerIdentifier -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).identifier"				

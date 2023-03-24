@@ -1,5 +1,5 @@
-ValueSet:      LabStudyTypesXpandh
-Id:	       lab-studyType-xpandh
+ValueSet:      LabStudyTypesEu
+Id:	       lab-studyType-eu-lab
 Title:	       "Lab Study Types"
 Description:   "Laboratory Specialties.\r\n
 Notes:\r\n

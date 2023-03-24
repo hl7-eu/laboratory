@@ -44,7 +44,6 @@ Alias: $event-statusReason = http://hl7.org/fhir/StructureDefinition/event-statu
 Alias: $procedure-method = http://hl7.org/fhir/StructureDefinition/procedure-method
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
-// Alias: $composition-diagnostic-report-reference = http://hl7.eu/fhir/ig/xpandh/StructureDefinition/composition-DiagnosticReportReference
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 
 // --- Profiles

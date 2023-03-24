@@ -1,5 +1,5 @@
-ValueSet:      LabSpecimenTypesXpandh
-Id:	       lab-specimenType-xpandh
+ValueSet:      LabSpecimenTypesEu
+Id:	       lab-specimenType-eu-lab
 Title:	       "Lab Specimen Types"
 Description:   "Laboratory Specimen."
 * ^status = #draft
@@ -109,8 +109,8 @@ Description:   "Laboratory Specimen."
 * $sct#1003705007   "Drain tip submitted as specimen"
 
 
-ValueSet:      LabSpecimenContainerXpandh
-Id:	       lab-specimenContainer-xpandh
+ValueSet:      LabSpecimenContainerEu
+Id:	       lab-specimenContainer-eu-lab
 Title:	       "Lab Specimen Container"
 Description:   "Laboratory specimen containers."
 * ^status = #draft
@@ -177,8 +177,8 @@ Description:   "Laboratory specimen containers."
 * $sct#767385003	"Aerobic blood culture bottle"
 * $sct#767383005	"Anaerobic blood culture bottle"
 
-ValueSet:      LabSpecimenAdditiveXpandh
-Id:	       lab-specimenAdditive-xpandh
+ValueSet:      LabSpecimenAdditiveEu
+Id:	       lab-specimenAdditive-eu-lab
 Title:	       "Lab Specimen Additive"
 Description:   "Laboratory specimen additives."
 * ^status = #draft

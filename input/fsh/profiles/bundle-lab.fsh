@@ -1,10 +1,10 @@
-Profile: BundleLabReportXpandh
+Profile: BundleLabReportEu
 Parent: Bundle
-Id: Bundle-lab-xpandh
+Id: Bundle-eu-lab
 Title: "Bundle: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-* ^publisher = "HL7 Europe Project"
-* ^copyright = "HL7 Europe Project"
+* ^publisher = "HL7 Europe"
+* ^copyright = "HL7 Europe"
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
 * identifier ^short = "Business identifier for this Laboratory Report"
@@ -27,13 +27,13 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry ^slicing.rules = #open
 
 * entry contains composition 1..1
-* entry[composition].resource only CompositionLabReportXpandh
+* entry[composition].resource only CompositionLabReportEu
 
 * entry contains diagnosticReport 1..1
-* entry[diagnosticReport].resource only DiagnosticReportLabXpandh
+* entry[diagnosticReport].resource only DiagnosticReportLabEu
 
 * entry contains patient 0..1
-* entry[patient].resource only PatientXpandh
+* entry[patient].resource only PatientEu
 
 * entry contains observation 0..*
 * entry[observation].resource only Observation // Add profiles
@@ -42,4 +42,4 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[specimen].resource only Specimen // Add profiles
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only ServiceRequestLabXpandh // Add profiles
+* entry[serviceRequest].resource only ServiceRequestLabEu // Add profiles

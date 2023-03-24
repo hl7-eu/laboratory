@@ -2,17 +2,17 @@
 //====== RuleSet =====================================
 
 /* RuleSet: OrderCommonRules
-* ^publisher = "HL7 Europe Project"
-* ^copyright = "HL7 Europe Project"
+* ^publisher = "HL7 Europe"
+* ^copyright = "HL7 Europe"
 * identifier 1..
 * category 1.. 
 * code 1..
 * subject 1.. */
 
 
-Profile: ServiceRequestLabXpandh
+Profile: ServiceRequestLabEu
 Parent: ServiceRequest
-Id: ServiceRequest-lab-xpandh
+Id: ServiceRequest-eu-lab
 Title: "ServiceRequest: Laboratory Order"
 Description: "ServiceRequest used to represent a Laboratory Order for the scope of the HL7 Europe project."
 // Clarify when to use ServiceRequest and RequestGroup
@@ -22,11 +22,11 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
 * identifier 1..
 /* * category 1..  */
 * code 1..
-* code from LabOrderCodesXeH (preferred)
+* code from LabOrderCodesEu (preferred)
 * subject 1..
-* subject only Reference (PatientXpandh or Patient or Group or Location or Device)
+* subject only Reference (PatientEu or Patient or Group or Location or Device)
 * requisition ^short = "Composite Request ID." 
-* specimen	only Reference (SpecimenXpandh)
+* specimen	only Reference (SpecimenEu)
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?
 * insurance only Reference (Coverage)

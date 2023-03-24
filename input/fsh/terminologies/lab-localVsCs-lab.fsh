@@ -1,16 +1,16 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ValueSet: LaboratoryLocalVS
-Id: lab-localVs-xpandh
+Id: lab-localVs-eu-lab
 Title: "Local Laboratory Codes VS"
 Description: "Local laboratory codes Value Set"
 //-------------------------------------------------------------------------------------------
 * ^experimental = true
-* codes from system http://hl7.eu/fhir/ig/xpandh/CodeSystem/laboratory-local-cs
+* codes from system http://hl7.eu/fhir/laboratory/CodeSystem/laboratory-local-cs
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CodeSystem: LaboratoryLocalCS
-Id: lab-localCs-xpandh
+Id: lab-localCs-eu-lab
 Title: "Local Laboratory Codes CS"
 Description: "Local laboratory codes Code System"
 * ^experimental = true
