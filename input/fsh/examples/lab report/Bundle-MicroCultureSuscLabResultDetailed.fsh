@@ -1,5 +1,5 @@
-Instance: BundleMicroCultureSuscLabResult
-InstanceOf: BundleLabReportEu
+Instance: BundleLabResultMicroCultureSusc
+InstanceOf: BundleLabReportMicroCultSuscEu
 Title: "Bundle Microbiology Culture + Susceptibility Lab Result"
 Description: "Microbiology Culture + Susceptibility Lab Result"
 Usage: #example
@@ -63,7 +63,7 @@ Usage: #example
 * entry[=].resource = Inline-Observation-anaerobic-culture
 
 Instance: Inline-Composition-micro
-InstanceOf: Composition
+InstanceOf: CompositionLabReportMicroCultSuscEu
 Usage: #inline
 * id = "4789a3ee-92b1-41b2-9b97-83daacf2a239"
 /* * extension[+].url = $composition-diagnostic-report-reference
@@ -82,7 +82,7 @@ Usage: #inline
 * attester[=].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * section[+].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section[=].code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
+* section[=].code = $loinc#18725-2 "MICROBIOLOGY STUDIES"
 * section.section[+].code.text = "Gram Stain"
 * section.section[=].entry = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
 * section.section[+].code.text = "Aerobic Culture"
@@ -117,7 +117,7 @@ Usage: #inline
 * name = "Ministry of Health of the Czech Republic"
 
 Instance: Inline-Diag-Report-micro
-InstanceOf: DiagnosticReport-eu-lab
+InstanceOf: DiagnosticReportLabMicroCultSuscEu
 Usage: #inline
 * id = "b864303b-91ab-4e29-ad74-31a7d6566875"
 * extension[+].url = $diagnostic-report-composition-r5
