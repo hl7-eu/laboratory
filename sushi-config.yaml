@@ -5,7 +5,7 @@ title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -21,7 +21,7 @@ publisher:
 #
 dependencies:
   hl7.fhir.uv.ips: current  
-  hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.extensions.r5: 5.0.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
