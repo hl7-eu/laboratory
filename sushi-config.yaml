@@ -42,8 +42,8 @@ dependencies:
 pages:
   index.xml:
     title: Home
-#  background.md:
-#    title: Background
+  background.md:
+    title: Background
   examples.md:
     title: Examples
   downloads.md:
@@ -81,7 +81,7 @@ pages:
 menu:
   Home: index.html
   Table of Contents: toc.html
- # Background: background.html
+  Background: background.html
   Examples: examples.html
   Artifacts: artifacts.html
   Downloads: downloads.html
