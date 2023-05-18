@@ -87,66 +87,35 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 
 // RH - Add 'lab-' to the slice name, to clarify that there are potentially other "non-eu-lab" sections that do not meet the "EU Laboratory Report" sets of constraints
 * section contains lab-no-subsections ..* // check if ..1 or ..*
-* section[lab-no-subsections] ^short = "Variant 1: EU Laboratory Report section with text and entry"
-* section ^definition = """Variant 1: With this option, the Section text SHALL be present and not blank. This narrative block SHALL present to the human reader, all the observations produced for this Specialty, using the various structures available for the FHIR  Narrative. The narrative block should be fully derived from the entry containing the machine-readable result data. Additionally, Laboratory Report Data Entries SHALL be present. This entry contains the machine-readable result data from which the narrative block of this section should be derived."""
+* section[lab-no-subsections]
+  * ^short = "Variant 1: EU Laboratory Report section with text and entry"
+  * ^definition = """Variant 1: With this option, the Section text SHALL be present and not blank. This narrative block SHALL present to the human reader, all the observations produced for this Specialty, using the various structures available for the FHIR  Narrative. The narrative block should be fully derived from the entry containing the machine-readable result data. Additionally, Laboratory Report Data Entries SHALL be present. This entry contains the machine-readable result data from which the narrative block of this section should be derived."""
 
-* section[lab-no-subsections].code from LabStudyTypesEu (preferred)
-// * section.code = http://loinc.org#75310-3 (exactly) // add binding
-* section[lab-no-subsections].text ^short = "Text summary of the section, for human interpretation."
-
-// add slices check the needed resources
-// check structure of XD-LAB
-// RH - allow a choice of both DiagnosticReport (optional) and Observation Results Lab (can be a single observation, or a grouper of nested observations)
-// * section[lab-no-subsections].entry only Reference (DiagnosticReportLabEu or ObservationResultsLaboratoryEu)
- // GC - decided to move the DiagnosticReport reference to an extension, instead
-* section[lab-no-subsections].entry only Reference (ObservationResultsLaboratoryEu)
-* section[lab-no-subsections].section ..0
+  * code from LabStudyTypesEu (preferred)
+  * text ^short = "Text summary of the section, for human interpretation."
+  * entry only Reference (ObservationResultsLaboratoryEu)
+  * entry 1..
+  * section ..0
 
 // -------------------------------------
 // Structured sections  0 .. 1
 // -------------------------------------
-
-// RH - Add 'lab-' to the slice name, to clarify that there are potentially other "non-eu-lab" sections that do not meet the "EU Laboratory Report" sets of constraints
 * section contains lab-subsections ..* // check if ..1 or ..*
-* section[lab-subsections] ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
-* section ^definition = """Varient 2: With this option, this Laboratory Specialty Section SHALL contain NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding Laboratory Report Item Section which contains the Lab Report Data Entry."""
-/* * section[lab-subsections].title 1..
-* section[lab-subsections].code 1.. */
-* section[lab-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-// Should we also include the LabStudyTypesEu (preferred) binding here?
-* section[lab-subsections].code from LabStudyTypesEu (preferred)
-* section[lab-subsections].text 0..0
-* section[lab-subsections].entry 0..0
-// * section[lab-subsections].text only Narrative
-// add slices check the needed resoucres
-* section[lab-subsections].section 1..
-  * code 1..
-  * code only $CodeableConcept-uv-ips
-  // And include the LabStudyTypesEu (preferred) binding for the subsection here?
+* section[lab-subsections]
+  * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
+  * ^definition = """Varient 2: With this option, this Laboratory Specialty Section SHALL contain NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding Laboratory Report Item Section which contains the Lab Report Data Entry."""
+  * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
   * code from LabStudyTypesEu (preferred)
-  // * section.code = http://loinc.org#75310-3 (exactly) // add binding
-  * text ^short = "Text summary of the section, for human interpretation."
-  * entry 1..
-  // RH - this constraint to only Narrative is already in the base Composition resource  
-  //* text only Narrative
-  // add slices check the needed resoucres
-  // check structure of XD-LAB
-  * entry only Reference (ObservationResultsLaboratoryEu)
-  // * section.entry only Reference (DiagnosticReportLabEu or ObservationResultsLaboratoryEu)
-
-// -------------------------------------
-// Payer section  0 .. 1
-// Payer information moved to ServiceRequest
-// -------------------------------------
-
-/* * section contains payers ..* // check if ..1 or ..*
-* section[payers]
-  * ^short = "Payer section"
-  * ^definition = "	Optional information on sources of reimbursement of the performed laboratory tests."
-  * code = http://loinc.org#48768-6 (exactly) // add binding
-  * text 1..
-  * entry only Reference (Coverage)
-  * section ..0 */
+  * text 0..0
+  * entry 0..0
+  * section 1..
+    * code 1..
+    * code only $CodeableConcept-uv-ips
+    * code from LabStudyTypesEu (preferred)
+    * text ^short = "Text summary of the section, for human interpretation."
+    * entry 1..
+    * entry only Reference (ObservationResultsLaboratoryEu)
+    * section 0..0
 
 // -------------------------------------
 // Annotation section  0 .. 1
