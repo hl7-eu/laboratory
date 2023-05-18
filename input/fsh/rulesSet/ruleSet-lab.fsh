@@ -20,16 +20,9 @@ RuleSet: ReportIdentifierRule
   * ^constraint.key = "same-labRpt-id"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.identifier and Composition.identifier shall be aligned"
-/* 
-RuleSet: ReportTypeRule
-* ^short = "Type of (Laboratory) Report"
-* ^definition = "Specifies that it refers to a Laboratory Report"
-* ^constraint.key = "same-labRpt-code"
-* ^constraint.severity = #warning
-* ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned" */
+
 
 RuleSet: ReportTypeRule (element)
-
 * {element} 1..
 * {element}  only $CodeableConcept-uv-ips
 * {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
