@@ -3,30 +3,29 @@
 <a name="scope">  </a>
 <h3>Scope</h3>
 <p>
-    This is the HL7 FHIR Implementation Guide for Laboratory Report HL7 Europe project, created to assist work with pilot product list product data in FHIR. 
+    Define a set of common rules to be applied to HL7 FHIR to define how to represent a <b>Laboratory Report</b> in the <b>European</b> Context.
 </p>
 
-	<p>
-    The specification herewith documented is a demo working specification, and may not be used for any implementation purposes. 
-    No liability can be inferred from the use or misuse of this specification, or its consequences.
-  </p>
-
-<a name="project">  </a>
-<h3>The project</h3>
+<blockquote class="stu-note">
 <p>
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a hendrerit ante, a efficitur neque. Fusce pulvinar pellentesque risus, vel aliquet ante aliquet eu. Pellentesque non dui accumsan, feugiat augue in, sollicitudin felis. Curabitur dignissim venenatis leo, ut finibus lacus ornare at. Quisque sem diam, mollis vel luctus et, egestas rutrum arcu. Maecenas placerat, nisi sit amet faucibus dapibus, ante ex imperdiet enim, at porttitor erat tortor et felis. Maecenas auctor, elit at fermentum pellentesque, libero magna elementum leo, id molestie neque nisi fermentum odio. Suspendisse potenti. Quisque luctus ligula nec sapien tincidunt sodales.
-
-Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In tempor felis eget eros eleifend egestas. Integer a tellus tortor. Ut auctor metus justo, ut fermentum tellus dapibus id. Phasellus convallis rutrum est nec consequat. Vivamus in libero quis ex blandit euismod a eu arcu. Phasellus sollicitudin dui blandit eros malesuada maximus. Curabitur mollis metus vitae turpis semper blandit. Cras eu mi eget ex posuere aliquet quis rhoncus mauris. Donec hendrerit urna eget purus ultrices ullamcorper. Vivamus eget porttitor mi.
-
-In velit nulla, iaculis sed lorem ut, interdum imperdiet mauris. Quisque interdum diam purus, vel faucibus risus vulputate sit amet. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut maximus nulla ac nisi condimentum, ac ornare orci gravida. Nullam convallis tincidunt pretium. Ut ac nisi dolor. Donec efficitur orci pellentesque, rutrum ipsum vel, iaculis ante.
-
-Quisque at mauris rutrum, pellentesque ex eu, volutpat mauris. Suspendisse potenti. In tortor mi, volutpat eget malesuada quis, pulvinar vel lectus. Nulla facilisi. Morbi in arcu mauris. Duis lobortis vehicula dui vel dapibus. Ut molestie nisi id eros tincidunt aliquam. Cras vulputate neque sed feugiat finibus.
-
-Donec accumsan tempor enim, vel fermentum magna imperdiet vel. Nunc quis nisi id orci sodales lobortis. Vestibulum massa purus, tincidunt nec congue pharetra, ultrices ac velit. Duis in convallis neque. Integer elementum, purus at viverra mattis, tellus arcu rutrum ex, a aliquam lacus turpis a justo. Nam id mi magna. Maecenas sed elementum ligula.
-
+    The specification herewith documented is work in progress. 
+    No liability can be inferred from the use or misuse of this specification, or its consequences.
 </p>
+</blockquote>
 
+<a name="purpose"></a>
+<h3>Purpose</h3>
+<p>
+The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the future European EHR eXchange Format.
+</p>
+<p>This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and project.</p>
+
+<p>The aspiration of this guide is that to be used as basis for European National Guides, the Euroepan EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.</p>
+<a name="background"> </a>
+<h3>Background</h3>
+<p>
+The project background and the reasons for the design choiches (FHIR document including also the DiagnosticReport resource) are described in the <a href="background.html">background page</a>.
+</p>
 <a name="dependencies">  </a>
 <h3>Dependencies</h3>
 
@@ -44,6 +43,6 @@ Donec accumsan tempor enim, vel fermentum magna imperdiet vel. Nunc quis nisi id
 
 <a name="authors">  </a>
 <h3>Authors and Contributors</h3>
-
+<i>TBD who should be listed here</i>
 
 </div>

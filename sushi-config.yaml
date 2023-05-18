@@ -9,7 +9,8 @@ fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+# https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
   name:  HL7 Europe
   url: http://hl7.eu
@@ -42,6 +43,8 @@ dependencies:
 pages:
   index.xml:
     title: Home
+  background.md:
+    title: Background
   examples.md:
     title: Examples
   downloads.md:
@@ -59,7 +62,8 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
+parameters:
+  apply-jurisdiction: true
 #  produce-jekyll-data: true
 #  special-url:
 #    - https://spor.ema.europa.eu/v1/lists/100000000004
@@ -79,6 +83,7 @@ pages:
 menu:
   Home: index.html
   Table of Contents: toc.html
+  Background: background.html
   Examples: examples.html
   Artifacts: artifacts.html
   Downloads: downloads.html

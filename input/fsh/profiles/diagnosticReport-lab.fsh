@@ -2,7 +2,7 @@ Profile: DiagnosticReportLabEu
 Parent: DiagnosticReport
 Id: DiagnosticReport-eu-lab
 Title: "DiagnosticReport: Laboratory Report"
-Description: "CDiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project."
+Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project."
 * ^publisher = "HL7 Europe"
 * ^copyright = "HL7 Europe"
 * . ^short = "Laboratory Report DiagnosticReport"
@@ -29,12 +29,25 @@ Annotation Comment
 
 * basedOn only Reference ( ServiceRequestLabEu )
 * basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
-* status ^short = "Status of this report"
-* category 1.. // 1.. ?
-* code from LabStudyTypesEu (preferred) 
-* code 1..
-* subject 1..
-* subject only Reference (PatientEu or Patient or Group or Location or Device)
+
+* insert ReportIdentifierRule
+* insert ReportCategoryRule 
+// add binding
+/* * code 1.. 
+* code only $CodeableConcept-uv-ips
+* code from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
+* code ^binding.extension.extension[0].url = "purpose"
+* code ^binding.extension.extension[=].valueCode = #candidate
+* code ^binding.extension.extension[+].url = "valueSet"
+* code ^binding.extension.extension[=].valueCanonical = LabStudyTypesEu
+* code ^binding.extension.extension[+].url = "documentation"
+* code ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
+* code ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* code ^binding.description = "Laboratory Specialties." */
+
+* insert ReportTypeRule ( code )
+* insert ReportSubjectRule
+
 * encounter only Reference (Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles

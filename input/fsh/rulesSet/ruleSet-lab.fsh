@@ -1,5 +1,59 @@
 
+RuleSet: ReportStatusRule
+* status ^short = "Status of this report" 
+// add voc binding aligned with DiagReprt
+// shall be the same ?
 
+RuleSet: ReportSubjectRule
+* subject 1..
+* subject only Reference (PatientEu or Patient or Group or Location or Device)
+  * ^short = "Who and/or what this report is about"
+  * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
+  * ^constraint.key = "same-labRpt-subject"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.subject and Composition.subject shall be aligned"
+
+RuleSet: ReportIdentifierRule
+* identifier
+  * ^short = "Report identifier"
+  * ^definition = "Business identifier of this report (common to several report versions - setID)"
+  * ^constraint.key = "same-labRpt-id"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.identifier and Composition.identifier shall be aligned"
+/* 
+RuleSet: ReportTypeRule
+* ^short = "Type of (Laboratory) Report"
+* ^definition = "Specifies that it refers to a Laboratory Report"
+* ^constraint.key = "same-labRpt-code"
+* ^constraint.severity = #warning
+* ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned" */
+
+RuleSet: ReportTypeRule (element)
+
+* {element} 1..
+* {element}  only $CodeableConcept-uv-ips
+* {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
+  * ^binding.extension.extension[0].url = "purpose"
+  * ^binding.extension.extension[=].valueCode = #candidate
+  * ^binding.extension.extension[+].url = "valueSet"
+  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabStudyTypesEu )
+  * ^binding.extension.extension[+].url = "documentation"
+  * ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
+  * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+  * ^binding.description = "Laboratory Specialties."
+  * ^short = "Type of (Laboratory) Report"
+  * ^definition = "Specifies that it refers to a Laboratory Report"
+  * ^constraint.key = "same-labRpt-code"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned"
+
+RuleSet: ReportCategoryRule
+* category only $CodeableConcept-uv-ips
+  * ^short = "Report Category"
+  * ^definition = "Specifies the Report Category: usually Laboratory"
+  * ^constraint.key = "same-labRpt-category"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.category and Composition.category shall be aligned"
 
 RuleSet: SectionComRules (short, def, code)
 
@@ -39,43 +93,4 @@ RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 RuleSet: NoSubSectionsRules
 * section ..0
 * section ^mustSupport = false
-
-//====================================
-// COMMON SECTIONS
-//====================================
-RuleSet: AlertSectionRules
-// Alert Section used for the HDR and PS composition
-* section contains alertSection ..1 MS
-* section[alertSection]
-  * insert SectionComRules ( 
-    Health Concern Section, // SHORT
-      This section contains data describing an interest or worry about a health state or process that could possibly require attention\, intervention\, or management. A Health Concern is a health related matter that is of interest\, importance or worry to someone\, who may be the patient\, patient's family or patient's health care provider. Health concerns are derived from a variety of sources within an EHR\, such as Problem List\, Family History\, Social Histor\, Social Worker Note\, etc. Health concerns can be medical\, surgical\, nursing\, allied health or patient-reported concerns. Problem Concerns are a subset of Health Concerns that have risen to the level of importance that they typically would belong on a classic “Problem List”\, such as “Diabetes Mellitus” or “Family History of Melanoma” or “Tobacco abuse”. These are of broad interest to multiple members of the care team. Examples of other Health Concerns that might not typically be considered a Problem Concern include “Risk of Hyperkalemia” for a patient taking an ACE-inhibitor medication\, or “Transportation difficulties” for someone who doesn't drive and has trouble getting to appointments\, or “Under-insured” for someone who doesn't have sufficient insurance to properly cover their medical needs such as medications. These are typically most important to just a limited number of care team members, // DESC
-      http://loinc.org#75310-3 )   // CODE
-  * entry 0..
-  * insert SectionEntrySliceComRules(Alerts, Alerts)
-  // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEu)
-  * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
-    Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
-    DetectedIssue)
-
-  * insert SectionEntrySliceDefRules (riskAssessment, 0.. , Risk Assessment,
-    An assessment of the likely outcomes for a patient or other subject as well as the likelihood of each outcome. ,
-    RiskAssessment)
- 
-//========================================================
-
-RuleSet: CareTeamSectionRules
-* section contains CareTeamSection ..1 MS
-
-* section[CareTeamSection]
-  * insert SectionComRules ( 
-      Care Team Section, // SHORT
-      The Care Team Section is used to share historical and current Care Team information., // DESC
-      http://loinc.org#85847-2 )   // CODE
-
-  * entry 0..
-  * insert SectionEntrySliceComRules(Care Teams, Care Teams)
-  * insert SectionEntrySliceDefRules (cteam, 0.. , Care Team , Care Team , CareTeamEu)
-  * insert NoSubSectionsRules
 

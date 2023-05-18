@@ -1,11 +1,16 @@
 
+<!--
 ### BiologicallyDerivedProduct
 
 <ul>{% include list-simple-biologicallyderivedproducts.xhtml %}</ul>
 
+-->
+
 ### Bundle
 
 <ul>{% include list-simple-bundles.xhtml %}</ul>
+
+<!--
 
 ### CarePlan
 
@@ -60,6 +65,10 @@
 ### Procedure
 
 <ul>{% include list-simple-procedures.xhtml %}</ul>
+
+-->
+
+<p></p>
 
 
 **Examples:** all the examples that are used in this Implementation Guide available for download:
