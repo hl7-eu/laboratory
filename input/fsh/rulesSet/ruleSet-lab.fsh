@@ -20,14 +20,32 @@ RuleSet: ReportIdentifierRule
   * ^constraint.key = "same-labRpt-id"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.identifier and Composition.identifier shall be aligned"
-
+/* 
 RuleSet: ReportTypeRule
 * ^short = "Type of (Laboratory) Report"
 * ^definition = "Specifies that it refers to a Laboratory Report"
 * ^constraint.key = "same-labRpt-code"
 * ^constraint.severity = #warning
-* ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned"
+* ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned" */
 
+RuleSet: ReportTypeRule (element)
+
+* {element} 1..
+* {element}  only $CodeableConcept-uv-ips
+* {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
+  * ^binding.extension.extension[0].url = "purpose"
+  * ^binding.extension.extension[=].valueCode = #candidate
+  * ^binding.extension.extension[+].url = "valueSet"
+  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabStudyTypesEu )
+  * ^binding.extension.extension[+].url = "documentation"
+  * ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
+  * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+  * ^binding.description = "Laboratory Specialties."
+  * ^short = "Type of (Laboratory) Report"
+  * ^definition = "Specifies that it refers to a Laboratory Report"
+  * ^constraint.key = "same-labRpt-code"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned"
 
 RuleSet: ReportCategoryRule
 * category only $CodeableConcept-uv-ips
