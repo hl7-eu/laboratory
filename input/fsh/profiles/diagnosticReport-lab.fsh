@@ -29,12 +29,15 @@ Annotation Comment
 
 * basedOn only Reference ( ServiceRequestLabEu )
 * basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
-* status ^short = "Status of this report"
-* category 1.. // 1.. ?
-* code from LabStudyTypesEu (preferred) 
-* code 1..
-* subject 1..
-* subject only Reference (PatientEu or Patient or Group or Location or Device)
+
+* insert ReportIdentifierRule
+* insert ReportCategoryRule 
+// add binding
+* code 1.. 
+* code only $CodeableConcept-uv-ips
+* code from LabStudyTypesEu (preferred) // value set to be revised
+  * insert ReportTypeRule
+* insert ReportSubjectRule
 * encounter only Reference (Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles

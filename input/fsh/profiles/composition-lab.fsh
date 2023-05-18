@@ -30,15 +30,17 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 */
 
 * text ^short = "Narrative text"
-* identifier ^short = "Business identifier of the Laboratory Report (setID)"
-* status ^short = "Status of the Report"
-* type = $loinc#11502-2 // change to a VS binding
-* type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-  * ^short = "Kind of composition (\"Laboratory Report\")"
-  * ^definition = "Specifies that this composition refer to a Laboratory Report"  
+* insert ReportIdentifierRule
+* status ^short = "Status of the Report" // add voc binding aligned with DiagReprt
+// * category 1.. // add VS binding
+* insert ReportCategoryRule 
+// * type = $loinc#11502-2 // change to a VS binding
+* type only $CodeableConcept-uv-ips
+* type from LabStudyTypesEu (preferred) // value set to be revised
+  * insert ReportTypeRule
+
   // slice the subject tp cover the three cases of human ; non-human and mixed
-* subject only Reference(PatientEu or Patient or Group or Location or Device)
-* subject 1..1
+* insert ReportSubjectRule
 * encounter only Reference (Encounter)  // profile defined for other scopes to be checked
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
