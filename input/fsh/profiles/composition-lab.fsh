@@ -35,9 +35,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // * category 1.. // add VS binding
 * insert ReportCategoryRule 
 // * type = $loinc#11502-2 // change to a VS binding
-* type only $CodeableConcept-uv-ips
-* type from LabStudyTypesEu (preferred) // value set to be revised
-  * insert ReportTypeRule
+
+* insert ReportTypeRule ( type )
 
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * insert ReportSubjectRule
@@ -54,10 +53,6 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 // ServiceRequest and/or RequestGroup
 
-// add attester
-// RH - attester is already being included above?
-
-
 /*  IS THE SLICE NEEDED IN THIS CASE ?
 // check with the XDlab structure */
 
@@ -70,13 +65,6 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open
 
-
-/* TO DO
-
-How to manage the Payer data ? should it be a separate section ? sboud they be part of the diagnosticReport ?
-How to manage the annotation section ? should it be a separate section ?
-
-*/
 
 // --------------------------------------
 // Common rules for all the sections
@@ -122,14 +110,13 @@ How to manage the annotation section ? should it be a separate section ?
 * section[lab-subsections].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 // Should we also include the LabStudyTypesEu (preferred) binding here?
 * section[lab-subsections].code from LabStudyTypesEu (preferred)
-// * section.code = http://loinc.org#75310-3 (exactly) // add binding
 * section[lab-subsections].text 0..0
 * section[lab-subsections].entry 0..0
 // * section[lab-subsections].text only Narrative
 // add slices check the needed resoucres
 * section[lab-subsections].section 1..
   * code 1..
-  * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+  * code only $CodeableConcept-uv-ips
   // And include the LabStudyTypesEu (preferred) binding for the subsection here?
   * code from LabStudyTypesEu (preferred)
   // * section.code = http://loinc.org#75310-3 (exactly) // add binding
