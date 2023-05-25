@@ -40,7 +40,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * insert ReportSubjectRule
-* encounter only Reference (Encounter)  // profile defined for other scopes to be checked
+* insert ReportEncounterRule
 * author 1..
 * author ^short = "Who and/or what authored the Laboratory Report"
 * author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."

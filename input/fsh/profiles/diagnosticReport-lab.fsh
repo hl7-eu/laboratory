@@ -47,12 +47,12 @@ Annotation Comment
 
 * insert ReportTypeRule ( code )
 * insert ReportSubjectRule
-
-* encounter only Reference (Encounter) // profile defined for other scopes to be checked
+* insert ReportEncounterRule
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-* specimen only Reference ( SpecimenEu )
+* specimen only Reference (SpecimenEu)
 * specimen ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)
 * result ^short = "results" 
 * imagingStudy 0..0
+* presentedForm ^short = "Entire report as issued (pdf recommended)"
