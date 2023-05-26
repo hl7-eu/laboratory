@@ -42,9 +42,12 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * insert ReportSubjectRule
 * insert ReportEncounterRule
 * author 1..
-* author ^short = "Who and/or what authored the Laboratory Report"
-* author ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
+  * ^short = "Who and/or what authored the Laboratory Report"
+  * ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
+  * insert ReportAuthorRule 
+  
 * attester 1.. // RH - should attester be 1.. or 0..? - since author is also required? 
+* attester ^comment = "For a Laboratory Report it is usually non expected that the attester would be a Patient or a RealtedPerson"
 * event ^short = "The laboratory service(s) being documented"
 // add details about the service
 * title 1..

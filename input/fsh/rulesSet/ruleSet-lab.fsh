@@ -4,6 +4,11 @@ RuleSet: ReportStatusRule
 // add voc binding aligned with DiagReprt
 // shall be the same ?
 
+RuleSet: ReportAuthorRule
+* ^constraint.key = "labRpt-author"
+* ^constraint.severity = #warning
+* ^constraint.human = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author." 
+
 
 RuleSet: ReportEncounterRule
 * encounter only Reference (Encounter)
@@ -26,7 +31,7 @@ RuleSet: ReportSubjectRule
 RuleSet: ReportIdentifierRule
 * identifier
   * ^short = "Report identifier"
-  * ^definition = "Business identifier of this report (common to several report versions - setID)"
+  * ^definition = "Identifiers assigned to this Laboratory Report by the performer or other systems. It shall be common to several report versions"
   * ^constraint.key = "labRpt-id"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.identifier and Composition.identifier shall be aligned"

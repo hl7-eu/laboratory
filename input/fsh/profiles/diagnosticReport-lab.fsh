@@ -28,8 +28,15 @@ Annotation Comment
 */
 
 * basedOn only Reference ( ServiceRequestLabEu )
-* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
 
+/* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..* */
+
+* identifier
+  * ^comment = "Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order."
+  
 * insert ReportIdentifierRule
 * insert ReportCategoryRule 
 // add binding
@@ -50,9 +57,12 @@ Annotation Comment
 * insert ReportEncounterRule
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
+  * insert ReportAuthorRule
+* resultsInterpreter
+  * insert ReportAuthorRule
 * specimen only Reference (SpecimenEu)
-* specimen ^short = "Specimens this report is based on."
+  * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)
-* result ^short = "results" 
+  * ^short = "results" 
 * imagingStudy 0..0
 * presentedForm ^short = "Entire report as issued (pdf recommended)"
