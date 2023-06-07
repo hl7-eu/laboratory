@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: OrderLabEhn				
 Id: Order				
-Title: "Order (A2, A3)"				
+Title: "A.2,A.3 - Order"				
 Description:  """Order information (A.2) and reason (A3)"""				
 * orderDetails 0..1 BackboneElement "A.2 Order information" """A.2 Order information (Laboratory Result Report could respond to multiple test orders) """				
 * orderDetails.identifier 0..* Identifier "A.2.1 Order Id" """An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."""				

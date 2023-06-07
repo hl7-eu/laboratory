@@ -13,4 +13,4 @@ Description: "Clinical document used to represent a specialized Laboratory Repor
 * status ^short = "Status of the Microbiology Culture & Susceptibility Report"
 * title ^short = "Laboratory Microbiology Culture & Susceptibility Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Microbiology Culture & Susceptibility Report\" or any equivalent translation"
-* section.code = $loinc#18725-2 "MICROBIOLOGY STUDIES" (exactly)
+* section.code = $loinc#18725-2 "Microbiology studies (set)" (exactly)

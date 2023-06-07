@@ -65,8 +65,8 @@ pages:
 parameters:
   apply-jurisdiction: true
 #  produce-jekyll-data: true
-#  special-url:
-#    - https://spor.ema.europa.eu/v1/lists/100000000004
+  special-url:
+    - http://hl7.eu/fhir/StructureDefinition/information-recipient
 
 
 #   excludettl: true
@@ -139,7 +139,15 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 
-# resources:
+resources: 
+  ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
+    name: DiagnosticReport to Composition status mapping
+    description: Proposed relationship between the statused used in the DiagnosticReport resource and that used for the Composition.
+
+  ConceptMap/ConceptMap-eu-labRpt2FHIR:
+    name: eHN Lab Report model to this guide mapping
+    description: It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide.
+ 
 #  Patient/my-example-patient:
 #    name: My Example Patient
 #    description: An example Patient
@@ -162,9 +170,24 @@ menu:
 groups:
   eHNGuidelines:
     name:  eHN Laboratory Guidelines
-    description: Logical model representing the eHN Laboratory Guidelines
+    description: Logical models representing the eHN Laboratory Guidelines
     resources:
       - StructureDefinition/LabReport
+      - StructureDefinition/Subject
+      - StructureDefinition/Author
+      - StructureDefinition/Validator
+      - StructureDefinition/LegalAuthenticator
+      - StructureDefinition/Recipient      
+      - StructureDefinition/Order      
+      - StructureDefinition/Result
+      - StructureDefinition/SpecimenLab
+      - StructureDefinition/Payer
+
+  logicalModelsMaps:
+    name:  Logical Model mappings
+    description: Concept Maps describing how the eHN Laboratory Guidelines are supposed to be implemented by using this guide
+    resources:
+      - ConceptMap/ConceptMap-eu-labRpt2FHIR
 
 
 #

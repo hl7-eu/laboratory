@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: SubjectLabEhn				
 Id: Subject				
-Title: "Subject of care (A1.1 - A1.2)"				
+Title: "A.1.1, A.1.2 - Subject of care"				
 Description:  """Patient or Subject of care"""				
 * identification 1..1 BackboneElement "A.1.1 Identification of the patient/subject" """A.1.1 Identification of the patient/subject"""				
 * identification.familyName 0..* string "A.1.1.1 Familyname/surname" """The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."""				

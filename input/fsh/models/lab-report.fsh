@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: LabReportEhn				
 Id: LabReport				
-Title: "Laboratory Report"				
+Title: "A - Laboratory Report"				
 Description:  """Laboratory Report"""				
 * header 1..1 BackboneElement "A.1 Report header data elements" """A.1 Report header data elements"""				
 * header.subject 1..1 SubjectLabEhn "A.1.1 - A1.2 Patient/subject" """A.1.1 Identification of the patient/subject and A.1.2 Patient/subject related contact information  """				

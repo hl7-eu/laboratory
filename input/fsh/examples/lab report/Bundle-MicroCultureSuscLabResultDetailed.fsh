@@ -83,7 +83,7 @@ Usage: #inline
 * attester[=].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * section[+].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section[=].code = $loinc#18725-2 "MICROBIOLOGY STUDIES"
+* section[=].code = $loinc#18725-2 "Microbiology studies (set)"
 * section.section[+].code.text = "Gram Stain"
 * section.section[=].entry = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
 * section.section[+].code.text = "Aerobic Culture"

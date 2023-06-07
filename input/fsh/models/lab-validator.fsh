@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: ValidatorLabEhn				
 Id: Validator				
-Title: "Result validator (A.1.7)"				
+Title: "A.1.7 - Result validator"				
 Description:  """A.1.7 Result validator"""				
 * identifier 0..1 Identifier "A.1.7.1 Result validator identifier" """The health professional identification number. Either an internal identifier assign by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number.  - Preferred system(s): """				
 * name 0..* HumanName "A.1.7.2 Result validator name" """Person name. - Preferred system(s): """				

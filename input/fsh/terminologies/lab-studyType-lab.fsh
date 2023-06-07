@@ -5,7 +5,7 @@ Description:   "Laboratory Specialties.\r\n
 Notes:\r\n
 Note 1:26436-6 (LABORATORY STUDIES) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\r\n
 Note 2:18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacology observations on a patient.\r\n
-Note 3:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (MICROBIOLOGY STUDIES) specialty.\r\n
+Note 3:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) specialty.\r\n
 Note 4:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES) or split between both specialties, depending upon the Content Creator Actor’s choice."
 
 * ^experimental = false
@@ -17,7 +17,7 @@ Note 4:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 1
 * $loinc#18722-9 "FERTILITY STUDIES"
 * $loinc#18723-7 "HEMATOLOGY STUDIES"
 * $loinc#18724-5 "HLA STUDIES"
-* $loinc#18725-2 "MICROBIOLOGY STUDIES"
+* $loinc#18725-2 "Microbiology studies (set)"
 * $loinc#18727-8 "SEROLOGY STUDIES"
 * $loinc#18728-6 "TOXICOLOGY STUDIES"
 * $loinc#18729-4 "URINALYSIS STUDIES"
