@@ -4,6 +4,9 @@ Title:	       "Lab Specimen Types"
 Description:   "Laboratory Specimen."
 * ^status = #draft
 * ^experimental = false
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * $sct#119376003	"Tissue specimen"
 * $sct#119359002	"Bone marrow specimen"
 * $sct#122571007	"Pericardial fluid"

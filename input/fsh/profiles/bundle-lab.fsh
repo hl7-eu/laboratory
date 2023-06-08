@@ -3,8 +3,9 @@ Parent: Bundle
 Id: Bundle-eu-lab
 Title: "Bundle: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-* ^publisher = "HL7 Europe"
-* ^copyright = "HL7 Europe"
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
 * identifier ^short = "Business identifier for this Laboratory Report"

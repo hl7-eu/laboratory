@@ -15,6 +15,8 @@ publisher:
   name:  HL7 Europe
   url: http://hl7.eu
   # email: test@example.org
+copyright: >-
+  Used by permission of HL7 Europe, all rights reserved Creative Commons License
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -45,6 +47,8 @@ pages:
     title: Home
   background.md:
     title: Background
+  design-choice.md:
+    title: Design choices
   examples.md:
     title: Examples
   downloads.md:
@@ -62,12 +66,43 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-parameters:
-  apply-jurisdiction: true
+parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #  produce-jekyll-data: true
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
 
+# see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# path-resource:
+#    - input/resources
+#    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontent
+#    - input/intro-notes   
+#  active-tables: false
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  # excludexml: false
+  # excludejson: false
+  # excludettl: true
+  # excludemap: true
+ # suppressed-ids: DocumentReference/discharge-summary
+ # tabbed-snapshots: false
+  # generate: #what does this do - todo: remove and see4
+  #   - xml
+  #   - json
+ # no-narrative:
+ #   - Patient/example-targeted-provenance
+ #   - Bundle/docref-example-1  
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+ # version-comparison:
+ #    - 5.0.1
+ #    - 4.0.0
 
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
@@ -83,7 +118,9 @@ parameters:
 menu:
   Home: index.html
   Table of Contents: toc.html
-  Background: background.html
+  Background:
+    Background: background.html
+    Design Choice: design-choice.html
   Examples: examples.html
   Artifacts: artifacts.html
   Downloads: downloads.html

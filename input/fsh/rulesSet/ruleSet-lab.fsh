@@ -1,4 +1,11 @@
 
+
+
+
+RuleSet: SetFmmandStatusRule ( fmm, status )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
+
 RuleSet: ReportStatusRule
 * status ^short = "Status of this report" 
 // add voc binding aligned with DiagReprt

@@ -5,6 +5,9 @@ Title: "Local Laboratory Codes VS"
 Description: "Local laboratory codes Value Set"
 //-------------------------------------------------------------------------------------------
 * ^experimental = true
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * codes from system http://hl7.eu/fhir/laboratory/CodeSystem/laboratory-local-cs
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

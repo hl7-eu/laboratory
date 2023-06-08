@@ -9,6 +9,9 @@ Note 3:Mycology and parasitology, as well as bacteriology, are part of the 18725
 Note 4:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) specialty or 18727-8 (SEROLOGY STUDIES) or split between both specialties, depending upon the Content Creator Actor’s choice."
 
 * ^experimental = false
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * $loinc#18717-9 "BLOOD BANK STUDIES"
 * $loinc#18718-7 "CELL MARKER STUDIES"
 * $loinc#18719-5 "CHEMISTRY STUDIES"

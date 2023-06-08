@@ -3,8 +3,9 @@ Parent: DiagnosticReport
 Id: DiagnosticReport-eu-lab
 Title: "DiagnosticReport: Laboratory Report"
 Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project."
-* ^publisher = "HL7 Europe"
-* ^copyright = "HL7 Europe"
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 * extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
