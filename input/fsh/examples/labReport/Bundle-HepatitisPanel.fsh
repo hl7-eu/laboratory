@@ -81,7 +81,7 @@ Usage: #inline
 * name = "Ministry of Health of the Czech Republic"
 
 Instance: Inline-Diag-Report-hepatitis-panel
-InstanceOf: DiagnosticReport-eu-lab
+InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "3a743273-237a-446a-a8da-9e7521cce614"
 /* * extension[+].url = $diagnostic-report-composition-r5

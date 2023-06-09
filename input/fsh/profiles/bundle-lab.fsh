@@ -24,7 +24,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
-* entry ^slicing.ordered = false
+* entry ^slicing.ordered = true
 * entry ^slicing.rules = #open
 
 * entry contains composition 1..1
