@@ -23,5 +23,5 @@ Description: "This profile constrains the Observation resource to represent vari
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
 * performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
 * value[x] MS
-* hasMember only Reference(ObservationResultsEu or QuestionnaireResponse or MolecularSequence)
+* hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
 * component MS
