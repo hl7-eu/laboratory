@@ -15,15 +15,12 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
-/*
-* extension contains DiagnosticReportReference named diagnostic-report 1..1
- * extension[diagnostic-report].valueReference only Reference(DiagnosticReportLabEu)
-* extension[diagnostic-report].valueReference 1..1 
-*/
+* extension contains InformationRecipient named information-recipient 0..*
+* extension[information-recipient]
+
 
 /*  TO DO Header
 - add optional data enterer
-- add optional Eu Information Recipient
 - defiend rules for attester to distiguish  Authenticators and Legal Auth 
 - ordering provider mapped into the order details 
 - addc Lab DocumentationOf.serviceEvent details
@@ -32,7 +29,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule
-* status ^short = "Status of the Report" // add voc binding aligned with DiagReprt
+* insert ReportStatusRule
 // * category 1.. // add VS binding
 * insert ReportCategoryRule 
 // * type = $loinc#11502-2 // change to a VS binding
@@ -47,13 +44,23 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
   * insert ReportAuthorRule 
   
-* attester 1.. // RH - should attester be 1.. or 0..? - since author is also required? 
-* attester ^comment = "For a Laboratory Report it is usually non expected that the attester would be a Patient or a RealtedPerson"
-* event ^short = "The laboratory service(s) being documented"
-// add details about the service
+* attester 0.. // RH - should attester be 1.. or 0..? - since author is also required? 
+  * ^short = "Attests the report accuracy"
+  * mode ^short = "The type of attestation"
+  * time ^short = "When the report was attested by the party"
+  * party 
+    * ^short = "Who attested the report"
+    * ^comment = "For a Laboratory Report it is usually non expected that the attester would be a Patient or a RealtedPerson"
+
+* event 
+  * ^short = "The laboratory service(s) being documented"
+  * code ^short =	"Code(s) that apply to the laboratory service(s) being documented"
+  * period ^short = "Period of time covered by the documentation"
+  * detail ^short = "The laboratory service(s) being documented"
+
 * title 1..
-* title ^short = "Laboratory Report"
-* title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
+  * ^short = "Laboratory Report"
+  * ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
 
 // ServiceRequest and/or RequestGroup
 

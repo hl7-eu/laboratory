@@ -6,16 +6,17 @@ RuleSet: SetFmmandStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 
-RuleSet: ReportStatusRule
-* status ^short = "Status of this report" 
-// add voc binding aligned with DiagReprt
-// shall be the same ?
 
 RuleSet: ReportAuthorRule
 * ^constraint.key = "labRpt-author"
 * ^constraint.severity = #warning
 * ^constraint.human = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author." 
 
+RuleSet: ReportStatusRule
+* status ^short = "Status of the Report" // add voc binding aligned with DiagReprt
+  * ^constraint.key = "labRpt-status"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping" 
 
 RuleSet: ReportEncounterRule
 * encounter only Reference (Encounter)

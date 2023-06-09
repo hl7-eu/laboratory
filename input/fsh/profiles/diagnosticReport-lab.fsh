@@ -8,9 +8,9 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
-* extension[DiagnosticReportCompositionR5].value[x] only Reference(CompositionLabReportEu)
-* extension[DiagnosticReportCompositionR5].value[x] 1..1
+* extension contains $diagnostic-report-composition-r5 named diagnosticReportCompositionR5 1..1
+* extension[diagnosticReportCompositionR5].value[x] only Reference(CompositionLabReportEu)
+* extension[diagnosticReportCompositionR5].value[x] 1..1
 
 /*
 content to be referred...
@@ -29,6 +29,8 @@ Annotation Comment
 */
 
 * basedOn only Reference ( ServiceRequestLabEu )
+
+* insert ReportStatusRule
 
 /* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11 

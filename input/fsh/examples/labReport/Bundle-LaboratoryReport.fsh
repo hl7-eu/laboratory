@@ -46,7 +46,7 @@ Instance: Inline-DiagReport-laboratory-results-report-poc
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "3a743273-237a-446a-a8da-9e7521cce614"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Inline-Composition-laboratory-results-report-poc)
+* extension[diagnosticReportCompositionR5].valueReference = Reference(Inline-Composition-laboratory-results-report-poc)
 * status = #final
 * category = $v2-0074#MB "Microbiology"
 * code = $loinc#11502-2 "Laboratory report"
