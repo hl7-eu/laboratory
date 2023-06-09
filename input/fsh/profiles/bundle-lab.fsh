@@ -34,7 +34,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
 * entry contains patient 0..1
-* entry[patient].resource only PatientEu
+* entry[patient].resource only Patient or PatientEu
 
 * entry contains observation 0..*
 * entry[observation].resource only Observation // Add profiles
