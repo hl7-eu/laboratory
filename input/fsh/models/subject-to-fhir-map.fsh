@@ -5,7 +5,7 @@ Instance: ConceptMap-eu-subject2FHIR
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
-* name = "ConceptMapSubj2DiagRpt"					
+* name = "Subject2Fhir"					
 * title = "eHN Subject to this guide Map"					
 * status = #draft					
 * experimental = true					
@@ -19,7 +19,7 @@ Usage: #definition
 					
 * group[=].element[+].code = #Subject.identification					
 * group[=].element[=].display = "A.1.1 Identification of the patient/subject"					
-* group[=].element[=].target.code = #Patient.$this					
+* group[=].element[=].target.code = #Patient					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					

@@ -23,7 +23,7 @@ RuleSet: ReportEncounterRule
   * ^constraint.key = "labRpt-enc"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.encounter and Composition.encounter shall be aligned"  
-  * ^short = "The healthcare event which this Laboratory Report is about."
+  * ^short = "The healthcare event which this Laboratory Report is about (when test ordered)."
   * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
   * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests)."""
 

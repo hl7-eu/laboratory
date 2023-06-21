@@ -33,3 +33,4 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?
 * insurance only Reference (Coverage)
+* authoredOn ^short = "When the order was placed"

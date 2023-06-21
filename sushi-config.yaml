@@ -178,12 +178,48 @@ menu:
 
 resources: 
   ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
-    name: DiagnosticReport to Composition status mapping
-    description: Proposed relationship between the statused used in the DiagnosticReport resource and that used for the Composition.
+    name: DiagnosticReport to Composition status
+    description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
 
   ConceptMap/ConceptMap-eu-labRpt2FHIR:
-    name: eHN Lab Report model to this guide mapping
+    name: eHN Lab Report model to this guide
     description: It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-payer2FHIR:
+    name: eHN Payer model to this guide
+    description: It shows how the Payer data set defined by the EU eHN guidelines is mapped into this guide.
+  
+  ConceptMap/ConceptMap-eu-recipient2FHIR:
+    name: eHN Recipient model to this guide
+    description: It shows how the Recipient data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-subject2FHIR:
+    name: eHN Subject model to this guide
+    description: It shows how the Subject data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-author2FHIR:
+    name: eHN Author model to this guide
+    description: It shows how the Author data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-legalAuth2FHIR:
+    name: eHN Legal Authenticator model to this guide
+    description: It shows how the Legal Authenticator data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-order2FHIR:
+    name: eHN Order model to this guide
+    description: It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-validator2FHIR:
+    name: eHN Validator model to this guide
+    description: It shows how the Validator data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-specimen2FHIR:
+    name: eHN Specimen model to this guide
+    description: It shows how the Specimen data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-result2FHIR:
+    name: eHN Result model to this guide
+    description: It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide. 
  
 #  Patient/my-example-patient:
 #    name: My Example Patient
@@ -192,8 +228,6 @@ resources:
 #  Patient/bad-example: omit
 
  
-
-
 #
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that
@@ -225,6 +259,17 @@ groups:
     description: Concept Maps describing how the eHN Laboratory Guidelines are supposed to be implemented by using this guide
     resources:
       - ConceptMap/ConceptMap-eu-labRpt2FHIR
+      - ConceptMap/ConceptMap-eu-payer2FHIR
+      - ConceptMap/ConceptMap-eu-recipient2FHIR
+      - ConceptMap/ConceptMap-eu-subject2FHIR
+      - ConceptMap/ConceptMap-eu-author2FHIR
+      - ConceptMap/ConceptMap-eu-order2FHIR
+      - ConceptMap/ConceptMap-eu-legalAuth2FHIR
+      - ConceptMap/ConceptMap-eu-validator2FHIR
+      - ConceptMap/ConceptMap-eu-specimen2FHIR
+      - ConceptMap/ConceptMap-eu-result2FHIR
+   
+
 
 
 #

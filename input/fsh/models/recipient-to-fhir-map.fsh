@@ -5,7 +5,7 @@ Instance: ConceptMap-eu-recipient2FHIR
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
-* name = "RecipientMapPayer2FHIR"					
+* name = "Recipient2FHIR"					
 * title = "eHN Recipient to this guide Map"					
 * status = #draft					
 * experimental = true					

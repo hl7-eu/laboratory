@@ -5,7 +5,7 @@ Instance: ConceptMap-eu-payer2FHIR
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
-* name = "ConceptMapPayer2DiagRpt"					
+* name = "Payer2Fhir"					
 * title = "eHN Payer to this guide Map"					
 * status = #draft					
 * experimental = true					
