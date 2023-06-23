@@ -67,5 +67,5 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
   * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)
   * ^short = "results" 
-* imagingStudy 0..0
+//* imagingStudy 0..0
 * presentedForm ^short = "Entire report as issued (pdf recommended)"

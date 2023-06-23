@@ -1,6 +1,7 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					labRpt-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
+/*
 Instance: ConceptMap-eu-diagRptStatus2CompStatus					
 InstanceOf: ConceptMap					
 Usage: #definition					
@@ -135,3 +136,4 @@ Usage: #definition
 * group[=].element[=].target.code = #unknown				
 * group[=].element[=].target.display = "Unknown"					
 * group[=].element[=].target.equivalence = #relatedto
+*/

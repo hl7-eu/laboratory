@@ -54,7 +54,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * event 
   * ^short = "The laboratory service(s) being documented"
-  * code ^short =	"Code(s) that apply to the laboratory service(s) being documented"
+  //* code ^short =	"Code(s) that apply to the laboratory service(s) being documented"
   * period ^short = "Period of time covered by the documentation"
   * detail ^short = "The laboratory service(s) being documented"
 

@@ -44,7 +44,7 @@ Usage: #inline
 * date = "2022-10-25T14:30:00+01:00"
 * author[+].display = "MUDr. Aleš Procházka"
 * title = "Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30"
-* confidentiality = #N
+//* confidentiality = #N
 * attester[+].mode = #legal
 * attester[=].time = "2020-12-27T14:30:00+01:00"
 * attester[=].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)

@@ -13,8 +13,8 @@ Description: "HL7 Europe Specimen profile."
 * type 1..1
 * collection.bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
-* container.type from LabSpecimenContainerEu (preferred)
-
+//* container.type from LabSpecimenContainerEu (preferred)
+//how to convey this info?
 // ----------------------------------------
 
 Profile: SpecimenAdditiveSubstance

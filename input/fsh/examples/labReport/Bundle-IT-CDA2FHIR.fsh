@@ -88,7 +88,7 @@ Usage: #inline
 * author[+] = Reference(urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c)
 * author[+] = Reference(urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30)
 * title = "REFERTO DI LABORATORIO"
-* confidentiality = #N
+//* confidentiality = #N
 * attester[+].mode = #professional
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
 * attester[+].mode = #legal
@@ -99,7 +99,7 @@ Usage: #inline
 * attester[=].party = Reference(urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1)
 * custodian = Reference(urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d)
 * event.period.start = "2022-03-24T11:24:26+01:00"
-* event.detail = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
+* event.detail.reference = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
 * section.title = "Esami delle Urine"
 * section.code = http://loinc.org#18729-4 "Urinalysis studies (set)"
 * section.code.text = "ESAMI DELLE URINE"
@@ -164,9 +164,9 @@ Usage: #inline
 * basedOn = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
 * participant[+].type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#REF
 * participant[=].period.start = "2022-03-20T11:00:00+01:00"
-* participant[=].individual = Reference(urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1)
-* participant[+].individual = Reference(urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094)
-* period.start = "2022-03-30T11:24:26+01:00"
+* participant[=].actor = Reference(urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1)
+* participant[+].actor = Reference(urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094)
+* actualPeriod.start = "2022-03-30T11:24:26+01:00"
 * location.location = Reference(urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
@@ -185,7 +185,7 @@ Usage: #inline
 * custodian = Reference(urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d)
 * content.attachment.contentType = urn:ietf:bcp:13#text/plain
 * content.attachment.title = "string"
-* context.related = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+* basedOn = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 InstanceOf: PractitionerRole
@@ -243,17 +243,17 @@ Usage: #inline
 * identifier.value = "120148"
 * identifier.assigner.display = "Ministero della Salute"
 * name = "SAN RAFFAELE NOMENTANA"
-* telecom.system = #phone
-* telecom.value = "390 666 0581"
-* telecom.use = #work
-* address.line = "Via Emilio Praga 39"
-* address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* address.line.extension.valueString = "058091"
-* address.city = "Roma"
-* address.district = "RM"
-* address.state = "120"
-* address.postalCode = "00137"
-* address.country = "100"
+* contact.telecom.system = #phone
+* contact.telecom.value = "390 666 0581"
+* contact.telecom.use = #work
+* contact.address.line = "Via Emilio Praga 39"
+* contact.address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
+* contact.address.line.extension.valueString = "058091"
+* contact.address.city = "Roma"
+* contact.address.district = "RM"
+* contact.address.state = "120"
+* contact.address.postalCode = "00137"
+* contact.address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
 InstanceOf: Practitioner
@@ -361,17 +361,17 @@ Usage: #inline
 * identifier.value = "120148"
 * identifier.assigner.display = "Ministero della Salute"
 * name = "SAN RAFFAELE NOMENTANA"
-* telecom.system = #phone
-* telecom.value = "390 666 0581"
-* telecom.use = #work
-* address.line = "Via Emilio Praga 39"
-* address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* address.line.extension.valueString = "058091"
-* address.city = "Roma"
-* address.district = "RM"
-* address.state = "120"
-* address.postalCode = "00137"
-* address.country = "100"
+* contact.telecom.system = #phone
+* contact.telecom.value = "390 666 0581"
+* contact.telecom.use = #work
+* contact.address.line = "Via Emilio Praga 39"
+* contact.address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
+* contact.address.line.extension.valueString = "058091"
+* contact.address.city = "Roma"
+* contact.address.district = "RM"
+* contact.address.state = "120"
+* contact.address.postalCode = "00137"
+* contact.address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
 InstanceOf: ServiceRequest
@@ -384,8 +384,8 @@ Usage: #inline
 * intent = #order
 * category = $sct#108252007 "Laboratory procedure"
 * priority = #asap
-* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
-* code.text = "Microalbumin Massa/Volume in Urine"
+* code.concept = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* code.concept.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 
@@ -456,9 +456,9 @@ Usage: #inline
 * identifier.value = "XXX"
 * identifier.assigner.display = "Ministero della Salute"
 * name = "[nome_presidio]"
-* telecom.system = #phone
-* telecom.value = "0115678965"
-* telecom.use = #work
+* contact.telecom.system = #phone
+* contact.telecom.value = "0115678965"
+* contact.telecom.use = #work
 * partOf = Reference(urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b)
 
 Instance: d5f71fc0-6075-4fed-ad99-b3c609d27f6b
