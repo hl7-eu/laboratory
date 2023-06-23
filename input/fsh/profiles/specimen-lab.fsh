@@ -4,8 +4,9 @@ Id: specimen-eu-lab
 Title: "Specimen: Laboratory"
 Description: "HL7 Europe Specimen profile."
 * ^status = #draft
-* ^publisher = "HL7 Europe"
-* ^copyright = "HL7 Europe"
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 * type from LabSpecimenTypesEu (preferred)

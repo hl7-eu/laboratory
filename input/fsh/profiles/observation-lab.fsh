@@ -5,6 +5,9 @@ Title:    "Observation Results: laboratory"
 Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Europe project.
 This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as "has-member" child observations.
 """
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
 * obeys eu-lab-1
@@ -17,23 +20,23 @@ This observation may represent the result of a simple laboratory test such as he
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
-* category contains laboratory 1..1 MS
+* category contains laboratory 1..1
 * category[laboratory] only $CodeableConcept-uv-ips
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* code MS
+* code
 * code from $results-laboratory-observations-uv-ips (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 * code ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
 * code ^binding.extension[=].valueString = "ObservationCode"
-* performer 1.. MS
+* performer 1.. 
 * performer only Reference(PractitionerRoleEu or PractitionerEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
-* value[x] MS
+* value[x]
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #closed
 * valueString only string
-* valueString MS
+// * valueString MS
 * valueString ^sliceName = "valueString"
 * valueRange only $Range-uv-ips
 * valueRange ^sliceName = "valueRange"
@@ -46,10 +49,10 @@ This observation may represent the result of a simple laboratory test such as he
 * valuePeriod only Period
 * valuePeriod ^sliceName = "valuePeriod"
 * valueQuantity only $Quantity-uv-ips
-* valueQuantity MS
+// * valueQuantity MS
 * valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept only $CodeableConcept-uv-ips
-* valueCodeableConcept MS
+// * valueCodeableConcept MS
 * valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"

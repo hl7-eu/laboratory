@@ -3,12 +3,12 @@
 // -------------------------------------------------------------------------------				
 Logical: SpecimenLabEhn				
 Id: SpecimenLab				
-Title: "Specimen information (A.4)"				
+Title: "A.4, Specimen information"				
 Description:  """A.4 Specimen information"""				
 * identifier 0..1 Identifier "A.4.1 Specimen identifier" """An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by Specimening system, identifier assigned by laboratory etc. Multiple identifiers can be used. - Preferred system(s): """				
 * speciesType 0..* CodeableConcept "A.4.2 Type of species" """Biologic type of species for laboratory result reports bound to non-human subjects. - Preferred system(s): SNOMED CT"""				
 * material 0..* CodeableConcept "A.4.3 Material" """Specimen material. - Preferred system(s): SNOMED CT"""		 		
-* dateTime 0..* dateTime "A.4.4 Collection period" """Collection date time or period. - Preferred system(s): ISO 8601"""				
+* collected 0..* dateTime "A.4.4 Collection period" """Collection date time or period. - Preferred system(s): ISO 8601"""				
 * anatomicLocation 0..* CodeableConcept "A.4.5 Anatomic location" """Anatomic location (body location, laterality) where the material is collected, e.g. Elbow, left - Preferred system(s): SNOMED CT"""				
 * morphology 0..* CodeableConcept "A.4.6 Morphology" """Morphological abnormalities of the anatomical location where the material is taken, for example wound, ulcer. - Preferred system(s): SNOMED CT"""				
 * sourceDevice 0..* CodeableConcept "A.4.7 Source Device" """If the material is not collected directly from the patient but comes from a patient-related object, e.g. a catheter
@@ -38,11 +38,11 @@ Title: "eHN Lab Specimen model to FHIR R4 Map"
 Source: SpecimenLab				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "Observation.conformsTo('http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-results-eu-lab').specimen.resolve()"				
+* -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh').specimen.resolve()"				
 * identifier -> "Specimen.identifier"				
 * speciesType -> "Specimen.type"				
 * material -> "to be mapped"				
-* dateTime -> "Specimen.collection.collected[x]"				
+* collected -> "Specimen.collection.collected[x]"				
 * anatomicLocation -> "Specimen.collection.bodySite"				
 * morphology -> "Specimen.collection.bodySite.extension(qualifier) (TBD)"				
 * sourceDevice -> "Specimen.container"				

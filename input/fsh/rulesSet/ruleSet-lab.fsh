@@ -1,35 +1,51 @@
 
+
+
+
+RuleSet: SetFmmandStatusRule ( fmm, status )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
+
+
+RuleSet: ReportAuthorRule
+* ^constraint.key = "labRpt-author"
+* ^constraint.severity = #warning
+* ^constraint.human = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author." 
+
 RuleSet: ReportStatusRule
-* status ^short = "Status of this report" 
-// add voc binding aligned with DiagReprt
-// shall be the same ?
+* status ^short = "Status of the Report" // add voc binding aligned with DiagReprt
+  * ^constraint.key = "labRpt-status"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping" 
+
+RuleSet: ReportEncounterRule
+* encounter only Reference (Encounter)
+  * ^constraint.key = "labRpt-enc"
+  * ^constraint.severity = #warning
+  * ^constraint.human = "DiagnosticReport.encounter and Composition.encounter shall be aligned"  
+  * ^short = "The healthcare event which this Laboratory Report is about (when test ordered)."
+  * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
+  * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests)."""
 
 RuleSet: ReportSubjectRule
 * subject 1..
 * subject only Reference (PatientEu or Patient or Group or Location or Device)
   * ^short = "Who and/or what this report is about"
   * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
-  * ^constraint.key = "same-labRpt-subject"
+  * ^constraint.key = "labRpt-subject"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.subject and Composition.subject shall be aligned"
 
 RuleSet: ReportIdentifierRule
 * identifier
   * ^short = "Report identifier"
-  * ^definition = "Business identifier of this report (common to several report versions - setID)"
-  * ^constraint.key = "same-labRpt-id"
+  * ^definition = "Identifiers assigned to this Laboratory Report by the performer or other systems. It shall be common to several report versions"
+  * ^constraint.key = "labRpt-id"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.identifier and Composition.identifier shall be aligned"
-/* 
-RuleSet: ReportTypeRule
-* ^short = "Type of (Laboratory) Report"
-* ^definition = "Specifies that it refers to a Laboratory Report"
-* ^constraint.key = "same-labRpt-code"
-* ^constraint.severity = #warning
-* ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned" */
+
 
 RuleSet: ReportTypeRule (element)
-
 * {element} 1..
 * {element}  only $CodeableConcept-uv-ips
 * {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
@@ -43,7 +59,7 @@ RuleSet: ReportTypeRule (element)
   * ^binding.description = "Laboratory Specialties."
   * ^short = "Type of (Laboratory) Report"
   * ^definition = "Specifies that it refers to a Laboratory Report"
-  * ^constraint.key = "same-labRpt-code"
+  * ^constraint.key = "labRpt-code"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.code and Composition.type shall be aligned"
 
@@ -51,7 +67,7 @@ RuleSet: ReportCategoryRule
 * category only $CodeableConcept-uv-ips
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
-  * ^constraint.key = "same-labRpt-category"
+  * ^constraint.key = "labRpt-category"
   * ^constraint.severity = #warning
   * ^constraint.human = "DiagnosticReport.category and Composition.category shall be aligned"
 

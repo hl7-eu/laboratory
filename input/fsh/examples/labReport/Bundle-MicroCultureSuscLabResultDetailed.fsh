@@ -83,7 +83,7 @@ Usage: #inline
 * attester[=].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
 * section[+].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section[=].code = $loinc#18725-2 "MICROBIOLOGY STUDIES"
+* section[=].code = $loinc#18725-2 "Microbiology studies (set)"
 * section.section[+].code.text = "Gram Stain"
 * section.section[=].entry = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
 * section.section[+].code.text = "Aerobic Culture"
@@ -121,8 +121,9 @@ Instance: Inline-Diag-Report-micro
 InstanceOf: DiagnosticReportLabMicroCultSuscEu
 Usage: #inline
 * id = "b864303b-91ab-4e29-ad74-31a7d6566875"
-* extension[+].url = $diagnostic-report-composition-r5
-* extension[=].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
+/* * extension[+].url = $diagnostic-report-composition-r5
+* extension[=].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239) */
+* extension[diagnosticReportCompositionR5].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
 * status = #final
 * category = $v2-0074#LAB
 * code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"

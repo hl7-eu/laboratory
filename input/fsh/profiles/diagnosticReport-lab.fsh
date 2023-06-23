@@ -3,13 +3,14 @@ Parent: DiagnosticReport
 Id: DiagnosticReport-eu-lab
 Title: "DiagnosticReport: Laboratory Report"
 Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project."
-* ^publisher = "HL7 Europe"
-* ^copyright = "HL7 Europe"
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
-* extension[DiagnosticReportCompositionR5].value[x] only Reference(CompositionLabReportEu)
-* extension[DiagnosticReportCompositionR5].value[x] 1..1
+* extension contains $diagnostic-report-composition-r5 named diagnosticReportCompositionR5 1..1
+* extension[diagnosticReportCompositionR5].value[x] only Reference(CompositionLabReportEu)
+* extension[diagnosticReportCompositionR5].value[x] 1..1
 
 /*
 content to be referred...
@@ -28,8 +29,17 @@ Annotation Comment
 */
 
 * basedOn only Reference ( ServiceRequestLabEu )
-* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
 
+* insert ReportStatusRule
+
+/* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..* */
+
+* identifier
+  * ^comment = "Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order."
+  
 * insert ReportIdentifierRule
 * insert ReportCategoryRule 
 // add binding
@@ -47,12 +57,15 @@ Annotation Comment
 
 * insert ReportTypeRule ( code )
 * insert ReportSubjectRule
-
-* encounter only Reference (Encounter) // profile defined for other scopes to be checked
+* insert ReportEncounterRule
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-* specimen only Reference ( SpecimenEu )
-* specimen ^short = "Specimens this report is based on."
+  * insert ReportAuthorRule
+* resultsInterpreter
+  * insert ReportAuthorRule
+* specimen only Reference (SpecimenEu)
+  * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)
-* result ^short = "results" 
+  * ^short = "results" 
 * imagingStudy 0..0
+* presentedForm ^short = "Entire report as issued (pdf recommended)"

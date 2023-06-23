@@ -4,6 +4,9 @@ Title:	       "Lab Technique"
 Description:   "Laboratory Technique [SNOMED CT]"
 * ^status = #draft
 * ^experimental = false
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * $sct#125146005	"Density (qualifier value)"
 * $sct#1259932009	"Loop-mediated isothermal amplification technique (qualifier value)"
 * $sct#1259933004	"Strand displacement amplification technique (qualifier value)"

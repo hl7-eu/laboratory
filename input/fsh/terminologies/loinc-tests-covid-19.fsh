@@ -9,6 +9,9 @@ Description:   "Test List (COVID-19) from [LOINC]"
 
 * ^status = #draft
 * ^experimental = false
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * $loinc#96766-1  "GISAID sequence accession number"
 * $loinc#96896-6  "SARS coronavirus 2 (COVID-19) clade [Type] in Specimen by Molecular genetics method"
 * $loinc#96894-1  "SARS coronavirus 2 (COVID-19) whole genome sequencing and identification panel - Specimen by Molecular genetics method"

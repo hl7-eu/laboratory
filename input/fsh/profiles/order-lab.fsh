@@ -16,6 +16,9 @@ Id: ServiceRequest-eu-lab
 Title: "ServiceRequest: Laboratory Order"
 Description: "ServiceRequest used to represent a Laboratory Order for the scope of the HL7 Europe project."
 // Clarify when to use ServiceRequest and RequestGroup
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Order"
 * . ^definition = "Laboratory Order composition."
 // add binding for category and code
@@ -30,3 +33,4 @@ Description: "ServiceRequest used to represent a Laboratory Order for the scope 
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?
 * insurance only Reference (Coverage)
+* authoredOn ^short = "When the order was placed"

@@ -3,8 +3,9 @@ Parent: Bundle
 Id: Bundle-eu-lab
 Title: "Bundle: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-* ^publisher = "HL7 Europe"
-* ^copyright = "HL7 Europe"
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
 * identifier ^short = "Business identifier for this Laboratory Report"
@@ -23,7 +24,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
-* entry ^slicing.ordered = false
+* entry ^slicing.ordered = true
 * entry ^slicing.rules = #open
 
 * entry contains composition 1..1
@@ -33,7 +34,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
 * entry contains patient 0..1
-* entry[patient].resource only PatientEu
+* entry[patient].resource only Patient or PatientEu
 
 * entry contains observation 0..*
 * entry[observation].resource only Observation // Add profiles

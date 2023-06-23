@@ -3,6 +3,9 @@ Parent: $Patient-uv-ips
 Id: Patient-eu-lab
 Title:    "Patient"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the  HL7 Europe project."
+// * ^publisher = "HL7 Europe"
+// * ^copyright = "HL7 Europe"
+* insert SetFmmandStatusRule ( 0, draft )
 * identifier MS
 * name 1..* MS
 * name obeys eu-pat-1

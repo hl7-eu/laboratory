@@ -15,6 +15,8 @@ publisher:
   name:  HL7 Europe
   url: http://hl7.eu
   # email: test@example.org
+copyright: >-
+  Used by permission of HL7 Europe, all rights reserved Creative Commons License
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -45,6 +47,8 @@ pages:
     title: Home
   background.md:
     title: Background
+  design-choice.md:
+    title: Design choices
   examples.md:
     title: Examples
   downloads.md:
@@ -62,12 +66,43 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-parameters:
-  apply-jurisdiction: true
+parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #  produce-jekyll-data: true
-#  special-url:
-#    - https://spor.ema.europa.eu/v1/lists/100000000004
+  special-url:
+    - http://hl7.eu/fhir/StructureDefinition/information-recipient
 
+# see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# path-resource:
+#    - input/resources
+#    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontent
+#    - input/intro-notes   
+#  active-tables: false
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  # excludexml: false
+  # excludejson: false
+  # excludettl: true
+  # excludemap: true
+ # suppressed-ids: DocumentReference/discharge-summary
+ # tabbed-snapshots: false
+  # generate: #what does this do - todo: remove and see4
+  #   - xml
+  #   - json
+ # no-narrative:
+ #   - Patient/example-targeted-provenance
+ #   - Bundle/docref-example-1  
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+ # version-comparison:
+ #    - 5.0.1
+ #    - 4.0.0
 
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
@@ -83,7 +118,9 @@ parameters:
 menu:
   Home: index.html
   Table of Contents: toc.html
-  Background: background.html
+  Background:
+    Background: background.html
+    Design Choice: design-choice.html
   Examples: examples.html
   Artifacts: artifacts.html
   Downloads: downloads.html
@@ -139,7 +176,51 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 
-# resources:
+resources: 
+  ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
+    name: DiagnosticReport to Composition status
+    description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
+
+  ConceptMap/ConceptMap-eu-labRpt2FHIR:
+    name: eHN Lab Report model to this guide
+    description: It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-payer2FHIR:
+    name: eHN Payer model to this guide
+    description: It shows how the Payer data set defined by the EU eHN guidelines is mapped into this guide.
+  
+  ConceptMap/ConceptMap-eu-recipient2FHIR:
+    name: eHN Recipient model to this guide
+    description: It shows how the Recipient data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-subject2FHIR:
+    name: eHN Subject model to this guide
+    description: It shows how the Subject data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-author2FHIR:
+    name: eHN Author model to this guide
+    description: It shows how the Author data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-legalAuth2FHIR:
+    name: eHN Legal Authenticator model to this guide
+    description: It shows how the Legal Authenticator data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-order2FHIR:
+    name: eHN Order model to this guide
+    description: It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-validator2FHIR:
+    name: eHN Validator model to this guide
+    description: It shows how the Validator data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-specimen2FHIR:
+    name: eHN Specimen model to this guide
+    description: It shows how the Specimen data set defined by the EU eHN guidelines is mapped into this guide.
+
+  ConceptMap/ConceptMap-eu-result2FHIR:
+    name: eHN Result model to this guide
+    description: It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide. 
+ 
 #  Patient/my-example-patient:
 #    name: My Example Patient
 #    description: An example Patient
@@ -147,8 +228,6 @@ menu:
 #  Patient/bad-example: omit
 
  
-
-
 #
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that
@@ -162,9 +241,35 @@ menu:
 groups:
   eHNGuidelines:
     name:  eHN Laboratory Guidelines
-    description: Logical model representing the eHN Laboratory Guidelines
+    description: Logical models representing the eHN Laboratory Guidelines
     resources:
       - StructureDefinition/LabReport
+      - StructureDefinition/Subject
+      - StructureDefinition/Author
+      - StructureDefinition/Validator
+      - StructureDefinition/LegalAuthenticator
+      - StructureDefinition/Recipient      
+      - StructureDefinition/Order      
+      - StructureDefinition/Result
+      - StructureDefinition/SpecimenLab
+      - StructureDefinition/Payer
+
+  logicalModelsMaps:
+    name:  Logical Model mappings
+    description: Concept Maps describing how the eHN Laboratory Guidelines are supposed to be implemented by using this guide
+    resources:
+      - ConceptMap/ConceptMap-eu-labRpt2FHIR
+      - ConceptMap/ConceptMap-eu-payer2FHIR
+      - ConceptMap/ConceptMap-eu-recipient2FHIR
+      - ConceptMap/ConceptMap-eu-subject2FHIR
+      - ConceptMap/ConceptMap-eu-author2FHIR
+      - ConceptMap/ConceptMap-eu-order2FHIR
+      - ConceptMap/ConceptMap-eu-legalAuth2FHIR
+      - ConceptMap/ConceptMap-eu-validator2FHIR
+      - ConceptMap/ConceptMap-eu-specimen2FHIR
+      - ConceptMap/ConceptMap-eu-result2FHIR
+   
+
 
 
 #
