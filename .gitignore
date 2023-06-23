@@ -11,3 +11,15 @@ template
 .DS_Store
 .sdkmanrc
 .vscode/
+input/cql/.gitignore
+input/examples/.gitignore
+input/extensions/.gitignore
+input/history/.gitignore
+input/images/.gitignore
+input/images-source/.gitignore
+input/models/.gitignore
+input/profiles/.gitignore
+input/scenarios/.gitignore
+input/testing/.gitignore
+input/vocabulary/.gitignore
+.gitignore
