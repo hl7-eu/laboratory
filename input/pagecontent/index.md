@@ -39,9 +39,4 @@ The project background and the reasons for the design choiches (FHIR document in
 
 | Name             | Affiliation |
 |------------------|-------------|
-| Giorgio Cangioli |             |
-| Robert Hausam    |             |
-| Oliver Egger     |             |
-| Hynek            |             |
-|                  |             |
-|                  |             |
+|  |             |
