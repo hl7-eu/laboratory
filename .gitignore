@@ -1,0 +1,13 @@
+fsh-generated
+input-cache
+temp
+output
+template
+/template
+/temp
+/pandoc
+/input-cache
+/output
+.DS_Store
+.sdkmanrc
+.vscode/

@@ -43,7 +43,7 @@ dependencies:
 # sub-pages.
 #
 pages:
-  index.xml:
+  index.md:
     title: Home
   background.md:
     title: Background
