@@ -7,16 +7,16 @@ Usage: #example
 * identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
 * type = #document
 * timestamp = "2023-03-06T14:30:00+01:00"
-* entry[+].fullUrl = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
-* entry[=].resource = Inline-Composition-laboratory-results-report-poc
-* entry[+].fullUrl = "urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754"
-* entry[=].resource = Inline-Diagnostic-Report-laboratory-results-report-poc
-* entry[+].fullUrl = "urn:uuid:a3d70b1b-cd31-4b38-9008-e9b29d2cb769"
-* entry[=].resource = Inline-Patient-laboratory-results-report-poc
+* entry[composition].fullUrl = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
+* entry[composition].resource = Inline-Composition-laboratory-results-report-poc
+* entry[diagnosticReport].fullUrl = "urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754"
+* entry[diagnosticReport].resource = Inline-Diagnostic-Report-laboratory-results-report-poc
+* entry[patient].fullUrl = "urn:uuid:a3d70b1b-cd31-4b38-9008-e9b29d2cb769"
+* entry[patient].resource = Inline-Patient-laboratory-results-report-poc
 /* * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
 * entry[=].resource = Inline-Observation-laboratory-results-report-poc  */
-* entry[+].fullUrl = "urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2"
-* entry[=].resource = Inline-ServiceRequest-laboratory-results-report-poc
+* entry[serviceRequest].fullUrl = "urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2"
+* entry[serviceRequest].resource = Inline-ServiceRequest-laboratory-results-report-poc
 
 Instance: Inline-Composition-laboratory-results-report-poc
 InstanceOf: CompositionLabReportEu

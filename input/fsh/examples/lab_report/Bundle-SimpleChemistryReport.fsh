@@ -174,7 +174,7 @@ Usage: #inline
 * contact[=].address[=].text = "Horná ulica 18, 123 45, Trenčín, Slovensko"
 * contact[=].address[=].line[+] = "Horná ulica 18"
 * contact[=].address[=].line[=].extension[Streetname].valueString = "Horná ulica"
-* contact[=].address[=].line[+].extension[Housenumber].valueString = "18"
+* contact[=].address[=].line[=].extension[Housenumber].valueString = "18"
 * contact[=].address[=].city = "Trenčín"
 * contact[=].address[=].postalCode = "123 45"
 * contact[=].address[=].country = "SK"
