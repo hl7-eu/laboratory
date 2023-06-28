@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: ResultLabEhn				
 Id: Result				
-Title: "A.5 - Results data elements"				
+Title: "Results data elements (A.5)"				
 Description:  """A.5 Results data elements"""				
 * narrative 0..1 BackboneElement "A.5.1 Laboratory report narrative" """A.5.1 Laboratory report narrative"""				
 * narrative.report 0..* Narrative "A.5.1.1 Narrative report" """Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."""				

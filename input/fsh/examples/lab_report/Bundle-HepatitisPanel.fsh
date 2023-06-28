@@ -81,13 +81,11 @@ Usage: #inline
 * name = "Ministry of Health of the Czech Republic"
 
 Instance: Inline-Diag-Report-hepatitis-panel
-InstanceOf: DiagnosticReportLabEu
+InstanceOf: DiagnosticReport-eu-lab
 Usage: #inline
 * id = "3a743273-237a-446a-a8da-9e7521cce614"
-/* * extension[+].url = $diagnostic-report-composition-r5
-* extension[=].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4) */
-
-* extension[diagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
+* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
 * status = #final
 * category = $v2-0074#MB "Microbiology"
 * code = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"

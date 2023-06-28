@@ -8,9 +8,11 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
-* extension contains $diagnostic-report-composition-r5 named diagnosticReportCompositionR5 1..1
-* extension[diagnosticReportCompositionR5].value[x] only Reference(CompositionLabReportEu)
-* extension[diagnosticReportCompositionR5].value[x] 1..1
+
+* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
+
+* extension[DiagnosticReportCompositionR5].valueReference 1..1
+* extension[DiagnosticReportCompositionR5].valueReference only Reference(CompositionLabReportEu)
 
 /*
 content to be referred...

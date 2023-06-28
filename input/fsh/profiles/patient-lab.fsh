@@ -1,5 +1,5 @@
 Profile: PatientEu
-Parent: $Patient-uv-ips 
+Parent: $Patient-uv-ips
 Id: Patient-eu-lab
 Title:    "Patient"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the  HL7 Europe project."
@@ -20,8 +20,10 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * gender MS
 * birthDate 1.. MS
 * address MS
+* address only AddressEu
 * address obeys pat-cnt-2or3-char
 * contact.relationship only $CodeableConcept-uv-ips
+* contact.address only AddressEu
 * generalPractitioner MS
 
 Invariant: eu-pat-1
