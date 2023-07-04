@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: ResultLabEhn				
 Id: Result				
-Title: "Results data elements (A.5)"				
+Title: "A.5, Results data elements"				
 Description:  """A.5 Results data elements"""				
 * narrative 0..1 BackboneElement "A.5.1 Laboratory report narrative" """A.5.1 Laboratory report narrative"""				
 * narrative.report 0..* Narrative "A.5.1.1 Narrative report" """Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."""				
@@ -47,7 +47,7 @@ Title: "eHN Lab Result model to FHIR R4 Map"
 Source: Result				
 Target: "hl7.org/fhir/r4"				
 				
-* -> "Observation.conformsTo('http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-results-eu-lab')"				
+* -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh')"				
 * narrative -> "Composition.section.section.text"				
 * narrative -> "Composition.section.text"				
 * narrative -> "Composition.text"				
@@ -55,7 +55,7 @@ Target: "hl7.org/fhir/r4"
 * narrative.report -> "Composition.section.text"				
 * narrative.report -> "Composition.text"				
 * narrative.notes -> "Composition.section:annotations.text"				
-* observation -> "Observation.conformsTo('http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-results-eu-lab')"				
+* observation -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh')"				
 * observation -> "Observation.hasMember.resolve()"				
 * observation -> "Observation.component"				
 * observation.dateTime -> "Observation.effective[x]"				

@@ -19,28 +19,28 @@ Usage: #definition
 					
 * group[=].element[+].code = #Recipient.identifier					
 * group[=].element[=].display = "A.1.4.1 Recipient identifier"					
-* group[=].element[=].target.code = #http://hl7.eu/fhir/StructureDefinition/information-recipient.resolve().identifier					
+* group[=].element[=].target.code = #extension.valueReference.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Recipient.name					
 * group[=].element[=].display = "A.1.4.2 Recipient name"					
-* group[=].element[=].target.code = #http://hl7.eu/fhir/StructureDefinition/information-recipient.resolve().name					
+* group[=].element[=].target.code = #extension.valueReference.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Recipient.organization					
 * group[=].element[=].display = "A.1.4.3 Recipient organization"					
-* group[=].element[=].target.code = #http://hl7.eu/fhir/StructureDefinition/information-recipient.resolve().ofType(Organization)					
+* group[=].element[=].target.code = #extension.ValueReference					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "if the recipient is the organization"					
+* group[=].element[=].target.comment = "ofType(Organization) if the recipient is the organization. "					
 * group[=].element[+].code = #Recipient.organization					
 * group[=].element[=].display = "A.1.4.3 Recipient organization"					
-* group[=].element[=].target.code = #http://hl7.eu/fhir/StructureDefinition/information-recipient.resolve().ofType(PractionerRole).,organization"					
+* group[=].element[=].target.code = #extension.ValueReference.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If it is the organization the professional belong to"					
+* group[=].element[=].target.comment = "ofType(PractionerRole), if it is the organization the professional belong to"					
 //---END					
 //---END					
 //---END					

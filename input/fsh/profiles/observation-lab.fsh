@@ -1,5 +1,6 @@
 Profile: ObservationResultsLaboratoryEu
-Parent: ObservationResultsEu
+// Parent: ObservationResultsEu
+Parent: Observation
 Id: Observation-resultslab-eu-lab
 Title:    "Observation Results: laboratory"
 Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Europe project.
@@ -10,6 +11,7 @@ This observation may represent the result of a simple laboratory test such as he
 * insert SetFmmandStatusRule ( 0, draft )
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
+* insert ObservationResultsEu
 * obeys eu-lab-1
 * . ^short = "Laboratory result for a simple test or for a panel/study"
 * . ^definition = "This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and references the atomic results of the study as \"has-member\" child observations"
@@ -78,7 +80,8 @@ This observation may represent the result of a simple laboratory test such as he
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * interpretation only $CodeableConcept-uv-ips
 * specimen only Reference(SpecimenEu)
-* hasMember only Reference(ObservationResultsLaboratoryEu or ObservationResultsEu)
+// * hasMember only Reference(ObservationResultsLaboratoryEu or ObservationResultsEu)
+* hasMember only Reference(ObservationResultsLaboratoryEu)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
 

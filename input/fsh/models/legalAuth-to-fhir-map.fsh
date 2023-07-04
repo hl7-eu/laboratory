@@ -19,34 +19,34 @@ Usage: #definition
 					
 * group[=].element[+].code = #LegalAuthenticator.identifier					
 * group[=].element[=].display = "A.1.6.1 Legal authenticator identifier"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='legal').party.resolve().identifier					
+* group[=].element[=].target.code = #Composition.attester.party.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "attester.where(mode='legal')"					
 * group[=].element[+].code = #LegalAuthenticator.name					
 * group[=].element[=].display = "A.1.6.2 Legal authenticator name"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='legal').party.resolve().ofType(Practictioner).name					
+* group[=].element[=].target.code = #Composition.attester.party.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(Practictioner).name"					
 * group[=].element[+].code = #LegalAuthenticator.name					
 * group[=].element[=].display = "A.1.6.2 Legal authenticator name"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='legal').party.resolve().ofType(PractictionerRole).practictioner.resolve().name					
+* group[=].element[=].target.code = #Composition.attester.party.practictioner.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(PractictionerRole).practictioner.resolve().name"					
 * group[=].element[+].code = #LegalAuthenticator.organization					
 * group[=].element[=].display = "A.1.6.3 Legal authenticator organization"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='legal').party.resolve().ofType(PractictionerRole).organization.resolve()					
+* group[=].element[=].target.code = #Composition.attester.party.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(PractictionerRole).organization.resolve()"					
 * group[=].element[+].code = #LegalAuthenticator.dateTime					
 * group[=].element[=].display = "A.1.6.4 Authentication date and time"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='legal').time					
+* group[=].element[=].target.code = #Composition.attester.time					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "attester.where(mode='legal').time"					
 //---END					
 //---END					
 //---END					

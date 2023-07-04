@@ -105,7 +105,7 @@ Usage: #inline
 * collection.collectedDateTime = "2022-10-25T13:35:00+01:00"
 
 Instance: Inline-Observation-hepatitis-panel
-InstanceOf: Observation-results-eu-lab
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "2c72163e-b741-44a3-aff7-c52f17f7a1ba"
 * status = #final
@@ -123,7 +123,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/cc96d499-3e0e-4588-a021-4fe576766112)
 
 Instance: Inline-Observation-hepatitis-1
-InstanceOf: Observation-results-eu-lab
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "104a5829-565b-46a6-85d6-36751ef79a40"
 * status = #final
@@ -142,7 +142,7 @@ Usage: #inline
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-2
-InstanceOf: Observation-results-eu-lab
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "01b8ec35-9b20-45a4-bd41-42eeae2fd521"
 * status = #final
@@ -161,7 +161,7 @@ Usage: #inline
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-3
-InstanceOf: Observation-results-eu-lab
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "096e27da-0768-47e4-b33c-9f1be93e1f88"
 * status = #final
@@ -180,7 +180,7 @@ Usage: #inline
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-4
-InstanceOf: Observation-results-eu-lab
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "861e7b48-5497-410a-bed8-2cde814e09fc"
 * status = #final
@@ -199,7 +199,7 @@ Usage: #inline
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-5
-InstanceOf: Observation-results-eu-lab
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "cc96d499-3e0e-4588-a021-4fe576766112"
 * status = #final

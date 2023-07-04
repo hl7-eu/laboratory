@@ -12,7 +12,7 @@ Usage: #definition
 * description = "eHN Subject Model to this guide Map"					
 * purpose = "It shows how the Laboratory Report Subject data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Subject"					
-* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"					
+* targetUri = "http://hl7.org/fhir/laboratory/StructureDefinition/Patient-eu-lab"					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Subject"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"					
@@ -55,7 +55,7 @@ Usage: #definition
 					
 * group[=].element[+].code = #Subject.addressTelecom					
 * group[=].element[=].display = "A.1.2 Patient/subject related contact information"					
-* group[=].element[=].target.code = #Patient.$this					
+* group[=].element[=].target.code = #Patient					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					

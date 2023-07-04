@@ -19,43 +19,43 @@ Usage: #definition
 					
 * group[=].element[+].code = #Payer.insurance					
 * group[=].element[=].display = "A.1.3.1 Health insurance information"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).$this					
+* group[=].element[=].target.code = #insurance					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
 * group[=].element[+].code = #Payer.insurance.identifier					
 * group[=].element[=].display = "A.1.3.1.1 Health insurance code"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).payor.ofType(Organization).resolve().identifier					
+* group[=].element[=].target.code = #insurance.payor.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "payor.ofType(Organization).resolve().identifier"					
 * group[=].element[+].code = #Payer.insurance.name					
 * group[=].element[=].display = "A.1.3.1.2 Health insurance name"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).payor.ofType(Organization).resolve().name					
+* group[=].element[=].target.code = #insurance.payor.name					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "payor.ofType(Organization).resolve().name"					
+* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
+* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
+* group[=].element[=].target.code = #insurance.policyHolder.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).policyHolder.resolve().identifier					
+* group[=].element[=].target.code = #insurance.beneficiary.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).beneficiary.resolve().identifier					
+* group[=].element[=].target.code = #insurance.subscriberId					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).subscriberId					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #equivalent					
-					
-* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
-* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.resolve().ofType(Coverage).subscriber.resolve().identifier					
+* group[=].element[=].target.code = #insurance.subscriber.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					

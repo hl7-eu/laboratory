@@ -12,7 +12,7 @@ Usage: #definition
 * description = "eHN Order to this guide Map"					
 * purpose = "It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Order"					
-* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"					
+* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Order"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"					
@@ -43,46 +43,46 @@ Usage: #definition
 					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerIdentifier					
 * group[=].element[=].display = "A.2.3 Order placer identifier"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().identifier					
+* group[=].element[=].target.code = #ServiceRequest.requester.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "if the Composite Request ID."					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerName					
 * group[=].element[=].display = "A.2.4 Order placer name"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().ofType(Practictioner).name					
+* group[=].element[=].target.code = #ServiceRequest.requester.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "requester.resolve().ofType(Practictioner).name"					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerName					
 * group[=].element[=].display = "A.2.4 Order placer name"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().ofType(PractictionerRole).practictioner.resolve().name					
+* group[=].element[=].target.code = #ServiceRequest.requester.practictioner.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "requester.resolve().ofType(PractictionerRole).practictioner.resolve().name"					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerContacts					
 * group[=].element[=].display = "A.2.5 Order placer contact details"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().ofType(Practictioner).telecom					
+* group[=].element[=].target.code = #ServiceRequest.requester.telecom					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "requester.resolve().ofType(Practictioner).telecom"					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerContacts					
 * group[=].element[=].display = "A.2.5 Order placer contact details"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().ofType(Practictioner).address					
+* group[=].element[=].target.code = #ServiceRequest.requester.address					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "requester.resolve().ofType(Practictioner).address"					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerContacts					
 * group[=].element[=].display = "A.2.5 Order placer contact details"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().ofType(PractictionerRole).telecom					
+* group[=].element[=].target.code = #ServiceRequest.requester.telecom					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "requester.resolve().ofType(PractictionerRole).telecom"					
 * group[=].element[+].code = #Order.orderDetails.orderPlacerOrganization					
 * group[=].element[=].display = "A.2.6 Order placer organization"					
-* group[=].element[=].target.code = #ServiceRequest.requester.resolve().ofType(PractictionerRole).organization.resolve()					
+* group[=].element[=].target.code = #ServiceRequest.requester.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "requester.resolve().ofType(PractictionerRole).organization.resolve()"					
 * group[=].element[+].code = #Order.reason					
 * group[=].element[=].display = "A.3 Order reason"					
 * group[=].element[=].target.code = #ServiceRequest.reasonCode					

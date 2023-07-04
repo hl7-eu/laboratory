@@ -12,7 +12,7 @@ Usage: #definition
 * description = "eHN Lab Report to this guide Map"					
 * purpose = "It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport"					
-* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"					
+* targetUri = "http://hl7.org/fhir"					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"					
@@ -31,10 +31,10 @@ Usage: #definition
 					
 * group[=].element[+].code = #LabReport.header.payer					
 * group[=].element[=].display = "A.1.3 Health insurance and payment information"					
-* group[=].element[=].target.code = #DiagnosticReport.basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)					
+* group[=].element[=].target.code = #DiagnosticReport.basedOn.insurance					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"					
 //---END					
 * group[=].element[=].display = "A.1.4 Information recipient"					
 //-- unmatched					
@@ -43,13 +43,13 @@ Usage: #definition
 					
 * group[=].element[+].code = #LabReport.header.author					
 * group[=].element[=].display = "A.1.5 Author"					
-* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.resolve()					
+* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If the author is the interpreter"					
 * group[=].element[+].code = #LabReport.header.author					
 * group[=].element[=].display = "A.1.5 Author"					
-* group[=].element[=].target.code = #DiagnosticReport.performer.resolve()					
+* group[=].element[=].target.code = #DiagnosticReport.performer					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If the author is the perfomer"					
@@ -67,7 +67,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "Mapped in the Composition resource"					
 * group[=].element[+].code = #LabReport.header.metadata					
 * group[=].element[=].display = "A.1.8 Laboratory report metadata"					
-* group[=].element[=].target.code = #DiagnosticReport.$this					
+* group[=].element[=].target.code = #DiagnosticReport					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
@@ -103,28 +103,28 @@ Usage: #definition
 * group[=].element[=].target.comment = "Mapped in the Composition resource"					
 * group[=].element[+].code = #LabReport.order					
 * group[=].element[=].display = "A.2-A.3 Order"					
-* group[=].element[=].target.code = #DiagnosticReport.basedOn.resolve().ofType(ServiceRequest)					
+* group[=].element[=].target.code = #DiagnosticReport.basedOn					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "basedOn.resolve().ofType(ServiceRequest)"					
 * group[=].element[+].code = #LabReport.specimen					
 * group[=].element[=].display = "A.4 Specimen information"					
-* group[=].element[=].target.code = #DiagnosticReport.specimen.resolve()					
+* group[=].element[=].target.code = #DiagnosticReport.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
 * group[=].element[+].code = #LabReport.result					
 * group[=].element[=].display = "A.5 Results data elements"					
-* group[=].element[=].target.code = #DiagnosticReport.result.resolve()					
+* group[=].element[=].target.code = #DiagnosticReport.result					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
 * group[=].element[+].code = #LabReport.specimen					
 * group[=].element[=].display = "A.4 Specimen information"					
-* group[=].element[=].target.code = #DiagnosticReport.result.resolve().ofType(Observation).specimen					
+* group[=].element[=].target.code = #DiagnosticReport.result.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "result.resolve().ofType(Observation).specimen"					
 //---END					
 //---END					
 //---END					
@@ -149,10 +149,10 @@ Usage: #definition
 					
 * group[=].element[+].code = #LabReport.header.payer					
 * group[=].element[=].display = "A.1.3 Health insurance and payment information"					
-* group[=].element[=].target.code = #Composition.extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)					
+* group[=].element[=].target.code = #Composition.extension:basedOn-order-or-requisition.insurance					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"					
 * group[=].element[+].code = #LabReport.header.informationRecipient					
 * group[=].element[=].display = "A.1.4 Information recipient"					
 //-- unmatched					
@@ -161,25 +161,27 @@ Usage: #definition
 					
 * group[=].element[+].code = #LabReport.header.author					
 * group[=].element[=].display = "A.1.5 Author"					
-* group[=].element[=].target.code = #Composition.author.resolve()					
+* group[=].element[=].target.code = #Composition.author					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
 * group[=].element[+].code = #LabReport.header.legalAuthenticator					
 * group[=].element[=].display = "A.1.6 Legal authenticator"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='legal').party.resolve()					
+* group[=].element[=].target.code = #Composition.attester.party					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The person authenticated the content and accepted legal responsibility for its content."					
+* group[=].element[=].target.comment = "The person authenticated the content and accepted legal responsibility for its content.
+attester.where(mode='legal').party.resolve()"					
 * group[=].element[+].code = #LabReport.header.validator					
 * group[=].element[=].display = "A.1.7 Result validator"					
-* group[=].element[=].target.code = #Composition.attester.where(mode='professional').party.resolve()					
+* group[=].element[=].target.code = #Composition.attester.party					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The person authenticated the content in their professional capacity."					
+* group[=].element[=].target.comment = "The person authenticated the content in their professional capacity.
+attester.where(mode='professional').party.resolve()"					
 * group[=].element[+].code = #LabReport.header.metadata					
 * group[=].element[=].display = "A.1.8 Laboratory report metadata"					
-* group[=].element[=].target.code = #Composition.$this					
+* group[=].element[=].target.code = #Composition					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
@@ -215,31 +217,31 @@ Usage: #definition
 					
 * group[=].element[+].code = #LabReport.order					
 * group[=].element[=].display = "A.2-A.3 Order"					
-* group[=].element[=].target.code = #Composition.extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)					
+* group[=].element[=].target.code = #Composition.extension:basedOn-order-or-requisition.insurance					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)"					
 * group[=].element[+].code = #LabReport.specimen					
 * group[=].element[=].display = "A.4 Specimen information"					
-* group[=].element[=].target.code = #Composition.section:lab-no-subsections.entry.resolve().specimen.resolve()					
+* group[=].element[=].target.code = #Composition.section:lab-no-subsections.entry.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If no sub sections"					
 * group[=].element[+].code = #LabReport.result					
 * group[=].element[=].display = "A.5 Results data elements"					
-* group[=].element[=].target.code = #Composition.section:lab-no-subsections.entry.resolve()					
+* group[=].element[=].target.code = #Composition.section:lab-no-subsections.entry					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If no sub sections"					
 * group[=].element[+].code = #LabReport.specimen					
 * group[=].element[=].display = "A.4 Specimen information"					
-* group[=].element[=].target.code = #Composition.section:lab-subsections.section.entry.resolve().specimen.resolve()					
+* group[=].element[=].target.code = #Composition.section:lab-subsections.section.entry.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If sub sections"					
 * group[=].element[+].code = #LabReport.result					
 * group[=].element[=].display = "A.5 Results data elements"					
-* group[=].element[=].target.code = #Composition.section:lab-subsections.section.entry.resolve()					
+* group[=].element[=].target.code = #Composition.section:lab-subsections.section.entry					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If sub sections"					
