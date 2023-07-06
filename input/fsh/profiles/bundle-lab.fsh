@@ -37,10 +37,22 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[patient].resource only Patient or PatientEu
 
 * entry contains observation 0..*
-* entry[observation].resource only Observation // Add profiles
+* entry[observation].resource only ObservationResultsLaboratoryEu
 
 * entry contains specimen 0..*
-* entry[specimen].resource only Specimen // Add profiles
+* entry[specimen].resource only SpecimenEu
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only ServiceRequestLabEu // Add profiles
+* entry[serviceRequest].resource only ServiceRequestLabEu
+
+* entry contains organization 0..*
+* entry[organization].resource only Organization
+
+* entry contains practitioner 0..*
+* entry[practitioner].resource only PractitionerEu
+
+* entry contains practitionerRole 0..*
+* entry[practitionerRole].resource only PractitionerRoleEu
+
+* entry contains documentReference 0..*
+* entry[documentReference].resource only DocumentReference
