@@ -1,98 +1,83 @@
 Instance: SimpleChemistryResultReport
 InstanceOf: BundleLabReportEu
 Title: "Laboratory Result Report"
-Description: "Laboratory Result Report Example includes two sections with different study types:
+Description: "Laboratory Result Report Example includes one section with single study type:
 - Chemistry study
-- Hematology study"
+with two observations expressed in LOINC as well as Czech national codes.
+Administrative part of the example was taken from Italian example report bundle, so there might be some inconsistencies."
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.51.1.1"
 * identifier.value = "8ccab76a-82ed-403e-b974-6b28022b0997"
 * identifier.assigner.display = "HL7 Europe"
 * type = #document
 * timestamp = "2023-03-27T13:13:19+02:00"
-* entry[+].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
-* entry[=].resource = Inline-Instance-for-Composition-26032a57-083a-4ddf-b019-e566ae02f740-1
-* entry[+].fullUrl = "urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"
-* entry[=].resource = Inline-Patient-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8
-* entry[+].fullUrl = "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
-* entry[=].resource = Inline-Instance-for-Specimen-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb
-* entry[+].fullUrl = "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
-* entry[=].resource = Inline-Instance-Specimen-25dfb673-e7d6-43d0-b50b-6739f1ea9c91
-* entry[+].fullUrl = "urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91"
-* entry[=].resource = Inl-Inst-DocumentReference-c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
-* entry[+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"
-* entry[=].resource = Inline-Instance-for-PractiotionerRole-26032a57-083a-4ddf-b019-e566ae02f740-4
-* entry[+].fullUrl = "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"
-* entry[=].resource = Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
-* entry[+].fullUrl = "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"
-* entry[=].resource = Inl-Ins-Lab-technician-e512e2e2-9600-4c69-a269-af3ab5421e09
-* entry[+].fullUrl = "urn:uuid:e512e2e2-9600-4c69-a269-af3ab5421e09"
-* entry[=].resource = Inline-Instance-for-PractitionerRole-26032a57-083a-4ddf-b019-e566ae02f740-5
-* entry[+].fullUrl = "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-6
-* entry[+].fullUrl = "urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c"
-* entry[=].resource = ce122b36-f942-4cee-8c6d-b13ece8cf23c
-* entry[+].fullUrl = "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-7
-* entry[+].fullUrl = "urn:uuid:84476dc3-a732-455f-910e-f2b44428dcc9"
-* entry[=].resource = 84476dc3-a732-455f-910e-f2b44428dcc9
-* entry[+].fullUrl = "urn:uuid:8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"
-* entry[=].resource = 8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3
-* entry[+].fullUrl = "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-8
-* entry[+].fullUrl = "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-9
-* entry[+].fullUrl = "urn:uuid:90820822-94a8-41c1-9567-c349e9e33d7c"
-* entry[=].resource = 90820822-94a8-41c1-9567-c349e9e33d7c
-* entry[+].fullUrl = "urn:uuid:31a6839b-c6e2-4807-8412-0bde8016fc99"
-* entry[=].resource = 31a6839b-c6e2-4807-8412-0bde8016fc99
-* entry[+].fullUrl = "urn:uuid:c430fae1-3768-4697-aeb5-2181b73941cd"
-* entry[=].resource = c430fae1-3768-4697-aeb5-2181b73941cd
-* entry[+].fullUrl = "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-10
-* entry[+].fullUrl = "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-11
-* entry[+].fullUrl = "urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde"
-* entry[=].resource = eb62a039-7e02-44cb-ba17-7e4fb42acdde
-* entry[+].fullUrl = "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-12
-* entry[+].fullUrl = "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-13
-* entry[+].fullUrl = "urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-14
-* entry[+].fullUrl = "urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-15
-* entry[+].fullUrl = "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-16
-* entry[+].fullUrl = "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-17
-* entry[+].fullUrl = "urn:uuid:8ebee945-761e-4b44-bedd-c6b1804b6a0e"
-* entry[=].resource = 8ebee945-761e-4b44-bedd-c6b1804b6a0e
-* entry[+].fullUrl = "urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-18
-* entry[+].fullUrl = "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
-* entry[=].resource = Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
-* entry[+].fullUrl = "urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb"
-* entry[=].resource = Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
+* entry[composition].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"  // composition
+* entry[composition].resource = Inline-Instance-for-Composition-26032a57-083a-4ddf-b019-e566ae02f740
+* entry[patient].fullUrl = "urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8" // Patient
+* entry[patient].resource = Inline-Patient-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8
+* entry[specimen][+].fullUrl = "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb" // Specimen 1
+* entry[specimen][=].resource = Inline-Instance-for-Specimen-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb
+* entry[specimen][+].fullUrl = "urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91"  // Specimen 2
+* entry[specimen][=].resource = Inline-Instance-Specimen-25dfb673-e7d6-43d0-b50b-6739f1ea9c91
+* entry[documentReference][+].fullUrl = "urn:uuid:c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd" // Documentation reference
+* entry[documentReference][=].resource = Inl-Inst-DocumentReference-c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
+* entry[practitionerRole][+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"  // Author 1: Practitioner role
+* entry[practitionerRole][=].resource = Inline-Instance-for-PractiotionerRole-88868d3e-7ab1-4ee5-983e-b979c4971f5c
+* entry[practitioner][+].fullUrl = "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"  // Author 1: Practitioner
+* entry[practitioner][=].resource = Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
+* entry[practitionerRole][+].fullUrl = "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"  // Author 2: Practitioner role
+* entry[practitionerRole][=].resource = Inline-Instance-for-PractitionerRole-84b2e517-abc2-4268-975d-b12fa8174d30
+* entry[practitioner][+].fullUrl = "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"  // Author 2: Practitioner
+* entry[practitioner][=].resource = Inline-Instance-for-IT-CDA2FHIR-68740937-f732-4ff9-a2e4-bf502d2d125f
+* entry[practitioner][+].fullUrl = "urn:uuid:e512e2e2-9600-4c69-a269-af3ab5421e09"  // Observation Performer: Practitioner (lab technitian)
+* entry[practitioner][=].resource = Inl-Ins-Lab-technician-e512e2e2-9600-4c69-a269-af3ab5421e09
+* entry[organization][+].fullUrl = "urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c" // custodian: Organization
+* entry[organization][=].resource = ce122b36-f942-4cee-8c6d-b13ece8cf23c
+* entry[practitioner][+].fullUrl = "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"  // profesisonal attester: Practitioner
+* entry[practitioner][=].resource = Inline-Instance-for-IT-CDA2FHIR-0bbabe57-7c43-4211-9e19-81fcec65686d
+* entry[practitionerRole][+].fullUrl = "urn:uuid:84476dc3-a732-455f-910e-f2b44428dcc9"  // legal attester: PractitionerRole
+* entry[practitionerRole][=].resource = 84476dc3-a732-455f-910e-f2b44428dcc9
+* entry[practitioner][+].fullUrl = "urn:uuid:8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"  // legal attester: Practitioner
+* entry[practitioner][=].resource = 8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3
+* entry[practitionerRole][+].fullUrl = "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"  // attester: practitioner role
+* entry[practitionerRole][=].resource = Inline-Instance-for-IT-CDA2FHIR-13792187-4721-4309-a8a4-4a57ffb4e6a1
+* entry[practitioner][+].fullUrl = "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"  // attester: practitioner
+* entry[practitioner][=].resource = Inline-Instance-for-IT-CDA2FHIR-852cec21-4ff9-4cea-b86d-00de92b46894
+* entry[serviceRequest][+].fullUrl = "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"  // order:service request
+* entry[serviceRequest][=].resource = Inline-Instance-for-IT-CDA2FHIR-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1
+* entry[practitionerRole][+].fullUrl = "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"  // event.detail: practitioner role
+* entry[practitionerRole][=].resource = Inline-Instance-for-IT-CDA2FHIR-1b4b120e-0371-4878-b4c9-b69434e84c72
+* entry[practitioner][+].fullUrl = "urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde"  // event.detail: practitioner
+* entry[practitioner][=].resource = eb62a039-7e02-44cb-ba17-7e4fb42acdde
+* entry[organization][+].fullUrl = "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"  // event.detail: organization
+* entry[organization][=].resource = Inline-Instance-for-IT-CDA2FHIR-508f4b29-09ca-4c94-8343-657f1923303a
+* entry[organization][+].fullUrl = "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"  // event.detail.organization.partof: organization
+* entry[organization][=].resource = Inline-Instance-for-IT-CDA2FHIR-206fa15d-51ae-4f3d-b8d0-71ee6290ff52
+* entry[diagnosticReport][+].fullUrl = "urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda"  // diagnostic report
+* entry[diagnosticReport][=].resource = Inline-Instance-for-IT-CDA2FHIR-5679723c-4fae-4ba7-9f09-5438a827bfda
+* entry[observation][+].fullUrl = "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"  // observation 1
+* entry[observation][=].resource = Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
+* entry[observation][+].fullUrl = "urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb"  // observation 2
+* entry[observation][=].resource = Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
 
-Instance: Inline-Instance-for-Composition-26032a57-083a-4ddf-b019-e566ae02f740-1
+Instance: Inline-Instance-for-Composition-26032a57-083a-4ddf-b019-e566ae02f740
 InstanceOf: Composition
 Usage: #inline
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 /* * extension[+].url = $composition-diagnostic-report-reference
 * extension[=].valueReference = Reference(DiagnosticReport/5679723c-4fae-4ba7-9f09-5438a827bfda) */
-* language = #it-IT
+* language = #cs-CZ
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
 * status = #final
 * type = http://loinc.org#11502-2 "Laboratory report"
-* type.text = "Referto di laboratorio"
+* type.text = "Laboratorní zpráva"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * date = "2022-03-30T11:24:26+01:00"
 * author[+] = Reference(urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c)
 * author[+] = Reference(urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30)
-* title = "REFERTO DI LABORATORIO"
+* title = "Laboratorní zpráva"
 * confidentiality = #N
 * attester[+].mode = #professional
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
@@ -202,6 +187,7 @@ Usage: #inline
 Instance: Inl-Inst-DocumentReference-c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
 InstanceOf: DocumentReference
 Usage: #inline
+* id = "c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd"
 * status = #current
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * author = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
@@ -210,7 +196,7 @@ Usage: #inline
 * content.attachment.title = "string"
 * context.related = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 
-Instance: Inline-Instance-for-PractiotionerRole-26032a57-083a-4ddf-b019-e566ae02f740-4
+Instance: Inline-Instance-for-PractiotionerRole-88868d3e-7ab1-4ee5-983e-b979c4971f5c
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c"
@@ -243,13 +229,13 @@ Usage: #inline
 * address.postalCode = "00184"
 * address.country = "100"
 
-Instance: Inline-Instance-for-PractitionerRole-26032a57-083a-4ddf-b019-e566ae02f740-5
+Instance: Inline-Instance-for-PractitionerRole-84b2e517-abc2-4268-975d-b12fa8174d30
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "84b2e517-abc2-4268-975d-b12fa8174d30"
 * practitioner = Reference(urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f)
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-6
+Instance: Inline-Instance-for-IT-CDA2FHIR-68740937-f732-4ff9-a2e4-bf502d2d125f
 InstanceOf: Practitioner
 Usage: #inline
 * id = "68740937-f732-4ff9-a2e4-bf502d2d125f"
@@ -278,7 +264,7 @@ Usage: #inline
 * address.postalCode = "00137"
 * address.country = "100"
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-7
+Instance: Inline-Instance-for-IT-CDA2FHIR-0bbabe57-7c43-4211-9e19-81fcec65686d
 InstanceOf: Practitioner
 Usage: #inline
 * id = "0bbabe57-7c43-4211-9e19-81fcec65686d"
@@ -334,13 +320,13 @@ Usage: #inline
 * address.postalCode = "00164"
 * address.country = "100"
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-8
+Instance: Inline-Instance-for-IT-CDA2FHIR-13792187-4721-4309-a8a4-4a57ffb4e6a1
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "13792187-4721-4309-a8a4-4a57ffb4e6a1"
 * practitioner = Reference(urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894)
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-9
+Instance: Inline-Instance-for-IT-CDA2FHIR-852cec21-4ff9-4cea-b86d-00de92b46894
 InstanceOf: Practitioner
 Usage: #inline
 * id = "852cec21-4ff9-4cea-b86d-00de92b46894"
@@ -364,53 +350,7 @@ Usage: #inline
 * address.postalCode = "00164"
 * address.country = "100"
 
-Instance: 90820822-94a8-41c1-9567-c349e9e33d7c
-InstanceOf: PractitionerRole
-Usage: #inline
-* practitioner = Reference(urn:uuid:31a6839b-c6e2-4807-8412-0bde8016fc99)
-* organization = Reference(urn:uuid:c430fae1-3768-4697-aeb5-2181b73941cd)
-* code = urn:oid:2.16.840.1.113883.2.9.5.1.88#PRE
-
-Instance: 31a6839b-c6e2-4807-8412-0bde8016fc99
-InstanceOf: Practitioner
-Usage: #inline
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
-* identifier.value = "STVMG77F45N079MF"
-* identifier.assigner.display = "MEF"
-* name.family = "Maggi"
-* name.given = "Silvia"
-* telecom.system = #email
-* telecom.value = "maggi.silvia@gmail.com"
-* telecom.use = #home
-* address.line = "Via Vittorio Veneto 3"
-* address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* address.line.extension.valueString = "058091"
-* address.city = "Roma"
-* address.district = "RM"
-* address.state = "120"
-* address.postalCode = "00187"
-* address.country = "100"
-
-Instance: c430fae1-3768-4697-aeb5-2181b73941cd
-InstanceOf: Organization
-Usage: #inline
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.2"
-* identifier.value = "120148"
-* identifier.assigner.display = "Ministero della Salute"
-* name = "SAN RAFFAELE NOMENTANA"
-* telecom.system = #phone
-* telecom.value = "390 666 0581"
-* telecom.use = #work
-* address.line = "Via Emilio Praga 39"
-* address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* address.line.extension.valueString = "058091"
-* address.city = "Roma"
-* address.district = "RM"
-* address.state = "120"
-* address.postalCode = "00137"
-* address.country = "100"
-
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-10
+Instance: Inline-Instance-for-IT-CDA2FHIR-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1
 InstanceOf: ServiceRequest
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
@@ -425,7 +365,7 @@ Usage: #inline
 * code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-11
+Instance: Inline-Instance-for-IT-CDA2FHIR-1b4b120e-0371-4878-b4c9-b69434e84c72
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "1b4b120e-0371-4878-b4c9-b69434e84c72"
@@ -441,7 +381,7 @@ Usage: #inline
 * name.family = "Rossi"
 * name.given = "Mario"
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-12
+Instance: Inline-Instance-for-IT-CDA2FHIR-508f4b29-09ca-4c94-8343-657f1923303a
 InstanceOf: Organization
 Usage: #inline
 * id = "508f4b29-09ca-4c94-8343-657f1923303a"
@@ -451,7 +391,7 @@ Usage: #inline
 * name = "Nuovo Ospedale S.Agostino (MO)"
 * partOf = Reference(urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52)
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-13
+Instance: Inline-Instance-for-IT-CDA2FHIR-206fa15d-51ae-4f3d-b8d0-71ee6290ff52
 InstanceOf: Organization
 Usage: #inline
 * id = "206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
@@ -459,52 +399,7 @@ Usage: #inline
 * identifier.value = "080105"
 * identifier.assigner.display = "Ministero della Salute"
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-14
-InstanceOf: PractitionerRole
-Usage: #inline
-* id = "83ef1c55-566b-4547-affd-f6d7b993a094"
-* practitioner = Reference(urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da)
-
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-15
-InstanceOf: Practitioner
-Usage: #inline
-* id = "1a3064fd-9658-47f1-98f3-3f368761a9da"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
-* identifier.value = "SVATPR85Y37T079B"
-* identifier.assigner.display = "MEF"
-* name.family = "Turri"
-* name.given = "Silvia"
-
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-16
-InstanceOf: Location
-Usage: #inline
-* id = "6373bbff-d136-4cfe-a7bc-fab4bff2fc21"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.6"
-* identifier.value = "XXX"
-* identifier.assigner.display = "Ministero della Salute"
-* managingOrganization = Reference(urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17)
-
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-17
-InstanceOf: Organization
-Usage: #inline
-* id = "0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.2"
-* identifier.value = "XXX"
-* identifier.assigner.display = "Ministero della Salute"
-* name = "[nome_presidio]"
-* telecom.system = #phone
-* telecom.value = "0115678965"
-* telecom.use = #work
-* partOf = Reference(urn:uuid:8ebee945-761e-4b44-bedd-c6b1804b6a0e)
-
-Instance: 8ebee945-761e-4b44-bedd-c6b1804b6a0e
-InstanceOf: Organization
-Usage: #inline
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.1"
-* identifier.value = "XXX"
-* identifier.assigner.display = "Ministero della Salute"
-
-Instance: Inline-Instance-for-IT-CDA2FHIR-26032a57-083a-4ddf-b019-e566ae02f740-18
+Instance: Inline-Instance-for-IT-CDA2FHIR-5679723c-4fae-4ba7-9f09-5438a827bfda
 InstanceOf: DiagnosticReport
 Usage: #inline
 * id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
@@ -512,32 +407,36 @@ Usage: #inline
 * extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
 * category = $v2-0074#LAB "Laboratory"
-* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
-* code.text = "Microalbumin Massa/Volume in Urine"
+* code = $loinc#18719-5 "CHEMISTRY STUDIES"
+* code.text = "Biochemie"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
-* specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
-* result = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+* specimen[+] = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // Urine specimen
+* result[+] = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+* specimen[+] = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)   // Blood specimen
+* result[+] = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 Instance: Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
 InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
-* code.coding[+] = http://loinc.org#14682-9 "Creatinine [Moles/volume] in Serum or Plasma"
-* code.text = "Creatinine [Moles/Vol]"
+* code.coding[+] = http://loinc.org#22700-9 "Urea [Moles/volume] in Urine"
+* code.coding[+] = urn:oid:1.2.203.24341.11.2.2#03086 "Urea (S; látková konc. [mmol/l] Absorpční spektrofotometrie)"
+* code.text = "Urea (U) [Moles/Vol]"
+* method = $sct#70621000052105 "Absorpční spektrofotometrie"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer[+].display = "" // ToDo: consider cardinality
-* valueQuantity.value = 25
+* valueQuantity.value = 0.8
 * valueQuantity.system = $ucum
-* valueQuantity.code = $ucum#umol/L
-* valueQuantity.unit = "umol/L"
+* valueQuantity.code = $ucum#mmol/L
+* valueQuantity.unit = "mmol/L"
 * interpretation = $obs-interpretation#LU "Significantly low"
-* specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
-* referenceRange.low.value = 62
-* referenceRange.low.unit = "umol/L"
-* referenceRange.high.value = 106
-* referenceRange.high.unit = "umol/L"
+* specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // urine specimen
+* referenceRange.low.value = 2.9
+* referenceRange.low.unit = "mmol/L"
+* referenceRange.high.value = 7.5
+* referenceRange.high.unit = "mmol/L"
 * referenceRange.type = $reference-range-meaning#normal "Normal Range"
 
 Instance: Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
@@ -548,6 +447,7 @@ Usage: #inline
 * code.coding[+] = http://loinc.org#2947-0 "Sodium [Moles/volume] in Blood"
 * code.coding[+] = urn:oid:1.2.203.24341.11.2.2#2504 "Na (S; látková konc. [mmol/l] spektrofotometrie-FAES)"
 * code.text = "Sodium (Bld) [Moles/Vol]"
+* method = $sct#70621000052105 "Absorpční spektrofotometrie"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer[+].display = "Jan Laborant"  // ToDo: consider cardinality
