@@ -21,6 +21,7 @@ The Laboratory Report is planned to be the first implemented new service and for
 The following picture provides a planning overview for the new cross-border services.
 <div>
 <img src="eu-projects-timeline.png"  alt="Project Timeline" width="60%">
+<p></p>
 </div>
 With the future introduction of the [proposed EDSH regulation](https://health.ec.europa.eu/publications/proposal-regulation-european-health-data-space_en) the adoption of a common format for the sharing for these "priority doamins"  will not be limited to the cross border services, but it will be likely required to be supported by any EHR in Europe.
 
@@ -28,21 +29,32 @@ Note 1: this "common format" is also known as the European EHR exchange format (
 
 ### Why this guide and why now
 
-As highlighted in the previous figure, the EU driven initiatives are and will be developed in parallel with other National, already on-going, activities. Even thought the European Commission funded the [XeHealth project](https://www.x-ehealth.eu/) for working on a proposal for the E-EHRxF, and other EU initiatives are planned (XpanDH, JA-09,..), the risk of potentially not aligned national choices is not neglibeable.
+As highlighted in the previous figure, the EU driven initiatives are and will be developed in parallel with other National, already on-going, activities. Even thought the European Commission funded the [X-eHealth project](https://www.x-ehealth.eu/) for working on a proposal for the E-EHRxF, and other EU initiatives are planned (XpanDH, JA-09,..), the risk of potentially not aligned national choices is not neglibeable.
 
-Considering this landscape, HL7 Europe, co-leading with IHE Europe the specification work package in XeHealth, has identified the need of promoting a Standardization activity at the European level with the purpose of:
+Considering this landscape, HL7 Europe, co-leading with IHE Europe the specification work package in X-eHealth, has identified the need of promoting a Standardization activity at the European level with the purpose of:
 - Facilitating the harmonization among the national initiatives
 - Supporting the development of the future European-EHRxF
 
-Starting from the proof of concept guide developed by the XeHealth project.
+Starting from the proof of concept guide developed by the X-eHealth project.
 
-The intent isin fact that of promoting for this and future guide a layered approach enabling European and Global standardization to facilitate the work done at the national and European levels.
+The intent is in fact that of *promoting for this and future guide a layered approach* enabling European and Global standardization to facilitate the work done at the national and European levels.
 <div>
 <img src="layered-specs.png"  alt="Vision: Layered Specification" width="60%">
+<p></p>
 </div>
 The following figure shows the "goal" relationships between this guide and those that will be defined for the European and National services. The arrows among the guides represent a logical consistency, not necessarly a formal inheritance between guides.
 <div>
 <img src="guide-relationship.png"  alt="Vision: relatioship among Lab Report IGs" width="60%">
 </div>
+
+### Towards a coherent echosystem of Lab Report IGs
+
+The proposed approach aims to create a coherent - **not competing** - echosystem of FHIR IGs for the Laboratory Report, each of them maintaining their governance rules and serving their specific scopes and jurisdictional requirements **without losing cross-consistency**.
+
+This will:
+- enlarge the stakeholders engagement and consensus
+- reduce the duplication of work
+- improve the guides quality
+
 
 
