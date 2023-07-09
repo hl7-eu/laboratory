@@ -12,7 +12,7 @@ Usage: #definition
 * description = "eHN Result Model to this guide Map"					
 * purpose = "It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					
-* targetUri = "http://hl7.org/fhir"					
+* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"					
 					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					

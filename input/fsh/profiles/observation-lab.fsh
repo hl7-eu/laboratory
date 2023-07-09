@@ -33,6 +33,8 @@ This observation may represent the result of a simple laboratory test such as he
 * code ^binding.extension[=].valueString = "ObservationCode"
 * performer 1.. 
 * performer only Reference(PractitionerRoleEu or PractitionerEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
+* dataAbsentReason ^short = "Provides a reason why the expected value is missing."
+
 * value[x]
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
@@ -86,6 +88,6 @@ This observation may represent the result of a simple laboratory test such as he
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
 
 Invariant: eu-lab-1
-Description: "if no \"hasMember\" element is present then Observation must have a\" value\""
+Description: "At least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "value.exists() or hasMember.exists()"
+Expression: "value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
