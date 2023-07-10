@@ -21,6 +21,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * address only AddressEu
 * address obeys pat-cnt-2or3-char
 * contact.relationship only $CodeableConcept-uv-ips
+* contact.relationship ^short = "Relationship between a patient and a contact person for that patient"
 * contact.address only AddressEu
 * generalPractitioner ^short = "Patient's nominated care provider"
 
