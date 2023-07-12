@@ -6,25 +6,24 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, draft )
-* identifier MS
-* name 1..* MS
+* identifier ^short = "Patient identifiers"
+* name 1..*
 * name obeys eu-pat-1
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
-* name.text MS
+// * name.text MS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
-* name.text ^min = 0
-* name.family 1..1 MS
-* name.given MS
-* name.given ^min = 1
-* telecom MS
-* gender MS
-* birthDate 1.. MS
-* address MS
+* name.family 1..1
+* name.given ^short = "Given names. Includes middle names"
+* telecom ^short = "A contact detail for the patient"
+* gender ^short = "Administrative Gender"
+* birthDate 1..
+// * address MS
 * address only AddressEu
 * address obeys pat-cnt-2or3-char
 * contact.relationship only $CodeableConcept-uv-ips
+* contact.relationship ^short = "Relationship between a patient and a contact person for that patient"
 * contact.address only AddressEu
-* generalPractitioner MS
+* generalPractitioner ^short = "Patient's nominated care provider"
 
 Invariant: eu-pat-1
 Description: "Patient.name.given, Patient.name.family or Patient.name.text SHALL be present"

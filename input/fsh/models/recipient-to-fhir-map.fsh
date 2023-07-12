@@ -34,7 +34,7 @@ Usage: #definition
 * group[=].element[=].target.code = #extension.ValueReference					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "ofType(Organization) if the recipient is the organization. "					
+* group[=].element[=].target.comment = "ofType(Organization) if the recipient is the organization."					
 * group[=].element[+].code = #Recipient.organization					
 * group[=].element[=].display = "A.1.4.3 Recipient organization"					
 * group[=].element[=].target.code = #extension.ValueReference.organization					

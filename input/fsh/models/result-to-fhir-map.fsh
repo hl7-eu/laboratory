@@ -12,7 +12,7 @@ Usage: #definition
 * description = "eHN Result Model to this guide Map"					
 * purpose = "It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					
-* targetUri = "http://hl7.org/fhir"					
+* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"					
 					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					
@@ -25,9 +25,11 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #unmatched					
 					
 * group[=].element[+].code = #Result.narrative.report					
+//---END					
 * group[=].element[=].display = "A.5.1.1 Narrative report"					
 //-- unmatched					
 //-- unmatched					
+//---END					
 * group[=].element[=].target.equivalence = #unmatched					
 					
 * group[=].element[+].code = #Result.narrative.notes					
@@ -50,13 +52,19 @@ Usage: #definition
 					
 * group[=].element[+].code = #Result.observation.code					
 * group[=].element[=].display = "A.5.2.3 Observation code"					
-* group[=].element[=].target.code = #Observation.code.coding.code					
+* group[=].element[=].target.code = #Observation.code					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "depends on the type of test"					
 * group[=].element[+].code = #Result.observation.code					
 * group[=].element[=].display = "A.5.2.3 Observation code"					
-* group[=].element[=].target.code = #Observation.component.code.coding.code					
+* group[=].element[=].target.code = #Observation.hasMember.code					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "depends on the type of test"					
+* group[=].element[+].code = #Result.observation.code					
+* group[=].element[=].display = "A.5.2.3 Observation code"					
+* group[=].element[=].target.code = #Observation.component.code					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "depends on the type of test"					
@@ -64,21 +72,28 @@ Usage: #definition
 * group[=].element[=].display = "A.5.2.3.1 Observation name"					
 * group[=].element[=].target.code = #Observation.code.coding.display					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if the designation of the original code.
-If the 'code' is in the Observation.code"					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "If the 'code' is the Observation.code. Similar mapping for the other cases."					
 * group[=].element[+].code = #Result.observation.code.originalName					
 * group[=].element[=].display = "A.5.2.3.2 Observation original name"					
 * group[=].element[=].target.code = #Observation.code.text					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If the 'code' is in the Observation.code"					
+* group[=].element[=].target.comment = "If the 'code' is the Observation.code. Similar mapping for the other cases."					
 * group[=].element[+].code = #Result.observation.code.displayName					
 * group[=].element[=].display = "A.5.2.3.3 Observation display name"					
 * group[=].element[=].target.code = #Observation.code.coding.display					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If the 'code' is in the Observation.code"					
+* group[=].element[=].target.comment = "The coding refers to a coded concept different from that used for A.5.2.3.1.
+If the 'code' is the Observation.code. Similar mapping for the other cases."					
+* group[=].element[+].code = #Result.observation.code.displayName					
+* group[=].element[=].display = "A.5.2.3.3 Observation display name"					
+* group[=].element[=].target.code = #Observation.code.coding.display.extension:translation					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "The coding refers to the same coded concept used for A.5.2.3.1.
+If the 'code' is the Observation.code. Similar mapping for the other cases."					
 * group[=].element[+].code = #Result.observation.method					
 * group[=].element[=].display = "A.5.2.4 Observation method"					
 * group[=].element[=].target.code = #Observation.method					
@@ -147,13 +162,6 @@ If the 'code' is in the Observation.code"
 * group[=].element[=].target.comment = "to be checked
 performer ofType PractictionerRole"					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
-* group[=].element[=].display = "A.5.2.14 Accreditation status"					
-* group[=].element[=].target.code = #Observation.performer.organization.qualification					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked
-performer ofType Organization"					
-//---END					
 //---END					
 //---END					
 //---END					

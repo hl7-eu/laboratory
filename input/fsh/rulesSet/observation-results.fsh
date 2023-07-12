@@ -14,18 +14,18 @@ RuleSet: ObservationResultsEu
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 * category only $CodeableConcept-uv-ips
 * code only $CodeableConcept-uv-ips
-* code MS
-* subject 1.. MS
+// * code MS
+* subject 1.. 
 * subject only Reference(Patient or PatientEu or Group or Device or Location)
-* subject.reference 1.. MS
-* effective[x] 1.. MS
+* subject.reference 1.. 
+* effective[x] 1..
 * effective[x] only dateTime or Period
-* effective[x].extension contains $SD-data-absent-reason named data-absent-reason 0..1 MS
+* effective[x].extension contains $SD-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
 * performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
-* value[x] MS
+// * value[x] MS
 // removed circular reference
 // * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
 * hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
-* component MS
+* component ^short = "Laboratory result"
