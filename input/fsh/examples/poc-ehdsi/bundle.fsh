@@ -11,12 +11,14 @@ Usage: #example
 * entry[composition].resource = Inline-Composition-laboratory-results-report-poc
 * entry[diagnosticReport].fullUrl = "urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754"
 * entry[diagnosticReport].resource = Inline-Diagnostic-Report-laboratory-results-report-poc
-* entry[patient].fullUrl = "urn:uuid:a3d70b1b-cd31-4b38-9008-e9b29d2cb769"
+* entry[patient].fullUrl = "urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda"
 * entry[patient].resource = Inline-Patient-laboratory-results-report-poc
-/* * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
-* entry[=].resource = Inline-Observation-laboratory-results-report-poc  */
+* entry[observation].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
+* entry[observation].resource = Inline-Observation-laboratory-results-report-poc
 * entry[serviceRequest].fullUrl = "urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2"
 * entry[serviceRequest].resource = Inline-ServiceRequest-laboratory-results-report-poc
+* entry[organization].fullUrl = "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"
+* entry[organization].resource = Inline-Organization-laboratory-results-report-poc
 
 Instance: Inline-Composition-laboratory-results-report-poc
 InstanceOf: CompositionLabReportEu
@@ -28,7 +30,7 @@ Usage: #inline
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
 * type = $loinc#11502-2 "Laboratory report"
-* subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
+* subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
 * date = "2023-03-09T14:30:00+01:00"
 * author[+].display = "Dr. Patrick Dempsey"
 * title = "Laboratory Report - 10 March, 2023 14:30"
@@ -50,14 +52,14 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
 * status = #final
 * category = #laboratory
-* subject = Reference(urn:uuid:a3d70b1b-cd31-4b38-9008-e9b29d2cb769)
+* subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
 * effectiveDateTime = "2023-04-19T15:46:00+01:00"
 * performer[+].display = "Dr. Patrick Dempsey"
 
 Instance: Inline-Patient-laboratory-results-report-poc
 InstanceOf: PatientEu
 Usage: #inline
-* id = "a3d70b1b-cd31-4b38-9008-e9b29d2cb769"
+* id = "1d252ca0-803c-464c-87d5-f12f73c12eda"
 * identifier[+].type = $v2-0203#NIIP
 * identifier[=].system = "urn:oid:1.2.203.24341.1.20.2"
 * identifier[=].value = "740512852"
@@ -76,11 +78,11 @@ InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "8bd279af-125a-4318-b461-ba5629b12e7f"
 * status = #final
-* category[+] = $observation-category#laboratory
-* category[+] = $v2-0074#MB "Blood bank studies"
+* category[laboratory] = $observation-category#laboratory
+//* category[+] = $v2-0074#MB "Blood bank studies"
 * code = LaboratoryLocalCS#883-9 "ABO group [Type] in Blood"
 * code.text = "Blood Group"
-* subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
+* subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
 * effectiveDateTime = "2023-03-09T13:35:00+01:00"
 * performer[+].display = "Dr. Patrick Dempsey"
 * valueCodeableConcept = $sct#112144000 "Blood group A (finding)"
@@ -102,5 +104,22 @@ Usage: #inline
 * status = #active
 * intent = #order
 * code = $sct#108252007 "Laboratory procedure"
-* subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
+* subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
 * specimen = Reference(Specimen/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
+
+Instance: Inline-Organization-laboratory-results-report-poc
+InstanceOf: OrganizationUvIps
+Usage: #inline
+* id = "608b5309-2609-4d03-b6da-c758bfa1de70"
+* name = "SAN RAFFAELE NOMENTANA"
+* telecom.system = #phone
+* telecom.value = "390 666 0581"
+* telecom.use = #work
+* address.line = "Via Emilio Praga 39"
+* address.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
+* address.line.extension.valueString = "058091"
+* address.city = "Roma"
+* address.district = "RM"
+* address.state = "120"
+* address.postalCode = "00137"
+* address.country = "100"
