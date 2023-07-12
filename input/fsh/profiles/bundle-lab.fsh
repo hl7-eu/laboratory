@@ -54,5 +54,5 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains practitionerRole 0..*
 * entry[practitionerRole].resource only PractitionerRoleEu
 
-* entry contains documentReference 0..*
-* entry[documentReference].resource only DocumentReference
+//* entry contains documentReference 0..*
+//* entry[documentReference].resource only DocumentReference
