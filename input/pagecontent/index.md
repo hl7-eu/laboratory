@@ -1,12 +1,21 @@
+### Laboratory domain
+Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients. It is important that laboratories produce high quality test results as they often are the basis for clinical decision making. Proper quality management is therefore essential.
+
 ### Scope
 
 Define a set of common rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context.
 
+This IG coveres laboratory result reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains requiring specialised reporting structure like histopathology or medical genetics.
+
+This IG covers test results performed by clinical laboratories on:
+- Human specimens (from human subject)
+- Non-human specimens such as non-human material or non-human living subject
+- Non-human specimens paired with a human subject
 
 
 <blockquote class="stu-note">
 <p>
-    The specification herewith documented is work in progress. 
+    The specification herewith documented is work in progress.
     No liability can be inferred from the use or misuse of this specification, or its consequences.
 </p>
 </blockquote>
@@ -27,7 +36,7 @@ The project background and the reasons for the design choiches (FHIR document in
 {% include dependency-table.xhtml %}
 
 
-### Cross Version Analysis 
+### Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
 
