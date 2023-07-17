@@ -23,7 +23,7 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: current  
+  hl7.fhir.uv.ips: current
   hl7.fhir.extensions.r5: 4.0.1
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -47,6 +47,8 @@ pages:
     title: Home
   background.md:
     title: Background
+  semantic-notes.md:
+    title: Laboratory Result Report
   design-choice.md:
     title: Design choices
   examples.md:
@@ -77,7 +79,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 #    - fsh-generated/resources
 #  path-pages:
 #    - input/pagecontent
-#    - input/intro-notes   
+#    - input/intro-notes
 #  active-tables: false
   apply-contact: true
   apply-jurisdiction: true
@@ -96,7 +98,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   #   - json
  # no-narrative:
  #   - Patient/example-targeted-provenance
- #   - Bundle/docref-example-1  
+ #   - Bundle/docref-example-1
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
@@ -121,10 +123,11 @@ menu:
   Background:
     Background: background.html
     Design Choice: design-choice.html
+  Laboratory Report: semantic-notes.html
   Examples: examples.html
   Artifacts: artifacts.html
   Downloads: downloads.html
-  
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -176,7 +179,7 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 
-resources: 
+resources:
   ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
     name: DiagnosticReport to Composition status
     description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
@@ -188,7 +191,7 @@ resources:
   ConceptMap/ConceptMap-eu-payer2FHIR:
     name: eHN Payer model to this guide
     description: It shows how the Payer data set defined by the EU eHN guidelines is mapped into this guide.
-  
+
   ConceptMap/ConceptMap-eu-recipient2FHIR:
     name: eHN Recipient model to this guide
     description: It shows how the Recipient data set defined by the EU eHN guidelines is mapped into this guide.
@@ -219,15 +222,15 @@ resources:
 
   ConceptMap/ConceptMap-eu-result2FHIR:
     name: eHN Result model to this guide
-    description: It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide. 
- 
+    description: It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide.
+
 #  Patient/my-example-patient:
 #    name: My Example Patient
 #    description: An example Patient
 #    exampleBoolean: true
 #  Patient/bad-example: omit
 
- 
+
 #
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that
@@ -248,8 +251,8 @@ groups:
       - StructureDefinition/Author
       - StructureDefinition/Validator
       - StructureDefinition/LegalAuthenticator
-      - StructureDefinition/Recipient      
-      - StructureDefinition/Order      
+      - StructureDefinition/Recipient
+      - StructureDefinition/Order
       - StructureDefinition/Result
       - StructureDefinition/SpecimenLab
       - StructureDefinition/Payer
@@ -268,7 +271,7 @@ groups:
       - ConceptMap/ConceptMap-eu-validator2FHIR
       - ConceptMap/ConceptMap-eu-specimen2FHIR
       - ConceptMap/ConceptMap-eu-result2FHIR
-   
+
 
 
 
