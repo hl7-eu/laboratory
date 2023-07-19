@@ -1,18 +1,18 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					author-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-author2FHIR					
+Instance: author2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
-* name = "Author2Fhir"					
+* name = "LabRptAuthor2FHIR"					
 * title = "eHN Author to this guide Map"					
 * status = #draft					
 * experimental = true					
 * description = "eHN Author Model to this guide Map"					
 * purpose = "It shows how the Laboratory Report Author data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Author"					
-* targetUri = "http://hl7.org/fhir"					
+* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"					
 					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Author"					

@@ -1,18 +1,18 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					subject-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-subject2FHIR					
+Instance: subject2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
-* name = "Subject2Fhir"					
+* name = "LabRptSubject2Fhir"					
 * title = "eHN Subject to this guide Map"					
 * status = #draft					
 * experimental = true					
 * description = "eHN Subject Model to this guide Map"					
 * purpose = "It shows how the Laboratory Report Subject data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Subject"					
-* targetUri = "http://hl7.org/fhir/laboratory/StructureDefinition/Patient-eu-lab"					
+* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Subject"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"					

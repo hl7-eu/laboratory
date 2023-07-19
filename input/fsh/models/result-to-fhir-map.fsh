@@ -1,11 +1,11 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					result-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-result2FHIR					
+Instance: result2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
-* name = "Result2Fhir"					
+* name = "LabRptResult2FHIR"					
 * title = "eHN Result to this guide Map"					
 * status = #draft					
 * experimental = true					
@@ -120,10 +120,11 @@ If the 'code' is the Observation.code. Similar mapping for the other cases."
 					
 * group[=].element[+].code = #Result.observation.reporter					
 * group[=].element[=].display = "A.5.2.10 Reporter"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "interpreter or a person responsible for validation of this result. To be checked"					
+* group[=].element[=].target.code = #Observation.performer					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "For interpreter: performer.extension:performerFunction = AUT (author)
+If the person responsible for validation:  performer.extension:performerFunction = AUTHEN or LA"					
 * group[=].element[+].code = #Result.observation.result					
 * group[=].element[=].display = "A.5.2.11 Observation result"					
 * group[=].element[=].target.code = #Observation.value[x]					
@@ -159,8 +160,7 @@ If the 'code' is the Observation.code. Similar mapping for the other cases."
 * group[=].element[=].target.code = #Observation.performer.qualification					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked
-performer ofType PractictionerRole"					
+* group[=].element[=].target.comment = "performer ofType PractictionerRole"					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
 //---END					
 //---END					

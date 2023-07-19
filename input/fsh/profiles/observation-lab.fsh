@@ -33,6 +33,12 @@ This observation may represent the result of a simple laboratory test such as he
 * code ^binding.extension[=].valueString = "ObservationCode"
 * performer 1.. 
 * performer only Reference(PractitionerRoleEu or PractitionerEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
+
+
+* performer.extension contains $event-performerFunction named performerFunction 0..*
+* performer.extension[performerFunction]
+* performer.extension[performerFunction] ^defaultValueCodeableConcept = $v3-ParticipationType#PART // Participant
+
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
 
 * value[x]

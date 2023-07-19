@@ -75,6 +75,8 @@ Usage: #definition
 * group[=].element[=].display = "Unknown"
 * group[=].element[=].target.equivalence = #unmatched
 
+/* Commented from this version
+
 * group[+].source = "http://hl7.org/fhir/diagnostic-report-status|5.0.0"
 * group[=].target = "http://hl7.org/fhir/composition-status|5.0.0"
 
@@ -137,3 +139,4 @@ Usage: #definition
 * group[=].element[=].target.code = #unknown
 * group[=].element[=].target.display = "Unknown"
 * group[=].element[=].target.equivalence = #relatedto
+ */

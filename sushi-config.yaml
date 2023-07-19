@@ -184,7 +184,7 @@ resources:
     name: DiagnosticReport to Composition status
     description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
 
-  ConceptMap/ConceptMap-eu-labRpt2FHIR:
+  ConceptMap/labRpt2FHIR-eu-lab:
     name: eHN Lab Report model to this guide
     description: It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide.
 
@@ -196,11 +196,11 @@ resources:
     name: eHN Recipient model to this guide
     description: It shows how the Recipient data set defined by the EU eHN guidelines is mapped into this guide.
 
-  ConceptMap/ConceptMap-eu-subject2FHIR:
+  ConceptMap/subject2FHIR-eu-lab:
     name: eHN Subject model to this guide
     description: It shows how the Subject data set defined by the EU eHN guidelines is mapped into this guide.
 
-  ConceptMap/ConceptMap-eu-author2FHIR:
+  ConceptMap/author2FHIR-eu-lab:
     name: eHN Author model to this guide
     description: It shows how the Author data set defined by the EU eHN guidelines is mapped into this guide.
 
@@ -220,7 +220,7 @@ resources:
     name: eHN Specimen model to this guide
     description: It shows how the Specimen data set defined by the EU eHN guidelines is mapped into this guide.
 
-  ConceptMap/ConceptMap-eu-result2FHIR:
+  ConceptMap/result2FHIR-eu-lab:
     name: eHN Result model to this guide
     description: It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide.
 
@@ -261,16 +261,16 @@ groups:
     name:  Logical Model mappings
     description: Concept Maps describing how the eHN Laboratory Guidelines are supposed to be implemented by using this guide
     resources:
-      - ConceptMap/ConceptMap-eu-labRpt2FHIR
+      - ConceptMap/labRpt2FHIR-eu-lab
       - ConceptMap/ConceptMap-eu-payer2FHIR
       - ConceptMap/ConceptMap-eu-recipient2FHIR
-      - ConceptMap/ConceptMap-eu-subject2FHIR
-      - ConceptMap/ConceptMap-eu-author2FHIR
+      - ConceptMap/subject2FHIR-eu-lab
+      - ConceptMap/author2FHIR-eu-lab
       - ConceptMap/ConceptMap-eu-order2FHIR
       - ConceptMap/ConceptMap-eu-legalAuth2FHIR
       - ConceptMap/ConceptMap-eu-validator2FHIR
       - ConceptMap/ConceptMap-eu-specimen2FHIR
-      - ConceptMap/ConceptMap-eu-result2FHIR
+      - ConceptMap/result2FHIR-eu-lab
 
 
 

@@ -7,28 +7,29 @@ Usage: #example
 * identifier.value = "V1CZ454557891308174803488707671420"
 * type = #document
 * timestamp = "2022-10-25T14:30:00+01:00"
-* entry[+].fullUrl = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
-* entry[=].resource = Inline-Composition-hepatitis-panel
-* entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
-* entry[=].resource = Inline-Patient-hepatitis-panel
+
+* entry[composition].fullUrl = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
+* entry[composition].resource = Inline-Composition-hepatitis-panel
+* entry[patient].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
+* entry[patient].resource = Inline-Patient-hepatitis-panel
+* entry[diagnosticReport].fullUrl = "urn:uuid:3a743273-237a-446a-a8da-9e7521cce614"
+* entry[diagnosticReport].resource = Inline-Diag-Report-hepatitis-panel
+* entry[specimen].fullUrl = "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"
+* entry[specimen].resource = Inline-Specimen-hepatitis-panel
+/* * entry[observation][0].fullUrl = "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"
+* entry[observation][0].resource = Inline-Observation-hepatitis-panel */
+* entry[observation][+].fullUrl = "urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40"
+* entry[observation][=].resource = Inline-Observation-hepatitis-1
+* entry[observation][+].fullUrl = "urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521"
+* entry[observation][=].resource = Inline-Observation-hepatitis-2
+* entry[observation][+].fullUrl = "urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88"
+* entry[observation][=].resource = Inline-Observation-hepatitis-3
+* entry[observation][+].fullUrl = "urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc"
+* entry[observation][=].resource = Inline-Observation-hepatitis-4
+* entry[observation][+].fullUrl = "urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112"
+* entry[observation][=].resource = Inline-Observation-hepatitis-5
 * entry[+].fullUrl = "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"
 * entry[=].resource = Inline-Organization-hepatitis-panel
-* entry[+].fullUrl = "urn:uuid:3a743273-237a-446a-a8da-9e7521cce614"
-* entry[=].resource = Inline-Diag-Report-hepatitis-panel
-* entry[+].fullUrl = "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"
-* entry[=].resource = Inline-Specimen-hepatitis-panel
-* entry[+].fullUrl = "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"
-* entry[=].resource = Inline-Observation-hepatitis-panel
-* entry[+].fullUrl = "urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40"
-* entry[=].resource = Inline-Observation-hepatitis-1
-* entry[+].fullUrl = "urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521"
-* entry[=].resource = Inline-Observation-hepatitis-2
-* entry[+].fullUrl = "urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88"
-* entry[=].resource = Inline-Observation-hepatitis-3
-* entry[+].fullUrl = "urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc"
-* entry[=].resource = Inline-Observation-hepatitis-4
-* entry[+].fullUrl = "urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112"
-* entry[=].resource = Inline-Observation-hepatitis-5
 
 Instance: Inline-Composition-hepatitis-panel
 InstanceOf: Composition
@@ -84,7 +85,7 @@ Instance: Inline-Diag-Report-hepatitis-panel
 InstanceOf: DiagnosticReport-eu-lab
 Usage: #inline
 * id = "3a743273-237a-446a-a8da-9e7521cce614"
-* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
+// * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
 * status = #final
 * category = $v2-0074#MB "Microbiology"
