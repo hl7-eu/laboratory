@@ -51,6 +51,8 @@ pages:
     title: Laboratory Result Report
   design-choice.md:
     title: Design choices
+  challenges.md:
+    title: Challenges
   examples.md:
     title: Examples
   downloads.md:
@@ -122,8 +124,11 @@ menu:
   Table of Contents: toc.html
   Background:
     Background: background.html
+    Challenges: challenges.html
     Design Choice: design-choice.html
+  # ==========
   Laboratory Report: semantic-notes.html
+  # label to be changed 
   Examples: examples.html
   Artifacts: artifacts.html
   Downloads: downloads.html

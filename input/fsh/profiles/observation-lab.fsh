@@ -29,8 +29,6 @@ This observation may represent the result of a simple laboratory test such as he
 * code from $results-laboratory-observations-uv-ips (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
-* code ^binding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"
-* code ^binding.extension[=].valueString = "ObservationCode"
 * performer 1.. 
 * performer only Reference(PractitionerRoleEu or PractitionerEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
 
@@ -92,8 +90,16 @@ This observation may represent the result of a simple laboratory test such as he
 * hasMember only Reference(ObservationResultsLaboratoryEu)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
+* component obeys eu-lab-2
+  * code only $CodeableConcept-uv-ips
+  * code from $results-laboratory-observations-uv-ips (preferred)
 
 Invariant: eu-lab-1
 Description: "At least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
 Expression: "value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+
+Invariant: eu-lab-2
+Description: "At least one of these Observation.component elements shall be provided:  \"value\" or \"dataAbsentReason\""
+Severity: #error
+Expression: "value.exists() or dataAbsentReason.exists()"

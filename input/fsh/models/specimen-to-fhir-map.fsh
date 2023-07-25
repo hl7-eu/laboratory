@@ -54,6 +54,22 @@ Usage: #definition
 * group[=].element[=].target.comment = "to be checked. This is an R5 element"					
 * group[=].element[+].code = #SpecimenLab.sourceDevice					
 * group[=].element[=].display = "A.4.7 Source Device"					
+* group[=].element[=].target.code = #Specimen.collection.extension:R5Specimen-collection-device					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "to be checked. This is an R5 element"					
+* group[=].element[+].code = #SpecimenLab.collectionMethod					
+* group[=].element[=].display = "A.4.8 Collection procedure/method"					
+* group[=].element[=].target.code = #Specimen.collection.method					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
+* group[=].element[+].code = #SpecimenLab.receivedDateTime					
+* group[=].element[=].display = "A.4.9 Received date"					
+* group[=].element[=].target.code = #Specimen.receivedTime					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
 //---END					
 //---END					
 //---END					
