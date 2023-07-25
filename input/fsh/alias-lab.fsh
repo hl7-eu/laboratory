@@ -43,7 +43,11 @@ Alias: $procedure-method = http://hl7.org/fhir/StructureDefinition/procedure-met
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $specimen-feature-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
+Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
+Alias: $specimen-collection-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.device
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
+Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 
 // --- Profiles
 Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips

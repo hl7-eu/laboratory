@@ -12,9 +12,9 @@ Usage: #definition
 * description = "eHN Specimen Model to this guide Map"					
 * purpose = "It shows how the Specimen data set defined by the EU eHN guidelines is mapped into this guide"					
 * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab"					
-* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"					
+* targetUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-eu-lab"					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab"					
-* group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"					
+* group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-eu-lab"					
 					
 * group[=].element[+].code = #SpecimenLab.identifier					
 * group[=].element[=].display = "A.4.1 Specimen identifier"					
@@ -24,7 +24,7 @@ Usage: #definition
 					
 * group[=].element[+].code = #SpecimenLab.speciesType					
 * group[=].element[=].display = "A.4.2 Type of species"					
-* group[=].element[=].target.code = #Specimen.type					
+* group[=].element[=].target.code = #Specimen.subject.extension:patient-animal.extension:species					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "to be checked"					
@@ -32,8 +32,8 @@ Usage: #definition
 * group[=].element[=].display = "A.4.3 Material"					
 * group[=].element[=].target.code = #Specimen.type					
 * group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked"					
+* group[=].element[=].target.equivalence = #equivalent					
+					
 * group[=].element[+].code = #SpecimenLab.collected					
 * group[=].element[=].display = "A.4.4 Collection period"					
 * group[=].element[=].target.code = #Specimen.collection.collected[x]					
@@ -48,7 +48,7 @@ Usage: #definition
 					
 * group[=].element[+].code = #SpecimenLab.morphology					
 * group[=].element[=].display = "A.4.6 Morphology"					
-* group[=].element[=].target.code = #Specimen.feature.type					
+* group[=].element[=].target.code = #Specimen.extension:SpecimenFeatureTypeR5					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "to be checked. This is an R5 element"					

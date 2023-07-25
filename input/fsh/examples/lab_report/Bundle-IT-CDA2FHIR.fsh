@@ -488,6 +488,7 @@ InstanceOf: Observation
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
+* category = $observation-category#laboratory
 * code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Albumina nelle urine"
 * code.text = "Microalbumin Massa/Volume in Urine"
@@ -496,10 +497,11 @@ Usage: #inline
 * effectiveDateTime = "2022-03-30T11:24:26+01:00"
 * valueQuantity.value = 16
 * valueQuantity.unit = "mg/L"
-* interpretation = urn:oid:2.16.840.1.113883.5.83#N "Normal"
+* performer = Reference(urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce)
+* interpretation = $obs-interpretation#N "Normal"
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
 * referenceRange.low.value = 0
 * referenceRange.low.unit = "mg/L"
 * referenceRange.high.value = 20
 * referenceRange.high.unit = "mg/L"
-* referenceRange.type = urn:oid:2.16.840.1.113883.5.83#N "Normal"
+* referenceRange.type = $obs-interpretation#N "Normal"
