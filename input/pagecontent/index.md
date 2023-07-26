@@ -44,6 +44,10 @@ The project background and the reasons for the design choiches (FHIR document in
 
 {% include globals-table.xhtml %}
 
+### IP statements
+
+{% include ip-statements.xhtml %}
+
 ### Authors and Contributors
 
 | Name             | Affiliation |

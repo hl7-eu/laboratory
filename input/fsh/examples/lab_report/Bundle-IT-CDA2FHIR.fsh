@@ -496,6 +496,8 @@ Usage: #inline
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 * effectiveDateTime = "2022-03-30T11:24:26+01:00"
 * valueQuantity.value = 16
+* valueQuantity.system = $ucum
+* valueQuantity.code = #mg/L
 * valueQuantity.unit = "mg/L"
 * performer = Reference(urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce)
 * interpretation = $obs-interpretation#N "Normal"

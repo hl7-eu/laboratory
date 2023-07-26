@@ -135,8 +135,8 @@ Usage: #inline
 * telecom[=].value = "+420332244556"
 * telecom[=].use = #mobile
 
-* contact[+].relationship.coding[+] = $v3-RoleCode#MTH "matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
+* contact[+].relationship.coding[+] = $v3-RoleCode#MTH // "matka"
+* contact[=].relationship.coding[+] = $v2-0131#N // "příbuzný"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Mrakomorová"
 * contact[=].name.given[+] = "Biologická"
@@ -146,8 +146,8 @@ Usage: #inline
 * contact[=].telecom[=].system = #phone
 * contact[=].telecom[=].value = "+420 604 123 456"
 
-* contact[+].relationship.coding[+] = $v3-RoleCode#FRND "přítel/přítelkyně"
-* contact[=].relationship.coding[+] = $v2-0131#C "Emergentní kontakt"
+* contact[+].relationship.coding[+] = $v3-RoleCode#FRND // "přítel/přítelkyně"
+* contact[=].relationship.coding[+] = $v2-0131#C // "Emergentní kontakt"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Dlouhá"
 * contact[=].name.given[0] = "Alena"

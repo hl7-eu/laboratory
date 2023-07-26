@@ -16,8 +16,8 @@ Usage: #example
 * entry[diagnosticReport].resource = Inline-Diag-Report-hepatitis-panel
 * entry[specimen].fullUrl = "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"
 * entry[specimen].resource = Inline-Specimen-hepatitis-panel
-/* * entry[observation][0].fullUrl = "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"
-* entry[observation][0].resource = Inline-Observation-hepatitis-panel */
+* entry[observation][+].fullUrl = "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"
+* entry[observation][=].resource = Inline-Observation-hepatitis-panel
 * entry[observation][+].fullUrl = "urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40"
 * entry[observation][=].resource = Inline-Observation-hepatitis-1
 * entry[observation][+].fullUrl = "urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521"
