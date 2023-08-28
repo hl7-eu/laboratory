@@ -35,7 +35,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"					
-//---END					
+* group[=].element[+].code = #LabReport.header.informationRecipient					
 * group[=].element[=].display = "A.1.4 Information recipient"					
 //-- unmatched					
 //-- unmatched					
@@ -47,18 +47,12 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If the author is the interpreter"					
-* group[=].element[+].code = #LabReport.header.author					
-* group[=].element[=].display = "A.1.5 Author"					
+* group[=].element[+].code = #LabReport.header.legalAuthenticator					
+* group[=].element[=].display = "A.1.6 Legal authenticator"					
 * group[=].element[=].target.code = #DiagnosticReport.performer					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If the author is the perfomer"					
-* group[=].element[+].code = #LabReport.header.legalAuthenticator					
-* group[=].element[=].display = "A.1.6 Legal authenticator"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "Mapped in the Composition resource"					
 * group[=].element[+].code = #LabReport.header.validator					
 * group[=].element[=].display = "A.1.7 Result validator"					
 //-- unmatched					
@@ -71,6 +65,12 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
+* group[=].element[+].code = #LabReport.header.metadata.documentId					
+* group[=].element[=].display = "A.1.8.0 Document Id"					
+* group[=].element[=].target.code = #DiagnosticReport.identifier					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier"					
 * group[=].element[+].code = #LabReport.header.metadata.type					
 * group[=].element[=].display = "A.1.8.1 Document type"					
 * group[=].element[=].target.code = #DiagnosticReport.code					
@@ -95,12 +95,36 @@ Usage: #definition
 //-- unmatched					
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[=].target.comment = "Mapped in the Composition resource"					
+* group[=].element[+].code = #LabReport.header.metadata.studyType					
+* group[=].element[=].display = "A.1.8.5 Study type"					
+* group[=].element[=].target.code = #DiagnosticReport					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "To be analyzed"					
 * group[=].element[+].code = #LabReport.header.metadata.custodian					
-* group[=].element[=].display = "A.1.8.5 Report custodian"					
+* group[=].element[=].display = "A.1.8.6 Report custodian"					
 //-- unmatched					
 //-- unmatched					
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[=].target.comment = "Mapped in the Composition resource"					
+* group[=].element[+].code = #LabReport.header.metadata.confidentiality					
+* group[=].element[=].display = "A.1.8.7 Confidentiality"					
+//-- unmatched					
+//-- unmatched					
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "Mapped in the Composition resource"					
+* group[=].element[+].code = #LabReport.header.metadata.language					
+* group[=].element[=].display = "A.1.8.8 Language"					
+* group[=].element[=].target.code = #DiagnosticReport.language					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
+* group[=].element[+].code = #LabReport.header.metadata.version					
+* group[=].element[=].display = "A.1.8.9 Version"					
+//-- unmatched					
+//-- unmatched					
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "Mapped in the Composition resource if it refers to the business report version"					
 * group[=].element[+].code = #LabReport.order					
 * group[=].element[=].display = "A.2-A.3 Order"					
 * group[=].element[=].target.code = #DiagnosticReport.basedOn					
@@ -128,6 +152,8 @@ Usage: #definition
 //---END					
 //---END					
 //---END					
+//---END					
+					
 					
 					
 					
@@ -141,6 +167,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
+					
 * group[=].element[+].code = #LabReport.header.subject					
 * group[=].element[=].display = "A.1.1 - A1.2 Patient/subject"					
 * group[=].element[=].target.code = #Composition.subject					
@@ -185,6 +212,12 @@ attester.where(mode='professional').party.resolve()"
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
+* group[=].element[+].code = #LabReport.header.metadata.documentId					
+* group[=].element[=].display = "A.1.8.0 Document Id"					
+* group[=].element[=].target.code = #Composition.identifier					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier"					
 * group[=].element[+].code = #LabReport.header.metadata.type					
 * group[=].element[=].display = "A.1.8.1 Document type"					
 * group[=].element[=].target.code = #Composition.code					
@@ -209,12 +242,36 @@ attester.where(mode='professional').party.resolve()"
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
+* group[=].element[+].code = #LabReport.header.metadata.studyType					
+* group[=].element[=].display = "A.1.8.5 Study type"					
+* group[=].element[=].target.code = #Composition					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "To be analyzed"					
 * group[=].element[+].code = #LabReport.header.metadata.custodian					
-* group[=].element[=].display = "A.1.8.5 Report custodian"					
+* group[=].element[=].display = "A.1.8.6 Report custodian"					
 * group[=].element[=].target.code = #Composition.custodian					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
+* group[=].element[+].code = #LabReport.header.metadata.confidentiality					
+* group[=].element[=].display = "A.1.8.7 Confidentiality"					
+* group[=].element[=].target.code = #Composition.confidentiality					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
+* group[=].element[+].code = #LabReport.header.metadata.language					
+* group[=].element[=].display = "A.1.8.8 Language"					
+* group[=].element[=].target.code = #Composition.language					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
+* group[=].element[+].code = #LabReport.header.metadata.version					
+* group[=].element[=].display = "A.1.8.9 Version"					
+* group[=].element[=].target.code = #Composition.extension:versionNumber					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "if it refers to the business report version"					
 * group[=].element[+].code = #LabReport.order					
 * group[=].element[=].display = "A.2-A.3 Order"					
 * group[=].element[=].target.code = #Composition.extension:basedOn-order-or-requisition.insurance					
@@ -248,12 +305,13 @@ attester.where(mode='professional').party.resolve()"
 //---END					
 //---END					
 //---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
