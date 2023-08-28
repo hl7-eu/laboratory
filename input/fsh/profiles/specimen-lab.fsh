@@ -22,8 +22,11 @@ Description: "HL7 Europe Specimen profile."
 * type 1..1
 
 //=== COMMENTED UNTIL https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/Issue.20with.20Specimen.2Ecollection.2Edevice.20R5.20extension IS NOT RESOLVED
-/* * collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1
-* collection.extension[SpecimenCollectionDeviceR5] */
+
+/* 
+* collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1
+* collection.extension[SpecimenCollectionDeviceR5] 
+*/
 
 * collection.bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 

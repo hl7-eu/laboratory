@@ -42,8 +42,8 @@ The supporting information: Any resources that are part of the graph of resource
 in opposition to the R4 rules requiring that, with the exception of the Provenance resource and the Biunary including the stylesheet, only resources directly or indirectly - referred **from** the composition can be included.
 
 This choice has been made considering that:
-* There were a good consensus in the HL7 FHIR community and in this team that the new are the most appropriate rules for a diocument bundle.
-* In R5 the link between the DiagnosticReport and the Composition is realized with the a Reference from the DiagnosticReport. The team decided to follow the same design pattern to faciliate the R4 to R5 transiction.
+* There were a good consensus in the HL7 FHIR community and in this team that the new are the most appropriate rules for a document bundle.
+* In R5 the link between the DiagnosticReport and the Composition is realized with a Reference from the DiagnosticReport. The team decided to follow the same design pattern to faciliate the R4 to R5 transiction.
 * Adding a reference from the Composition to the DiagnosticReport would create a unwished circular reference
 
 
