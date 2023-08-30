@@ -34,31 +34,31 @@ Usage: #definition
 * group[=].element[=].target.code = #extension.ValueReference					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "ofType(Organization) if the recipient is the organization."					
+* group[=].element[=].target.comment = "ValueReference.resolve().ofType(Organization) if the recipient is the organization."					
 * group[=].element[+].code = #Recipient.organization					
 * group[=].element[=].display = "A.1.4.3 Recipient organization"					
 * group[=].element[=].target.code = #extension.ValueReference.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "ofType(PractionerRole), if it is the organization the professional belong to"					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
+* group[=].element[=].target.comment = "ValueReference.resolve().ofType(PractionerRole), if it is the organization the professional belong to"					
+* group[=].element[+].code = #Recipient.address					
+* group[=].element[=].display = "A.1.4.4 Address"					
+* group[=].element[=].target.code = #extension.ValueReference.practitioner.address					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If ValueReference.resolve().ofType(PractionerRole)"					
+* group[=].element[+].code = #Recipient.country					
+* group[=].element[=].display = "A.1.4.5 Country"					
+* group[=].element[=].target.code = #extension.ValueReference.practitioner.country					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If ValueReference.resolve().ofType(PractionerRole)"					
+* group[=].element[+].code = #Recipient.telecom					
+* group[=].element[=].display = "A.1.4.6 Telecom"					
+* group[=].element[=].target.code = #extension.ValueReference.practitioner.telecom					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If ValueReference.resolve().ofType(PractionerRole)"					
 //---END					
 //---END					
 //---END					
