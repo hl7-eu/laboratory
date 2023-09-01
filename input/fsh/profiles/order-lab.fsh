@@ -14,7 +14,7 @@ Profile: ServiceRequestLabEu
 Parent: ServiceRequest
 Id: ServiceRequest-eu-lab
 Title: "ServiceRequest: Laboratory Order"
-Description: "ServiceRequest used to represent a Laboratory Order for the scope of the HL7 Europe project."
+Description: """This profile defines how to represent an laboratory orders using the HL7 FHIR ServiceRequest for the purpose of this guide."""
 // Clarify when to use ServiceRequest and RequestGroup
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"

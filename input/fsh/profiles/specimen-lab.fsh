@@ -2,7 +2,7 @@ Profile: SpecimenEu
 Parent: Specimen
 Id: specimen-eu-lab
 Title: "Specimen: Laboratory"
-Description: "HL7 Europe Specimen profile."
+Description: """This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide."""
 * ^status = #draft
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
@@ -39,6 +39,6 @@ Description: "HL7 Europe Specimen profile."
 Profile: SpecimenAdditiveSubstance
 Parent: Substance
 Id: specimen-additive-substance-eu-lab
-Title: "Specimen Additive Substance"
-Description: """Specimen Additive Substance"""
+Title: "Substance: Specimen Additive Substance"
+Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)

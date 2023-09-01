@@ -82,7 +82,7 @@ Usage: #definition
 * group[=].element[=].target.code = #DiagnosticReport.status					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "For FHIR R4 the more granular status is recorded in the DiagnosticReport.status"					
 * group[=].element[+].code = #LabReport.header.metadata.dateTime					
 * group[=].element[=].display = "A.1.8.3 Report date and time"					
 * group[=].element[=].target.code = #DiagnosticReport.effectiveDateTime					
@@ -229,7 +229,7 @@ attester.where(mode='professional').party.resolve()"
 * group[=].element[=].target.code = #Composition.status					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked?"					
+* group[=].element[=].target.comment = "For FHIR R4 the more granular status is recorded in the DiagnosticReport.status. Mapping rules for valuing the Compisition.status are specified in http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus"					
 * group[=].element[+].code = #LabReport.header.metadata.dateTime					
 * group[=].element[=].display = "A.1.8.3 Report date and time"					
 * group[=].element[=].target.code = #Composition.date					

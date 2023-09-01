@@ -3,8 +3,8 @@
 // -------------------------------------------------------------------------------				
 Logical: OrderLabEhn				
 Id: Order				
-Title: "A.2,A.3 - Order"				
-Description:  """Order information (A.2) and reason (A3)"""				
+Title: "A2, A3 - Order"				
+Description:  """Order information and reason. Sections A2 and A3 of the eHN guideline."""				
 * orderDetails 0..1 BackboneElement "A.2 Order information" """A.2 Order information (Laboratory Result Report could respond to multiple test orders) """				
 * orderDetails.identifier 0..* Identifier "A.2.1 Order Id" """An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."""				
 * orderDetails.dateTime 0..* dateTime "A.2.2 Order date and time" """Date and time of the order placement. - Preferred system(s): ISO 8601"""		 		
@@ -33,25 +33,19 @@ Description:  """Order information (A.2) and reason (A3)"""
 // -------------------------------------------------------------------------------				
 //  Map to FHIR R4				
 // -------------------------------------------------------------------------------				
-Mapping: eHNLabOrder2Fhir				
-Id: fhir				
-Title: "eHN Lab Order model to FHIR R4 Map"				
-Source: Order				
-Target: "hl7.org/fhir/r4"				
 				
-* -> "Composition.extension('http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
-* orderDetails -> "Composition.extension('http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition').valueReference.resolve()"				
-* orderDetails.identifier -> "ServiceRequest.identifier"				
-* orderDetails.dateTime -> "ServiceRequest.authoredOn"				
-* orderDetails.orderPlacerIdentifier -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).identifier"				
-* orderDetails.orderPlacerIdentifier -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).practictioner.resolve().identifier"				
-* orderDetails.orderPlacerName -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).practictioner.resolve().name"				
-* orderDetails.orderPlacerContacts -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).telecom"				
-* orderDetails.orderPlacerContacts -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).location"				
-* orderDetails.orderPlacerOrganization -> "ServiceRequest.requester.resolve().ofType(PractictionerRole).organization.resolve()"				
-* orderDetails.orderPlacerOrganization -> "ServiceRequest.requester.resolve().ofType(Organization)"				
-* reason -> "ServiceRequest.reasonCode"				
-* reason.code -> "ServiceRequest.reasonCode"				
-// --END				
-// --END				
-// --END				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

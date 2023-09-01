@@ -4,7 +4,7 @@
 Logical: ResultLabEhn				
 Id: Result				
 Title: "A.5 - Results data elements"				
-Description:  """A.5 Results data elements"""				
+Description:  """Results data elements. Section A5 of the eHN guideline."""				
 * narrative 0..1 BackboneElement "A.5.1 Laboratory report narrative" """A.5.1 Laboratory report narrative"""				
 * narrative.report 0..* Narrative "A.5.1.1 Narrative report" """Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."""				
 * narrative.notes 0..* Narrative "A.5.1.2 Comments, interpretation and recommendations" """Comments, such as a textual interpretation or advice accompanying the result report, for example."""		 		
@@ -41,38 +41,19 @@ Description:  """A.5 Results data elements"""
 // -------------------------------------------------------------------------------				
 //  Map to FHIR R4				
 // -------------------------------------------------------------------------------				
-Mapping: eHNLabResult2Fhir				
-Id: fhir				
-Title: "eHN Lab Result model to FHIR R4 Map"				
-Source: Result				
-Target: "hl7.org/fhir/r4"				
 				
-* -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh')"				
-* narrative -> "Composition.section.section.text"				
-* narrative -> "Composition.section.text"				
-* narrative -> "Composition.text"				
-* narrative.report -> "Composition.section.section.text"				
-* narrative.report -> "Composition.section.text"				
-* narrative.report -> "Composition.text"				
-* narrative.notes -> "Composition.section:annotations.text"				
-* observation -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh')"				
-* observation -> "Observation.hasMember.resolve()"				
-* observation -> "Observation.component"				
-* observation.dateTime -> "Observation.effective[x]"				
-* observation.code -> "Observation.code"				
-* observation.code.name -> "Observation.code.coding.display"				
-* observation.code.originalName -> "Observation.code.text"				
-* observation.code.displayName -> "Observation.code.coding.display.extension('translation') (TBD)"				
-* observation.method -> "Observation.method"				
-* observation.device -> "Observation.device.resolve()"				
-* observation.order -> "Observation.basedOn.resolve().ofType(ServiceRequest)"				
-* observation.performer -> "Observation.performer.resolve()"				
-* observation.reporter -> "to be mapped"				
-* observation.result -> "Observation.value[x]"				
-* observation.interpretation -> "Observation.interpretation"				
-* observation.description -> "Observation.text"				
-* observation.description -> "Observation.note"				
-* observation.accreditationStatus -> "to be mapped"				
-// --END				
-// --END				
-// --END				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

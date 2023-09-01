@@ -1,7 +1,7 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					specimen-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-specimen2FHIR					
+Instance: specimen2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					

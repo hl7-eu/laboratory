@@ -1,7 +1,7 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					payer-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-payer2FHIR					
+Instance: payer2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					

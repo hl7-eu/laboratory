@@ -1,7 +1,7 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					order-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-order2FHIR					
+Instance: order2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
