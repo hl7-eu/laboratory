@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------------------				
 Logical: LegalAuthenticatorLabEhn				
 Id: LegalAuthenticator				
-Title: "Legal authenticator (A.1.6)"				
+Title: "A.1.6 - Legal authenticator"				
 Description:  """Legal authenticator (The person taking responsibility for the medical content of the document).
 Section A1.6 of the eHN guideline."""				
 * identifier 0..1 Identifier "A.1.6.1 Legal authenticator identifier" """The health professional identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number.  - Preferred system(s): """				
