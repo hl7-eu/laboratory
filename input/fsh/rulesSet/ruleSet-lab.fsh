@@ -92,7 +92,9 @@ RuleSet: ReportCategoryRule
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEu
-
+* category contains specialty 0..*
+* category[specialty] only $CodeableConcept-uv-ips
+* category[specialty] from LabSpecialtyEu
 
 RuleSet: SectionComRules (short, def, code)
 

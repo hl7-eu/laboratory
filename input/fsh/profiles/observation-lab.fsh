@@ -26,6 +26,8 @@ This observation may represent the result of a simple laboratory test such as he
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category contains studyType 0..*
 * category[studyType] from LabStudyTypesEu
+* category contains specialty 0..*
+* category[specialty] from LabSpecialtyEu
 * code
 * code from $results-laboratory-observations-uv-ips (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
