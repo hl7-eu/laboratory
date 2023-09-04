@@ -10,19 +10,19 @@ RuleSet: SetFmmandStatusRule ( fmm, status )
 RuleSet: ReportAuthorRule
 * ^constraint.key = "labRpt-author"
 * ^constraint.severity = #warning
-* ^constraint.human = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author." 
+* ^constraint.human = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author."
 
 RuleSet: ReportStatusRule
 * status ^short = "Status of the Report" // add voc binding aligned with DiagReprt
   * ^constraint.key = "labRpt-status"
   * ^constraint.severity = #warning
-  * ^constraint.human = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping" 
+  * ^constraint.human = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping"
 
 RuleSet: ReportEncounterRule
 * encounter only Reference (Encounter)
   * ^constraint.key = "labRpt-enc"
   * ^constraint.severity = #warning
-  * ^constraint.human = "DiagnosticReport.encounter and Composition.encounter shall be aligned"  
+  * ^constraint.human = "DiagnosticReport.encounter and Composition.encounter shall be aligned"
   * ^short = "The healthcare event which this Laboratory Report is about (when test ordered)."
   * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
   * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests)."""
@@ -47,12 +47,12 @@ RuleSet: ReportIdentifierRule
 
 RuleSet: ReportTypeRule (element)
 * {element} 1..
-* {element}  only $CodeableConcept-uv-ips
-* {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
+* {element} only $CodeableConcept-uv-ips
+* {element} from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
   * ^binding.extension.extension[0].url = "purpose"
   * ^binding.extension.extension[=].valueCode = #candidate
   * ^binding.extension.extension[+].url = "valueSet"
-  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabStudyTypesEu )
+  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabSpecialtyEu )
   * ^binding.extension.extension[+].url = "documentation"
   * ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
   * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -77,10 +77,10 @@ RuleSet: SectionComRules (short, def, code)
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * ^extension[0].valueString = "Section"
-* ^short = "{short}"  
+* ^short = "{short}"
 * ^definition = "{def}"
-* title 1.. 
-* code 1.. 
+* title 1..
+* code 1..
 * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code} (exactly)
 * text 1..
@@ -94,7 +94,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 * entry ^short = "{short}"
-* entry ^definition = "{def}" 
+* entry ^definition = "{def}"
 
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
