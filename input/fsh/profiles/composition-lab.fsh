@@ -31,10 +31,12 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * insert ReportIdentifierRule
 * insert ReportStatusRule
 // * category 1.. // add VS binding
-* insert ReportCategoryRule
-// * type = $loinc#11502-2 // change to a VS binding
+* insert ReportCategoryRule // HK: composition category seems to be related to the CDA Document Class.
+                            // In case of lab report, only one value is relevant for this purpose, LOINC 26436-6 	Laboratory Studies (set)
+                            // We might discuss if other categorization purposes would be useful or not.
+* category = $loinc#26436-6 "Laboratory Studies (set)"
 
-* insert ReportTypeRule ( type )
+* insert ReportTypeRule ( type ) // fixed LOINC code for all types of reports but allow also lab specialty to be present
 
   // slice the subject tp cover the three cases of human ; non-human and mixed
 * insert ReportSubjectRule
