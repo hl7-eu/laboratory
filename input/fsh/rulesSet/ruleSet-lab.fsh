@@ -10,11 +10,11 @@ RuleSet: SetFmmandStatusRule ( fmm, status )
 * ^constraint.human = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author."  */
 
 Invariant: labRpt-author
-Description: "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author." 
+Description: "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author."
 Severity:    #warning
 
 Invariant: labRpt-status
-Description: "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping" 
+Description: "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping"
 Severity:    #warning
 
 RuleSet: ReportStatusRule
@@ -22,7 +22,7 @@ RuleSet: ReportStatusRule
   * ^short = "Status of the Report" // add voc binding aligned with DiagReprt
 
 Invariant: labRpt-enc
-Description: "DiagnosticReport.encounter and Composition.encounter shall be aligned" 
+Description: "DiagnosticReport.encounter and Composition.encounter shall be aligned"
 Severity:    #warning
 
 RuleSet: ReportEncounterRule
@@ -38,11 +38,11 @@ Description: "DiagnosticReport.subject and Composition.subject shall be aligned"
 Severity:    #warning
 
 RuleSet: ReportSubjectRule
-* subject 1.. 
+* subject 1..
 * subject obeys labRpt-subject
 * subject only Reference (PatientEu or Patient or Group or Location or Device)
   * ^short = "Who and/or what this report is about"
-  * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)." 
+  * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
 
 
 Invariant: labRpt-id
@@ -59,7 +59,7 @@ Description: "DiagnosticReport.code and Composition.type shall be aligned"
 Severity:    #warning
 
 RuleSet: ReportTypeRule (element)
-* {element} 1.. 
+* {element} 1..
 * {element} obeys labRpt-code
 * {element}  only $CodeableConcept-uv-ips
 * {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
@@ -67,7 +67,7 @@ RuleSet: ReportTypeRule (element)
 /*   * ^binding.extension.extension[0].url = "purpose"
   * ^binding.extension.extension[=].valueCode = #candidate
   * ^binding.extension.extension[+].url = "valueSet"
-  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabStudyTypesEu )
+  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabSpecialtyEu )
   * ^binding.extension.extension[+].url = "documentation"
   * ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
   * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -100,10 +100,10 @@ RuleSet: SectionComRules (short, def, code)
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * ^extension[0].valueString = "Section"
-* ^short = "{short}"  
+* ^short = "{short}"
 * ^definition = "{def}"
-* title 1.. 
-* code 1.. 
+* title 1..
+* code 1..
 * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code} (exactly)
 * text 1..
@@ -117,7 +117,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 * entry ^short = "{short}"
-* entry ^definition = "{def}" 
+* entry ^definition = "{def}"
 
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)

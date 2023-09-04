@@ -30,7 +30,7 @@ This observation may represent the result of a simple laboratory test such as he
 * code from $results-laboratory-observations-uv-ips (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
-* performer 1.. 
+* performer 1..
 * performer only Reference(PractitionerRoleEu or PractitionerEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
 
 
@@ -98,9 +98,9 @@ This observation may represent the result of a simple laboratory test such as he
 Invariant: eu-lab-1
 Description: "At least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+Expression: "status in ('registered'|'cancelled') or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
 Invariant: eu-lab-2
 Description: "At least one of these Observation.component elements shall be provided:  \"value\" or \"dataAbsentReason\""
 Severity: #error
-Expression: "value.exists() or dataAbsentReason.exists()"
+Expression: "Observation.status in ('registered'|'cancelled') or value.exists() or dataAbsentReason.exists()"
