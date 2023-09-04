@@ -12,8 +12,11 @@ Description: "This profile defines how to represent an identified human Patient 
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
 // * name.text MS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
-* name.family 1..1
+// based 2023-09-01 decision 
+// * name.family 1..1
+* name.family ^short = "Family name"
 * name.given ^short = "Given names. Includes middle names"
+* name.text ^short = "Text representation of the full name."
 * telecom ^short = "A contact detail for the patient"
 * gender ^short = "Administrative Gender"
 * birthDate 1..
