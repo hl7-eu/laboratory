@@ -97,10 +97,10 @@ Usage: #definition
 * group[=].element[=].target.comment = "Mapped in the Composition resource"					
 * group[=].element[+].code = #LabReport.header.metadata.studyType					
 * group[=].element[=].display = "A.1.8.5 Study type"					
-* group[=].element[=].target.code = #DiagnosticReport					
+* group[=].element[=].target.code = #DiagnosticReport.category					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "To be analyzed"					
+					
 * group[=].element[+].code = #LabReport.header.metadata.custodian					
 * group[=].element[=].display = "A.1.8.6 Report custodian"					
 //-- unmatched					
@@ -244,10 +244,10 @@ attester.where(mode='professional').party.resolve()"
 					
 * group[=].element[+].code = #LabReport.header.metadata.studyType					
 * group[=].element[=].display = "A.1.8.5 Study type"					
-* group[=].element[=].target.code = #Composition					
+* group[=].element[=].target.code = #Composition.category					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "To be analyzed"					
+					
 * group[=].element[+].code = #LabReport.header.metadata.custodian					
 * group[=].element[=].display = "A.1.8.6 Report custodian"					
 * group[=].element[=].target.code = #Composition.custodian					

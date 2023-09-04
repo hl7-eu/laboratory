@@ -1,7 +1,4 @@
 
-
-
-
 RuleSet: SetFmmandStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
@@ -66,14 +63,15 @@ RuleSet: ReportTypeRule (element)
 * {element} obeys labRpt-code
 * {element}  only $CodeableConcept-uv-ips
 * {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
-  * ^binding.extension.extension[0].url = "purpose"
+// based on 2023-09-01 decision
+/*   * ^binding.extension.extension[0].url = "purpose"
   * ^binding.extension.extension[=].valueCode = #candidate
   * ^binding.extension.extension[+].url = "valueSet"
   * ^binding.extension.extension[=].valueCanonical = Canonical ( LabStudyTypesEu )
   * ^binding.extension.extension[+].url = "documentation"
   * ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
   * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-  * ^binding.description = "Laboratory Specialties."
+  * ^binding.description = "Laboratory Specialties." */
   * ^short = "Type of (Laboratory) Report"
   * ^definition = "Specifies that it refers to a Laboratory Report"
 
@@ -84,9 +82,17 @@ Severity:    #warning
 
 RuleSet: ReportCategoryRule
 * category obeys labRpt-category
-* category only $CodeableConcept-uv-ips
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
+* category only $CodeableConcept-uv-ips
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^definition = "A code that classifies this laboratory report."
+* category contains studyType 0..*
+* category[studyType] only $CodeableConcept-uv-ips
+* category[studyType] from LabStudyTypesEu
+
 
 RuleSet: SectionComRules (short, def, code)
 

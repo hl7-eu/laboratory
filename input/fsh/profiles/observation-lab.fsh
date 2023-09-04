@@ -23,8 +23,9 @@ This observation may represent the result of a simple laboratory test such as he
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
 * category contains laboratory 1..1
-* category[laboratory] only $CodeableConcept-uv-ips
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* category contains studyType 0..*
+* category[studyType] from LabStudyTypesEu
 * code
 * code from $results-laboratory-observations-uv-ips (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"

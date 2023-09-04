@@ -25,3 +25,5 @@ input/vocabulary/.gitignore
 .gitignore
 src-models/*.xlk
 input/fsh/models/*.xlk
+src-models/~$eulab-model-maps.xlsm
+.gitignore
