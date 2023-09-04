@@ -1,7 +1,7 @@
 // -------------------------------------------------------------------------------					
 //  Concept Model. File: 					specimen-to-fhir-map.fsh
 // -------------------------------------------------------------------------------					
-Instance: ConceptMap-eu-specimen2FHIR					
+Instance: specimen2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
 // * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
@@ -27,7 +27,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Specimen.subject.extension:patient-animal.extension:species					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked"					
+* group[=].element[=].target.comment = "subject.ofType(Patient)"					
 * group[=].element[+].code = #SpecimenLab.material					
 * group[=].element[=].display = "A.4.3 Material"					
 * group[=].element[=].target.code = #Specimen.type					
@@ -51,13 +51,13 @@ Usage: #definition
 * group[=].element[=].target.code = #Specimen.extension:SpecimenFeatureTypeR5					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked. This is an R5 element"					
+					
 * group[=].element[+].code = #SpecimenLab.sourceDevice					
 * group[=].element[=].display = "A.4.7 Source Device"					
-* group[=].element[=].target.code = #Specimen.collection.extension:R5Specimen-collection-device					
+* group[=].element[=].target.code = #Specimen.					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked. This is an R5 element"					
+* group[=].element[=].target.comment = "to be discussed"					
 * group[=].element[+].code = #SpecimenLab.collectionMethod					
 * group[=].element[=].display = "A.4.8 Collection procedure/method"					
 * group[=].element[=].target.code = #Specimen.collection.method					

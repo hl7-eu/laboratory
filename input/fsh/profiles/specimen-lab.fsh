@@ -2,7 +2,7 @@ Profile: SpecimenEu
 Parent: Specimen
 Id: specimen-eu-lab
 Title: "Specimen: Laboratory"
-Description: "HL7 Europe Specimen profile."
+Description: """This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide."""
 * ^status = #draft
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
@@ -22,8 +22,11 @@ Description: "HL7 Europe Specimen profile."
 * type 1..1
 
 //=== COMMENTED UNTIL https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/Issue.20with.20Specimen.2Ecollection.2Edevice.20R5.20extension IS NOT RESOLVED
-/* * collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1
-* collection.extension[SpecimenCollectionDeviceR5] */
+
+/* 
+* collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1
+* collection.extension[SpecimenCollectionDeviceR5] 
+*/
 
 * collection.bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
 
@@ -36,6 +39,6 @@ Description: "HL7 Europe Specimen profile."
 Profile: SpecimenAdditiveSubstance
 Parent: Substance
 Id: specimen-additive-substance-eu-lab
-Title: "Specimen Additive Substance"
-Description: """Specimen Additive Substance"""
+Title: "Substance: Specimen Additive Substance"
+Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)

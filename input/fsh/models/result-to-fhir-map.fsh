@@ -32,6 +32,7 @@ Usage: #definition
 //---END					
 * group[=].element[=].target.equivalence = #unmatched					
 					
+//---END					
 * group[=].element[+].code = #Result.narrative.notes					
 * group[=].element[=].display = "A.5.1.2 Comments, interpretation and recommendations"					
 //-- unmatched					
@@ -106,6 +107,12 @@ If the 'code' is the Observation.code. Similar mapping for the other cases."
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "if the measuring device"					
+* group[=].element[+].code = #Result.observation.device					
+* group[=].element[=].display = "A.5.2.5 Observation device"					
+//-- unmatched					
+//-- unmatched					
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "if the calibration device"					
 * group[=].element[+].code = #Result.observation.order					
 * group[=].element[=].display = "A.5.2.8 Order"					
 * group[=].element[=].target.code = #Observation.basedOn					
@@ -156,15 +163,11 @@ If the person responsible for validation:  performer.extension:performerFunction
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "to be checked"					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
-* group[=].element[=].display = "A.5.2.14 Accreditation status"					
-* group[=].element[=].target.code = #Observation.performer.qualification					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "performer ofType PractictionerRole"					
-* group[=].element[+].code = #Result.observation.accreditationStatus					
 //---END					
 //---END					
 //---END					
+					
+					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"					

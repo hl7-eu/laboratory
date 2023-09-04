@@ -4,7 +4,7 @@
 Logical: SpecimenLabEhn				
 Id: SpecimenLab				
 Title: "A.4 - Specimen information"				
-Description:  """A.4 Specimen information"""				
+Description:  """Specimen information. Section A4 of the eHN guideline."""				
 * identifier 0..1 Identifier "A.4.1 Specimen identifier" """An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by Specimening system, identifier assigned by laboratory etc. Multiple identifiers can be used. - Preferred system(s): """				
 * speciesType 0..* CodeableConcept "A.4.2 Type of species" """Biologic type of species for laboratory result reports bound to non-human subjects. - Preferred system(s): SNOMED CT"""				
 * material 0..* CodeableConcept "A.4.3 Material" """Specimen material. - Preferred system(s): SNOMED CT"""		 		
@@ -32,22 +32,19 @@ Description:  """A.4 Specimen information"""
 // -------------------------------------------------------------------------------				
 //  Map to FHIR R4				
 // -------------------------------------------------------------------------------				
-Mapping: eHNLabSpecimen2Fhir				
-Id: fhir				
-Title: "eHN Lab Specimen model to FHIR R4 Map"				
-Source: SpecimenLab				
-Target: "hl7.org/fhir/r4"				
 				
-* -> "Observation.conformsTo('http://hl7.eu/fhir/ig/xeh/StructureDefinition/Observation-results-laboratory-eu-xeh').specimen.resolve()"				
-* identifier -> "Specimen.identifier"				
-* speciesType -> "Specimen.type"				
-* material -> "to be mapped"				
-* collected -> "Specimen.collection.collected[x]"				
-* anatomicLocation -> "Specimen.collection.bodySite"				
-* morphology -> "Specimen.collection.bodySite.extension(qualifier) (TBD)"				
-* sourceDevice -> "Specimen.container"				
-* collectionMethod -> "Specimen.collection.method"				
-* receivedDateTime -> "Specimen.receivedTime"				
-// --END				
-// --END				
-// --END				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

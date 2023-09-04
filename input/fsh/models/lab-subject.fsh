@@ -3,8 +3,8 @@
 // -------------------------------------------------------------------------------				
 Logical: SubjectLabEhn				
 Id: Subject				
-Title: "A.1.1, A.1.2 - Subject of care"				
-Description:  """Patient or Subject of care"""				
+Title: "A1.1, A1.2 - Subject of care"				
+Description:  """Patient or Subject of care. Sections A1.1 and A1.2 of the eHN guideline."""				
 * identification 1..1 BackboneElement "A.1.1 Identification of the patient/subject" """A.1.1 Identification of the patient/subject"""				
 * identification.familyName 0..* string "A.1.1.1 Familyname/surname" """The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."""				
 * identification.givenName 0..* string "A.1.1.2 Given name" """The given name/first name of the patient (also known as forename or first name). This field can contain more than one element. """		 		
@@ -32,21 +32,19 @@ Preferred system(s): - Preferred system(s): HL7 Administrative Gender """
 // -------------------------------------------------------------------------------				
 //  Map to FHIR R4				
 // -------------------------------------------------------------------------------				
-Mapping: eHNLabSubject2Fhir				
-Id: fhir				
-Title: "eHN Lab Subject model to FHIR R4 Map"				
-Source: Subject				
-Target: "hl7.org/fhir/r4"				
 				
-* -> "Patient.conformsTo('http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab')"				
-* identification -> "Patient"				
-* identification.familyName -> "Patient.name.family"				
-* identification.givenName -> "Patient.name.given"				
-* identification.dateOfBirth -> "Patient.birthDate"				
-* identification.identifier -> "Patient.identifier"				
-* identification.gender -> "Patient.gender"				
-* addressTelecom -> "Patient.address"				
-* addressTelecom.address -> "Patient.gender"				
-* addressTelecom.telecom -> "Patient.telecom"				
-// --END				
-// --END				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

@@ -11,8 +11,11 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 
 * extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
 
-* extension[DiagnosticReportCompositionR5].valueReference 1..1
-* extension[DiagnosticReportCompositionR5].valueReference only Reference(CompositionLabReportEu)
+* extension[DiagnosticReportCompositionR5]
+  * ^short = "Associated Lab Report Composition"
+  * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
+  *  valueReference 1..1
+  *  valueReference only Reference(CompositionLabReportEu)
 
 /*
 content to be referred...
@@ -62,9 +65,9 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * insert ReportEncounterRule
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-  * insert ReportAuthorRule
+  * obeys labRpt-author
 * resultsInterpreter
-  * insert ReportAuthorRule
+  * obeys labRpt-author
 * specimen only Reference (SpecimenEu)
   * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)
