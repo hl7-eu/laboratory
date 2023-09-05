@@ -100,9 +100,9 @@ This observation may represent the result of a simple laboratory test such as he
 Invariant: eu-lab-1
 Description: "At least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "status in ('registered'|'cancelled') or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+Expression: "(status in ('registered'|'cancelled')) or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
 Invariant: eu-lab-2
 Description: "At least one of these Observation.component elements shall be provided:  \"value\" or \"dataAbsentReason\""
 Severity: #error
-Expression: "Observation.status in ('registered'|'cancelled') or value.exists() or dataAbsentReason.exists()"
+Expression: "(Observation.status in ('registered'|'cancelled')) or value.exists() or dataAbsentReason.exists()"
