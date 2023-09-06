@@ -61,7 +61,7 @@ Usage: #example
 * entry[observation][=].resource = Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
 
 Instance: Inline-Instance-for-Composition-26032a57-083a-4ddf-b019-e566ae02f740
-InstanceOf: Composition
+InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 /* * extension[+].url = $composition-diagnostic-report-reference
@@ -183,19 +183,7 @@ Usage: #inline
 * id = "25dfb673-e7d6-43d0-b50b-6739f1ea9c91"
 * type = $sct#119297000	"Blood specimen"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
-/*
-Instance: Inl-Inst-DocumentReference-c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
-InstanceOf: DocumentReference
-Usage: #inline
-* id = "c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd"
-* status = #current
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
-* author = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
-* custodian = Reference(urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c)
-* content.attachment.contentType = urn:ietf:bcp:13#text/plain
-* content.attachment.title = "string"
-* context.related = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
-*/
+
 Instance: Inline-Instance-for-PractiotionerRole-88868d3e-7ab1-4ee5-983e-b979c4971f5c
 InstanceOf: PractitionerRole
 Usage: #inline
@@ -407,13 +395,12 @@ Usage: #inline
 * extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
 * category = $v2-0074#LAB "Laboratory"
-* code = $loinc#18719-5 "CHEMISTRY STUDIES"
-* code.text = "Biochemie"
+* code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * specimen[+] = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // Urine specimen
-* result[+] = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+* result[+] = Reference(Observation/763f7902-8103-4d10-8bd1-546a726d43ee)
 * specimen[+] = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)   // Blood specimen
-* result[+] = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
+* result[+] = Reference(Observation/18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 Instance: Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
 InstanceOf: ObservationResultsLaboratoryEu
