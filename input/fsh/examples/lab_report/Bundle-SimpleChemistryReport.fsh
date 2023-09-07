@@ -394,7 +394,8 @@ Usage: #inline
 * extension[+].url = $diagnostic-report-composition-r5
 * extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
-* category = $v2-0074#LAB "Laboratory"
+//* category = $v2-0074#LAB "Laboratory"
+* category[+] = $loinc#18719-5 "Chemistry studies (set)"
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * specimen[+] = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // Urine specimen
@@ -408,21 +409,21 @@ Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
 * code.coding[+] = http://loinc.org#22700-9 "Urea [Moles/volume] in Urine"
-* code.coding[+] = urn:oid:1.2.203.24341.11.2.2#03086 "Urea (S; látková konc. [mmol/l] Absorpční spektrofotometrie)"
+* code.coding[+] = urn:oid:1.2.203.24341.11.2.2#03088 "Urea (U; látková konc. [mmol/l] Absorpční spektrofotometrie)"
 * code.text = "Urea (U) [Moles/Vol]"
-* method = $sct#70621000052105 "Absorpční spektrofotometrie"
+* method = $sct#70621000052105 "Spectrophotometric technique"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer[+].display = "" // ToDo: consider cardinality
-* valueQuantity.value = 0.8
+* performer[+].display = "Jan Laborant" // ToDo: consider cardinality
+* valueQuantity.value = 310
 * valueQuantity.system = $ucum
 * valueQuantity.code = $ucum#mmol/L
 * valueQuantity.unit = "mmol/L"
 * interpretation = $obs-interpretation#LU "Significantly low"
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // urine specimen
-* referenceRange.low.value = 2.9
+* referenceRange.low.value = 67
 * referenceRange.low.unit = "mmol/L"
-* referenceRange.high.value = 7.5
+* referenceRange.high.value = 580
 * referenceRange.high.unit = "mmol/L"
 * referenceRange.type = $reference-range-meaning#normal "Normal Range"
 
@@ -434,15 +435,16 @@ Usage: #inline
 * code.coding[+] = http://loinc.org#2947-0 "Sodium [Moles/volume] in Blood"
 * code.coding[+] = urn:oid:1.2.203.24341.11.2.2#2504 "Na (S; látková konc. [mmol/l] spektrofotometrie-FAES)"
 * code.text = "Sodium (Bld) [Moles/Vol]"
-* method = $sct#70621000052105 "Absorpční spektrofotometrie"
+* method = $sct#70621000052105 "Spectrophotometric technique"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer[+].display = "Jan Laborant"  // ToDo: consider cardinality
+* performer[+].display = "Laboratorní Technik"  // ToDo: consider cardinality
 * performer[=] = Reference(urn:uuid:e512e2e2-9600-4c69-a269-af3ab5421e09)
 * valueQuantity.value = 156
 * valueQuantity.system = $ucum
 * valueQuantity.code = $ucum#umol/L
 * valueQuantity.unit = "umol/L"
+* valueQuantity.extension[$iso21090-uncertainty].valueDecimal = 0.1
 * interpretation = $obs-interpretation#HH "Critical high"
 * specimen = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)
 * referenceRange.low.value = 136
