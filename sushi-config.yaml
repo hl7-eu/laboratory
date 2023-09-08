@@ -47,8 +47,14 @@ pages:
     title: Home
   background.md:
     title: Background
-  semantic-notes.md:
-    title: Laboratory Result Report
+    # to be removed --->
+  # semantic-notes.md:
+    # title: Laboratory Result Report
+    # <--- to be removed 
+  scenarios.md:
+    title: Laboratory Report scenarios
+  status-mgmt.md:
+    title: Managing Laboratory Report statuses
   design-choice.md:
     title: Design choices
   challenges.md:
@@ -57,6 +63,8 @@ pages:
     title: Examples
   downloads.md:
     title: Downloads
+  logicalModel.md:
+    title: eHN guideline data set
 #  implementation.md:
 #    title: Implementation Considerations
  #  recommendations.md:
@@ -125,9 +133,13 @@ menu:
   Background:
     Background: background.html
     Challenges: challenges.html
-    Design Choice: design-choice.html
-  # ==========
-  Laboratory Report: semantic-notes.html
+    Design Choices: design-choice.html
+  # Laboratory Report (OLD): semantic-notes.html
+  Functional Specifications:
+    Scenarios: scenarios.html
+    Managing statuses: status-mgmt.html
+    eHN Guideline dataset: logicalModel.html
+     # Model mappping: yyy.html
   # label to be changed 
   Examples: examples.html
   Artifacts: artifacts.html

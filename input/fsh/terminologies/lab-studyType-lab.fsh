@@ -1,8 +1,8 @@
-ValueSet:      LabStudyTypesEu
+ValueSet:      LabStudyTypesEuVs
 Id:	       lab-studyType-eu-lab
-Title:	       "Lab Study Types"
+Title:	       "Laboratory Study Types"
 // TODO: Description should be adjusted according to the final set of EU study types.
-Description:   """Laboratory Specialties.
+Description:   """Laboratory Study Types
 Notes:
 Note 1:26436-6 (LABORATORY STUDIES) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.
 Note 2:18721-1 (THERAPEUTIC DRUG MONITORING STUDIES) will be used for a section carrying pharmacology observations on a patient.

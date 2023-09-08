@@ -1,6 +1,6 @@
-ValueSet:      LabTechniqueEu
+ValueSet:      LabTechniqueEuVs
 Id:	       lab-technique-eu-lab
-Title:	       "Lab Technique"
+Title:	       "Laboratory Techniques"
 Description:   "Laboratory Technique [SNOMED CT]"
 * ^status = #draft
 * ^experimental = false

@@ -1,7 +1,7 @@
 ValueSet:      LabSpecimenTypesEu
 Id:	       lab-specimenType-eu-lab
-Title:	       "Lab Specimen Types"
-Description:   "Laboratory Specimen."
+Title:	       "Laboratory Specimen Types"
+Description:   """Laboratory Specimen Types"""
 * ^status = #draft
 * ^experimental = false
 // * ^publisher = "HL7 Europe"
