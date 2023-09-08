@@ -19,8 +19,6 @@ Usage: #example
 * entry[specimen][=].resource = Inline-Instance-for-Specimen-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb
 * entry[specimen][+].fullUrl = "urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91"  // Specimen 2
 * entry[specimen][=].resource = Inline-Instance-Specimen-25dfb673-e7d6-43d0-b50b-6739f1ea9c91
-//* entry[documentReference][+].fullUrl = "urn:uuid:c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd" // Documentation reference
-//* entry[documentReference][=].resource = Inl-Inst-DocumentReference-c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
 * entry[practitionerRole][+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"  // Author 1: Practitioner role
 * entry[practitionerRole][=].resource = Inline-Instance-for-PractiotionerRole-88868d3e-7ab1-4ee5-983e-b979c4971f5c
 * entry[practitioner][+].fullUrl = "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"  // Author 1: Practitioner
