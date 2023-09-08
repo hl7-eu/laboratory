@@ -51,7 +51,7 @@ A Composition defines the structure and narrative content necessary for a labora
 The status of the composition reflects the status of the document and it should be aligned with that of the DiagnosticReport.
 
 The status of the composition reflects the status of the document and it should be aligned with that of the DiagnosticReport.
-Unfortunately, in HL7 FHIR R4 – see the following paragraph - only a subset of them are allowed for the Composition, requiring some mapping effort in dealing with them. (see [section xxx](#diagnostic-report-status-and-composition-status) below)
+Unfortunately, in HL7 FHIR R4 – see the [following paragraph](#hl7-fhir-r4-1) - only a subset of them are allowed for the Composition, requiring some mapping effort in dealing with them. (See the paragraph [DiagnosticReport and Composition status correlation](#diagnosticreport-and-composition-status-correlation) below)
 
 
 ##### HL7 FHIR R4
