@@ -62,12 +62,12 @@ RuleSet: ReportTypeRule (element)
 * {element} 1..
 * {element} obeys labRpt-code
 * {element}  only $CodeableConcept-uv-ips
-* {element}  from LabReportTypesEu (preferred) // value set to be revised add alternative value sets
+* {element}  from LabReportTypesEuVs (preferred) // value set to be revised add alternative value sets
 // based on 2023-09-01 decision
 /*   * ^binding.extension.extension[0].url = "purpose"
   * ^binding.extension.extension[=].valueCode = #candidate
   * ^binding.extension.extension[+].url = "valueSet"
-  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabSpecialtyEu )
+  * ^binding.extension.extension[=].valueCanonical = Canonical ( LabSpecialtyEuVs )
   * ^binding.extension.extension[+].url = "documentation"
   * ^binding.extension.extension[=].valueMarkdown = """Laboratory Specialties."""
   * ^binding.extension.url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -91,10 +91,10 @@ RuleSet: ReportCategoryRule
 * category ^definition = "A code that classifies this laboratory report."
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
-* category[studyType] from LabStudyTypesEu
+* category[studyType] from LabStudyTypesEuVs
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
-* category[specialty] from LabSpecialtyEu
+* category[specialty] from LabSpecialtyEuVs
 
 RuleSet: SectionComRules (short, def, code)
 

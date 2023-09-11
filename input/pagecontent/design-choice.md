@@ -1,10 +1,4 @@
 
-<blockquote class="stu-note">
-<p>
-    Page under development.
-</p>
-</blockquote>
-
 
 ### Design Choices
 
@@ -34,19 +28,20 @@ The team looked therefore for a solution balancing the two approaches (FHIR docu
 
 The team agreed then that the Document Bundle representing the Laboratory Report shall always also include a DiagnosticReport resource.
 
-This choice requires additional work to the creator, requesting to have some informaiton consitently reocorded in both DiagnosticReport and Composition, but it enables for more options for the consumer.
+This choice requires additional work to the creator, requesting to have some information consistently recorded in both DiagnosticReport and Composition, but it enables for more options for the consumer.
 
 The following figure graphically summarizes the described design approach
 
 
 <div>
 <img src="lab-structure.png"  alt="Laboratory report Structure" width="60%">
+<p>Figure 1 - Overview of the report structure</p>
 <p></p>
 </div>
 
 #### Pre-adoption of R5 rules for Document bundles
 
-To support the described approach, this guides **pre-adopt the R5 rules for the inclusion of the resources in a document Bundle**:
+To support the described approach, this guide **pre-adopt the R5 rules for the inclusion of the resources in a document Bundle**:
 
 _"The document bundle SHALL include only: <..>
 The supporting information: Any resources that are part of the graph of resources that reference or are referenced from the composition set, either directly or indirectly (e.g. recursively in a chain)"_
@@ -54,9 +49,9 @@ The supporting information: Any resources that are part of the graph of resource
 in opposition to the R4 rules requiring that, with the exception of the Provenance resource and the Binary including the stylesheet, only resources directly or indirectly - referred **from** the composition can be included.
 
 This choice has been made considering that:
-* There were a good consensus in the HL7 FHIR community and in this team that the new are the most appropriate rules for a document bundle.
+* There was a good consensus in the HL7 FHIR community and in this team that the new rules are the most appropriate for a document bundle.
 * In R5 the link between the DiagnosticReport and the Composition is realized with a Reference from the DiagnosticReport. The team decided to follow the same design pattern to facilitate the R4 to R5 transition.
-* Adding a reference from the Composition to the DiagnosticReport would create an unwished circular reference
+* Adding a reference from the Composition to the DiagnosticReport would create an unwished circular reference.
 
 
 

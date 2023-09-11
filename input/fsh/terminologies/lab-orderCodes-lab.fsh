@@ -1,8 +1,8 @@
 ValueSet: LabOrderCodesEu
 Id: lab-orderCodes-eu-lab
-Title: "Lab Order Codes"
-Description: "Laboratory Order Codes for use in  HL7 Europe."
-* ^experimental = true
+Title: "Laboratory Order [LOINC]"
+Description: "Laboratory order codes for use in HL7 Europe."
+* ^experimental = false
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, draft )

@@ -1,6 +1,6 @@
-ValueSet:      LabSpecialtyEu
+ValueSet:      LabSpecialtyEuVs
 Id:	       lab-specialty-eu-lab
-Title:	       "Lab Specialty"
+Title:	       "Laboratory Specialty"
 Description:   """Laboratory Specialties.
 Notes:
 Note 1: This value set is based on analysis of national coding practices in 8 european countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.

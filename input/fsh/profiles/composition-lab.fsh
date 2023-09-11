@@ -105,7 +105,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * ^short = "Variant 1: EU Laboratory Report section with text and entry"
   * ^definition = """Variant 1: With this option, the Section text SHALL be present and not blank. This narrative block SHALL present to the human reader, all the observations produced for this Specialty, using the various structures available for the FHIR  Narrative. The narrative block should be fully derived from the entry containing the machine-readable result data. Additionally, Laboratory Report Data Entries SHALL be present. This entry contains the machine-readable result data from which the narrative block of this section should be derived."""
 
-  * code from LabStudyTypesEu (preferred)
+  * code from LabStudyTypesEuVs (preferred)
   * text ^short = "Text summary of the section, for human interpretation."
   * entry only Reference (ObservationResultsLaboratoryEu)
   * entry 1..
@@ -119,13 +119,13 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Varient 2: With this option, this Laboratory Specialty Section SHALL contain NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding Laboratory Report Item Section which contains the Lab Report Data Entry."""
   * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-  * code from LabStudyTypesEu (preferred)
+  * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0
   * section 1..
     * code 1..
     * code only $CodeableConcept-uv-ips
-    * code from LabStudyTypesEu (preferred)
+    * code from LabStudyTypesEuVs (preferred)
     * text ^short = "Text summary of the section, for human interpretation."
     * entry 1..
     * entry only Reference (ObservationResultsLaboratoryEu)

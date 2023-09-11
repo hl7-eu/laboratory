@@ -1,4 +1,4 @@
-ValueSet: NPUVS
+ValueSet: NpuVs
 Id: lab-npu-vs
 Title: "NPU Laboratory Codes VS"
 Description: "NPU laboratory codes Value Set"
