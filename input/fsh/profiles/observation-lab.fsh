@@ -89,6 +89,11 @@ This observation may represent the result of a simple laboratory test such as he
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * interpretation only $CodeableConcept-uv-ips
+* method ^definition = "Laboratory technigue that has been used"
+* method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
+That's why it is important to explicitly include informaiton about measurement method is such cases."
+* method only $CodeableConcept-uv-ips
+* method from LabTechniqueEu  // added binding to an agreed eu lab measurement method value set
 * specimen only Reference(SpecimenEu)
 // * hasMember only Reference(ObservationResultsLaboratoryEu or ObservationResultsEu)
 * hasMember only Reference(ObservationResultsLaboratoryEu)
