@@ -442,7 +442,7 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * valueQuantity.code = $ucum#umol/L
 * valueQuantity.unit = "umol/L"
-* valueQuantity.extension[$iso21090-uncertainty].valueDecimal = 0.1
+* valueQuantity.extension[Uncertainty].valueDecimal = 0.1
 * interpretation = $obs-interpretation#HH "Critical high"
 * specimen = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)
 * referenceRange.low.value = 136

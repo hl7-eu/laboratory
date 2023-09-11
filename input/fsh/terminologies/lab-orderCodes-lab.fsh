@@ -1,4 +1,4 @@
-ValueSet: LabOrderCodesEu
+ValueSet: LabOrderCodesEuVs
 Id: lab-orderCodes-eu-lab
 Title: "Laboratory Order [LOINC]"
 Description: "Laboratory order codes for use in HL7 Europe."

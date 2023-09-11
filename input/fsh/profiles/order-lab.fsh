@@ -5,7 +5,7 @@
 * ^publisher = "HL7 Europe"
 * ^copyright = "HL7 Europe"
 * identifier 1..
-* category 1.. 
+* category 1..
 * code 1..
 * subject 1.. */
 
@@ -25,10 +25,10 @@ Description: """This profile defines how to represent an laboratory orders using
 * identifier 1..
 /* * category 1..  */
 * code 1..
-* code from LabOrderCodesEu (preferred)
+* code from LabOrderCodesEuVs (preferred)
 * subject 1..
 * subject only Reference (PatientEu or Patient or Group or Location or Device)
-* requisition ^short = "Composite Request ID." 
+* requisition ^short = "Composite Request ID."
 * specimen	only Reference (SpecimenEu)
   * ^short = "Must be present, if order is request for test" // Check....
   // add invariant ?

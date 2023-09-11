@@ -1,4 +1,4 @@
-ValueSet:      LabSpecimenTypesEu
+ValueSet:      LabSpecimenTypesEuVs
 Id:	       lab-specimenType-eu-lab
 Title:	       "Laboratory Specimen Types"
 Description:   """Laboratory Specimen Types"""
