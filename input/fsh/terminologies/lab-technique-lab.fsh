@@ -3,9 +3,12 @@ Id:	       lab-technique-eu-lab
 Title:	       "Laboratory Techniques"
 Description:   "Laboratory Technique [SNOMED CT]"
 * ^status = #draft
-* ^experimental = false
+
+// * ^experimental = false
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
+
+* insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 0, draft )
 
 // not in this SCT version => * $sct#62841000052105	"Audiogram (qualifier value)"

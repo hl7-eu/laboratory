@@ -1,5 +1,5 @@
 Instance: BundleLabResultMicroCultureSusc
-InstanceOf: BundleLabReportMicroCultSuscEu
+InstanceOf: BundleLabReportEu
 Title: "Bundle Microbiology Culture + Susceptibility Lab Result"
 Description: "Microbiology Culture + Susceptibility Lab Result"
 Usage: #example
@@ -64,7 +64,7 @@ Usage: #example
 
 
 Instance: Inline-Composition-micro
-InstanceOf: CompositionLabReportMicroCultSuscEu
+InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "4789a3ee-92b1-41b2-9b97-83daacf2a239"
 /* * extension[+].url = $composition-diagnostic-report-reference

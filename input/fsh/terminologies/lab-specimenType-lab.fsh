@@ -3,9 +3,10 @@ Id:	       lab-specimenType-eu-lab
 Title:	       "Laboratory Specimen Types"
 Description:   """Laboratory Specimen Types"""
 * ^status = #draft
-* ^experimental = false
+// * ^experimental = false
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
+* insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 0, draft )
 * $sct#119376003	"Tissue specimen"
 * $sct#119359002	"Bone marrow specimen"
