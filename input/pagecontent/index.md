@@ -50,6 +50,4 @@ The project background and the reasons for the design choiches (FHIR document in
 
 ### Authors and Contributors
 
-| Name             | Affiliation |
-|------------------|-------------|
-|  |             |
+Please refer to the [Authors and Contributors](contributors.html) page.
