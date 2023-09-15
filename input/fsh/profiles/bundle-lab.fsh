@@ -31,7 +31,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains composition 1..1
 * entry[composition].resource only CompositionLabReportEu
 
-* entry contains diagnosticReport 1..1
+* entry contains diagnosticReport 1..*
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
 * entry contains patient 0..1

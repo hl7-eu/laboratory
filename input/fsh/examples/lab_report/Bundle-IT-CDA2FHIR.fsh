@@ -109,7 +109,9 @@ Usage: #inline
 * section.section.code.text = "Microalbumin Massa/Volume in Urine"
 * section.section.text.status = #generated
 * section.section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
-* section.section.entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+// * section.section.entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+* section.section.entry = Reference(Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18)
+
 
 Instance: dc2b606f-3cf7-4711-a2ff-52da04b89e04
 InstanceOf: Patient
@@ -472,8 +474,9 @@ Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: DiagnosticReport
 Usage: #inline
 * id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
-* extension[+].url = $diagnostic-report-composition-r5
+/* * extension[+].url = $diagnostic-report-composition-r5
 * extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+ */
 * status = #registered
 * category = $v2-0074#LAB "Laboratory"
 * code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"

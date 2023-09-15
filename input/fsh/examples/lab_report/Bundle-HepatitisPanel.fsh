@@ -53,7 +53,7 @@ Usage: #inline
 * section[+].title = "Hepatitis screening panel"
 * section[=].code = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * section[=].code.text = "Acute Hepatitis Panel, reflex to confirmation"
-* section[=].entry[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
+* section[=].entry[+] = Reference(Inline-Diag-Report-hepatitis-panel)
 
 Instance: Inline-Patient-hepatitis-panel
 InstanceOf: Patient
@@ -86,7 +86,7 @@ InstanceOf: DiagnosticReport-eu-lab
 Usage: #inline
 * id = "3a743273-237a-446a-a8da-9e7521cce614"
 // * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
+// * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
 * status = #final
 * category = $v2-0074#MB "Microbiology"
 * code = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
