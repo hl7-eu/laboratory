@@ -109,7 +109,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * text ^short = "Text summary of the section, for human interpretation."
  // * entry only Reference (ObservationResultsLaboratoryEu)
   * entry only Reference (DiagnosticReportLabEu)
-  * entry 1..1
+  * entry 1..
   * section ..0
 
 // -------------------------------------
@@ -128,7 +128,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
     * code only $CodeableConcept-uv-ips
     * code from LabStudyTypesEuVs (preferred)
     * text ^short = "Text summary of the section, for human interpretation."
-    * entry 1..1
+    * entry 1..
     * entry only Reference (DiagnosticReportLabEu)
   //  * entry only Reference (ObservationResultsLaboratoryEu)
     * section 0..0

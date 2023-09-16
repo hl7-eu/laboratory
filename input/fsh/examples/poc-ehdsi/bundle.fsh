@@ -42,14 +42,16 @@ Usage: #inline
 * section[+].title = "Blood group lab result report"
 * section[=].code = $loinc#26436-6 "LABORATORY STUDIES"
 * section[=].code.text = "LABORATORY STUDIES"
-* section[=].entry[+] = Reference(Observation/8bd279af-125a-4318-b461-ba5629b12e7f)
+// * section[=].entry[+] = Reference(Observation/8bd279af-125a-4318-b461-ba5629b12e7f)
+* section[=].entry[+] = Reference(Inline-Diagnostic-Report-laboratory-results-report-poc)
+
 
 Instance: Inline-Diagnostic-Report-laboratory-results-report-poc
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * code = $loinc#26436-6 "LABORATORY STUDIES"
 * code.text = "LABORATORY STUDIES"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
+/* * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4) */
 * status = #final
 * category = #laboratory
 * subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
