@@ -7,7 +7,7 @@ Usage: #example
 * identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
 * type = #document
 * timestamp = "2023-03-06T14:30:00+01:00"
-* entry[composition].fullUrl = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
+* entry[composition].fullUrl = "urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4"
 * entry[composition].resource = Inline-Composition-laboratory-results-report-poc
 * entry[diagnosticReport].fullUrl = "urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754"
 * entry[diagnosticReport].resource = Inline-Diagnostic-Report-laboratory-results-report-poc
@@ -19,11 +19,13 @@ Usage: #example
 * entry[serviceRequest].resource = Inline-ServiceRequest-laboratory-results-report-poc
 * entry[organization].fullUrl = "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"
 * entry[organization].resource = Inline-Organization-laboratory-results-report-poc
+* entry[specimen].fullUrl = "urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051"
+* entry[specimen].resource = Inline-Specimen-laboratory-results-report-poc
 
 Instance: Inline-Composition-laboratory-results-report-poc
 InstanceOf: CompositionLabReportEu
 Usage: #inline
-* id = "4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
+* id = "80709186-426d-4cdf-abba-034c4f80acb4"
 /* * extension[+].url = $composition-diagnostic-report-reference
 * extension[=].valueReference = Reference(DiagnosticReport/3a743273-237a-446a-a8da-9e7521cce614) */
 * identifier.system = "urn:ietf:rfc:3986"
@@ -40,16 +42,17 @@ Usage: #inline
 * attester[=].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Blood group lab result report"
-* section[=].code = $loinc#26436-6 "LABORATORY STUDIES"
+* section[=].code = $loinc#26436-6 "Laboratory studies (set)"
 * section[=].code.text = "LABORATORY STUDIES"
-* section[=].entry[+] = Reference(Observation/8bd279af-125a-4318-b461-ba5629b12e7f)
+//* section[=].entry[+] = Reference(Observation/8bd279af-125a-4318-b461-ba5629b12e7f)
+* section[=].entry[+] = Reference(urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f)
 
 Instance: Inline-Diagnostic-Report-laboratory-results-report-poc
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
-* code = $loinc#26436-6 "LABORATORY STUDIES"
+* code = $loinc#26436-6 "Laboratory studies (set)"
 * code.text = "LABORATORY STUDIES"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/80709186-426d-4cdf-abba-034c4f80acb4)
 * status = #final
 * category = #laboratory
 * subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
@@ -80,7 +83,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Blood bank studies"
-* code = LaboratoryLocalCS#883-9 "ABO group [Type] in Blood"
+* code = $loinc#883-9 "ABO group [Type] in Blood"
 * code.text = "Blood Group"
 * subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
 * effectiveDateTime = "2023-03-09T13:35:00+01:00"
@@ -91,7 +94,7 @@ Usage: #inline
 Instance: Inline-Specimen-laboratory-results-report-poc
 InstanceOf: SpecimenEu
 Usage: #inline
-* id = "3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"
+* id = "cadaf2e3-b707-4207-9b63-5c29ffece051"
 * status = #available
 * type = $sct#119297000 "Blood specimen"
 * type.text = "Blood specimen"
@@ -105,7 +108,7 @@ Usage: #inline
 * intent = #order
 * code = $sct#108252007 "Laboratory procedure"
 * subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
-* specimen = Reference(Specimen/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
+* specimen = Reference(Specimen/cadaf2e3-b707-4207-9b63-5c29ffece051)
 
 Instance: Inline-Organization-laboratory-results-report-poc
 InstanceOf: OrganizationUvIps
