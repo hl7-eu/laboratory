@@ -120,7 +120,7 @@ Usage: #inline
 * name = "Ministry of Health of the Czech Republic"
 
 Instance: Inline-Diag-Report-micro
-InstanceOf: DiagnosticReportLabMicroCultSuscEu
+InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "b864303b-91ab-4e29-ad74-31a7d6566875"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5

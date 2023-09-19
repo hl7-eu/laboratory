@@ -28,3 +28,5 @@ input/fsh/models/*.xlk
 src-models/~$eulab-model-maps.xlsm
 .gitignore
 /input/pagecontent/*.docx
+/_attic
+.gitignore
