@@ -30,7 +30,8 @@ This observation may represent the result of a simple laboratory test such as he
 * category contains specialty 0..*
 * category[specialty] from LabSpecialtyEuVs
 * code
-* code from $results-laboratory-observations-uv-ips (preferred)
+//* code from $results-laboratory-observations-uv-ips (preferred)
+* code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 * performer 1..
@@ -50,9 +51,11 @@ This observation may represent the result of a simple laboratory test such as he
 * valueString only string
 // * valueString MS
 * valueString ^sliceName = "valueString"
-* valueRange only $Range-uv-ips
+//* valueRange only $Range-uv-ips
+* valueRange only Range-eu-lab
 * valueRange ^sliceName = "valueRange"
-* valueRatio only $Ratio-uv-ips
+//* valueRatio only $Ratio-uv-ips
+* valueRatio only Ratio-eu-lab
 * valueRatio ^sliceName = "valueRatio"
 * valueTime only time
 * valueTime ^sliceName = "valueTime"

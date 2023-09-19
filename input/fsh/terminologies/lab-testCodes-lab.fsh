@@ -1,4 +1,4 @@
-ValueSet: LaboratoryResultStandardVs
+ValueSet: LaboratoryResultStandardEuVs
 Id: lab-result-standardVs-eu-lab
 Title: "Standard Laboratory Codes VS"
 Description: "Standard laboratory codes Value Set"

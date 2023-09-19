@@ -8,6 +8,7 @@ Description: "This profile defines how to represent an identified human Patient 
 * insert SetFmmandStatusRule ( 0, draft )
 * identifier ^short = "Patient identifiers"
 * name 1..*
+* name only HumanNameEu
 * name obeys eu-pat-1
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
 // * name.text MS
@@ -15,6 +16,9 @@ Description: "This profile defines how to represent an identified human Patient 
 // based 2023-09-01 decision 
 // * name.family 1..1
 * name.family ^short = "Family name"
+* name.family ^definition = """Family name. When more the family is composed by more than one names, this element documents the full composed family name with the proper * name.familyrder. The parts are recorded in the fhater and mother family names extensions."""
+* name.family ^example.label = "spanish" 
+* name.family ^example.valueString = "Valero Iglesias"
 * name.given ^short = "Given names. Includes middle names"
 * name.text ^short = "Text representation of the full name."
 * telecom ^short = "A contact detail for the patient"

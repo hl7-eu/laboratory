@@ -54,10 +54,16 @@ Usage: #definition
 					
 * group[=].element[+].code = #SpecimenLab.sourceDevice					
 * group[=].element[=].display = "A.4.7 Source Device"					
-* group[=].element[=].target.code = #Specimen.					
+* group[=].element[=].target.code = #Specimen.subject					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be discussed"					
+* group[=].element[=].target.comment = "When the device (e.g. the catheter) is what has been examinated"					
+* group[=].element[+].code = #SpecimenLab.sourceDevice					
+* group[=].element[=].display = "A.4.7 Source Device"					
+* group[=].element[=].target.code = #Specimen.collection.method					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter) "					
 * group[=].element[+].code = #SpecimenLab.collectionMethod					
 * group[=].element[=].display = "A.4.8 Collection procedure/method"					
 * group[=].element[=].target.code = #Specimen.collection.method					
@@ -70,6 +76,12 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
 //---END					
 //---END					
 //---END					

@@ -3,10 +3,11 @@ Profile:    AddressEu
 Parent:     Address
 Id:         Address-eu
 Title:      "Address (EU)"
-Description: "European profile on address, to provide the possibility in the 'line' element to provide a seperate streetname, housenumber and postal box. It is always RECOMMENDED to give these elements seperately."
+Description: """European profile on Address. It includes extensions to support seperate streetname, housenumber and postal box
+It is RECOMMENDED to give these elements seperately."""
 //-------------------------------------------------------------------------------------------
-* ^publisher = "HL7 EU"
-* ^version = "1.0.0"
+/* * ^publisher = "HL7 EU"
+* ^version = "1.0.0" */
 * ^experimental = false
 
 * line.extension ^slicing.discriminator.type = #value
