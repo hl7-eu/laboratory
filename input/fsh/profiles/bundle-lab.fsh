@@ -9,6 +9,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
 * identifier ^short = "Business identifier for this Laboratory Report"
+* identifier 1..
 * type = #document
 * timestamp 1..
 * total ..0

@@ -1,10 +1,15 @@
 //============== ALIAS ===============
 
+// Acotr Canonical
+Alias: $server = http://example.org/ActorDefinition/server
+Alias: $client = http://example.org/ActorDefinition/client
+
 // --- EU Lab Profiles
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
 
 // --- Code Systems
+Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
 Alias: $ajcc = http://cancerstaging.org
 Alias: $atc = http://www.whocc.no/atc
 Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
@@ -36,6 +41,7 @@ Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/Valu
 
 // ---- Extensions
 
+Alias: $obligation = http://hl7.org/fhir/tools/StructureDefinition/obligation
 Alias: $humanname-mothers-family = http://hl7.org/fhir/StructureDefinition/humanname-mothers-family
 Alias: $humanname-fathers-family = http://hl7.org/fhir/StructureDefinition/humanname-fathers-family
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
