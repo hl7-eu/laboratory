@@ -25,14 +25,11 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #unmatched					
 					
 * group[=].element[+].code = #Result.narrative.report					
-//---END					
 * group[=].element[=].display = "A.5.1.1 Narrative report"					
 //-- unmatched					
 //-- unmatched					
-//---END					
 * group[=].element[=].target.equivalence = #unmatched					
 					
-//---END					
 * group[=].element[+].code = #Result.narrative.notes					
 * group[=].element[=].display = "A.5.1.2 Comments, interpretation and recommendations"					
 //-- unmatched					
@@ -106,13 +103,26 @@ If the 'code' is the Observation.code. Similar mapping for the other cases."
 * group[=].element[=].target.code = #Observation.device					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if the measuring device"					
+* group[=].element[=].target.comment = "When it refers to the measuring device, including kits, and device of type Device"					
 * group[=].element[+].code = #Result.observation.device					
 * group[=].element[=].display = "A.5.2.5 Observation device"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "if the calibration device"					
+* group[=].element[=].target.code = #Observation.device.device					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "When it refers to the measuring device and device of type DeviceMeasure"					
+* group[=].element[+].code = #Result.observation.device					
+* group[=].element[=].display = "A.5.2.5 Observation device"					
+* group[=].element[=].target.code = #Observation.device					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "With device of type DeviceMeasure.
+Thsi resource can be used to capture some information about the setting (including calibration)"					
+* group[=].element[+].code = #Result.observation.device					
+* group[=].element[=].display = "A.5.2.5 Observation device"					
+* group[=].element[=].target.code = #Observation.extension:observation-reagent					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "When it refers to reagents used for obtaining a specific result"					
 * group[=].element[+].code = #Result.observation.order					
 * group[=].element[=].display = "A.5.2.8 Order"					
 * group[=].element[=].target.code = #Observation.basedOn					
@@ -163,11 +173,20 @@ If the person responsible for validation:  performer.extension:performerFunction
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "to be checked"					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
+* group[=].element[=].display = "A.5.2.14 Accreditation status"					
+* group[=].element[=].target.code = #Observation.performer.qualification					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "performer ofType PractictionerRole"					
+* group[=].element[+].code = #Result.observation.accreditationStatus					
+* group[=].element[=].display = "A.5.2.14 Accreditation status"					
+* group[=].element[=].target.code = #Observation.performer.organization.qualification					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "performer ofType Organization"					
 //---END					
 //---END					
 //---END					
-					
-					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"					

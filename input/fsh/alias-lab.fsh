@@ -36,6 +36,8 @@ Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/Valu
 
 // ---- Extensions
 
+Alias: $humanname-mothers-family = http://hl7.org/fhir/StructureDefinition/humanname-mothers-family
+Alias: $humanname-fathers-family = http://hl7.org/fhir/StructureDefinition/humanname-fathers-family
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $patient-mothersMaidenName = http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName
 Alias: $event-statusReason = http://hl7.org/fhir/StructureDefinition/event-statusReason
