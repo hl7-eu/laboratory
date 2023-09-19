@@ -8,12 +8,14 @@ Description: """European profile on HumanName data type. It includes extensions 
 
 * extension contains $humanname-fathers-family named fathersFamily 0..1
 * extension[fathersFamily]
-* extension[fathersFamily] ^example.label = "spanish"
+* extension[fathersFamily] ^example.label = "spanish name"
 * extension[fathersFamily] ^example.valueString = "Valero"
 * extension contains $humanname-mothers-family named mothersFamily 0..1
 * extension[mothersFamily]
-* extension[mothersFamily] ^example.label = "spanish"
+* extension[mothersFamily] ^example.label = "spanish name"
 * extension[mothersFamily] ^example.valueString = "Iglesias"
-* family ^example.label = "spanish" 
+* family ^example.label = "spanish name"
 * family ^example.valueString = "Valero Iglesias"
+* given ^example.label = "spanish name" 
+* given ^example.valueString = "Borja"
 
