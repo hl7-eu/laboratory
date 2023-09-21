@@ -43,7 +43,8 @@ This observation may represent the result of a simple laboratory test such as he
 // * performer.extension[performerFunction] ^meaningWhenMissing = """The Performer Function is Participant"""
 
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
-
+* insert ObservationResultsValueEu
+/*
 * value[x]
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
@@ -92,6 +93,7 @@ This observation may represent the result of a simple laboratory test such as he
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+*/
 * interpretation only $CodeableConcept-uv-ips
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
@@ -103,10 +105,12 @@ That's why it is important to explicitly include informaiton about measurement m
 * hasMember only Reference(ObservationResultsLaboratoryEu)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
+
 //* component obeys eu-lab-2
 * component
   * code only $CodeableConcept-uv-ips
   * code from $results-laboratory-observations-uv-ips (preferred)
+  * insert ObservationResultsValueEu
 
 Invariant: eu-lab-1
 Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
