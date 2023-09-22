@@ -137,7 +137,7 @@ Usage: #inline
 * result[+] = Reference(Observation/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture
 
 Instance: Inline-Specimen-micro
-InstanceOf: Specimen-uv-ips
+InstanceOf: SpecimenEu
 Usage: #inline
 * id = "bab0016e-1800-4e54-b595-72bd9041ffbc"
 * status = #available
