@@ -36,7 +36,7 @@ Description: "This profile defines how to represent an identified human Patient 
 
 // Client Obligations
 
-* insert ObligationActorAndCode($client, #handle)
+* insert ObligationActorAndCode($consumer, #handle)
 * insert ObligationElement("identifier")
 * insert ObligationElement("name.given")
 * insert ObligationElement("name.family")
@@ -49,7 +49,7 @@ Description: "This profile defines how to represent an identified human Patient 
 * insert ObligationElement("generalPractitioner")
 
 
-* insert ObligationActorAndCode($client, #will-send) 
+* insert ObligationActorAndCode($creator, #will-send) 
 * insert ObligationElement("identifier")
 * insert ObligationElement("name.given")
 * insert ObligationElement("name.family")
@@ -57,12 +57,12 @@ Description: "This profile defines how to represent an identified human Patient 
 * insert ObligationElement("birthDate")
 * insert ObligationElement("address")
 
-* insert ObligationActorAndCode($client, #can-send) 
+* insert ObligationActorAndCode($creator, #can-send) 
 * insert ObligationElement("name.text")
 * insert ObligationElement("telecom")
 // * insert ObligationElement("contact")
 
-* insert ObligationActorAndCode($client, #can-send) 
+* insert ObligationActorAndCode($creator, #can-send) 
 * insert ObligationElement("generalPractitioner")
 
 

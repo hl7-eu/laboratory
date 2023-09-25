@@ -30,3 +30,5 @@ src-models/~$eulab-model-maps.xlsm
 /input/pagecontent/*.docx
 /_attic
 .gitignore
+input/fsh/examples/actor/test.fsh-bak
+.gitignore

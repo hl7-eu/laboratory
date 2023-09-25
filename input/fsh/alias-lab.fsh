@@ -1,8 +1,10 @@
 //============== ALIAS ===============
 
-// Acotr Canonical
-Alias: $server = http://example.org/ActorDefinition/server
-Alias: $client = http://example.org/ActorDefinition/client
+// Actor Canonical
+ 
+Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab
+Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-eu-lab
+Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 
 // --- EU Lab Profiles
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab

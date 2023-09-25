@@ -40,7 +40,8 @@ Severity:    #warning
 RuleSet: ReportSubjectRule
 * subject 1..
 * subject obeys labRpt-subject
-* subject only Reference (PatientEu or Patient or Group or Location or Device)
+// * subject only Reference (PatientEu or Patient or Group or Location or Device)
+* subject only Reference (PatientEu or PatientAnimalEu or Group or Location or Device)
   * ^short = "Who and/or what this report is about"
   * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
 
@@ -143,14 +144,24 @@ RuleSet: LOINCCopyrightForVS
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = false
 
-RuleSet: ObligationActorAndCode(actor, code)
+/* RuleSet: ObligationActorAndCode(actor, code)
 * ^extension[+].url = $obligation
+* ^extension[=].value[x]
 * ^extension[=].extension[+].url = "code"
 * ^extension[=].extension[=].valueCode = {code}
 * ^extension[=].extension[+].url = "actor"
-* ^extension[=].extension[=].valueCanonical = {actor}
+* ^extension[=].extension[=].valueCanonical = {actor} */
 
+RuleSet: ObligationActorAndCode(actor, code)
+* ^extension[$obligation][+].extension[code].valueCode = {code}
+* ^extension[$obligation][=].extension[actor].valueCanonical = {actor}
+
+/* 
 RuleSet: ObligationElement(element)
 // Used for profile level obligations. Insert after obligation code and actor
 * ^extension[=].extension[+].url = "elementId"
-* ^extension[=].extension[=].valueString = {element}
+* ^extension[=].extension[=].valueString = {element} */
+
+RuleSet: ObligationElement(element)
+// Used for profile level obligations. Insert after obligation code and actor
+* ^extension[$obligation][=].extension[elementId].valueString = {element}

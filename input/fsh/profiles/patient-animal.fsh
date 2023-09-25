@@ -7,5 +7,5 @@ This is used to identify the species when a specimen is collected from an animal
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, draft )
-* extension contains $patient-animal named patient-animal 0..1
+* extension contains $patient-animal named patient-animal 1..1
 * extension[patient-animal].extension[species]
