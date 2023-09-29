@@ -3,8 +3,8 @@
 		<b>Multiple DiagnosticReport entries</b>
 		<p>The first design of the Laboratory Report foresaw that only one DiagnosticReport was allowed in the Bundle.</p>
 		<p>The idea was that the DiagnosticReport was used only for representing the entire report; and when a group of results needed to be managed, the Observation resource would be used for this scope.</p>
-		<p>This choice seems however not yet globally agreed. In some contexts in fact the DiagnosticReport is intended to be used also a grouper of Laboratory results (e.g. panel).</p>
-		<p>For this reason, in this ballot version, the option of having a multiple DiagnosticReport entries has been added.</p>
-		<p><b>Ballotters are invited to express their opinions on this choice</b></p>
+		<p>This choice seems however not yet globally agreed. In some contexts it seems in fact that the DiagnosticReport is supposed to be used also a grouper of Laboratory results (e.g. panel).</p>
+
+		<p><b>Ballotters are invited to express their opinions about the possibility of having more DiagnosticReport entries in the Bundle.</b></p>
 	</blockquote>
 </div>

@@ -2,9 +2,9 @@
 	<blockquote class="stu-note">
 		<b>DiagnosticReport as possible entry</b>
 		<p>The first design of the Laboratory Report foresaw that only Observations were referred by the Composition.section.entry.</p>
-		<p>The idea was that when a group of results needed to be managed, the Observation resource would be used for this scope.</p>
+		<p>The idea is that when a group of results needed to be managed, the Observation resource is used for this scope.</p>
 		<p>This choice seems however not yet globally agreed. In some contexts in fact the DiagnosticReport is used not only to represent a complete report, but also a grouper of Laboratory results (e.g. panel).</p>
-		<p>For this reason, in this ballot version, the option of having a DiagnosticReport as possible entry has been added.</p>
-		<p><b>Ballotters are invited to express their opinions on this choice</b></p>
+		<p>For this reason, we are evaluating also the option of having a DiagnosticReport as possible entry has been added.</p>
+		<p><b>Ballotters are invited to express their opinions on this possible choice</b></p>
 	</blockquote>
 </div>

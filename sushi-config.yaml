@@ -243,6 +243,10 @@ resources:
     name: A.5 - Results data elements model to this guide
     description: It shows how the A.5 - Results data elements data set defined by the EU eHN guidelines is mapped into this guide.
 
+  StructureDefinition/Patient-obl-eu-lab:
+    name: Patient Obligations
+    description: Specify the functional requirements to be applied to the Patient EU Lab profile 
+
 #  Patient/my-example-patient:
 #    name: My Example Patient
 #    description: An example Patient
@@ -291,6 +295,14 @@ groups:
       - ConceptMap/specimen2FHIR-eu-lab
       - ConceptMap/result2FHIR-eu-lab
 
+  obligations:
+    name:  Laboratory Report Obligations
+    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. 
+    resources:
+      - ActorDefinition/actor-consumer-eu-lab
+      - ActorDefinition/actor-creator-eu-lab
+      - ActorDefinition/actor-repos-eu-lab
+      - StructureDefinition/Patient-obl-eu-lab
 
 #
 # The ImplementationGuide resource defines several other properties
