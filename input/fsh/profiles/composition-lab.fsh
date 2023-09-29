@@ -17,20 +17,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * extension contains InformationRecipient named information-recipient 0..*
 * extension[information-recipient]
-
-
-/*  TO DO Header
-- add optional data enterer
-- defiend rules for attester to distiguish  Authenticators and Legal Auth
-- ordering provider mapped into the order details
-- addc Lab DocumentationOf.serviceEvent details
-- ComponentOf.encounter define details in Encounter profile
-*/
-
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule
 * insert ReportStatusRule
-// * category 1.. // add VS binding
 * insert ReportCategoryRule // HK: composition category seems to be related to the CDA Document Class.
                             // In case of lab report, only one value is relevant for this purpose, LOINC 26436-6 	Laboratory Studies (set)
                             // We might discuss if other categorization purposes would be useful or not.
@@ -89,27 +78,24 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // Common rules for all the sections
 // ---------------------------------
 
-* section.title 1..
+* insert SectionCommonRules
+/* * section.title 1..
 * section.code 1..
-* section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-// RH - this constraint to only Narrative is already in the base Composition resource
-//* section.text only Narrative
+* section.code only $CodeableConcept-uv-ips */
 
 // -------------------------------------
 // Single section  0 .. 1
 // -------------------------------------
-
-// RH - Add 'lab-' to the slice name, to clarify that there are potentially other "non-eu-lab" sections that do not meet the "EU Laboratory Report" sets of constraints
 * section contains lab-no-subsections ..* // check if ..1 or ..*
 * section[lab-no-subsections]
   * ^short = "Variant 1: EU Laboratory Report section with text and entry"
   * ^definition = """Variant 1: With this option, the Section text SHALL be present and not blank. This narrative block SHALL present to the human reader, all the observations produced for this Specialty, using the various structures available for the FHIR  Narrative. The narrative block should be fully derived from the entry containing the machine-readable result data. Additionally, Laboratory Report Data Entries SHALL be present. This entry contains the machine-readable result data from which the narrative block of this section should be derived."""
-
-  * code from LabStudyTypesEuVs (preferred)
+  * insert SectionElementsRules
+/*   * code from LabStudyTypesEuVs (preferred)
   * text ^short = "Text summary of the section, for human interpretation."
-  * entry only Reference (ObservationResultsLaboratoryEu)
+  * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
   * entry 1..
-  * section ..0
+  * section ..0 */
 
 // -------------------------------------
 // Structured sections  0 .. 1
@@ -118,18 +104,20 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 * section[lab-subsections]
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Varient 2: With this option, this Laboratory Specialty Section SHALL contain NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding Laboratory Report Item Section which contains the Lab Report Data Entry."""
-  * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+  * code only $CodeableConcept-uv-ips
   * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0
+  * insert SectionCommonRules
   * section 1..
-    * code 1..
-    * code only $CodeableConcept-uv-ips
-    * code from LabStudyTypesEuVs (preferred)
+/*     * code 1..
+    * code only $CodeableConcept-uv-ips */
+    * insert SectionElementsRules
+/*     * code from LabStudyTypesEuVs (preferred)
     * text ^short = "Text summary of the section, for human interpretation."
     * entry 1..
     * entry only Reference (ObservationResultsLaboratoryEu)
-    * section 0..0
+    * section 0..0 */
 
 // -------------------------------------
 // Annotation section  0 .. 1

@@ -136,6 +136,19 @@ RuleSet: NoSubSectionsRules
 * section ..0
 * section ^mustSupport = false
 
+RuleSet: SectionElementsRules
+* code from LabStudyTypesEuVs (preferred)
+* text ^short = "Text summary of the section, for human interpretation."
+* entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
+* entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
+* entry 1..
+* section ..0
+
+RuleSet: SectionCommonRules
+* section.title 1..
+* section.code 1..
+* section.code only $CodeableConcept-uv-ips
+
 RuleSet: SNOMEDCopyrightForVS
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * ^experimental = false
