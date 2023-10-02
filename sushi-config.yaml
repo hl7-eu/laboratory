@@ -67,6 +67,9 @@ pages:
     title: eHN guideline data set
   contributors.md:
     title: Authors and contributors
+  obligations.md:
+    title: Obligations
+    
  #  recommendations.md:
 #    title: Recommendations
 #
@@ -139,6 +142,7 @@ menu:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
     eHN Guideline dataset: logicalModel.html
+    Obligations: obligations.html
      # Model mappping: yyy.html
   # label to be changed 
   Examples: examples.html
@@ -245,7 +249,7 @@ resources:
 
   StructureDefinition/Patient-obl-eu-lab:
     name: Patient Obligations
-    description: Specify the functional requirements to be applied to the Patient EU Lab profile 
+    description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
 
 #  Patient/my-example-patient:
 #    name: My Example Patient

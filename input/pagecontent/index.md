@@ -1,3 +1,20 @@
+
+
+### Notes for ballotters
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="stu-note">
+		<p>Ballotters are invited to evaluate and provide their feedbacks of the following open issues:</p>
+		<ul>
+			<li>Allow for more than one DiagnosticReport resource as Bundle.entry. See <a href="StructureDefinition-Bundle-eu-lab.html">Bundle-eu-lab</a> for more details</li>
+			<li>Allow Composition to have as section entry the DiagnosticReport resource.  See <a href="StructureDefinition-Composition-eu-lab.html">Composition-eu-lab</a> for more details</li>
+			<li>Adoption of obligations. See the <a href="obligations.html">Obligations</a> page for more details</li>
+		</ul>
+	</blockquote>
+</div>
+
+
 ### Laboratory domain
 Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients. It is important that laboratories produce high quality test results as they often are the basis for clinical decision making. Proper quality management is therefore essential.
 

@@ -4,4 +4,12 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# Warnings referred to an Obligation profile
+The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|1.0.0-candidate is deprecated
+The Implementation Guide contains no examples for this profile
+
+# Not recognized NPU system
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
+Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-npu-vs: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
+
 

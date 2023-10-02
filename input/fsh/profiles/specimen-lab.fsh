@@ -15,7 +15,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
 * extension[SpecimenFeatureTypeR5].valueCodeableConcept
 
-* subject only Reference ( PatientEu or PatientAnimalEu or Patient or Group  or Device or Substance or Location)
+* subject only Reference ( PatientEu or PatientAnimalEu or Group  or Device or Substance or Location)
 
 
 * type from LabSpecimenTypesEuVs (preferred)

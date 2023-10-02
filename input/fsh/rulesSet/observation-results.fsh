@@ -16,7 +16,8 @@ RuleSet: ObservationResultsEu
 * code only $CodeableConcept-uv-ips
 // * code MS
 * subject 1..
-* subject only Reference(Patient or PatientEu or Group or Device or Location)
+// * subject only Reference(Patient or PatientEu or Group or Device or Location)
+* subject only Reference(PatientAnimalEu or PatientEu or Group or Device or Location)
 * subject.reference 1..
 * effective[x] 1..
 * effective[x] only dateTime or Period
