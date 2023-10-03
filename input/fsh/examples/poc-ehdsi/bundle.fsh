@@ -31,6 +31,8 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
+* category[specialty] = $sct#394596001	"Chemical pathology"
 * type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
 * date = "2023-03-09T14:30:00+01:00"
@@ -54,7 +56,8 @@ Usage: #inline
 * code.text = "LABORATORY STUDIES"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/80709186-426d-4cdf-abba-034c4f80acb4)
 * status = #final
-* category = #laboratory
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
+* category[specialty] = $sct#394596001	"Chemical pathology"
 * subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
 * effectiveDateTime = "2023-04-19T15:46:00+01:00"
 * performer[+].display = "Dr. Patrick Dempsey"

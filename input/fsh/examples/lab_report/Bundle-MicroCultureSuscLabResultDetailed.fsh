@@ -73,7 +73,7 @@ Usage: #inline
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
 //* category = $v2-0074#LAB "Laboratory"
-* category = $loinc#26436-6 "Laboratory Studies (set)" // corrected to match lab composition category specificication
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" // corrected to match lab composition category specificication
 * type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
 * date = "2022-10-25T14:30:00+01:00"
@@ -129,7 +129,7 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
 * status = #final
-* category = $v2-0074#LAB
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
 * code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"

@@ -8,18 +8,17 @@ Usage: #example
 * identifier.assigner.display = "Regione Lazio"
 * type = #document
 * timestamp = "2022-03-30T11:24:26+01:00"
-* entry[+].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
-* entry[+].fullUrl = "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
-* entry[=].resource = dc2b606f-3cf7-4711-a2ff-52da04b89e04
-* entry[+].fullUrl = "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
-* entry[+].fullUrl = "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
-* entry[+].fullUrl = "urn:uuid:c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd"
-* entry[=].resource = c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
-* entry[+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
+* entry[composition].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
+* entry[composition].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
+* entry[patient].fullUrl = "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+* entry[patient].resource = dc2b606f-3cf7-4711-a2ff-52da04b89e04
+* entry[diagnosticReport].fullUrl = "urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60"
+* entry[diagnosticReport].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
+* entry[specimen].fullUrl = "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
+* entry[specimen].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
+* entry[observation][+].fullUrl = "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
+* entry[observation][=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
+
 * entry[+].fullUrl = "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"
 * entry[=].resource = ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
 * entry[+].fullUrl = "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"
@@ -64,17 +63,18 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
 * entry[+].fullUrl = "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b"
 * entry[=].resource = d5f71fc0-6075-4fed-ad99-b3c609d27f6b
-* entry[+].fullUrl = "urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
-* entry[+].fullUrl = "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
-* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
+
+* entry[+].fullUrl = "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
+* entry[+].fullUrl = "urn:uuid:c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd"
+* entry[=].resource = c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
+* entry[+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"
+* entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: Composition
 Usage: #inline
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
-/* * extension[+].url = $composition-diagnostic-report-reference
-* extension[=].valueReference = Reference(DiagnosticReport/5679723c-4fae-4ba7-9f09-5438a827bfda) */
 * language = #it-IT
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
@@ -110,6 +110,23 @@ Usage: #inline
 * section.section.text.status = #generated
 * section.section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
 * section.section.entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+
+
+Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
+InstanceOf: DiagnosticReport
+Usage: #inline
+* id = "b8c9663d-2c2b-4a5a-99ea-17eae127fc60"
+* extension[+].url = $diagnostic-report-composition-r5
+* extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+* status = #registered
+* category = $v2-0074#LAB "Laboratory"
+* code = http://loinc.org#11502-2 "Laboratory report"
+* code.text = "Referto di laboratorio"
+* subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
+* encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
+* specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
+* result = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+
 
 Instance: dc2b606f-3cf7-4711-a2ff-52da04b89e04
 InstanceOf: Patient
@@ -468,20 +485,7 @@ Usage: #inline
 * identifier.value = "XXX"
 * identifier.assigner.display = "Ministero della Salute"
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
-InstanceOf: DiagnosticReport
-Usage: #inline
-* id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
-* extension[+].url = $diagnostic-report-composition-r5
-* extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
-* status = #registered
-* category = $v2-0074#LAB "Laboratory"
-* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
-* code.text = "Microalbumin Massa/Volume in Urine"
-* subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
-* encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
-* specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
-* result = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
 InstanceOf: Observation

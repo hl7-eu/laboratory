@@ -117,6 +117,7 @@ ValueSet:      LabSpecimenContainerEu
 Id:	       lab-specimenContainer-eu-lab
 Title:	       "Lab Specimen Container"
 Description:   "Laboratory specimen containers."
+* insert SNOMEDCopyrightForVS
 * ^status = #draft
 * ^experimental = false
 * $sct#702290003	"Cervical cytology microscopy slide"
@@ -185,6 +186,7 @@ ValueSet:      LabSpecimenAdditiveEu
 Id:	       lab-specimenAdditive-eu-lab
 Title:	       "Lab Specimen Additive"
 Description:   "Laboratory specimen additives."
+* insert SNOMEDCopyrightForVS
 * ^status = #draft
 * ^experimental = false
 * $sct#1259913003   "Heparin ammonium (substance)"

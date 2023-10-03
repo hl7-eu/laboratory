@@ -12,4 +12,5 @@ The Implementation Guide contains no examples for this profile
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
 Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-npu-vs: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
 
-
+# Pre adoption of R5 rules for Document Bundles
+%isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)%
