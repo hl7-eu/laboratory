@@ -8,6 +8,7 @@ Usage: #example
 * name = "ActorLabRptCreator"
 * status = #active
 * type = #system
+// * type = #entity
 * documentation = """This actor represents the Laboratory Report creators."""
 
 Instance: actor-consumer-eu-lab
@@ -20,6 +21,7 @@ Usage: #example
 * name = "ActorLabRptConsumer"
 * status = #active
 * type = #system
+// * type = #entity
 * documentation = """This actor represents the Laboratory Report consumers."""
 
 Instance: actor-repos-eu-lab
@@ -32,4 +34,5 @@ Usage: #example
 * name = "ActorLabRptRepos"
 * status = #active
 * type = #system
+// * type = #entity
 * documentation = """This actor represents the Laboratory Report Repositories."""

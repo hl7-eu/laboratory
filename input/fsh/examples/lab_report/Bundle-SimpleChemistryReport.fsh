@@ -42,7 +42,7 @@ Usage: #example
 * entry[practitioner][+].fullUrl = "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"  // attester: practitioner
 * entry[practitioner][=].resource = Inline-Instance-for-IT-CDA2FHIR-852cec21-4ff9-4cea-b86d-00de92b46894
 * entry[serviceRequest][+].fullUrl = "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"  // order:service request
-* entry[serviceRequest][=].resource = Inline-Instance-for-IT-CDA2FHIR-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1
+* entry[serviceRequest][=].resource = Inline-ServiceRequest-for-IT-CDA2FHIR
 * entry[practitionerRole][+].fullUrl = "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"  // event.detail: practitioner role
 * entry[practitionerRole][=].resource = Inline-Instance-for-IT-CDA2FHIR-1b4b120e-0371-4878-b4c9-b69434e84c72
 * entry[practitioner][+].fullUrl = "urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde"  // event.detail: practitioner
@@ -61,6 +61,13 @@ Usage: #example
 Instance: Inline-Instance-for-Composition-26032a57-083a-4ddf-b019-e566ae02f740
 InstanceOf: CompositionLabReportEu
 Usage: #inline
+
+* extension[information-recipient]
+  * valueReference = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
+    * display = "Nuovo Ospedale S.Agostino (MO)"
+
+* extension[basedOn-order-or-requisition].valueReference = Reference(Inline-ServiceRequest-for-IT-CDA2FHIR)
+
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #cs-CZ
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -346,18 +353,21 @@ Usage: #inline
 * address.postalCode = "00164"
 * address.country = "100"
 
-Instance: Inline-Instance-for-IT-CDA2FHIR-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1
+Instance: Inline-ServiceRequest-for-IT-CDA2FHIR
 InstanceOf: ServiceRequestLabEu
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.9"
-* identifier.value = "[NRE]"
-* identifier.assigner.display = "Ministero delle Finanze"
+* identifier.system = "http://example.org/lis-order"
+* identifier.value = "123456"
+// USARE QUESTO come Group ID
+* requisition.assigner.display = "Ministero delle Finanze"
+* requisition.system = "urn:oid:2.16.840.1.113883.2.9.4.3.9"
+* requisition.value = "0901001234567234"
 * status = #active
 * intent = #order
 * category = $sct#108252007 "Laboratory procedure"
 * priority = #asap
-* code = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
+* code = $loinc#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.text = "Microalbumin Massa/Volume in Urine"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 
