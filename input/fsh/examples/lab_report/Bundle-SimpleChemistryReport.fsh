@@ -67,6 +67,7 @@ Usage: #inline
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
 * status = #final
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * type = http://loinc.org#11502-2 "Laboratory report"
 * type.text = "Laboratorní zpráva"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
@@ -400,7 +401,7 @@ Usage: #inline
 * id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
-* category[+] = $loinc#18719-5 "Chemistry studies (set)"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * specimen[+] = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // Urine specimen

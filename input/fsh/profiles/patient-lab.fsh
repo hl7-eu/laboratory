@@ -7,6 +7,9 @@ Description: "This profile defines how to represent an identified human Patient 
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, draft )
 
+* extension contains $patient-birthPlace named birthPlace 0..1
+* extension[birthPlace].valueAddress only AddressEu
+
 * identifier ^short = "Patient identifiers"
 
 * name 1..*

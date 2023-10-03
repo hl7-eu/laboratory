@@ -8,6 +8,7 @@ Usage: #example
 * identifier.assigner.display = "Regione Lazio"
 * type = #document
 * timestamp = "2022-03-30T11:24:26+01:00"
+// 0
 * entry[composition].fullUrl = "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
 * entry[composition].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 * entry[patient].fullUrl = "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
@@ -18,7 +19,7 @@ Usage: #example
 * entry[specimen].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
 * entry[observation][+].fullUrl = "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
 * entry[observation][=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
-
+// 5
 * entry[+].fullUrl = "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"
 * entry[=].resource = ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
 * entry[+].fullUrl = "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"
@@ -29,6 +30,7 @@ Usage: #example
 * entry[=].resource = a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d
 * entry[+].fullUrl = "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
+// 10
 * entry[+].fullUrl = "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce"
 * entry[=].resource = a199dc05-af73-44a0-a218-bda5dec557ce
 * entry[+].fullUrl = "urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"
@@ -39,6 +41,7 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-9
 * entry[+].fullUrl = "urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1"
 * entry[=].resource = c20acec2-5d67-4c05-b35e-d528c35f9ed1
+// 15
 * entry[+].fullUrl = "urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"
 * entry[=].resource = f7fa317a-66ac-4adf-9199-9bfe1e2eaa21
 * entry[+].fullUrl = "urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354"
@@ -49,6 +52,7 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-11
 * entry[+].fullUrl = "urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643"
 * entry[=].resource = c1bb11b3-87e6-4682-a214-10975487b643
+// 20
 * entry[+].fullUrl = "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-12
 * entry[+].fullUrl = "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
@@ -59,20 +63,18 @@ Usage: #example
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-15
 * entry[+].fullUrl = "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-16
+// 25
 * entry[+].fullUrl = "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
 * entry[+].fullUrl = "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b"
 * entry[=].resource = d5f71fc0-6075-4fed-ad99-b3c609d27f6b
-
 * entry[+].fullUrl = "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-2
-* entry[+].fullUrl = "urn:uuid:c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd"
-* entry[=].resource = c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
 * entry[+].fullUrl = "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"
 * entry[=].resource = Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
-InstanceOf: Composition
+InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #it-IT
@@ -80,6 +82,7 @@ Usage: #inline
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
 * status = #final
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * type = http://loinc.org#11502-2 "Laboratory report"
 * type.text = "Referto di laboratorio"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
@@ -113,13 +116,13 @@ Usage: #inline
 
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-18
-InstanceOf: DiagnosticReport
+InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "b8c9663d-2c2b-4a5a-99ea-17eae127fc60"
-* extension[+].url = $diagnostic-report-composition-r5
-* extension[=].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
-* category = $v2-0074#LAB "Laboratory"
+/* * category = $v2-0074#LAB "Laboratory" */
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * code = http://loinc.org#11502-2 "Laboratory report"
 * code.text = "Referto di laboratorio"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
@@ -133,8 +136,8 @@ InstanceOf: Patient
 Usage: #inline
 * extension.url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension.valueAddress.line = "Via voltri 3"
-* extension.valueAddress.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* extension.valueAddress.line.extension.valueString = "058091"
+/* * extension.valueAddress.line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
+* extension.valueAddress.line.extension.valueString = "058091" */
 * extension.valueAddress.city = "Roma"
 * extension.valueAddress.district = "RM"
 * extension.valueAddress.state = "120"
@@ -154,8 +157,8 @@ Usage: #inline
 * birthDate = "1993-06-19"
 * address[+].use = #home
 * address[=].line = "Via Aurora 12"
-* address[=].line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* address[=].line.extension.valueString = "058091"
+/* * address[=].line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
+* address[=].line.extension.valueString = "058091" */
 * address[=].city = "Roma"
 * address[=].district = "RM"
 * address[=].state = "120"
@@ -163,8 +166,8 @@ Usage: #inline
 * address[=].country = "100"
 * address[+].use = #home
 * address[=].line = "Via Canevari 12B"
-* address[=].line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
-* address[=].line.extension.valueString = "058091"
+/* * address[=].line.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"
+* address[=].line.extension.valueString = "058091" */
 * address[=].city = "Roma"
 * address[=].district = "RM"
 * address[=].state = "120"
@@ -192,17 +195,6 @@ Usage: #inline
 * id = "5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
 * type = urn:oid:2.16.840.1.113883.5.129#UR "Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
-
-Instance: c92e7441-a6ac-4a4e-9a0b-1c2ee6bfe7dd
-InstanceOf: DocumentReference
-Usage: #inline
-* status = #current
-* subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
-* author = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
-* custodian = Reference(urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d)
-* content.attachment.contentType = urn:ietf:bcp:13#text/plain
-* content.attachment.title = "string"
-* context.related = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
 InstanceOf: PractitionerRole
