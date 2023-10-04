@@ -86,6 +86,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
+    - http://example.org/lab-codes
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:
