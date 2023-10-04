@@ -6,6 +6,7 @@ Description: "This extension provides a link to the order [(Reference(ServiceReq
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * ^context[+].type = #element
 * ^context[=].expression = "Composition"
+* ^url = http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 * value[x] only Reference (ServiceRequest) or Identifier
 
 /* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -85,6 +85,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 #  produce-jekyll-data: true
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
+    - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:
