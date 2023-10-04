@@ -91,8 +91,8 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // -------------------------------------
 * section contains lab-no-subsections ..* // check if ..1 or ..*
 * section[lab-no-subsections]
-  * ^short = "Variant 1: EU Laboratory Report section with text and entry"
-  * ^definition = """Variant 1: With this option, the Section text SHALL be present and not blank. This narrative block SHALL present to the human reader, all the observations produced for this Specialty, using the various structures available for the FHIR  Narrative. The narrative block should be fully derived from the entry containing the machine-readable result data. Additionally, Laboratory Report Data Entries SHALL be present. This entry contains the machine-readable result data from which the narrative block of this section should be derived."""
+  * ^short = "Variant 1: EU Laboratory Report section with entries and no sub-sections"
+  * ^definition = """Variant 1: With this option, all laboratory report data entries are provided in the top level sections and no sub-sections are allowed."""
   * insert SectionElementsRules
 /*   * code from LabStudyTypesEuVs (preferred)
   * text ^short = "Text summary of the section, for human interpretation."
@@ -106,7 +106,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 * section contains lab-subsections ..* // check if ..1 or ..*
 * section[lab-subsections]
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
-  * ^definition = """Varient 2: With this option, this Laboratory Specialty Section SHALL contain NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding Laboratory Report Item Section which contains the Lab Report Data Entry."""
+  * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
   * code only $CodeableConcept-uv-ips
   * code from LabStudyTypesEuVs (preferred)
   * text 0..0
