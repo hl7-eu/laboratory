@@ -34,30 +34,30 @@ The following picture provide an overview of the origin of the participants.
 | Author |  Philip Brennan | NHS England |
 | Author |  Manel Domingo | MoH Spain |
 | Author |  Gabriel Kleinoscheg | ELGA, HL7 AT |
-| xxx |  Petra Lavrikova | CZ |
-| xxx |  Gunnar Nordin | SE |
-| xxx |  Samuel Danhardt | LU |
-| xxx |  Mar Matanzo | ES |
-| xxx |  Juergen Brandstaetter | AT |
-| xxx |  Rebeca Ceder | SE |
-| xxx |  Sanchita Farruque | SE |
-| xxx |  Jagjit Singh Bhamra | NO |
-| xxx |  Simreen Kaur Johal| NO |
-| xxx |  Marte Espnes Temre | NO |
-| xxx |  Jostein Ven | NO |
-| xxx |  Kristiina Kuldkepp | EE |
-| xxx |  Samuel Danhardt | LU |
-| xxx |  Mar Matanzot | SP |
-| xxx |  Sara Russo | PT |
-| xxx |  Feikje Hielkema | NL |
-| xxx |  Miroslav Zvolsky | CZ
-| xxx |  Michaela Warzecha | CZ
-| xxx |  Karolina Buckow | DE
-| xxx |  Chrenova Katerina | CZ
-| xxx |  Irena Rubesova | CZ
-| xxx |  Jeremy Lieth | DE
-| xxx |  Kerli Linna | EE
-| xxx |  Eugenia Rinaldi | DE
+| Author |  Petra Lavrikova | CZ |
+| Author |  Gunnar Nordin | SE |
+| Contributor |  Samuel Danhardt | LU |
+| Contributor |  Mar Matanzo | ES |
+| Contributor |  Juergen Brandstaetter | AT |
+| Participant |  Rebeca Ceder | SE |
+| Participant |  Sanchita Farruque | SE |
+| Participant |  Jagjit Singh Bhamra | NO |
+| Participant |  Simreen Kaur Johal| NO |
+| Participant |  Marte Espnes Temre | NO |
+| Participant |  Jostein Ven | NO |
+| Participant |  Kristiina Kuldkepp | EE |
+| Participant |  Samuel Danhardt | LU |
+| Participant |  Mar Matanzot | SP |
+| Author |  Sara Russo | PT |
+| Author |  Feikje Hielkema | NL |
+| Participant |  Miroslav Zvolsky | CZ
+| Participant |  Michaela Warzecha | PL
+| Author |  Karolina Buckow | DE
+| Participant |  Chrenova Katerina | CZ
+| Participant |  Irena Rubesova | CZ
+| Contributor |  Jeremy Lieth | DE
+| Author |  Kerli Linna | EE
+| Author |  Eugenia Rinaldi | DE
 | Contributor |  Marcel Hanselmann   | HL7 CH |
 | Contributor |  Kristiina Kuldkepp	 | TEHIK (Estonia) |
 | Contributor |  Michaela Ziegler | Aegis, HL7 CH |
