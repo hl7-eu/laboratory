@@ -14,15 +14,15 @@ The following picture provide an overview of the origin of the participants.
 
 
   <blockquote class="stu-note">
-    <p>This table is <b>incomplete</b> and role assignements have to be reviewed</p>
+    <p>This table is a preliminary draft, it is <b>incomplete</b> and all role assignements have to be reviewed</p>
   </blockquote>
 
 
 
 |Role | Name             | Affiliation |
 |------------------|------------------|-------------|
-| Project facilitator (Semantic/Functional)|  Hynek Kružík | HL7 CZ/Europe |
-| Project facilitator (FHIR IG)|  Giorgio Cangioli | HL7 IT/Europe |
+| Project facilitator|  Hynek Kružík | HL7 CZ/Europe |
+| Project facilitator|  Giorgio Cangioli | HL7 IT/Europe |
 | Author |  Robert Hausam   | Hausam Consulting (US) |
 | Author |  Daniel Karlsson | The Swedish eHealth Agency (E-hälsomyndigheten) / HL7 SE |
 | Author |  Rasa Visinskiene | MyHealth@EU  Solution Providers |
@@ -58,6 +58,7 @@ The following picture provide an overview of the origin of the participants.
 | Contributor |  Jeremy Lieth | DE
 | Author |  Kerli Linna | EE
 | Author |  Eugenia Rinaldi | DE
+| Contributor |  Ulrike Merrick  | 	APHL (US) |
 | Contributor |  Marcel Hanselmann   | HL7 CH |
 | Contributor |  Kristiina Kuldkepp	 | TEHIK (Estonia) |
 | Contributor |  Michaela Ziegler | Aegis, HL7 CH |
@@ -73,14 +74,11 @@ The following picture provide an overview of the origin of the participants.
 | Contributor |  Leonardo Alcaro | DIT, HL7 IT |
 | Contributor |  Stefano Dalmiani | F. Monasterio, HL7 IT |
 | Contributor |  Renato Calamai | HL7 IT |
-| Contributor |  François Macary | HL7 FR |
-| Contributor |  Frédéric Bulckaen | MyHealth@EU  Solution Providers |
-| Contributor |  Prerna Arora | MyHealth@EU  Solution Providers |
 | Contributor |  Paavo Kauranne | Kela (FI) |
 | Contributor |  Juan Antonio de los Cobos | MoH Spain |
-| Contributor |  Bart Decuypere | HL7 BE |
 | Contributor |  Naeme Nekooguyan | ANS (FR) |
-| Contributor |  Jean Michel Polfliet | eGezondheid/eSanté Belgium |
 | Contributor |  Michal Cermak | Norsk helsenett NO |
 | Contributor |  Ivar Yrke | Norsk helsenett NO |
 | Contributor |  Linn Brandt | Norwegian Directorate of e-Health |
+
+Other participants: Jean Michel Polfliet (eGezondheid/eSanté Belgium); Bart Decuypere (HL7 BE); Frédéric Bulckaen (MyHealth@EU  Solution Providers); Prerna Arora (MyHealth@EU  Solution Providers); François Macary (HL7 FR)

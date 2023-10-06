@@ -65,9 +65,11 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * insert ReportEncounterRule
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-  * obeys labRpt-author
+  * insert ReportAuthorRule
+  /* * obeys labRpt-author */
 * resultsInterpreter
-  * obeys labRpt-author
+  * insert ReportAuthorRule
+  /* * obeys labRpt-author */
 * specimen only Reference (SpecimenEu)
   * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)

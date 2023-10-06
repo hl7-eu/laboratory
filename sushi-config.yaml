@@ -59,8 +59,8 @@ pages:
     title: Design choices
   challenges.md:
     title: Challenges
-  examples.md:
-    title: Examples
+#  examples.md:
+#    title: Examples
   downloads.md:
     title: Downloads
   logicalModel.md:
@@ -139,15 +139,12 @@ menu:
     Background: background.html
     Challenges: challenges.html
     Design Choices: design-choice.html
-  # Laboratory Report (OLD): semantic-notes.html
   Functional Specifications:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
-     # Model mappping: yyy.html
-  # label to be changed 
-  Examples: examples.html
+  # Examples: examples.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html

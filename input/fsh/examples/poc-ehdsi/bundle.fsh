@@ -34,7 +34,7 @@ Usage: #inline
 * category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
 * category[specialty] = $sct#394596001	"Chemical pathology"
 * type = $loinc#11502-2 "Laboratory report"
-* subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
+* subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
 * date = "2023-03-09T14:30:00+01:00"
 * author[+].display = "Dr. Patrick Dempsey"
 * title = "Laboratory Report - 10 March, 2023 14:30"
@@ -52,8 +52,7 @@ Usage: #inline
 Instance: Inline-Diagnostic-Report-laboratory-results-report-poc
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
-* code = $loinc#26436-6 "Laboratory studies (set)"
-* code.text = "LABORATORY STUDIES"
+* code = $loinc#11502-2 "Laboratory report"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/80709186-426d-4cdf-abba-034c4f80acb4)
 * status = #final
 * category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 

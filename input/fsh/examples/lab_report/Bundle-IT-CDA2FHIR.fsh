@@ -120,6 +120,9 @@ InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "b8c9663d-2c2b-4a5a-99ea-17eae127fc60"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+* identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
+* identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
+* identifier.assigner.display = "Regione Lazio"
 * status = #registered
 /* * category = $v2-0074#LAB "Laboratory" */
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
