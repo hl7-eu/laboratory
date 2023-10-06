@@ -28,7 +28,7 @@ The first is the actor creating the report. this repost can be send to a consume
 The second is the system maintaining a copy of the report received, to store and make it availaìble for the consumer.
 The last one is the system using the report received or retrieved.
 
-{% include actors.svg %}
+<p>{% include actors.svg %}</p>
 
 ### Obligations List
 

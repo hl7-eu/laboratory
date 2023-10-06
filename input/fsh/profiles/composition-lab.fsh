@@ -116,8 +116,8 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 /*     * code 1..
     * code only $CodeableConcept-uv-ips */
     * insert SectionElementsRules
-/*     * code from LabStudyTypesEuVs (preferred)
-    * text ^short = "Text summary of the section, for human interpretation."
+    * code from LabStudyTypesEuVs (preferred)
+/*        * text ^short = "Text summary of the section, for human interpretation."
     * entry 1..
     * entry only Reference (ObservationResultsLaboratoryEu)
     * section 0..0 */
@@ -135,7 +135,7 @@ Examples:
 Suggestion: This result should be evaluated in relation to the patient's medical history and clinical condition.
 Technical note: A list of accredited examination(s) is available at www.laboratory.com. """
 
-  * code = http://loinc.org#48767-8 (exactly) // add binding
+  * code = http://loinc.org#48767-8
   * text 1..
   * entry 0..0
   * section 0..0
