@@ -62,6 +62,25 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349"
 * entry[=].resource = Inline-Organization-micro
 
+Instance: Inline-Diag-Report-micro
+InstanceOf: DiagnosticReportLabEu
+Usage: #inline
+* id = "b864303b-91ab-4e29-ad74-31a7d6566875"
+* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+* status = #final
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" // corrected to match lab composition category specificication
+* code = $loinc#11502-2 "Laboratory report"
+* code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer[+].display = "MUDr. Aleš Procházka"
+* specimen = Reference(Specimen/bab0016e-1800-4e54-b595-72bd9041ffbc)
+* result[+] = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
+* result[+] = Reference(Observation/8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture
+* result[+] = Reference(Observation/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture
 
 Instance: Inline-Composition-micro
 InstanceOf: CompositionLabReportEu
@@ -122,24 +141,7 @@ Usage: #inline
 * identifier[=].value = "24341"
 * name = "Ministry of Health of the Czech Republic"
 
-Instance: Inline-Diag-Report-micro
-InstanceOf: DiagnosticReportLabEu
-Usage: #inline
-* id = "b864303b-91ab-4e29-ad74-31a7d6566875"
-* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
-* status = #final
-* code = $loinc#11502-2 "Laboratory report"
-* code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
-* effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[+].display = "MUDr. Aleš Procházka"
-* specimen = Reference(Specimen/bab0016e-1800-4e54-b595-72bd9041ffbc)
-* result[+] = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
-* result[+] = Reference(Observation/8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture
-* result[+] = Reference(Observation/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture
+
 
 Instance: Inline-Specimen-micro
 InstanceOf: SpecimenEu

@@ -27,7 +27,8 @@ Severity:    #warning
 Invariant: dr-comp-identifier
 Description: "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists"
 /* Expression: "entry:composition.resource.identifier.subsetOf( entry:diagnosticReport.resource.identifier )" */
-Expression: "entry.resource.ofType(Composition).identifier.subsetOf(entry.resource.ofType(DiagnosticReport).identifier)" 
+/* Expression: "entry.resource.ofType(Composition).identifier.subsetOf(entry.resource.ofType(DiagnosticReport).identifier)"  */
+Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
 Severity:    #warning
 
 Invariant: one-comp
@@ -54,12 +55,15 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * insert SetFmmandStatusRule ( 0, draft )
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
-* obeys dr-comp-enc
-* obeys dr-comp-subj
-* obeys dr-comp-identifier
+
 * obeys one-comp
 * obeys one-dr
+* obeys dr-comp-identifier
 * obeys dr-comp-type
+* obeys dr-comp-category
+* obeys dr-comp-subj
+* obeys dr-comp-enc
+
 
 * identifier ^short = "Business identifier for this Laboratory Report"
 * identifier 1..

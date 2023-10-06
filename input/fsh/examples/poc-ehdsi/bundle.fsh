@@ -54,6 +54,8 @@ InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * code = $loinc#11502-2 "Laboratory report"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/80709186-426d-4cdf-abba-034c4f80acb4)
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
 * category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
 * category[specialty] = $sct#394596001	"Chemical pathology"
