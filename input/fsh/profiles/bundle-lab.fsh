@@ -6,40 +6,40 @@ Invariant: dr-comp-enc
 Description: "DiagnosticReport and Composition SHALL have the same encounter"
 /* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
 Expression: "( (entry.resource.ofType(Composition).encounter.empty() and entry.resource.ofType(DiagnosticReport).encounter.empty() ) or entry.resource.ofType(Composition).encounter = entry.resource.ofType(DiagnosticReport).encounter )"
-Severity:    #warning
+Severity:    #error
 
 Invariant: dr-comp-subj
 Description: "DiagnosticReport and Composition SHALL have the same subject"
 Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
-Severity:    #warning
+Severity:    #error
 
 
 Invariant: dr-comp-type
 Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
 Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()" 
-Severity:    #warning
+Severity:    #error
 
 Invariant: dr-comp-category
 Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
-Expression: "entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()" 
-Severity:    #warning
+Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()" 
+Severity:    #error
 
 Invariant: dr-comp-identifier
 Description: "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists"
 /* Expression: "entry:composition.resource.identifier.subsetOf( entry:diagnosticReport.resource.identifier )" */
 /* Expression: "entry.resource.ofType(Composition).identifier.subsetOf(entry.resource.ofType(DiagnosticReport).identifier)"  */
 Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
-Severity:    #warning
+Severity:    #error
 
 Invariant: one-comp
 Description: "A laboratory report bundle SHALL includes one and only one Composition"
 Expression: "entry.resource.ofType(Composition).count() = 1"
-Severity:    #warning
+Severity:    #error
 
 Invariant: one-dr
 Description: "A laboratory report SHALL includes one and only one DiagnosticReport"
 Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
-Severity:    #warning
+Severity:    #error
 
 //==========================
 // PROFILE

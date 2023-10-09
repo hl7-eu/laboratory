@@ -53,6 +53,23 @@ Usage: #inline
 * section[=].code.text = "Acute Hepatitis Panel, reflex to confirmation"
 * section[=].entry[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
 
+Instance: Inline-Diag-Report-hepatitis-panel
+InstanceOf: DiagnosticReport-eu-lab
+Usage: #inline
+* id = "3a743273-237a-446a-a8da-9e7521cce614"
+// * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
+* status = #final
+/* * category = $v2-0074#MB "Microbiology" */
+* code.coding[+] = $loinc#11502-2 "Laboratory report"
+* code.coding[+] = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+* code.text = "Acute Hepatitis Panel, reflex to confirmation"
+* subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer[+].display = "MUDr. Aleš Procházka"
+* specimen = Reference(Specimen/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
+* result[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
+
 Instance: Inline-Patient-hepatitis-panel
 InstanceOf: Patient
 Usage: #inline
@@ -79,21 +96,7 @@ Usage: #inline
 * identifier[=].value = "24341"
 * name = "Ministry of Health of the Czech Republic"
 
-Instance: Inline-Diag-Report-hepatitis-panel
-InstanceOf: DiagnosticReport-eu-lab
-Usage: #inline
-* id = "3a743273-237a-446a-a8da-9e7521cce614"
-// * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
-* status = #final
-* category = $v2-0074#MB "Microbiology"
-* code = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
-* code.text = "Acute Hepatitis Panel, reflex to confirmation"
-* subject = Reference(Patient/8472931c-fbd0-437b-9ed1-4f66472c78b5)
-* effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[+].display = "MUDr. Aleš Procházka"
-* specimen = Reference(Specimen/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
-* result[+] = Reference(Observation/2c72163e-b741-44a3-aff7-c52f17f7a1ba)
+
 
 Instance: Inline-Specimen-hepatitis-panel
 InstanceOf: Specimen-uv-ips

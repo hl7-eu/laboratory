@@ -52,3 +52,13 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/Stru
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
 
 
+# usage of locally defined example coded concepts
+
+== fsh-generated\resources\Bundle-BundleHepatitisPanel.json ==
+
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[2].resource/*DiagnosticReport/3a743273-237a-446a-a8da-9e7521cce614*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[5].resource/*Observation/104a5829-565b-46a6-85d6-36751ef79a40*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[6].resource/*Observation/01b8ec35-9b20-45a4-bd41-42eeae2fd521*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[7].resource/*Observation/096e27da-0768-47e4-b33c-9f1be93e1f88*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[8].resource/*Observation/861e7b48-5497-410a-bed8-2cde814e09fc*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[9].resource/*Observation/cc96d499-3e0e-4588-a021-4fe576766112*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
