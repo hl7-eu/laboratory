@@ -126,10 +126,10 @@ Instance: Inline-Diag-Report-micro
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "b864303b-91ab-4e29-ad74-31a7d6566875"
-* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
+// * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4789a3ee-92b1-41b2-9b97-83daacf2a239)
 * status = #final
-* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)"
 * code.text = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
