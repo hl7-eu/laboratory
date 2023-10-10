@@ -21,7 +21,7 @@ RuleSet: ObservationResultsEu
 * subject.reference 1..
 * effective[x] 1..
 * effective[x] only dateTime or Period
-* effective[x].extension contains $SD-data-absent-reason named data-absent-reason 0..1
+* effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
 * performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)

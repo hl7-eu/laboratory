@@ -29,5 +29,36 @@ INFORMATION: Bundle/SimpleChemistryResultReport: Bundle.entry[0].resource/*Compo
 INFORMATION: Bundle/SimpleChemistryResultReport: Bundle.entry[21].resource/*Observation/763f7902-8103-4d10-8bd1-546a726d43ee*/.code.coding[1]: Code System URI 'urn:oid:1.2.203.24341.11.2.2' is unknown so the code cannot be validated
 INFORMATION: Bundle/SimpleChemistryResultReport: Bundle.entry[22].resource/*Observation/18bd102e-0abf-42b0-b4e6-97e47fd385eb*/.code.coding[1]: Code System URI 'urn:oid:1.2.203.24341.11.2.2' is unknown so the code cannot be validated
 
-# The validator interprets the presence of ( ) in the designation as FSN, but in this acse it is not an FSN
-This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube , K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
+# The validator interprets the presence of ( ) in the designation as FSN, but in this case it is not an FSN
+
+== fsh-generated\resources\ValueSet-lab-specimenContainer-eu-lab.json ==
+INFORMATION: ValueSet/lab-specimenContainer-eu-lab: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
+
+
+# examples in the Bundles
+
+== fsh-generated\resources\StructureDefinition-Composition-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-DiagnosticReport-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+
+== fsh-generated\resources\StructureDefinition-Observation-resultslab-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Patient-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-Practitioner-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated\resources\StructureDefinition-PractitionerRole-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+
+
+# usage of locally defined example coded concepts
+
+== fsh-generated\resources\Bundle-BundleHepatitisPanel.json ==
+
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[2].resource/*DiagnosticReport/3a743273-237a-446a-a8da-9e7521cce614*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[5].resource/*Observation/104a5829-565b-46a6-85d6-36751ef79a40*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[6].resource/*Observation/01b8ec35-9b20-45a4-bd41-42eeae2fd521*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[7].resource/*Observation/096e27da-0768-47e4-b33c-9f1be93e1f88*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[8].resource/*Observation/861e7b48-5497-410a-bed8-2cde814e09fc*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0
+INFORMATION: Bundle/BundleHepatitisPanel: Bundle.entry[9].resource/*Observation/cc96d499-3e0e-4588-a021-4fe576766112*/.code: Reference to experimental item http://example.org/lab-codes|0.1.0

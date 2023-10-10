@@ -18,12 +18,12 @@ Title: "Local Laboratory Codes CS"
 Description: "Local laboratory codes Code System"
 * ^url = "http://example.org/lab-codes"
 * ^experimental = true
-* ^version = "0.0.1"
+/* * ^version = "0.0.1" */
 * ^name = "LaboratoryLocalCS"
 * ^title = "Laboratory local codes Code System"
 * ^status = #active
 * ^description = "Laboratory local codes Code System"
-* ^content = #example
+* ^content = #complete // #example
 * ^caseSensitive = false
 * #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * #0020089 "Hepatitis B Surface Antigen"

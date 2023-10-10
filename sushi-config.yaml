@@ -1,10 +1,10 @@
 id: hl7.fhir.eu.laboratory
-canonical: http://hl7.eu/fhir/laboratory # check if this may create issues
+canonical: http://hl7.eu/fhir/laboratory 
 name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.1.0 # 
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -59,8 +59,8 @@ pages:
     title: Design choices
   challenges.md:
     title: Challenges
-  examples.md:
-    title: Examples
+#  examples.md:
+#    title: Examples
   downloads.md:
     title: Downloads
   logicalModel.md:
@@ -139,15 +139,12 @@ menu:
     Background: background.html
     Challenges: challenges.html
     Design Choices: design-choice.html
-  # Laboratory Report (OLD): semantic-notes.html
   Functional Specifications:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
-     # Model mappping: yyy.html
-  # label to be changed 
-  Examples: examples.html
+  # Examples: examples.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html

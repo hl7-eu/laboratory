@@ -25,7 +25,7 @@ Three actors have been specifed:
 * the [Consumer](ActorDefinition-actor-consumer-eu-lab.html)
 
 The first is the actor creating the report. this repost can be send to a consumer or to a repository for the report storage and sharing
-The second is the system maintaining a copy of the report received, to store and make it availaìble for the consumer.
+The second is the system maintaining a copy of the report received, to store and make it availaìble for the consumers.
 The last one is the system using the report received or retrieved.
 
 <p>{% include actors.svg %}</p>

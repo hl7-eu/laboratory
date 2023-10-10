@@ -33,8 +33,8 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * author 1..
   * ^short = "Who and/or what authored the Laboratory Report"
   * ^definition = "Identifies who is responsible for the information in the Laboratory Report, not necessarily who typed it in."
-  /* * insert ReportAuthorRule */
-  * obeys labRpt-author
+  * insert ReportAuthorRule
+  /* * obeys labRpt-author */
 
 * attester 0.. // RH - should attester be 1.. or 0..? - since author is also required?
   * ^short = "Attests the report accuracy"
