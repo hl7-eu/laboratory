@@ -9,7 +9,7 @@ Description:   "Laboratory Technique [SNOMED CT]"
 // * ^copyright = "HL7 Europe"
 
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 
 // not in this SCT version => * $sct#62841000052105	"Audiogram (qualifier value)"
 // not in this SCT version => * $sct#65831000052108	"Point-of-care analysis (qualifier value)"

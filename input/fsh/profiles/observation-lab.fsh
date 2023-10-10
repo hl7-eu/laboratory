@@ -8,7 +8,7 @@ This observation may represent the result of a simple laboratory test such as he
 """
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
 * insert ObservationResultsEu

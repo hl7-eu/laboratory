@@ -9,7 +9,7 @@ Description: "This profile constrains the Observation resource to represent vari
 // * ^copyright = "HL7 Europe"
 
 RuleSet: ObservationResultsEu
-// * insert SetFmmandStatusRule ( 0, draft )
+// * insert SetFmmandStatusRule ( 1, draft )
 // * status = #final (exactly) // is this still true ?
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 * category only $CodeableConcept-uv-ips

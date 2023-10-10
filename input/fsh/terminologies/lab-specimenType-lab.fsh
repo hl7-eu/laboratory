@@ -7,7 +7,7 @@ Description:   """Laboratory Specimen Types"""
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 * $sct#119376003	"Tissue specimen"
 * $sct#119359002	"Bone marrow specimen"
 * $sct#122571007	"Pericardial fluid"

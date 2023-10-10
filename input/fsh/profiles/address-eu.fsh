@@ -9,7 +9,7 @@ It is RECOMMENDED to give these elements seperately."""
 /* * ^publisher = "HL7 EU"
 * ^version = "1.0.0" */
 * ^experimental = false
-
+* insert SetFmmandStatusRule ( 1, draft )
 * line.extension ^slicing.discriminator.type = #value
 * line.extension ^slicing.discriminator.path = "url"
 * line.extension ^slicing.rules = #open

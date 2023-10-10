@@ -8,6 +8,6 @@ Catgegory can be used for filtering per study type or specialty."""
 // * ^experimental = false
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 * insert LOINCCopyrightForVS
 * $loinc#11502-2 "Laboratory report"

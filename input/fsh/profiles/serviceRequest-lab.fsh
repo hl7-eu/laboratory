@@ -18,7 +18,7 @@ Description: """This profile defines how to represent an laboratory orders using
 // Clarify when to use ServiceRequest and RequestGroup
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 * . ^short = "Laboratory Order"
 * . ^definition = "Laboratory Order composition."
 // add binding for category and code

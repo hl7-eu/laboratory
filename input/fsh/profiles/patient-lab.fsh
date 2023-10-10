@@ -5,7 +5,7 @@ Title:    "Patient: Person"
 Description: """This profile defines how to represent a human Patient in FHIR for the purpose of this guide.
 When the ips-pat-1 invariant is satified \(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\) then this proifle complies with the IPS patient profile."""
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 
 * extension contains $patient-birthPlace named birthPlace 0..1
 * extension[birthPlace].valueAddress only AddressEu

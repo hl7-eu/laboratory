@@ -6,7 +6,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * ^status = #draft
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 1, draft )
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
