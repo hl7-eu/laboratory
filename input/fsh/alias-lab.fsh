@@ -1,7 +1,7 @@
 //============== ALIAS ===============
 
 // Actor Canonical
- 
+
 Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab
 Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-eu-lab
 Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
@@ -57,7 +57,6 @@ Alias: $specimen-feature-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extens
 Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $specimen-collection-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.device
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
-Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
 Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
 Alias: $iso21090-ADXP-postBox = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox
