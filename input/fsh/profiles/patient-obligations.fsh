@@ -1,3 +1,17 @@
+RuleSet: ObligationSet1
+* insert ObligationActorAndCode($server, #handle)
+* insert ObligationActorAndCode($consumer, #handle)
+* insert ObligationActorAndCode($server, #will-send)
+* insert ObligationActorAndCode($creator, #will-send)
+* insert ObligationActorAndCode($creator, #can-populate)
+
+RuleSet: ObligationSet2
+* insert ObligationActorAndCode($server, #handle)
+* insert ObligationActorAndCode($consumer, #handle)
+* insert ObligationActorAndCode($server, #can-send)
+* insert ObligationActorAndCode($creator, #can-send)
+* insert ObligationActorAndCode($creator, #can-populate)
+
 Profile: PatientEuObligations
 Parent: Patient
 Id: Patient-obl-eu-lab
@@ -11,57 +25,13 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 
 // Obligations at the element level 
 // Server obligations
-* identifier insert ObligationActorAndCode($server, #handle) 
-* name.given insert ObligationActorAndCode($server, #handle)  
-* name.family insert ObligationActorAndCode($server, #handle)
-* name.text insert ObligationActorAndCode($server, #handle)
-* telecom insert ObligationActorAndCode($server, #handle)
-* gender insert ObligationActorAndCode($server, #handle)
-* birthDate insert ObligationActorAndCode($server, #handle)
-
-// * contact insert ObligationActorAndCode($server, #handle)
-* generalPractitioner insert ObligationActorAndCode($server, #handle)
-* address insert ObligationActorAndCode($server, #handle)  
-
-* identifier insert ObligationActorAndCode($server, #will-send) 
-* name.given insert ObligationActorAndCode($server, #will-send)  
-* name.family insert ObligationActorAndCode($server, #will-send)
-* name.text insert ObligationActorAndCode($server, #can-send)
-* telecom insert ObligationActorAndCode($server, #can-send)
-* gender insert ObligationActorAndCode($server, #will-send)
-* birthDate insert ObligationActorAndCode($server, #will-send)
-* address insert ObligationActorAndCode($server, #will-send) 
-// * contact insert ObligationActorAndCode($server, #can-send) 
-// * generalPractitioner insert ObligationActorAndCode($server, #handle)
-
-// Client Obligations
-
-* insert ObligationActorAndCode($consumer, #handle)
-* insert ObligationElement("identifier")
-* insert ObligationElement("name.given")
-* insert ObligationElement("name.family")
-* insert ObligationElement("name.text")
-* insert ObligationElement("telecom")
-* insert ObligationElement("gender")
-* insert ObligationElement("birthDate")
-// * insert ObligationElement("contact")
-* insert ObligationElement("address")
-* insert ObligationElement("generalPractitioner")
-
-
-* insert ObligationActorAndCode($creator, #will-send) 
-* insert ObligationElement("identifier")
-* insert ObligationElement("name.given")
-* insert ObligationElement("name.family")
-* insert ObligationElement("gender")
-* insert ObligationElement("birthDate")
-* insert ObligationElement("address")
-
-* insert ObligationActorAndCode($creator, #can-send) 
-* insert ObligationElement("name.text")
-* insert ObligationElement("telecom")
-// * insert ObligationElement("contact")
-
-* insert ObligationActorAndCode($creator, #can-send) 
-* insert ObligationElement("generalPractitioner")
-
+* identifier insert ObligationSet1   
+* name.given insert ObligationSet1  
+* name.family insert ObligationSet1
+* name.text insert ObligationSet2 //can-send
+* telecom insert ObligationSet2 //can-send
+* gender insert ObligationSet1
+* birthDate insert ObligationSet1
+* generalPractitioner insert ObligationSet2 //can-send
+* address insert ObligationSet1 
+* address insert ObligationSet1 

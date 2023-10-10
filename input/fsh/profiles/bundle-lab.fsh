@@ -25,10 +25,14 @@ Expression: "(entry.resource.ofType(Composition).category.exists() or entry.reso
 Severity:    #error
 
 Invariant: dr-comp-identifier
-Description: "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists"
-/* Expression: "entry:composition.resource.identifier.subsetOf( entry:diagnosticReport.resource.identifier )" */
+Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
+
+/* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists"
+
+ *//* Expression: "entry:composition.resource.identifier.subsetOf( entry:diagnosticReport.resource.identifier )" */
 /* Expression: "entry.resource.ofType(Composition).identifier.subsetOf(entry.resource.ofType(DiagnosticReport).identifier)"  */
-Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
+/* Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"  */
+Expression: "entry.resource.ofType(DiagnosticReport).identifier.exists() implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
 Severity:    #error
 
 Invariant: one-comp
