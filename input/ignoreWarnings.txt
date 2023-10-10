@@ -8,6 +8,9 @@
 The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|1.0.0-candidate is deprecated
 The Implementation Guide contains no examples for this profile
 
+== fsh-generated\resources\StructureDefinition-PatiHumanName-obl-eu-lab.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/PatiHumanName-obl-eu-lab'): The Implementation Guide contains no examples for this data type profile
+
 # Not recognized NPU system
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
 Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-npu-vs: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
@@ -41,6 +44,9 @@ INFORMATION: ValueSet/lab-specimenContainer-eu-lab: ValueSet.compose.include[0]:
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
 == fsh-generated\resources\StructureDefinition-DiagnosticReport-eu-lab.json ==
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
+
+== fsh-generated\resources\StructureDefinition-Patient-animal-eu-lab.json ==
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
 
 == fsh-generated\resources\StructureDefinition-Observation-resultslab-eu-lab.json ==
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab'): The Implementation Guide contains no explicitly linked examples for this profile
