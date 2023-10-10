@@ -250,6 +250,10 @@ resources:
     name: Patient Obligations
     description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
 
+  Specimen/Specimen-animal-example:
+    name: "Specimen: animal example"
+    description: Example of specimen collected from an animal.
+
 #  Patient/my-example-patient:
 #    name: My Example Patient
 #    description: An example Patient
