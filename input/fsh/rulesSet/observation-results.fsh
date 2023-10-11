@@ -39,8 +39,10 @@ RuleSet: ObservationResultsValueEu
 * valueString only string
 // * valueString MS
 * valueString ^sliceName = "valueString"
-//* valueRange only $Range-uv-ips
-* valueRange only Range-eu-lab
+* valueRange only $Range-uv-ips
+// no practical examples found for the time being
+// reverted to the original statement 
+// * valueRange only Range-eu-lab
 * valueRange ^sliceName = "valueRange"
 //* valueRatio only $Ratio-uv-ips
 * valueRatio only Ratio-eu-lab

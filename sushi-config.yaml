@@ -250,6 +250,10 @@ resources:
     name: Patient Obligations
     description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
 
+  StructureDefinition/HumanName-obl-eu-lab:
+    name: Human Name Obligations
+    description: Specify the functional capabilities that the defined actors may, should or shall applied to the Human Name profile elements.
+
   Specimen/Specimen-animal-example:
     name: "Specimen: animal example"
     description: Example of specimen collected from an animal.
@@ -310,6 +314,7 @@ groups:
       - ActorDefinition/actor-creator-eu-lab
       - ActorDefinition/actor-repos-eu-lab
       - StructureDefinition/Patient-obl-eu-lab
+      - StructureDefinition/HumanName-obl-eu-lab
 
 #
 # The ImplementationGuide resource defines several other properties

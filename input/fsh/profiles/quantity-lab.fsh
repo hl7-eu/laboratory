@@ -10,7 +10,7 @@ Description: "Data type Quantity constrained to use UCUM as the code system for 
 * extension contains $iso21090-uncertainty named Uncertainty 0..1
 * extension contains $iso21090-uncertaintyType named uncertaintyType 0..1
 
-Profile: RangeEuLab
+/* Profile: RangeEuLab
 Parent: Range-uv-ips
 Id: Range-eu-lab
 Title: "Range (Eu) for lab observations"
@@ -24,7 +24,7 @@ Description: "Data type Range constrained to use UCUM as the code system for uni
 * high.extension contains $iso21090-uncertainty named Uncertainty 0..1
 * high.extension contains $iso21090-uncertaintyType named uncertaintyType 0..1
 
-
+ */
 Profile: RatioEuLab
 Parent: Ratio-uv-ips
 Id: Ratio-eu-lab

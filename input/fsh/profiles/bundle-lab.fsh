@@ -123,6 +123,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains location 0..*
 * entry[location].resource only Location
 
+* entry contains provenance 0..*
+* entry[provenance].resource only Provenance
+
 //* entry contains documentReference 0..*
 //* entry[documentReference].resource only DocumentReference
 

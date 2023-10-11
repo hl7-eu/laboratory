@@ -14,7 +14,7 @@ RuleSet: ObligationSet3
 
 Profile: HumanNameEuObligations
 Parent: HumanNameEu
-Id: PatiHumanName-obl-eu-lab
+Id: HumanName-obl-eu-lab
 Title:    "Human Name: Obligations"
 Description: "This profile defines obligations for an human Patient name in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
