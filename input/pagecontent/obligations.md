@@ -33,4 +33,5 @@ The last one is the system using the report received or retrieved.
 ### Obligations List
 
 
-1. [Patient Obligations](StructureDefinition-Patient-obl-eu-lab.html)
+1. [Patient](StructureDefinition-Patient-obl-eu-lab.html)
+1. [Human Name](StructureDefinition-HumanName-obl-eu-lab.html)
