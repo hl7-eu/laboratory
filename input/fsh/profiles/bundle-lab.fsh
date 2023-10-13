@@ -31,8 +31,10 @@ Description: "If one or more DiagnosticReport.identifiers are given, at least on
 
  *//* Expression: "entry:composition.resource.identifier.subsetOf( entry:diagnosticReport.resource.identifier )" */
 /* Expression: "entry.resource.ofType(Composition).identifier.subsetOf(entry.resource.ofType(DiagnosticReport).identifier)"  */
-/* Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"  */
-Expression: "entry.resource.ofType(DiagnosticReport).identifier.exists() implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
+// Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
+// Expression: "entry.resource.ofType(DiagnosticReport).identifier.exists() implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
+
+Expression: "(entry.resource.ofType(Composition).identifier.exists() and entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
 Severity:    #error
 
 Invariant: one-comp

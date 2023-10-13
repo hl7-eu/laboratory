@@ -1,6 +1,6 @@
 Profile: SpecimenEu
 Parent: Specimen
-Id: specimen-eu-lab
+Id: Specimen-eu-lab
 Title: "Specimen: Laboratory"
 Description: """This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide."""
 * ^status = #draft
