@@ -4,7 +4,7 @@
 Instance: author2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+					
 * name = "LabRptAuthor2FHIR"					
 * title = "eHN Author to this guide Map"					
 * status = #draft					
@@ -110,7 +110,7 @@ resultsInterpreter.resolve().ofType(Practictioner).name"
 * group[=].element[=].target.code = #DiagnosticReport.performer.practictioner.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the performer: performer.resolve().ofType(PractictionerRole).practictioner.resolve().name—"					
+* group[=].element[=].target.comment = "If the author is the performer: performer.resolve().ofType(PractictionerRole).practictioner.resolve().nameï¿½"					
 * group[=].element[+].code = #Author.organization					
 * group[=].element[=].display = "A.1.5.3 Author organization"					
 * group[=].element[=].target.code = #DiagnosticReport.performer.organization					

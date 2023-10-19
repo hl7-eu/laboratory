@@ -4,8 +4,8 @@
     "type": "fhir.template",
     "license": "CC0-1.0",
     "description": "HL7 Europe FHIR Template",
-    "base": "fhir.base.template",
+    "base": "hl7.base.template",
     "dependencies": {
-      "fhir.base.template": "current"
+      "hl7.base.template": "current"
     }
 }

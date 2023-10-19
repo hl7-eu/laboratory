@@ -5,10 +5,10 @@ name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ballot # 
+version: 0.1.0 # 
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -259,88 +259,6 @@ resources:
   Specimen/Specimen-animal-example:
     name: "Specimen: animal example"
     description: Example of specimen collected from an animal.
-
-  DiagnosticReport/dr-lab-example:
-    name: "DiagnosticReport: example"
-    description: Example of DiagnosticReport conforming this guide.
-
-  Composition/comp-lab-example:
-    name: "Composition: example"
-    description: Example of Composition conforming this guide.
-
-  Patient/pat-lab-example:
-    name: "Patient: example"
-    description: Example of Patient conforming this guide.
-
-  PractitionerRole/prrole-lab-example:
-    name: "PractitionerRole: example"
-    description: Example of PractitionerRole conforming this guide.
-
-  Practitioner/pr-lab-example:
-    name: "Practitioner: example"
-    description: Example of Practitioner conforming this guide.
-    
-  Observation/obs-gram-stain:
-    name: "Observation: gram staining example"
-    description: Example of gram staining result Observation conforming this guide.
-
-  Observation/obs-wbc:
-    name: "Observation: Leukocytes Presence example"
-    description: Example of Leukocytes Presence by gram staining  Observation conforming this guide.
-
-  Observation/obs-gs-org1:
-    name: "Observation: Gram-positive cocci example"
-    description: Example of Gram-positive cocci in clusters by gram staining  Observation conforming this guide.
-
-  Observation/obs-gs-org1-quant:
-    name: "Observation: Gram-positive cocci, observed quantity, example"
-    description: Example of Gram-positive cocci in clusters by gram staining, observed quantity, Observation conforming this guide.
-
-
-  Observation/obs-aerobic-culture:
-    name: "Observation: Aerobic Culture example"
-    description: Example of Aerobic Culture Observation conforming this guide.
-
-  Observation/obs-anaerobic-culture:
-    name: "Observation: Anaerobic Culture example"
-    description: Example of Anaerobic Culture Observation conforming this guide.
-
-  Observation/obs-org-id1:
-    name: "Observation: Staphylococcus aureus identified example"
-    description: Example of Staphylococcus aureus identified by Aerobe culture Observation conforming this guide.
-
-  Observation/obs-org-id1-growth:
-    name: "Observation: Staphylococcus aureus Growth example"
-    description: Example of Staphylococcus aureus Growth Observation conforming this guide.
-
-  Observation/obs-org-id1-susc-panel:
-    name: "Observation: Staphylococcus aureus susceptibility panel example"
-    description: Example of Staphylococcus aureus susceptibility panel Observation conforming this guide.
-
-  Observation/obs-org-id1-susc-1:
-    name: "Observation: Staphylococcus aureus Cephalothin susceptibility example"
-    description: Example of Staphylococcus aureus Cephalothin susceptibility Observation conforming this guide.
-
-  Observation/obs-org-id1-susc-2:
-    name: "Observation: Staphylococcus aureus levoFLOXacin susceptibility example"
-    description: Example of Staphylococcus aureus levoFLOXacin susceptibility Observation conforming this guide.
-
-  Observation/obs-org-id1-susc-3:
-    name: "Observation: Staphylococcus aureus Oxacillin susceptibility example"
-    description: Example of Staphylococcus aureus Oxacillin susceptibility Observation conforming this guide.
-
-  Observation/obs-org-id1-susc-4:
-    name: "Observation: Staphylococcus aureus Vancomycin susceptibility example"
-    description: Example of Staphylococcus aureus Vancomycin susceptibility Observation conforming this guide.    
-
-  ServiceRequest/srv-request-example:
-    name: "ServiceRequest: example"
-    description: Example of ServiceRequest conforming this guide.
-
-  Patient/Patient-animal-example:
-    name: "Patient: animal example"
-    description: Example of Patient resource used for indicating an animal (cat) conforming this guide. 
-
 
 #  Patient/my-example-patient:
 #    name: My Example Patient

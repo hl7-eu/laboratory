@@ -4,7 +4,7 @@
 Instance: subject2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+					
 * name = "LabRptSubject2Fhir"					
 * title = "eHN Subject to this guide Map"					
 * status = #draft					

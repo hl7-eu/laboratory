@@ -4,7 +4,7 @@
 Instance: legalAuth2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+					
 * name = "LegalAuth2Fhir"					
 * title = "eHN Recipient to this guide Map"					
 * status = #draft					

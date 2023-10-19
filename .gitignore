@@ -32,3 +32,5 @@ src-models/~$eulab-model-maps.xlsm
 .gitignore
 input/fsh/examples/actor/test.fsh-bak
 .gitignore
+FHIR-eu-laboratory.xml
+FHIR-laboratory.xml

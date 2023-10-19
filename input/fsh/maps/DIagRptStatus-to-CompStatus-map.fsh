@@ -4,7 +4,7 @@
 Instance: ConceptMap-eu-diagRptStatus2CompStatus
 InstanceOf: ConceptMap
 Usage: #definition
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"
+
 * name = "ConceptMapDiagRptStatus2CompStatus"
 * title = "DiagnosticReport to Composition status"
 * status = #draft

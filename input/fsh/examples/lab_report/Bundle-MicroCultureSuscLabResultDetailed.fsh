@@ -79,8 +79,8 @@ Usage: #inline
 * performer[+].display = "MUDr. Aleš Procházka"
 * specimen = Reference(Specimen/bab0016e-1800-4e54-b595-72bd9041ffbc)
 * result[+] = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
-* result[+] = Reference(Observation/8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture
-* result[+] = Reference(Observation/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture
+* result[+] = Reference(Inline-Observation-aerobic-culture) // Inline-Observation-aerobic-culture
+* result[+] = Reference(Inline-Observation-anaerobic-culture) // Inline-Observation-anaerobic-culture
 
 Instance: Inline-Composition-micro
 InstanceOf: CompositionLabReportEu
@@ -101,8 +101,8 @@ Usage: #inline
 * confidentiality = #N
 * attester[+].mode = #legal
 * attester[=].time = "2020-12-27T14:30:00+01:00"
-* attester[=].party = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
-* custodian = Reference(Organization/1e139f41-4d0f-43dd-ad5a-98003c520349)
+* attester[=].party = Reference(Inline-Organization-micro)
+* custodian = Reference(Inline-Organization-micro)
 * section[lab-subsections].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
 * section[lab-subsections].code = $loinc#18725-2 "Microbiology studies (set)"
 * section[lab-subsections].section[+].code.text = "Gram Stain"
@@ -110,10 +110,10 @@ Usage: #inline
 * section[lab-subsections].section[=].entry = Reference(Observation/40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
 * section[lab-subsections].section[+].code.text = "Aerobic Culture"
 * section[lab-subsections].section[=].title = "Aerobic Culture" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(Observation/8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture
+* section[lab-subsections].section[=].entry = Reference(Inline-Observation-aerobic-culture) // Inline-Observation-aerobic-culture Inline-Observation-aerobic-culture
 * section[lab-subsections].section[+].code.text = "Anaerobic Culture"
 * section[lab-subsections].section[=].title = "Anaerobic Culture" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(Observation/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture
+* section[lab-subsections].section[=].entry = Reference(Inline-Observation-anaerobic-culture) // Inline-Observation-anaerobic-culture Inline-Observation-anaerobic-culture
 
 Instance: Inline-Patient-micro
 InstanceOf: Patient

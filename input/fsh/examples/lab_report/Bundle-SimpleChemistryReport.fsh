@@ -133,7 +133,7 @@ Usage: #inline
 
 
 Instance: Inline-Patient-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8
-InstanceOf: PatientEu
+InstanceOf: PatientEuLab
 Usage: #inline
 * id = "de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"
 * identifier[+].type = $v2-0203#NIIP

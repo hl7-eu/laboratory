@@ -42,8 +42,8 @@ Severity:    #warning */
 RuleSet: ReportSubjectRule
 * subject 1..
 * subject /* obeys labRpt-subject */
-// * subject only Reference (PatientEu or Patient or Group or Location or Device)
-* subject only Reference (PatientEu or PatientAnimalEu or Group or Location or Device)
+// * subject only Reference (PatientEuLab or Patient or Group or Location or Device)
+* subject only Reference (PatientEuLab or PatientAnimalEu or Group or Location or Device)
   * ^short = "Who and/or what this report is about"
   * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
   * ^comment = "DiagnosticReport and Composition SHALL have the same subject"

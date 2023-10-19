@@ -386,7 +386,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-10
-InstanceOf: ServiceRequest
+InstanceOf: ServiceRequestLabEu
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.9"

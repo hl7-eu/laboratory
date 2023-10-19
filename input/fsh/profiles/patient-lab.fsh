@@ -1,4 +1,4 @@
-Profile: PatientEu
+Profile: PatientEuLab
 Parent: Patient
 Id: Patient-eu-lab
 Title:    "Patient: Person"

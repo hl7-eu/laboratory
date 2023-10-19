@@ -1,7 +1,7 @@
 Instance: Specimen-animal-example
 InstanceOf: SpecimenEu
 Usage: #example
-* contained = Patient-animal-example
+/* * contained = Patient-animal-example */
 * status = #available
 * type = $sct#119297000	"Blood specimen"
 * subject = Reference(Patient-animal-example)
@@ -9,5 +9,5 @@ Usage: #example
 
 Instance: Patient-animal-example
 InstanceOf: PatientAnimalEu
-Usage: #inline
+Usage: #example
 * extension[$patient-animal].extension[species].valueCodeableConcept = $sct#448169003 "Domestic cat"

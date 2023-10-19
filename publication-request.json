@@ -1,0 +1,14 @@
+{
+  "package-id" : "hl7.fhir.eu.laboratory",
+  "version" : "0.1.0-ballot",
+  "path" : "http://hl7.eu/fhir/laboratory/0.1.0-ballot",
+  "status" : "ballot",
+  "sequence" : "STU 1",
+  "first": true,
+  "mode": "milestone",
+  "ci-build": "https://build.fhir.org/ig/hl7-eu/laboratory",
+  "desc" : "This is the version released for teh STU 1 ballot",
+  "title" : "HL7 Europe Laboratory Report",
+  "category" : "Laboratory Report",
+  "introduction" : "This guide defines a set of common rules to be applied to HL7 FHIR to define how to represent a Laboratory Report in the European Context. It coveres laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains requiring specialised reporting structure like histopathology or medical genetics."
+}

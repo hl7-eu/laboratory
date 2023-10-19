@@ -16,15 +16,15 @@ RuleSet: ObservationResultsEu
 * code only $CodeableConcept-uv-ips
 // * code MS
 * subject 1..
-// * subject only Reference(Patient or PatientEu or Group or Device or Location)
-* subject only Reference(PatientAnimalEu or PatientEu or Group or Device or Location)
+// * subject only Reference(Patient or PatientEuLab or Group or Device or Location)
+* subject only Reference(PatientAnimalEu or PatientEuLab or Group or Device or Location)
 * subject.reference 1..
 * effective[x] 1..
 * effective[x] only dateTime or Period
 * effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
-* performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientEu or RelatedPerson)
+* performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientEuLab or RelatedPerson)
 // * value[x] MS
 // removed circular reference
 // * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)

@@ -4,7 +4,7 @@
 Instance: validator2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+					
 * name = "Validator2Fhir"					
 * title = "eHN Validator to this guide Map"					
 * status = #draft					

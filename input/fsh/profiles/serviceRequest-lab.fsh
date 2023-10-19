@@ -27,7 +27,7 @@ Description: """This profile defines how to represent an laboratory orders using
 * code 1..
 * code from LabOrderCodesEuVs (preferred)
 * subject 1..
-* subject only Reference (PatientEu or PatientAnimalEu or Group or Location or Device)
+* subject only Reference (PatientEuLab or PatientAnimalEu or Group or Location or Device)
 * requisition ^short = "Composite Request ID."
 * specimen	only Reference (SpecimenEu)
   * ^short = "Must be present, if order is request for test" // Check....
