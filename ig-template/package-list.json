@@ -1,0 +1,15 @@
+{
+  "package-id" : "hl7.fhir.eu.template",
+  "title" : "HL7 Europe FHIR IG template",
+  "canonical" : "http://hl7.eu/fhir/laboratory",
+  "introduction" : "This is the template for FHIR Implementation Guides published by HL7 Europe.",
+  "list" : [
+    {
+      "version" : "current",
+      "desc" : "Continuous Integration Build (latest in version control)",
+      "path" : "http://build.fhir.org/hl7-eu/hl7-fhir-eu-template",
+      "status" : "ci-build",
+      "current" : true
+    }
+  ]
+}
