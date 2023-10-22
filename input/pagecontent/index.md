@@ -15,43 +15,33 @@
 </div>
 
 
-### Laboratory domain
-Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients. It is important that laboratories produce high quality test results as they often are the basis for clinical decision making. Proper quality management is therefore essential.
+### The laboratory domain
+Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients. 
+The availability of high quality test results, and the capacity of sharing them, is therefore essential being often the basis for clinical decision making.
+For this reason the Laboratory has been selceted as one of the priority domains for the European EHR eXchange Format (E-EHRxF) 
 
 ### Scope
 
-Define a set of common rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context.
+Define a set of common rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the Eruopean [eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
 
-This IG coveres laboratory result reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains requiring specialised reporting structure like histopathology or medical genetics.
+This IG covers laboratory result reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains requiring specialised reporting structure like histopathology or medical genetics.
 
-This IG covers test results performed by clinical laboratories on:
-- Human specimens (from human subject)
-- Non-human specimens such as non-human material or non-human living subject
-- Non-human specimens paired with a human subject
-
-
-<blockquote class="stu-note">
-<p>
-    The specification herewith documented is work in progress.
-    No liability can be inferred from the use or misuse of this specification, or its consequences.
-</p>
-</blockquote>
+This guide is not limited to test results performed by clinical laboratories on Human specimens (from human subject), but it considers also results on non-human materials or living subjects; or non-human specimens paired with a human subject. Derived guides may restrict the scope as needed (e.g. limiting the scope to well-identified human beings)
 
 ### Purpose
-The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the future European EHR eXchange Format.
+The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
 
 This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and project.
 
-The aspiration of this guide is that to be used as basis for European National Guides, the Euroepan EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
+The aspiration of this guide is that of being used as basis for European National Guides, the Euroepan EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
 
 ### Background
 
-The project background and the reasons for the design choiches (FHIR document including also the DiagnosticReport resource) are described in the background page.
+The project background and the reasons for the design choiches (a FHIR document including the DiagnosticReport resource) are described in the [Design choices](design-choice.html) page.
 
 ### Dependencies
 
 {% include dependency-table.xhtml %}
-
 
 ### Cross Version Analysis
 
