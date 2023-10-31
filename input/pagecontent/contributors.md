@@ -19,7 +19,7 @@ The following picture provide an overview of the origin of the participants.
 | Author |  Alexander Henket   | NICTIZ, HL7 NL |
 | Author |  Robert Hausam   | Hausam Consulting (US) |
 | Author |  Daniel Karlsson | E-hälsomyndigheten, HL7 SE |
-| Author |  Oliver Egger  |  Aegis, HL7 CH |
+| Author |  Oliver Egger  |  ahdis, HL7 CH |
 | Author |  Gabriel Kleinoscheg | ELGA, HL7 AT |
 | Author |  Declan Kieran | NHS England |
 | Author |  Manel Domingo | MoH Spain |
@@ -30,7 +30,7 @@ The following picture provide an overview of the origin of the participants.
 | Author |  Karolina Buckow | DE |
 | Author |  Kerli Linna | EE |
 | Author |  Eugenia Rinaldi | DE |
-| Contributor |  Michaela Ziegler | Aegis, HL7 CH |
+| Contributor |  Michaela Ziegler | ahdis, HL7 CH |
 | Contributor |  Rasa Visinskiene | MyHealth@EU  Solution Providers |
 | Contributor |  Mathias Ghys | MyHealth@EU  Solution Providers |
 | Contributor |  João Almeida  |  HL7 PT/Europe |
