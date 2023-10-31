@@ -154,7 +154,7 @@ Usage: #inline
 * address[=].type = #physical
 * address[=].text = "Malé náměstí 13a, 150 00, Praha 5"
 * address[=].line[+] = "Malé náměstí 13a"
-* address[=].line[=].extension[Streetname].valueString = "Malé náměstí"
+* address[=].line[=].extension[streetName].valueString = "Malé náměstí"
 * address[=].line[=].extension[Housenumber].valueString = "13a"
 * address[=].city = "Praha 5"
 * address[=].postalCode = "150 00"
@@ -189,7 +189,7 @@ Usage: #inline
 * contact[=].address[=].type = #physical
 * contact[=].address[=].text = "Horná ulica 18, 123 45, Trenčín, Slovensko"
 * contact[=].address[=].line[+] = "Horná ulica 18"
-* contact[=].address[=].line[=].extension[Streetname].valueString = "Horná ulica"
+* contact[=].address[=].line[=].extension[streetName].valueString = "Horná ulica"
 * contact[=].address[=].line[=].extension[Housenumber].valueString = "18"
 * contact[=].address[=].city = "Trenčín"
 * contact[=].address[=].postalCode = "123 45"
@@ -462,7 +462,7 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * valueQuantity.code = $ucum#umol/L
 * valueQuantity.unit = "umol/L"
-* valueQuantity.extension[Uncertainty].valueDecimal = 0.1
+* valueQuantity.extension[uncertainty].valueDecimal = 0.1
 * interpretation = $obs-interpretation#HH "Critical high"
 * specimen = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)
 * referenceRange.low.value = 136
