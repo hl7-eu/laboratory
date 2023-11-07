@@ -30,7 +30,7 @@ Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-Particip
 Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-
+Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
 // --- SID
 Alias: $uri = urn:ietf:rfc:3986
 Alias: $oid = urn:ietf:rfc:1155

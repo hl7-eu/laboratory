@@ -21,15 +21,17 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
 
-//=== COMMENTED UNTIL https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/Issue.20with.20Specimen.2Ecollection.2Edevice.20R5.20extension IS NOT RESOLVED
-
 /*
 * collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1
 * collection.extension[SpecimenCollectionDeviceR5]
 */
 
 * collection.bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
+  * extension contains BodyLocationQualifier named locationQualifier 0..*
+  * extension[locationQualifier].valueCodeableConcept from MorphologicAbnormalityVS (preferred)
 
+  * extension contains LateralityQualifier named locationLaterality 0..*
+  * extension[locationLaterality].valueCodeableConcept from LateralityQualifierVS (preferred)
 
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
 * container.type from LabSpecimenContainerEu (preferred)

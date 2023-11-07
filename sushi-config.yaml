@@ -89,6 +89,8 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
     - http://example.org/lab-codes
+    - http://hl7.eu/fhir/StructureDefinition/body-location-qualifier
+    - http://hl7.eu/fhir/StructureDefinition/laterality-qualifier
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:

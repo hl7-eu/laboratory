@@ -4,7 +4,7 @@
 Instance: specimen2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-					
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "Specimen2Fhir"					
 * title = "eHN Specimen to this guide Map"					
 * status = #draft					
@@ -46,9 +46,15 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
+* group[=].element[+].code = #SpecimenLab.anatomicLocation					
+* group[=].element[=].display = "A.4.5 Anatomic location"					
+* group[=].element[=].target.code = #Specimen.collection.bodySite.extension:locationLaterality					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+					
 * group[=].element[+].code = #SpecimenLab.morphology					
 * group[=].element[=].display = "A.4.6 Morphology"					
-* group[=].element[=].target.code = #Specimen.extension:SpecimenFeatureTypeR5					
+* group[=].element[=].target.code = #Specimen.collection.bodySite.extension:locationQualifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
@@ -63,7 +69,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Specimen.collection.method					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter)"					
+* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter) "					
 * group[=].element[+].code = #SpecimenLab.collectionMethod					
 * group[=].element[=].display = "A.4.8 Collection procedure/method"					
 * group[=].element[=].target.code = #Specimen.collection.method					
@@ -76,6 +82,8 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
+//---END					
+//---END					
 //---END					
 //---END					
 //---END					
