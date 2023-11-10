@@ -16,8 +16,8 @@ It is RECOMMENDED to give these elements seperately."""
 * line.extension ^definition = "It is RECOMMENDED to use these extensions to define address elements."
 * line.extension contains
     $iso21090-ADXP-streetName named streetName 0..* and
-    $iso21090-ADXP-houseNumber named Housenumber 0..* and
-    $iso21090-ADXP-postBox named Postbox 0..*
+    $iso21090-ADXP-houseNumber named houseNumber 0..* and
+    $iso21090-ADXP-postBox named postBox 0..*
 * line.extension[streetName].value[x] only string
 * line.extension[houseNumber].value[x] only string
 * line.extension[postBox].value[x] only string
