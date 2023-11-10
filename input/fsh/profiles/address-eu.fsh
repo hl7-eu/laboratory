@@ -19,6 +19,6 @@ It is RECOMMENDED to give these elements seperately."""
     $iso21090-ADXP-houseNumber named Housenumber 0..* and
     $iso21090-ADXP-postBox named Postbox 0..*
 * line.extension[streetName].value[x] only string
-* line.extension[Housenumber].value[x] only string
-* line.extension[Postbox].value[x] only string
+* line.extension[houseNumber].value[x] only string
+* line.extension[postBox].value[x] only string
 * country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED."
