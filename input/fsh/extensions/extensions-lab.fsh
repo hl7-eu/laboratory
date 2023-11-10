@@ -42,7 +42,7 @@ Description: "This extension applies to the Composition resource and is used to 
 * value[x] only Reference (Practitioner or Device or Patient or RelatedPerson or PractitionerRole or Organization)	
 
 
-// ------------------------------------
+/* // ------------------------------------
 
 Extension: BodyLocationQualifier
 Id: body-location-qualifier
@@ -73,4 +73,4 @@ Inspired to the mCode extension."""
 * ^url = "http://hl7.eu/fhir/StructureDefinition/laterality-qualifier"
 * value[x] only CodeableConcept
 * value[x] from LateralityQualifierVS (example)
-* value[x] 1..1
+* value[x] 1..1 */
