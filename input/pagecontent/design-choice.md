@@ -6,7 +6,7 @@
 
 There are two ways that could be considered for representing a Laboratory report in HL7 FHIR:
 * by using the DiagnosticReport resource; or 
-* by treating the report as any other clinical document, i.e. theusing a HL7 FHIR document Bundle.
+* by treating the report as any other clinical document, i.e. using a HL7 FHIR document Bundle.
 
 
 Considering that in many European countries:

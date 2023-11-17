@@ -37,7 +37,16 @@ The aspiration of this guide is that of being used as basis for European Nationa
 
 ### Background
 
-The project background and the reasons for the design choiches (a FHIR document including the DiagnosticReport resource) are described in the [Design choices](design-choice.html) page.
+The project background is described in the [background](background.html) page.
+
+### Design choiches
+
+The solution adopted by this guide tries to balance the requirement of representing a Laboratory Report as a legally signed document (i.e. as a FHIR document), with that of enabling their representation as DiagnosticReport. All this, taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport <-> Composition relationship is directed from the DiagnosticReport to the Composition resource.
+This is done by:
+- using a HL7 FHIR document representation, but requiring the document Bundle to always include the DiagnosticReport; and
+- pre-adopting R5 rules for the inclusion of entries in the Document Bundle.
+
+More details in the [Design choices](design-choice.html) page.
 
 ### Dependencies
 
