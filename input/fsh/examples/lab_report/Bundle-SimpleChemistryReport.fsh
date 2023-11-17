@@ -66,7 +66,7 @@ Usage: #inline
   * valueReference = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
     * display = "Nuovo Ospedale S.Agostino (MO)"
 
-* extension[basedOn-order-or-requisition].valueReference = Reference(Inline-ServiceRequest-for-IT-CDA2FHIR)
+* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
 
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #cs-CZ
@@ -121,15 +121,15 @@ Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * specimen[+] = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // Urine specimen
-* result[+] = Reference(Observation/763f7902-8103-4d10-8bd1-546a726d43ee)
+* result[+] = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 * specimen[+] = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)   // Blood specimen
-* result[+] = Reference(Observation/18bd102e-0abf-42b0-b4e6-97e47fd385eb)
+* result[+] = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 
 Instance: Inline-Patient-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8

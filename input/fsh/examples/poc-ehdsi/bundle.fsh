@@ -41,8 +41,8 @@ Usage: #inline
 * confidentiality = #N
 * attester[+].mode = #legal
 * attester[=].time = "2020-12-27T14:30:00+01:00"
-* attester[=].party = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
-* custodian = Reference(Organization/608b5309-2609-4d03-b6da-c758bfa1de70)
+* attester[=].party = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
+* custodian = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Blood group lab result report"
 * section[=].code = $loinc#26436-6 "Laboratory studies (set)"
 * section[=].code.text = "LABORATORY STUDIES"
@@ -53,7 +53,7 @@ Instance: Inline-Diagnostic-Report-laboratory-results-report-poc
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * code = $loinc#11502-2 "Laboratory report"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/80709186-426d-4cdf-abba-034c4f80acb4)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -89,7 +89,7 @@ Usage: #inline
 //* category[+] = $v2-0074#MB "Blood bank studies"
 * code = $loinc#883-9 "ABO group [Type] in Blood"
 * code.text = "Blood Group"
-* subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
+* subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
 * effectiveDateTime = "2023-03-09T13:35:00+01:00"
 * performer[+].display = "Dr. Patrick Dempsey"
 * valueCodeableConcept = $sct#112144000 "Blood group A (finding)"
@@ -111,8 +111,8 @@ Usage: #inline
 * status = #active
 * intent = #order
 * code = $sct#108252007 "Laboratory procedure"
-* subject = Reference(Patient/1d252ca0-803c-464c-87d5-f12f73c12eda)
-* specimen = Reference(Specimen/cadaf2e3-b707-4207-9b63-5c29ffece051)
+* subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
+* specimen = Reference(urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051)
 
 Instance: Inline-Organization-laboratory-results-report-poc
 InstanceOf: OrganizationUvIps

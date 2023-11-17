@@ -119,7 +119,7 @@ Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
 * id = "b8c9663d-2c2b-4a5a-99ea-17eae127fc60"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/26032a57-083a-4ddf-b019-e566ae02f740)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
