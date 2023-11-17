@@ -46,7 +46,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 
 Profile: SpecimenAdditiveSubstance
 Parent: Substance
-Id: specimen-additive-substance-eu-lab
+Id: substance-additive-eu-lab
 Title: "Substance: Specimen Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)
