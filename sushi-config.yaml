@@ -27,6 +27,8 @@ copyright: >-
 dependencies:
   hl7.fhir.uv.ips: current
   hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.eu.extensions.r4: dev
+
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode

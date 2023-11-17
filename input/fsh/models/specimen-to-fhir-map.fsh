@@ -69,7 +69,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Specimen.collection.method					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter) "					
+* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter)"					
 * group[=].element[+].code = #SpecimenLab.collectionMethod					
 * group[=].element[=].display = "A.4.8 Collection procedure/method"					
 * group[=].element[=].target.code = #Specimen.collection.method					
