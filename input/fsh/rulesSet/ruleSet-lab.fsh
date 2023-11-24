@@ -98,9 +98,11 @@ RuleSet: ReportCategoryRule
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
+* category[studyType] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
+* category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
 
 RuleSet: SectionComRules (short, def, code)
 

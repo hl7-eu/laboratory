@@ -26,9 +26,14 @@ This observation may represent the result of a simple laboratory test such as he
 * category contains laboratory 1..1
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category contains studyType 0..*
+* category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
+* category[studyType] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 * category contains specialty 0..*
+* category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
+* category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
+
 * code
 //* code from $results-laboratory-observations-uv-ips (preferred)
 * code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
