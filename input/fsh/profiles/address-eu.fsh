@@ -22,3 +22,5 @@ It is RECOMMENDED to give these elements seperately."""
 * line.extension[houseNumber].value[x] only string
 * line.extension[postBox].value[x] only string
 * country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED."
+  * extension contains $iso21090-SC-coding named countryCode
+  * extension[countryCode].valueCoding from $iso3166-1-2 (preferred)
