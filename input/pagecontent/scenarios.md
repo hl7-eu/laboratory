@@ -2,11 +2,11 @@
 
 This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statues should be set**.
 
-These scenarios, in scope for this guide, relates to tests performed and reported by a clinical laboratory in response to test orders.
+These scenarios, in scope for this guide, relate to tests performed and reported by a clinical laboratory in fullfillment of test orders.
 
 More details on statuses and their relationships are provided in [Laboratory result report status](status-mgmt.html).
 
-It is not in scope of this version of this guides specifying the actor-to-actor interactions for supporting such scenarios. (e.g.  how to communicate that a report has been sent in error).
+It is not in scope of this version of this guides to specify the actor-to-actor interactions for supporting such scenarios. (e.g.  how to communicate that a report has been sent in error).
 
 #### Complete Laboratory Report
 
