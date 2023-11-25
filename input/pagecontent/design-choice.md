@@ -39,9 +39,9 @@ The following figure graphically summarizes the described design approach
 <p></p>
 </div>
 
-#### Pre-adoption of R5 rules for Document bundles
+#### Pre-adoption of R5 Rules for Document Bundles
 
-To support the described approach, this guide **pre-adopt the R5 rules for the inclusion of the resources in a document Bundle**:
+To support the described approach, this guide **pre-adopts the R5 rules for the inclusion of the resources in a document Bundle**:
 
 _"The document bundle SHALL include only: <..>
 The supporting information: Any resources that are part of the graph of resources that reference or are referenced from the composition set, either directly or indirectly (e.g. recursively in a chain)"_
@@ -51,7 +51,7 @@ in opposition to the R4 rules requiring that, with the exception of the Provenan
 This choice has been made considering that:
 * There was a good consensus in the HL7 FHIR community and in this team that the new rules are the most appropriate for a document bundle.
 * In R5 the link between the DiagnosticReport and the Composition is realized with a Reference from the DiagnosticReport. The team decided to follow the same design pattern to facilitate the R4 to R5 transition.
-* Adding a reference from the Composition to the DiagnosticReport would create an unwished circular reference.
+* Adding a reference from the Composition to the DiagnosticReport would create an undesirable circular reference.
 
 
 
