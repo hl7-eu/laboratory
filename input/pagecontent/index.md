@@ -18,7 +18,7 @@
 ### The laboratory domain
 Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients. 
 The availability of high quality test results, and the capacity of sharing them, is therefore essential being often the basis for clinical decision making.
-For this reason the Laboratory has been selceted as one of the priority domains for the European EHR eXchange Format (E-EHRxF) 
+For this reason the Laboratory has been selected as one of the priority domains for the European EHR eXchange Format (E-EHRxF).
 
 ### Scope
 
