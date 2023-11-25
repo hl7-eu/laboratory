@@ -2,7 +2,7 @@
 ### Overview 
 
 The European eHealth Network "GUIDELINE on the electronic exchange of health data under 
-Cross-Border Directive 2011/24/EU Laboratory Results" - Release 1.1 is addressed to the Member States of the European Union and apply to the implementation exchange of interoperable laboratory test result report cross-border exchange in order to support safe and efficient provisioning of care services in another Member state. 
+Cross-Border Directive 2011/24/EU Laboratory Results" - Release 1.1 is addressed to the Member States of the European Union and applies to the implementation exchange of interoperable laboratory test result report cross-border exchange in order to support safe and efficient provisioning of care services in another member state. 
 
 It could also serve as a guiding principle for the national development and implementation of Laboratory Result Reports.
 
