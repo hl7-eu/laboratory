@@ -4,7 +4,7 @@
 Instance: result2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-					
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "LabRptResult2FHIR"					
 * title = "eHN Result to this guide Map"					
 * status = #draft					
@@ -177,7 +177,7 @@ If the person responsible for validation:  performer.extension:performerFunction
 * group[=].element[=].target.code = #Observation.performer.qualification					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "performer ofType PractictionerRole"					
+* group[=].element[=].target.comment = "performer ofType PractitionerRole"					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
 * group[=].element[=].display = "A.5.2.14 Accreditation status"					
 * group[=].element[=].target.code = #Observation.performer.organization.qualification					

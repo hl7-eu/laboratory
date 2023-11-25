@@ -4,7 +4,7 @@
 Instance: legalAuth2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-					
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "LegalAuth2Fhir"					
 * title = "eHN Recipient to this guide Map"					
 * status = #draft					
@@ -28,19 +28,19 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.attester.party.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(Practictioner).name"					
+* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(Practitioner).name"					
 * group[=].element[+].code = #LegalAuthenticator.name					
 * group[=].element[=].display = "A.1.6.2 Legal authenticator name"					
-* group[=].element[=].target.code = #Composition.attester.party.practictioner.name					
+* group[=].element[=].target.code = #Composition.attester.party.Practitioner.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(PractictionerRole).practictioner.resolve().name"					
+* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name"					
 * group[=].element[+].code = #LegalAuthenticator.organization					
 * group[=].element[=].display = "A.1.6.3 Legal authenticator organization"					
 * group[=].element[=].target.code = #Composition.attester.party.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(PractictionerRole).organization.resolve()"					
+* group[=].element[=].target.comment = "attester.where(mode='legal').party.resolve().ofType(PractitionerRole).organization.resolve()"					
 * group[=].element[+].code = #LegalAuthenticator.dateTime					
 * group[=].element[=].display = "A.1.6.4 Authentication date and time"					
 * group[=].element[=].target.code = #Composition.attester.time					
