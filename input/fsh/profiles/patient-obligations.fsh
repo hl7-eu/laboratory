@@ -13,7 +13,7 @@ RuleSet: ObligationSet2
 * insert ObligationActorAndCode($creator, #can-populate)
 
 Profile: PatientEuObligations
-Parent: Patient
+Parent: PatientEuLab
 Id: Patient-obl-eu-lab
 Title:    "Patient: Obligations"
 Description: "This profile defines obligations for an human Patient in FHIR for the purpose of this guide."
