@@ -54,7 +54,7 @@ The following figure shows the "goal" relationships between this guide and those
 <p></p>
 </div>
 
-### Towards a coherent ecosystem of Lab Report IGs
+### Towards a Coherent Ecosystem of Lab Report IGs
 
 The proposed approach aims to create a coherent - **not competing** - ecosystem of FHIR IGs for the Laboratory Report, each of them maintaining their governance rules and serving their specific scopes and jurisdictional requirements **without losing cross-consistency**.
 
