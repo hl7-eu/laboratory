@@ -29,7 +29,7 @@ With the future introduction of the [proposed EDSH regulation](https://health.ec
 
 Note 1: this "common format" is also known as the European EHR exchange format (E-EHRxF)
 
-### Why this guide and why now
+### Why this Guide and Why Now
 
 As highlighted in the previous figure, the EU driven initiatives are and will be developed in parallel with other National, already on-going, activities. Even Even though the European Commission funded the [X-eHealth project](https://www.x-ehealth.eu/) for working on a proposal for the E-EHRxF, and other EU initiatives are planned or ongoing (XpanDH, JA-09, Xshare..), the risk of potentially not aligned national choices is not negligeable.
 
