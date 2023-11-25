@@ -2,7 +2,7 @@
 
 ### Design Choices
 
-#### Laboratory Report as HL7 FHIR document
+#### Laboratory Report as HL7 FHIR Document
 
 There are two ways that could be considered for representing a Laboratory report in HL7 FHIR:
 * by using the DiagnosticReport resource; or 
@@ -16,8 +16,8 @@ Considering that in many European countries:
 
 The team agreed to adopt the **document representation for the Laboratory Report**.
 This in fact:
-* preserve the existing document-based paradigm, enabling for the REST one
-* help the transition from the CDA-based solutions, by facilitating the reuse of the existing exchange infrastructures and of the on-development mapping artifacts used for the CDA to FHIR transformation
+* preserves the existingdocument-based paradigm, enabling for the REST one
+* helps with the transition from the CDA-based solutions, by facilitating the reuse of the existing exchange infrastructures and of the on-development mapping artifacts used for the CDA to FHIR transformation
 
 
 #### Support for DiagnoticReport
