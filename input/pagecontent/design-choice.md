@@ -20,7 +20,7 @@ This in fact:
 * helps with the transition from the CDA-based solutions, by facilitating the reuse of the existing exchange infrastructures and of the on-development mapping artifacts used for the CDA to FHIR transformation
 
 
-#### Support for DiagnoticReport
+#### Support for DiagnosticReport
 
 The team however recognized that typical HL7 FHIR consumers may expect to get Laboratory Reports by searching per DiagnosticReport.
 

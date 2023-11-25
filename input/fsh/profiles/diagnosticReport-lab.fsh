@@ -13,7 +13,7 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 
 * extension[DiagnosticReportCompositionR5]
   * ^short = "Associated Lab Report Composition"
-  * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
+  * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
   *  valueReference 1..1
   *  valueReference only Reference(CompositionLabReportEu)
 
