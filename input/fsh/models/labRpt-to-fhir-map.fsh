@@ -4,7 +4,7 @@
 Instance: labRpt2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-					
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "LabRpt2FHIR"					
 * title = "eHN Lab Report to this guide Map"					
 * status = #draft					
@@ -37,9 +37,9 @@ Usage: #definition
 * group[=].element[=].target.comment = "basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"					
 * group[=].element[+].code = #LabReport.header.informationRecipient					
 * group[=].element[=].display = "A.1.4 Information recipient"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.code = #DiagnosticReport.extension:information-recipient					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #LabReport.header.author					
 * group[=].element[=].display = "A.1.5 Author"					
