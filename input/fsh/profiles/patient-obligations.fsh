@@ -33,5 +33,4 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * gender insert ObligationSet1
 * birthDate insert ObligationSet1
 * generalPractitioner insert ObligationSet2 //can-send
-* address insert ObligationSet1 
-* address insert ObligationSet1 
+* address insert ObligationSet1
