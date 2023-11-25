@@ -11,9 +11,9 @@
 
 ### Overview 
 
-Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors may, should or shall apply to the data elements specified by the profiles.
+Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.
 
-The current choice has been that of defining the obligation in StructureDefinitions distict form those used for defining the strcutural constraints.
+The current choice has been that of defining the obligation in StructureDefinitions distict from those used for defining the structural constraints.
 
 This page describes also the actors that have been defined for specifying the obligations.
 
