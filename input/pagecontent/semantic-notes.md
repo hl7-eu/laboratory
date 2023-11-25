@@ -26,7 +26,7 @@ If the report has been withdrawn following a previous final release, the report 
 
 Laboratory result report is implemented using DiagnosticReport resource in FHIR. It includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, formatted representation of diagnostic reports and status information.
 
-Diagnostic report status value set comprises from following status codes:
+Diagnostic report status value set is comprised from following status codes (https://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html)
 
 |Lvl|Code|Display|Definition|
 |:---:|----|-------|----------|
