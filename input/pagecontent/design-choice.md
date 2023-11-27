@@ -22,7 +22,7 @@ This in fact:
 
 #### Support for DiagnosticReport
 
-The team however recognized that typical HL7 FHIR consumers may expect to get Laboratory Reports by searching per DiagnosticReport.
+The team however recognized that typical HL7 FHIR consumers may expect to get Laboratory Reports by searching per DiagnosticReport, as that resource provides the persistent connection between the referenced resources in all situations, not just when contained in a bundle of type 'document'.
 
 The team looked therefore for a solution balancing the two approaches (FHIR document and DiagnosticReport); taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport Vs Composition relationship is directed from the DiagnosticReport to the Composition resource.
 
