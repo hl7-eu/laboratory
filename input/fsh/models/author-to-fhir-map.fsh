@@ -29,19 +29,32 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.author.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "author.ofType(Practitioner).name"					
+* group[=].element[=].target.comment = "Human Author and author.ofType(Practitioner)"					
 * group[=].element[+].code = #Author.name					
 * group[=].element[=].display = "A.1.5.2 Author name"					
 * group[=].element[=].target.code = #Composition.author.Practitioner.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "author.ofType(PractitionerRole).Practitioner.resolve().name"					
+* group[=].element[=].target.comment = "Human Author and  author.ofType(PractitionerRole)"					
+* group[=].element[+].code = #Author.name					
+* group[=].element[=].display = "A.1.5.2 Author name"					
+* group[=].element[=].target.code = #Composition.device.name					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Device Author, author.ofType(Device)"					
 * group[=].element[+].code = #Author.organization					
 * group[=].element[=].display = "A.1.5.3 Author organization"					
 * group[=].element[=].target.code = #Composition.author.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "author.ofType(PractitionerRole).organization.resolve()"					
+* group[=].element[=].target.comment = "Human Author and author.ofType(PractitionerRole)"					
+* group[=].element[+].code = #Author.organization					
+* group[=].element[=].display = "A.1.5.3 Author organization"					
+* group[=].element[=].target.code = #Composition.author.owner					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Device Author, author.ofType(Device)"					
+//---END					
 //---END					
 //---END					
 //---END					
@@ -50,76 +63,55 @@ Usage: #definition
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Author"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"					
 					
-* group[=].element[+].code = #Author.$this					
-* group[=].element[=].display = "A.1.5 Author"					
-* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the interpreter"					
 * group[=].element[+].code = #Author.identifier					
 * group[=].element[=].display = "A.1.5.1 Author identifier"					
 * group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If the author is the interpreter"					
-* group[=].element[+].code = #Author.name					
-* group[=].element[=].display = "A.1.5.2 Author name"					
-* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.name					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the interpreter: 
-resultsInterpreter.resolve().ofType(Practitioner).name"					
-* group[=].element[+].code = #Author.name					
-* group[=].element[=].display = "A.1.5.2 Author name"					
-* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.Practitioner.name					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the interpreter: resultsInterpreter.resolve().ofType(PractitionerRole).Practitioner.resolve().name"					
-* group[=].element[+].code = #Author.organization					
-* group[=].element[=].display = "A.1.5.3 Author organization"					
-* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.organization					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the interpreter: resultsInterpreter.resolve().ofType(PractitionerRole).organization.resolve()"					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-//---END					
-					
-					
-					
-* group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Author"					
-* group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"					
-					
-* group[=].element[+].code = #Author.$this					
-* group[=].element[=].display = "A.1.5 Author"					
-* group[=].element[=].target.code = #DiagnosticReport.performer					
+* group[=].element[+].code = #Author.identifier					
+* group[=].element[=].display = "A.1.5.1 Author identifier"					
+* group[=].element[=].target.code = #DiagnosticReport.performer.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If the author is the performer"					
 * group[=].element[+].code = #Author.name					
 * group[=].element[=].display = "A.1.5.2 Author name"					
+* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.name					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If the author is the interpreter and 
+resultsInterpreter.resolve().ofType(Practitioner)"					
+* group[=].element[+].code = #Author.name					
+* group[=].element[=].display = "A.1.5.2 Author name"					
+* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.Practitioner.name					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If the author is the interpreter and resultsInterpreter.resolve().ofType(PractitionerRole)"					
+* group[=].element[+].code = #Author.name					
+* group[=].element[=].display = "A.1.5.2 Author name"					
 * group[=].element[=].target.code = #DiagnosticReport.performer.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the performer: performer.resolve().ofType(Practitioner).name"					
+* group[=].element[=].target.comment = "If the author is the performer and performer.resolve().ofType(Practitioner)"					
 * group[=].element[+].code = #Author.name					
 * group[=].element[=].display = "A.1.5.2 Author name"					
 * group[=].element[=].target.code = #DiagnosticReport.performer.Practitioner.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "If the author is the performer: performer.resolve().ofType(PractitionerRole).Practitioner.resolve().name—"					
+* group[=].element[=].target.comment = "If the author is the performer and performer.resolve().ofType(PractitionerRole).Practitioner.resolve().name—"					
+* group[=].element[+].code = #Author.organization					
+* group[=].element[=].display = "A.1.5.3 Author organization"					
+* group[=].element[=].target.code = #DiagnosticReport.resultsInterpreter.organization					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "If the author is the interpreter and resultsInterpreter.resolve().ofType(PractitionerRole)"					
 * group[=].element[+].code = #Author.organization					
 * group[=].element[=].display = "A.1.5.3 Author organization"					
 * group[=].element[=].target.code = #DiagnosticReport.performer.organization					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "performer.resolve().ofType(PractitionerRole).organization.resolve()"					
-//---END					
-//---END					
-//---END					
+* group[=].element[=].target.comment = "If the author is the performer and performer.resolve().ofType(PractitionerRole)"					
 //---END					
 //---END					
 //---END					
