@@ -4,7 +4,7 @@
 Instance: payer2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-					
+// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
 * name = "Payer2Fhir"					
 * title = "eHN Payer to this guide Map"					
 * status = #draft					
@@ -19,55 +19,83 @@ Usage: #definition
 					
 * group[=].element[+].code = #Payer.insurance					
 * group[=].element[=].display = "A.1.3.1 Health insurance information"					
-* group[=].element[=].target.code = #insurance					
+* group[=].element[=].target.code = #ServiceRequest.insurance					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "insurance.ofType(Coverage)"					
+* group[=].element[+].code = #Payer.insurance.identifier					
+* group[=].element[=].display = "A.1.3.1.1 Health insurance code"					
+* group[=].element[=].target.code = #ServiceRequest.insurance					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "details in Group 2"					
+* group[=].element[+].code = #Payer.insurance.name					
+* group[=].element[=].display = "A.1.3.1.2 Health insurance name"					
+* group[=].element[=].target.code = #ServiceRequest.insurance					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "details in Group 2"					
+* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
+* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
+* group[=].element[=].target.code = #ServiceRequest.insurance					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "details in Group 2"					
+//---END					
+//---END					
+//---END					
+//---END					
+					
+					
+* group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Payer"					
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/Coverage"					
+					
+* group[=].element[+].code = #Payer.insurance					
+* group[=].element[=].display = "A.1.3.1 Health insurance information"					
+* group[=].element[=].target.code = #Coverage					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 					
 * group[=].element[+].code = #Payer.insurance.identifier					
 * group[=].element[=].display = "A.1.3.1.1 Health insurance code"					
-* group[=].element[=].target.code = #insurance.payor.identifier					
+* group[=].element[=].target.code = #Coverage.payor.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "payor.ofType(Organization).resolve().identifier"					
+* group[=].element[=].target.comment = "payor.ofType(Organization)"					
 * group[=].element[+].code = #Payer.insurance.name					
 * group[=].element[=].display = "A.1.3.1.2 Health insurance name"					
-* group[=].element[=].target.code = #insurance.payor.name					
+* group[=].element[=].target.code = #Coverage.payor.name					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "payor.ofType(Organization).resolve().name"					
+* group[=].element[=].target.comment = "payor.ofType(Organization)"					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.policyHolder.identifier					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #equivalent					
-					
-* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
-* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.beneficiary.identifier					
+* group[=].element[=].target.code = #Coverage.policyHolder.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.subscriberId					
+* group[=].element[=].target.code = #Coverage.beneficiary.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-* group[=].element[=].target.code = #insurance.subscriber.identifier					
+* group[=].element[=].target.code = #Coverage.subscriberId					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
+* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
+* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
+* group[=].element[=].target.code = #Coverage.subscriber.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
 //---END					
 //---END					
 //---END					
-					
-					
-					
-					
-					
-					
+//---END					
 					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Payer"					
@@ -93,24 +121,6 @@ Usage: #definition
 					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
-					
-* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
-* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
-					
-* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
-* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
-					
-* group[=].element[+].code = #Payer.insurance.subjectIdentifier					
-* group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
 * group[=].element[=].target.code = #Patient.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
@@ -118,134 +128,4 @@ Usage: #definition
 //---END					
 //---END					
 //---END					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+//---END					
