@@ -25,14 +25,18 @@ In this case:
 In such cases: 
 * the report status should be set to “preliminary” or “partial”. 
 
-####  Amended Laboratory Report
+####  Updated Laboratory Report
 
 * A **laboratory report, after being released as “final”, is modified** (edited or added to).
 * the report is complete and verified by an authorized person
 
 
 In this case:
-* The  report status should be set to “amended”, “corrected” or “appended”, depending on the situation.
+
+* The report status used will indicate what modificatins have occurred:
+  * Status set to “amended” when changes were made to patient demographics or other parts of the report, that don't affect the result value (with units, if applicable) or result interpretation
+  * Status set to “corrected” when changes are made to the the result value (with units, if applicable) or result interpretation
+  * Status set to “appended” when new results or interpretations are being added
 
 #### Cancelled Laboratory Report
 
