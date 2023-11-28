@@ -9,3 +9,7 @@ This is used to identify the species when a specimen is collected from an animal
 * insert SetFmmandStatusRule ( 1, draft )
 * extension contains $patient-animal named patient-animal 1..1
 * extension[patient-animal].extension[species]
+* telecom ..0 
+ * ^short = "Use contact.telecom"
+ * ^comment = "Animals do not have phones, their contacts do. Contact.telecom should be used."
+* address ..0 
