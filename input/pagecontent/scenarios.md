@@ -44,7 +44,7 @@ In this case:
 
 In such case:
 * the status value should be updated to “cancelled” and 
-* the specific details given - preferably as coded values in the TestResultvalue.CodedResult element.
+* the specific details given - preferably as coded values - in the Observation.dataAbsentReason element.
 * Additional information may be provided in the result comment element as well.
 
 
