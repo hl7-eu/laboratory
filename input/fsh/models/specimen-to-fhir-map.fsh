@@ -63,13 +63,8 @@ Usage: #definition
 * group[=].element[=].target.code = #Specimen.subject					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "When the device (e.g. the catheter) is what has been examinated"					
-* group[=].element[+].code = #SpecimenLab.sourceDevice					
-* group[=].element[=].display = "A.4.7 Source Device"					
-* group[=].element[=].target.code = #Specimen.collection.method					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter) "					
+* group[=].element[=].target.comment = "When the device (e.g. the catheter) is what has been examinated.
+If the device is meant instead as the mean used to collect the specimen (e.g blood collected from the catheter), then, this is represented by the collectionMethod attribute and mapped into the Specimen.collection.method"					
 * group[=].element[+].code = #SpecimenLab.collectionMethod					
 * group[=].element[=].display = "A.4.8 Collection procedure/method"					
 * group[=].element[=].target.code = #Specimen.collection.method					
@@ -86,14 +81,18 @@ Usage: #definition
 //---END					
 //---END					
 //---END					
-//---END					
-//---END					
 					
 					
 					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/bodyStructure-eu-lab"					
+					
+* group[=].element[+].code = #SpecimenLab.anatomicLocation					
+* group[=].element[=].display = "A.4.5 Anatomic location"					
+* group[=].element[=].target.code = #BodyStructure.location					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #SpecimenLab.anatomicLocation					
 * group[=].element[=].display = "A.4.5 Anatomic location"					
@@ -110,5 +109,6 @@ Usage: #definition
 //---END					
 //---END					
 //---END					
-//---END					
+					
+					
 					
