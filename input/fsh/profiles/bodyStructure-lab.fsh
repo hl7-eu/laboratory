@@ -1,7 +1,7 @@
 
 Profile: BodyStructureEuLab
 Parent: BodyStructure
-Id: body-structure-eu-lab
+Id: bodyStructure-eu-lab
 Title: "Body structure: Laboratory"
 Description: """This profile defines how to represent Body Structure in HL7 FHIR for the purpose of this guide."""
 * morphology from http://hl7.org/fhir/ValueSet/bodystructure-code (preferred)

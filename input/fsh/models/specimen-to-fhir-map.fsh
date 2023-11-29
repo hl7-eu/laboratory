@@ -48,16 +48,16 @@ Usage: #definition
 					
 * group[=].element[+].code = #SpecimenLab.anatomicLocation					
 * group[=].element[=].display = "A.4.5 Anatomic location"					
-* group[=].element[=].target.code = #Specimen.collection.bodySite.extension:locationLaterality					
+* group[=].element[=].target.code = #Specimen.collection.extension:bodySite					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "see Group 2 for details"					
 * group[=].element[+].code = #SpecimenLab.morphology					
 * group[=].element[=].display = "A.4.6 Morphology"					
-* group[=].element[=].target.code = #Specimen.collection.bodySite.extension:locationQualifier					
+* group[=].element[=].target.code = #Specimen.collection.extension:bodySite					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-					
+* group[=].element[=].target.comment = "see Group 2 for details"					
 * group[=].element[+].code = #SpecimenLab.sourceDevice					
 * group[=].element[=].display = "A.4.7 Source Device"					
 * group[=].element[=].target.code = #Specimen.subject					
@@ -69,7 +69,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Specimen.collection.method					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter)"					
+* group[=].element[=].target.comment = "When the device is the mean used to collect the specimen (e.g blood collected from the catheter) "					
 * group[=].element[+].code = #SpecimenLab.collectionMethod					
 * group[=].element[=].display = "A.4.8 Collection procedure/method"					
 * group[=].element[=].target.code = #Specimen.collection.method					
@@ -88,8 +88,27 @@ Usage: #definition
 //---END					
 //---END					
 //---END					
+					
+					
+					
+					
+* group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab"					
+* group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/bodyStructure-eu-lab"					
+					
+* group[=].element[+].code = #SpecimenLab.anatomicLocation					
+* group[=].element[=].display = "A.4.5 Anatomic location"					
+* group[=].element[=].target.code = #BodyStructure.extension:laterality					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "For details about laterality"					
+* group[=].element[+].code = #SpecimenLab.morphology					
+* group[=].element[=].display = "A.4.6 Morphology"					
+* group[=].element[=].target.code = #BodyStructure.morphology					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+					
 //---END					
 //---END					
 //---END					
 //---END					
-//---END					
+					
