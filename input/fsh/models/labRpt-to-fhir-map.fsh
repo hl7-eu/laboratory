@@ -230,7 +230,7 @@ attester.where(mode='professional').party.resolve()"
 * group[=].element[=].target.comment = "If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier"					
 * group[=].element[+].code = #LabReport.header.metadata.type					
 * group[=].element[=].display = "A.1.8.1 Document type"					
-* group[=].element[=].target.code = #Composition.code					
+* group[=].element[=].target.code = #Composition.type					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 					
