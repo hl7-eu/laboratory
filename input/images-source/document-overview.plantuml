@@ -1,0 +1,53 @@
+@startuml
+
+skinparam linetype ortho
+
+artifact "Bundle: Laboratory Report" as bundle
+artifact "Composition: Laboratory Report" as composition
+artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
+artifact "Observation Results: laboratory" as result
+artifact "Patient: Animal" as animalPatient
+artifact "Patient: Person" as humanPatient
+artifact "Practitioner: Laboratory Report" as Practitioner
+artifact "PractitionerRole: Laboratory Report" as PractitionerRole
+artifact "ServiceRequest: Laboratory Order" as ServiceRequest
+artifact "Specimen: Laboratory" as Specimen
+artifact "Substance: Specimen Additive Substance" as Substance
+
+url of bundle is  [[StructureDefinition-Bundle-eu-lab.html]]
+url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
+url of diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
+url of result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
+url of humanPatient [[StructureDefinition-Patient-eu-lab.html]]
+url of animalPatient [[StructureDefinition-Patient-animal-eu-lab.html]]
+url of Practitioner [[StructureDefinition-Practitioner-eu-lab.html]]
+url of PractitionerRole [[StructureDefinition-PractitionerRole-eu-lab.html]]
+url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
+url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
+url of Substance [[StructureDefinition-specimen-additive-substance-eu-lab.html]]
+
+
+bundle o-- composition
+bundle o-- diagnosticReport
+bundle o-- result
+bundle o-- humanPatient
+bundle o-- composition
+bundle o-- Practitioner
+bundle o-- PractitionerRole
+bundle o-- ServiceRequest
+bundle o-- Specimen
+bundle o-- Substance
+
+composition --> result
+composition --> animalPatient
+composition --> humanPatient
+composition --> Practitioner
+composition --> PractitionerRole
+composition --> ServiceRequest
+composition --> Specimen
+
+diagnosticReport --> composition
+Specimen --> Substance
+PractitionerRole --> Practitioner
+
+@enduml

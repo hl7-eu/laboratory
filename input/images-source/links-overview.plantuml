@@ -1,0 +1,62 @@
+@startuml
+
+skinparam linetype ortho
+
+artifact "Composition: Laboratory Report" as composition
+artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
+artifact "Observation Results: laboratory" as result
+artifact "Patient: Animal" as animalPatient
+artifact "Patient: Person" as humanPatient
+artifact "Practitioner: Laboratory Report" as Practitioner
+artifact "PractitionerRole: Laboratory Report" as PractitionerRole
+artifact "ServiceRequest: Laboratory Order" as ServiceRequest
+artifact "Specimen: Laboratory" as Specimen
+artifact "Substance: Specimen Additive Substance" as Substance
+
+
+url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
+url of diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
+url of result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
+url of humanPatient [[StructureDefinition-Patient-eu-lab.html]]
+url of animalPatient [[StructureDefinition-Patient-animal-eu-lab.html]]
+url of Practitioner [[StructureDefinition-Practitioner-eu-lab.html]]
+url of PractitionerRole [[StructureDefinition-PractitionerRole-eu-lab.html]]
+url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
+url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
+url of Substance [[StructureDefinition-specimen-additive-substance-eu-lab.html]]
+
+
+diagnosticReport --> composition
+diagnosticReport --> result
+diagnosticReport --> animalPatient
+diagnosticReport --> humanPatient
+diagnosticReport --> Practitioner
+diagnosticReport --> PractitionerRole
+diagnosticReport --> ServiceRequest
+diagnosticReport --> Specimen
+
+composition --> result
+composition --> animalPatient
+composition --> humanPatient
+composition --> Practitioner
+composition --> PractitionerRole
+composition --> ServiceRequest
+composition --> Specimen
+
+result --> animalPatient
+result --> humanPatient
+result --> Practitioner
+result --> PractitionerRole
+result --> ServiceRequest
+result --> Specimen
+
+Specimen --> animalPatient
+Specimen --> humanPatient
+Specimen --> Practitioner
+Specimen --> PractitionerRole
+Specimen --> ServiceRequest
+Specimen --> Substance
+
+PractitionerRole --> Practitioner
+
+@enduml
