@@ -12,6 +12,7 @@ artifact "PractitionerRole: Laboratory Report" as PractitionerRole
 artifact "ServiceRequest: Laboratory Order" as ServiceRequest
 artifact "Specimen: Laboratory" as Specimen
 artifact "Substance: Specimen Additive Substance" as Substance
+artifact "Body structure: Laboratory" as bodyStructure
 
 
 url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
@@ -24,6 +25,7 @@ url of PractitionerRole [[StructureDefinition-PractitionerRole-eu-lab.html]]
 url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
 url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
 url of Substance [[StructureDefinition-specimen-additive-substance-eu-lab.html]]
+url of bodyStructure [[StructureDefinition-bodyStructure-eu-lab.html]]
 
 
 diagnosticReport --> composition
@@ -56,6 +58,7 @@ Specimen --> Practitioner
 Specimen --> PractitionerRole
 Specimen --> ServiceRequest
 Specimen --> Substance
+Specimen --> bodyStructure
 
 PractitionerRole --> Practitioner
 
