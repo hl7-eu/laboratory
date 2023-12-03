@@ -25,6 +25,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 
 * collection
   * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
+    * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type"
   * extension contains $bodySite-reference named bodySite 0..*
   * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
 
