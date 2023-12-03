@@ -192,9 +192,9 @@ Usage: #definition
 * group[=].element[=].target.comment = "extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)"					
 * group[=].element[+].code = #LabReport.header.informationRecipient					
 * group[=].element[=].display = "A.1.4 Information recipient"					
-//-- unmatched					
-//-- unmatched					
-* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.code = #Composition.extension:information-recipient					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
 					
 * group[=].element[+].code = #LabReport.header.author					
 * group[=].element[=].display = "A.1.5 Author"					
