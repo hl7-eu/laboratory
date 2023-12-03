@@ -60,6 +60,7 @@ Alias: $specimen-collection-device-r5 = http://hl7.org/fhir/5.0/StructureDefinit
 Alias: $specimen-collection-body-site-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite
 Alias: $specimen-collection-body-site-reference-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite.reference
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $bodyStructure-laterality-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure.laterality
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
 Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
