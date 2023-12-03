@@ -22,7 +22,7 @@ Please refer to the [Design Choices page](design-choice.html) for details on the
 DiagnosticReport is the HL7 FHIR resource designed for documenting Laboratory report. It includes clinical context such as requesting provider information, and some mix of atomic results, images, textual and coded interpretations, formatted representation of diagnostic reports and status information.
 
 
-Diagnostic report status value set is comprised from following status codes (https://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html)
+Diagnostic report status value set is comprised from following status codes ( [DiagnosticReportStatus](https://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html) )
 
 |Lvl|Code|Display|Definition|
 |:---:|----|-------|----------|
@@ -46,7 +46,7 @@ Diagnostic report status value set is comprised from following status codes (htt
 
 #### Laboratory report: Composition
 
-A Composition defines the structure and narrative content necessary for a laboratory report. It is a mandatory resource for a Document Bundle this guide is based on (see xxx).
+A Composition defines the structure and narrative content necessary for a laboratory report. It is a mandatory resource for a Document Bundle this guide is based on (see [FHIR Documents](https://hl7.org/fhir/R4/documents.html) ).
 
 The status of the composition reflects the status of the document and it should be aligned with that of the DiagnosticReport.
 
