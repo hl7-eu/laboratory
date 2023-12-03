@@ -22,9 +22,10 @@ For this reason the Laboratory has been selected as one of the priority domains 
 
 ### Scope
 
-Define a set of common rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the European [eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
+Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the European [eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
 
-This IG covers laboratory result reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains requiring specialised reporting structure like histopathology or medical genetics.
+This Implementation Guide applies to laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains like histopathology or medical genetics. 
+This version focuses only on common rules that apply to all the in-scope situations, without specifying specialized domain-specific profiles, as for example microbiology profiles.
 
 This guide is not limited to test results performed by clinical laboratories on Human specimens (from human subject), but it considers also results on non-human materials or living subjects; or non-human specimens paired with a human subject. Derived guides may restrict the scope as needed (e.g. limiting the scope to well-identified human beings)
 
