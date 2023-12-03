@@ -154,7 +154,7 @@ Usage: #definition
 * group[=].element[=].target.code = #DiagnosticReport.result.specimen					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "result.resolve().ofType(Observation).specimen"					
+* group[=].element[=].target.comment = "result.resolve().ofType(Observation)"					
 //---END					
 //---END					
 //---END					
@@ -208,14 +208,14 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "The person authenticated the content and accepted legal responsibility for its content.
-attester.where(mode='legal').party.resolve()"					
+attester.where(mode='legal')"					
 * group[=].element[+].code = #LabReport.header.validator					
 * group[=].element[=].display = "A.1.7 Result validator"					
 * group[=].element[=].target.code = #Composition.attester.party					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "The person authenticated the content in their professional capacity.
-attester.where(mode='professional').party.resolve()"					
+attester.where(mode='professional')"					
 * group[=].element[+].code = #LabReport.header.metadata					
 * group[=].element[=].display = "A.1.8 Laboratory report metadata"					
 * group[=].element[=].target.code = #Composition					
