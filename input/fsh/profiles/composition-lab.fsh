@@ -15,8 +15,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
-* extension contains InformationRecipient named information-recipient 0..*
-* extension[information-recipient]
+* extension contains $information-recipient named information-recipient 0..*
+* extension[information-recipient].valueReference only Refernce(PractitionerEu | Device | PatientEuLab | RelatedPerson | PractitionerRoleEu | Organization)
+
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule
 * insert ReportStatusRule
