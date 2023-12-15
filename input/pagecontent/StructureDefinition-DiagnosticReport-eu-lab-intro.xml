@@ -1,0 +1,12 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<h4>Adding a PDF, images or other kind of additional data in a DiagnosticReport</h4>
+
+	<p>In some cases it is requested to include PDF, images or other kind of additional data in a Diagnostic Report.</p>
+	<p>If the PDF to be added is the representation of the entire Laboratory report, then this will be recorded in the optional element <i>presentedForm</i>
+	</p>
+	<p>In case of images or other kinds of additional data (that can be a pdf document) used as support for the interpretation of the report, this is realized by using the optional element <i>media</i>.
+	</p>
+
+</div>
