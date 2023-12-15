@@ -17,6 +17,12 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * subject only Reference ( PatientEuLab or PatientAnimalEu or Group  or Device or Substance or Location)
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
+* request 
+  * ^short = "Why the specimen was collected."
+  * ^comment = """If the specimen information are known when the order is created then the ServiceRequest.specimen should be used.
+If the ServiceRequest can be updated when the specimen is collected then the ServiceRequest.specimen or the Specimen.request could be used.
+Otherwise the relationship is recorded in the Specimen.request element"""
+
 
 /*
 * collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1

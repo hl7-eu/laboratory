@@ -30,7 +30,10 @@ Description: """This profile defines how to represent an laboratory orders using
 * subject only Reference (PatientEuLab or PatientAnimalEu or Group or Location or Device)
 * requisition ^short = "Composite Request ID."
 * specimen	only Reference (SpecimenEu)
-  * ^short = "Must be present, if order is request for test" // Check....
+  * ^short = "Specimens to be used by the laboratory procedure"
+  * ^comment = """If the specimen information are known when the order is created then the ServiceRequest.specimen should be used.
+If the ServiceRequest can be updated when the specimen is collected then the ServiceRequest.specimen or the Specimen.request could be used.
+Otherwise the relationship is recorded in the Specimen.request element"""
   // add invariant ?
 * insurance only Reference (Coverage)
 * authoredOn ^short = "When the order was placed"
