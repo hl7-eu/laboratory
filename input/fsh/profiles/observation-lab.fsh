@@ -106,6 +106,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * method only $CodeableConcept-uv-ips
 * method from LabTechniqueEuVs (preferred) // added binding to an agreed eu lab measurement method value set
 * specimen only Reference(SpecimenEu)
+  * ^comment = "When the specimen is applicable and known it shall be documented"
 // * hasMember only Reference(ObservationResultsLaboratoryEu or ObservationResultsEu)
 * hasMember only Reference(ObservationResultsLaboratoryEu)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
