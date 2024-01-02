@@ -12,8 +12,9 @@ artifact "Practitioner: Laboratory Report" as Practitioner
 artifact "PractitionerRole: Laboratory Report" as PractitionerRole
 artifact "ServiceRequest: Laboratory Order" as ServiceRequest
 artifact "Specimen: Laboratory" as Specimen
-artifact "Substance: Specimen Additive Substance" as Substance
 artifact "Body structure: Laboratory" as bodyStructure
+artifact "Substance: Specimen Additive Substance" as Substance
+
 
 url of bundle is  [[StructureDefinition-Bundle-eu-lab.html]]
 url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
