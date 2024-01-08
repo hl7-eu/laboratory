@@ -51,7 +51,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
 * container
   * type from LabSpecimenContainerEu (preferred)
-  * additive 0..0
+  * additive[x] 0..0
   * extension contains $specimen-container-device-r5 named device 0..1
   * extension[device].valueReference only Reference(Device)
 
