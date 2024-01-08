@@ -18,6 +18,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
   * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
+* parent only Reference(SpecimenEu)
 * request 
   * ^short = "Why the specimen was collected."
   * ^comment = """If the specimen information are known when the order is created then the ServiceRequest.specimen should be used.
