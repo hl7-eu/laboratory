@@ -7,4 +7,5 @@ Description: "Standard laboratory codes"
 
 * insert LOINCCopyrightForVS
 * codes from valueset NpuVs
-* codes from valueset http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
+* codes from valueset LoincVs
+//* codes from valueset http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
