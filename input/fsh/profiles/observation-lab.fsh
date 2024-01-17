@@ -21,18 +21,18 @@ This observation may represent the result of a simple laboratory test such as he
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
+* category ^definition = "A code that classifies the general type of observation being made."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
 * category contains laboratory 1..1
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
-* category[studyType] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
+* category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
-* category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
+* category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
 * code
 //* code from $results-laboratory-observations-uv-ips (preferred)
