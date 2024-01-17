@@ -94,11 +94,11 @@ RuleSet: ReportCategoryRule
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and \"Study type\". Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
+* category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
-* category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology, microbiology, etc.)"
+* category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
