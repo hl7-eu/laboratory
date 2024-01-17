@@ -30,7 +30,7 @@ RuleSet: ReportEncounterRule
   * ^short = "The healthcare event which this Laboratory Report is about (when test ordered)."
   * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
   * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
-  
+
   DiagnosticReport and Composition SHALL have the same encounter.
   """
 
@@ -94,15 +94,15 @@ RuleSet: ReportCategoryRule
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^definition = "A code that classifies this laboratory report."
+* category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and \"Study type\". Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
 * category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
-* category[studyType] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
+* category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology, microbiology, etc.)"
 * category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
-* category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
+* category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
 RuleSet: SectionComRules (short, def, code)
 
