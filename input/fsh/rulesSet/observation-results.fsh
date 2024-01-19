@@ -10,7 +10,6 @@ Description: "This profile constrains the Observation resource to represent vari
 
 RuleSet: ObservationResultsEu
 // * insert SetFmmandStatusRule ( 1, draft )
-// * status = #final (exactly) // is this still true ?
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 * category only $CodeableConcept-uv-ips
 * code only $CodeableConcept-uv-ips
@@ -41,7 +40,7 @@ RuleSet: ObservationResultsValueEu
 * valueString ^sliceName = "valueString"
 * valueRange only $Range-uv-ips
 // no practical examples found for the time being
-// reverted to the original statement 
+// reverted to the original statement
 // * valueRange only Range-eu-lab
 * valueRange ^sliceName = "valueRange"
 //* valueRatio only $Ratio-uv-ips
