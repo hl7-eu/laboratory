@@ -7,7 +7,9 @@ When the ips-pat-1 invariant is satified \(Patient.name.given, Patient.name.fami
 
 * insert SetFmmandStatusRule ( 1, draft )
 
-* extension contains $patient-birthPlace named birthPlace 0..1
+* extension contains
+    $patient-birthPlace named birthPlace 0..1 and
+    $sexForClinicalUse named sex-for-clinical-use 0..*
 * extension[birthPlace].valueAddress only AddressEu
 
 * identifier ^short = "Patient identifiers" // MS according to IPS
@@ -21,11 +23,11 @@ When the ips-pat-1 invariant is satified \(Patient.name.given, Patient.name.fami
 * name.extension[name-absent-reason] ^definition = "Reason for not providing the name"
 * name.text // // MS according to IPS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
-// based 2023-09-01 decision 
+// based 2023-09-01 decision
 // * name.family 1..1
 * name.family ^short = "Family name"  // MS according to IPS
 * name.family ^definition = """Family name. When more the family is composed by more than one names, this element documents the full composed family name with the proper * name.familyrder. The parts are recorded in the fhater and mother family names extensions."""
-* name.family ^example.label = "spanish" 
+* name.family ^example.label = "spanish"
 * name.family ^example.valueString = "Valero Iglesias"
 * name.given ^short = "Given names. Includes middle names" // MS according to IPS
 * name.text ^short = "Text representation of the full name."
