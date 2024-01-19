@@ -373,7 +373,7 @@ Instance: Inline-ServiceRequest-for-IT-CDA2FHIR
 InstanceOf: ServiceRequestLabEu
 Usage: #inline
 * id = "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
-* identifier.system = "http://example.org/lis-order"
+* identifier.system = "http://hospital.org/lis-order"
 * identifier.value = "123456"
 // USARE QUESTO come Group ID
 * requisition.assigner.display = "Ministero delle Finanze"
