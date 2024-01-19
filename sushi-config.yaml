@@ -1,11 +1,11 @@
 # id: hl7.fhir.eu.eu-laboratory
 id: hl7.fhir.eu.laboratory
-canonical: http://hl7.eu/fhir/laboratory 
+canonical: http://hl7.eu/fhir/laboratory
 name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ci # 
+version: 0.1.0-ci #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -54,7 +54,7 @@ pages:
     # to be removed --->
   # semantic-notes.md:
     # title: Laboratory Result Report
-    # <--- to be removed 
+    # <--- to be removed
   scenarios.md:
     title: Laboratory Report scenarios
   status-mgmt.md:
@@ -75,7 +75,7 @@ pages:
     title: Obligations
   overview.md:
     title: Profiles overview
-    
+
  #  recommendations.md:
 #    title: Recommendations
 #
@@ -95,6 +95,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
     - http://example.org/lab-codes
     - http://hl7.eu/fhir/StructureDefinition/body-location-qualifier
     - http://hl7.eu/fhir/StructureDefinition/laterality-qualifier
+    - http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:
@@ -158,7 +159,7 @@ menu:
   About:
     Downloads: downloads.html
     Authors and contributors: contributors.html
-  
+
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -286,7 +287,7 @@ resources:
   Practitioner/pr-lab-example:
     name: "Practitioner: example"
     description: Example of Practitioner conforming this guide.
-    
+
   Observation/obs-gram-stain:
     name: "Observation: gram staining example"
     description: Example of gram staining result Observation conforming this guide.
@@ -338,7 +339,7 @@ resources:
 
   Observation/obs-org-id1-susc-4:
     name: "Observation: Staphylococcus aureus Vancomycin susceptibility example"
-    description: Example of Staphylococcus aureus Vancomycin susceptibility Observation conforming this guide.    
+    description: Example of Staphylococcus aureus Vancomycin susceptibility Observation conforming this guide.
 
   ServiceRequest/srv-request-example:
     name: "ServiceRequest: example"
@@ -346,7 +347,7 @@ resources:
 
   Patient/Patient-animal-example:
     name: "Patient: animal example"
-    description: Example of Patient resource used for indicating an animal (cat) conforming this guide. 
+    description: Example of Patient resource used for indicating an animal (cat) conforming this guide.
 
 
 #  Patient/my-example-patient:
@@ -399,7 +400,7 @@ groups:
 
   obligations:
     name:  Actors and Obligations
-    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. 
+    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements.
     resources:
       - ActorDefinition/actor-consumer-eu-lab
       - ActorDefinition/actor-creator-eu-lab

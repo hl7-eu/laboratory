@@ -31,6 +31,7 @@ Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-Observatio
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
+
 // --- SID
 Alias: $uri = urn:ietf:rfc:3986
 Alias: $oid = urn:ietf:rfc:1155
@@ -71,8 +72,8 @@ Alias: $iso21090-uncertaintyType = http://hl7.org/fhir/StructureDefinition/iso21
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 Alias: $specimen-container-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device
-
-
+Alias: $observation-analysis-time = http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time
+Alias: $sexForClinicalUse = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
 
 // --- Profiles
 Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
