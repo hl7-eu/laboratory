@@ -128,6 +128,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains coverage 0..*
 * entry[coverage].resource only Coverage
 
+* entry contains device 0..*
+* entry[device].resource only Device
+
 //* entry contains documentReference 0..*
 //* entry[documentReference].resource only DocumentReference
 
