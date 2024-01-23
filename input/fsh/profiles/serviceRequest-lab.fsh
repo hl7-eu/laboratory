@@ -24,7 +24,7 @@ Description: """This profile defines how to represent an laboratory orders using
 // add binding for category and code
 * identifier 1..
 /* * category 1..  */
-* code 1..
+/* * code 1.. */
 * code from LabOrderCodesEuVs (preferred)
 * subject 1..
 * subject only Reference (PatientEuLab or PatientAnimalEu or Group or Location or Device)
