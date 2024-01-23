@@ -20,7 +20,9 @@ This observation may represent the result of a simple laboratory test such as he
 
 * extension contains $observation-analysis-time named analysis-time 0..1
 * extension contains $workflow-supportingInfo named supportingInfo 0..*
-* extension contains $observation-triggeredBy-r5 named observation-triggeredBy-r5 0..*
+* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
+* extension[triggeredBy-r5].extension[observation].valueReference
+* extension[triggeredBy-obs-r5].extension[type].valueCode // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 
 * category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern
