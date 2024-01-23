@@ -1,13 +1,3 @@
-/* Profile: ObservationResultsEu
-Parent: Observation
-Id: Observation-results-eu-lab
-Title:    "Observation Results"
-Description: "This profile constrains the Observation resource to represent various types of results and associated observations in a patient summary. This is the base profile from which the other results profiles are derived."
-* ^experimental = false
-* ^purpose = "This profile constrains the Observation resource to represent various types of results and associated observations in a patient summary." */
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
-
 RuleSet: ObservationResultsEu
 // * insert SetFmmandStatusRule ( 1, draft )
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
