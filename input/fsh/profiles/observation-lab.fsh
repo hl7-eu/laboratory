@@ -19,6 +19,9 @@ This observation may represent the result of a simple laboratory test such as he
 * . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
 * extension contains $observation-analysis-time named analysis-time 0..1
+* extension contains $workflow-supportingInfo named supportingInfo 0..*
+
+
 * category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
