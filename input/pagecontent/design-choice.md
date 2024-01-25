@@ -32,7 +32,7 @@ In brief:
 The following figure graphically summarizes the described design approach.
 
 <div>
-<img src="lab-structure.png"  alt="Laboratory report design approach" width="60%">
+<img src="lab-structure.png"  alt="Laboratory report design approach" width="80%">
 <p>Figure 1 - Overview of the report design approach</p>
 <p></p>
 </div>

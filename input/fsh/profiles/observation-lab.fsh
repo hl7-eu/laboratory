@@ -59,56 +59,6 @@ This observation may represent the result of a simple laboratory test such as he
 
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
 * insert ObservationResultsValueEu
-/*
-* value[x]
-* value[x] ^slicing.discriminator.type = #type
-* value[x] ^slicing.discriminator.path = "$this"
-* value[x] ^slicing.rules = #closed
-* valueString only string
-// * valueString MS
-* valueString ^sliceName = "valueString"
-//* valueRange only $Range-uv-ips
-* valueRange only Range-eu-lab
-* valueRange ^sliceName = "valueRange"
-//* valueRatio only $Ratio-uv-ips
-* valueRatio only Ratio-eu-lab
-* valueRatio ^sliceName = "valueRatio"
-* valueTime only time
-* valueTime ^sliceName = "valueTime"
-* valueDateTime only dateTime
-* valueDateTime ^sliceName = "valueDateTime"
-* valuePeriod only Period
-* valuePeriod ^sliceName = "valuePeriod"
-// * valueQuantity only $Quantity-uv-ips
-* valueQuantity only Quantity-eu-lab
-// * valueQuantity MS
-* valueQuantity ^sliceName = "valueQuantity"
-* valueCodeableConcept only $CodeableConcept-uv-ips
-// * valueCodeableConcept MS
-* valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
-* valueCodeableConcept ^sliceName = "valueCodeableConcept"
-* valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
-* valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set"
-* valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a blood group findings value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
-* valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
-* valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-snomed-ct-ips-free-set"
-* valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a presence and absence findings (qualifier values) value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
-* valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
-* valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-ct-ips-free-set"
-* valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
-* valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-*/
 * interpretation only $CodeableConcept-uv-ips
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.

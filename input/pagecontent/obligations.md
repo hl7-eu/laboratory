@@ -1,10 +1,8 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
-		<b>Proof of concept for this version of the guide.</b>
-		<p>Obligations have been added to this version of the guide only as a proof of concept to collect feedbacks from future potential users.</p>
-		<p>Obligations have been defined only for few profiles used as example.</p>
-		<p><b>Ballotters are invited to provide thier feedbacks about thier usage, representation, and level of specification that the guide should (or should not) have. Inputs on the defined actors are also welcomed.</b></p>
+		<b>Informative for this version of the guide</b>
+		<p>Obligations have been added to this version of the guide only as informative material to collect feedback about their usage.</p>
 	</blockquote>
 </div>
 
@@ -19,6 +17,8 @@ This page describes also the actors that have been defined for specifying the ob
 
 ### Actors
 
+{% include fsh-link-references.md %}
+
 Three actors have been specifed:
 * the [Creator](ActorDefinition-actor-creator-eu-lab.html) ;
 * the [Repository](ActorDefinition-actor-repos-eu-lab.html) ; and 
@@ -32,6 +32,8 @@ The last actor is the system using the report received or retrieved.
 
 ### Obligations List
 
-
-1. [Patient](StructureDefinition-Patient-obl-eu-lab.html)
-1. [Human Name](StructureDefinition-HumanName-obl-eu-lab.html)
+1. [PatientEuObligations]
+1. [HumanNameEuObligations]
+1. [ObservationEuObligations]
+1. [ServiceRequestEuObligations]
+1. [SpecimenEuObligations]

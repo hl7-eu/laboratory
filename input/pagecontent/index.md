@@ -1,16 +1,10 @@
-
-
-### Notes for ballotters
+{% include fsh-link-references.md %}
 
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">
-		<p>Ballotters are invited to evaluate and provide their feedbacks of the following open issues:</p>
-		<ul>
-			<li>Allow for more than one DiagnosticReport resource as Bundle.entry. See <a href="StructureDefinition-Bundle-eu-lab.html">Bundle-eu-lab</a> for more details</li>
-			<li>Allow Composition to have as section entry the DiagnosticReport resource.  See <a href="StructureDefinition-Composition-eu-lab.html">Composition-eu-lab</a> for more details</li>
-			<li>Adoption of obligations. See the <a href="obligations.html">Obligations</a> page for more details</li>
-		</ul>
+	<blockquote class="stu-note">		
+		<p>Obligations are <b>Informative</b> for this version of the guide.</p>
+		<p>See the <a href="obligations.html">Obligations</a> page for more details</p>
 	</blockquote>
 </div>
 
@@ -42,12 +36,14 @@ The project background is described in the [background](background.html) page.
 
 ### Design choiches
 
-The solution adopted by this guide tries to balance the requirement of representing a Laboratory Report as a legally signed document (i.e. as a FHIR document), with that of enabling their representation as DiagnosticReport. All this, taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport <-> Composition relationship is directed from the DiagnosticReport to the Composition resource.
-This is done by:
-- using a HL7 FHIR document representation, but requiring the document Bundle to always include the DiagnosticReport; and
-- pre-adopting R5 rules for the inclusion of entries in the Document Bundle.
+The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of Laboratory Report as legally signable document (i.e. as a FHIR document), with the expectation to get Lab Report by searching per DiagnosticReport. All this, taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport <-> Composition relationship is directed from the DiagnosticReport to the Composition resource.
+This is done by supporting both perspectives (see figure below) requiring the document bundle ( [BundleLabReportEu] ) to always include a DiagnosticReport ( [DiagnosticReportLabEu] ) and enabling the pre-adoption of the R5 rules for the inclusion of entries in the Document Bundle.
 
-More details in the [Design choices](design-choice.html) page.
+<div>
+<img src="lab-structure.png"  alt="Laboratory report design approach" width="50%">
+<p>Figure 1 - Overview of the report design approach</p>
+<p></p>
+</div>
 
 ### Dependencies
 
