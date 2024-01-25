@@ -3,20 +3,21 @@ Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Id: Composition-eu-lab
 Title: "Composition: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 1, draft )
 * . ^short = "Laboratory Report composition"
 * . ^definition = "Laboratory Report composition.
 \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
-// what to do with the composition text ?
-// should we make it 0.. ?
-// or have text repeated here and in the sections ?
+
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerEu or Device or PatientEuLab or RelatedPerson or PractitionerRoleEu or Organization)
+
+* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
+* extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
+  * ^comment = """Added to the FHIR R4 guide to strctly conform with the R4 rules for document bundle resources inclusion.
+  Using this extension implies to accept a circular reference Composition to/form DiagnosticReport"""
 
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule

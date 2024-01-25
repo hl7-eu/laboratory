@@ -1,3 +1,4 @@
+// TO BE REMOVED AS SOON AS THIS EXTENSION WILL BE PUBLISHED BY HL7 INT.
 Extension: ObsAnalysisDateTime
 Id: observation-analysis-date-time
 Title: "Observation AnalysisDateTime"
