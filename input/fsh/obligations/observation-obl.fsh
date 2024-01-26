@@ -6,7 +6,7 @@ Description: "This profile defines obligations for Observation in FHIR for the p
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-* extension[analysis-time] insert ObligationSet1
+// * extension[analysis-time] insert ObligationSet1
 * extension[supportingInfo] insert ObligationSet2
 * extension[triggeredBy-r5] insert ObligationSet2
 * extension[triggeredBy-r5].extension[observation] insert ObligationSet1
@@ -22,6 +22,7 @@ Description: "This profile defines obligations for Observation in FHIR for the p
 * hasMember insert ObligationSet1
 * value[x] insert ObligationSet1
 * interpretation insert ObligationSet1
+* issued insert ObligationSet2
 * method insert ObligationSet1
 * specimen insert ObligationSet1
 * component insert ObligationSet1

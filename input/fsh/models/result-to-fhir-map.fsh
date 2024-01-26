@@ -47,7 +47,13 @@ Usage: #definition
 * group[=].element[=].target.code = #Observation.effective[x]					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "intended as the clinical relevant time (i.e. when the specimen was collected)"					
+* group[=].element[+].code = #Result.observation.dateTime					
+* group[=].element[=].display = "A.5.2.1 Observation date"					
+* group[=].element[=].target.code = #Observation.issued					
+* group[=].element[=].target.display = ""					
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "as the date the result is made available."					
 * group[=].element[+].code = #Result.observation.code					
 * group[=].element[=].display = "A.5.2.3 Observation code"					
 * group[=].element[=].target.code = #Observation.code					
@@ -187,6 +193,12 @@ If the person responsible for validation:  performer.extension:performerFunction
 //---END					
 //---END					
 //---END					
+//---END					
+//---END					
+					
+					
+					
+					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"					
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"					

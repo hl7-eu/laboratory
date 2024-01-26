@@ -18,13 +18,16 @@ This observation may represent the result of a simple laboratory test such as he
 * . ^definition = "This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and references the atomic results of the study as \"has-member\" child observations"
 * . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
-* extension contains $observation-analysis-time named analysis-time 0..1
+// * extension contains $observation-analysis-time named analysis-time 0..1
 * extension contains $workflow-supportingInfo named supportingInfo 0..*
 * extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
 
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
 * extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 
+// ----------------------
+// ADD the voc binding
+// ----------------------
 
 
 * category only $CodeableConcept-uv-ips
@@ -71,6 +74,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * hasMember only Reference(ObservationResultsLaboratoryEu)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
+* issued ^short = "Date/Time this result was made available"
 
 //* component obeys eu-lab-2
 * component
