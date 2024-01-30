@@ -73,25 +73,25 @@ Usage: #definition
 * group[=].element[=].target.code = #Coverage.policyHolder.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "If it refers to the owner of the policy"					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
 * group[=].element[=].target.code = #Coverage.beneficiary.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "If it refers to the plan beneficiary"					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
 * group[=].element[=].target.code = #Coverage.subscriberId					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "If it is the ID assigned to the subscriber"					
 * group[=].element[+].code = #Payer.insurance.subjectIdentifier					
 * group[=].element[=].display = "A.1.3.1.3 Health insurance number"					
 * group[=].element[=].target.code = #Coverage.subscriber.identifier					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-					
+* group[=].element[=].target.comment = "If it refers to the subscriber to the policy and the Subscriber is of type Patient"					
 //---END					
 //---END					
 //---END					
