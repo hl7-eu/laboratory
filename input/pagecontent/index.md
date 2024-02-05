@@ -26,7 +26,7 @@ This guide is not limited to test results performed by clinical laboratories on 
 ### Purpose
 The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
 
-This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects..
+This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
 
 The aspiration of this guide is that of being used as basis for European National Guides, the Euroepan EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
 

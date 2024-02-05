@@ -96,7 +96,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
     - http://example.org/lab-codes
     - http://hl7.eu/fhir/StructureDefinition/body-location-qualifier
     - http://hl7.eu/fhir/StructureDefinition/laterality-qualifier
-    - http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time
+#   - http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:

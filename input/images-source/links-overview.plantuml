@@ -24,8 +24,8 @@ url of Practitioner [[StructureDefinition-Practitioner-eu-lab.html]]
 url of PractitionerRole [[StructureDefinition-PractitionerRole-eu-lab.html]]
 url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
 url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
-url of Substance [[StructureDefinition-specimen-additive-substance-eu-lab.html]]
-url of bodyStructure [[StructureDefinition-bodyStructure-eu-lab.html]]
+url of Substance [[StructureDefinition-Substance-additive-eu-lab.html]]
+url of bodyStructure [[StructureDefinition-BodyStructure-eu-lab.html]]
 
 
 diagnosticReport --> composition
