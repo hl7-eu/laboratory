@@ -74,8 +74,8 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
-  overview.md:
-    title: Profiles overview
+ # overview.md:
+ #   title: Profiles overview
 
  #  recommendations.md:
 #    title: Recommendations
@@ -154,7 +154,7 @@ menu:
     Managing statuses: status-mgmt.html
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
-    Profiles overview:  overview.html
+  #  Profiles overview:  overview.html
   # Examples: examples.html
   Artifacts: artifacts.html
   About:

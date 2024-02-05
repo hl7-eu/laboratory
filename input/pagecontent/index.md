@@ -45,6 +45,28 @@ This is done by supporting both perspectives (see figure below) requiring the do
 <p></p>
 </div>
 
+### Navigating the profiles
+
+Browseable diagrams describing the relationships among the profiles specified by this guide are provided below.
+
+Figure 2 describes the REST perspective.
+
+
+<div>
+<p>{% include links-overview.svg %}</p>
+<p>Figure 2 - Overview of the profiles relationships</p>
+<p></p>
+</div>
+
+Figure 3 describes the document perspective.
+
+<div>
+<p>{% include document-overview.svg %}</p>
+<p>Figure 3 - Overview of the document structure</p>
+<p></p>
+</div>
+
+
 ### Dependencies
 
 {% include dependency-table.xhtml %}

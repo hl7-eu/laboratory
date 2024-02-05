@@ -1,6 +1,7 @@
 @startuml
 
 skinparam linetype ortho
+scale 0.7
 
 artifact "Composition: Laboratory Report" as composition
 artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
