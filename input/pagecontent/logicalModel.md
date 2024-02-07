@@ -10,9 +10,9 @@ It could also serve as a guiding principle for the national development and impl
 
 The eHN Laboratory Guideline in section 4 specifies a LABORATORY RESULTS DATASET, which is a simplified logical model of a laboratory report. Data set comprises of several basic parts as visualised in the diagram below.
 
-{% include img.html img="LabReportModel.png" caption="Figure 1: Laboratory dataset model (option 1)" width="70%" %}
-{% include img.html img="LabReportModel-1.png" caption="Figure 1: Laboratory dataset model (option 2)" width="70%" %}
-{% include img.html img="ObservationModel.png" caption="Figure 2: Laboratory observation dataset model (option 2)" width="70%" %}
+<!-- {% include img.html img="LabReportModel.png" caption="Figure 1: Laboratory dataset model (option 1)" width="70%" %} -->
+{% include img.html img="LabReportModel-1.png" caption="Figure 1: Laboratory dataset model" width="70%" %}
+{% include img.html img="ObservationModel.png" caption="Figure 2: Laboratory observation dataset model" width="70%" %}
 
 The following table lists the HL7 FHIR logical models used to represent the LABORATORY RESULT DATASET as defined in section 4 of the Release 1.1. of that eHN guideline.
 
