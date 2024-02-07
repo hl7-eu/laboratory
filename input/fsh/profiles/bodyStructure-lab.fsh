@@ -1,7 +1,7 @@
 
 Profile: BodyStructureEuLab
 Parent: BodyStructure
-Id: bodyStructure-eu-lab
+Id: BodyStructure-eu-lab
 Title: "Body structure: Laboratory"
 Description: """This profile defines how to represent Body Structure in HL7 FHIR for the purpose of this guide."""
 * extension contains $bodyStructure-laterality-r5 named laterality 0..1

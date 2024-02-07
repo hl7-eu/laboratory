@@ -16,7 +16,7 @@ For this reason the Laboratory has been selected as one of the priority domains 
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the European [eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
+Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
 
 This Implementation Guide applies to laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains like histopathology or medical genetics. 
 This version focuses only on common rules that apply to all the in-scope situations, without specifying specialized domain-specific profiles, as for example microbiology profiles.
@@ -26,7 +26,7 @@ This guide is not limited to test results performed by clinical laboratories on 
 ### Purpose
 The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
 
-This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects..
+This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
 
 The aspiration of this guide is that of being used as basis for European National Guides, the Euroepan EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
 
@@ -44,6 +44,24 @@ This is done by supporting both perspectives (see figure below) requiring the do
 <p>Figure 1 - Overview of the report design approach</p>
 <p></p>
 </div>
+
+### Navigating the profiles
+
+Browseable diagrams describing the relationships among the profiles specified by this guide are provided below.
+
+<div>
+<p>{% include links-overview.svg %}</p>
+<p>Figure 2 - Overview of the profiles relationships</p>
+<p></p>
+</div>
+
+
+<div>
+<p>{% include document-overview.svg %}</p>
+<p>Figure 3 - Overview of the document structure</p>
+<p></p>
+</div>
+
 
 ### Dependencies
 

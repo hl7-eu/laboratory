@@ -19,17 +19,24 @@ In this case:
 
 #### Partial Laboratory Report
 
-* In some cases, a laboratory might **release a laboratory report** which is either **incomplete** (not all results are available or marked as “final”) **or unverified**.
-* This usually occurs when some of the results are known to be produced later, but others need to be communicated to report recipients due to specific organizational and/or process rules; or because of the urgency of some results. Note: the ‘delay’ in the results availability may be due to the nature of the test, or to organizational or technical reasons.
+* In some cases, a laboratory might **release a laboratory report** which is either **incomplete** (not all results are available or marked as “final”).
+* This usually occurs when some of the results are known to be produced later, but others need to be communicated to report recipients due to specific organizational and/or process rules; or because of the urgency of some results. Note: The ‘delay’ in the results availability may be due to the nature of the test, or to organizational or technical reasons.
 
 In such cases: 
-* the report status should be set to “preliminary” or “partial”. 
+* the report status should be set to “partial”. 
+
+#### Preliminary Laboratory Report
+
+* In some cases, a laboratory might **release a laboratory report** which is either **verified results that are known to change over time.**.
+* This usually occurs for specifi methods that require a long performanceperiod, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for mycobacterium tuberculosis (MTB))
+
+In such cases: 
+* the report status should be set to "preliminary". 
 
 ####  Updated Laboratory Report
 
 * A **laboratory report, after being released as “final”, is modified** (edited or added to).
 * the report is complete and verified by an authorized person
-
 
 In this case:
 
