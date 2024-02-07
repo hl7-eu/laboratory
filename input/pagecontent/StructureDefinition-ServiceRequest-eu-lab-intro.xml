@@ -1,0 +1,8 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<h4>Communicating Ask at Order Entry questions and prior results</h4>
+	<a name="pdf-and-images"> </a>
+	<p>There are cases in which information is collected at the order entry, including prior results, for helping the results' interpretation.</p>
+	<p>These data may be represented in FHIR by different resources (Observations, Conditions, MedicationStatements,...), depending of the kind of information collected; and they are linked to the order (i.e. the ServiceRequest) by using the <i>supportingInfo</i> reference</p>
+</div>

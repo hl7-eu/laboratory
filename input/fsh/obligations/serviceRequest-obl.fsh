@@ -13,4 +13,5 @@ Description: "This profile defines obligations for ServiceRequest in FHIR for th
 * specimen	insert ObligationSet1
 * insurance insert ObligationSet1
 * authoredOn insert ObligationSet1
+* supportingInfo insert ObligationSet1
 
