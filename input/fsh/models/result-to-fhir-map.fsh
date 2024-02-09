@@ -77,7 +77,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Observation.code.coding.display					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The mapping refers to the case ""code"" mapped to Observation.code. A similar mapping applies to the other cases.
+* group[=].element[=].target.comment = "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.
 This element typically  represents the 'full specified  name' designation, compared to the 'short name' of the 'A.5.2.3.3 Observation display name' element.
 It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept."					
 * group[=].element[+].code = #Result.observation.code.originalName					
@@ -85,13 +85,13 @@ It is not expected that both designations are recorded in the report; consumers 
 * group[=].element[=].target.code = #Observation.code.text					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The mapping refers to the case ""code"" mapped to Observation.code. A similar mapping applies to the other cases."					
+* group[=].element[=].target.comment = "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases."					
 * group[=].element[+].code = #Result.observation.code.displayName					
 * group[=].element[=].display = "A.5.2.3.3 Observation display name"					
 * group[=].element[=].target.code = #Observation.code.coding.display					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The mapping refers to the case ""code"" mapped to Observation.code. A similar mapping applies to the other cases.
+* group[=].element[=].target.comment = "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.
 This element typically  represents the' short name' designation, compared to the 'full specified name' of the 'A.5.2.3.1 Observation name' element.
 It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept."					
 * group[=].element[+].code = #Result.observation.method					
