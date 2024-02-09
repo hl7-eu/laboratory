@@ -126,9 +126,10 @@ It is responsibility of the system curating the report to keep consistency betwe
 
 #### Laboratory report and result statuses correlation
 
-Form the workflow perspective, the status of the report and that of its entries is partially independent; thus, formal consistency rules would be difficult to be specified.
+From the workflow perspective, the status of the report and that of its entries is partially independent; thus, formal consistency rules would be difficult to be specified.
 
-However some basic rules could be probably recommended as proposed in the following table.
+However some basic rules about the status in observation and the expected status in DiagnosticReport is recommended as proposed in the following table.
+
 
 | DiagnosticReport status | Definition (excerpt) | Observation status recommendations for implementers           |
 | ----------------------- | --------------------- | ------------------------------------------------------------- |
