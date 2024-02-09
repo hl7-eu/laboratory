@@ -21,9 +21,11 @@ This observation may represent the result of a simple laboratory test such as he
 // * extension contains $observation-analysis-time named analysis-time 0..1
 * extension contains $workflow-supportingInfo named supportingInfo 0..*
 * extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
-
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
 * extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
+
+/* * extension contains $observation-value-r5 named value-r5 0..1
+* extension[value-r5].value[x] only Attachment */
 
 // ----------------------
 // ADD the voc binding

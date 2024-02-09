@@ -22,6 +22,11 @@ RuleSet: ObservationResultsEu
 
 RuleSet: ObservationResultsValueEu
 //* value[x]
+* extension contains $observation-value-r5 named value-r5 0..1
+* extension[value-r5]
+  * value[x] only Attachment
+  * ^short = "only for result of type Attachment"
+
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #closed
