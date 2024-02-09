@@ -273,6 +273,10 @@ resources:
     name: "Patient: example"
     description: Example of Patient conforming this guide.
 
+  Patient/nl-core-NameInformation-complete:
+    name: "Patient: Dutch complete name"
+    description: Example of Patient including a complete Dutch name.
+
   PractitionerRole/prrole-lab-example:
     name: "PractitionerRole: example"
     description: Example of PractitionerRole conforming this guide.
