@@ -16,7 +16,6 @@ Alias: $ajcc = http://cancerstaging.org
 Alias: $atc = http://www.whocc.no/atc
 Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
 Alias: $edqm = https://standardterms.edqm.eu
-Alias: $iccc3 = http://terminology.hl7.org/CodeSystem/iccc-3 // FAKE URL NOT YET ASSIGNED !!
 Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $loinc =  http://loinc.org
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
@@ -31,6 +30,8 @@ Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-Observatio
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias: $nibsc = http://nibsc.org
+Alias: $jctlm = http://jctlm.org
 
 // --- SID
 Alias: $uri = urn:ietf:rfc:3986
