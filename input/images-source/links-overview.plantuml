@@ -39,6 +39,7 @@ diagnosticReport --> ServiceRequest
 diagnosticReport --> Specimen
 
 composition --> result
+composition --> diagnosticReport
 composition --> animalPatient
 composition --> humanPatient
 composition --> Practitioner
