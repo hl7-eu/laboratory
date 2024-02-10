@@ -257,6 +257,18 @@ resources:
     name: A.5 - Results data elements model to this guide
     description: It shows how the A.5 - Results data elements data set defined by the EU eHN guidelines is mapped into this guide.
 
+#-------------------------
+
+  StructureDefinition/Subject:
+    name: A.1.1, A.1.2 - Subject of care
+    description: Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline.
+  
+  StructureDefinition/Order:
+    name: A.2, A.3 - Order
+    description: Order information and reason. Sections A.2 and A.3 of the eHN guideline.
+
+
+#------------------------
   Specimen/Specimen-animal-example:
     name: "Specimen: animal example"
     description: Example of specimen collected from an animal.
