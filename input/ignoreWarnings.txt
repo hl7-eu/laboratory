@@ -10,16 +10,24 @@ The Implementation Guide contains no examples for this data type profile
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # Warnings referred to an Obligation profile
-The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|1.0.0-candidate is deprecated
+The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
 The Implementation Guide contains no examples for this profile
 
 # Not recognized NPU system
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
-Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-npu-vs: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
+Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-result-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
 
 # Pre adoption of R5 rules for Document Bundles
 %isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)%
 
+# no expansion available
+The value set expansion is incomplete
+
+
+# === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
+Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
+Unknown System 'http://jctlm.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://jctlm.org' could not be found, so the code cannot be validated)
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://nibsc.org (from , see log)
 
 # New warning introduced by the publisher
 # see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
@@ -28,10 +36,7 @@ The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-Con
 
 # == fsh-generated\resources\Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.json ==
 # Local code systems
-INFORMATION: Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883: Bundle.entry[0].resource/*Composition/26032a57-083a-4ddf-b019-e566ae02f740*/.section[0].section[0].code.coding[1]: Code System URI 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' is unknown so the code cannot be validated
-INFORMATION: Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883: Bundle.entry[3].resource/*Specimen/5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb*/.type.coding[0]: Code System URI 'urn:oid:2.16.840.1.113883.5.129' is unknown so the code cannot be validated
-INFORMATION: Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883: Bundle.entry[4].resource/*Observation/763f7902-8103-4d10-8bd1-546a726d43ee*/.code.coding[1]: Code System URI 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' is unknown so the code cannot be validated
-INFORMATION: Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883: Bundle.entry[14].resource/*PractitionerRole/c20acec2-5d67-4c05-b35e-d528c35f9ed1*/.code[0].coding[0]: Code System URI 'urn:oid:2.16.840.1.113883.2.9.5.1.88' is unknown so the code cannot be validated
+
 
 # == fsh-generated\resources\Bundle-SimpleChemistryResultReport.json ==
 
@@ -51,4 +56,4 @@ INFORMATION: ValueSet/lab-specimenContainer-eu-lab: ValueSet.compose.include[0]:
 
 # == fsh-generated\resources\Bundle-BundleHepatitisPanel.json ==
 
-%Reference to experimental item http://example.org/lab-codes|0.1.0-ballot%
+%Reference to experimental item http://example.org/lab-codes|0.1.0%

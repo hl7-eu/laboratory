@@ -1,7 +1,7 @@
 @startuml
 
 skinparam linetype ortho
-scale 0.5
+scale 0.6
 
 artifact "Bundle: Laboratory Report" as bundle
 artifact "Composition: Laboratory Report" as composition
