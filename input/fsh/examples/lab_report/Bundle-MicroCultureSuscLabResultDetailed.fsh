@@ -1,7 +1,7 @@
 Instance: BundleLabResultMicroCultureSusc
 InstanceOf: BundleLabReportEu
-Title: "Bundle Microbiology Culture + Susceptibility Lab Result"
-Description: "Microbiology Culture + Susceptibility Lab Result"
+Title: "Bundle: Microbiology Culture + Susceptibility"
+Description: "Example of Laboratory Report (Bundle) with Microbiology Culture plus Susceptibility Results"
 Usage: #example
 * identifier.system = "http://example.org"
 * identifier.value = "V1CZ454557891308174803488707671420"

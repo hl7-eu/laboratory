@@ -1,7 +1,7 @@
 Instance: LabObservtionResultRatio
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Observation with ratio result type"
-Description: "Observation with ratio result type example"
+Description: "Example of Observation with ratio result"
 Usage: #example
 
 * id = "d29b286d-b99c-410f-af4e-9455ea49d0af"

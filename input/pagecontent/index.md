@@ -3,8 +3,8 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">		
-		<p>Obligations are <b>Informative</b> for this version of the guide.</p>
-		<p>See the <a href="obligations.html">Obligations</a> page for more details</p>
+		<p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>		
+		<p>For more details about obligations please refer to the <a href="obligations.html">Obligations page</a></p>
 	</blockquote>
 </div>
 

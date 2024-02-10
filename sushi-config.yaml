@@ -387,8 +387,8 @@ resources:
 #
 groups:
   eHNGuidelines:
-    name:  eHN Laboratory Guidelines
-    description: Logical models representing the eHN Laboratory Guidelines
+    name:  eHN Laboratory Guidelines (Informative)
+    description: Logical models representing the eHN Laboratory Guidelines. This is informative material.
     resources:
       - StructureDefinition/LabReport
       - StructureDefinition/Subject
@@ -402,8 +402,8 @@ groups:
       - StructureDefinition/Payer
 
   logicalModelsMaps:
-    name:  eHN Logical Model mappings
-    description: Concept Maps describing how the eHN Laboratory Guidelines are supposed to be implemented by using this guide
+    name:  eHN Logical Model mappings (Informative)
+    description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
     resources:
       - ConceptMap/labRpt2FHIR-eu-lab
       - ConceptMap/payer2FHIR-eu-lab
@@ -418,7 +418,7 @@ groups:
 
   obligations:
     name:  Actors and Obligations (Informative)
-    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this verison of the guide. 
+    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide. 
     resources:
       - ActorDefinition/actor-consumer-eu-lab
       - ActorDefinition/actor-creator-eu-lab

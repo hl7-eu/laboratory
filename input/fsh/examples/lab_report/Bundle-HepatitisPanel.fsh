@@ -1,7 +1,7 @@
 Instance: BundleHepatitisPanel
 InstanceOf: BundleLabReportEu
-Title: "Bundle Hepatitis Panel"
-Description: "Hepatitis Panel"
+Title: "Bundle: Hepatitis Panel"
+Description: "Example of Laboratory Report (Bundle) including a Hepatitis Panel"
 Usage: #example
 * identifier.system = "http://example.org"
 * identifier.value = "V1CZ454557891308174803488707671420"
