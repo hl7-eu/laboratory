@@ -47,7 +47,9 @@ This is done by supporting both perspectives (see figure below) requiring the do
 
 ### Navigating the profiles
 
-Browseable diagrams describing the relationships among the profiles specified by this guide are provided below.
+The following diagrams provide a browseable overview of the profiles specified by this guide.
+
+The first highlights the most relevant relationships starting from the DiagnosticReport ( [DiagnosticReportLabEu] ) resource (REST Perspective).
 
 <div>
 <p>{% include links-overview.svg %}</p>
@@ -55,6 +57,7 @@ Browseable diagrams describing the relationships among the profiles specified by
 <p></p>
 </div>
 
+The second the profiles included in the document bundle ( [BundleLabReportEu] ) (Document Perspective).
 
 <div>
 <p>{% include document-overview.svg %}</p>
