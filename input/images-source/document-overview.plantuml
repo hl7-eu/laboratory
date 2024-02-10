@@ -1,7 +1,8 @@
 @startuml
 
 skinparam linetype ortho
-scale 0.6
+scale 0.5
+
 
 artifact "Bundle: Laboratory Report" as bundle
 artifact "Composition: Laboratory Report" as composition
@@ -63,10 +64,17 @@ composition --> Practitioner
 composition --> PractitionerRole
 composition --> ServiceRequest
 composition --> Specimen
+composition --> Location
+composition --> Encounter
+
 
 diagnosticReport --> composition
 Specimen --> Substance
 Specimen --> bodyStructure
 PractitionerRole --> Practitioner
+PractitionerRole --> Organization
+result --> Device
+ServiceRequest --> Coverage
+
 
 @enduml
