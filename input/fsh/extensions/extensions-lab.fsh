@@ -1,10 +1,4 @@
 
-RuleSet: ExtensionContext(path)
-// copied by mCode
-* ^context[+].type = #element
-* ^context[=].expression = "{path}"
-
-
 Extension: DiagnosticReportReference
 Id:   composition-DiagnosticReportReference
 Title:  "Document DiagnosticReport Reference"
