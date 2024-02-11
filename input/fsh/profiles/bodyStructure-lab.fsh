@@ -1,4 +1,3 @@
-
 Profile: BodyStructureEuLab
 Parent: BodyStructure
 Id: BodyStructure-eu-lab
