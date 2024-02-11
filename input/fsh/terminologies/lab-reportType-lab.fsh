@@ -3,7 +3,7 @@ Id:	       lab-reportType-eu-lab
 Title:	       "Laboratory Report Types"
 Description:   """Laboratory Report Types.
 This version includes only one code as suggested by the eHN guideline.
-Catgegory can be used for filtering per study type or specialty."""
+Category can be used for filtering per study type or specialty."""
 
 // * ^experimental = false
 // * ^publisher = "HL7 Europe"

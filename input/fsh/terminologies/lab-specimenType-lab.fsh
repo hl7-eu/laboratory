@@ -1,6 +1,6 @@
 ValueSet:      LabSpecimenTypesEuVs
 Id:	       lab-specimenType-eu-lab
-Title:	       "Laboratory Specimen Types"
+Title:	       "Specimen Types"
 Description:   """Laboratory Specimen Types"""
 * ^status = #draft
 // * ^experimental = false

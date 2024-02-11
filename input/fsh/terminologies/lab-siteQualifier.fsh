@@ -1,7 +1,7 @@
 ValueSet:      LabSiteQualifierEuVs
 Id:	       lab-siteQualifier-eu-lab
-Title:	       "Specimen Site Qualifier Laboratory"
-Description:   "Laboratory specimen site qualifier [SNOMED CT]"
+Title:	       "Body Structure Qualifier (no laterality)"
+Description:   "Body Structure site qualifier (excluding laterality). It indicates the body site qualifier - excluding laterality - from which a laboratory specimen is collected. (based on SNOMED CT)"
 * ^status = #draft
 
 // * ^experimental = false

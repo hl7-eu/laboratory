@@ -1,7 +1,7 @@
 ValueSet: LabOrderCodesEuVs
 Id: lab-orderCodes-eu-lab
-Title: "Laboratory Order [LOINC]"
-Description: "Laboratory order codes for use in HL7 Europe."
+Title: "Laboratory Order"
+Description: "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'"
 
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"

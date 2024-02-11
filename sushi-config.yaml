@@ -213,6 +213,9 @@ menu:
 # look like:
 
 resources:
+
+
+#------------ Concept Maps  -------------
   ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:
     name: DiagnosticReport to Composition status
     description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
@@ -257,7 +260,7 @@ resources:
     name: A.5 - Results data elements model to this guide
     description: It shows how the A.5 - Results data elements data set defined by the EU eHN guidelines is mapped into this guide.
 
-#-------------------------
+#------------ Logical Models -------------
 
   StructureDefinition/Subject:
     name: A.1.1, A.1.2 - Subject of care
@@ -268,10 +271,10 @@ resources:
     description: Order information and reason. Sections A.2 and A.3 of the eHN guideline.
 
 
-#------------------------
+#----------- Examples -------------
   Specimen/Specimen-animal-example:
     name: "Specimen: animal example"
-    description: Example of specimen collected from an animal.
+    description: Example of Specimen collected from an animal.
 
   DiagnosticReport/dr-lab-example:
     name: "DiagnosticReport: example"
@@ -298,8 +301,8 @@ resources:
     description: Example of Practitioner conforming this guide.
 
   Observation/obs-gram-stain:
-    name: "Observation: gram staining example"
-    description: Example of gram staining result Observation conforming this guide.
+    name: "Observation: Gram Staining example"
+    description: Example of Gram Staining result Observation conforming this guide.
 
   Observation/obs-wbc:
     name: "Observation: Leukocytes Presence example"

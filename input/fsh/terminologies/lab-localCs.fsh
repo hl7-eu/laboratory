@@ -1,21 +1,7 @@
-/* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-ValueSet: LaboratoryLocalVS
-Id: lab-localVs-eu-lab
-Title: "Local Laboratory Codes VS"
-Description: "Local laboratory codes Value Set"
-//-------------------------------------------------------------------------------------------
-* ^experimental = true
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 1, draft )
-* codes from system http://hl7.eu/fhir/laboratory/CodeSystem/laboratory-local-cs */
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 CodeSystem: LaboratoryLocalCS
 Id: lab-localCs-eu-lab
-Title: "Local Laboratory Codes CS"
-Description: "Local laboratory codes Code System"
+Title: "Laboratory Observation Code: example"
+Description: "List of local coded concepts used for supporting the examples defined in this guide."
 * ^url = "http://example.org/lab-codes"
 * ^experimental = true
 /* * ^version = "0.0.1" */

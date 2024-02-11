@@ -1,7 +1,7 @@
 ValueSet:      LabTechniqueEuVs
 Id:	       lab-technique-eu-lab
 Title:	       "Laboratory Techniques"
-Description:   "Laboratory Technique [SNOMED CT]"
+Description:   "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT)."
 * ^status = #draft
 
 // * ^experimental = false
