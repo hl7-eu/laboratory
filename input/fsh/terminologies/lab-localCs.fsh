@@ -1,14 +1,11 @@
 CodeSystem: LaboratoryLocalCS
 Id: lab-localCs-eu-lab
-Title: "Laboratory Observation Code: example"
+Title: "Laboratory Code: example"
 Description: "List of local coded concepts used for supporting the examples defined in this guide."
 * ^url = "http://example.org/lab-codes"
 * ^experimental = true
 /* * ^version = "0.0.1" */
-* ^name = "LaboratoryLocalCS"
-* ^title = "Laboratory local codes Code System"
 * ^status = #active
-* ^description = "Laboratory local codes Code System"
 * ^content = #complete // #example
 * ^caseSensitive = false
 * #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
