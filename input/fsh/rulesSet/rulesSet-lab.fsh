@@ -58,8 +58,8 @@ RuleSet: ReportCategoryRule
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
 * category[studyType]
-  * ^short = "Laboratory services, i.e., results of tests performed, could be characterized using typology of services, commonly called study types. Study type could be seen as an attribute or grouping mechanism that assigns a common clinical sense to certain types of laboratory test results., e.g., Hemoglobin, Platelet count, etc. belongs to 'Hematology study'."
-
+  * ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
+  * ^definition = "Laboratory services, i.e., results of tests performed, could be characterized using typology of services, commonly called study types. Study type could be seen as an attribute or grouping mechanism that assigns a common clinical sense to certain types of laboratory test results., e.g., Hemoglobin, Platelet count, etc. belongs to 'Hematology study'."
   * ^comment = "In comparison to the laboratory specialty which is an attribute of laboratory, study type is a categorization of laboratory service. It needs to be mentioned that classification of test to study types in not standardized."
 
 // "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
@@ -68,7 +68,8 @@ RuleSet: ReportCategoryRule
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty]
-  * ^short = "Laboratory specialty is an attribute of any laboratory setting representing professional qualification of the laboratory to execute certain kind of laboratory tests."
+  * ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
+  * ^definition = "Laboratory specialty is an attribute of any laboratory setting representing professional qualification of the laboratory to execute certain kind of laboratory tests."
   * ^comment = "Specialty could be used as parameter for searching/querying of laboratory test results."
 // previuos description
 // "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
