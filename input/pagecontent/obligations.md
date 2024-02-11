@@ -32,8 +32,8 @@ The last actor is the system using the report received or retrieved.
 
 ### Obligations List
 
-1. [PatientEuObligations]
-1. [HumanNameEuObligations]
-1. [ObservationEuObligations]
-1. [ServiceRequestEuObligations]
-1. [SpecimenEuObligations]
+1. Patient Obligations ([PatientEuObligations])
+1. Human Name Obligations ([HumanNameEuObligations])
+1. Observation Obligations	[ObservationEuObligations]
+1. ServiceRequest Obligations [ServiceRequestEuObligations]
+1. Specimen Obligations [SpecimenEuObligations]

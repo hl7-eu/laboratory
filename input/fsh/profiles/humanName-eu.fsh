@@ -2,7 +2,7 @@ Profile: HumanNameEu
 Parent: HumanName
 Id: HumanName-eu
 Title: "HumanName (Eu)"
-Description: """European profile on HumanName data type. It includes extensions to support multiple family names."""
+Description: """This profile extends the HumanName data type for supporting multiple family names."""
 /* * ^publisher = "HL7 Europe" */
 * ^purpose = "This profile of the HumanName allows for expressing multiple family names, as requested by some jurisdictions."
 * insert SetFmmandStatusRule ( 1, draft )

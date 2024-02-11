@@ -257,6 +257,18 @@ resources:
     name: A.5 - Results data elements model to this guide
     description: It shows how the A.5 - Results data elements data set defined by the EU eHN guidelines is mapped into this guide.
 
+#-------------------------
+
+  StructureDefinition/Subject:
+    name: A.1.1, A.1.2 - Subject of care
+    description: Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline.
+  
+  StructureDefinition/Order:
+    name: A.2, A.3 - Order
+    description: Order information and reason. Sections A.2 and A.3 of the eHN guideline.
+
+
+#------------------------
   Specimen/Specimen-animal-example:
     name: "Specimen: animal example"
     description: Example of specimen collected from an animal.
@@ -272,6 +284,10 @@ resources:
   Patient/pat-lab-example:
     name: "Patient: example"
     description: Example of Patient conforming this guide.
+
+  Patient/nl-core-NameInformation-complete:
+    name: "Patient: Dutch complete name"
+    description: Example of Patient including a complete Dutch name.
 
   PractitionerRole/prrole-lab-example:
     name: "PractitionerRole: example"
@@ -383,8 +399,8 @@ resources:
 #
 groups:
   eHNGuidelines:
-    name:  eHN Laboratory Guidelines
-    description: Logical models representing the eHN Laboratory Guidelines
+    name:  eHN Laboratory Guidelines (Informative)
+    description: Logical models representing the eHN Laboratory Guidelines. This is informative material.
     resources:
       - StructureDefinition/LabReport
       - StructureDefinition/Subject
@@ -398,8 +414,8 @@ groups:
       - StructureDefinition/Payer
 
   logicalModelsMaps:
-    name:  eHN Logical Model mappings
-    description: Concept Maps describing how the eHN Laboratory Guidelines are supposed to be implemented by using this guide
+    name:  eHN Logical Model mappings (Informative)
+    description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
     resources:
       - ConceptMap/labRpt2FHIR-eu-lab
       - ConceptMap/payer2FHIR-eu-lab
@@ -414,7 +430,7 @@ groups:
 
   obligations:
     name:  Actors and Obligations (Informative)
-    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this verison of the guide. 
+    description: Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide. 
     resources:
       - ActorDefinition/actor-consumer-eu-lab
       - ActorDefinition/actor-creator-eu-lab

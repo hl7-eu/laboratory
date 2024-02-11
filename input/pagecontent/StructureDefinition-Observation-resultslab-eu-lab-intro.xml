@@ -1,0 +1,22 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<div>
+		<blockquote class="stu-note">
+			<p>This profile offers two options to indicate the Certified Reference Material used for the calibration (in general when the UCUM International Units are used for the results [IU]).</p>
+			<p>
+				<ul>
+					<li>The first to be used when the Certified Reference Material is represented by a coded concept</li>
+					<li>The second when the Certified Reference Material is identified with an Identifier.</li>
+				</ul>
+			</p>
+			<p>Adopters are invited to give their feedback about
+				<ol>
+					<li>The most proper way to refer the Certified Reference Material, that is by using an Identifier or a CodeableConcept</li>
+					<li>If a CodeableReference should be used</li>
+					<li>If this information should be an extension of the Observation resource, or of other elements (e.g. DeviceMetric.calibration)</li>
+				</ol>
+			</p>
+		</blockquote>
+	</div>
+</div>

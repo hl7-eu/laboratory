@@ -1,7 +1,7 @@
 Instance: IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883
 InstanceOf: BundleLabReportEu
-Title: "Bundle Converted from CDA"
-Description: "Example of FHIR bundle converted from a CDA Lab report"
+Title: "Bundle: converted from CDA"
+Description: "Example of Laboratory Report (Bundle) converted from a CDA report"
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"

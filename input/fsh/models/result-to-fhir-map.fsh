@@ -77,27 +77,23 @@ Usage: #definition
 * group[=].element[=].target.code = #Observation.code.coding.display					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If the 'code' is the Observation.code. Similar mapping for the other cases."					
+* group[=].element[=].target.comment = "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.
+This element typically  represents the 'full specified  name' designation, compared to the 'short name' of the 'A.5.2.3.3 Observation display name' element.
+It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept."					
 * group[=].element[+].code = #Result.observation.code.originalName					
 * group[=].element[=].display = "A.5.2.3.2 Observation original name"					
 * group[=].element[=].target.code = #Observation.code.text					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If the 'code' is the Observation.code. Similar mapping for the other cases."					
+* group[=].element[=].target.comment = "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases."					
 * group[=].element[+].code = #Result.observation.code.displayName					
 * group[=].element[=].display = "A.5.2.3.3 Observation display name"					
 * group[=].element[=].target.code = #Observation.code.coding.display					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The coding refers to a coded concept different from that used for A.5.2.3.1.
-If the 'code' is the Observation.code. Similar mapping for the other cases."					
-* group[=].element[+].code = #Result.observation.code.displayName					
-* group[=].element[=].display = "A.5.2.3.3 Observation display name"					
-* group[=].element[=].target.code = #Observation.code.coding.display.extension:translation					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "The coding refers to the same coded concept used for A.5.2.3.1.
-If the 'code' is the Observation.code. Similar mapping for the other cases."					
+* group[=].element[=].target.comment = "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.
+This element typically  represents the' short name' designation, compared to the 'full specified name' of the 'A.5.2.3.1 Observation name' element.
+It is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept."					
 * group[=].element[+].code = #Result.observation.method					
 * group[=].element[=].display = "A.5.2.4 Observation method"					
 * group[=].element[=].target.code = #Observation.method					
@@ -122,13 +118,7 @@ If the 'code' is the Observation.code. Similar mapping for the other cases."
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "With device of type DeviceMeasure.
-Thsi resource can be used to capture some information about the setting (including calibration)"					
-* group[=].element[+].code = #Result.observation.device					
-* group[=].element[=].display = "A.5.2.5 Observation device"					
-* group[=].element[=].target.code = #Observation.extension:observation-reagent					
-* group[=].element[=].target.display = ""					
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "When it refers to reagents used for obtaining a specific result"					
+This resource can be used to capture some information about the setting (including calibration)"					
 * group[=].element[+].code = #Result.observation.order					
 * group[=].element[=].display = "A.5.2.8 Order"					
 * group[=].element[=].target.code = #Observation.basedOn					
@@ -177,7 +167,7 @@ If the person responsible for validation:  performer.extension:performerFunction
 * group[=].element[=].target.code = #Observation.text					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be checked"					
+					
 * group[=].element[+].code = #Result.observation.accreditationStatus					
 * group[=].element[=].display = "A.5.2.14 Accreditation status"					
 * group[=].element[=].target.code = #Observation.performer.qualification					
@@ -190,6 +180,18 @@ If the person responsible for validation:  performer.extension:performerFunction
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "performer ofType Organization"					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
+//---END					
 //---END					
 //---END					
 //---END					

@@ -20,6 +20,7 @@ Usage: #example
 Instance: comp-lab-example
 InstanceOf: CompositionLabReportEu
 Usage: #example
+* extension[diagnosticReport-reference].valueReference = Reference(dr-lab-example)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final

@@ -18,6 +18,7 @@ The following picture provide an overview of the origin of the participants.
 | Project facilitator|  Giorgio Cangioli | HL7 IT/Europe |
 | Author |  Alexander Henket   | NICTIZ, HL7 NL |
 | Author |  Robert Hausam   | Hausam Consulting (US) |
+| Author |  Ulrike Merrick  | APHL (US) |
 | Author |  Daniel Karlsson | E-hälsomyndigheten, HL7 SE |
 | Author |  Oliver Egger  |  ahdis, HL7 CH |
 | Author |  Gabriel Kleinoscheg | ELGA, HL7 AT |
@@ -42,7 +43,6 @@ The following picture provide an overview of the origin of the participants.
 | Contributor |  Samuel Danhardt | LU |
 | Contributor |  Mar Matanzo | ES |
 | Contributor |  Philip Brennan | NHS England |
-| Contributor |  Ulrike Merrick  | APHL (US) |
 | Contributor |  Marcel Hanselmann   | HL7 CH |
 | Contributor |  Kristiina Kuldkepp | TEHIK (Estonia) |
 | Contributor |  Rik Smithies | HL7 UK |

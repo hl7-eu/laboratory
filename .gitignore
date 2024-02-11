@@ -40,3 +40,4 @@ ig-template/content/assets/css/.index.json
 ig-template/content/assets/images/.index.json
 ig-template/includes/.index.json
 ig-template/package/.index.json
+*.fsh-bak

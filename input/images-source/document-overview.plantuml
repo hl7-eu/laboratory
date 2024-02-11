@@ -3,6 +3,7 @@
 skinparam linetype ortho
 scale 0.5
 
+
 artifact "Bundle: Laboratory Report" as bundle
 artifact "Composition: Laboratory Report" as composition
 artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
@@ -15,6 +16,13 @@ artifact "ServiceRequest: Laboratory Order" as ServiceRequest
 artifact "Specimen: Laboratory" as Specimen
 artifact "Body structure: Laboratory" as bodyStructure
 artifact "Substance: Specimen Additive Substance" as Substance
+
+artifact Organization
+artifact Encounter
+artifact Location
+artifact Provenance
+artifact Coverage
+artifact Device
 
 
 url of bundle is  [[StructureDefinition-Bundle-eu-lab.html]]
@@ -34,6 +42,7 @@ bundle o-- composition
 bundle o-- diagnosticReport
 bundle o-- result
 bundle o-- humanPatient
+bundle o-- animalPatient
 bundle o-- composition
 bundle o-- Practitioner
 bundle o-- PractitionerRole
@@ -41,6 +50,12 @@ bundle o-- ServiceRequest
 bundle o-- Specimen
 bundle o-- Substance
 bundle o-- bodyStructure
+bundle o-- Organization
+bundle o-- Encounter
+bundle o-- Location
+bundle o-- Provenance
+bundle o-- Coverage
+bundle o-- Device
 
 composition --> result
 composition --> animalPatient
@@ -49,9 +64,17 @@ composition --> Practitioner
 composition --> PractitionerRole
 composition --> ServiceRequest
 composition --> Specimen
+composition --> Location
+composition --> Encounter
+
 
 diagnosticReport --> composition
 Specimen --> Substance
+Specimen --> bodyStructure
 PractitionerRole --> Practitioner
+PractitionerRole --> Organization
+result --> Device
+ServiceRequest --> Coverage
+
 
 @enduml
