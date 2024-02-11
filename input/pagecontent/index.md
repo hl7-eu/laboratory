@@ -47,7 +47,7 @@ This is done by supporting both perspectives (see figure below) requiring the do
 
 ### Navigating the profiles
 
-The following diagrams provide a browseable overview of the profiles specified by this guide.
+The following diagrams provide a browseable overview of the profiles specified by this guide (not all the relationships have been reported).
 
 The first highlights the most relevant relationships starting from the DiagnosticReport ( [DiagnosticReportLabEu] ) resource (REST Perspective).
 

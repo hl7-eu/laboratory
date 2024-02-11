@@ -1,7 +1,7 @@
 ValueSet:      LabSpecimenAdditiveEu
 Id:	       lab-specimenAdditive-eu-lab
-Title:	       "Lab Specimen Additive"
-Description:   "Laboratory specimen additives."
+Title:	       "Specimen Additive"
+Description:   "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis"
 * insert SNOMEDCopyrightForVS
 * ^status = #draft
 * ^experimental = false

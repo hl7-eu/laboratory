@@ -1,7 +1,7 @@
 ValueSet:      LabLateralityEuVs
 Id:	       lab-laterality-eu-lab
-Title:	       "Specimen Body Site Laterality Laboratory"
-Description:   "Laboratory specimen body site [SNOMED CT]"
+Title:	       "Body Structure Laterality"
+Description:   "Body Structure site laterality qualifier. It indicates the the body site laterality from which a laboratory specimen is collected. (based on SNOMED CT)"
 * ^status = #draft
 
 // * ^experimental = false

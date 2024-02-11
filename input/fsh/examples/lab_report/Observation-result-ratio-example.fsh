@@ -1,6 +1,6 @@
 Instance: LabObservtionResultRatio
 InstanceOf: ObservationResultsLaboratoryEu
-Title: "Observation with ratio result type"
+Title: "Observation: ratio example"
 Description: "Example of Observation with ratio result"
 Usage: #example
 

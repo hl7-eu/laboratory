@@ -1,7 +1,7 @@
 ValueSet:      LabSpecimenContainerEu
 Id:	       lab-specimenContainer-eu-lab
-Title:	       "Lab Specimen Container"
-Description:   "Laboratory specimen containers."
+Title:	       "Specimen Container"
+Description:   "List of the containers commonly used to collect specimens (e.g. urine, blood,..)."
 * insert SNOMEDCopyrightForVS
 * ^status = #draft
 * ^experimental = false

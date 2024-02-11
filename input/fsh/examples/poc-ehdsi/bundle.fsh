@@ -1,7 +1,7 @@
 Instance: BundleLabResultReportPOC
 InstanceOf: BundleLabReportEu
-Title: "Bundle Laboratory Result Report for POC"
-Description: "Bundle Laboratory Result Report for POC"
+Title: "Bundle: MyHealth@EU Proof Of Concept"
+Description: "Example of Laboratory Report (Bundle) used in MyHealth@EU Proof Of Concept."
 Usage: #example
 * identifier.system = "http://example.org"
 * identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"

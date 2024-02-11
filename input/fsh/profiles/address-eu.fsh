@@ -3,8 +3,7 @@ Profile:    AddressEu
 Parent:     Address
 Id:         Address-eu
 Title:      "Address (EU)"
-Description: """European profile for the Address data type.
-It includes extensions to support seperate streetname, housenumber and postal box."""
+Description: """This profile extends the Address data typefor supporting streetname, housenumber and postal box."""
 //-------------------------------------------------------------------------------------------
 /* * ^publisher = "HL7 EU"
 * ^version = "1.0.0" */

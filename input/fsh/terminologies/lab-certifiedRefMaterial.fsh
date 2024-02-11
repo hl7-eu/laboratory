@@ -1,7 +1,7 @@
 ValueSet: CertifiedReferenceMaterialVS
 Id: lab-certifiedRefMaterial-eu-lab
-Title: "Certified reference material Value Set"
-Description: "Value set of all codes of the Certified Reference Material code system"
+Title: "Certified Reference Material"
+Description: "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU]."
 
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
