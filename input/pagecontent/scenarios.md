@@ -2,7 +2,7 @@
 
 This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statues should be set**.
 
-These scenarios, in scope for this guide, relate to tests performed and reported by a clinical laboratory in fullfillment of test orders.
+These scenarios, in scope for this guide, relate to tests performed and reported by a clinical laboratory in fulfillment of test orders.
 
 More details on statuses and their relationships are provided in [Laboratory result report status](status-mgmt.html).
 
@@ -28,7 +28,7 @@ In such cases:
 #### Preliminary Laboratory Report
 
 * In some cases, a laboratory might **release a laboratory report** which is either **verified results that are known to change over time.**.
-* This usually occurs for specifi methods that require a long performanceperiod, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for mycobacterium tuberculosis (MTB))
+* This usually occurs for specific methods that require a long performance period, like cultures of slow growing organisms, but intermediate verified results need to be communicated to report recipients due to specific organizational and/or process rules (e.g. culture and susceptibility testing for mycobacterium tuberculosis (MTB))
 
 In such cases: 
 * the report status should be set to "preliminary". 
@@ -40,9 +40,9 @@ In such cases:
 
 In this case:
 
-* The report status used will indicate what modificatins have occurred:
+* The report status used will indicate what modifications have occurred:
   * Status set to “amended” when changes were made to patient demographics or other parts of the report, that don't affect the result value (with units, if applicable) or result interpretation
-  * Status set to “corrected” when changes are made to the the result value (with units, if applicable) or result interpretation
+  * Status set to “corrected” when changes are made to the result value (with units, if applicable) or result interpretation
   * Status set to “appended” when new results or interpretations are being added
 
 #### Cancelled Laboratory Report

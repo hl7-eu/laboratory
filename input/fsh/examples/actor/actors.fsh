@@ -28,7 +28,7 @@ Using includes, but is not limited to, the report display, storage or processing
 Instance: actor-repos-eu-lab
 InstanceOf: ActorDefinition
 Title: "Actor Laboratory Report Repository"
-Description: """Laboratory Report Report Repository: a system maintaining a copy of the received Laboratory Report, to store and make it availaìble for the consumers."""
+Description: """Laboratory Report Report Repository: a system maintaining a copy of the received Laboratory Report, to store and make it available for the consumers."""
 Usage: #example
 
 * url = "http://hl7.eu/fhir/laboratory/actor-repos-eu-lab"
@@ -36,4 +36,4 @@ Usage: #example
 * status = #active
 * type = #system
 // * type = #entity
-* documentation = """This actor represents the Laboratory Report Repositories. That is any system maintaining a copy of the report received, to store and make it availaìble for the consumers."""
+* documentation = """This actor represents the Laboratory Report Repositories. That is any system maintaining a copy of the report received, to store and make it available for the consumers."""
