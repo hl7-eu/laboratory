@@ -25,7 +25,7 @@ The following picture provides a planning overview for the new cross-border serv
 </div>
 
 
-With the future introduction of the [proposed EDSH regulation](https://health.ec.europa.eu/publications/proposal-regulation-european-health-data-space_en) the adoption of a common format for the sharing for these "priority domains"  will not be limited to the cross border services, but it will be likely required to be supported by any EHR in Europe.
+With the future introduction of the [proposed EDSH regulation](https://health.ec.europa.eu/publications/proposal-regulation-European-health-data-space_en) the adoption of a common format for the sharing for these "priority domains"  will not be limited to the cross border services, but it will be likely required to be supported by any EHR in Europe.
 
 Note 1: this "common format" is also known as the European EHR exchange format (E-EHRxF)
 

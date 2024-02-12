@@ -1,6 +1,6 @@
 ValueSet: LaboratoryResultStandardEuVs
 Id: lab-obsCode-eu-lab
-Title: "Laboratory Observation Code"
+Title: "Laboratory Code"
 Description: "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems."
 //-------------------------------------------------------------------------------------------
 // * ^experimental = false

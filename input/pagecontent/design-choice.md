@@ -59,4 +59,4 @@ This choice is justified by the fact that:
 * In R5 the link between the DiagnosticReport and the Composition is realized with a Reference from the DiagnosticReport. The team decided to follow the same design pattern to facilitate the R4 to R5 transition.
 * Adding a reference from the Composition to the DiagnosticReport would create an undesirable circular reference.
 
-However, this choice it is not imposed, so that usage contexts whishing to keep a full consistency with R4 rules, may used the [DiagnosticReportReference] extension to refer the DiagnosticReport from the Composition. The adoption of this extension implies the presence of a circular reference Composition to/form DiagnosticReport.
+However, this choice it is not imposed, so that usage contexts whishing to keep a full consistency with R4 rules, may used the [DiagnosticReportReference] extension to refer the DiagnosticReport from the Composition. The adoption of this extension implies the presence of a circular reference Composition to/from  DiagnosticReport.

@@ -100,7 +100,7 @@ A following state machine diagram describes transitions between statuses.
 
 #### Results: Observation
 
-A laboratory report comprises a set of entries, i.e., the individual results, each of which can be in its own lifecycle stage (that could not be necessarly the same of the overall report).
+A laboratory report comprises a set of entries, i.e., the individual results, each of which can be in its own lifecycle stage (that could not be necessarily the same of the overall report).
 
 This stage could be expressed in the Observation resource using a status code, as described in the table below. The allowed state transitions are reported in the following State machine diagram.
 

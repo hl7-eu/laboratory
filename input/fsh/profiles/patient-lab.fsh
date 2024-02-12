@@ -3,7 +3,7 @@ Parent: Patient
 Id: Patient-eu-lab
 Title:    "Patient: Person"
 Description: """This profile defines how to represent a human Patient in FHIR for the purpose of this guide.
-When the ips-pat-1 invariant is satified \(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\) then this proifle complies with the IPS patient profile."""
+When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\) then this profile complies with the IPS patient profile."""
 
 * insert SetFmmandStatusRule ( 1, draft )
 
