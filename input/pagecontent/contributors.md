@@ -17,42 +17,43 @@ The following picture provide an overview of the origin of the participants.
 | Project facilitator|  Hynek Kružík | HL7 CZ/Europe |
 | Project facilitator|  Giorgio Cangioli | HL7 IT/Europe |
 | Author |  Alexander Henket   | NICTIZ, HL7 NL |
-| Author |  Robert Hausam   | Hausam Consulting (US) |
-| Author |  Ulrike Merrick  | APHL (US) |
+| Author |  Robert Hausam   | Hausam Consulting, US |
+| Author |  Ulrike Merrick  | APHL, US |
 | Author |  Daniel Karlsson | E-hälsomyndigheten, HL7 SE |
 | Author |  Oliver Egger  |  ahdis, HL7 CH |
 | Author |  Gabriel Kleinoscheg | ELGA, HL7 AT |
-| Author |  Declan Kieran | NHS England |
-| Author |  Manel Domingo | MoH Spain |
-| Author |  Petra Lavrikova | CZ |
-| Author |  Gunnar Nordin | SE |
-| Author |  Sara Russo | PT |
-| Author |  Feikje Hielkema | NL |
+| Author |  Declan Kieran | NHS England, UK |
+| Author |  Manel Domingo | MoH Spain, SP |
+| Author |  Petra Lavrikova | NCEZ MoH Czech, CZ |
+| Author |  Gunnar Nordin | Equalis, SE |
+| Author |  Sara Russo | SPMS, PT |
+| Author |  Feikje Hielkema | NICTIZ, NL |
 | Author |  Karolina Buckow | DE |
-| Author |  Kerli Linna | EE |
-| Author |  Eugenia Rinaldi | DE |
+| Author |  Kerli Linna | TEHIK, EE |
+| Author |  Eugenia Rinaldi | Charité (Univ. Med. Berlin), DE |
+| Author |  Ferruccio Ceriotti | Policlinico di Milano, IT |
 | Contributor |  Michaela Ziegler | ahdis, HL7 CH |
 | Contributor |  Rasa Visinskiene | MyHealth@EU  Solution Providers |
 | Contributor |  Mathias Ghys | MyHealth@EU  Solution Providers |
 | Contributor |  João Almeida  |  HL7 PT/Europe |
 | Contributor |  Kai U. Heitmann  | HL7 DE |
 | Contributor |  Jose Costa-Teixeira | HL7 BE |
-| Contributor |  Dennis Kipping | mio42 (DE) |
+| Contributor |  Dennis Kipping | mio42, DE |
 | Contributor |  Jeremy Lieth | DE |
 | Contributor |  Leonardo Alcaro | DIT, HL7 IT |
 | Contributor |  Samuel Danhardt | LU |
 | Contributor |  Mar Matanzo | ES |
 | Contributor |  Philip Brennan | NHS England |
 | Contributor |  Marcel Hanselmann   | HL7 CH |
-| Contributor |  Kristiina Kuldkepp | TEHIK (Estonia) |
+| Contributor |  Kristiina Kuldkepp | TEHIK, EE |
 | Contributor |  Rik Smithies | HL7 UK |
 | Contributor |  Petr Siblík | HL7 CZ |
-| Contributor |  Nathalie Nikodym | Nictiz (NL) |
+| Contributor |  Nathalie Nikodym | Nictiz, NL |
 | Contributor |  Dave Barnet | NHS England |
-| Contributor |  Karim Nashar | Stretford, NHS England |
+| Contributor |  Karim Nashar | NHS England |
 | Contributor |  Adam Page | NHS England |
 | Contributor |  Stefano Dalmiani | F. Monasterio, HL7 IT |
-| Contributor |  Juergen Brandstaetter | AT |
+| Contributor |  Juergen Brandstaetter | CodeWerk, AT |
 | Contributor |  Juan Antonio de los Cobos | MoH Spain |
 
 

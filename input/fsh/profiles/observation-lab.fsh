@@ -69,6 +69,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * specimen only Reference(SpecimenEu)
   * ^comment = "When the specimen is applicable and known it shall be documented"
 // * hasMember only Reference(ObservationResultsLaboratoryEu or ObservationResultsEu)
+* device ^short = "Device"
 * hasMember only Reference(ObservationResultsLaboratoryEu)
 * hasMember ^definition = "A reference to another Observation profiled by Observation-results-laboratory-uv-ips. The target observation (for instance an individual test member of a panel) is considered as a sub-observation of the current one, which plays the role of a grouper."
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."

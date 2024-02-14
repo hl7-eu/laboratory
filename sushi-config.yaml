@@ -14,8 +14,8 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
   name:  HL7 Europe
- # url: http://hl7.eu
-  url: http://hl7.org/Special/committees/eu
+  url: http://hl7.eu
+ # url: http://hl7.org/Special/committees/hl7-eu
   # email: test@example.org
 copyright: >-
   Used by permission of HL7 Europe, all rights reserved Creative Commons License
