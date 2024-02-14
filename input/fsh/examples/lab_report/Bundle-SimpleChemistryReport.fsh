@@ -101,7 +101,13 @@ Usage: #inline
 * section[lab-subsections].section[=].code.text = "ESAMI DELLE URINE"
 * section[lab-subsections].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
+* section[lab-subsections].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
+<thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
+
+<tbody>
+<tr><td>2023-03-27</td><td>Urea (U) [Moles/Vol]</td><td>310</td><td>mmol/L</td><td> 67 - 580 mmol/L</td></tr>
+</tbody>
+</table></div>"
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 
 * section[lab-subsections].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
@@ -109,7 +115,14 @@ Usage: #inline
 * section[lab-subsections].section[=].code.text = "Examination of blood"
 * section[lab-subsections].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>20</td><td/><td>mg/L</td><td> 0 - 20 </td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
+* section[lab-subsections].section[=].text.div = 
+"<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
+<thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
+<tbody>
+<tr><td>2023-03-27</td><td>Sodium (Bld) [Moles/Vol]</td><td>156 +- 0.1</td><td>umol/L</td><td> 136 - 144 umol/L</td></tr>
+</tbody>
+</table></div>"
+
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-5679723c-4fae-4ba7-9f09-5438a827bfda
