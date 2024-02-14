@@ -52,7 +52,7 @@ Title: "Bundle: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, active)
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
 

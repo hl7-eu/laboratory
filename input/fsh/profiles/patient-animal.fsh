@@ -6,7 +6,7 @@ Description: """This profile defines how to represent an Animal as subject of ca
 This is used to identify the species when a specimen is collected from an animal"""
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, active)
 * extension contains $patient-animal named patient-animal 1..1
 * extension[patient-animal].extension[species]
 * extension contains $recordedSexOrGender named recordedSexOrGender 0..1
