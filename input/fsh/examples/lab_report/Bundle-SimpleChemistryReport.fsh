@@ -1,7 +1,7 @@
 Instance: SimpleChemistryResultReport
 InstanceOf: BundleLabReportEu
-Title: "Bundle: one section"
-Description: """Example of Laboratory Report (Bundle) including one section with a single Chemistry study type and two observations expressed in LOINC and with Czech national codes.
+Title: "Bundle: two sections"
+Description: """Example of Laboratory Report (Bundle) including two sections with a single observations expressed in LOINC and with Czech national codes.
 Note: this example merges results from a Czech report example with header information from an Italian one, please do not focus on possible inconsistencies between these two parts."""
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.51.1.1"
