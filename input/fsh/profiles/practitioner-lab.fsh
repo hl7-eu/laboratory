@@ -9,7 +9,7 @@ Title:    "Practitioner: Laboratory Report"
 Description: "This profile defines how to represent Practitioners in FHIR for the purpose of the  HL7 Europe project."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, active)
 //-------------------------------------------------------------------------------------------
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -20,5 +20,5 @@ Title:    "PractitionerRole: Laboratory Report"
 Description: "This profile defines how to represent Practitioners (with their roles) in FHIR for the purpose of the  HL7 Europe project."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, active)
 //-------------------------------------------------------------------------------------------
