@@ -64,8 +64,10 @@ pages:
     title: Design choices
   challenges.md:
     title: Challenges
-#  examples.md:
-#    title: Examples
+  notes.md:
+    title: Implementation notes
+  crm.md:
+    title: Certified reference material
   downloads.md:
     title: Downloads
   logicalModel.md:
