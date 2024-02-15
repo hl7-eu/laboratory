@@ -4,7 +4,7 @@ Id: ServiceRequest-eu-lab
 Title: "ServiceRequest: Laboratory Order"
 Description: """This profile defines how to represent an laboratory orders using the HL7 FHIR ServiceRequest for the purpose of this guide."""
 
-* insert SetFmmandStatusRule ( 2, active)
+* insert SetFmmandStatusRule ( 2, trial-use)
 
 * . ^short = "Laboratory Order"
 * . ^definition = "Laboratory Order composition."

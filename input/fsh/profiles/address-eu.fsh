@@ -8,7 +8,7 @@ Description: """This profile extends the Address data type for supporting street
 /* * ^publisher = "HL7 EU"
 * ^version = "1.0.0" */
 * ^experimental = false
-* insert SetFmmandStatusRule ( 2, active)
+* insert SetFmmandStatusRule ( 2, trial-use)
 * line.extension ^slicing.discriminator.type = #value
 * line.extension ^slicing.discriminator.path = "url"
 * line.extension ^slicing.rules = #open

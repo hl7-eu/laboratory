@@ -5,7 +5,7 @@ Title: "Specimen: Laboratory"
 Description: """This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide."""
 * ^status = #draft
 
-* insert SetFmmandStatusRule ( 2, active)
+* insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 

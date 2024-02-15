@@ -5,7 +5,7 @@ Title: "HumanName (Eu)"
 Description: """This profile extends the HumanName data type for supporting multiple family names."""
 /* * ^publisher = "HL7 Europe" */
 * ^purpose = "This profile of the HumanName allows for expressing multiple family names, as requested by some jurisdictions."
-* insert SetFmmandStatusRule ( 2, active)
+* insert SetFmmandStatusRule ( 2, trial-use)
 
 * family ^example.label = "spanish name"
 * family ^example.valueString = "Valero Iglesias"
