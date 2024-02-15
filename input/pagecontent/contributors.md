@@ -32,13 +32,15 @@ The following picture provide an overview of the origin of the participants.
 | Author |  Karolina Buckow | DE |
 | Author |  Kerli Linna | TEHIK, EE |
 | Author |  Eugenia Rinaldi | Charité (Univ. Med. Berlin), DE |
+| Author |  David Barnet | NHS England, UK |
 | Contributor |  Michaela Ziegler | ahdis, HL7 CH |
 | Contributor |  Rasa Visinskiene | MyHealth@EU  Solution Providers |
 | Contributor |  Mathias Ghys | MyHealth@EU  Solution Providers |
 | Contributor |  João Almeida  |  HL7 PT/Europe |
 | Contributor |  Kai U. Heitmann  | HL7 DE |
-| Contributor |  Jose Costa-Teixeira | HL7 BE |
+| Contributor |  Martina Sender | mio42, DE |
 | Contributor |  Dennis Kipping | mio42, DE |
+| Contributor |  Jose Costa-Teixeira | HL7 BE |
 | Contributor |  Jeremy Lieth | DE |
 | Contributor |  Leonardo Alcaro | DIT, HL7 IT |
 | Contributor |  Samuel Danhardt | LU |
@@ -49,16 +51,14 @@ The following picture provide an overview of the origin of the participants.
 | Contributor |  Rik Smithies | HL7 UK |
 | Contributor |  Petr Siblík | HL7 CZ |
 | Contributor |  Nathalie Nikodym | Nictiz, NL |
-| Contributor |  Dave Barnet | NHS England |
-| Contributor |  Karim Nashar | NHS England |
-| Contributor |  Adam Page | NHS England |
+| Contributor |  Karim Nashar | NHS England, UK |
+| Contributor |  Adam Page | NHS England, UK |
 | Contributor |  Stefano Dalmiani | F. Monasterio, HL7 IT |
 | Contributor |  Juergen Brandstaetter | CodeWerk, AT |
-| Contributor |  Juan Antonio de los Cobos | MoH Spain |
+| Contributor |  Juan Antonio de los Cobos | MoH Spain, SP |
 
 
-**Participants**: | Marta Burek (MedCom DK); Jean Michel Polfliet (eGezondheid/eSanté Belgium); Bart Decuypere (HL7 BE);
-Frédéric Bulckaen (MyHealth@EU  Solution Providers); Prerna Arora (MyHealth@EU  Solution Providers);
+**Participants**: | Mariuo Sicuranza (CNR IT); Mario Ciampi (CNR IT); Marta Burek (MedCom DK); Jean Michel Polfliet (eGezondheid/eSanté Belgium); Bart Decuypere (HL7 BE); Frédéric Bulckaen (MyHealth@EU  Solution Providers); Prerna Arora (MyHealth@EU  Solution Providers);
 François Macary (HL7 FR); Renato Calamai (HL7 IT); Rebeca Ceder (SE);
 Sanchita Farruque (SE); Jagjit Singh Bhamra (NO); Simreen Kaur Johal(NO);
 Marte Espnes Temre (NO); Jostein Ven (NO); Samuel Danhardt (LU);
