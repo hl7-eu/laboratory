@@ -26,12 +26,12 @@ The following picture provide an overview of the origin of the participants.
 | Author |  Manel Domingo | MoH Spain, SP |
 | Author |  Petra Lavrikova | NCEZ MoH Czech, CZ |
 | Author |  Gunnar Nordin | Equalis, SE |
+| Author |  Ferruccio Ceriotti | Policlinico di Milano, IT |
 | Author |  Sara Russo | SPMS, PT |
 | Author |  Feikje Hielkema | NICTIZ, NL |
 | Author |  Karolina Buckow | DE |
 | Author |  Kerli Linna | TEHIK, EE |
 | Author |  Eugenia Rinaldi | Charité (Univ. Med. Berlin), DE |
-| Author |  Ferruccio Ceriotti | Policlinico di Milano, IT |
 | Contributor |  Michaela Ziegler | ahdis, HL7 CH |
 | Contributor |  Rasa Visinskiene | MyHealth@EU  Solution Providers |
 | Contributor |  Mathias Ghys | MyHealth@EU  Solution Providers |
