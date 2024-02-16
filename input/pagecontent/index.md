@@ -28,7 +28,7 @@ The goal of this Implementation Guide is to define an European standard for the 
 
 This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
 
-The aspiration of this guide is that of being used as basis for European National Guides, the Euroepan EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
+The aspiration of this guide is that of being used as basis for European National Guides, the European EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
 
 ### Background
 

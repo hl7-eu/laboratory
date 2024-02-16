@@ -76,6 +76,8 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
+  knownIusses.md:
+    title: Known Issues
  # overview.md:
  #   title: Profiles overview
 
@@ -164,6 +166,7 @@ menu:
   About:
     Downloads: downloads.html
     Authors and contributors: contributors.html
+    Known Issues: knownIusses.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
