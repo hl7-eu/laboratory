@@ -22,10 +22,11 @@ Most of the international conventional calibrators of WHO are available via its 
 
 Some examples (in plain text, without the specific syntax used by LOINC and NPU) to describe what is measured in a laboratory test.
 
-The concentration of insulin in a sample is 50 mIU/L with reference to IS 66/304 (https://www.nibsc.org/documents/ifu/66-304.pdf)
-The concentration of ferritin in a sample is 25 µg/L with reference to IS 19/118 (https://nibsc.org/documents/ifu/19-118.pdf)
-The concentration of albumin in a sample is 45 g/L with reference to ERM-DA470k/IFCC (https://www.jctlmdb.org/#/app/home)
-The concentration of PSA in the sample is 6,8 µg/L with reference to IS 17/100 (https://www.nibsc.org/documents/ifu/17-100.pdf)
+* [The concentration of insulin in a sample is 50 mIU/L with reference to IS 66/304](Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.html) (https://www.nibsc.org/documents/ifu/66-304.pdf)
+* The concentration of ferritin in a sample is 25 µg/L with reference to IS 19/118 (https://nibsc.org/documents/ifu/19-118.pdf)
+* The concentration of albumin in a sample is 45 g/L with reference to ERM-DA470k/IFCC (https://www.jctlmdb.org/#/app/home)
+* The concentration of PSA in the sample is 6,8 µg/L with reference to IS 17/100 (https://www.nibsc.org/documents/ifu/17-100.pdf)
+
 Secondary certified reference materials and international conventional calibrators are usually produced from material of human origin like blood or serum, and they are therefore available in a limited stock that will eventually be depleted.
 
 Certified secondary reference materials for which the analyte is well-defined can be reproduced. The value can either be transferred (1) from the old batch to a new one or (2) from the primary certified reference material using the reference measurement procedure. If the process is done correctly and if commutability of both the old and the new batch is guaranteed the new batch of CRMs does not lead to a shift of values of the IVD-MPs.
