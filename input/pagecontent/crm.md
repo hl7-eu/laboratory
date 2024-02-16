@@ -34,10 +34,13 @@ Certified secondary reference materials for which the analyte is well-defined ca
 For international conventional calibrators containing a complex and ill- defined mixture of isoforms reproduction can be more challenging. New stocks might have a different mixture of isoforms and the composition of the analyte will therefore be redefined with the new batches and a new value with a measurement unit will be assigned. Therefore, a shift of value in the IVD-MPs is usually observed, making comparison of measurement values unsafe when they are traceable to different international conventional calibrators.
 
 
-References:
+### References:
 
 BIPM. VIM: International vocabulary of metrology – Basic and general concepts and associated terms, 3rd edition (2012),(https://www.bipm.org/en/committees/jc/jcgm/publications)
 
 EC regulation (EU) 2017/746
 
-ISO. In vitro diagnostic medical devices — Requirements for establishing metrological traceability of values assigned to calibrators, trueness control materials and human samples. ISO17511. 2nd edition. 2020.
+ISO. In vitro diagnostic medical devices — Requirements for establishing metrological traceability of values assigned to calibrators, trueness control materials and human samples. ISO 17511:2020.
+
+ISO. In vitro diagnostic medical devices — Measurement of quantities in samples of biological origin. Requirements for certified reference materials and the content of supporting documentation. ISO 15194:2009.
+ 
