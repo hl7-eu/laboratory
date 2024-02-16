@@ -17,7 +17,7 @@ This extension should be used when the unit is UCUM [IU]."""
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Observation)
 * value[x] only CodeableConcept
-* value[x] from CertifiedReferenceMaterialVS (preferred)
+* value[x] from LabCertifiedReferenceMaterialVS (preferred)
 
 Extension: ObservationCertifiedRefMaterialIdentifer
 Id:   observation-certifiedRefMaterialIdentifer
