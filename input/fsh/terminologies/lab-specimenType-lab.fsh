@@ -2,12 +2,10 @@ ValueSet:      LabSpecimenTypesEuVs
 Id:	       lab-specimenType-eu-lab
 Title:	       "Specimen Types"
 Description:   """Laboratory Specimen Types"""
-* ^status = #draft
-// * ^experimental = false
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+
+
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, trial-use)
 * $sct#119376003	"Tissue specimen"
 * $sct#119359002	"Bone marrow specimen"
 * $sct#122571007	"Pericardial fluid"

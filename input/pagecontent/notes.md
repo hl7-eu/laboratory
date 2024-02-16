@@ -10,4 +10,4 @@ An optional R5 extension of the observation (Observation.triggeredBy-r5) has bee
 
 ### Representation of the microbiology tests
 
-Microbiology tests are often being performed in consecutive steps, e.g. cultivation, possible quantification and subsequent sensitivity testing to antibiotics. Each analytical step depends on the result of the previous step or steps. Current version of the HL7 Europe Laboratory Report Implementation Guide recommends to use Observation.hasMember reference to express causality of the tests performed by the laboratory as shown in the [Microbiology result report example](Bundle-MicroCultureSuscLabResultDetailed.html).
+Microbiology tests are often being performed in consecutive steps, e.g. cultivation, possible quantification and subsequent sensitivity testing to antibiotics. Each analytical step depends on the result of the previous step or steps. Current version of the HL7 Europe Laboratory Report Implementation Guide recommends to use Observation.hasMember reference to express causality of the tests performed by the laboratory as shown in the [Microbiology Culture + Susceptibility](Bundle-BundleLabResultMicroCultureSusc.html).

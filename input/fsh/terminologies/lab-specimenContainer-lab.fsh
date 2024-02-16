@@ -2,9 +2,10 @@ ValueSet:      LabSpecimenContainerEu
 Id:	       lab-specimenContainer-eu-lab
 Title:	       "Specimen Container"
 Description:   "List of the containers commonly used to collect specimens (e.g. urine, blood,..)."
+
 * insert SNOMEDCopyrightForVS
-* ^status = #draft
-* ^experimental = false
+* insert SetFmmandStatusRule ( 2, trial-use)
+
 * $sct#702290003	"Cervical cytology microscopy slide"
 * $sct#706057008	"Cytology specimen container"
 * $sct#706052002	"Evacuated blood collection tube"

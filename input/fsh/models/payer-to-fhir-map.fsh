@@ -4,7 +4,7 @@
 Instance: payer2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+* insert SetFmmandStatusRuleInstance( 2, informative)					
 * name = "Payer2Fhir"					
 * title = "eHN Payer to this guide Map"					
 * status = #draft					

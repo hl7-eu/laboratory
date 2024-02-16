@@ -5,6 +5,7 @@ Logical: SpecimenLabEhn
 Id: SpecimenLab				
 Title: "A.4 - Specimen information"				
 Description:  """Specimen information. Section A4 of the eHN guideline."""				
+* insert SetFmmandStatusRule( 2, informative)				
 * identifier 0..1 Identifier "A.4.1 Specimen identifier" """An identifier of the specimen which is unique within in a defined scope. Example: identifier assigned by Specimening system, identifier assigned by laboratory etc. Multiple identifiers can be used. - Preferred system(s): """				
 * speciesType 0..* CodeableConcept "A.4.2 Type of species" """Biologic type of species for laboratory result reports bound to non-human subjects. - Preferred system(s): SNOMED CT"""				
 * material 0..* CodeableConcept "A.4.3 Material" """Specimen material. - Preferred system(s): SNOMED CT"""		 		
@@ -29,9 +30,9 @@ Description:  """Specimen information. Section A4 of the eHN guideline."""
 				
 				
 				
-// -------------------------------------------------------------------------------				
-//  Map to FHIR R4				
-// -------------------------------------------------------------------------------				
+				
+				
+				
 				
 				
 				

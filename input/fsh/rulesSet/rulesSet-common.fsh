@@ -9,6 +9,11 @@ RuleSet: SetFmmandStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 
 
+RuleSet: SetFmmandStatusRuleInstance ( fmm, status )
+// Rule to be used for Instances
+* extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
+* extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
+
 RuleSet: SectionComRules (short, def, code)
 
 // * insert (Health Concern Section, test, http://loinc.org#75310-3)
@@ -69,6 +74,16 @@ RuleSet: SNOMEDCopyrightForVS
 RuleSet: LOINCCopyrightForVS
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = false
+
+RuleSet: NPUCopyrightForVS
+* ^copyright = "This material contains content from NPU Terminology (http://npu-terminology.org). NPU is copyright International Federation of Clinical Chemistry (IFCC) and International Union of Pure and Applied Chemistry (IUPAC) and is available at no cost under the license at blob:https://www.labterm.dk/0472bc56-3aa1-484d-a377-92a3db82b559."
+* ^experimental = false
+
+RuleSet: JCTLMCopyrightForVS
+* ^copyright = "This material contains content from JCTLM Database (https://www.jctlmdb.org). The JCTLM Database is copyright Joint Committee for Traceability in Laboratory Medicine (JCTLM)."
+* ^experimental = false
+
+
 
 RuleSet: ObligationActorAndCode(actor, code)
 * ^extension[$obligation][+].extension[code].valueCode = {code}

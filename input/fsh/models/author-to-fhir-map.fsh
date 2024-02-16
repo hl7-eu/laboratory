@@ -4,7 +4,8 @@
 Instance: author2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-// * url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"					
+
+* insert SetFmmandStatusRuleInstance ( 2, informative)					
 * name = "LabRptAuthor2FHIR"					
 * title = "eHN Author to this guide Map"					
 * status = #draft					

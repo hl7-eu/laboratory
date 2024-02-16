@@ -5,6 +5,7 @@ Logical: OrderLabEhn
 Id: Order				
 Title: "A2, A3 - Order"				
 Description:  """Order information and reason. Sections A2 and A3 of the eHN guideline."""				
+* insert SetFmmandStatusRule( 2, informative)				
 * orderDetails 0..1 BackboneElement "A.2 Order information" """A.2 Order information (Laboratory Result Report could respond to multiple test orders) """				
 * orderDetails.identifier 0..* Identifier "A.2.1 Order Id" """An identifier of the laboratory test order. Laboratory Result Report may respond to multiple orders."""				
 * orderDetails.dateTime 0..* dateTime "A.2.2 Order date and time" """Date and time of the order placement. - Preferred system(s): ISO 8601"""		 		
@@ -30,9 +31,9 @@ Description:  """Order information and reason. Sections A2 and A3 of the eHN gui
 				
 				
 				
-// -------------------------------------------------------------------------------				
-//  Map to FHIR R4				
-// -------------------------------------------------------------------------------				
+				
+				
+				
 				
 				
 				

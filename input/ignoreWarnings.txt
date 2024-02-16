@@ -1,60 +1,11 @@
 == Suppressed Messages ==
-
-#  example implemented but not recognized
-#  === http:​/​/hl7​.eu​/fhir​/laboratory​/StructureDefinition​/HumanName-obl-eu-lab
-
-The Implementation Guide contains no examples for this data type profile
-
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# Warnings referred to an Obligation profile
-The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
-The Implementation Guide contains no examples for this profile
 
-# Not recognized NPU system
-Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
-Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-result-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
-
-# Pre adoption of R5 rules for Document Bundles
-%isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)%
-
-# no expansion available
-The value set expansion is incomplete
-
-# Reference to draft CodeSystem
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
-
-# === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
-Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
-Unknown System 'http://jctlm.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://jctlm.org' could not be found, so the code cannot be validated)
-%Error from http://tx.fhir.org/r4: Unable to provide support for code system http://nibsc.org%
-
-# New warning introduced by the publisher
-# see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
-
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
-
-# == fsh-generated\resources\Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.json ==
-# Local code systems
-
-== fsh-generated\resources\ValueSet-lab-obsCode-eu-lab.json ==
-WARNING: ValueSet.where(id = 'lab-obsCode-eu-lab'): Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
-
-# == fsh-generated\resources\Bundle-SimpleChemistryResultReport.json ==
-
-
-# Local code systems
-INFORMATION: Bundle/SimpleChemistryResultReport: Bundle.entry[0].resource/*Composition/26032a57-083a-4ddf-b019-e566ae02f740*/.section[0].section[0].code.coding[1]: Code System URI 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' is unknown so the code cannot be validated
-
-# The validator interprets the presence of ( ) in the designation as FSN, but in this case it is not an FSN
-
-# == fsh-generated\resources\ValueSet-lab-specimenContainer-eu-lab.json ==
-INFORMATION: ValueSet/lab-specimenContainer-eu-lab: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
-
-
-# usage of locally defined example coded concepts
+# == http:​/​/hl7​.eu​/fhir​/laboratory​/StructureDefinition​/HumanName-obl-eu-lab
+The Implementation Guide contains no examples for this data type profile
 
 # == fsh-generated\resources\Bundle-BundleHepatitisPanel.json ==
 
@@ -69,3 +20,36 @@ A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.5.1.88' could not be 
 # == fsh-generated\resources\Bundle-SimpleChemistryResultReport.json ==
 
 A definition for CodeSystem 'urn:oid:1.2.203.24341.11.2.2' could not be found, so the code cannot be validated
+
+# == fsh-generated\resources\ValueSet-lab-obsCode-eu-lab.json ==
+WARNING: ValueSet.where(id = 'lab-obsCode-eu-lab'): Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
+
+
+# == fsh-generated\resources\ValueSet-lab-specimenContainer-eu-lab.json ==
+INFORMATION: ValueSet/lab-specimenContainer-eu-lab: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
+
+# === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
+Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
+Unknown System 'http://jctlm.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://jctlm.org' could not be found, so the code cannot be validated)
+%Error from http://tx.fhir.org/r4: Unable to provide support for code system http://nibsc.org%
+
+# Not recognized NPU system
+Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
+
+# Pre adoption of R5 rules for Document Bundles
+%isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)%
+
+# no expansion available
+The value set expansion is incomplete
+
+# Reference to draft CodeSystem
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
+
+
+# New warning introduced by the publisher see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
+
+The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+
+# Warnings referred to an Obligation profile
+The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
+The Implementation Guide contains no examples for this profile

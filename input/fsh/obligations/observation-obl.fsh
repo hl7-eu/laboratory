@@ -4,7 +4,7 @@ Id: Observation-obl-eu-lab
 Title:    "Observation: Obligations"
 Description: "This profile defines obligations for Observation in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert SetFmmandStatusRule ( 0, informative)
 
 // * extension[analysis-time] insert ObligationSet1
 * extension[supportingInfo] insert ObligationSet2

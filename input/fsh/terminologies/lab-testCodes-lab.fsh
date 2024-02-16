@@ -6,5 +6,6 @@ Description: "Laboratory observation codes. List of Laboratory observation codes
 // * ^experimental = false
 
 * insert LOINCCopyrightForVS
+* insert SetFmmandStatusRule ( 2, trial-use)
 * codes from valueset NpuVs
 * codes from valueset LoincVs
