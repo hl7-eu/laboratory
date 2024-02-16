@@ -2,9 +2,10 @@ ValueSet:      LabSpecimenAdditiveEu
 Id:	       lab-specimenAdditive-eu-lab
 Title:	       "Specimen Additive"
 Description:   "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis"
-* insert SNOMEDCopyrightForVS
 
-* ^experimental = false
+* insert SNOMEDCopyrightForVS
+* insert SetFmmandStatusRule ( 2, trial-use)
+
 * $sct#1259913003   "Heparin ammonium"
 * $sct#386961008    "Aprotinin"
 * $sct#29725000 "Heparin calcium"

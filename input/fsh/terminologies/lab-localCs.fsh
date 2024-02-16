@@ -4,10 +4,9 @@ Title: "Laboratory Code: example"
 Description: "List of local coded concepts used for supporting the examples defined in this guide."
 * ^url = "http://example.org/lab-codes"
 * ^experimental = true
-/* * ^version = "0.0.1" */
-* ^status = #active
 * ^content = #complete // #example
 * ^caseSensitive = false
+* insert SetFmmandStatusRule ( 1, informative)
 * #3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * #0020089 "Hepatitis B Surface Antigen"
 * #0020092 "Hepatitis B Core Antibody, IgM"

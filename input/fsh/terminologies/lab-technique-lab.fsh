@@ -4,10 +4,6 @@ Title:	       "Laboratory Techniques"
 Description:   "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT)."
 
 
-// * ^experimental = false
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
-
 * insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)
 

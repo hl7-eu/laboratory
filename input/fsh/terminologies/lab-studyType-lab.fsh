@@ -9,9 +9,7 @@ Note 2:Mycology and parasitology, as well as bacteriology, are part of the 18725
 Note 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.
 """
 
-// * ^experimental = false
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+
 * insert LOINCCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)
 
