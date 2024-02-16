@@ -28,3 +28,12 @@ This extension should be used when the unit is UCUM [IU]."""
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Observation)
 * value[x] only Identifier
+
+Extension: DeviceLabTestKit
+Id:   observation-deviceLabTestKit
+Title:  "Device Laboratory Test Kit"
+Description: """This extension links this observation with the laboratory test kit used for this test.
+ Usually only one laboratory test kit is referred""" 
+// publisher, contact, and other metadata here using caret (^) syntax (omitted)
+* insert ExtensionContext(Observation)
+* value[x] only Reference(Device)
