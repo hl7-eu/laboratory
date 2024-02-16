@@ -2,14 +2,14 @@ ValueSet:      LabTechniqueEuVs
 Id:	       lab-technique-eu-lab
 Title:	       "Laboratory Techniques"
 Description:   "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT)."
-* ^status = #draft
+
 
 // * ^experimental = false
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, trial-use)
 
 // not in this SCT version => * $sct#62841000052105	"Audiogram (qualifier value)"
 // not in this SCT version => * $sct#65831000052108	"Point-of-care analysis (qualifier value)"

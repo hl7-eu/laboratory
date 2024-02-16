@@ -11,7 +11,7 @@ Note 3: In case of documented need, this value set could be extended."""
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, trial-use)
 * $sct#394596001    "Chemical pathology"
 * $sct#394916005    "Hematopathology"
 * $sct#421661004    "Blood banking and transfusion medicine"

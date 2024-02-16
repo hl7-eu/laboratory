@@ -1,7 +1,4 @@
-### Certified Reference Material
-
-#### Traceability to reference materials of higher order
-by Gunnar Nordin
+### Traceability to reference materials of higher order
 
 Any measurement depends on a comparison between an unknown amount – for the clinical laboratory the unknown is usually hidden in a sample – and something with a known amount. This process is called calibration and to ensure correct outcome the EC regulation (EU) 2017/746 demands that the calibrators used in the in vitro diagnostic measuring procedure (IVD-MP) have an assigned amount that are traceable to reference materials of “higher order”.
 

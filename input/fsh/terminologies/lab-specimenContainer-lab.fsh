@@ -3,7 +3,7 @@ Id:	       lab-specimenContainer-eu-lab
 Title:	       "Specimen Container"
 Description:   "List of the containers commonly used to collect specimens (e.g. urine, blood,..)."
 * insert SNOMEDCopyrightForVS
-* ^status = #draft
+
 * ^experimental = false
 * $sct#702290003	"Cervical cytology microscopy slide"
 * $sct#706057008	"Cytology specimen container"

@@ -1,7 +1,7 @@
 Instance: actor-creator-eu-lab
 InstanceOf: ActorDefinition
 Title: "Actor Laboratory Report Creator"
-Description: """Laboratory Report Creator: a system generating and sending/providing a Laboratory Report to a Consumer or to a Repository for report storage and sharing. ."""
+Description: """Laboratory Report Creator: a system generating and sending/providing a Laboratory Report to a Consumer or to a Repository for report storage and sharing."""
 Usage: #example
 
 * url = "http://hl7.eu/fhir/laboratory/actor-creator-eu-lab"
@@ -9,7 +9,7 @@ Usage: #example
 * status = #active
 * type = #system
 // * type = #entity
-* documentation = """This actor represents the Laboratory Report creators. That is the actor creating the report that can be send to a consumer or to a repository for report storage and sharing. ."""
+* documentation = """This actor represents the Laboratory Report creators. That is the actor creating the report that can be send to a consumer or to a repository for report storage and sharing."""
 
 Instance: actor-consumer-eu-lab
 InstanceOf: ActorDefinition

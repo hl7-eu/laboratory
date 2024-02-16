@@ -13,7 +13,7 @@ Note 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SE
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
 * insert LOINCCopyrightForVS
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmandStatusRule ( 2, trial-use)
 
 // Following set of codes represent agreement between several EU member states on common set of laboratory study types. Other codes from XD-LAB profile were commented out.
 * $loinc#18717-9 "Blood bank studies (set)"

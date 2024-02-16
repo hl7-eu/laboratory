@@ -5,6 +5,7 @@ Logical: LabReportEhn
 Id: LabReport				
 Title: "A - Laboratory Report"				
 Description:  """Laboratory Report. eHN guideline model."""				
+* insert SetFmmandStatusRule( 2, informative)				
 * header 1..1 BackboneElement "A.1 Report header data elements" """A.1 Report header data elements"""				
 * header.subject 1..1 http://hl7.eu/fhir/laboratory/StructureDefinition/Subject "A.1.1 - A1.2 Patient/subject" """A.1.1 Identification of the patient/subject and A.1.2 Patient/subject related contact information  """				
 * header.payer 0..1 http://hl7.eu/fhir/laboratory/StructureDefinition/Payer "A.1.3 Health insurance and payment information" """A.1.3 Health insurance and payment information"""				

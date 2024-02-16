@@ -5,6 +5,7 @@ Logical: SubjectLabEhn
 Id: Subject				
 Title: "A1.1, A1.2 - Subject of care"				
 Description:  """Patient or Subject of care. Sections A1.1 and A1.2 of the eHN guideline."""				
+* insert SetFmmandStatusRule( 2, informative)				
 * identification 1..1 BackboneElement "A.1.1 Identification of the patient/subject" """A.1.1 Identification of the patient/subject"""				
 * identification.familyName 0..* string "A.1.1.1 Familyname/surname" """The family name/surname/last name of the patient. This field can contain more than one element or multiple fields could be present."""				
 * identification.givenName 0..* string "A.1.1.2 Given name" """The given name/first name of the patient (also known as forename or first name). This field can contain more than one element. """		 		

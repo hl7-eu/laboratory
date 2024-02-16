@@ -5,6 +5,7 @@ Logical: ResultLabEhn
 Id: Result				
 Title: "A.5 - Results data elements"				
 Description:  """Results data elements. Section A5 of the eHN guideline."""				
+* insert SetFmmandStatusRule( 2, informative)				
 * narrative 0..1 BackboneElement "A.5.1 Laboratory report narrative" """A.5.1 Laboratory report narrative"""				
 * narrative.report 0..* Narrative "A.5.1.1 Narrative report" """Entire report (textual summary inside the laboratory result report document) as issued by the laboratory."""				
 * narrative.notes 0..* Narrative "A.5.1.2 Comments, interpretation and recommendations" """Comments, such as a textual interpretation or advice accompanying the result report, for example."""		 		
@@ -38,9 +39,9 @@ Description:  """Results data elements. Section A5 of the eHN guideline."""
 //--- END				
 				
 				
-// -------------------------------------------------------------------------------				
-//  Map to FHIR R4				
-// -------------------------------------------------------------------------------				
+				
+				
+				
 				
 				
 				

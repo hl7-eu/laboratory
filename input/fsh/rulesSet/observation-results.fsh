@@ -1,5 +1,5 @@
 RuleSet: ObservationResultsEu
-// * insert SetFmmandStatusRule ( 1, draft )
+//  insert SetFmmandStatusRule ( 2, trial-use)
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 * category only $CodeableConcept-uv-ips
 * code only $CodeableConcept-uv-ips

@@ -6,6 +6,7 @@ Id: Recipient
 Title: "A.1.4 - Information recipient"				
 Description:  """Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable.
 Section A1.4 of the eHN guideline."""				
+* insert SetFmmandStatusRule( 2, informative)				
 * identifier 0..1 Identifier "A.1.4.1 Recipient identifier" """The health professional identification number.
 Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number.
 In case when recipient is not a health professional, e.g. patient, appropriate personal identifier should be used."""				
@@ -30,9 +31,9 @@ In case when recipient is not a health professional, e.g. patient, appropriate p
 				
 				
 				
-// -------------------------------------------------------------------------------				
-//  Map to FHIR R4				
-// -------------------------------------------------------------------------------				
+				
+				
+				
 				
 				
 				

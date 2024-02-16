@@ -41,11 +41,10 @@ The following picture provide an overview of the origin of the participants.
 | Contributor |  Martina Sender | mio42, DE |
 | Contributor |  Dennis Kipping | mio42, DE |
 | Contributor |  Jose Costa-Teixeira | HL7 BE |
-| Contributor |  Jeremy Lieth | DE |
+| Contributor |  Jeremy Lieth | BfArM, DE |
 | Contributor |  Leonardo Alcaro | DIT, HL7 IT |
-| Contributor |  Samuel Danhardt | LU |
-| Contributor |  Mar Matanzo | ES |
-| Contributor |  Philip Brennan | NHS England |
+| Contributor |  Samuel Danhardt |  Agence eSanté, LU |
+| Contributor |  Philip Brennan | NHS England, UK |
 | Contributor |  Marcel Hanselmann   | HL7 CH |
 | Contributor |  Kristiina Kuldkepp | TEHIK, EE |
 | Contributor |  Rik Smithies | HL7 UK |
@@ -58,11 +57,11 @@ The following picture provide an overview of the origin of the participants.
 | Contributor |  Juan Antonio de los Cobos | MoH Spain, SP |
 
 
-**Participants**: | Mariuo Sicuranza (CNR IT); Mario Ciampi (CNR IT); Marta Burek (MedCom DK); Jean Michel Polfliet (eGezondheid/eSanté Belgium); Bart Decuypere (HL7 BE); Frédéric Bulckaen (MyHealth@EU  Solution Providers); Prerna Arora (MyHealth@EU  Solution Providers);
+**Participants**: | Mario Sicuranza (CNR IT); Mario Ciampi (CNR IT); Marta Burek (MedCom DK); Jean Michel Polfliet (eGezondheid/eSanté Belgium); Bart Decuypere (HL7 BE); Frédéric Bulckaen (MyHealth@EU  Solution Providers); Prerna Arora (MyHealth@EU  Solution Providers);
 François Macary (HL7 FR); Renato Calamai (HL7 IT); Rebeca Ceder (SE);
-Sanchita Farruque (SE); Jagjit Singh Bhamra (NO); Simreen Kaur Johal(NO);
+Sanchita Farruque (SE); Jagjit Singh Bhamra (NO); Simreen Kaur Johal,(NO);
 Marte Espnes Temre (NO); Jostein Ven (NO); Samuel Danhardt (LU);
-Mar Matanzot (SP); Chrenova Katerina (CZ); Irena Rubesova (CZ);
+Mar Matanzo (SP); Chrenova Katerina (CZ); Irena Rubesova (CZ);
 Miroslav Zvolsky (CZ); Michaela Warzecha (PL); Alexander Mense (HL7 AT);
 Mika Tuomainen (FI); Marcus Fearnett (NHS England UK); Lucas Lundbäck (Chorus, SE);
  Oyvind Aassve (HL7 NO); Rick Busbridge (Nictiz NL); Ignacio Fernandez (SP); Nina Zenkovič (NIJZ SI)
