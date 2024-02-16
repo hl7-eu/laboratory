@@ -16,7 +16,7 @@ Usage: #example
 * valueQuantity.code = $ucum#m[iU]/L
 * valueQuantity.unit = "mIU/L"
 * extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = $nibsc#66/304
-* extension[ObservationCertifiedRefMaterialIdentifer].valueIdentifier.system = "NIBSC"
+* extension[ObservationCertifiedRefMaterialIdentifer].valueIdentifier.system = $nibsc
 * extension[ObservationCertifiedRefMaterialIdentifer].valueIdentifier.value = "66/304"
 
 
