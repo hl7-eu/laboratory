@@ -29,7 +29,6 @@ This observation may represent the result of a simple laboratory test such as he
 * extension contains ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..*
 
 * extension contains DeviceLabTestKit named labTestKit 0..*
-* extension[labTestKit].valueReference 
   * ^short = "Laboratory Test Kit"
   * ^definition = """The laboratory test kit used for this test."""
 

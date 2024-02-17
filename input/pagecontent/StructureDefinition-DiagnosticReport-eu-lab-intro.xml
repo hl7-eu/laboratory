@@ -1,6 +1,16 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+
+	<blockquote class="stu-note">
+		<h4>Previous results</h4>
+	<a name="dr-previous-results"> </a>
+		<p>This version of the guide uses the supportingInfo extension to the Observation lab results, for conveying the previous.</p>
+		<p>Implementers are invited to provide their feedback about the possible adoption of the supportingInfo extension to this DiagnosticReport profile</p>
+
+	</blockquote>
+
+
 	<h4>Adding a PDF, images or other kind of additional data in a DiagnosticReport</h4>
 	<a name="pdf-and-images"> </a>
 	<p>In some cases it is requested to include PDF, images or other kind of additional data in a Diagnostic Report.</p>

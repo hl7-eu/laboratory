@@ -31,7 +31,6 @@ Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referenc
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $nibsc = http://nibsc.org
-Alias: $jctlm = http://jctlm.org
 Alias: $pei = http://pei.de
 Alias: $niaid = http://niaid.nih.gov
 

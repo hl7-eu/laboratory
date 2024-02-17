@@ -1,0 +1,9 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<blockquote class="stu-note">
+		<p>This value set includes concepts that are derived from systems not having canonical urls assigned and/or confirmed by HL7 yet.</p>
+		<p>Adopters should use these urls being aware that they may change.</p>
+
+	</blockquote>
+</div>

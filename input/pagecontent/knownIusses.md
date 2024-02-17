@@ -13,3 +13,10 @@ Future version of the FHIR IG Publisher tool should fix this issue.
 1. For each Actor defined an error is raised in the guide QA log.
 This is due to a required used code, not present in the R4 value set version.
 1. Obligations are only informative for this version of the guide. Further analysis are needed for consolidating them.
+
+### Not endorsed canonical url
+
+
+The [Laboratory Certified Reference Material](ValueSet-lab-certifiedRefMaterial-eu-lab.html) value set includes concepts that are derived from systems not having canonical urls assigned and/or confirmed by HL7 yet.
+
+Adopters should use these urls being aware that they may change.

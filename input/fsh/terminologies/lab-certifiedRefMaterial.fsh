@@ -3,8 +3,9 @@ Id: lab-certifiedRefMaterial-eu-lab
 Title: "Laboratory Certified Reference Material"
 Description: "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU]."
 
-* insert JCTLMCopyrightForVS
-* insert SetFmmandStatusRule ( 2, trial-use)
+* insert NIBSCCopyrightForVS
+* insert SetFmmandStatusRule ( 1, draft)
+* ^status = #draft
 
 * $nibsc#06/140 "Pertussis antiserum (human), anti-PT IgG, Lyophilized, 335 IU and anti-PT IgA 65 IU / ampoule; anti-FHA IgG 130 IU and anti-FHA IgA 65 IU / ampoule; anti-69K IgG 65 IU and anti-PT IgA 42 IU / ampoule"
 * $nibsc#00/588 "Hepatitis B virus surface antigen, subtype adw2, genotype A, Lyophilized, 33 IU/vial."
@@ -49,7 +50,6 @@ Description: "List of the coded concepts describing the certified reference mate
 * $nibsc#75/551 "Chorionic gonadotrophin, beta subunit, human, for immunoassay, Lyophilized, 70 IU / ampoule."
 * $nibsc#75/569 "Chorionic gonadotrophin, alpha subunit, human, for immunoassay, Lyophilized, 70 IU / ampoule."
 * $nibsc#75/589 "Chorionic gonadotrophin, human, Lyophilized, 650 IU / ampoule."
-* $pei#7657/12 "Hepatitis D virus RNA, Lyophilized, 575,000 IU/mL"
 * $nibsc#78/554 "Luteinizing hormone, human, pituitary, alpha subunit, Lyophilized, 10 IU / ampoule."
 * $nibsc#78/556 "Luteinizing hormone, human, pituitary, beta subunit, Lyophilized, 10 IU / ampoule."
 * $nibsc#79/500 "Parathyroid hormone, human, for immunoassay, Lyophilized, 0.1 IU / ampoule."
@@ -76,8 +76,11 @@ Description: "List of the coded concepts describing the certified reference mate
 * $nibsc#97/646 "Anti-Hepatitis A Immunoglobulin, Human (W1041) WHO International Standard"
 * $nibsc#98/574 "Somatropin (rDNA-derived human growth hormone), Lyophilized, 1.95 mg protein / ampoule."
 * $nibsc#AFP "Alphafoetoprotein, Lyophilized, 100,000 IU / ampoule."
-* $niaid#Gxg01-902535 "Interferon gamma, human, recombinant, Lyophilized, 80,000 IU / ampoule."
 * $nibsc#RAI "Anti-rabies immunoglobulin, Lyophilized, 30 IU/ampoule"
 * $nibsc#rTF/16 "Thromboplastin, Human, Recombinant, Plain 5th International Standard 2016."
 * $nibsc#RUBI-1-94 "Anti-rubella immunoglobulin, Lyophilized, 1,600 IU/vial"
 * $nibsc#W1066 "Rheumatoid arthritis serum, Lyophilized, 100 IU/ampoule"
+
+* $pei#7657/12 "Hepatitis D virus RNA, Lyophilized, 575,000 IU/mL"
+
+* $niaid#Gxg01-902535 "Interferon gamma, human, recombinant, Lyophilized, 80,000 IU / ampoule."
