@@ -21,17 +21,24 @@ A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.5.1.88' could not be 
 
 A definition for CodeSystem 'urn:oid:1.2.203.24341.11.2.2' could not be found, so the code cannot be validated
 
+
+# == fsh-generated\resources\Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.json ==
+A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
+
 # == fsh-generated\resources\ValueSet-lab-obsCode-eu-lab.json ==
 WARNING: ValueSet.where(id = 'lab-obsCode-eu-lab'): Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
 
 
 # == fsh-generated\resources\ValueSet-lab-specimenContainer-eu-lab.json ==
-INFORMATION: ValueSet/lab-specimenContainer-eu-lab: ValueSet.compose.include[0]: This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
+This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
 
 # === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
 Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
-Unknown System 'http://jctlm.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://jctlm.org' could not be found, so the code cannot be validated)
+Unknown System 'http://jctlm.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 
 %Error from http://tx.fhir.org/r4: Unable to provide support for code system http://nibsc.org%
+Unknown System 'http://pei.de' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://pei.de' could not be found, so the code cannot be validated)
+Unknown System 'http://niaid.nih.gov' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://niaid.nih.gov' could not be found, so the code cannot be validated)
 
 # Not recognized NPU system
 Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org

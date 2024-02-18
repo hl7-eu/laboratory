@@ -50,15 +50,19 @@ This will:
 - improve the overall quality of the guides
 
 <div>
+<p></p>
 <img src="layered-specs.png"  alt="Vision: Layered Specification" width="60%">
+<p></p>
 <p>Figure 2 - Vision: Layered Specification</p>
 <p></p>
 </div>
 
-This goal seems to be in the process of being achieved looking at some current national and European developments.
+The following figure shows how this vision is going to be realized: some current national and European developments are in fact already referring to this guide.
 
 <div>
+<p></p>
 <img src="guide-relationship.png"  alt="Vision: relatioship among Lab Report IGs" width="60%">
+<p></p>
 <p>Figure 3 - Implementing the vision</p>
 <p></p>
 </div>
