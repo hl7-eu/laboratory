@@ -6,9 +6,5 @@
   "sequence" : "STU 1",
   "first": false,
   "mode": "milestone",
-  "ci-build": "https://build.fhir.org/ig/hl7-eu/laboratory",
-  "desc" : "This is the Edition 1 STU 1 release",
-  "title" : "HL7 Europe Laboratory Report",
-  "category" : "Laboratory Report",
-  "introduction" : "This guide defines a set of common rules to be applied to HL7 FHIR to define how to represent a Laboratory Report in the European Context. It coveres laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains requiring specialised reporting structure like histopathology or medical genetics."
+  "desc" : "This is the Edition 1 STU 1 release"
 }
