@@ -35,7 +35,6 @@ This SNOMED-CT based include has some concepts with semantic tags (FSN terms) an
 
 # === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
 Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
-Unknown System 'http://jctlm.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 
 %Error from http://tx.fhir.org/r4: Unable to provide support for code system http://nibsc.org%
 Unknown System 'http://pei.de' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://pei.de' could not be found, so the code cannot be validated)
 Unknown System 'http://niaid.nih.gov' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://niaid.nih.gov' could not be found, so the code cannot be validated)
