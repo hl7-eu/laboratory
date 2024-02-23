@@ -76,7 +76,7 @@ RuleSet: LOINCCopyrightForVS
 * ^experimental = false
 
 RuleSet: NPUCopyrightForVS
-* ^copyright = "This material contains content from NPU Terminology (http://npu-terminology.org). NPU is copyright International Federation of Clinical Chemistry (IFCC) and International Union of Pure and Applied Chemistry (IUPAC) and is available at no cost under the license at blob:https://www.labterm.dk/0472bc56-3aa1-484d-a377-92a3db82b559."
+* ^copyright = "This material contains content from NPU Terminology (http://npu-terminology.org). NPU is copyright International Federation of Clinical Chemistry (IFCC) and International Union of Pure and Applied Chemistry (IUPAC) and is available at no cost under the license at https://www.labterm.dk/."
 * ^experimental = false
 
 /* RuleSet: JCTLMCopyrightForVS
