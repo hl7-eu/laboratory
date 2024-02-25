@@ -4,7 +4,8 @@
 Instance: subject2FHIR-eu-lab					
 InstanceOf: ConceptMap					
 Usage: #definition					
-					
+
+* insert SetFmmandStatusRuleInstance( 2, informative)						
 * name = "LabRptSubject2Fhir"					
 * title = "eHN Subject to this guide Map"					
 * status = #draft					

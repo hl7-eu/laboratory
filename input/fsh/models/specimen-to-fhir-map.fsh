@@ -86,7 +86,7 @@ If the device is meant instead as the mean used to collect the specimen (e.g blo
 					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab"					
-* group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/bodyStructure-eu-lab"					
+* group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/BodyStructure-eu-lab"					
 					
 * group[=].element[+].code = #SpecimenLab.anatomicLocation					
 * group[=].element[=].display = "A.4.5 Anatomic location"					
