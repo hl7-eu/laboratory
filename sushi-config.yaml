@@ -15,7 +15,6 @@ jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn
 publisher:
   name:  HL7 Europe
   url: http://hl7.eu
- # url: http://hl7.org/Special/committees/hl7-eu
   # email: test@example.org
 copyright: >-
   Used by permission of HL7 Europe, all rights reserved Creative Commons License
@@ -98,9 +97,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
     - http://example.org/lab-codes
-    - http://hl7.eu/fhir/StructureDefinition/body-location-qualifier
-    - http://hl7.eu/fhir/StructureDefinition/laterality-qualifier
-#   - http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time
+
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # path-resource:
@@ -220,7 +217,6 @@ menu:
 # look like:
 
 resources:
-
 
 #------------ Concept Maps  -------------
   ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus:

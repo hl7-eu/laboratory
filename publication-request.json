@@ -2,9 +2,9 @@
   "package-id" : "hl7.fhir.eu.laboratory",
   "version" : "0.1.0",
   "path" : "http://hl7.eu/fhir/laboratory/0.1.0",
+  "mode": "milestone",
   "status" : "trial-use",
   "sequence" : "STU 1",
   "first": false,
-  "mode": "milestone",
   "desc" : "This is the Edition 1 STU 1 release"
 }
