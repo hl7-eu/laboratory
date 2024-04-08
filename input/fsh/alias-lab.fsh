@@ -44,7 +44,6 @@ Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/Valu
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
-
 // ---- Extensions
 Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $obligation = http://hl7.org/fhir/tools/StructureDefinition/obligation
