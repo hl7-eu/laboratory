@@ -18,7 +18,7 @@ Description:   "Body Structure site qualifier. It indicates the body site qualif
 * $sct#51440002 "Bilateral"
 * $sct#46053002 "Distal"
 * $sct#255554000 "Dorsal"
-* $sct#264147007 "Plantar"
+//* $sct#264147007 "Plantar" inactive concept
 * $sct#261183002 "Upper"
 * $sct#261122009 "Lower"
 * $sct#255561001 "Medial"
