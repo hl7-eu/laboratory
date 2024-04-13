@@ -34,7 +34,7 @@ The aspiration of this guide is that of being used as basis for European Nationa
 
 The project background is described in the [background](background.html) page.
 
-### Design choiches
+### Design choices
 
 The solution adopted by this guide - and detailed in the [Design choices](design-choice.html) page - balances the business requirement of Laboratory Report as legally signable document (i.e. as a FHIR document), with the expectation to get Lab Report by searching per DiagnosticReport. All this, taking into account the R5 DiagnosticReport design pattern where the DiagnosticReport <-> Composition relationship is directed from the DiagnosticReport to the Composition resource.
 This is done by supporting both perspectives (see figure below) requiring the document bundle ( [BundleLabReportEu] ) to always include a DiagnosticReport ( [DiagnosticReportLabEu] ) and enabling the pre-adoption of the R5 rules for the inclusion of entries in the Document Bundle.
