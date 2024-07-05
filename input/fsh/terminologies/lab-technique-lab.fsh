@@ -85,11 +85,12 @@ Description:   "Laboratory technique (method of measurement) used for the result
 * $sct#83591000052109	"Particle-enhanced turbidimetric immunoassay technique (qualifier value)"
 * $sct#83601000052101	"Potentiometry technique (qualifier value)"
 * $sct#83611000052104	"Turbidimetry technique (qualifier value)"
+/* DUPLICATED
 * $sct#1259935006 "Chemiluminescent immunoassay technique (qualifier value)"
 * $sct#1259936007 "Enzyme-linked fluorescence assay technique (qualifier value)"
 * $sct#1259932009 "Loop-mediated isothermal amplification technique (qualifier value)"
-* $sct#1259934005 "Microparticle enzyme immunoassay technique (qualifier value)"
-* $sct#1259933004 "Strand displacement amplification technique (qualifier value)"
+* $sct#1259934005 "Microparticle enzyme immunoassay technique (qualifier value)" 
+* $sct#1259933004 "Strand displacement amplification technique (qualifier value)" */
 * $sct#1304095001 "Refractometry (qualifier value)"
 * $sct#1304230000 "Viscometry (qualifier value)"
 * $sct#1304094002 "X-ray diffraction (qualifier value)"
