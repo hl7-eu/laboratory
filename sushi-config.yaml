@@ -25,9 +25,9 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: current
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions: 0.1.0
+  hl7.fhir.eu.extensions: 0.1.x
 
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -77,6 +77,29 @@ pages:
     title: Obligations
   knownIusses.md:
     title: Known Issues
+# ====  Map Pages begin ====    
+  Recipient-map.html:
+    title: Recipient Relationships
+  Result-map.html:
+    title: Result Relationships
+  Author-map.html:
+    title: Author Relationships
+  LabReport-map.html:
+    title: LabReport Relationships
+  Validator-map.html:
+    title: Validator Relationships
+  SpecimenLab-map.html:
+    title: SpecimenLab Relationships
+  LegalAuthenticator-map.html:
+    title: LegalAuthenticator Relationships
+  Payer-map.html:
+    title: Payer Relationships
+  Order-map.html:
+    title: Order Relationships
+  Subject-map.html:
+    title: Subject Relationships
+  # ====  Map Pages end ====
+
  # overview.md:
  #   title: Profiles overview
 
@@ -157,6 +180,17 @@ menu:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
     Implementation notes: notes.html
+  Model Maps:
+    Recipient: Recipient-map.html
+    Result: Result-map.html
+    Author: Author-map.html
+    LabReport: LabReport-map.html
+    Validator: Validator-map.html
+    SpecimenLab: SpecimenLab-map.html
+    LegalAuthenticator: LegalAuthenticator-map.html
+    Payer: Payer-map.html
+    Order: Order-map.html
+    Subject: Subject-map.html
   #  Profiles overview:  overview.html
   # Examples: examples.html
   Artifacts: artifacts.html

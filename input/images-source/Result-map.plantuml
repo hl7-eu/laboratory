@@ -1,0 +1,23 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "Result" <<LogicalModel>> [[StructureDefinition-Result.html]]
+note right #PaleTurquoise [[ConceptMap-result2FHIR-eu-lab.html]]
+Concept Map
+endnote
+class "Observation-resultslab-eu-lab" <<Profile>> [[StructureDefinition-Observation-resultslab-eu-lab.html]]
+"Result" --> "Observation-resultslab-eu-lab"
+class "DiagnosticReport-eu-lab" <<Profile>> [[StructureDefinition-DiagnosticReport-eu-lab.html]]
+"Result" --> "DiagnosticReport-eu-lab"
+"Observation-resultslab-eu-lab" -[hidden]-> "DiagnosticReport-eu-lab"
+class "Composition-eu-lab" <<Profile>> [[StructureDefinition-Composition-eu-lab.html]]
+"Result" --> "Composition-eu-lab"
+"DiagnosticReport-eu-lab" -[hidden]-> "Composition-eu-lab"
+@enduml

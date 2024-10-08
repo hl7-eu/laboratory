@@ -1,0 +1,17 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "Order" <<LogicalModel>> [[StructureDefinition-Order.html]]
+note right #PaleTurquoise [[ConceptMap-order2FHIR-eu-lab.html]]
+Concept Map
+endnote
+class "ServiceRequest-eu-lab" <<Profile>> [[StructureDefinition-ServiceRequest-eu-lab.html]]
+"Order" --> "ServiceRequest-eu-lab"
+@enduml

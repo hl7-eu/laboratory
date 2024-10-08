@@ -41,3 +41,5 @@ ig-template/content/assets/images/.index.json
 ig-template/includes/.index.json
 ig-template/package/.index.json
 *.fsh-bak
+/input/images-source/map
+/input/pagecontent/map
