@@ -499,10 +499,10 @@ Usage: #inline
 * valueQuantity.code = #mg/L
 * valueQuantity.unit = "mg/L"
 * performer = Reference(urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce)
-* interpretation = $obs-interpretation#N "Normal"
+* interpretation = $v3-ObservationInterpretation#N "Normal"
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)
 * referenceRange.low.value = 0
 * referenceRange.low.unit = "mg/L"
 * referenceRange.high.value = 20
 * referenceRange.high.unit = "mg/L"
-* referenceRange.type = $obs-interpretation#N "Normal"
+* referenceRange.type = $v3-ObservationInterpretation#N "Normal"

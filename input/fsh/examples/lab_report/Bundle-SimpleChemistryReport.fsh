@@ -448,13 +448,13 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * valueQuantity.code = $ucum#mmol/L
 * valueQuantity.unit = "mmol/L"
-* interpretation = $obs-interpretation#LU "Significantly low"
+* interpretation = $v3-ObservationInterpretation#LU "Significantly low"
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // urine specimen
 * referenceRange.low.value = 67
 * referenceRange.low.unit = "mmol/L"
 * referenceRange.high.value = 580
 * referenceRange.high.unit = "mmol/L"
-* referenceRange.type = $reference-range-meaning#normal "Normal Range"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
 Instance: Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
 InstanceOf: ObservationResultsLaboratoryEu
@@ -474,10 +474,10 @@ Usage: #inline
 * valueQuantity.code = $ucum#umol/L
 * valueQuantity.unit = "umol/L"
 * valueQuantity.extension[uncertainty].valueDecimal = 0.1
-* interpretation = $obs-interpretation#HH "Critical high"
+* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * specimen = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)
 * referenceRange.low.value = 136
 * referenceRange.low.unit = "umol/L"
 * referenceRange.high.value = 144
 * referenceRange.high.unit = "umol/L"
-* referenceRange.type = $reference-range-meaning#normal "Normal Range"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"

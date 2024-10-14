@@ -309,7 +309,7 @@ Usage: #inline
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: Inline-Observation-org-id1-susc-2
 InstanceOf: ObservationResultsLaboratoryEu
@@ -326,7 +326,7 @@ Usage: #inline
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#R "Resistant"
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
 
 Instance: Inline-Observation-org-id1-susc-3
 InstanceOf: ObservationResultsLaboratoryEu
@@ -342,7 +342,7 @@ Usage: #inline
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: Inline-Observation-org-id1-susc-4
 InstanceOf: ObservationResultsLaboratoryEu
@@ -359,7 +359,7 @@ Usage: #inline
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: Inline-Observation-org-id2
 InstanceOf: ObservationResultsLaboratoryEu
@@ -420,7 +420,7 @@ Usage: #inline
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#R "Resistant"
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
 
 Instance: Inline-Observation-org-id2-susc-2
 InstanceOf: ObservationResultsLaboratoryEu
@@ -437,7 +437,7 @@ Usage: #inline
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: Inline-Observation-org-id2-susc-3
 InstanceOf: ObservationResultsLaboratoryEu
@@ -454,7 +454,7 @@ Usage: #inline
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#R "Resistant"
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
 
 Instance: Inline-Observation-org-id2-susc-4
 InstanceOf: ObservationResultsLaboratoryEu
@@ -471,7 +471,7 @@ Usage: #inline
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: Inline-Observation-anaerobic-culture
 InstanceOf: ObservationResultsLaboratoryEu

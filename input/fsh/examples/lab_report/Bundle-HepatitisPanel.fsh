@@ -138,9 +138,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#260385009 "Negative"
-* interpretation = $obs-interpretation#N "Normal"
+* interpretation = $v3-ObservationInterpretation#N "Normal"
 * specimen = Reference(urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
-* referenceRange[+].type = $reference-range-meaning#normal "Normal Range"
+* referenceRange[+].type = $referencerange-meaning#normal "Normal Range"
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-2
@@ -157,9 +157,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#260385009 "Negative"
-* interpretation = $obs-interpretation#N "Normal"
+* interpretation = $v3-ObservationInterpretation#N "Normal"
 * specimen = Reference(urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
-* referenceRange[+].type = $reference-range-meaning#normal "Normal Range"
+* referenceRange[+].type = $referencerange-meaning#normal "Normal Range"
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-3
@@ -176,9 +176,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#260385009 "Negative"
-* interpretation = $obs-interpretation#N "Normal"
+* interpretation = $v3-ObservationInterpretation#N "Normal"
 * specimen = Reference(urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
-* referenceRange[+].type = $reference-range-meaning#normal "Normal Range"
+* referenceRange[+].type = $referencerange-meaning#normal "Normal Range"
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-4
@@ -195,9 +195,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#10828004 "Positive"
-* interpretation = $obs-interpretation#A "Abnormal"
+* interpretation = $v3-ObservationInterpretation#A "Abnormal"
 * specimen = Reference(urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
-* referenceRange[+].type = $reference-range-meaning#normal "Normal Range"
+* referenceRange[+].type = $referencerange-meaning#normal "Normal Range"
 * referenceRange[=].text = "Negative"
 
 Instance: Inline-Observation-hepatitis-5
@@ -215,12 +215,12 @@ Usage: #inline
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueQuantity = 9.89 $ucum#[arb'U]/mL
 * valueQuantity.unit = "IV"
-* interpretation = $obs-interpretation#H "High"
+* interpretation = $v3-ObservationInterpretation#H "High"
 * interpretation.text = "Low Positive"
 * specimen = Reference(urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13)
 * referenceRange[+].high = 0.79 $ucum#[arb'U]/mL
 * referenceRange[=].high.unit = "IV"
-* referenceRange[=].type = $reference-range-meaning#normal "Normal Range"
+* referenceRange[=].type = $referencerange-meaning#normal "Normal Range"
 * referenceRange[+].low = 0.80 $ucum#[arb'U]/mL
 * referenceRange[=].low.unit = "IV"
 * referenceRange[=].high = 0.99 $ucum#[arb'U]/mL

@@ -10,34 +10,6 @@ Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
 
-// --- Code Systems
-Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
-Alias: $ajcc = http://cancerstaging.org
-Alias: $atc = http://www.whocc.no/atc
-Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
-Alias: $edqm = https://standardterms.edqm.eu
-Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
-Alias: $loinc =  http://loinc.org
-Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $sct = http://snomed.info/sct
-Alias: $ucum =  http://unitsofmeasure.org
-Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
-Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
-Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
-Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
-Alias: $nibsc = http://nibsc.org
-Alias: $pei = http://pei.de
-Alias: $niaid = http://niaid.nih.gov
-
-// --- SID
-Alias: $uri = urn:ietf:rfc:3986
-Alias: $oid = urn:ietf:rfc:1155
-
 // --- Value Sets
 Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFlavor
 Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips

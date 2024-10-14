@@ -200,7 +200,7 @@ Usage: #example
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: obs-org-id1-susc-2
 InstanceOf: ObservationResultsLaboratoryEu
@@ -217,7 +217,7 @@ Usage: #example
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#R "Resistant"
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
 
 Instance: obs-org-id1-susc-3
 InstanceOf: ObservationResultsLaboratoryEu
@@ -233,7 +233,7 @@ Usage: #example
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: obs-org-id1-susc-4
 InstanceOf: ObservationResultsLaboratoryEu
@@ -250,7 +250,7 @@ Usage: #example
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 
 Instance: obs-anaerobic-culture
