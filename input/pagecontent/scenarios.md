@@ -1,6 +1,6 @@
 ### Laboratory Report scenarios
 
-This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statues should be set**.
+This page describes laboratory report scenarios for the purpose of **highlighting how laboratory report relevant statuses should be set**.
 
 These scenarios, in scope for this guide, relate to tests performed and reported by a clinical laboratory in fulfillment of test orders.
 
