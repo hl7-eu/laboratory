@@ -1,0 +1,127 @@
+# This is a simple workflow that runs the publisher and copies the output to https://<owner>.github.io/<repo>/index.html
+# Based on the idea by Carl Leitner
+# Change log:
+# 2021-06-18: (JCT): publish default branches to / , other branches branches/<branch>
+# 2021-11-26: (JCT): Reusable workflow
+# 2022-01-28: (JCT): add auto-create gh-pages if it doesn't exist
+# 2023-01-22: (JCT): use checkout action v3, and JamesIves/github-pages-deploy-action@v4
+
+
+# Make sure your repo has a branch called gh-pages
+
+name: CI
+
+# Controls when the action will run. 
+on: 
+  workflow_call: # Reusable by other workflows
+  # Triggers the workflow on push or pull request events for any branch
+  push:
+    branches-ignore:    
+      - 'gh-pages'
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get branch name
+        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: Echo branch name and check if it's the default branch
+        run: |
+          echo "Current Branch: $BRANCH_NAME"
+          DEFAULT_BRANCH=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
+          echo "Default Branch: $DEFAULT_BRANCH"
+          if [ "$BRANCH_NAME" == "$DEFAULT_BRANCH" ]; then
+            echo "This is the default branch."
+            echo "IS_DEFAULT_BRANCH=true" >> $GITHUB_ENV
+          else
+            echo "This is NOT the default branch."
+            echo "IS_DEFAULT_BRANCH=false" >> $GITHUB_ENV
+          fi
+
+
+#      - name: Create gh-pages branch if it doesn't exist
+#        run: |
+#          git fetch origin
+#          exists=`git show-ref refs/heads/gh-pages`
+#          if [ -n "$exists" ]; then
+#            echo 'gh-pages branch exists';
+#          else
+#            echo 'gh-pages branch does not exist, creating it';
+#            git checkout --orphan gh-pages
+#            git reset --hard
+#            git commit --allow-empty -m "Initializing gh-pages branch"
+#            git push origin gh-pages
+#            git checkout ${GITHUB_REF##*/}
+#          fi
+
+      - name: Update the image to the latest publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          # Get the latest publisher - don't run the batch script but run the line directly
+          args: curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
+
+
+      - name: Create package cache folder
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          entrypoint: /bin/sh
+          args: -c "mkdir -p ./fhir-package-cache && chown 1001:127 ./fhir-package-cache"
+
+
+      - name: Run the IG publisher
+        uses: docker://hl7fhir/ig-publisher-base:latest
+        with:
+          # Run the publisher - don't run the batch script but run the line directly
+          args: java -Xmx6g -jar ./input-cache/publisher.jar publisher -ig . -auto-ig-build -repo https://github.com/${{github.repository}}/tree/${{github.ref_name}} -package-cache-folder ./fhir-package-cache -tx http://tx.hl7europe.eu/r4
+
+      # Additional step to upload qa.json as an artifact
+      - name: Upload qa.json artifact
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: qa-json-artifact
+          path: ./output/qa.json  # Adjust the path based on where qa.json is located
+
+
+      - name: Get branch names
+        id: branch-name
+        uses: tj-actions/branch-names@v7.0.7
+
+      - name: Deploy candidate
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        if: env.IS_DEFAULT_BRANCH == 'false'
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: ./output # The folder the action should deploy.
+          commit-message: Deploy candidate branch
+          target-folder: branches/${{ steps.branch-name.outputs.current_branch }}
+          single-commit: true
+          clean: false 
+
+      - name: Deploy main
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
+        if: env.IS_DEFAULT_BRANCH == 'true'
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: ./output # The folder the action should deploy.
+          commit-message: Deploy main branch
+          single-commit: true
+          clean-exclude: |
+            branches
+            sitepreview
