@@ -1,0 +1,1224 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "BundleLabResultMicroCultureSusc",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"]
+  },
+  "identifier" : {
+    "system" : "http://example.org",
+    "value" : "V1CZ454557891308174803488707671420"
+  },
+  "type" : "document",
+  "timestamp" : "2022-10-25T14:30:00+01:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "4789a3ee-92b1-41b2-9b97-83daacf2a239",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_4789a3ee-92b1-41b2-9b97-83daacf2a239\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 4789a3ee-92b1-41b2-9b97-83daacf2a239</b></p><a name=\"4789a3ee-92b1-41b2-9b97-83daacf2a239\"> </a><a name=\"hc4789a3ee-92b1-41b2-9b97-83daacf2a239\"> </a><a name=\"4789a3ee-92b1-41b2-9b97-83daacf2a239-en-US\"> </a><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+      },
+      "identifier" : {
+        "system" : "urn:ietf:rfc:3986",
+        "value" : "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+      },
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11502-2",
+          "display" : "Laboratory report"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "26436-6",
+          "display" : "Laboratory Studies (set)"
+        }]
+      }],
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "date" : "2022-10-25T14:30:00+01:00",
+      "author" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "title" : "Laboratory Report Bacterial Aerobic & Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30",
+      "confidentiality" : "N",
+      "attester" : [{
+        "mode" : "legal",
+        "time" : "2020-12-27T14:30:00+01:00",
+        "party" : {
+          "reference" : "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349"
+        }
+      }],
+      "custodian" : {
+        "reference" : "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349"
+      },
+      "section" : [{
+        "title" : "Bacterial Aerobic & Anaerobic Culture & Susceptibility",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "18725-2",
+            "display" : "Microbiology studies (set)"
+          }]
+        },
+        "section" : [{
+          "title" : "Gram Stain",
+          "code" : {
+            "text" : "Gram Stain"
+          },
+          "entry" : [{
+            "reference" : "urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175"
+          }]
+        },
+        {
+          "title" : "Aerobic Culture",
+          "code" : {
+            "text" : "Aerobic Culture"
+          },
+          "entry" : [{
+            "reference" : "urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47"
+          }]
+        },
+        {
+          "title" : "Anaerobic Culture",
+          "code" : {
+            "text" : "Anaerobic Culture"
+          },
+          "entry" : [{
+            "reference" : "urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "5bb42c3f-56fb-4bbc-b939-73910a6cce3b",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_5bb42c3f-56fb-4bbc-b939-73910a6cce3b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 5bb42c3f-56fb-4bbc-b939-73910a6cce3b</b></p><a name=\"5bb42c3f-56fb-4bbc-b939-73910a6cce3b\"> </a><a name=\"hc5bb42c3f-56fb-4bbc-b939-73910a6cce3b\"> </a><a name=\"5bb42c3f-56fb-4bbc-b939-73910a6cce3b-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "NIIP"
+          }]
+        },
+        "system" : "urn:oid:1.2.203.24341.1.20.2",
+        "value" : "740512852"
+      },
+      {
+        "system" : "urn:oid:1.2.203.24341.1.20.9.1",
+        "value" : "A225961454"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PPN"
+          }]
+        },
+        "system" : "urn:oid:2.16.840.1.113883.4.330.203",
+        "value" : "5484136"
+      }],
+      "name" : [{
+        "family" : "Očkovaný",
+        "given" : ["František"]
+      }],
+      "gender" : "male",
+      "birthDate" : "2000-03-21"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "b864303b-91ab-4e29-ad74-31a7d6566875",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_b864303b-91ab-4e29-ad74-31a7d6566875\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport b864303b-91ab-4e29-ad74-31a7d6566875</b></p><a name=\"b864303b-91ab-4e29-ad74-31a7d6566875\"> </a><a name=\"hcb864303b-91ab-4e29-ad74-31a7d6566875\"> </a><a name=\"b864303b-91ab-4e29-ad74-31a7d6566875-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</span> (<span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr><tr><td>Identifier</td><td> <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr><tr><td/><td/></tr><tr><td/><td/></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+        "valueReference" : {
+          "reference" : "urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239"
+        }
+      }],
+      "identifier" : [{
+        "system" : "urn:ietf:rfc:3986",
+        "value" : "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "26436-6",
+          "display" : "Laboratory Studies (set)"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11502-2",
+          "display" : "Laboratory report"
+        }],
+        "text" : "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "specimen" : [{
+        "reference" : "urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc"
+      }],
+      "result" : [{
+        "reference" : "urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175"
+      },
+      {
+        "reference" : "urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47"
+      },
+      {
+        "reference" : "urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "bab0016e-1800-4e54-b595-72bd9041ffbc",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_bab0016e-1800-4e54-b595-72bd9041ffbc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen bab0016e-1800-4e54-b595-72bd9041ffbc</b></p><a name=\"bab0016e-1800-4e54-b595-72bd9041ffbc\"> </a><a name=\"hcbab0016e-1800-4e54-b595-72bd9041ffbc\"> </a><a name=\"bab0016e-1800-4e54-b595-72bd9041ffbc-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119365002}\">Specimen from wound</span></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></div>"
+      },
+      "status" : "available",
+      "type" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "119365002",
+          "display" : "Specimen from wound"
+        }]
+      },
+      "collection" : {
+        "collectedDateTime" : "2022-10-25T13:35:00+01:00"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "40278a69-87aa-470f-a38f-bff1e8aee175",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_40278a69-87aa-470f-a38f-bff1e8aee175\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 40278a69-87aa-470f-a38f-bff1e8aee175</b></p><a name=\"40278a69-87aa-470f-a38f-bff1e8aee175\"> </a><a name=\"hc40278a69-87aa-470f-a38f-bff1e8aee175\"> </a><a name=\"40278a69-87aa-470f-a38f-bff1e8aee175-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Gram Stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1097929f-890e-4e27-a31d-58599f3e2479\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-fcf220c3-7f3e-44f8-b669-48552a20fa0a\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-331d513e-a57f-4464-9eec-25533aeb6d06\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "text" : "Gram Stain"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "hasMember" : [{
+        "reference" : "urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479"
+      },
+      {
+        "reference" : "urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a"
+      },
+      {
+        "reference" : "urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "1097929f-890e-4e27-a31d-58599f3e2479",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_1097929f-890e-4e27-a31d-58599f3e2479\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 1097929f-890e-4e27-a31d-58599f3e2479</b></p><a name=\"1097929f-890e-4e27-a31d-58599f3e2479\"> </a><a name=\"hc1097929f-890e-4e27-a31d-58599f3e2479\"> </a><a name=\"1097929f-890e-4e27-a31d-58599f3e2479-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72163-9}\">Leukocytes [Presence] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 2667000}\">None observed</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "72163-9",
+          "display" : "Leukocytes [Presence] in Specimen by Gram stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "2667000",
+          "display" : "Absent"
+        }],
+        "text" : "None observed"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "fcf220c3-7f3e-44f8-b669-48552a20fa0a",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_fcf220c3-7f3e-44f8-b669-48552a20fa0a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation fcf220c3-7f3e-44f8-b669-48552a20fa0a</b></p><a name=\"fcf220c3-7f3e-44f8-b669-48552a20fa0a\"> </a><a name=\"hcfcf220c3-7f3e-44f8-b669-48552a20fa0a\"> </a><a name=\"fcf220c3-7f3e-44f8-b669-48552a20fa0a-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 664-3}\">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 70003006}\">Gram-positive cocci in clusters</span></p><p><b>hasMember</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "664-3",
+          "display" : "Microscopic observation [Identifier] in Specimen by Gram stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "70003006",
+          "display" : "Gram-positive cocci in clusters"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e</b></p><a name=\"2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\"> </a><a name=\"hc2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\"> </a><a name=\"2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Observed Quantity</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441614007}\">+</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "text" : "Observed Quantity"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "441614007",
+          "display" : "Present + out of +++"
+        }],
+        "text" : "+"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "331d513e-a57f-4464-9eec-25533aeb6d06",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_331d513e-a57f-4464-9eec-25533aeb6d06\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 331d513e-a57f-4464-9eec-25533aeb6d06</b></p><a name=\"331d513e-a57f-4464-9eec-25533aeb6d06\"> </a><a name=\"hc331d513e-a57f-4464-9eec-25533aeb6d06\"> </a><a name=\"331d513e-a57f-4464-9eec-25533aeb6d06-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 664-3}\">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 87172008}\">Gram-negative rods</span></p><p><b>hasMember</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-931c6459-0fb0-4f02-8268-08e6d94a8f5c\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "664-3",
+          "display" : "Microscopic observation [Identifier] in Specimen by Gram stain"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "87172008",
+          "display" : "Gram-negative rods"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "931c6459-0fb0-4f02-8268-08e6d94a8f5c",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_931c6459-0fb0-4f02-8268-08e6d94a8f5c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 931c6459-0fb0-4f02-8268-08e6d94a8f5c</b></p><a name=\"931c6459-0fb0-4f02-8268-08e6d94a8f5c\"> </a><a name=\"hc931c6459-0fb0-4f02-8268-08e6d94a8f5c\"> </a><a name=\"931c6459-0fb0-4f02-8268-08e6d94a8f5c-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Observed Quantity</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441517005}\">++</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "text" : "Observed Quantity"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "441517005",
+          "display" : "Present ++ out of +++"
+        }],
+        "text" : "++"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "8754019d-256b-4df9-94f2-f80c07e08d47",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_8754019d-256b-4df9-94f2-f80c07e08d47\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 8754019d-256b-4df9-94f2-f80c07e08d47</b></p><a name=\"8754019d-256b-4df9-94f2-f80c07e08d47\"> </a><a name=\"hc8754019d-256b-4df9-94f2-f80c07e08d47\"> </a><a name=\"8754019d-256b-4df9-94f2-f80c07e08d47-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Aerobic Culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-083ee3df-1381-4ed2-849f-77808eb81a36\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-d49839fe-515c-44b6-8d19-3cc5d48feb49\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "text" : "Aerobic Culture"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "hasMember" : [{
+        "reference" : "urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36"
+      },
+      {
+        "reference" : "urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "083ee3df-1381-4ed2-849f-77808eb81a36",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_083ee3df-1381-4ed2-849f-77808eb81a36\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 083ee3df-1381-4ed2-849f-77808eb81a36</b></p><a name=\"083ee3df-1381-4ed2-849f-77808eb81a36\"> </a><a name=\"hc083ee3df-1381-4ed2-849f-77808eb81a36\"> </a><a name=\"083ee3df-1381-4ed2-849f-77808eb81a36-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 634-6}\">Bacteria identified in Specimen by Aerobe culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 3092008}\">Staphylococcus aureus</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-758d2270-a997-4a8f-872f-b3fbaef209fa\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-61f8e930-46e0-41ab-9448-0d1dc74925df\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "634-6",
+          "display" : "Bacteria identified in Specimen by Aerobe culture"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "3092008",
+          "display" : "Staphylococcus aureus"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa"
+      },
+      {
+        "reference" : "urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "758d2270-a997-4a8f-872f-b3fbaef209fa",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_758d2270-a997-4a8f-872f-b3fbaef209fa\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 758d2270-a997-4a8f-872f-b3fbaef209fa</b></p><a name=\"758d2270-a997-4a8f-872f-b3fbaef209fa\"> </a><a name=\"hc758d2270-a997-4a8f-872f-b3fbaef209fa\"> </a><a name=\"758d2270-a997-4a8f-872f-b3fbaef209fa-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Microorganism Growth</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441517005}\">++</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "text" : "Microorganism Growth"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "441517005",
+          "display" : "Present ++ out of +++"
+        }],
+        "text" : "++"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "61f8e930-46e0-41ab-9448-0d1dc74925df",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_61f8e930-46e0-41ab-9448-0d1dc74925df\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 61f8e930-46e0-41ab-9448-0d1dc74925df</b></p><a name=\"61f8e930-46e0-41ab-9448-0d1dc74925df\"> </a><a name=\"hc61f8e930-46e0-41ab-9448-0d1dc74925df\"> </a><a name=\"61f8e930-46e0-41ab-9448-0d1dc74925df-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29576-6}\">Bacterial susceptibility panel</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-85230b86-9b90-4faf-a750-d5fa82520ce9\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1fb64f47-4272-43ae-a119-c3b4c3367829\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-af249f79-f487-4533-9935-d19ab7043724\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-a4469ca9-d0be-4c58-853a-44cea24484b8\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "29576-6",
+          "display" : "Bacterial susceptibility panel"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "hasMember" : [{
+        "reference" : "urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9"
+      },
+      {
+        "reference" : "urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829"
+      },
+      {
+        "reference" : "urn:uuid:af249f79-f487-4533-9935-d19ab7043724"
+      },
+      {
+        "reference" : "urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "85230b86-9b90-4faf-a750-d5fa82520ce9",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_85230b86-9b90-4faf-a750-d5fa82520ce9\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 85230b86-9b90-4faf-a750-d5fa82520ce9</b></p><a name=\"85230b86-9b90-4faf-a750-d5fa82520ce9\"> </a><a name=\"hc85230b86-9b90-4faf-a750-d5fa82520ce9\"> </a><a name=\"85230b86-9b90-4faf-a750-d5fa82520ce9-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18900-1}\">Cephalothin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=2 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18900-1",
+          "display" : "Cephalothin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 2,
+        "comparator" : "<=",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "S",
+          "display" : "Susceptible"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "1fb64f47-4272-43ae-a119-c3b4c3367829",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_1fb64f47-4272-43ae-a119-c3b4c3367829\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 1fb64f47-4272-43ae-a119-c3b4c3367829</b></p><a name=\"1fb64f47-4272-43ae-a119-c3b4c3367829\"> </a><a name=\"hc1fb64f47-4272-43ae-a119-c3b4c3367829\"> </a><a name=\"1fb64f47-4272-43ae-a119-c3b4c3367829-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 20629-2}\">levoFLOXacin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;4 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}\">Resistant</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "20629-2",
+          "display" : "levoFLOXacin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 4,
+        "comparator" : ">",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "R",
+          "display" : "Resistant"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:af249f79-f487-4533-9935-d19ab7043724",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "af249f79-f487-4533-9935-d19ab7043724",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_af249f79-f487-4533-9935-d19ab7043724\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation af249f79-f487-4533-9935-d19ab7043724</b></p><a name=\"af249f79-f487-4533-9935-d19ab7043724\"> </a><a name=\"hcaf249f79-f487-4533-9935-d19ab7043724\"> </a><a name=\"af249f79-f487-4533-9935-d19ab7043724-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18961-3}\">Oxacillin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: 0.5 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18961-3",
+          "display" : "Oxacillin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 0.5,
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "S",
+          "display" : "Susceptible"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "a4469ca9-d0be-4c58-853a-44cea24484b8",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_a4469ca9-d0be-4c58-853a-44cea24484b8\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation a4469ca9-d0be-4c58-853a-44cea24484b8</b></p><a name=\"a4469ca9-d0be-4c58-853a-44cea24484b8\"> </a><a name=\"hca4469ca9-d0be-4c58-853a-44cea24484b8\"> </a><a name=\"a4469ca9-d0be-4c58-853a-44cea24484b8-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 19000-9}\">Vancomycin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "19000-9",
+          "display" : "Vancomycin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 1,
+        "comparator" : "<=",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "S",
+          "display" : "Susceptible"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "d49839fe-515c-44b6-8d19-3cc5d48feb49",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_d49839fe-515c-44b6-8d19-3cc5d48feb49\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation d49839fe-515c-44b6-8d19-3cc5d48feb49</b></p><a name=\"d49839fe-515c-44b6-8d19-3cc5d48feb49\"> </a><a name=\"hcd49839fe-515c-44b6-8d19-3cc5d48feb49\"> </a><a name=\"d49839fe-515c-44b6-8d19-3cc5d48feb49-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 634-6}\">Bacteria identified in Specimen by Aerobe culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 40886007}\">Klebsiella oxytoca</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1ada4aeb-37cd-4d76-9815-46f627f5036c\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-d1636a51-d6c7-48de-9de6-29d741c96937\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "634-6",
+          "display" : "Bacteria identified in Specimen by Aerobe culture"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "40886007",
+          "display" : "Klebsiella oxytoca"
+        }]
+      },
+      "hasMember" : [{
+        "reference" : "urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c"
+      },
+      {
+        "reference" : "urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "1ada4aeb-37cd-4d76-9815-46f627f5036c",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_1ada4aeb-37cd-4d76-9815-46f627f5036c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 1ada4aeb-37cd-4d76-9815-46f627f5036c</b></p><a name=\"1ada4aeb-37cd-4d76-9815-46f627f5036c\"> </a><a name=\"hc1ada4aeb-37cd-4d76-9815-46f627f5036c\"> </a><a name=\"1ada4aeb-37cd-4d76-9815-46f627f5036c-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Microorganism Growth</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 263866000}\">Scanty growth</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "text" : "Microorganism Growth"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "263866000",
+          "display" : "Scanty growth"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "d1636a51-d6c7-48de-9de6-29d741c96937",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_d1636a51-d6c7-48de-9de6-29d741c96937\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation d1636a51-d6c7-48de-9de6-29d741c96937</b></p><a name=\"d1636a51-d6c7-48de-9de6-29d741c96937\"> </a><a name=\"hcd1636a51-d6c7-48de-9de6-29d741c96937\"> </a><a name=\"d1636a51-d6c7-48de-9de6-29d741c96937-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29576-6}\">Bacterial susceptibility panel</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-3923e71d-31b0-49d3-94f0-2c311600e54d\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-66e76861-53ed-4560-aa54-2efa5b4aff64\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5601b27d-69a7-44eb-be1a-af632aa54109\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "29576-6",
+          "display" : "Bacterial susceptibility panel"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "hasMember" : [{
+        "reference" : "urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"
+      },
+      {
+        "reference" : "urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d"
+      },
+      {
+        "reference" : "urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64"
+      },
+      {
+        "reference" : "urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "7b52c241-226a-43d3-ba6a-f2ca18d5b0dd",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 7b52c241-226a-43d3-ba6a-f2ca18d5b0dd</b></p><a name=\"7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\"> </a><a name=\"hc7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\"> </a><a name=\"7b52c241-226a-43d3-ba6a-f2ca18d5b0dd-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18864-9}\">Ampicillin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;16 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}\">Resistant</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18864-9",
+          "display" : "Ampicillin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 16,
+        "comparator" : ">",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "R",
+          "display" : "Resistant"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "3923e71d-31b0-49d3-94f0-2c311600e54d",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_3923e71d-31b0-49d3-94f0-2c311600e54d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 3923e71d-31b0-49d3-94f0-2c311600e54d</b></p><a name=\"3923e71d-31b0-49d3-94f0-2c311600e54d\"> </a><a name=\"hc3923e71d-31b0-49d3-94f0-2c311600e54d\"> </a><a name=\"3923e71d-31b0-49d3-94f0-2c311600e54d-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18906-8}\">Ciprofloxacin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=0.5 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18906-8",
+          "display" : "Ciprofloxacin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 0.5,
+        "comparator" : "<=",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "S",
+          "display" : "Susceptible"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "66e76861-53ed-4560-aa54-2efa5b4aff64",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_66e76861-53ed-4560-aa54-2efa5b4aff64\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 66e76861-53ed-4560-aa54-2efa5b4aff64</b></p><a name=\"66e76861-53ed-4560-aa54-2efa5b4aff64\"> </a><a name=\"hc66e76861-53ed-4560-aa54-2efa5b4aff64\"> </a><a name=\"66e76861-53ed-4560-aa54-2efa5b4aff64-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18928-2}\">Gentamicin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;8 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}\">Resistant</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18928-2",
+          "display" : "Gentamicin [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 8,
+        "comparator" : ">",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "R",
+          "display" : "Resistant"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "5601b27d-69a7-44eb-be1a-af632aa54109",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_5601b27d-69a7-44eb-be1a-af632aa54109\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 5601b27d-69a7-44eb-be1a-af632aa54109</b></p><a name=\"5601b27d-69a7-44eb-be1a-af632aa54109\"> </a><a name=\"hc5601b27d-69a7-44eb-be1a-af632aa54109\"> </a><a name=\"5601b27d-69a7-44eb-be1a-af632aa54109-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18932-4}\">Imipenem [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18932-4",
+          "display" : "Imipenem [Susceptibility]"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueQuantity" : {
+        "value" : 1,
+        "comparator" : "<=",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "S",
+          "display" : "Susceptible"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e</b></p><a name=\"5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e\"> </a><a name=\"hc5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e\"> </a><a name=\"5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 635-3}\">Anaerobic Culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 264868006}\">No growth</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "635-3",
+          "display" : "Bacteria identified in Specimen by Anaerobe culture"
+        }],
+        "text" : "Anaerobic Culture"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
+      },
+      "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+      "performer" : [{
+        "display" : "MUDr. Aleš Procházka"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "264868006",
+          "display" : "No growth"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "1e139f41-4d0f-43dd-ad5a-98003c520349",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_1e139f41-4d0f-43dd-ad5a-98003c520349\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 1e139f41-4d0f-43dd-ad5a-98003c520349</b></p><a name=\"1e139f41-4d0f-43dd-ad5a-98003c520349\"> </a><a name=\"hc1e139f41-4d0f-43dd-ad5a-98003c520349\"> </a><a name=\"1e139f41-4d0f-43dd-ad5a-98003c520349-en-US\"> </a><p><b>identifier</b>: <code>http://example.org/czech-orgs</code>/24341</p><p><b>name</b>: Ministry of Health of the Czech Republic</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://example.org/czech-orgs",
+        "value" : "24341"
+      }],
+      "name" : "Ministry of Health of the Czech Republic"
+    }
+  }]
+}

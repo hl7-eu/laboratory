@@ -1,0 +1,40 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-3",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/9b909da1-c5bf-4b1a-aa39-38e4f1561517-3",
+  "name" : "IntersectionLaboratoryLocalCSAndLaboratoryLocalCS",
+  "title" : "Intersection of Laboratory Code: example And Laboratory Code: example",
+  "status" : "active",
+  "date" : "2024-11-18T16:53:34+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "concept" : [{
+    "code" : "3002989",
+    "display" : "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+  },
+  {
+    "code" : "0020089",
+    "display" : "Hepatitis B Surface Antigen"
+  },
+  {
+    "code" : "0020092",
+    "display" : "Hepatitis B Core Antibody, IgM"
+  },
+  {
+    "code" : "0020093",
+    "display" : "Hepatitis A Antibody, IgM"
+  },
+  {
+    "code" : "3003128",
+    "display" : "Hepatitis C Antibody by CIA Interp"
+  },
+  {
+    "code" : "2002404",
+    "display" : "Hepatitis C Antibody by CIA Index"
+  }]
+}

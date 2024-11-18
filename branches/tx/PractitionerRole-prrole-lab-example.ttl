@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/PractitionerRole/prrole-lab-example> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "prrole-lab-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole prrole-lab-example</b></p><a name=\"prrole-lab-example\"> </a><a name=\"hcprrole-lab-example\"> </a><a name=\"prrole-lab-example-en-US\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-pr-lab-example.html\">Practitioner Matteo Cervone </a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <http://hl7.eu/fhir/laboratory/Practitioner/pr-lab-example> ;
+     fhir:reference [ fhir:v "Practitioner/pr-lab-example" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

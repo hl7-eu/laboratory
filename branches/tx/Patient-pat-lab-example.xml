@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="pat-lab-example"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient pat-lab-example</b></p><a name="pat-lab-example"> </a><a name="hcpat-lab-example"> </a><a name="pat-lab-example-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NIIP"/>
+      </coding>
+    </type>
+    <system value="urn:oid:1.2.203.24341.1.20.2"/>
+    <value value="740512852"/>
+  </identifier>
+  <identifier>
+    <system value="urn:oid:1.2.203.24341.1.20.9.1"/>
+    <value value="A225961454"/>
+  </identifier>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PPN"/>
+      </coding>
+    </type>
+    <system value="urn:oid:2.16.840.1.113883.4.330.203"/>
+    <value value="5484136"/>
+  </identifier>
+  <name>
+    <family value="Očkovaný Moreira">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-fathers-family">
+        <valueString value="Moreira"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-mothers-family">
+        <valueString value="Očkovaný"/>
+      </extension>
+    </family>
+    <given value="František"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="2000-03-21"/>
+</Patient>

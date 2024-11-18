@@ -1,0 +1,1836 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-131",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b909da1-c5bf-4b1a-aa39-38e4f1561517-131",
+  "name" : "UnionLabSpecimenTypesEuVsAndLabSpecimenTypesEuVs",
+  "title" : "Union of Specimen Types And Specimen Types",
+  "status" : "active",
+  "date" : "2024-11-18T16:53:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "119376003",
+        "display" : "Tissue specimen"
+      },
+      {
+        "code" : "119359002",
+        "display" : "Bone marrow specimen"
+      },
+      {
+        "code" : "122571007",
+        "display" : "Pericardial fluid specimen"
+      },
+      {
+        "code" : "119297000",
+        "display" : "Blood specimen"
+      },
+      {
+        "code" : "418564007",
+        "display" : "Pleural fluid specimen"
+      },
+      {
+        "code" : "119303007",
+        "display" : "Microbial isolate"
+      },
+      {
+        "code" : "122554006",
+        "display" : "Capillary blood specimen"
+      },
+      {
+        "code" : "119326000",
+        "display" : "Hair specimen"
+      },
+      {
+        "code" : "258450006",
+        "display" : "Cerebrospinal fluid specimen"
+      },
+      {
+        "code" : "119327009",
+        "display" : "Nail specimen"
+      },
+      {
+        "code" : "119361006",
+        "display" : "Plasma specimen"
+      },
+      {
+        "code" : "119334006",
+        "display" : "Sputum specimen"
+      },
+      {
+        "code" : "119373006",
+        "display" : "Amniotic fluid specimen"
+      },
+      {
+        "code" : "119339001",
+        "display" : "Stool specimen"
+      },
+      {
+        "code" : "122552005",
+        "display" : "Arterial blood specimen"
+      },
+      {
+        "code" : "119341000",
+        "display" : "Bile specimen"
+      },
+      {
+        "code" : "122555007",
+        "display" : "Venous blood specimen"
+      },
+      {
+        "code" : "119342007",
+        "display" : "Saliva specimen"
+      },
+      {
+        "code" : "122575003",
+        "display" : "Urine specimen"
+      },
+      {
+        "code" : "119347001",
+        "display" : "Seminal fluid specimen"
+      },
+      {
+        "code" : "309051001",
+        "display" : "Body fluid specimen"
+      },
+      {
+        "code" : "119351004",
+        "display" : "Erythrocyte specimen"
+      },
+      {
+        "code" : "119364003",
+        "display" : "Serum specimen"
+      },
+      {
+        "code" : "119312009",
+        "display" : "Catheter tip submitted as specimen"
+      },
+      {
+        "code" : "258566005",
+        "display" : "Deoxyribonucleic acid specimen"
+      },
+      {
+        "code" : "258529004",
+        "display" : "Throat swab"
+      },
+      {
+        "code" : "119323008",
+        "display" : "Pus specimen"
+      },
+      {
+        "code" : "258607008",
+        "display" : "Bronchoalveolar lavage fluid specimen"
+      },
+      {
+        "code" : "122556008",
+        "display" : "Cord blood specimen"
+      },
+      {
+        "code" : "258470000",
+        "display" : "Prostatic fluid specimen"
+      },
+      {
+        "code" : "122569007",
+        "display" : "Sweat specimen"
+      },
+      {
+        "code" : "258530009",
+        "display" : "Urethral swab"
+      },
+      {
+        "code" : "440500007",
+        "display" : "Dried blood spot specimen"
+      },
+      {
+        "code" : "258574006",
+        "display" : "Mid-stream urine specimen"
+      },
+      {
+        "code" : "119340004",
+        "display" : "Meconium specimen"
+      },
+      {
+        "code" : "119360007",
+        "display" : "Dialysis fluid"
+      },
+      {
+        "code" : "119332005",
+        "display" : "Synovial fluid specimen"
+      },
+      {
+        "code" : "258455001",
+        "display" : "Drainage fluid specimen"
+      },
+      {
+        "code" : "119371008",
+        "display" : "Specimen from abscess"
+      },
+      {
+        "code" : "168139001",
+        "display" : "Peritoneal fluid specimen"
+      },
+      {
+        "code" : "258565009",
+        "display" : "Chorionic villi specimen"
+      },
+      {
+        "code" : "442173007",
+        "display" : "Urine specimen from nephrostomy tube"
+      },
+      {
+        "code" : "309128003",
+        "display" : "Eye fluid specimen"
+      },
+      {
+        "code" : "119348006",
+        "display" : "Seminal plasma specimen"
+      },
+      {
+        "code" : "258528007",
+        "display" : "Rectal swab"
+      },
+      {
+        "code" : "122594008",
+        "display" : "Tears specimen"
+      },
+      {
+        "code" : "258591005",
+        "display" : "White blood cell specimen"
+      },
+      {
+        "code" : "127479004",
+        "display" : "Specimen from uterus"
+      },
+      {
+        "code" : "432825001",
+        "display" : "Body secretion specimen"
+      },
+      {
+        "code" : "446952006",
+        "display" : "Specimen from skin obtained by scraping"
+      },
+      {
+        "code" : "258503004",
+        "display" : "Skin swab"
+      },
+      {
+        "code" : "447103002",
+        "display" : "Foreign body submitted as specimen"
+      },
+      {
+        "code" : "119318008",
+        "display" : "Water specimen"
+      },
+      {
+        "code" : "699287008",
+        "display" : "Urine specimen obtained via suprapubic indwelling urinary catheter"
+      },
+      {
+        "code" : "119298005",
+        "display" : "Mixed venous blood specimen"
+      },
+      {
+        "code" : "703431007",
+        "display" : "Venous cord blood specimen"
+      },
+      {
+        "code" : "122565001",
+        "display" : "Urinary catheter specimen"
+      },
+      {
+        "code" : "705054005",
+        "display" : "Muscle specimen"
+      },
+      {
+        "code" : "309210009",
+        "display" : "Esophageal brushings specimen"
+      },
+      {
+        "code" : "708049000",
+        "display" : "Plasma specimen with ethylenediamine tetraacetic acid"
+      },
+      {
+        "code" : "440473005",
+        "display" : "Contact lens submitted as specimen"
+      },
+      {
+        "code" : "733056005",
+        "display" : "Fluid specimen from ear"
+      },
+      {
+        "code" : "446846006",
+        "display" : "Urine specimen obtained via indwelling urinary catheter"
+      },
+      {
+        "code" : "258428005",
+        "display" : "Products of conception tissue specimen"
+      },
+      {
+        "code" : "258508008",
+        "display" : "Genital swab"
+      },
+      {
+        "code" : "258441009",
+        "display" : "Exudate specimen"
+      },
+      {
+        "code" : "119338009",
+        "display" : "Dentin specimen"
+      },
+      {
+        "code" : "119350003",
+        "display" : "Calculus specimen"
+      },
+      {
+        "code" : "258564008",
+        "display" : "Buccal smear specimen"
+      },
+      {
+        "code" : "119399004",
+        "display" : "Specimen from eye"
+      },
+      {
+        "code" : "119329007",
+        "display" : "Colostrum specimen"
+      },
+      {
+        "code" : "258458004",
+        "display" : "Fistula fluid specimen"
+      },
+      {
+        "code" : "258589002",
+        "display" : "Lymph node specimen"
+      },
+      {
+        "code" : "258459007",
+        "display" : "Gastric fluid specimen"
+      },
+      {
+        "code" : "258603007",
+        "display" : "Specimen from respiratory system"
+      },
+      {
+        "code" : "258465007",
+        "display" : "Lacrimal fluid specimen"
+      },
+      {
+        "code" : "122567009",
+        "display" : "Urine sediment specimen"
+      },
+      {
+        "code" : "258466008",
+        "display" : "Middle ear fluid specimen"
+      },
+      {
+        "code" : "309176002",
+        "display" : "Bronchial brushings specimen"
+      },
+      {
+        "code" : "258469001",
+        "display" : "Pharyngeal washings"
+      },
+      {
+        "code" : "119300005",
+        "display" : "Specimen from blood product"
+      },
+      {
+        "code" : "119403008",
+        "display" : "Specimen from placenta"
+      },
+      {
+        "code" : "439961009",
+        "display" : "Implant submitted as specimen"
+      },
+      {
+        "code" : "258479004",
+        "display" : "Interstitial fluid specimen"
+      },
+      {
+        "code" : "119336008",
+        "display" : "Exhaled air specimen"
+      },
+      {
+        "code" : "258482009",
+        "display" : "Vesicle fluid specimen"
+      },
+      {
+        "code" : "445160003",
+        "display" : "Swab of eye"
+      },
+      {
+        "code" : "258498002",
+        "display" : "Conjunctival swab"
+      },
+      {
+        "code" : "122572000",
+        "display" : "Vomitus specimen"
+      },
+      {
+        "code" : "258500001",
+        "display" : "Nasopharyngeal swab"
+      },
+      {
+        "code" : "472929000",
+        "display" : "Central venous catheter tip submitted as specimen"
+      },
+      {
+        "code" : "168141000",
+        "display" : "Nasal fluid specimen"
+      },
+      {
+        "code" : "703430008",
+        "display" : "Arterial cord blood specimen"
+      },
+      {
+        "code" : "257261003",
+        "display" : "Swab"
+      },
+      {
+        "code" : "703432000",
+        "display" : "Venous plasma specimen"
+      },
+      {
+        "code" : "258411007",
+        "display" : "Nasopharyngeal aspirate"
+      },
+      {
+        "code" : "708048008",
+        "display" : "Plasma specimen with citrate"
+      },
+      {
+        "code" : "258415003",
+        "display" : "Biopsy specimen"
+      },
+      {
+        "code" : "732976006",
+        "display" : "Fluid specimen from external auditory canal"
+      },
+      {
+        "code" : "258417006",
+        "display" : "Bone tissue specimen"
+      },
+      {
+        "code" : "898201001",
+        "display" : "Specimen from device"
+      },
+      {
+        "code" : "258424007",
+        "display" : "Heart valve tissue"
+      },
+      {
+        "code" : "1003705007",
+        "display" : "Drain tip submitted as specimen"
+      },
+      {
+        "code" : "258497007",
+        "display" : "Abscess swab"
+      },
+      {
+        "code" : "258407001",
+        "display" : "Abscess tissue"
+      },
+      {
+        "code" : "309201001",
+        "display" : "Ascitic fluid specimen"
+      },
+      {
+        "code" : "258493006",
+        "display" : "Bladder stone specimen"
+      },
+      {
+        "code" : "258582006",
+        "display" : "Blood clot specimen"
+      },
+      {
+        "code" : "258583001",
+        "display" : "Bone marrow clot specimen"
+      },
+      {
+        "code" : "258446004",
+        "display" : "Bronchial fluid specimen"
+      },
+      {
+        "code" : "258418001",
+        "display" : "Burn tissue"
+      },
+      {
+        "code" : "258448003",
+        "display" : "Bursa fluid specimen"
+      },
+      {
+        "code" : "309110000",
+        "display" : "Bursa tissue specimen"
+      },
+      {
+        "code" : "258627009",
+        "display" : "Cannula tip submitted as specimen"
+      },
+      {
+        "code" : "309101008",
+        "display" : "Cartilage specimen"
+      },
+      {
+        "code" : "122580007",
+        "display" : "Cerumen specimen"
+      },
+      {
+        "code" : "258452003",
+        "display" : "Chylous fluid specimen"
+      },
+      {
+        "code" : "258581004",
+        "display" : "Clotted blood specimen"
+      },
+      {
+        "code" : "168136008",
+        "display" : "Colostomy fluid specimen"
+      },
+      {
+        "code" : "258499005",
+        "display" : "Cough swab"
+      },
+      {
+        "code" : "258419009",
+        "display" : "Curettings"
+      },
+      {
+        "code" : "258453008",
+        "display" : "Cyst fluid specimen"
+      },
+      {
+        "code" : "258420003",
+        "display" : "Cyst tissue"
+      },
+      {
+        "code" : "472919007",
+        "display" : "Device submitted as specimen"
+      },
+      {
+        "code" : "258454002",
+        "display" : "Dialysate specimen"
+      },
+      {
+        "code" : "258439008",
+        "display" : "Discharge specimen"
+      },
+      {
+        "code" : "119294007",
+        "display" : "Dried blood specimen"
+      },
+      {
+        "code" : "258440005",
+        "display" : "Effusion specimen"
+      },
+      {
+        "code" : "258456000",
+        "display" : "Empyema fluid specimen"
+      },
+      {
+        "code" : "258487003",
+        "display" : "Fecal smear"
+      },
+      {
+        "code" : "309117002",
+        "display" : "Fascia specimen"
+      },
+      {
+        "code" : "258442002",
+        "display" : "Fluid specimen"
+      },
+      {
+        "code" : "445744006",
+        "display" : "Fluid specimen from seroma"
+      },
+      {
+        "code" : "309502007",
+        "display" : "Fetus specimen"
+      },
+      {
+        "code" : "258492001",
+        "display" : "Gallstone specimen"
+      },
+      {
+        "code" : "432657002",
+        "display" : "Ganglion cyst specimen"
+      },
+      {
+        "code" : "309213006",
+        "display" : "Gastric brushings specimen"
+      },
+      {
+        "code" : "309199003",
+        "display" : "Gastrointestinal fluid specimen"
+      },
+      {
+        "code" : "258562007",
+        "display" : "Genetic specimen"
+      },
+      {
+        "code" : "258559009",
+        "display" : "Gingivocrevicular fluid specimen"
+      },
+      {
+        "code" : "440493002",
+        "display" : "Graft specimen from patient"
+      },
+      {
+        "code" : "258588005",
+        "display" : "Hematoma specimen"
+      },
+      {
+        "code" : "258521001",
+        "display" : "High vaginal swab"
+      },
+      {
+        "code" : "258461003",
+        "display" : "Hydrocele fluid specimen"
+      },
+      {
+        "code" : "258462005",
+        "display" : "Ileostomy fluid specimen"
+      },
+      {
+        "code" : "309114009",
+        "display" : "Ligament specimen"
+      },
+      {
+        "code" : "258522008",
+        "display" : "Low vaginal swab"
+      },
+      {
+        "code" : "309171007",
+        "display" : "Lower respiratory fluid specimen"
+      },
+      {
+        "code" : "302795002",
+        "display" : "Lymph node aspirate"
+      },
+      {
+        "code" : "258488008",
+        "display" : "Lymph node smear"
+      },
+      {
+        "code" : "309078004",
+        "display" : "Lymph node tissue specimen"
+      },
+      {
+        "code" : "119345009",
+        "display" : "Menstrual blood specimen"
+      },
+      {
+        "code" : "119328004",
+        "display" : "Mother's milk specimen"
+      },
+      {
+        "code" : "258483004",
+        "display" : "Mucus specimen"
+      },
+      {
+        "code" : "258467004",
+        "display" : "Nasopharyngeal washings"
+      },
+      {
+        "code" : "433799002",
+        "display" : "Nerve ganglion specimen"
+      },
+      {
+        "code" : "309129006",
+        "display" : "Nerve tissue specimen"
+      },
+      {
+        "code" : "309131002",
+        "display" : "Neuroma specimen"
+      },
+      {
+        "code" : "258468009",
+        "display" : "Edema fluid specimen"
+      },
+      {
+        "code" : "258494000",
+        "display" : "Pancreatic stone specimen"
+      },
+      {
+        "code" : "110913002",
+        "display" : "Pleural cytologic material"
+      },
+      {
+        "code" : "258484005",
+        "display" : "Postmortem tissue specimen"
+      },
+      {
+        "code" : "258502009",
+        "display" : "Pus swab"
+      },
+      {
+        "code" : "258495004",
+        "display" : "Renal stone specimen"
+      },
+      {
+        "code" : "258431006",
+        "display" : "Scrapings"
+      },
+      {
+        "code" : "258432004",
+        "display" : "Sebum specimen"
+      },
+      {
+        "code" : "309261004",
+        "display" : "Sigmoid colon brushings specimen"
+      },
+      {
+        "code" : "258475005",
+        "display" : "Sinus washings"
+      },
+      {
+        "code" : "119331003",
+        "display" : "Skeletal muscle specimen"
+      },
+      {
+        "code" : "119325001",
+        "display" : "Tissue specimen from skin"
+      },
+      {
+        "code" : "258505006",
+        "display" : "Skin ulcer swab"
+      },
+      {
+        "code" : "258433009",
+        "display" : "Smear specimen"
+      },
+      {
+        "code" : "309072003",
+        "display" : "Soft tissue specimen"
+      },
+      {
+        "code" : "1003706008",
+        "display" : "Specimen from drain tip"
+      },
+      {
+        "code" : "119305000",
+        "display" : "Specimen from plasma bag"
+      },
+      {
+        "code" : "119349003",
+        "display" : "Spermatozoa specimen"
+      },
+      {
+        "code" : "258434003",
+        "display" : "Spun urinary sediment"
+      },
+      {
+        "code" : "309123007",
+        "display" : "Synovial specimen"
+      },
+      {
+        "code" : "309121009",
+        "display" : "Synovial tissue specimen"
+      },
+      {
+        "code" : "440468004",
+        "display" : "Tampon submitted as specimen"
+      },
+      {
+        "code" : "309481000",
+        "display" : "Temporal artery specimen"
+      },
+      {
+        "code" : "309107007",
+        "display" : "Tendon specimen"
+      },
+      {
+        "code" : "258538002",
+        "display" : "Transudate specimen"
+      },
+      {
+        "code" : "258435002",
+        "display" : "Tumor tissue specimen"
+      },
+      {
+        "code" : "441479001",
+        "display" : "Fresh tissue specimen"
+      },
+      {
+        "code" : "439628000",
+        "display" : "Urinary collection bag submitted as specimen"
+      },
+      {
+        "code" : "439580004",
+        "display" : "Urine collection pad submitted as specimen"
+      },
+      {
+        "code" : "258437005",
+        "display" : "Vegetation from heart valve"
+      },
+      {
+        "code" : "258580003",
+        "display" : "Whole blood specimen"
+      },
+      {
+        "code" : "438805006",
+        "display" : "Whole tooth specimen"
+      },
+      {
+        "code" : "122566000",
+        "display" : "Fluid specimen from wound"
+      },
+      {
+        "code" : "258531008",
+        "display" : "Wound swab"
+      },
+      {
+        "code" : "446302006",
+        "display" : "Air specimen"
+      },
+      {
+        "code" : "33631000087102",
+        "display" : "Allogeneic bone graft material submitted as specimen"
+      },
+      {
+        "code" : "16215211000119100",
+        "display" : "Bartholin's gland fluid specimen"
+      },
+      {
+        "code" : "446129006",
+        "display" : "Bile specimen from common bile duct"
+      },
+      {
+        "code" : "446817004",
+        "display" : "Bile specimen from gallbladder"
+      },
+      {
+        "code" : "258490009",
+        "display" : "Biliary stone specimen"
+      },
+      {
+        "code" : "309105004",
+        "display" : "Bone biopsy specimen"
+      },
+      {
+        "code" : "122577006",
+        "display" : "Cervical mucus specimen"
+      },
+      {
+        "code" : "16216411000119106",
+        "display" : "Conjunctival smear specimen"
+      },
+      {
+        "code" : "1003707004",
+        "display" : "Drain device submitted as specimen"
+      },
+      {
+        "code" : "309216003",
+        "display" : "Duodenal biopsy specimen"
+      },
+      {
+        "code" : "122574004",
+        "display" : "Duodenal fluid specimen"
+      },
+      {
+        "code" : "309166000",
+        "display" : "Ear swab specimen"
+      },
+      {
+        "code" : "119314005",
+        "display" : "Electrode submitted as specimen"
+      },
+      {
+        "code" : "419695002",
+        "display" : "Environmental swab"
+      },
+      {
+        "code" : "309211008",
+        "display" : "Gastric biopsy specimen"
+      },
+      {
+        "code" : "122573005",
+        "display" : "Gastric contents specimen"
+      },
+      {
+        "code" : "122579009",
+        "display" : "Genital lochia specimen"
+      },
+      {
+        "code" : "258512002",
+        "display" : "Glans penis swab"
+      },
+      {
+        "code" : "473415003",
+        "display" : "Intrauterine contraceptive device submitted as specimen"
+      },
+      {
+        "code" : "258649003",
+        "display" : "Intravenous infusion fluid specimen"
+      },
+      {
+        "code" : "309049000",
+        "display" : "Lesion specimen"
+      },
+      {
+        "code" : "309203003",
+        "display" : "Liver biopsy specimen"
+      },
+      {
+        "code" : "309104000",
+        "display" : "Musculoskeletal specimen"
+      },
+      {
+        "code" : "447339001",
+        "display" : "Nasal smear specimen"
+      },
+      {
+        "code" : "16220931000119104",
+        "display" : "Pancreas cyst fluid specimen"
+      },
+      {
+        "code" : "119343002",
+        "display" : "Pancreatic fluid specimen"
+      },
+      {
+        "code" : "309154006",
+        "display" : "Pituitary specimen"
+      },
+      {
+        "code" : "708317005",
+        "display" : "Pooled specimen from vaginal introitus and rectal swab"
+      },
+      {
+        "code" : "258513007",
+        "display" : "Prepuce swab"
+      },
+      {
+        "code" : "410580001",
+        "display" : "Respiratory fluid specimen"
+      },
+      {
+        "code" : "732293002",
+        "display" : "Salivary calculus specimen"
+      },
+      {
+        "code" : "309066003",
+        "display" : "Skin biopsy specimen"
+      },
+      {
+        "code" : "430268003",
+        "display" : "Specimen from bone"
+      },
+      {
+        "code" : "119398007",
+        "display" : "Specimen from brain"
+      },
+      {
+        "code" : "122601001",
+        "display" : "Specimen from breast obtained by biopsy"
+      },
+      {
+        "code" : "119307008",
+        "display" : "Specimen from endotracheal tube"
+      },
+      {
+        "code" : "127476006",
+        "display" : "Specimen from fallopian tube"
+      },
+      {
+        "code" : "446951004",
+        "display" : "Specimen from granulation tissue"
+      },
+      {
+        "code" : "127473003",
+        "display" : "Specimen from kidney"
+      },
+      {
+        "code" : "119383005",
+        "display" : "Specimen from liver"
+      },
+      {
+        "code" : "122610009",
+        "display" : "Specimen from lung obtained by biopsy"
+      },
+      {
+        "code" : "447407009",
+        "display" : "Specimen from necrotic tissue"
+      },
+      {
+        "code" : "127469001",
+        "display" : "Specimen from pancreas"
+      },
+      {
+        "code" : "1003711005",
+        "display" : "Specimen from prosthetic joint"
+      },
+      {
+        "code" : "608969007",
+        "display" : "Specimen from skin"
+      },
+      {
+        "code" : "433308004",
+        "display" : "Specimen from spleen"
+      },
+      {
+        "code" : "119379005",
+        "display" : "Specimen from stomach"
+      },
+      {
+        "code" : "445447003",
+        "display" : "Specimen from trachea obtained by aspiration"
+      },
+      {
+        "code" : "441903006",
+        "display" : "Specimen obtained by bronchial aspiration"
+      },
+      {
+        "code" : "440674008",
+        "display" : "Specimen obtained by lavage"
+      },
+      {
+        "code" : "57711000052109",
+        "display" : "Specimen obtained by puncture procedure"
+      },
+      {
+        "code" : "16220971000119101",
+        "display" : "Specimen of fluid from cyst of kidney"
+      },
+      {
+        "code" : "278020009",
+        "display" : "Spot urine specimen"
+      },
+      {
+        "code" : "271514008",
+        "display" : "Sternal bone marrow specimen"
+      },
+      {
+        "code" : "472894002",
+        "display" : "Swab from cornea"
+      },
+      {
+        "code" : "472900002",
+        "display" : "Swab from gingiva"
+      },
+      {
+        "code" : "472888005",
+        "display" : "Swab from larynx"
+      },
+      {
+        "code" : "16210971000119108",
+        "display" : "Swab from lesion"
+      },
+      {
+        "code" : "472862007",
+        "display" : "Swab from lesion of skin"
+      },
+      {
+        "code" : "472879001",
+        "display" : "Swab from placenta"
+      },
+      {
+        "code" : "472885008",
+        "display" : "Swab from pressure injury"
+      },
+      {
+        "code" : "472883001",
+        "display" : "Swab from surgical wound"
+      },
+      {
+        "code" : "472866005",
+        "display" : "Swab from tongue"
+      },
+      {
+        "code" : "472867001",
+        "display" : "Swab from tonsil"
+      },
+      {
+        "code" : "461911000124106",
+        "display" : "Oropharyngeal swab"
+      },
+      {
+        "code" : "309478005",
+        "display" : "Thrombus specimen"
+      },
+      {
+        "code" : "258480001",
+        "display" : "Transtracheal aspirate specimen"
+      },
+      {
+        "code" : "258436001",
+        "display" : "Umbilical cord tissue specimen"
+      },
+      {
+        "code" : "444937002",
+        "display" : "Urine specimen from ureter"
+      },
+      {
+        "code" : "447589008",
+        "display" : "Urine specimen obtained by single catheterization of bladder"
+      },
+      {
+        "code" : "446907008",
+        "display" : "Urine specimen obtained from kidney"
+      },
+      {
+        "code" : "258520000",
+        "display" : "Vaginal swab"
+      },
+      {
+        "code" : "258523003",
+        "display" : "Vulval swab"
+      },
+      {
+        "code" : "258662004",
+        "display" : "Adhesive slide specimen"
+      },
+      {
+        "code" : "258527002",
+        "display" : "Anal swab"
+      },
+      {
+        "code" : "303248007",
+        "display" : "Blood film specimen"
+      },
+      {
+        "code" : "737535000",
+        "display" : "Blood smear specimen"
+      },
+      {
+        "code" : "122560006",
+        "display" : "Blood specimen from blood donor"
+      },
+      {
+        "code" : "866033003",
+        "display" : "Blood specimen in aerobic blood culture bottle"
+      },
+      {
+        "code" : "866032008",
+        "display" : "Blood specimen in anaerobic blood culture bottle"
+      },
+      {
+        "code" : "878861003",
+        "display" : "Blood specimen in blood culture bottle"
+      },
+      {
+        "code" : "445295009",
+        "display" : "Blood specimen with EDTA"
+      },
+      {
+        "code" : "309061008",
+        "display" : "Breast fine needle aspirate specimen"
+      },
+      {
+        "code" : "309503002",
+        "display" : "Breast nipple discharge specimen"
+      },
+      {
+        "code" : "309174004",
+        "display" : "Bronchial biopsy specimen"
+      },
+      {
+        "code" : "119308003",
+        "display" : "Cannula submitted as specimen"
+      },
+      {
+        "code" : "473409003",
+        "display" : "Central venous catheter submitted as specimen"
+      },
+      {
+        "code" : "445372002",
+        "display" : "Cerebrospinal fluid specimen from ventricle of brain"
+      },
+      {
+        "code" : "258524009",
+        "display" : "Cervical swab"
+      },
+      {
+        "code" : "119319000",
+        "display" : "Drug specimen"
+      },
+      {
+        "code" : "309165001",
+        "display" : "Ear specimen"
+      },
+      {
+        "code" : "258575007",
+        "display" : "Early morning urine specimen"
+      },
+      {
+        "code" : "446676001",
+        "display" : "Expressed breast milk specimen"
+      },
+      {
+        "code" : "122568004",
+        "display" : "Exudate specimen from wound"
+      },
+      {
+        "code" : "258519006",
+        "display" : "Female genital swab"
+      },
+      {
+        "code" : "737357006",
+        "display" : "Fetal blood specimen"
+      },
+      {
+        "code" : "698276005",
+        "display" : "First stream urine specimen"
+      },
+      {
+        "code" : "16214171000119101",
+        "display" : "Genital fluid specimen"
+      },
+      {
+        "code" : "258570002",
+        "display" : "Genitourinary specimen"
+      },
+      {
+        "code" : "309124001",
+        "display" : "Joint biopsy specimen"
+      },
+      {
+        "code" : "431361003",
+        "display" : "Joint fluid specimen"
+      },
+      {
+        "code" : "309079007",
+        "display" : "Lymph node biopsy specimen"
+      },
+      {
+        "code" : "309052008",
+        "display" : "Male genital specimen"
+      },
+      {
+        "code" : "119321005",
+        "display" : "Milk specimen"
+      },
+      {
+        "code" : "119377007",
+        "display" : "Myocardial specimen"
+      },
+      {
+        "code" : "16224371000119105",
+        "display" : "Nasal lavage fluid specimen"
+      },
+      {
+        "code" : "16223051000119101",
+        "display" : "Nasal sinus contents specimen"
+      },
+      {
+        "code" : "441620008",
+        "display" : "Oral fluid specimen"
+      },
+      {
+        "code" : "418932006",
+        "display" : "Oral swab"
+      },
+      {
+        "code" : "258511009",
+        "display" : "Penile urethral swab"
+      },
+      {
+        "code" : "258510005",
+        "display" : "Penis swab"
+      },
+      {
+        "code" : "258526006",
+        "display" : "Perianal swab"
+      },
+      {
+        "code" : "258525005",
+        "display" : "Perineal swab"
+      },
+      {
+        "code" : "472923004",
+        "display" : "Peripheral vascular catheter tip submitted as specimen"
+      },
+      {
+        "code" : "168140004",
+        "display" : "Peritoneal dialysate specimen"
+      },
+      {
+        "code" : "788707000",
+        "display" : "Plasma specimen or serum specimen or whole blood specimen"
+      },
+      {
+        "code" : "309172000",
+        "display" : "Pleura biopsy specimen"
+      },
+      {
+        "code" : "258471001",
+        "display" : "Prostatic massage fluid specimen"
+      },
+      {
+        "code" : "708112008",
+        "display" : "Retrouterine pouch fluid aspirate"
+      },
+      {
+        "code" : "258664003",
+        "display" : "Scotch tape slide specimen"
+      },
+      {
+        "code" : "122589008",
+        "display" : "Serum specimen from blood donor"
+      },
+      {
+        "code" : "122590004",
+        "display" : "Serum specimen from patient"
+      },
+      {
+        "code" : "258549008",
+        "display" : "Skin scale specimen"
+      },
+      {
+        "code" : "1179252003",
+        "display" : "Slide submitted as specimen"
+      },
+      {
+        "code" : "446972001",
+        "display" : "Specimen from abscess obtained by aspiration"
+      },
+      {
+        "code" : "119392008",
+        "display" : "Specimen from anus"
+      },
+      {
+        "code" : "127456000",
+        "display" : "Specimen from breast"
+      },
+      {
+        "code" : "16211051000119109",
+        "display" : "Specimen from deep wound"
+      },
+      {
+        "code" : "119396006",
+        "display" : "Specimen from endometrium"
+      },
+      {
+        "code" : "440229008",
+        "display" : "Specimen from environment"
+      },
+      {
+        "code" : "16212771000119105",
+        "display" : "Specimen from eyelid obtained by biopsy"
+      },
+      {
+        "code" : "449446003",
+        "display" : "Specimen from gallbladder"
+      },
+      {
+        "code" : "119344008",
+        "display" : "Specimen from genital system"
+      },
+      {
+        "code" : "447098004",
+        "display" : "Specimen from nail obtained by scraping"
+      },
+      {
+        "code" : "430248009",
+        "display" : "Specimen from nasopharyngeal structure"
+      },
+      {
+        "code" : "447154002",
+        "display" : "Specimen from nose"
+      },
+      {
+        "code" : "119397002",
+        "display" : "Specimen from penis"
+      },
+      {
+        "code" : "434250007",
+        "display" : "Specimen from pericardium obtained by biopsy"
+      },
+      {
+        "code" : "438660002",
+        "display" : "Specimen from prosthetic device"
+      },
+      {
+        "code" : "119295008",
+        "display" : "Specimen obtained by aspiration"
+      },
+      {
+        "code" : "119324002",
+        "display" : "Specimen of unknown material"
+      },
+      {
+        "code" : "703691002",
+        "display" : "Spun cerebrospinal fluid"
+      },
+      {
+        "code" : "258609006",
+        "display" : "Sputum specimen obtained by aspiration from trachea"
+      },
+      {
+        "code" : "447488002",
+        "display" : "Suprapubic urine specimen"
+      },
+      {
+        "code" : "373826004",
+        "display" : "Surgical excision specimen"
+      },
+      {
+        "code" : "472896000",
+        "display" : "Swab from blister"
+      },
+      {
+        "code" : "733104004",
+        "display" : "Swab from buccal mucosa"
+      },
+      {
+        "code" : "472884007",
+        "display" : "Swab from deep wound"
+      },
+      {
+        "code" : "472886009",
+        "display" : "Swab from gastrostomy stoma"
+      },
+      {
+        "code" : "472901003",
+        "display" : "Swab from nasal sinus"
+      },
+      {
+        "code" : "472881004",
+        "display" : "Swab from pharynx"
+      },
+      {
+        "code" : "472882006",
+        "display" : "Swab from superficial wound"
+      },
+      {
+        "code" : "33901000087104",
+        "display" : "Swab from tracheostomy stoma"
+      },
+      {
+        "code" : "472871003",
+        "display" : "Swab from ulcer"
+      },
+      {
+        "code" : "445364004",
+        "display" : "Swab of axilla"
+      },
+      {
+        "code" : "445444005",
+        "display" : "Swab of groin"
+      },
+      {
+        "code" : "445367006",
+        "display" : "Swab of umbilicus"
+      },
+      {
+        "code" : "710069003",
+        "display" : "Tick specimen"
+      },
+      {
+        "code" : "128157004",
+        "display" : "Tissue specimen from brain"
+      },
+      {
+        "code" : "399492000",
+        "display" : "Tissue specimen from lung"
+      },
+      {
+        "code" : "699874006",
+        "display" : "Tissue specimen from pericardium"
+      },
+      {
+        "code" : "57741000052105",
+        "display" : "Tracheal secretion specimen"
+      },
+      {
+        "code" : "472938003",
+        "display" : "Tracheal tube submitted as specimen"
+      },
+      {
+        "code" : "122877000",
+        "display" : "Upper respiratory fluid specimen obtained by tracheal aspiration"
+      },
+      {
+        "code" : "258604001",
+        "display" : "Upper respiratory specimen"
+      },
+      {
+        "code" : "446130001",
+        "display" : "Urine specimen from bladder"
+      },
+      {
+        "code" : "446306009",
+        "display" : "Urine specimen obtained from urinary collection bag"
+      },
+      {
+        "code" : "16221251000119108",
+        "display" : "Urine specimen obtained via straight catheter"
+      },
+      {
+        "code" : "258577004",
+        "display" : "Vaginal secretion specimen"
+      },
+      {
+        "code" : "472932002",
+        "display" : "Vascular catheter submitted as specimen"
+      },
+      {
+        "code" : "472942000",
+        "display" : "Ventriculoperitoneal shunt submitted as specimen"
+      },
+      {
+        "code" : "258438000",
+        "display" : "Vitreous humor specimen"
+      },
+      {
+        "code" : "57921000052103",
+        "display" : "Whole blood specimen with edetic acid"
+      },
+      {
+        "code" : "258599007",
+        "display" : "Contact lens solution specimen"
+      },
+      {
+        "code" : "119368000",
+        "display" : "Specimen from cyst"
+      },
+      {
+        "code" : "433861002",
+        "display" : "Specimen from nasal sinus obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "734379005",
+        "display" : "Specimen from periodontal tissue"
+      },
+      {
+        "code" : "119369008",
+        "display" : "Specimen from ulcer"
+      },
+      {
+        "code" : "430304001",
+        "display" : "Specimen from unspecified body site"
+      },
+      {
+        "code" : "122550002",
+        "display" : "Specimen obtained by fine needle aspiration procedure"
+      },
+      {
+        "code" : "258576008",
+        "display" : "Suprapubic aspirate specimen"
+      },
+      {
+        "code" : "445297001",
+        "display" : "Swab of internal nose"
+      },
+      {
+        "code" : "444946008",
+        "display" : "Dialysis fluid specimen obtained before dialysis"
+      },
+      {
+        "code" : "122592007",
+        "display" : "Serum or plasma specimen"
+      },
+      {
+        "code" : "309141004",
+        "display" : "Adrenal gland specimen"
+      },
+      {
+        "code" : "309479002",
+        "display" : "Artery specimen"
+      },
+      {
+        "code" : "122558009",
+        "display" : "Blood specimen from blood product"
+      },
+      {
+        "code" : "122559001",
+        "display" : "Blood specimen from control"
+      },
+      {
+        "code" : "122562003",
+        "display" : "Blood specimen from newborn"
+      },
+      {
+        "code" : "258587000",
+        "display" : "Buffy coat"
+      },
+      {
+        "code" : "433116003",
+        "display" : "Specimen from liver obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "119346005",
+        "display" : "Egg yolk specimen"
+      },
+      {
+        "code" : "122582004",
+        "display" : "Erythrocyte specimen from blood product"
+      },
+      {
+        "code" : "119333000",
+        "display" : "Fibroblast specimen"
+      },
+      {
+        "code" : "119320006",
+        "display" : "Food specimen"
+      },
+      {
+        "code" : "122576002",
+        "display" : "Genital mucus specimen"
+      },
+      {
+        "code" : "119337004",
+        "display" : "Inhaled gas specimen"
+      },
+      {
+        "code" : "258606004",
+        "display" : "Lower respiratory tract specimen"
+      },
+      {
+        "code" : "119316007",
+        "display" : "Non-biological fluid specimen"
+      },
+      {
+        "code" : "122551003",
+        "display" : "Peripheral blood specimen"
+      },
+      {
+        "code" : "119301009",
+        "display" : "Plant specimen"
+      },
+      {
+        "code" : "119362004",
+        "display" : "Platelet poor plasma specimen"
+      },
+      {
+        "code" : "119363009",
+        "display" : "Platelet rich plasma specimen"
+      },
+      {
+        "code" : "119358005",
+        "display" : "Platelet specimen"
+      },
+      {
+        "code" : "725946000",
+        "display" : "Reticulocyte specimen"
+      },
+      {
+        "code" : "309508006",
+        "display" : "Soft tissue lesion fine needle aspirate specimen"
+      },
+      {
+        "code" : "119391001",
+        "display" : "Specimen from bronchus"
+      },
+      {
+        "code" : "119367005",
+        "display" : "Specimen from burn injury"
+      },
+      {
+        "code" : "702701006",
+        "display" : "Specimen from cervix or vagina"
+      },
+      {
+        "code" : "119400006",
+        "display" : "Specimen from cornea"
+      },
+      {
+        "code" : "1003708009",
+        "display" : "Specimen from drain device"
+      },
+      {
+        "code" : "127462005",
+        "display" : "Specimen from heart"
+      },
+      {
+        "code" : "127458004",
+        "display" : "Specimen from lung"
+      },
+      {
+        "code" : "122614000",
+        "display" : "Specimen from lung obtained by fine needle aspiration procedure"
+      },
+      {
+        "code" : "432382007",
+        "display" : "Specimen from lymph node obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "128155007",
+        "display" : "Specimen from ovary"
+      },
+      {
+        "code" : "431406009",
+        "display" : "Specimen from pancreas obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "441695007",
+        "display" : "Specimen from parotid gland obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "430250001",
+        "display" : "Specimen from peritoneum"
+      },
+      {
+        "code" : "127459007",
+        "display" : "Specimen from pleura"
+      },
+      {
+        "code" : "119386002",
+        "display" : "Specimen from prostate"
+      },
+      {
+        "code" : "384819001",
+        "display" : "Specimen from prostate obtained by needle biopsy"
+      },
+      {
+        "code" : "434406008",
+        "display" : "Specimen from salivary gland obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "441810001",
+        "display" : "Specimen from soft tissue obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "441749007",
+        "display" : "Specimen from submandibular gland obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "128154006",
+        "display" : "Specimen from testis"
+      },
+      {
+        "code" : "119389009",
+        "display" : "Specimen from throat"
+      },
+      {
+        "code" : "399680007",
+        "display" : "Specimen from thyroid"
+      },
+      {
+        "code" : "119390000",
+        "display" : "Specimen from trachea"
+      },
+      {
+        "code" : "399411006",
+        "display" : "Specimen from trophoblast"
+      },
+      {
+        "code" : "119393003",
+        "display" : "Specimen from urethra"
+      },
+      {
+        "code" : "450872001",
+        "display" : "Specimen from urinary bladder"
+      },
+      {
+        "code" : "119395005",
+        "display" : "Specimen from uterine cervix"
+      },
+      {
+        "code" : "119394009",
+        "display" : "Specimen from vagina"
+      },
+      {
+        "code" : "119365002",
+        "display" : "Specimen from wound"
+      },
+      {
+        "code" : "309146009",
+        "display" : "Thyroid fine needle aspirate specimen"
+      },
+      {
+        "code" : "122638001",
+        "display" : "Tissue specimen from small intestine"
+      },
+      {
+        "code" : "258444001",
+        "display" : "Aqueous humor specimen"
+      },
+      {
+        "code" : "258485006",
+        "display" : "Corneal scraping specimen"
+      },
+      {
+        "code" : "168137004",
+        "display" : "Gastric aspirate specimen"
+      },
+      {
+        "code" : "1259931002",
+        "display" : "Hair of face specimen"
+      },
+      {
+        "code" : "168145009",
+        "display" : "Lymph specimen"
+      },
+      {
+        "code" : "309507001",
+        "display" : "Muscle biopsy specimen"
+      },
+      {
+        "code" : "16224171000119108",
+        "display" : "Nasotracheal aspirate"
+      },
+      {
+        "code" : "309068002",
+        "display" : "Skin lesion specimen"
+      },
+      {
+        "code" : "396997002",
+        "display" : "Specimen from bone marrow obtained by aspiration"
+      },
+      {
+        "code" : "16215771000119101",
+        "display" : "Specimen from inguinal lymph node obtained by fine needle aspiration biopsy"
+      },
+      {
+        "code" : "430236006",
+        "display" : "Specimen from nerve"
+      },
+      {
+        "code" : "472898004",
+        "display" : "Swab from hand"
+      },
+      {
+        "code" : "472868006",
+        "display" : "Swab from peritoneal cavity structure"
+      },
+      {
+        "code" : "444787003",
+        "display" : "Swab of endocervix"
+      },
+      {
+        "code" : "16223971000119109",
+        "display" : "Synovial fluid specimen obtained by fine needle aspiration procedure"
+      },
+      {
+        "code" : "122656001",
+        "display" : "Tissue specimen from gallbladder"
+      },
+      {
+        "code" : "122736005",
+        "display" : "Tissue specimen from placenta"
+      },
+      {
+        "code" : "369611008",
+        "display" : "Tissue specimen obtained from small intestine by biopsy"
+      },
+      {
+        "code" : "309191000",
+        "display" : "Tonsil biopsy specimen"
+      },
+      {
+        "code" : "697989009",
+        "display" : "Anterior nares swab"
+      },
+      {
+        "code" : "57931000052101",
+        "display" : "Combined cervical mucus and urine specimen"
+      },
+      {
+        "code" : "433324003",
+        "display" : "Specimen from eye region"
+      },
+      {
+        "code" : "16216171000119108",
+        "display" : "Specimen from liver obtained by aspiration"
+      },
+      {
+        "code" : "16221491000119104",
+        "display" : "Voided urine specimen"
+      }]
+    }]
+  }
+}

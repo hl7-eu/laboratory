@@ -1,0 +1,355 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Bundle/BundleLabResultReportPOC> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BundleLabResultReportPOC"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ba91c64b-f30c-4137-a484-34bbba5e8804" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2023-03-06T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051> )
+  ] ) . # 
+
+<urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4> a fhir:Composition ;
+  fhir:id [ fhir:v "80709186-426d-4cdf-abba-034c4f80acb4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_80709186-426d-4cdf-abba-034c4f80acb4\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 80709186-426d-4cdf-abba-034c4f80acb4</b></p><a name=\"80709186-426d-4cdf-abba-034c4f80acb4\"> </a><a name=\"hc80709186-426d-4cdf-abba-034c4f80acb4\"> </a><a name=\"80709186-426d-4cdf-abba-034c4f80acb4-en-US\"> </a><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span>, <span title=\"Codes:{http://snomed.info/sct 394596001}\">Chemical pathology</span></p><p><b>date</b>: 2023-03-09 14:30:00+0100</p><p><b>author</b>: Dr. Patrick Dempsey</p><p><b>title</b>: Laboratory Report - 10 March, 2023 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:26436-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "26436-6" ] ;
+       fhir:display [ fhir:v "Laboratory Studies (set)" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a sct:394596001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394596001" ] ;
+       fhir:display [ fhir:v "Chemical pathology" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda" ]
+  ] ; # 
+  fhir:date [ fhir:v "2023-03-09T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:display [ fhir:v "Dr. Patrick Dempsey" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Laboratory Report - 10 March, 2023 14:30"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2020-12-27T14:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:reference [ fhir:v "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Blood group lab result report" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:26436-6 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "26436-6" ] ;
+         fhir:display [ fhir:v "Laboratory studies (set)" ]
+       ] ) ;
+       fhir:text [ fhir:v "LABORATORY STUDIES" ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "Inline-Diagnostic-Report-laboratory-results-report-poc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_Inline-Diagnostic-Report-laboratory-results-report-poc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport Inline-Diagnostic-Report-laboratory-results-report-poc</b></p><a name=\"Inline-Diagnostic-Report-laboratory-results-report-poc\"> </a><a name=\"hcInline-Diagnostic-Report-laboratory-results-report-poc\"> </a><a name=\"Inline-Diagnostic-Report-laboratory-results-report-poc-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span> (<span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span>, <span title=\"Codes:{http://snomed.info/sct 394596001}\">Chemical pathology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2023-04-19 15:46:00+0100</td></tr><tr><td>Performer</td><td> Dr. Patrick Dempsey</td></tr><tr><td>Identifier</td><td> <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</td></tr></table><p><b>Report Details</b></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:reference [ fhir:v "urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:26436-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "26436-6" ] ;
+       fhir:display [ fhir:v "Laboratory Studies (set)" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       a sct:394596001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "394596001" ] ;
+       fhir:display [ fhir:v "Chemical pathology" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-04-19T15:46:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Dr. Patrick Dempsey" ]
+  ] ) . # 
+
+<urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda> a fhir:Patient ;
+  fhir:id [ fhir:v "1d252ca0-803c-464c-87d5-f12f73c12eda"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_1d252ca0-803c-464c-87d5-f12f73c12eda\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 1d252ca0-803c-464c-87d5-f12f73c12eda</b></p><a name=\"1d252ca0-803c-464c-87d5-f12f73c12eda\"> </a><a name=\"hc1d252ca0-803c-464c-87d5-f12f73c12eda\"> </a><a name=\"1d252ca0-803c-464c-87d5-f12f73c12eda-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">John Doe  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIIP" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "740512852" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.9.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A225961454" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.4.330.203"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5484136" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Doe" ] ;
+     fhir:given ( [ fhir:v "John" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2000-03-21"^^xsd:date] . # 
+
+<urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f> a fhir:Observation ;
+  fhir:id [ fhir:v "8bd279af-125a-4318-b461-ba5629b12e7f"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_8bd279af-125a-4318-b461-ba5629b12e7f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 8bd279af-125a-4318-b461-ba5629b12e7f</b></p><a name=\"8bd279af-125a-4318-b461-ba5629b12e7f\"> </a><a name=\"hc8bd279af-125a-4318-b461-ba5629b12e7f\"> </a><a name=\"8bd279af-125a-4318-b461-ba5629b12e7f-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 883-9}\">Blood Group</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultReportPOC.html#urn-uuid-1d252ca0-803c-464c-87d5-f12f73c12eda\">Bundle: identifier = http://example.org#ba91c64b-f30c-4137-a484-34bbba5e8804; type = document; timestamp = 2023-03-06 14:30:00+0100</a></p><p><b>effective</b>: 2023-03-09 13:35:00+0100</p><p><b>performer</b>: Dr. Patrick Dempsey</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 112144000}\">A</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:883-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "883-9" ] ;
+       fhir:display [ fhir:v "ABO group [Type] in Blood" ]
+     ] ) ;
+     fhir:text [ fhir:v "Blood Group" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-03-09T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Dr. Patrick Dempsey" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:112144000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "112144000" ] ;
+       fhir:display [ fhir:v "Blood group A (finding)" ]
+     ] ) ;
+     fhir:text [ fhir:v "A" ]
+  ] . # 
+
+<urn:uuid:2e861278-2e99-4ffa-befa-049467a095b2> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "Inline-ServiceRequest-laboratory-results-report-poc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_Inline-ServiceRequest-laboratory-results-report-poc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest Inline-ServiceRequest-laboratory-results-report-poc</b></p><a name=\"Inline-ServiceRequest-laboratory-results-report-poc\"> </a><a name=\"hcInline-ServiceRequest-laboratory-results-report-poc\"> </a><a name=\"Inline-ServiceRequest-laboratory-results-report-poc-en-US\"> </a><p><b>identifier</b>: <code>http://example.org</code>/2e861278-2e99-4ffa-befa-049467a095b2</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultReportPOC.html#urn-uuid-1d252ca0-803c-464c-87d5-f12f73c12eda\">Bundle: identifier = http://example.org#ba91c64b-f30c-4137-a484-34bbba5e8804; type = document; timestamp = 2023-03-06 14:30:00+0100</a></p><p><b>specimen</b>: <a href=\"Bundle-BundleLabResultReportPOC.html#urn-uuid-cadaf2e3-b707-4207-9b63-5c29ffece051\">Bundle: identifier = http://example.org#ba91c64b-f30c-4137-a484-34bbba5e8804; type = document; timestamp = 2023-03-06 14:30:00+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2e861278-2e99-4ffa-befa-049467a095b2" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:108252007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "108252007" ] ;
+       fhir:display [ fhir:v "Laboratory procedure" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda" ]
+  ] ; # 
+  fhir:specimen ( [
+     fhir:reference [ fhir:v "urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051" ]
+  ] ) . # 
+
+<urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70> a fhir:Organization ;
+  fhir:id [ fhir:v "608b5309-2609-4d03-b6da-c758bfa1de70"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_608b5309-2609-4d03-b6da-c758bfa1de70\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 608b5309-2609-4d03-b6da-c758bfa1de70</b></p><a name=\"608b5309-2609-4d03-b6da-c758bfa1de70\"> </a><a name=\"hc608b5309-2609-4d03-b6da-c758bfa1de70\"> </a><a name=\"608b5309-2609-4d03-b6da-c758bfa1de70-en-US\"> </a><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></div>"
+  ] ; # 
+  fhir:name [ fhir:v "SAN RAFFAELE NOMENTANA"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "390 666 0581" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Emilio Praga 39" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00137" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051> a fhir:Specimen ;
+  fhir:id [ fhir:v "cadaf2e3-b707-4207-9b63-5c29ffece051"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_cadaf2e3-b707-4207-9b63-5c29ffece051\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen cadaf2e3-b707-4207-9b63-5c29ffece051</b></p><a name=\"cadaf2e3-b707-4207-9b63-5c29ffece051\"> </a><a name=\"hccadaf2e3-b707-4207-9b63-5c29ffece051\"> </a><a name=\"cadaf2e3-b707-4207-9b63-5c29ffece051-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Blood specimen</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:119297000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119297000" ] ;
+       fhir:display [ fhir:v "Blood specimen" ]
+     ] ) ;
+     fhir:text [ fhir:v "Blood specimen" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Bundle: converted from CDA - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"24.66"}
+    h3,h4,h5,h6{--heading-prefix:"24.66"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle: converted from CDA</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Bundle: Bundle: converted from CDA</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Details</b></p><p class="res-header-id"><b>Generated Narrative: Bundle REFERTO DI LABORATORIO</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-en-US"> </a></div><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Subject</b></p><p class="res-header-id"><b>Generated Narrative: Patient dc2b606f-3cf7-4711-a2ff-52da04b89e04</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/dc2b606f-3cf7-4711-a2ff-52da04b89e04"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/dc2b606f-3cf7-4711-a2ff-52da04b89e04"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/dc2b606f-3cf7-4711-a2ff-52da04b89e04-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Giuseppe Verdi  Male, DoB: 1993-06-19 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#TKLEYP93Y27Z315J)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:giuseppe.verdi@gmail.com">giuseppe.verdi@gmail.com</a></li><li>ph: 33224456(Mobile)</li><li>Via Aurora 12 Roma 120 00187 100 (home)</li><li>Via Canevari 12B Roma 120 00138 100 (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements."><a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html">Patient Birth Place</a></td><td colspan="3">Via voltri 3 Roma 120 100 </td></tr></table></div><hr/><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Content</b></p><div><h2>Esami delle Urine</h2></div><div><h3>Albumina nelle Urine</h3></div><ul><li><table id="nota1"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>16</td><td/><td>mg/L</td><td>0 - 20</td><td/><td>N</td><td/></tr></tbody></table></li></ul></div><hr/><h2>Additional Resources Included in Document</h2><a name="urn-uuid-26032a57-083a-4ddf-b019-e566ae02f740"> </a><a name="Composition_26032a57-083a-4ddf-b019-e566ae02f740"> </a><a name="hcComposition_26032a57-083a-4ddf-b019-e566ae02f740"> </a><hr/><p>Entry 1 - fullUrl = urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740</p><p>Resource Composition:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Composition 26032a57-083a-4ddf-b019-e566ae02f740</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/26032a57-083a-4ddf-b019-e566ae02f740"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/26032a57-083a-4ddf-b019-e566ae02f740"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/26032a57-083a-4ddf-b019-e566ae02f740-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: it-IT</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Composition-eu-lab.html">Composition: Laboratory Report</a></p><p style="margin-bottom: 0px">Security Label: N (Details: [not stated] code N)</p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Referto di laboratorio</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 18719-5}">Chemistry studies (set)</span></p><p><b>encounter</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>date</b>: 2022-03-30 11:24:26+0100</p><p><b>author</b>: </p><ul><li><a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-88868d3e-7ab1-4ee5-983e-b979c4971f5c">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li><li><a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-84b2e517-abc2-4268-975d-b12fa8174d30">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li></ul><p><b>title</b>: REFERTO DI LABORATORIO</p><blockquote><p><b>attester</b></p><p><b>mode</b>: <span title="Codes:{http://hl7.org/fhir/composition-attestation-mode professional}">Professional</span></p><p><b>party</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0bbabe57-7c43-4211-9e19-81fcec65686d">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: <span title="Codes:{http://hl7.org/fhir/composition-attestation-mode legal}">Legal</span></p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: <span title="Codes:{http://hl7.org/fhir/composition-attestation-mode professional}">Professional</span></p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-13792187-4721-4309-a8a4-4a57ffb4e6a1">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><p><b>custodian</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Period</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td>2022-03-24 11:24:26+0100 --&gt; (ongoing)</td><td>No display for Composition.event.detail  (reference: -&gt;Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100)</td></tr></table></blockquote><a name="urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04"> </a><a name="Patient_dc2b606f-3cf7-4711-a2ff-52da04b89e04"> </a><a name="hcPatient_dc2b606f-3cf7-4711-a2ff-52da04b89e04"> </a><hr/><p>Entry 2 - fullUrl = urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04</p><p>Resource Patient:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Patient dc2b606f-3cf7-4711-a2ff-52da04b89e04</b></p><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Giuseppe Verdi  Male, DoB: 1993-06-19 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#TKLEYP93Y27Z315J)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:giuseppe.verdi@gmail.com">giuseppe.verdi@gmail.com</a></li><li>ph: 33224456(Mobile)</li><li>Via Aurora 12 Roma 120 00187 100 (home)</li><li>Via Canevari 12B Roma 120 00138 100 (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements."><a href="http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html">Patient Birth Place</a></td><td colspan="3">Via voltri 3 Roma 120 100 </td></tr></table></blockquote><a name="urn-uuid-b8c9663d-2c2b-4a5a-99ea-17eae127fc60"> </a><a name="DiagnosticReport_b8c9663d-2c2b-4a5a-99ea-17eae127fc60"> </a><a name="hcDiagnosticReport_b8c9663d-2c2b-4a5a-99ea-17eae127fc60"> </a><hr/><p>Entry 3 - fullUrl = urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60</p><p>Resource DiagnosticReport:</p><blockquote><p class="res-header-id"><b>Generated Narrative: DiagnosticReport b8c9663d-2c2b-4a5a-99ea-17eae127fc60</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/b8c9663d-2c2b-4a5a-99ea-17eae127fc60"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/b8c9663d-2c2b-4a5a-99ea-17eae127fc60"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/b8c9663d-2c2b-4a5a-99ea-17eae127fc60-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}">Referto di laboratorio</span> (<span title="Codes:{http://loinc.org 18719-5}">Chemistry studies (set)</span>) </h2><table class="grid"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>Identifier</td><td> <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr></table></blockquote><a name="urn-uuid-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><a name="Specimen_5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><a name="hcSpecimen_5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><hr/><p>Entry 4 - fullUrl = urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb</p><p>Resource Specimen:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Specimen 5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb-en-US"> </a><p><b>type</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.5.129 UR}">Urine</span></p><p><b>subject</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-763f7902-8103-4d10-8bd1-546a726d43ee"> </a><a name="Observation_763f7902-8103-4d10-8bd1-546a726d43ee"> </a><a name="hcObservation_763f7902-8103-4d10-8bd1-546a726d43ee"> </a><hr/><p>Entry 5 - fullUrl = urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 763f7902-8103-4d10-8bd1-546a726d43ee</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/763f7902-8103-4d10-8bd1-546a726d43ee"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/763f7902-8103-4d10-8bd1-546a726d43ee"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/763f7902-8103-4d10-8bd1-546a726d43ee-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 14957-5}, {urn:oid:2.16.840.1.113883.2.9.2.30.6.11 0090334.02}">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>encounter</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>effective</b>: 2022-03-30 11:24:26+0100</p><p><b>performer</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>value</b>: 16 mg/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/L = 'mg/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>0 mg/L</td><td>20 mg/L</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></td></tr></table></blockquote><a name="urn-uuid-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><a name="Practitioner_ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><a name="hcPractitioner_ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><hr/><p>Entry 6 - fullUrl = urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner ab279a0b-320f-483b-9a5d-f1f7e8ceacb2</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/ab279a0b-320f-483b-9a5d-f1f7e8ceacb2-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href="mailto:matteo.cervone@gmail.it">matteo.cervone@gmail.it</a>, <a href="mailto:matteo.cervone@pec.it">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></blockquote><a name="urn-uuid-84b2e517-abc2-4268-975d-b12fa8174d30"> </a><a name="PractitionerRole_84b2e517-abc2-4268-975d-b12fa8174d30"> </a><a name="hcPractitionerRole_84b2e517-abc2-4268-975d-b12fa8174d30"> </a><hr/><p>Entry 7 - fullUrl = urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole 84b2e517-abc2-4268-975d-b12fa8174d30</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/84b2e517-abc2-4268-975d-b12fa8174d30"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/84b2e517-abc2-4268-975d-b12fa8174d30"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/84b2e517-abc2-4268-975d-b12fa8174d30-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-68740937-f732-4ff9-a2e4-bf502d2d125f">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><a name="Practitioner_68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><a name="hcPractitioner_68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><hr/><p>Entry 8 - fullUrl = urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner 68740937-f732-4ff9-a2e4-bf502d2d125f</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/68740937-f732-4ff9-a2e4-bf502d2d125f-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/FPSSBN85G54D398H</p><p><b>name</b>: Filippo Mancusi </p></blockquote><a name="urn-uuid-a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"> </a><a name="Organization_a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"> </a><a name="hcOrganization_a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"> </a><hr/><p>Entry 9 - fullUrl = urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style="display: none">*</td><td>ph: 390 666 0581(Work)</td><td>Via Emilio Praga 39 Roma 120 00137 100 </td></tr></table></blockquote><a name="urn-uuid-0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><a name="Practitioner_0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><a name="hcPractitioner_0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><hr/><p>Entry 10 - fullUrl = urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner 0bbabe57-7c43-4211-9e19-81fcec65686d</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/0bbabe57-7c43-4211-9e19-81fcec65686d-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MURRSI88Y67R012G</p><p><b>name</b>: Maura Rossi </p><p><b>telecom</b>: ph: 062866794(Work)</p></blockquote><a name="urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce"> </a><a name="PractitionerRole_a199dc05-af73-44a0-a218-bda5dec557ce"> </a><a name="hcPractitionerRole_a199dc05-af73-44a0-a218-bda5dec557ce"> </a><hr/><p>Entry 11 - fullUrl = urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole a199dc05-af73-44a0-a218-bda5dec557ce</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/a199dc05-af73-44a0-a218-bda5dec557ce"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/a199dc05-af73-44a0-a218-bda5dec557ce"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/a199dc05-af73-44a0-a218-bda5dec557ce-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"> </a><a name="Practitioner_b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"> </a><a name="hcPractitioner_b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"> </a><hr/><p>Entry 12 - fullUrl = urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/GPSDGK80E76C765V</p><p><b>name</b>: Federico Righi </p><p><b>telecom</b>: <a href="mailto:righi.federico@gmail.com">righi.federico@gmail.com</a>, ph: 330987986(Mobile)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></blockquote><a name="urn-uuid-13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><a name="PractitionerRole_13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><a name="hcPractitionerRole_13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><hr/><p>Entry 13 - fullUrl = urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole 13792187-4721-4309-a8a4-4a57ffb4e6a1</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/13792187-4721-4309-a8a4-4a57ffb4e6a1-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-852cec21-4ff9-4cea-b86d-00de92b46894">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-852cec21-4ff9-4cea-b86d-00de92b46894"> </a><a name="Practitioner_852cec21-4ff9-4cea-b86d-00de92b46894"> </a><a name="hcPractitioner_852cec21-4ff9-4cea-b86d-00de92b46894"> </a><hr/><p>Entry 14 - fullUrl = urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner 852cec21-4ff9-4cea-b86d-00de92b46894</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/852cec21-4ff9-4cea-b86d-00de92b46894"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/852cec21-4ff9-4cea-b86d-00de92b46894"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/852cec21-4ff9-4cea-b86d-00de92b46894-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/RBTAMA67H99H467D</p><p><b>name</b>: Roberta Rossi </p><p><b>telecom</b>: <a href="mailto:maggi.roberta@gmail.com">maggi.roberta@gmail.com</a>, ph: 22998276800(Home)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></blockquote><a name="urn-uuid-c20acec2-5d67-4c05-b35e-d528c35f9ed1"> </a><a name="PractitionerRole_c20acec2-5d67-4c05-b35e-d528c35f9ed1"> </a><a name="hcPractitionerRole_c20acec2-5d67-4c05-b35e-d528c35f9ed1"> </a><hr/><p>Entry 15 - fullUrl = urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole c20acec2-5d67-4c05-b35e-d528c35f9ed1</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c20acec2-5d67-4c05-b35e-d528c35f9ed1"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c20acec2-5d67-4c05-b35e-d528c35f9ed1"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c20acec2-5d67-4c05-b35e-d528c35f9ed1-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-f7fa317a-66ac-4adf-9199-9bfe1e2eaa21">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>organization</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c1f46c0d-a0f9-41d7-8a33-15ffcf954354">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>code</b>: <span title="Codes:{urn:oid:2.16.840.1.113883.2.9.5.1.88 PRE}">PRE</span></p></blockquote><a name="urn-uuid-f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"> </a><a name="Practitioner_f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"> </a><a name="hcPractitioner_f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"> </a><hr/><p>Entry 16 - fullUrl = urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner f7fa317a-66ac-4adf-9199-9bfe1e2eaa21</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/f7fa317a-66ac-4adf-9199-9bfe1e2eaa21-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/STVMG77F45N079MF</p><p><b>name</b>: Silvia Maggi </p><p><b>telecom</b>: <a href="mailto:maggi.silvia@gmail.com">maggi.silvia@gmail.com</a></p><p><b>address</b>: Via Vittorio Veneto 3 Roma 120 00187 100 </p></blockquote><a name="urn-uuid-c1f46c0d-a0f9-41d7-8a33-15ffcf954354"> </a><a name="Organization_c1f46c0d-a0f9-41d7-8a33-15ffcf954354"> </a><a name="hcOrganization_c1f46c0d-a0f9-41d7-8a33-15ffcf954354"> </a><hr/><p>Entry 17 - fullUrl = urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization c1f46c0d-a0f9-41d7-8a33-15ffcf954354</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c1f46c0d-a0f9-41d7-8a33-15ffcf954354"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c1f46c0d-a0f9-41d7-8a33-15ffcf954354"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c1f46c0d-a0f9-41d7-8a33-15ffcf954354-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style="display: none">*</td><td>ph: 390 666 0581(Work)</td><td>Via Emilio Praga 39 Roma 120 00137 100 </td></tr></table></blockquote><a name="urn-uuid-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><a name="ServiceRequest_1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><a name="hcServiceRequest_1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><hr/><p>Entry 18 - fullUrl = urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1</p><p>Resource ServiceRequest:</p><blockquote><p class="res-header-id"><b>Generated Narrative: ServiceRequest 1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.9</code>/[NRE]</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 108252007}">Laboratory procedure</span></p><p><b>priority</b>: ASAP</p><p><b>code</b>: No display for ServiceRequest.code  (concept: Microalbumin [Mass/volume] in Urine)</p><p><b>subject</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>encounter</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><a name="PractitionerRole_1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><a name="hcPractitionerRole_1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><hr/><p>Entry 19 - fullUrl = urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole 1b4b120e-0371-4878-b4c9-b69434e84c72</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1b4b120e-0371-4878-b4c9-b69434e84c72-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c1bb11b3-87e6-4682-a214-10975487b643">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>organization</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-508f4b29-09ca-4c94-8343-657f1923303a">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-c1bb11b3-87e6-4682-a214-10975487b643"> </a><a name="Practitioner_c1bb11b3-87e6-4682-a214-10975487b643"> </a><a name="hcPractitioner_c1bb11b3-87e6-4682-a214-10975487b643"> </a><hr/><p>Entry 20 - fullUrl = urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner c1bb11b3-87e6-4682-a214-10975487b643</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c1bb11b3-87e6-4682-a214-10975487b643"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c1bb11b3-87e6-4682-a214-10975487b643"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/c1bb11b3-87e6-4682-a214-10975487b643-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MRSSIO79H59Z317K</p><p><b>name</b>: Mario Rossi </p></blockquote><a name="urn-uuid-508f4b29-09ca-4c94-8343-657f1923303a"> </a><a name="Organization_508f4b29-09ca-4c94-8343-657f1923303a"> </a><a name="hcOrganization_508f4b29-09ca-4c94-8343-657f1923303a"> </a><hr/><p>Entry 21 - fullUrl = urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization 508f4b29-09ca-4c94-8343-657f1923303a</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/508f4b29-09ca-4c94-8343-657f1923303a"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/508f4b29-09ca-4c94-8343-657f1923303a"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/508f4b29-09ca-4c94-8343-657f1923303a-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.3</code>/327700102</p><p><b>name</b>: Nuovo Ospedale S.Agostino (MO)</p><p><b>partOf</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-206fa15d-51ae-4f3d-b8d0-71ee6290ff52">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><a name="Organization_206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><a name="hcOrganization_206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><hr/><p>Entry 22 - fullUrl = urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization 206fa15d-51ae-4f3d-b8d0-71ee6290ff52</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/206fa15d-51ae-4f3d-b8d0-71ee6290ff52-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/080105</p></blockquote><a name="urn-uuid-83ef1c55-566b-4547-affd-f6d7b993a094"> </a><a name="PractitionerRole_83ef1c55-566b-4547-affd-f6d7b993a094"> </a><a name="hcPractitionerRole_83ef1c55-566b-4547-affd-f6d7b993a094"> </a><hr/><p>Entry 23 - fullUrl = urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole 83ef1c55-566b-4547-affd-f6d7b993a094</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/83ef1c55-566b-4547-affd-f6d7b993a094"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/83ef1c55-566b-4547-affd-f6d7b993a094"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/83ef1c55-566b-4547-affd-f6d7b993a094-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1a3064fd-9658-47f1-98f3-3f368761a9da">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-1a3064fd-9658-47f1-98f3-3f368761a9da"> </a><a name="Practitioner_1a3064fd-9658-47f1-98f3-3f368761a9da"> </a><a name="hcPractitioner_1a3064fd-9658-47f1-98f3-3f368761a9da"> </a><hr/><p>Entry 24 - fullUrl = urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da</p><p>Resource Practitioner:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Practitioner 1a3064fd-9658-47f1-98f3-3f368761a9da</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1a3064fd-9658-47f1-98f3-3f368761a9da"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1a3064fd-9658-47f1-98f3-3f368761a9da"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/1a3064fd-9658-47f1-98f3-3f368761a9da-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/SVATPR85Y37T079B</p><p><b>name</b>: Silvia Turri </p></blockquote><a name="urn-uuid-6373bbff-d136-4cfe-a7bc-fab4bff2fc21"> </a><a name="Location_6373bbff-d136-4cfe-a7bc-fab4bff2fc21"> </a><a name="hcLocation_6373bbff-d136-4cfe-a7bc-fab4bff2fc21"> </a><hr/><p>Entry 25 - fullUrl = urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21</p><p>Resource Location:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Location 6373bbff-d136-4cfe-a7bc-fab4bff2fc21</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/6373bbff-d136-4cfe-a7bc-fab4bff2fc21"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/6373bbff-d136-4cfe-a7bc-fab4bff2fc21"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/6373bbff-d136-4cfe-a7bc-fab4bff2fc21-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.6</code>/XXX</p><p><b>managingOrganization</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"> </a><a name="Organization_0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"> </a><a name="hcOrganization_0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"> </a><hr/><p>Entry 26 - fullUrl = urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization 0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/XXX</p><p><b>name</b>: [nome_presidio]</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Telecom</b></td></tr><tr><td style="display: none">*</td><td>ph: 0115678965(Work)</td></tr></table><p><b>partOf</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-d5f71fc0-6075-4fed-ad99-b3c609d27f6b">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><a name="urn-uuid-d5f71fc0-6075-4fed-ad99-b3c609d27f6b"> </a><a name="Organization_d5f71fc0-6075-4fed-ad99-b3c609d27f6b"> </a><a name="hcOrganization_d5f71fc0-6075-4fed-ad99-b3c609d27f6b"> </a><hr/><p>Entry 27 - fullUrl = urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization d5f71fc0-6075-4fed-ad99-b3c609d27f6b</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/d5f71fc0-6075-4fed-ad99-b3c609d27f6b"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/d5f71fc0-6075-4fed-ad99-b3c609d27f6b"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/d5f71fc0-6075-4fed-ad99-b3c609d27f6b-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/XXX</p></blockquote><a name="urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a"> </a><a name="Encounter_195a7abc-d109-404a-9dc7-ad2e80bafc8a"> </a><a name="hcEncounter_195a7abc-d109-404a-9dc7-ad2e80bafc8a"> </a><hr/><p>Entry 28 - fullUrl = urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a</p><p>Resource Encounter:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Encounter 195a7abc-d109-404a-9dc7-ad2e80bafc8a</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/195a7abc-d109-404a-9dc7-ad2e80bafc8a"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/195a7abc-d109-404a-9dc7-ad2e80bafc8a"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/195a7abc-d109-404a-9dc7-ad2e80bafc8a-en-US"> </a><p><b>status</b>: completed</p><p><b>class</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}">ambulatory</span></p><p><b>subject</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>basedOn</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>Participants</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType REF}">referrer</span></td><td>2022-03-20 11:00:00+0100 --&gt; (ongoing)</td></tr><tr><td style="display: none">*</td><td> </td><td> </td></tr></table><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td></tr><tr><td style="display: none">*</td><td><a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-6373bbff-d136-4cfe-a7bc-fab4bff2fc21">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></td></tr></table></blockquote><a name="urn-uuid-88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><a name="PractitionerRole_88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><a name="hcPractitionerRole_88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><hr/><p>Entry 29 - fullUrl = urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c</p><p>Resource PractitionerRole:</p><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole 88868d3e-7ab1-4ee5-983e-b979c4971f5c</b></p><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><a name="hcIT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><a name="IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883/88868d3e-7ab1-4ee5-983e-b979c4971f5c-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

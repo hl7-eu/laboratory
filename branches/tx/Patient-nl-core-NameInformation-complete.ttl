@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Patient/nl-core-NameInformation-complete> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "nl-core-NameInformation-complete"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient nl-core-NameInformation-complete</b></p><a name=\"nl-core-NameInformation-complete\"> </a><a name=\"hcnl-core-NameInformation-complete\"> </a><a name=\"nl-core-NameInformation-complete-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Jo  (no stated gender), DoB Unknown</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Johanna Petronella Maria (Jo) van der Giessen-van Putten(Official)</td></tr></table></div>"
+  ] ; # 
+  fhir:name ( [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "NL3" ]
+     ] ) ;
+     fhir:use [ fhir:v "official" ] ;
+     fhir:text [ fhir:v "Johanna Petronella Maria (Jo) van der Giessen-van Putten" ] ;
+     fhir:family [
+       fhir:v "van der Giessen-van Putten" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "van" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-own-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Putten" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "van der" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-partner-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Giessen" ]
+       ] )
+     ] ;
+     fhir:given ( [
+       fhir:v "Johanna" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "BR" ]
+       ] )
+     ] [
+       fhir:v "Petronella" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "BR" ]
+       ] )
+     ] [
+       fhir:v "Maria" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "BR" ]
+       ] )
+     ] ) ;
+     fhir:prefix ( [ fhir:v "PhD" ] )
+  ] [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:given ( [ fhir:v "Jo" ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ConceptMap/legalAuth2FHIR-eu-lab> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "legalAuth2FHIR-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap legalAuth2FHIR-eu-lab</b></p><a name=\"legalAuth2FHIR-eu-lab\"> </a><a name=\"hclegalAuth2FHIR-eu-lab\"> </a><a name=\"legalAuth2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-LegalAuthenticator.html\">A.1.6 - Legal authenticator</a> to <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-LegalAuthenticator.html\">A.1.6 - Legal authenticator</a> to <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>LegalAuthenticator.identifier (A.1.6.1 Legal authenticator identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.identifier</td><td>attester.where(mode='legal')</td></tr><tr><td>LegalAuthenticator.name (A.1.6.2 Legal authenticator name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.name</td><td>attester.where(mode='legal').party.resolve().ofType(Practitioner).name</td></tr><tr><td>LegalAuthenticator.name (A.1.6.2 Legal authenticator name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.Practitioner.name</td><td>attester.where(mode='legal').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>LegalAuthenticator.organization (A.1.6.3 Legal authenticator organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.organization</td><td>attester.where(mode='legal').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>LegalAuthenticator.dateTime (A.1.6.4 Authentication date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.time</td><td>attester.where(mode='legal').time</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "informative" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ConceptMap/legalAuth2FHIR-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LegalAuth2Fhir"] ; # 
+  fhir:title [ fhir:v "eHN Recipient to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN Legal Authenticator Model to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how theLegal Authenticator Recipient data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/LegalAuthenticator"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/LegalAuthenticator"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "LegalAuthenticator.identifier" ] ;
+       fhir:display [ fhir:v "A.1.6.1 Legal authenticator identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.party.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "attester.where(mode='legal')" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LegalAuthenticator.name" ] ;
+       fhir:display [ fhir:v "A.1.6.2 Legal authenticator name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.party.name" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "attester.where(mode='legal').party.resolve().ofType(Practitioner).name" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LegalAuthenticator.name" ] ;
+       fhir:display [ fhir:v "A.1.6.2 Legal authenticator name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.party.Practitioner.name" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "attester.where(mode='legal').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LegalAuthenticator.organization" ] ;
+       fhir:display [ fhir:v "A.1.6.3 Legal authenticator organization" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.party.organization" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "attester.where(mode='legal').party.resolve().ofType(PractitionerRole).organization.resolve()" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LegalAuthenticator.dateTime" ] ;
+       fhir:display [ fhir:v "A.1.6.4 Authentication date and time" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.time" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "attester.where(mode='legal').time" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

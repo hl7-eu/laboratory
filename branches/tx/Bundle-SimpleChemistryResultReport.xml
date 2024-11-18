@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="SimpleChemistryResultReport"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.51.1.1"/>
+    <value value="8ccab76a-82ed-403e-b974-6b28022b0997"/>
+    <assigner>
+      <display value="HL7 Europe"/>
+    </assigner>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2023-03-27T13:13:19+02:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"/>
+    <resource>
+      <Composition>
+        <id value="26032a57-083a-4ddf-b019-e566ae02f740"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"/>
+        </meta>
+        <language value="cs-CZ"/>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs-CZ" lang="cs-CZ"><a name="Composition_26032a57-083a-4ddf-b019-e566ae02f740"> </a><p class="res-header-id"><b>Generated Narrative: Composition 26032a57-083a-4ddf-b019-e566ae02f740</b></p><a name="26032a57-083a-4ddf-b019-e566ae02f740"> </a><a name="hc26032a57-083a-4ddf-b019-e566ae02f740"> </a><a name="26032a57-083a-4ddf-b019-e566ae02f740-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: cs-CZ</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Composition-eu-lab.html">Composition: Laboratory Report</a></p></div><p><b>Information recipient</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-508f4b29-09ca-4c94-8343-657f1923303a">Nuovo Ospedale S.Agostino (MO)</a></p><p><b>Document Based On Order</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Laboratorní zpráva</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 18719-5}">Chemistry studies (set)</span></p><p><b>date</b>: 2022-03-30 11:24:26+0100</p><p><b>author</b>: </p><ul><li><a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-88868d3e-7ab1-4ee5-983e-b979c4971f5c">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li><li><a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-84b2e517-abc2-4268-975d-b12fa8174d30">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li></ul><p><b>title</b>: Laboratorní zpráva</p><p><b>confidentiality</b>: normal</p><blockquote><p><b>attester</b></p><p><b>mode</b>: Professional</p><p><b>party</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0bbabe57-7c43-4211-9e19-81fcec65686d">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Legal</p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-84476dc3-a732-455f-910e-f2b44428dcc9">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Professional</p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-13792187-4721-4309-a8a4-4a57ffb4e6a1">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><p><b>custodian</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-ce122b36-f942-4cee-8c6d-b13ece8cf23c">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Period</b></td><td><b>Detail</b></td></tr><tr><td style="display: none">*</td><td>2022-03-24 11:24:26+0100 --&gt; (ongoing)</td><td><a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1b4b120e-0371-4878-b4c9-b69434e84c72">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></td></tr></table></div>
+        </text>
+        <extension url="http://hl7.eu/fhir/StructureDefinition/information-recipient">
+          <valueReference>
+            <reference value="urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"/>
+            <display value="Nuovo Ospedale S.Agostino (MO)"/>
+          </valueReference>
+        </extension>
+        <extension url="http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition">
+          <valueReference>
+            <reference value="urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"/>
+          </valueReference>
+        </extension>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.2.120.4.4"/>
+          <value value="c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"/>
+          <assigner>
+            <display value="Regione Lazio"/>
+          </assigner>
+        </identifier>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11502-2"/>
+            <display value="Laboratory report"/>
+          </coding>
+          <text value="Laboratorní zpráva"/>
+        </type>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18719-5"/>
+            <display value="Chemistry studies (set)"/>
+          </coding>
+        </category>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+        <date value="2022-03-30T11:24:26+01:00"/>
+        <author>
+          <reference value="urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"/>
+        </author>
+        <author>
+          <reference value="urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"/>
+        </author>
+        <title value="Laboratorní zpráva"/>
+        <confidentiality value="N"/>
+        <attester>
+          <mode value="professional"/>
+          <party>
+            <reference value="urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"/>
+          </party>
+        </attester>
+        <attester>
+          <mode value="legal"/>
+          <time value="2022-03-25T11:00:00+01:00"/>
+          <party>
+            <reference value="urn:uuid:84476dc3-a732-455f-910e-f2b44428dcc9"/>
+          </party>
+        </attester>
+        <attester>
+          <mode value="professional"/>
+          <time value="2022-03-25T11:00:00+01:00"/>
+          <party>
+            <reference value="urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"/>
+          </party>
+        </attester>
+        <custodian>
+          <reference value="urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c"/>
+        </custodian>
+        <event>
+          <period>
+            <start value="2022-03-24T11:24:26+01:00"/>
+          </period>
+          <detail>
+            <reference value="urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"/>
+          </detail>
+        </event>
+        <section>
+          <title value="Laboratory examinations"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="26436-6"/>
+              <display value="Laboratory studies (set)"/>
+            </coding>
+            <text value="Laboratory studies"/>
+          </code>
+          <section>
+            <title value="Urine examinations"/>
+            <code>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="18729-4"/>
+                <display value="Urinalysis studies (set)"/>
+              </coding>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.9.2.30.6.11"/>
+                <code value="0090334.02"/>
+                <display value="XXX"/>
+              </coding>
+              <text value="ESAMI DELLE URINE"/>
+            </code>
+            <text>
+              <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table id="nota1"><thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead><tbody><tr><td>2023-03-27</td><td>Urea (U) [Moles/Vol]</td><td>310</td><td>mmol/L</td><td>67 - 580 mmol/L</td></tr></tbody></table></div>
+            </text>
+            <entry>
+              <reference value="urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"/>
+            </entry>
+          </section>
+          <section>
+            <title value="Blood examinations"/>
+            <code>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="18719-5"/>
+                <display value="Chemistry studies (set)"/>
+              </coding>
+              <text value="Examination of blood"/>
+            </code>
+            <text>
+              <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table id="nota1"><thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead><tbody><tr><td>2023-03-27</td><td>Sodium (Bld) [Moles/Vol]</td><td>156 +- 0.1</td><td>umol/L</td><td>136 - 144 umol/L</td></tr></tbody></table></div>
+            </text>
+            <entry>
+              <reference value="urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb"/>
+            </entry>
+          </section>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+    <resource>
+      <Patient>
+        <id value="de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"> </a><p class="res-header-id"><b>Generated Narrative: Patient de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8</b></p><a name="de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"> </a><a name="hcde17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"> </a><a name="de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>https://ncez.mzcr.cz/standards/fhir/sid/rid</code>/456789123</li><li>Passport number/5484136</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:frantisek.ockovany@gmail.com">frantisek.ockovany@gmail.com</a></li><li><a href="tel:+420332244556">+420332244556</a></li><li>Malé náměstí 13a, 150 00, Praha 5(home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Language spoken">Language:</td><td colspan="3"><span title="Codes:{urn:ietf:bcp:47 cs}">Czech</span></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: mother">mother:</td><td colspan="3"><ul><li>Biologická Matka Mrakomorová</li><li><a href="tel:+420604123456">+420 604 123 456</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: unrelated friend">unrelated friend:</td><td colspan="3"><ul><li>Alena Dlouhá </li><li>Horná ulica 18, 123 45, Trenčín, Slovensko(home)</li><li><a href="tel:+420601111111">+420 601 111 111</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: MUDr. Josef Švejk (Identifier: <code>https://ncez.mzcr.cz/standards/fhir/sid/nrzp</code>/123456789)</li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NIIP"/>
+            </coding>
+          </type>
+          <system value="https://ncez.mzcr.cz/standards/fhir/sid/rcis"/>
+          <value value="740512852"/>
+        </identifier>
+        <identifier>
+          <system value="https://ncez.mzcr.cz/standards/fhir/sid/rid"/>
+          <value value="456789123"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PPN"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.840.1.113883.4.330.203"/>
+          <value value="5484136"/>
+        </identifier>
+        <name>
+          <text value="František Očkovaný"/>
+          <family value="Očkovaný"/>
+          <given value="František"/>
+        </name>
+        <telecom>
+          <system value="email"/>
+          <value value="frantisek.ockovany@gmail.com"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="+420332244556"/>
+          <use value="mobile"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="2000-03-21"/>
+        <address>
+          <use value="home"/>
+          <type value="physical"/>
+          <text value="Malé náměstí 13a, 150 00, Praha 5"/>
+          <line value="Malé náměstí 13a">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Malé náměstí"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+              <valueString value="13a"/>
+            </extension>
+          </line>
+          <city value="Praha 5"/>
+          <postalCode value="150 00"/>
+          <country value="CZ"/>
+        </address>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+              <code value="MTH"/>
+            </coding>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+              <code value="N"/>
+            </coding>
+          </relationship>
+          <name>
+            <use value="usual"/>
+            <text value="Biologická Matka Mrakomorová"/>
+            <family value="Mrakomorová"/>
+            <given value="Biologická"/>
+            <given value="Matka"/>
+          </name>
+          <telecom>
+            <system value="phone"/>
+            <value value="+420 604 123 456"/>
+            <use value="mobile"/>
+          </telecom>
+        </contact>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+              <code value="FRND"/>
+            </coding>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+              <code value="C"/>
+            </coding>
+          </relationship>
+          <name>
+            <use value="usual"/>
+            <family value="Dlouhá"/>
+            <given value="Alena"/>
+          </name>
+          <telecom>
+            <system value="phone"/>
+            <value value="+420 601 111 111"/>
+            <use value="home"/>
+          </telecom>
+          <address>
+            <use value="home"/>
+            <type value="physical"/>
+            <text value="Horná ulica 18, 123 45, Trenčín, Slovensko"/>
+            <line value="Horná ulica 18">
+              <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                <valueString value="Horná ulica"/>
+              </extension>
+              <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                <valueString value="18"/>
+              </extension>
+            </line>
+            <city value="Trenčín"/>
+            <postalCode value="123 45"/>
+            <country value="SK"/>
+          </address>
+        </contact>
+        <communication>
+          <language>
+            <coding>
+              <system value="urn:ietf:bcp:47"/>
+              <code value="cs"/>
+            </coding>
+          </language>
+        </communication>
+        <generalPractitioner>
+          <identifier>
+            <system value="https://ncez.mzcr.cz/standards/fhir/sid/nrzp"/>
+            <value value="123456789"/>
+          </identifier>
+          <display value="MUDr. Josef Švejk"/>
+        </generalPractitioner>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"/>
+    <resource>
+      <Specimen>
+        <id value="5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Specimen_5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><p class="res-header-id"><b>Generated Narrative: Specimen 5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb</b></p><a name="5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><a name="hc5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"> </a><a name="5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb-en-US"> </a><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 122575003}">Urine specimen</span></p><p><b>subject</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p></div>
+        </text>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="122575003"/>
+            <display value="Urine specimen"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+      </Specimen>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91"/>
+    <resource>
+      <Specimen>
+        <id value="25dfb673-e7d6-43d0-b50b-6739f1ea9c91"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Specimen_25dfb673-e7d6-43d0-b50b-6739f1ea9c91"> </a><p class="res-header-id"><b>Generated Narrative: Specimen 25dfb673-e7d6-43d0-b50b-6739f1ea9c91</b></p><a name="25dfb673-e7d6-43d0-b50b-6739f1ea9c91"> </a><a name="hc25dfb673-e7d6-43d0-b50b-6739f1ea9c91"> </a><a name="25dfb673-e7d6-43d0-b50b-6739f1ea9c91-en-US"> </a><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119297000}">Blood specimen</span></p><p><b>subject</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p></div>
+        </text>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="119297000"/>
+            <display value="Blood specimen"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+      </Specimen>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"/>
+    <resource>
+      <PractitionerRole>
+        <id value="88868d3e-7ab1-4ee5-983e-b979c4971f5c"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole 88868d3e-7ab1-4ee5-983e-b979c4971f5c</b></p><a name="88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><a name="hc88868d3e-7ab1-4ee5-983e-b979c4971f5c"> </a><a name="88868d3e-7ab1-4ee5-983e-b979c4971f5c-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"/>
+        </practitioner>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"/>
+    <resource>
+      <Practitioner>
+        <id value="Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2</b></p><a name="Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><a name="hcInl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"> </a><a name="Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href="mailto:matteo.cervone@gmail.it">matteo.cervone@gmail.it</a>, <a href="mailto:matteo.cervone@pec.it">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+          <value value="MTCORV58E63L294G"/>
+          <assigner>
+            <display value="MEF"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Cervone"/>
+          <given value="Matteo"/>
+          <prefix value="Dr"/>
+        </name>
+        <telecom>
+          <system value="email"/>
+          <value value="matteo.cervone@gmail.it"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="matteo.cervone@pec.it"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="3478129873"/>
+          <use value="mobile"/>
+        </telecom>
+        <address>
+          <line value="Via Milano 7">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract">
+              <valueString value="058091"/>
+            </extension>
+          </line>
+          <city value="Roma"/>
+          <district value="RM"/>
+          <state value="120"/>
+          <postalCode value="00184"/>
+          <country value="100"/>
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"/>
+    <resource>
+      <PractitionerRole>
+        <id value="84b2e517-abc2-4268-975d-b12fa8174d30"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_84b2e517-abc2-4268-975d-b12fa8174d30"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole 84b2e517-abc2-4268-975d-b12fa8174d30</b></p><a name="84b2e517-abc2-4268-975d-b12fa8174d30"> </a><a name="hc84b2e517-abc2-4268-975d-b12fa8174d30"> </a><a name="84b2e517-abc2-4268-975d-b12fa8174d30-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-68740937-f732-4ff9-a2e4-bf502d2d125f">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"/>
+        </practitioner>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"/>
+    <resource>
+      <Practitioner>
+        <id value="68740937-f732-4ff9-a2e4-bf502d2d125f"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner 68740937-f732-4ff9-a2e4-bf502d2d125f</b></p><a name="68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><a name="hc68740937-f732-4ff9-a2e4-bf502d2d125f"> </a><a name="68740937-f732-4ff9-a2e4-bf502d2d125f-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/FPSSBN85G54D398H</p><p><b>name</b>: Filippo Mancusi </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+          <value value="FPSSBN85G54D398H"/>
+          <assigner>
+            <display value="MEF"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Mancusi"/>
+          <given value="Filippo"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:e512e2e2-9600-4c69-a269-af3ab5421e09"/>
+    <resource>
+      <Practitioner>
+        <id value="e512e2e2-9600-4c69-a269-af3ab5421e09"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_e512e2e2-9600-4c69-a269-af3ab5421e09"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner e512e2e2-9600-4c69-a269-af3ab5421e09</b></p><a name="e512e2e2-9600-4c69-a269-af3ab5421e09"> </a><a name="hce512e2e2-9600-4c69-a269-af3ab5421e09"> </a><a name="e512e2e2-9600-4c69-a269-af3ab5421e09-en-US"> </a><p><b>identifier</b>: <code>https://ncez.mzcr.cz/standards/fhir/sid/nrzp</code>/SOMNUMBER</p><p><b>name</b>: Laboratorní Technik </p><p><b>telecom</b>: ph: 603 123 456(Work)</p></div>
+        </text>
+        <identifier>
+          <system value="https://ncez.mzcr.cz/standards/fhir/sid/nrzp"/>
+          <value value="SOMNUMBER"/>
+          <assigner>
+            <display value="NRZP"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Technik"/>
+          <given value="Laboratorní"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="603 123 456"/>
+          <use value="work"/>
+        </telecom>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c"/>
+    <resource>
+      <Organization>
+        <id value="ce122b36-f942-4cee-8c6d-b13ece8cf23c"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_ce122b36-f942-4cee-8c6d-b13ece8cf23c"> </a><p class="res-header-id"><b>Generated Narrative: Organization ce122b36-f942-4cee-8c6d-b13ece8cf23c</b></p><a name="ce122b36-f942-4cee-8c6d-b13ece8cf23c"> </a><a name="hcce122b36-f942-4cee-8c6d-b13ece8cf23c"> </a><a name="ce122b36-f942-4cee-8c6d-b13ece8cf23c-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.1.2"/>
+          <value value="120148"/>
+          <assigner>
+            <display value="Ministero della Salute"/>
+          </assigner>
+        </identifier>
+        <name value="SAN RAFFAELE NOMENTANA"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="390 666 0581"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <line value="Via Emilio Praga 39">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract">
+              <valueString value="058091"/>
+            </extension>
+          </line>
+          <city value="Roma"/>
+          <district value="RM"/>
+          <state value="120"/>
+          <postalCode value="00137"/>
+          <country value="100"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"/>
+    <resource>
+      <Practitioner>
+        <id value="0bbabe57-7c43-4211-9e19-81fcec65686d"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner 0bbabe57-7c43-4211-9e19-81fcec65686d</b></p><a name="0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><a name="hc0bbabe57-7c43-4211-9e19-81fcec65686d"> </a><a name="0bbabe57-7c43-4211-9e19-81fcec65686d-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MURRSI88Y67R012G</p><p><b>name</b>: Maura Rossi </p><p><b>telecom</b>: ph: 062866794(Work)</p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+          <value value="MURRSI88Y67R012G"/>
+          <assigner>
+            <display value="MEF"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Rossi"/>
+          <given value="Maura"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="062866794"/>
+          <use value="work"/>
+        </telecom>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:84476dc3-a732-455f-910e-f2b44428dcc9"/>
+    <resource>
+      <PractitionerRole>
+        <id value="84476dc3-a732-455f-910e-f2b44428dcc9"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_84476dc3-a732-455f-910e-f2b44428dcc9"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole 84476dc3-a732-455f-910e-f2b44428dcc9</b></p><a name="84476dc3-a732-455f-910e-f2b44428dcc9"> </a><a name="hc84476dc3-a732-455f-910e-f2b44428dcc9"> </a><a name="84476dc3-a732-455f-910e-f2b44428dcc9-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"/>
+        </practitioner>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"/>
+    <resource>
+      <Practitioner>
+        <id value="8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner 8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3</b></p><a name="8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"> </a><a name="hc8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3"> </a><a name="8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/GPSDGK80E76C765V</p><p><b>name</b>: Federico Righi </p><p><b>telecom</b>: <a href="mailto:righi.federico@gmail.com">righi.federico@gmail.com</a>, ph: 330987986(Mobile)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+          <value value="GPSDGK80E76C765V"/>
+          <assigner>
+            <display value="MEF"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Righi"/>
+          <given value="Federico"/>
+          <prefix value="Dttr."/>
+        </name>
+        <telecom>
+          <system value="email"/>
+          <value value="righi.federico@gmail.com"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="330987986"/>
+          <use value="mobile"/>
+        </telecom>
+        <address>
+          <line value="Via Corvetto 3">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract">
+              <valueString value="058091"/>
+            </extension>
+          </line>
+          <city value="Roma"/>
+          <district value="RM"/>
+          <state value="120"/>
+          <postalCode value="00164"/>
+          <country value="100"/>
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"/>
+    <resource>
+      <PractitionerRole>
+        <id value="13792187-4721-4309-a8a4-4a57ffb4e6a1"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole 13792187-4721-4309-a8a4-4a57ffb4e6a1</b></p><a name="13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><a name="hc13792187-4721-4309-a8a4-4a57ffb4e6a1"> </a><a name="13792187-4721-4309-a8a4-4a57ffb4e6a1-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-852cec21-4ff9-4cea-b86d-00de92b46894">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"/>
+        </practitioner>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"/>
+    <resource>
+      <Practitioner>
+        <id value="852cec21-4ff9-4cea-b86d-00de92b46894"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_852cec21-4ff9-4cea-b86d-00de92b46894"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner 852cec21-4ff9-4cea-b86d-00de92b46894</b></p><a name="852cec21-4ff9-4cea-b86d-00de92b46894"> </a><a name="hc852cec21-4ff9-4cea-b86d-00de92b46894"> </a><a name="852cec21-4ff9-4cea-b86d-00de92b46894-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/RBTAMA67H99H467D</p><p><b>name</b>: Roberta Rossi </p><p><b>telecom</b>: <a href="mailto:maggi.roberta@gmail.com">maggi.roberta@gmail.com</a>, ph: 22998276800(Home)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+          <value value="RBTAMA67H99H467D"/>
+          <assigner>
+            <display value="MEF"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Rossi"/>
+          <given value="Roberta"/>
+        </name>
+        <telecom>
+          <system value="email"/>
+          <value value="maggi.roberta@gmail.com"/>
+          <use value="home"/>
+        </telecom>
+        <telecom>
+          <system value="phone"/>
+          <value value="22998276800"/>
+          <use value="home"/>
+        </telecom>
+        <address>
+          <line value="Via Corvetto 3">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract">
+              <valueString value="058091"/>
+            </extension>
+          </line>
+          <city value="Roma"/>
+          <district value="RM"/>
+          <state value="120"/>
+          <postalCode value="00164"/>
+          <country value="100"/>
+        </address>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"/>
+    <resource>
+      <ServiceRequest>
+        <id value="1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="ServiceRequest_1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><p class="res-header-id"><b>Generated Narrative: ServiceRequest 1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1</b></p><a name="1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><a name="hc1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"> </a><a name="1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1-en-US"> </a><p><b>identifier</b>: <code>http://hospital.org/lis-order</code>/123456</p><p><b>requisition</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.9</code>/0901001234567234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 108252007}">Laboratory procedure</span></p><p><b>priority</b>: ASAP</p><p><b>code</b>: <span title="Codes:{http://loinc.org 14957-5}">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p></div>
+        </text>
+        <identifier>
+          <system value="http://hospital.org/lis-order"/>
+          <value value="123456"/>
+        </identifier>
+        <requisition>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.9"/>
+          <value value="0901001234567234"/>
+          <assigner>
+            <display value="Ministero delle Finanze"/>
+          </assigner>
+        </requisition>
+        <status value="active"/>
+        <intent value="order"/>
+        <category>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108252007"/>
+            <display value="Laboratory procedure"/>
+          </coding>
+        </category>
+        <priority value="asap"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="14957-5"/>
+            <display value="Microalbumin [Mass/volume] in Urine"/>
+          </coding>
+          <text value="Microalbumin Massa/Volume in Urine"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+      </ServiceRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"/>
+    <resource>
+      <PractitionerRole>
+        <id value="1b4b120e-0371-4878-b4c9-b69434e84c72"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole 1b4b120e-0371-4878-b4c9-b69434e84c72</b></p><a name="1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><a name="hc1b4b120e-0371-4878-b4c9-b69434e84c72"> </a><a name="1b4b120e-0371-4878-b4c9-b69434e84c72-en-US"> </a><p><b>practitioner</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-eb62a039-7e02-44cb-ba17-7e4fb42acdde">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><p><b>organization</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-508f4b29-09ca-4c94-8343-657f1923303a">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>
+        </text>
+        <practitioner>
+          <reference value="urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde"/>
+        </practitioner>
+        <organization>
+          <reference value="urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"/>
+        </organization>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde"/>
+    <resource>
+      <Practitioner>
+        <id value="eb62a039-7e02-44cb-ba17-7e4fb42acdde"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_eb62a039-7e02-44cb-ba17-7e4fb42acdde"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner eb62a039-7e02-44cb-ba17-7e4fb42acdde</b></p><a name="eb62a039-7e02-44cb-ba17-7e4fb42acdde"> </a><a name="hceb62a039-7e02-44cb-ba17-7e4fb42acdde"> </a><a name="eb62a039-7e02-44cb-ba17-7e4fb42acdde-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MRSSIO79H59Z317K</p><p><b>name</b>: Mario Rossi </p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+          <value value="MRSSIO79H59Z317K"/>
+          <assigner>
+            <display value="MEF"/>
+          </assigner>
+        </identifier>
+        <name>
+          <family value="Rossi"/>
+          <given value="Mario"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"/>
+    <resource>
+      <Organization>
+        <id value="508f4b29-09ca-4c94-8343-657f1923303a"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_508f4b29-09ca-4c94-8343-657f1923303a"> </a><p class="res-header-id"><b>Generated Narrative: Organization 508f4b29-09ca-4c94-8343-657f1923303a</b></p><a name="508f4b29-09ca-4c94-8343-657f1923303a"> </a><a name="hc508f4b29-09ca-4c94-8343-657f1923303a"> </a><a name="508f4b29-09ca-4c94-8343-657f1923303a-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.3</code>/327700102</p><p><b>name</b>: Nuovo Ospedale S.Agostino (MO)</p><p><b>partOf</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-206fa15d-51ae-4f3d-b8d0-71ee6290ff52">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.1.3"/>
+          <value value="327700102"/>
+          <assigner>
+            <display value="Ministero della Salute"/>
+          </assigner>
+        </identifier>
+        <name value="Nuovo Ospedale S.Agostino (MO)"/>
+        <partOf>
+          <reference value="urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"/>
+        </partOf>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"/>
+    <resource>
+      <Organization>
+        <id value="206fa15d-51ae-4f3d-b8d0-71ee6290ff52"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><p class="res-header-id"><b>Generated Narrative: Organization 206fa15d-51ae-4f3d-b8d0-71ee6290ff52</b></p><a name="206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><a name="hc206fa15d-51ae-4f3d-b8d0-71ee6290ff52"> </a><a name="206fa15d-51ae-4f3d-b8d0-71ee6290ff52-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/080105</p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.4.1.1"/>
+          <value value="080105"/>
+          <assigner>
+            <display value="Ministero della Salute"/>
+          </assigner>
+        </identifier>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda"/>
+    <resource>
+      <DiagnosticReport>
+        <id value="5679723c-4fae-4ba7-9f09-5438a827bfda"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="DiagnosticReport_5679723c-4fae-4ba7-9f09-5438a827bfda"> </a><p class="res-header-id"><b>Generated Narrative: DiagnosticReport 5679723c-4fae-4ba7-9f09-5438a827bfda</b></p><a name="5679723c-4fae-4ba7-9f09-5438a827bfda"> </a><a name="hc5679723c-4fae-4ba7-9f09-5438a827bfda"> </a><a name="5679723c-4fae-4ba7-9f09-5438a827bfda-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span> (<span title="Codes:{http://loinc.org 18719-5}">Chemistry studies (set)</span>) </h2><table class="grid"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>Identifier</td><td> <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr><tr><td/><td/></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition">
+          <valueReference>
+            <reference value="urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"/>
+          </valueReference>
+        </extension>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.9.2.120.4.4"/>
+          <value value="c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"/>
+          <assigner>
+            <display value="Regione Lazio"/>
+          </assigner>
+        </identifier>
+        <status value="registered"/>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18719-5"/>
+            <display value="Chemistry studies (set)"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11502-2"/>
+            <display value="Laboratory report"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+        <specimen>
+          <reference value="urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"/>
+        </specimen>
+        <specimen>
+          <reference value="urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91"/>
+        </specimen>
+        <result>
+          <reference value="urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"/>
+        </result>
+        <result>
+          <reference value="urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb"/>
+        </result>
+      </DiagnosticReport>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"/>
+    <resource>
+      <Observation>
+        <id value="763f7902-8103-4d10-8bd1-546a726d43ee"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_763f7902-8103-4d10-8bd1-546a726d43ee"> </a><p class="res-header-id"><b>Generated Narrative: Observation 763f7902-8103-4d10-8bd1-546a726d43ee</b></p><a name="763f7902-8103-4d10-8bd1-546a726d43ee"> </a><a name="hc763f7902-8103-4d10-8bd1-546a726d43ee"> </a><a name="763f7902-8103-4d10-8bd1-546a726d43ee-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 22700-9}, {urn:oid:1.2.203.24341.11.2.2 03088}">Urea (U) [Moles/Vol]</span></p><p><b>subject</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><p><b>effective</b>: 2023-03-27 11:24:26+0100</p><p><b>performer</b>: Jan Laborant</p><p><b>value</b>: 310 mmol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation LU}">Significantly low</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 70621000052105}">Spectrophotometric technique</span></p><p><b>specimen</b>: <a href="Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>67 mmol/L</td><td>580 mmol/L</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="22700-9"/>
+            <display value="Urea [Moles/volume] in Urine"/>
+          </coding>
+          <coding>
+            <system value="urn:oid:1.2.203.24341.11.2.2"/>
+            <code value="03088"/>
+            <display value="Urea (U; látková konc. [mmol/l] Absorpční spektrofotometrie)"/>
+          </coding>
+          <text value="Urea (U) [Moles/Vol]"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+        <effectiveDateTime value="2023-03-27T11:24:26+01:00"/>
+        <performer>
+          <display value="Jan Laborant"/>
+        </performer>
+        <valueQuantity>
+          <value value="310"/>
+          <unit value="mmol/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mmol/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="LU"/>
+            <display value="Significantly low"/>
+          </coding>
+        </interpretation>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="70621000052105"/>
+            <display value="Spectrophotometric technique"/>
+          </coding>
+        </method>
+        <specimen>
+          <reference value="urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"/>
+        </specimen>
+        <referenceRange>
+          <low>
+            <value value="67"/>
+            <unit value="mmol/L"/>
+          </low>
+          <high>
+            <value value="580"/>
+            <unit value="mmol/L"/>
+          </high>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb"/>
+    <resource>
+      <Observation>
+        <id value="18bd102e-0abf-42b0-b4e6-97e47fd385eb"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_18bd102e-0abf-42b0-b4e6-97e47fd385eb"> </a><p class="res-header-id"><b>Generated Narrative: Observation 18bd102e-0abf-42b0-b4e6-97e47fd385eb</b></p><a name="18bd102e-0abf-42b0-b4e6-97e47fd385eb"> </a><a name="hc18bd102e-0abf-42b0-b4e6-97e47fd385eb"> </a><a name="18bd102e-0abf-42b0-b4e6-97e47fd385eb-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2947-0}, {urn:oid:1.2.203.24341.11.2.2 2504}">Sodium (Bld) [Moles/Vol]</span></p><p><b>subject</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><p><b>effective</b>: 2023-03-27 11:24:26+0100</p><p><b>performer</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-e512e2e2-9600-4c69-a269-af3ab5421e09">Laboratorní Technik</a></p><p><b>value</b>: 156 umol/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeumol/L = 'umol/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation HH}">Critical high</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 70621000052105}">Spectrophotometric technique</span></p><p><b>specimen</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-25dfb673-e7d6-43d0-b50b-6739f1ea9c91">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>136 umol/L</td><td>144 umol/L</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2947-0"/>
+            <display value="Sodium [Moles/volume] in Blood"/>
+          </coding>
+          <coding>
+            <system value="urn:oid:1.2.203.24341.11.2.2"/>
+            <code value="2504"/>
+            <display value="Na (S; látková konc. [mmol/l] spektrofotometrie-FAES)"/>
+          </coding>
+          <text value="Sodium (Bld) [Moles/Vol]"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+        </subject>
+        <effectiveDateTime value="2023-03-27T11:24:26+01:00"/>
+        <performer>
+          <reference value="urn:uuid:e512e2e2-9600-4c69-a269-af3ab5421e09"/>
+          <display value="Laboratorní Technik"/>
+        </performer>
+        <valueQuantity>
+          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty">
+            <valueDecimal value="0.1"/>
+          </extension>
+          <value value="156"/>
+          <unit value="umol/L"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="umol/L"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="HH"/>
+            <display value="Critical high"/>
+          </coding>
+        </interpretation>
+        <method>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="70621000052105"/>
+            <display value="Spectrophotometric technique"/>
+          </coding>
+        </method>
+        <specimen>
+          <reference value="urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91"/>
+        </specimen>
+        <referenceRange>
+          <low>
+            <value value="136"/>
+            <unit value="umol/L"/>
+          </low>
+          <high>
+            <value value="144"/>
+            <unit value="umol/L"/>
+          </high>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>

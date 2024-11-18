@@ -1,0 +1,129 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ConceptMap-eu-diagRptStatus2CompStatus"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap ConceptMap-eu-diagRptStatus2CompStatus</b></p><a name=\"ConceptMap-eu-diagRptStatus2CompStatus\"> </a><a name=\"hcConceptMap-eu-diagRptStatus2CompStatus\"> </a><a name=\"ConceptMap-eu-diagRptStatus2CompStatus-en-US\"> </a><p>Mapping from <a href=\"http://hl7.org/fhir/R4/valueset-diagnostic-report-status.html\">DiagnosticReportStatus</a> to <a href=\"http://hl7.org/fhir/R4/valueset-composition-status.html\">CompositionStatus</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html\">DiagnosticReportStatusversion: null4.0.1)</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\">CompositionStatusversion: null4.0.1)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>registered</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>preliminary</td></tr><tr><td>partial</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>preliminary</td></tr><tr><td>preliminary</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>preliminary</td></tr><tr><td>final</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>final</td></tr><tr><td>amended</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>amended</td></tr><tr><td>corrected</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>amended</td></tr><tr><td>appended</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>amended</td></tr><tr><td>cancelled</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>final</td></tr><tr><td>entered-in-error</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>entered-in-error</td></tr><tr><td>unknown</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "ConceptMapDiagRptStatus2CompStatus"] ; # 
+  fhir:title [ fhir:v "DiagnosticReport to Composition status"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Proposed relationship between the statused used in the DiagnosticReport resource and that used for the Composition."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how to value the Composition status element based on the DiagnosticReport element."] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:source [ fhir:v "http://hl7.org/fhir/ValueSet/diagnostic-report-status"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://hl7.org/fhir/ValueSet/composition-status"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.org/fhir/diagnostic-report-status"^^xsd:anyURI ] ;
+     fhir:sourceVersion [ fhir:v "4.0.1" ] ;
+     fhir:target [ fhir:v "http://hl7.org/fhir/composition-status"^^xsd:anyURI ] ;
+     fhir:targetVersion [ fhir:v "4.0.1" ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "registered" ] ;
+       fhir:display [ fhir:v "Registered" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "preliminary" ] ;
+         fhir:display [ fhir:v "Preliminary" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "partial" ] ;
+       fhir:display [ fhir:v "Partial" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "preliminary" ] ;
+         fhir:display [ fhir:v "Preliminary" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "preliminary" ] ;
+       fhir:display [ fhir:v "Preliminary" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "preliminary" ] ;
+         fhir:display [ fhir:v "Preliminary" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "final" ] ;
+       fhir:display [ fhir:v "Final" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "final" ] ;
+         fhir:display [ fhir:v "Final" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "amended" ] ;
+       fhir:display [ fhir:v "Amended" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "amended" ] ;
+         fhir:display [ fhir:v "Amended" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "corrected" ] ;
+       fhir:display [ fhir:v "Corrected" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "amended" ] ;
+         fhir:display [ fhir:v "Amended" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "appended" ] ;
+       fhir:display [ fhir:v "Appended" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "amended" ] ;
+         fhir:display [ fhir:v "Amended" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "cancelled" ] ;
+       fhir:display [ fhir:v "Cancelled" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "final" ] ;
+         fhir:display [ fhir:v "Final" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "entered-in-error" ] ;
+       fhir:display [ fhir:v "Entered in Error" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "entered-in-error" ] ;
+         fhir:display [ fhir:v "Entered in Error" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "unknown" ] ;
+       fhir:display [ fhir:v "Unknown" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Bundle: Hepatitis Panel - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"24.67"}
+    h3,h4,h5,h6{--heading-prefix:"24.67"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle: Hepatitis Panel</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-BundleHepatitisPanel.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-BundleHepatitisPanel.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-BundleHepatitisPanel.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Bundle: Bundle: Hepatitis Panel</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Details</b></p><p class="res-header-id"><b>Generated Narrative: Bundle Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30</b></p><a name="BundleHepatitisPanel"> </a><a name="hcBundleHepatitisPanel"> </a><a name="BundleHepatitisPanel-en-US"> </a></div><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Subject</b></p><p class="res-header-id"><b>Generated Narrative: Patient 8472931c-fbd0-437b-9ed1-4f66472c78b5</b></p><a name="BundleHepatitisPanel/8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><a name="hcBundleHepatitisPanel/8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><a name="BundleHepatitisPanel/8472931c-fbd0-437b-9ed1-4f66472c78b5-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div><hr/><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Content</b></p><div><h2>Hepatitis screening panel</h2></div></div><hr/><h2>Additional Resources Included in Document</h2><a name="urn-uuid-4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><a name="Composition_4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><a name="hcComposition_4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><hr/><p>Entry 1 - fullUrl = urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4</p><p>Resource Composition:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Composition 4028a0b8-37fc-4491-a8e7-0f28e6fc59b4</b></p><a name="BundleHepatitisPanel/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><a name="hcBundleHepatitisPanel/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><a name="BundleHepatitisPanel/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4-en-US"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://hl7.org/fhir/composition-attestation-mode legal}">Legal</span></td><td>2020-12-27 14:30:00+0100</td><td><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></blockquote><a name="urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><a name="Patient_8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><a name="hcPatient_8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><hr/><p>Entry 2 - fullUrl = urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5</p><p>Resource Patient:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Patient 8472931c-fbd0-437b-9ed1-4f66472c78b5</b></p><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></blockquote><a name="urn-uuid-3a743273-237a-446a-a8da-9e7521cce614"> </a><a name="DiagnosticReport_3a743273-237a-446a-a8da-9e7521cce614"> </a><a name="hcDiagnosticReport_3a743273-237a-446a-a8da-9e7521cce614"> </a><hr/><p>Entry 3 - fullUrl = urn:uuid:3a743273-237a-446a-a8da-9e7521cce614</p><p>Resource DiagnosticReport:</p><blockquote><p class="res-header-id"><b>Generated Narrative: DiagnosticReport 3a743273-237a-446a-a8da-9e7521cce614</b></p><a name="BundleHepatitisPanel/3a743273-237a-446a-a8da-9e7521cce614"> </a><a name="hcBundleHepatitisPanel/3a743273-237a-446a-a8da-9e7521cce614"> </a><a name="BundleHepatitisPanel/3a743273-237a-446a-a8da-9e7521cce614-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}, {http://example.org/lab-codes 3002989}">Acute Hepatitis Panel, reflex to confirmation</span> </h2><table class="grid"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr></table></blockquote><a name="urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><a name="Specimen_3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><a name="hcSpecimen_3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><hr/><p>Entry 4 - fullUrl = urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13</p><p>Resource Specimen:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Specimen 3c9bd730-3ff9-40ee-9da1-4f3d5c526f13</b></p><a name="BundleHepatitisPanel/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><a name="hcBundleHepatitisPanel/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><a name="BundleHepatitisPanel/3c9bd730-3ff9-40ee-9da1-4f3d5c526f13-en-US"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119364003}">Serum specimen</span></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td></tr><tr><td style="display: none">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></blockquote><a name="urn-uuid-2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><a name="Observation_2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><a name="hcObservation_2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><hr/><p>Entry 5 - fullUrl = urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 2c72163e-b741-44a3-aff7-c52f17f7a1ba</b></p><a name="BundleHepatitisPanel/2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><a name="hcBundleHepatitisPanel/2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><a name="BundleHepatitisPanel/2c72163e-b741-44a3-aff7-c52f17f7a1ba-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 3002989}">Acute Hepatitis Panel, reflex to confirmation</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-104a5829-565b-46a6-85d6-36751ef79a40">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-01b8ec35-9b20-45a4-bd41-42eeae2fd521">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-096e27da-0768-47e4-b33c-9f1be93e1f88">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-861e7b48-5497-410a-bed8-2cde814e09fc">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-cc96d499-3e0e-4588-a021-4fe576766112">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-104a5829-565b-46a6-85d6-36751ef79a40"> </a><a name="Observation_104a5829-565b-46a6-85d6-36751ef79a40"> </a><a name="hcObservation_104a5829-565b-46a6-85d6-36751ef79a40"> </a><hr/><p>Entry 6 - fullUrl = urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 104a5829-565b-46a6-85d6-36751ef79a40</b></p><a name="BundleHepatitisPanel/104a5829-565b-46a6-85d6-36751ef79a40"> </a><a name="hcBundleHepatitisPanel/104a5829-565b-46a6-85d6-36751ef79a40"> </a><a name="BundleHepatitisPanel/104a5829-565b-46a6-85d6-36751ef79a40-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 0020089}, {http://loinc.org 5196-1}">Hepatitis B Surface Antigen</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td><div><p>Negative</p>
+</div></td></tr></table></blockquote><a name="urn-uuid-01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><a name="Observation_01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><a name="hcObservation_01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><hr/><p>Entry 7 - fullUrl = urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 01b8ec35-9b20-45a4-bd41-42eeae2fd521</b></p><a name="BundleHepatitisPanel/01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><a name="hcBundleHepatitisPanel/01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><a name="BundleHepatitisPanel/01b8ec35-9b20-45a4-bd41-42eeae2fd521-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 0020092}, {http://loinc.org 24113-3}">Hepatitis B Core Antibody, IgM</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td><div><p>Negative</p>
+</div></td></tr></table></blockquote><a name="urn-uuid-096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><a name="Observation_096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><a name="hcObservation_096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><hr/><p>Entry 8 - fullUrl = urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 096e27da-0768-47e4-b33c-9f1be93e1f88</b></p><a name="BundleHepatitisPanel/096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><a name="hcBundleHepatitisPanel/096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><a name="BundleHepatitisPanel/096e27da-0768-47e4-b33c-9f1be93e1f88-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 0020093}, {http://loinc.org 13950-1}">Hepatitis A Antibody, IgM</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td><div><p>Negative</p>
+</div></td></tr></table></blockquote><a name="urn-uuid-861e7b48-5497-410a-bed8-2cde814e09fc"> </a><a name="Observation_861e7b48-5497-410a-bed8-2cde814e09fc"> </a><a name="hcObservation_861e7b48-5497-410a-bed8-2cde814e09fc"> </a><hr/><p>Entry 9 - fullUrl = urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 861e7b48-5497-410a-bed8-2cde814e09fc</b></p><a name="BundleHepatitisPanel/861e7b48-5497-410a-bed8-2cde814e09fc"> </a><a name="hcBundleHepatitisPanel/861e7b48-5497-410a-bed8-2cde814e09fc"> </a><a name="BundleHepatitisPanel/861e7b48-5497-410a-bed8-2cde814e09fc-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 3003128}, {http://loinc.org 13955-0}">Hepatitis C Antibody by CIA Interp</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td><div><p>Negative</p>
+</div></td></tr></table></blockquote><a name="urn-uuid-cc96d499-3e0e-4588-a021-4fe576766112"> </a><a name="Observation_cc96d499-3e0e-4588-a021-4fe576766112"> </a><a name="hcObservation_cc96d499-3e0e-4588-a021-4fe576766112"> </a><hr/><p>Entry 10 - fullUrl = urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation cc96d499-3e0e-4588-a021-4fe576766112</b></p><a name="BundleHepatitisPanel/cc96d499-3e0e-4588-a021-4fe576766112"> </a><a name="hcBundleHepatitisPanel/cc96d499-3e0e-4588-a021-4fe576766112"> </a><a name="BundleHepatitisPanel/cc96d499-3e0e-4588-a021-4fe576766112-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 2002404}, {http://loinc.org 57006-9}">Hepatitis C Antibody by CIA Index</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: 9.89 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">Low Positive</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><blockquote><p><b>referenceRange</b></p><p><b>high</b>: 0.79 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 0.8 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>high</b>: 0.99 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:">Equivocal</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 1 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>high</b>: 10.99 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:">Low Positive</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 11 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:">High Positive</span></p></blockquote></blockquote><a name="urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70"> </a><a name="Organization_608b5309-2609-4d03-b6da-c758bfa1de70"> </a><a name="hcOrganization_608b5309-2609-4d03-b6da-c758bfa1de70"> </a><hr/><p>Entry 11 - fullUrl = urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization 608b5309-2609-4d03-b6da-c758bfa1de70</b></p><a name="BundleHepatitisPanel/608b5309-2609-4d03-b6da-c758bfa1de70"> </a><a name="hcBundleHepatitisPanel/608b5309-2609-4d03-b6da-c758bfa1de70"> </a><a name="BundleHepatitisPanel/608b5309-2609-4d03-b6da-c758bfa1de70-en-US"> </a><p><b>identifier</b>: <code>http://example.org/czech-orgs</code>/24341</p><p><b>name</b>: Ministry of Health of the Czech Republic</p></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

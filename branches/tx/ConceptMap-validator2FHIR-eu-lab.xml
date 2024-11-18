@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="validator2FHIR-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap validator2FHIR-eu-lab</b></p><a name="validator2FHIR-eu-lab"> </a><a name="hcvalidator2FHIR-eu-lab"> </a><a name="validator2FHIR-eu-lab-en-US"> </a><p>Mapping from <a href="StructureDefinition-Validator.html">A.1.7 - Result validator</a> to <a href="StructureDefinition-Composition-eu-lab.html">Composition: Laboratory Report</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Validator.html">A.1.7 - Result validator</a> to <a href="StructureDefinition-Composition-eu-lab.html">Composition: Laboratory Report</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Validator.identifier (A.1.7.1 Result validator identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.identifier</td><td>attester.where(mode='professional')</td></tr><tr><td>Validator.name (A.1.7.2 Result validator name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.name</td><td>attester.where(mode='professional').party.resolve().ofType(Practitioner).name</td></tr><tr><td>Validator.name (A.1.7.2 Result validator name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.Practitioner.name</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>Validator.organization (A.1.7.3 Result validator organisation)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.party.organization</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Validator.dateTime (A.1.7.4 Validation date and time)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.attester.time</td><td>attester.where(mode='professional').time</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ConceptMap/validator2FHIR-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="Validator2Fhir"/>
+  <title value="eHN Validator to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="eHN Validator Model to this guide Map"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="It shows how the Validator Recipient data set defined by the EU eHN guidelines is mapped into this guide"/>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceUri value="http://hl7.eu/fhir/laboratory/StructureDefinition/Validator"/>
+  <targetUri value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"/>
+  <group>
+    <source value="http://hl7.eu/fhir/laboratory/StructureDefinition/Validator"/>
+    <target value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"/>
+    <element>
+      <code value="Validator.identifier"/>
+      <display value="A.1.7.1 Result validator identifier"/>
+      <target>
+        <code value="Composition.attester.party.identifier"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional')"/>
+      </target>
+    </element>
+    <element>
+      <code value="Validator.name"/>
+      <display value="A.1.7.2 Result validator name"/>
+      <target>
+        <code value="Composition.attester.party.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional').party.resolve().ofType(Practitioner).name"/>
+      </target>
+    </element>
+    <element>
+      <code value="Validator.name"/>
+      <display value="A.1.7.2 Result validator name"/>
+      <target>
+        <code value="Composition.attester.party.Practitioner.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name"/>
+      </target>
+    </element>
+    <element>
+      <code value="Validator.organization"/>
+      <display value="A.1.7.3 Result validator organisation"/>
+      <target>
+        <code value="Composition.attester.party.organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()"/>
+      </target>
+    </element>
+    <element>
+      <code value="Validator.dateTime"/>
+      <display value="A.1.7.4 Validation date and time"/>
+      <target>
+        <code value="Composition.attester.time"/>
+        <equivalence value="equivalent"/>
+        <comment value="attester.where(mode='professional').time"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

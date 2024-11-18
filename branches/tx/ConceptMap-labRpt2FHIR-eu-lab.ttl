@@ -1,0 +1,400 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ConceptMap/labRpt2FHIR-eu-lab> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "labRpt2FHIR-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap labRpt2FHIR-eu-lab</b></p><a name=\"labRpt2FHIR-eu-lab\"> </a><a name=\"hclabRpt2FHIR-eu-lab\"> </a><a name=\"labRpt2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-LabReport.html\">A - Laboratory Report</a> to <a href=\"StructureDefinition-Bundle-eu-lab.html\">Bundle: Laboratory Report</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-LabReport.html\">A - Laboratory Report</a> to <a href=\"StructureDefinition-DiagnosticReport-eu-lab.html\">DiagnosticReport: Laboratory Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>LabReport.header (A.1 Report header data elements)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport</td><td/></tr><tr><td>LabReport.header.subject (A.1.1 - A1.2 Patient/subject)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.subject</td><td/></tr><tr><td>LabReport.header.payer (A.1.3 Health insurance and payment information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.basedOn.insurance</td><td>basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)</td></tr><tr><td>LabReport.header.informationRecipient (A.1.4 Information recipient)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DiagnosticReport.extension:information-recipient</td><td/></tr><tr><td>LabReport.header.author (A.1.5 Author)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.resultsInterpreter</td><td>If the author is the interpreter</td></tr><tr><td>LabReport.header.author (A.1.5 Author)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.performer</td><td>If the author is the perfomer</td></tr><tr><td>LabReport.header.legalAuthenticator (A.1.6 Legal authenticator)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LabReport.header.validator (A.1.7 Result validator)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LabReport.header.metadata (A.1.8 Laboratory report metadata)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport</td><td/></tr><tr><td>LabReport.header.metadata.documentId (A.1.8.0 Document Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.identifier</td><td>If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier</td></tr><tr><td>LabReport.header.metadata.type (A.1.8.1 Document type)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DiagnosticReport.code</td><td/></tr><tr><td>LabReport.header.metadata.status (A.1.8.2 Document status)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.status</td><td>For FHIR R4 the more granular status is recorded in the DiagnosticReport.status</td></tr><tr><td>LabReport.header.metadata.dateTime (A.1.8.3 Report date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DiagnosticReport.effectiveDateTime</td><td/></tr><tr><td>LabReport.header.metadata.title (A.1.8.4 Document title)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LabReport.header.metadata.studyType (A.1.8.5 Study type)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.category</td><td/></tr><tr><td>LabReport.header.metadata.custodian (A.1.8.6 Report custodian)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LabReport.header.metadata.confidentiality (A.1.8.7 Confidentiality)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LabReport.header.metadata.language (A.1.8.8 Language)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>DiagnosticReport.language</td><td/></tr><tr><td>LabReport.header.metadata.version (A.1.8.9 Version)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>LabReport.order (A.2-A.3 Order)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.basedOn</td><td>basedOn.resolve().ofType(ServiceRequest)</td></tr><tr><td>LabReport.specimen (A.4 Specimen information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.specimen</td><td/></tr><tr><td>LabReport.result (A.5 Results data elements)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td/></tr><tr><td>LabReport.specimen (A.4 Specimen information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result.specimen</td><td>result.resolve().ofType(Observation)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-LabReport.html\">A - Laboratory Report</a> to <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>LabReport.header (A.1 Report header data elements)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition</td><td/></tr><tr><td>LabReport.header.subject (A.1.1 - A1.2 Patient/subject)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.subject</td><td/></tr><tr><td>LabReport.header.payer (A.1.3 Health insurance and payment information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.extension:basedOn-order-or-requisition.insurance</td><td>extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)</td></tr><tr><td>LabReport.header.informationRecipient (A.1.4 Information recipient)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.extension:information-recipient</td><td/></tr><tr><td>LabReport.header.author (A.1.5 Author)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.author</td><td/></tr><tr><td>LabReport.header.legalAuthenticator (A.1.6 Legal authenticator)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party</td><td>The person authenticated the content and accepted legal responsibility for its content.\nattester.where(mode='legal')</td></tr><tr><td>LabReport.header.validator (A.1.7 Result validator)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party</td><td>The person authenticated the content in their professional capacity.\nattester.where(mode='professional')</td></tr><tr><td>LabReport.header.metadata (A.1.8 Laboratory report metadata)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition</td><td/></tr><tr><td>LabReport.header.metadata.documentId (A.1.8.0 Document Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.identifier</td><td>If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier</td></tr><tr><td>LabReport.header.metadata.type (A.1.8.1 Document type)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.type</td><td/></tr><tr><td>LabReport.header.metadata.status (A.1.8.2 Document status)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.status</td><td>For FHIR R4 the more granular status is recorded in the DiagnosticReport.status. Mapping rules for valuing the Compisition.status are specified in http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus</td></tr><tr><td>LabReport.header.metadata.dateTime (A.1.8.3 Report date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.date</td><td/></tr><tr><td>LabReport.header.metadata.title (A.1.8.4 Document title)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.title</td><td/></tr><tr><td>LabReport.header.metadata.studyType (A.1.8.5 Study type)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.category</td><td/></tr><tr><td>LabReport.header.metadata.custodian (A.1.8.6 Report custodian)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.custodian</td><td/></tr><tr><td>LabReport.header.metadata.confidentiality (A.1.8.7 Confidentiality)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.confidentiality</td><td/></tr><tr><td>LabReport.header.metadata.language (A.1.8.8 Language)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.language</td><td/></tr><tr><td>LabReport.header.metadata.version (A.1.8.9 Version)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.extension:versionNumber</td><td>if it refers to the business report version</td></tr><tr><td>LabReport.order (A.2-A.3 Order)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.extension:basedOn-order-or-requisition.insurance</td><td>extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)</td></tr><tr><td>LabReport.specimen (A.4 Specimen information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry.specimen</td><td>If no sub sections</td></tr><tr><td>LabReport.result (A.5 Results data elements)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>If no sub sections</td></tr><tr><td>LabReport.specimen (A.4 Specimen information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-subsections.section.entry.specimen</td><td>If sub sections</td></tr><tr><td>LabReport.result (A.5 Results data elements)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-subsections.section.entry</td><td>If sub sections</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "informative" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ConceptMap/labRpt2FHIR-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LabRpt2FHIR"] ; # 
+  fhir:title [ fhir:v "eHN Lab Report to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN Lab Report to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "LabReport.header" ] ;
+       fhir:display [ fhir:v "A.1 Report header data elements" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.subject" ] ;
+       fhir:display [ fhir:v "A.1.1 - A1.2 Patient/subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.subject" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.payer" ] ;
+       fhir:display [ fhir:v "A.1.3 Health insurance and payment information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.basedOn.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "basedOn.resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.informationRecipient" ] ;
+       fhir:display [ fhir:v "A.1.4 Information recipient" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.extension:information-recipient" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.author" ] ;
+       fhir:display [ fhir:v "A.1.5 Author" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.resultsInterpreter" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If the author is the interpreter" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.author" ] ;
+       fhir:display [ fhir:v "A.1.5 Author" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.performer" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If the author is the perfomer" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.legalAuthenticator" ] ;
+       fhir:display [ fhir:v "A.1.6 Legal authenticator" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ] ;
+         fhir:comment [ fhir:v "Mapped in the Composition resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.validator" ] ;
+       fhir:display [ fhir:v "A.1.7 Result validator" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ] ;
+         fhir:comment [ fhir:v "Mapped in the Composition resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata" ] ;
+       fhir:display [ fhir:v "A.1.8 Laboratory report metadata" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.documentId" ] ;
+       fhir:display [ fhir:v "A.1.8.0 Document Id" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.identifier" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.type" ] ;
+       fhir:display [ fhir:v "A.1.8.1 Document type" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.code" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.status" ] ;
+       fhir:display [ fhir:v "A.1.8.2 Document status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.status" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "For FHIR R4 the more granular status is recorded in the DiagnosticReport.status" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.dateTime" ] ;
+       fhir:display [ fhir:v "A.1.8.3 Report date and time" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.effectiveDateTime" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.title" ] ;
+       fhir:display [ fhir:v "A.1.8.4 Document title" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ] ;
+         fhir:comment [ fhir:v "Mapped in the Composition resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.studyType" ] ;
+       fhir:display [ fhir:v "A.1.8.5 Study type" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.category" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.custodian" ] ;
+       fhir:display [ fhir:v "A.1.8.6 Report custodian" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ] ;
+         fhir:comment [ fhir:v "Mapped in the Composition resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.confidentiality" ] ;
+       fhir:display [ fhir:v "A.1.8.7 Confidentiality" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ] ;
+         fhir:comment [ fhir:v "Mapped in the Composition resource" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.language" ] ;
+       fhir:display [ fhir:v "A.1.8.8 Language" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.language" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.version" ] ;
+       fhir:display [ fhir:v "A.1.8.9 Version" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ] ;
+         fhir:comment [ fhir:v "Mapped in the Composition resource if it refers to the business report version" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.order" ] ;
+       fhir:display [ fhir:v "A.2-A.3 Order" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.basedOn" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "basedOn.resolve().ofType(ServiceRequest)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.specimen" ] ;
+       fhir:display [ fhir:v "A.4 Specimen information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.specimen" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.result" ] ;
+       fhir:display [ fhir:v "A.5 Results data elements" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.specimen" ] ;
+       fhir:display [ fhir:v "A.4 Specimen information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result.specimen" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "result.resolve().ofType(Observation)" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "LabReport.header" ] ;
+       fhir:display [ fhir:v "A.1 Report header data elements" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.subject" ] ;
+       fhir:display [ fhir:v "A.1.1 - A1.2 Patient/subject" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.subject" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.payer" ] ;
+       fhir:display [ fhir:v "A.1.3 Health insurance and payment information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.extension:basedOn-order-or-requisition.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest).insurance.resolve().ofType(Coverage)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.informationRecipient" ] ;
+       fhir:display [ fhir:v "A.1.4 Information recipient" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.extension:information-recipient" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.author" ] ;
+       fhir:display [ fhir:v "A.1.5 Author" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.author" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.legalAuthenticator" ] ;
+       fhir:display [ fhir:v "A.1.6 Legal authenticator" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.party" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "The person authenticated the content and accepted legal responsibility for its content.\nattester.where(mode='legal')" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.validator" ] ;
+       fhir:display [ fhir:v "A.1.7 Result validator" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.attester.party" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "The person authenticated the content in their professional capacity.\nattester.where(mode='professional')" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata" ] ;
+       fhir:display [ fhir:v "A.1.8 Laboratory report metadata" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.documentId" ] ;
+       fhir:display [ fhir:v "A.1.8.0 Document Id" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If it is the identifier of the report indipendently by its version. Otherwise you should refer to the Bundle.indentifier" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.type" ] ;
+       fhir:display [ fhir:v "A.1.8.1 Document type" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.type" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.status" ] ;
+       fhir:display [ fhir:v "A.1.8.2 Document status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.status" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "For FHIR R4 the more granular status is recorded in the DiagnosticReport.status. Mapping rules for valuing the Compisition.status are specified in http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.dateTime" ] ;
+       fhir:display [ fhir:v "A.1.8.3 Report date and time" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.date" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.title" ] ;
+       fhir:display [ fhir:v "A.1.8.4 Document title" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.title" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.studyType" ] ;
+       fhir:display [ fhir:v "A.1.8.5 Study type" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.category" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.custodian" ] ;
+       fhir:display [ fhir:v "A.1.8.6 Report custodian" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.custodian" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.confidentiality" ] ;
+       fhir:display [ fhir:v "A.1.8.7 Confidentiality" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.confidentiality" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.language" ] ;
+       fhir:display [ fhir:v "A.1.8.8 Language" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.language" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.header.metadata.version" ] ;
+       fhir:display [ fhir:v "A.1.8.9 Version" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.extension:versionNumber" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "if it refers to the business report version" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.order" ] ;
+       fhir:display [ fhir:v "A.2-A.3 Order" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.extension:basedOn-order-or-requisition.insurance" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "extension(http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition).resolve().ofType(ServiceRequest)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.specimen" ] ;
+       fhir:display [ fhir:v "A.4 Specimen information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry.specimen" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If no sub sections" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.result" ] ;
+       fhir:display [ fhir:v "A.5 Results data elements" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If no sub sections" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.specimen" ] ;
+       fhir:display [ fhir:v "A.4 Specimen information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-subsections.section.entry.specimen" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If sub sections" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "LabReport.result" ] ;
+       fhir:display [ fhir:v "A.5 Results data elements" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-subsections.section.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If sub sections" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

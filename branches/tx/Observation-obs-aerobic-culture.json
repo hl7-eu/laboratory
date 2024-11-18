@@ -1,0 +1,31 @@
+{
+  "resourceType" : "Observation",
+  "id" : "obs-aerobic-culture",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-aerobic-culture</b></p><a name=\"obs-aerobic-culture\"> </a><a name=\"hcobs-aerobic-culture\"> </a><a name=\"obs-aerobic-culture-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Aerobic Culture</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: <a href=\"Observation-obs-org-id1.html\">Observation Bacteria identified in Specimen by Aerobe culture</a></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "text" : "Aerobic Culture"
+  },
+  "subject" : {
+    "reference" : "Patient/pat-lab-example"
+  },
+  "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+  "performer" : [{
+    "display" : "MUDr. Aleš Procházka"
+  }],
+  "hasMember" : [{
+    "reference" : "Observation/obs-org-id1"
+  }]
+}

@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Patient",
+  "id" : "nl-core-NameInformation-complete",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient nl-core-NameInformation-complete</b></p><a name=\"nl-core-NameInformation-complete\"> </a><a name=\"hcnl-core-NameInformation-complete\"> </a><a name=\"nl-core-NameInformation-complete-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Jo  (no stated gender), DoB Unknown</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Alternate names (see the one above)\">Alt. Name:</td><td colspan=\"3\">Johanna Petronella Maria (Jo) van der Giessen-van Putten(Official)</td></tr></table></div>"
+  },
+  "name" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/humanname-assembly-order",
+      "valueCode" : "NL3"
+    }],
+    "use" : "official",
+    "text" : "Johanna Petronella Maria (Jo) van der Giessen-van Putten",
+    "family" : "van der Giessen-van Putten",
+    "_family" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+        "valueString" : "van"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
+        "valueString" : "Putten"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix",
+        "valueString" : "van der"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/humanname-partner-name",
+        "valueString" : "Giessen"
+      }]
+    },
+    "given" : ["Johanna",
+    "Petronella",
+    "Maria"],
+    "_given" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+        "valueCode" : "BR"
+      }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+        "valueCode" : "BR"
+      }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+        "valueCode" : "BR"
+      }]
+    }],
+    "prefix" : ["PhD"]
+  },
+  {
+    "use" : "usual",
+    "given" : ["Jo"]
+  }]
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Observation",
+  "id" : "obs-org-id1-susc-4",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-org-id1-susc-4</b></p><a name=\"obs-org-id1-susc-4\"> </a><a name=\"hcobs-org-id1-susc-4\"> </a><a name=\"obs-org-id1-susc-4-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 19000-9}\">Vancomycin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "19000-9",
+      "display" : "Vancomycin [Susceptibility]"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/pat-lab-example"
+  },
+  "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+  "performer" : [{
+    "display" : "MUDr. Aleš Procházka"
+  }],
+  "valueQuantity" : {
+    "value" : 1,
+    "comparator" : "<=",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "1"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "S",
+      "display" : "Susceptible"
+    }]
+  }]
+}

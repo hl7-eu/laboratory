@@ -1,0 +1,139 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-certifiedRefMaterial-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabCertifiedReferenceMaterialVS",
+      "title" : "Laboratory Certified Reference Material",
+      "description" : "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU].",
+      "systems" : ["http://niaid.nih.gov", "http://pei.de", "http://nibsc.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-laterality-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabLateralityEuVs",
+      "title" : "Body Structure Laterality",
+      "description" : "Body Structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected. (based on SNOMED CT)",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LaboratoryResultStandardEuVs",
+      "title" : "Laboratory Code",
+      "description" : "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems.",
+      "systems" : ["http://loinc.org", "http://npu-terminology.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-loinc-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LoincVs",
+      "title" : "Laboratory Code: LOINC",
+      "description" : "Laboratory observation codes based on the LOINC code system.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "NpuVs",
+      "title" : "Laboratory Code: NPU",
+      "description" : "Laboratory observation codes based on the NPU code system.",
+      "systems" : ["http://npu-terminology.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabOrderCodesEuVs",
+      "title" : "Laboratory Order",
+      "description" : "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-reportType-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabReportTypesEuVs",
+      "title" : "Laboratory Report Types",
+      "description" : "Laboratory Report Types.\nThis version includes only one code as suggested by the eHN guideline.\nCategory can be used for filtering per study type or specialty.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSiteQualifierEuVs",
+      "title" : "Body Structure Qualifier",
+      "description" : "Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecialtyEuVs",
+      "title" : "Laboratory Specialty",
+      "description" : "Laboratory Specialties.\nNotes:\nNote 1: This value set is based on analysis of national coding practices in 8 European countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.\nNote 2: Many European countries are using additional laboratory specialty types, which should be mapped towards this value set.\nNote 3: In case of documented need, this value set could be extended.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-speciesType-eu-vs",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpeciesTypesEuVs",
+      "title" : "Types of species",
+      "description" : "Types of animal species for non-human subjects",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecimenAdditiveEu",
+      "title" : "Specimen Additive",
+      "description" : "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecimenContainerEu",
+      "title" : "Specimen Container",
+      "description" : "List of the containers commonly used to collect specimens (e.g. urine, blood,..).",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecimenTypesEuVs",
+      "title" : "Specimen Types",
+      "description" : "Laboratory Specimen Types",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabStudyTypesEuVs",
+      "title" : "Laboratory Study Types",
+      "description" : "Laboratory Study Types\nNotes:\nNote 1:26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabTechniqueEuVs",
+      "title" : "Laboratory Techniques",
+      "description" : "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT).",
+      "systems" : ["http://snomed.info/sct"]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Observation/4335db48-7090-45b3-a2c2-45b45f94a67c> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "4335db48-7090-45b3-a2c2-45b45f94a67c"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation 4335db48-7090-45b3-a2c2-45b45f94a67c</b></p><a name=\"4335db48-7090-45b3-a2c2-45b45f94a67c\"> </a><a name=\"hc4335db48-7090-45b3-a2c2-45b45f94a67c\"> </a><a name=\"4335db48-7090-45b3-a2c2-45b45f94a67c-en-US\"> </a><p><b>Certified Reference Material: CodeableConcept</b>: <span title=\"Codes:{http://nibsc.org 66/304}\">Insulin, human, for immunoassay, Lyophilized, 3 IU / ampoule.</span></p><p><b>Certified Reference Material: Identifier</b>: <code>http://nibsc.org</code>/66/304</p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 20448-7}, {http://npu-terminology.org NPU02496}\">Insulin [Units/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><p><b>effective</b>: 2023-03-27 11:24:26+0100</p><p><b>performer</b>: Jan Laborant</p><p><b>value</b>: 50 mIU/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codem[iU]/L = 'm[iU]/L')</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://nibsc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "66/304" ] ;
+         fhir:display [ fhir:v "Insulin, human, for immunoassay, Lyophilized, 3 IU / ampoule." ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://nibsc.org"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "66/304" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:20448-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "20448-7" ] ;
+       fhir:display [ fhir:v "Insulin [Units/volume] in Serum or Plasma" ]
+     ] [
+       fhir:system [ fhir:v "http://npu-terminology.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NPU02496" ] ;
+       fhir:display [ fhir:v "P—Insulin; arb.subst.c.(IRP 66/304; proc.) = ? × 10-3 IU/L" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2023-03-27T11:24:26+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "Jan Laborant" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mIU/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "m[iU]/L" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

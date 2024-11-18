@@ -1,0 +1,1321 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Bundle/BundleLabResultMicroCultureSusc> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BundleLabResultMicroCultureSusc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "V1CZ454557891308174803488707671420" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2022-10-25T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:af249f79-f487-4533-9935-d19ab7043724"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:af249f79-f487-4533-9935-d19ab7043724> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349> )
+  ] ) . # 
+
+<urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239> a fhir:Composition ;
+  fhir:id [ fhir:v "4789a3ee-92b1-41b2-9b97-83daacf2a239"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_4789a3ee-92b1-41b2-9b97-83daacf2a239\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 4789a3ee-92b1-41b2-9b97-83daacf2a239</b></p><a name=\"4789a3ee-92b1-41b2-9b97-83daacf2a239\"> </a><a name=\"hc4789a3ee-92b1-41b2-9b97-83daacf2a239\"> </a><a name=\"4789a3ee-92b1-41b2-9b97-83daacf2a239-en-US\"> </a><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:26436-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "26436-6" ] ;
+       fhir:display [ fhir:v "Laboratory Studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:date [ fhir:v "2022-10-25T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Laboratory Report Bacterial Aerobic & Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2020-12-27T14:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:reference [ fhir:v "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Bacterial Aerobic & Anaerobic Culture & Susceptibility" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:18725-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "18725-2" ] ;
+         fhir:display [ fhir:v "Microbiology studies (set)" ]
+       ] )
+     ] ;
+     fhir:section ( [
+       fhir:title [ fhir:v "Gram Stain" ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Gram Stain" ]
+       ] ;
+       fhir:entry ( [
+         fhir:reference [ fhir:v "urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175" ]
+       ] )
+     ] [
+       fhir:title [ fhir:v "Aerobic Culture" ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Aerobic Culture" ]
+       ] ;
+       fhir:entry ( [
+         fhir:reference [ fhir:v "urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47" ]
+       ] )
+     ] [
+       fhir:title [ fhir:v "Anaerobic Culture" ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Anaerobic Culture" ]
+       ] ;
+       fhir:entry ( [
+         fhir:reference [ fhir:v "urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e" ]
+       ] )
+     ] )
+  ] ) . # 
+
+<urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b> a fhir:Patient ;
+  fhir:id [ fhir:v "5bb42c3f-56fb-4bbc-b939-73910a6cce3b"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_5bb42c3f-56fb-4bbc-b939-73910a6cce3b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 5bb42c3f-56fb-4bbc-b939-73910a6cce3b</b></p><a name=\"5bb42c3f-56fb-4bbc-b939-73910a6cce3b\"> </a><a name=\"hc5bb42c3f-56fb-4bbc-b939-73910a6cce3b\"> </a><a name=\"5bb42c3f-56fb-4bbc-b939-73910a6cce3b-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIIP" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "740512852" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.9.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A225961454" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.4.330.203"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5484136" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Očkovaný" ] ;
+     fhir:given ( [ fhir:v "František" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2000-03-21"^^xsd:date] . # 
+
+<urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "b864303b-91ab-4e29-ad74-31a7d6566875"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_b864303b-91ab-4e29-ad74-31a7d6566875\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport b864303b-91ab-4e29-ad74-31a7d6566875</b></p><a name=\"b864303b-91ab-4e29-ad74-31a7d6566875\"> </a><a name=\"hcb864303b-91ab-4e29-ad74-31a7d6566875\"> </a><a name=\"b864303b-91ab-4e29-ad74-31a7d6566875-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</span> (<span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr><tr><td>Identifier</td><td> <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr><tr><td/><td/></tr><tr><td/><td/></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:reference [ fhir:v "urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:26436-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "26436-6" ] ;
+       fhir:display [ fhir:v "Laboratory Studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] ) ;
+     fhir:text [ fhir:v "Bacterial Aerobic & Anaerobic Culture & Susceptibility" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:specimen ( [
+     fhir:reference [ fhir:v "urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:reference [ fhir:v "urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e" ]
+  ] ) . # 
+
+<urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc> a fhir:Specimen ;
+  fhir:id [ fhir:v "bab0016e-1800-4e54-b595-72bd9041ffbc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_bab0016e-1800-4e54-b595-72bd9041ffbc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen bab0016e-1800-4e54-b595-72bd9041ffbc</b></p><a name=\"bab0016e-1800-4e54-b595-72bd9041ffbc\"> </a><a name=\"hcbab0016e-1800-4e54-b595-72bd9041ffbc\"> </a><a name=\"bab0016e-1800-4e54-b595-72bd9041ffbc-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119365002}\">Specimen from wound</span></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:119365002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119365002" ] ;
+       fhir:display [ fhir:v "Specimen from wound" ]
+     ] )
+  ] ; # 
+  fhir:collection [
+     fhir:collected [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime ]
+  ] . # 
+
+<urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175> a fhir:Observation ;
+  fhir:id [ fhir:v "40278a69-87aa-470f-a38f-bff1e8aee175"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_40278a69-87aa-470f-a38f-bff1e8aee175\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 40278a69-87aa-470f-a38f-bff1e8aee175</b></p><a name=\"40278a69-87aa-470f-a38f-bff1e8aee175\"> </a><a name=\"hc40278a69-87aa-470f-a38f-bff1e8aee175\"> </a><a name=\"40278a69-87aa-470f-a38f-bff1e8aee175-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Gram Stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1097929f-890e-4e27-a31d-58599f3e2479\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-fcf220c3-7f3e-44f8-b669-48552a20fa0a\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-331d513e-a57f-4464-9eec-25533aeb6d06\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Gram Stain" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06" ]
+  ] ) . # 
+
+<urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479> a fhir:Observation ;
+  fhir:id [ fhir:v "1097929f-890e-4e27-a31d-58599f3e2479"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_1097929f-890e-4e27-a31d-58599f3e2479\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 1097929f-890e-4e27-a31d-58599f3e2479</b></p><a name=\"1097929f-890e-4e27-a31d-58599f3e2479\"> </a><a name=\"hc1097929f-890e-4e27-a31d-58599f3e2479\"> </a><a name=\"1097929f-890e-4e27-a31d-58599f3e2479-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72163-9}\">Leukocytes [Presence] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 2667000}\">None observed</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:72163-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "72163-9" ] ;
+       fhir:display [ fhir:v "Leukocytes [Presence] in Specimen by Gram stain" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:2667000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2667000" ] ;
+       fhir:display [ fhir:v "Absent" ]
+     ] ) ;
+     fhir:text [ fhir:v "None observed" ]
+  ] . # 
+
+<urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a> a fhir:Observation ;
+  fhir:id [ fhir:v "fcf220c3-7f3e-44f8-b669-48552a20fa0a"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_fcf220c3-7f3e-44f8-b669-48552a20fa0a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation fcf220c3-7f3e-44f8-b669-48552a20fa0a</b></p><a name=\"fcf220c3-7f3e-44f8-b669-48552a20fa0a\"> </a><a name=\"hcfcf220c3-7f3e-44f8-b669-48552a20fa0a\"> </a><a name=\"fcf220c3-7f3e-44f8-b669-48552a20fa0a-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 664-3}\">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 70003006}\">Gram-positive cocci in clusters</span></p><p><b>hasMember</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:664-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "664-3" ] ;
+       fhir:display [ fhir:v "Microscopic observation [Identifier] in Specimen by Gram stain" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:70003006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "70003006" ] ;
+       fhir:display [ fhir:v "Gram-positive cocci in clusters" ]
+     ] )
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e" ]
+  ] ) . # 
+
+<urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e> a fhir:Observation ;
+  fhir:id [ fhir:v "2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e</b></p><a name=\"2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\"> </a><a name=\"hc2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e\"> </a><a name=\"2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Observed Quantity</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441614007}\">+</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Observed Quantity" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:441614007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "441614007" ] ;
+       fhir:display [ fhir:v "Present + out of +++" ]
+     ] ) ;
+     fhir:text [ fhir:v "+" ]
+  ] . # 
+
+<urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06> a fhir:Observation ;
+  fhir:id [ fhir:v "331d513e-a57f-4464-9eec-25533aeb6d06"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_331d513e-a57f-4464-9eec-25533aeb6d06\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 331d513e-a57f-4464-9eec-25533aeb6d06</b></p><a name=\"331d513e-a57f-4464-9eec-25533aeb6d06\"> </a><a name=\"hc331d513e-a57f-4464-9eec-25533aeb6d06\"> </a><a name=\"331d513e-a57f-4464-9eec-25533aeb6d06-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 664-3}\">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 87172008}\">Gram-negative rods</span></p><p><b>hasMember</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-931c6459-0fb0-4f02-8268-08e6d94a8f5c\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:664-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "664-3" ] ;
+       fhir:display [ fhir:v "Microscopic observation [Identifier] in Specimen by Gram stain" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:87172008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "87172008" ] ;
+       fhir:display [ fhir:v "Gram-negative rods" ]
+     ] )
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c" ]
+  ] ) . # 
+
+<urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c> a fhir:Observation ;
+  fhir:id [ fhir:v "931c6459-0fb0-4f02-8268-08e6d94a8f5c"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_931c6459-0fb0-4f02-8268-08e6d94a8f5c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 931c6459-0fb0-4f02-8268-08e6d94a8f5c</b></p><a name=\"931c6459-0fb0-4f02-8268-08e6d94a8f5c\"> </a><a name=\"hc931c6459-0fb0-4f02-8268-08e6d94a8f5c\"> </a><a name=\"931c6459-0fb0-4f02-8268-08e6d94a8f5c-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Observed Quantity</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441517005}\">++</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Observed Quantity" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:441517005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "441517005" ] ;
+       fhir:display [ fhir:v "Present ++ out of +++" ]
+     ] ) ;
+     fhir:text [ fhir:v "++" ]
+  ] . # 
+
+<urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47> a fhir:Observation ;
+  fhir:id [ fhir:v "8754019d-256b-4df9-94f2-f80c07e08d47"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_8754019d-256b-4df9-94f2-f80c07e08d47\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 8754019d-256b-4df9-94f2-f80c07e08d47</b></p><a name=\"8754019d-256b-4df9-94f2-f80c07e08d47\"> </a><a name=\"hc8754019d-256b-4df9-94f2-f80c07e08d47\"> </a><a name=\"8754019d-256b-4df9-94f2-f80c07e08d47-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Aerobic Culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-083ee3df-1381-4ed2-849f-77808eb81a36\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-d49839fe-515c-44b6-8d19-3cc5d48feb49\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Aerobic Culture" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49" ]
+  ] ) . # 
+
+<urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36> a fhir:Observation ;
+  fhir:id [ fhir:v "083ee3df-1381-4ed2-849f-77808eb81a36"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_083ee3df-1381-4ed2-849f-77808eb81a36\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 083ee3df-1381-4ed2-849f-77808eb81a36</b></p><a name=\"083ee3df-1381-4ed2-849f-77808eb81a36\"> </a><a name=\"hc083ee3df-1381-4ed2-849f-77808eb81a36\"> </a><a name=\"083ee3df-1381-4ed2-849f-77808eb81a36-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 634-6}\">Bacteria identified in Specimen by Aerobe culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 3092008}\">Staphylococcus aureus</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-758d2270-a997-4a8f-872f-b3fbaef209fa\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-61f8e930-46e0-41ab-9448-0d1dc74925df\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:634-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "634-6" ] ;
+       fhir:display [ fhir:v "Bacteria identified in Specimen by Aerobe culture" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:3092008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3092008" ] ;
+       fhir:display [ fhir:v "Staphylococcus aureus" ]
+     ] )
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df" ]
+  ] ) . # 
+
+<urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa> a fhir:Observation ;
+  fhir:id [ fhir:v "758d2270-a997-4a8f-872f-b3fbaef209fa"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_758d2270-a997-4a8f-872f-b3fbaef209fa\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 758d2270-a997-4a8f-872f-b3fbaef209fa</b></p><a name=\"758d2270-a997-4a8f-872f-b3fbaef209fa\"> </a><a name=\"hc758d2270-a997-4a8f-872f-b3fbaef209fa\"> </a><a name=\"758d2270-a997-4a8f-872f-b3fbaef209fa-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Microorganism Growth</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441517005}\">++</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Microorganism Growth" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:441517005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "441517005" ] ;
+       fhir:display [ fhir:v "Present ++ out of +++" ]
+     ] ) ;
+     fhir:text [ fhir:v "++" ]
+  ] . # 
+
+<urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df> a fhir:Observation ;
+  fhir:id [ fhir:v "61f8e930-46e0-41ab-9448-0d1dc74925df"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_61f8e930-46e0-41ab-9448-0d1dc74925df\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 61f8e930-46e0-41ab-9448-0d1dc74925df</b></p><a name=\"61f8e930-46e0-41ab-9448-0d1dc74925df\"> </a><a name=\"hc61f8e930-46e0-41ab-9448-0d1dc74925df\"> </a><a name=\"61f8e930-46e0-41ab-9448-0d1dc74925df-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29576-6}\">Bacterial susceptibility panel</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-85230b86-9b90-4faf-a750-d5fa82520ce9\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1fb64f47-4272-43ae-a119-c3b4c3367829\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-af249f79-f487-4533-9935-d19ab7043724\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-a4469ca9-d0be-4c58-853a-44cea24484b8\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:29576-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "29576-6" ] ;
+       fhir:display [ fhir:v "Bacterial susceptibility panel" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:af249f79-f487-4533-9935-d19ab7043724" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8" ]
+  ] ) . # 
+
+<urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9> a fhir:Observation ;
+  fhir:id [ fhir:v "85230b86-9b90-4faf-a750-d5fa82520ce9"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_85230b86-9b90-4faf-a750-d5fa82520ce9\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 85230b86-9b90-4faf-a750-d5fa82520ce9</b></p><a name=\"85230b86-9b90-4faf-a750-d5fa82520ce9\"> </a><a name=\"hc85230b86-9b90-4faf-a750-d5fa82520ce9\"> </a><a name=\"85230b86-9b90-4faf-a750-d5fa82520ce9-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18900-1}\">Cephalothin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=2 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:18900-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18900-1" ] ;
+       fhir:display [ fhir:v "Cephalothin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S" ] ;
+       fhir:display [ fhir:v "Susceptible" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829> a fhir:Observation ;
+  fhir:id [ fhir:v "1fb64f47-4272-43ae-a119-c3b4c3367829"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_1fb64f47-4272-43ae-a119-c3b4c3367829\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 1fb64f47-4272-43ae-a119-c3b4c3367829</b></p><a name=\"1fb64f47-4272-43ae-a119-c3b4c3367829\"> </a><a name=\"hc1fb64f47-4272-43ae-a119-c3b4c3367829\"> </a><a name=\"1fb64f47-4272-43ae-a119-c3b4c3367829-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 20629-2}\">levoFLOXacin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;4 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}\">Resistant</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:20629-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "20629-2" ] ;
+       fhir:display [ fhir:v "levoFLOXacin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "R" ] ;
+       fhir:display [ fhir:v "Resistant" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:af249f79-f487-4533-9935-d19ab7043724> a fhir:Observation ;
+  fhir:id [ fhir:v "af249f79-f487-4533-9935-d19ab7043724"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_af249f79-f487-4533-9935-d19ab7043724\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation af249f79-f487-4533-9935-d19ab7043724</b></p><a name=\"af249f79-f487-4533-9935-d19ab7043724\"> </a><a name=\"hcaf249f79-f487-4533-9935-d19ab7043724\"> </a><a name=\"af249f79-f487-4533-9935-d19ab7043724-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18961-3}\">Oxacillin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: 0.5 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:18961-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18961-3" ] ;
+       fhir:display [ fhir:v "Oxacillin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "0.5"^^xsd:decimal ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S" ] ;
+       fhir:display [ fhir:v "Susceptible" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8> a fhir:Observation ;
+  fhir:id [ fhir:v "a4469ca9-d0be-4c58-853a-44cea24484b8"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_a4469ca9-d0be-4c58-853a-44cea24484b8\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation a4469ca9-d0be-4c58-853a-44cea24484b8</b></p><a name=\"a4469ca9-d0be-4c58-853a-44cea24484b8\"> </a><a name=\"hca4469ca9-d0be-4c58-853a-44cea24484b8\"> </a><a name=\"a4469ca9-d0be-4c58-853a-44cea24484b8-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 19000-9}\">Vancomycin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:19000-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "19000-9" ] ;
+       fhir:display [ fhir:v "Vancomycin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S" ] ;
+       fhir:display [ fhir:v "Susceptible" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49> a fhir:Observation ;
+  fhir:id [ fhir:v "d49839fe-515c-44b6-8d19-3cc5d48feb49"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_d49839fe-515c-44b6-8d19-3cc5d48feb49\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation d49839fe-515c-44b6-8d19-3cc5d48feb49</b></p><a name=\"d49839fe-515c-44b6-8d19-3cc5d48feb49\"> </a><a name=\"hcd49839fe-515c-44b6-8d19-3cc5d48feb49\"> </a><a name=\"d49839fe-515c-44b6-8d19-3cc5d48feb49-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 634-6}\">Bacteria identified in Specimen by Aerobe culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 40886007}\">Klebsiella oxytoca</span></p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1ada4aeb-37cd-4d76-9815-46f627f5036c\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-d1636a51-d6c7-48de-9de6-29d741c96937\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:634-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "634-6" ] ;
+       fhir:display [ fhir:v "Bacteria identified in Specimen by Aerobe culture" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:40886007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "40886007" ] ;
+       fhir:display [ fhir:v "Klebsiella oxytoca" ]
+     ] )
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937" ]
+  ] ) . # 
+
+<urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c> a fhir:Observation ;
+  fhir:id [ fhir:v "1ada4aeb-37cd-4d76-9815-46f627f5036c"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_1ada4aeb-37cd-4d76-9815-46f627f5036c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 1ada4aeb-37cd-4d76-9815-46f627f5036c</b></p><a name=\"1ada4aeb-37cd-4d76-9815-46f627f5036c\"> </a><a name=\"hc1ada4aeb-37cd-4d76-9815-46f627f5036c\"> </a><a name=\"1ada4aeb-37cd-4d76-9815-46f627f5036c-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Microorganism Growth</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 263866000}\">Scanty growth</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Microorganism Growth" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:263866000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "263866000" ] ;
+       fhir:display [ fhir:v "Scanty growth" ]
+     ] )
+  ] . # 
+
+<urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937> a fhir:Observation ;
+  fhir:id [ fhir:v "d1636a51-d6c7-48de-9de6-29d741c96937"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_d1636a51-d6c7-48de-9de6-29d741c96937\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation d1636a51-d6c7-48de-9de6-29d741c96937</b></p><a name=\"d1636a51-d6c7-48de-9de6-29d741c96937\"> </a><a name=\"hcd1636a51-d6c7-48de-9de6-29d741c96937\"> </a><a name=\"d1636a51-d6c7-48de-9de6-29d741c96937-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29576-6}\">Bacterial susceptibility panel</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-3923e71d-31b0-49d3-94f0-2c311600e54d\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-66e76861-53ed-4560-aa54-2efa5b4aff64\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5601b27d-69a7-44eb-be1a-af632aa54109\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:29576-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "29576-6" ] ;
+       fhir:display [ fhir:v "Bacterial susceptibility panel" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109" ]
+  ] ) . # 
+
+<urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd> a fhir:Observation ;
+  fhir:id [ fhir:v "7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 7b52c241-226a-43d3-ba6a-f2ca18d5b0dd</b></p><a name=\"7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\"> </a><a name=\"hc7b52c241-226a-43d3-ba6a-f2ca18d5b0dd\"> </a><a name=\"7b52c241-226a-43d3-ba6a-f2ca18d5b0dd-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18864-9}\">Ampicillin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;16 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}\">Resistant</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:18864-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18864-9" ] ;
+       fhir:display [ fhir:v "Ampicillin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "16"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "R" ] ;
+       fhir:display [ fhir:v "Resistant" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d> a fhir:Observation ;
+  fhir:id [ fhir:v "3923e71d-31b0-49d3-94f0-2c311600e54d"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_3923e71d-31b0-49d3-94f0-2c311600e54d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 3923e71d-31b0-49d3-94f0-2c311600e54d</b></p><a name=\"3923e71d-31b0-49d3-94f0-2c311600e54d\"> </a><a name=\"hc3923e71d-31b0-49d3-94f0-2c311600e54d\"> </a><a name=\"3923e71d-31b0-49d3-94f0-2c311600e54d-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18906-8}\">Ciprofloxacin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=0.5 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:18906-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18906-8" ] ;
+       fhir:display [ fhir:v "Ciprofloxacin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "0.5"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S" ] ;
+       fhir:display [ fhir:v "Susceptible" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64> a fhir:Observation ;
+  fhir:id [ fhir:v "66e76861-53ed-4560-aa54-2efa5b4aff64"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_66e76861-53ed-4560-aa54-2efa5b4aff64\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 66e76861-53ed-4560-aa54-2efa5b4aff64</b></p><a name=\"66e76861-53ed-4560-aa54-2efa5b4aff64\"> </a><a name=\"hc66e76861-53ed-4560-aa54-2efa5b4aff64\"> </a><a name=\"66e76861-53ed-4560-aa54-2efa5b4aff64-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18928-2}\">Gentamicin [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;8 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}\">Resistant</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:18928-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18928-2" ] ;
+       fhir:display [ fhir:v "Gentamicin [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "8"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v ">" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "R" ] ;
+       fhir:display [ fhir:v "Resistant" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109> a fhir:Observation ;
+  fhir:id [ fhir:v "5601b27d-69a7-44eb-be1a-af632aa54109"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_5601b27d-69a7-44eb-be1a-af632aa54109\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 5601b27d-69a7-44eb-be1a-af632aa54109</b></p><a name=\"5601b27d-69a7-44eb-be1a-af632aa54109\"> </a><a name=\"hc5601b27d-69a7-44eb-be1a-af632aa54109\"> </a><a name=\"5601b27d-69a7-44eb-be1a-af632aa54109-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 18932-4}\">Imipenem [Susceptibility]</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}\">Susceptible</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:18932-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18932-4" ] ;
+       fhir:display [ fhir:v "Imipenem [Susceptibility]" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:comparator [ fhir:v "<=" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "S" ] ;
+       fhir:display [ fhir:v "Susceptible" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e> a fhir:Observation ;
+  fhir:id [ fhir:v "5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e</b></p><a name=\"5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e\"> </a><a name=\"hc5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e\"> </a><a name=\"5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 635-3}\">Anaerobic Culture</span></p><p><b>subject</b>: <a href=\"Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 264868006}\">No growth</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:635-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "635-3" ] ;
+       fhir:display [ fhir:v "Bacteria identified in Specimen by Anaerobe culture" ]
+     ] ) ;
+     fhir:text [ fhir:v "Anaerobic Culture" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:264868006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "264868006" ] ;
+       fhir:display [ fhir:v "No growth" ]
+     ] )
+  ] . # 
+
+<urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349> a fhir:Organization ;
+  fhir:id [ fhir:v "1e139f41-4d0f-43dd-ad5a-98003c520349"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_1e139f41-4d0f-43dd-ad5a-98003c520349\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 1e139f41-4d0f-43dd-ad5a-98003c520349</b></p><a name=\"1e139f41-4d0f-43dd-ad5a-98003c520349\"> </a><a name=\"hc1e139f41-4d0f-43dd-ad5a-98003c520349\"> </a><a name=\"1e139f41-4d0f-43dd-ad5a-98003c520349-en-US\"> </a><p><b>identifier</b>: <code>http://example.org/czech-orgs</code>/24341</p><p><b>name</b>: Ministry of Health of the Czech Republic</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.org/czech-orgs"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "24341" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Ministry of Health of the Czech Republic"] . # 
+
+# -------------------------------------------------------------------------------------
+

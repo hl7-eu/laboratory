@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-107",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b909da1-c5bf-4b1a-aa39-38e4f1561517-107",
+  "name" : "UnionLoincVsAndLoincVs",
+  "title" : "Union of Laboratory Code: LOINC And Laboratory Code: LOINC",
+  "status" : "active",
+  "date" : "2024-11-18T16:53:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}

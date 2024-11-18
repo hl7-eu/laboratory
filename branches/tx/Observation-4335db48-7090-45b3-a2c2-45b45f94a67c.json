@@ -1,0 +1,60 @@
+{
+  "resourceType" : "Observation",
+  "id" : "4335db48-7090-45b3-a2c2-45b45f94a67c",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation 4335db48-7090-45b3-a2c2-45b45f94a67c</b></p><a name=\"4335db48-7090-45b3-a2c2-45b45f94a67c\"> </a><a name=\"hc4335db48-7090-45b3-a2c2-45b45f94a67c\"> </a><a name=\"4335db48-7090-45b3-a2c2-45b45f94a67c-en-US\"> </a><p><b>Certified Reference Material: CodeableConcept</b>: <span title=\"Codes:{http://nibsc.org 66/304}\">Insulin, human, for immunoassay, Lyophilized, 3 IU / ampoule.</span></p><p><b>Certified Reference Material: Identifier</b>: <code>http://nibsc.org</code>/66/304</p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 20448-7}, {http://npu-terminology.org NPU02496}\">Insulin [Units/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><p><b>effective</b>: 2023-03-27 11:24:26+0100</p><p><b>performer</b>: Jan Laborant</p><p><b>value</b>: 50 mIU/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codem[iU]/L = 'm[iU]/L')</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://nibsc.org",
+        "code" : "66/304",
+        "display" : "Insulin, human, for immunoassay, Lyophilized, 3 IU / ampoule."
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer",
+    "valueIdentifier" : {
+      "system" : "http://nibsc.org",
+      "value" : "66/304"
+    }
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "20448-7",
+      "display" : "Insulin [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://npu-terminology.org",
+      "code" : "NPU02496",
+      "display" : "P—Insulin; arb.subst.c.(IRP 66/304; proc.) = ? × 10-3 IU/L"
+    }]
+  },
+  "subject" : {
+    "reference" : "urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"
+  },
+  "effectiveDateTime" : "2023-03-27T11:24:26+01:00",
+  "performer" : [{
+    "display" : "Jan Laborant"
+  }],
+  "valueQuantity" : {
+    "value" : 50,
+    "unit" : "mIU/L",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "m[iU]/L"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "srv-request-example",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest srv-request-example</b></p><a name=\"srv-request-example\"> </a><a name=\"hcsrv-request-example\"> </a><a name=\"srv-request-example-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.9</code>/[NRE]</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>priority</b>: ASAP</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14957-5}\">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.9",
+    "value" : "[NRE]",
+    "assigner" : {
+      "display" : "Ministero delle Finanze"
+    }
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "108252007",
+      "display" : "Laboratory procedure"
+    }]
+  }],
+  "priority" : "asap",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "14957-5",
+      "display" : "Microalbumin [Mass/volume] in Urine"
+    }],
+    "text" : "Microalbumin Massa/Volume in Urine"
+  },
+  "subject" : {
+    "reference" : "Patient/pat-lab-example"
+  }
+}

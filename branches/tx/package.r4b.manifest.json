@@ -1,0 +1,6 @@
+{
+  "version" : "0.2.0-ci",
+  "date" : "20241118165115",
+  "notForPublication" : true,
+  "name" : "hl7.fhir.eu.laboratory.r4b"
+}

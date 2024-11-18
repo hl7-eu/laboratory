@@ -1,0 +1,134 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ConceptMap/recipient2FHIR-eu-lab> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "recipient2FHIR-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap recipient2FHIR-eu-lab</b></p><a name=\"recipient2FHIR-eu-lab\"> </a><a name=\"hcrecipient2FHIR-eu-lab\"> </a><a name=\"recipient2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Recipient.html\">A.1.4 - Information recipient</a> to <a href=\"http://hl7.eu/fhir/extensions/0.1.0/StructureDefinition-information-recipient.html\">Information recipient</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Recipient.html\">A.1.4 - Information recipient</a> to <a href=\"http://hl7.eu/fhir/extensions/0.1.0/StructureDefinition-information-recipient.html\">Information recipient</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Recipient.identifier (A.1.4.1 Recipient identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.valueReference.identifier</td><td/></tr><tr><td>Recipient.name (A.1.4.2 Recipient name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.valueReference.name</td><td/></tr><tr><td>Recipient.organization (A.1.4.3 Recipient organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.ValueReference</td><td>ValueReference.resolve().ofType(Organization). If the recipient is an organization.</td></tr><tr><td>Recipient.organization (A.1.4.3 Recipient organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.ValueReference.organization</td><td>ValueReference.resolve().ofType(PractitionerRole). If it is the organization the professional belong to</td></tr><tr><td>Recipient.address (A.1.4.4 Address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.ValueReference.address</td><td>If ValueReference.resolve().ofType(Practitioner) OR ValueReference.resolve().ofType(Patient)</td></tr><tr><td>Recipient.country (A.1.4.5 Country)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.ValueReference.address.country</td><td>If ValueReference.resolve().ofType(Practitioner) OR ValueReference.resolve().ofType(Patient)</td></tr><tr><td>Recipient.telecom (A.1.4.6 Telecom)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>extension:information-recipient.ValueReference.telecom</td><td>If ValueReference.resolve().ofType(Practitioner) OR ValueReference.resolve().ofType(Patient)</td></tr><tr><td>Recipient.address (A.1.4.4 Address)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>extension:information-recipient.ValueReference.practitioner.address</td><td>If ValueReference.resolve().ofType(PractitionerRole)</td></tr><tr><td>Recipient.country (A.1.4.5 Country)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>extension:information-recipient.ValueReference.practitioner.address.country</td><td>If ValueReference.resolve().ofType(PractitionerRole)</td></tr><tr><td>Recipient.telecom (A.1.4.6 Telecom)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>extension:information-recipient.ValueReference.practitioner.telecom</td><td>If ValueReference.resolve().ofType(PractitionerRole)</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "informative" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ConceptMap/recipient2FHIR-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "Recipient2FHIR"] ; # 
+  fhir:title [ fhir:v "eHN Recipient to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN Recipient Model to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how the Laboratory Report Recipient data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://hl7.eu/fhir/StructureDefinition/information-recipient"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/StructureDefinition/information-recipient"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Recipient.identifier" ] ;
+       fhir:display [ fhir:v "A.1.4.1 Recipient identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.valueReference.identifier" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.name" ] ;
+       fhir:display [ fhir:v "A.1.4.2 Recipient name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.valueReference.name" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.organization" ] ;
+       fhir:display [ fhir:v "A.1.4.3 Recipient organization" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "ValueReference.resolve().ofType(Organization). If the recipient is an organization." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.organization" ] ;
+       fhir:display [ fhir:v "A.1.4.3 Recipient organization" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.organization" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "ValueReference.resolve().ofType(PractitionerRole). If it is the organization the professional belong to" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.address" ] ;
+       fhir:display [ fhir:v "A.1.4.4 Address" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.address" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If ValueReference.resolve().ofType(Practitioner) OR ValueReference.resolve().ofType(Patient)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.country" ] ;
+       fhir:display [ fhir:v "A.1.4.5 Country" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.address.country" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If ValueReference.resolve().ofType(Practitioner) OR ValueReference.resolve().ofType(Patient)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.telecom" ] ;
+       fhir:display [ fhir:v "A.1.4.6 Telecom" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.telecom" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "If ValueReference.resolve().ofType(Practitioner) OR ValueReference.resolve().ofType(Patient)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.address" ] ;
+       fhir:display [ fhir:v "A.1.4.4 Address" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.practitioner.address" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If ValueReference.resolve().ofType(PractitionerRole)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.country" ] ;
+       fhir:display [ fhir:v "A.1.4.5 Country" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.practitioner.address.country" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If ValueReference.resolve().ofType(PractitionerRole)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Recipient.telecom" ] ;
+       fhir:display [ fhir:v "A.1.4.6 Telecom" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "extension:information-recipient.ValueReference.practitioner.telecom" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "If ValueReference.resolve().ofType(PractitionerRole)" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

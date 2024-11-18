@@ -1,0 +1,577 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ConceptMap/result2FHIR-eu-lab> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "result2FHIR-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap result2FHIR-eu-lab</b></p><a name=\"result2FHIR-eu-lab\"> </a><a name=\"hcresult2FHIR-eu-lab\"> </a><a name=\"result2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Result.html\">A.5 - Results data elements</a> to <a href=\"StructureDefinition-Bundle-eu-lab.html\">Bundle: Laboratory Report</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Result.html\">A.5 - Results data elements</a> to <a href=\"StructureDefinition-Observation-resultslab-eu-lab.html\">Observation Results: laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.narrative (A.5.1 Laboratory report narrative)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Result.narrative.report (A.5.1.1 Narrative report)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Result.narrative.notes (A.5.1.2 Comments, interpretation and recommendations)</td><td colspan=\"3\" style=\"background-color: #efefef\">(not mapped)</td></tr><tr><td>Result.observation (A.5.2 Observation details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation</td><td/></tr><tr><td>Result.observation.dateTime (A.5.2.1 Observation date)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.effective[x]</td><td>intended as the clinical relevant time (i.e. when the specimen was collected)</td></tr><tr><td>Result.observation.dateTime (A.5.2.1 Observation date)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.issued</td><td>as the date the result is made available.</td></tr><tr><td>Result.observation.code (A.5.2.3 Observation code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.code</td><td>depends on the type of test</td></tr><tr><td>Result.observation.code (A.5.2.3 Observation code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.hasMember.code</td><td>depends on the type of test</td></tr><tr><td>Result.observation.code (A.5.2.3 Observation code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.component.code</td><td>depends on the type of test</td></tr><tr><td>Result.observation.code.name (A.5.2.3.1 Observation name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code.coding.display</td><td>The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.\nThis element typically  represents the 'full specified  name' designation, compared to the 'short name' of the 'A.5.2.3.3 Observation display name' element.\nIt is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept.</td></tr><tr><td>Result.observation.code.originalName (A.5.2.3.2 Observation original name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code.text</td><td>The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.</td></tr><tr><td>Result.observation.code.displayName (A.5.2.3.3 Observation display name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.code.coding.display</td><td>The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.\nThis element typically  represents the' short name' designation, compared to the 'full specified name' of the 'A.5.2.3.1 Observation name' element.\nIt is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept.</td></tr><tr><td>Result.observation.method (A.5.2.4 Observation method)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.method</td><td/></tr><tr><td>Result.observation.device (A.5.2.5 Observation device)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.device</td><td>When it refers to the measuring device, including kits, and device of type Device</td></tr><tr><td>Result.observation.device (A.5.2.5 Observation device)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.device.device</td><td>When it refers to the measuring device and device of type DeviceMeasure</td></tr><tr><td>Result.observation.device (A.5.2.5 Observation device)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.device</td><td>With device of type DeviceMeasure.\nThis resource can be used to capture some information about the setting (including calibration)</td></tr><tr><td>Result.observation.order (A.5.2.8 Order)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.basedOn</td><td/></tr><tr><td>Result.observation.performer (A.5.2.9 Performer)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.performer</td><td/></tr><tr><td>Result.observation.reporter (A.5.2.10 Reporter)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.performer</td><td>For interpreter: performer.extension:performerFunction = AUT (author)\nIf the person responsible for validation:  performer.extension:performerFunction = AUTHEN or LA</td></tr><tr><td>Result.observation.result (A.5.2.11 Observation result)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.value[x]</td><td>depends on the type of test</td></tr><tr><td>Result.observation.result (A.5.2.11 Observation result)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.component.value[x]</td><td>depends on the type of test</td></tr><tr><td>Result.observation.interpretation (A.5.2.12 Observation interpretation)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.interpretation</td><td>depends on the type of test</td></tr><tr><td>Result.observation.interpretation (A.5.2.12 Observation interpretation)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Observation.component.interpretation</td><td>depends on the type of test</td></tr><tr><td>Result.observation.description (A.5.2.13 Result description)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.text</td><td/></tr><tr><td>Result.observation.accreditationStatus (A.5.2.14 Accreditation status)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.performer.qualification</td><td>performer ofType PractitionerRole</td></tr><tr><td>Result.observation.accreditationStatus (A.5.2.14 Accreditation status)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Observation.performer.organization.qualification</td><td>performer ofType Organization</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-Result.html\">A.5 - Results data elements</a> to <a href=\"StructureDefinition-DiagnosticReport-eu-lab.html\">DiagnosticReport: Laboratory Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.narrative (A.5.1 Laboratory report narrative)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport</td><td/></tr><tr><td>Result.narrative.report (A.5.1.1 Narrative report)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.text</td><td/></tr><tr><td>Result.narrative.notes (A.5.1.2 Comments, interpretation and recommendations)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.conclusion</td><td>if related to the overall report conclusions</td></tr><tr><td>Result.observation (A.5.2 Observation details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.dateTime (A.5.2.1 Observation date)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code (A.5.2.3 Observation code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code.name (A.5.2.3.1 Observation name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code.originalName (A.5.2.3.2 Observation original name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code.displayName (A.5.2.3.3 Observation display name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.method (A.5.2.4 Observation method)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.device (A.5.2.5 Observation device)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.order (A.5.2.8 Order)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.performer (A.5.2.9 Performer)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.reporter (A.5.2.10 Reporter)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.result (A.5.2.11 Observation result)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.interpretation (A.5.2.12 Observation interpretation)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.description (A.5.2.13 Result description)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.accreditationStatus (A.5.2.14 Accreditation status)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>DiagnosticReport.result</td><td>see details in the Observation group</td></tr></table><hr/><p><b>Group 3 </b>Mapping from <a href=\"StructureDefinition-Result.html\">A.5 - Results data elements</a> to <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Result.narrative (A.5.1 Laboratory report narrative)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition</td><td/></tr><tr><td>Result.narrative.report (A.5.1.1 Narrative report)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.text</td><td/></tr><tr><td>Result.narrative.report (A.5.1.1 Narrative report)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.text</td><td>if single section</td></tr><tr><td>Result.narrative.report (A.5.1.1 Narrative report)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-subsections.section.text</td><td>if multiple sections</td></tr><tr><td>Result.narrative.notes (A.5.1.2 Comments, interpretation and recommendations)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.text</td><td>if single section</td></tr><tr><td>Result.narrative.notes (A.5.1.2 Comments, interpretation and recommendations)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-subsections.section.text</td><td>if multiple sections</td></tr><tr><td>Result.observation (A.5.2 Observation details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>if single section</td></tr><tr><td>Result.observation (A.5.2 Observation details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-subsections.section.entry</td><td>if multiple sections</td></tr><tr><td>Result.observation.dateTime (A.5.2.1 Observation date)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code (A.5.2.3 Observation code)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code.name (A.5.2.3.1 Observation name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code.originalName (A.5.2.3.2 Observation original name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.code.displayName (A.5.2.3.3 Observation display name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.method (A.5.2.4 Observation method)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.device (A.5.2.5 Observation device)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.order (A.5.2.8 Order)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.performer (A.5.2.9 Performer)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.reporter (A.5.2.10 Reporter)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.result (A.5.2.11 Observation result)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.interpretation (A.5.2.12 Observation interpretation)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.description (A.5.2.13 Result description)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr><tr><td>Result.observation.accreditationStatus (A.5.2.14 Accreditation status)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Composition.section:lab-no-subsections.entry</td><td>see details in the Observation group</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "informative" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ConceptMap/result2FHIR-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LabRptResult2FHIR"] ; # 
+  fhir:title [ fhir:v "eHN Result to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN Result Model to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how the Result data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Result.narrative" ] ;
+       fhir:display [ fhir:v "A.5.1 Laboratory report narrative" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.report" ] ;
+       fhir:display [ fhir:v "A.5.1.1 Narrative report" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.notes" ] ;
+       fhir:display [ fhir:v "A.5.1.2 Comments, interpretation and recommendations" ] ;
+       fhir:target ( [
+         fhir:equivalence [ fhir:v "unmatched" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation" ] ;
+       fhir:display [ fhir:v "A.5.2 Observation details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.dateTime" ] ;
+       fhir:display [ fhir:v "A.5.2.1 Observation date" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.effective[x]" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "intended as the clinical relevant time (i.e. when the specimen was collected)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.dateTime" ] ;
+       fhir:display [ fhir:v "A.5.2.1 Observation date" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.issued" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "as the date the result is made available." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code" ] ;
+       fhir:display [ fhir:v "A.5.2.3 Observation code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.code" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code" ] ;
+       fhir:display [ fhir:v "A.5.2.3 Observation code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.hasMember.code" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code" ] ;
+       fhir:display [ fhir:v "A.5.2.3 Observation code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.component.code" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.name" ] ;
+       fhir:display [ fhir:v "A.5.2.3.1 Observation name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.code.coding.display" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.\nThis element typically  represents the 'full specified  name' designation, compared to the 'short name' of the 'A.5.2.3.3 Observation display name' element.\nIt is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.originalName" ] ;
+       fhir:display [ fhir:v "A.5.2.3.2 Observation original name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.code.text" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.displayName" ] ;
+       fhir:display [ fhir:v "A.5.2.3.3 Observation display name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.code.coding.display" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "The mapping refers to the case 'code' mapped to Observation.code. A similar mapping applies to the other cases.\nThis element typically  represents the' short name' designation, compared to the 'full specified name' of the 'A.5.2.3.1 Observation name' element.\nIt is not expected that both designations are recorded in the report; consumers can use in fact terminology services and/or lookup tables to allow users to have different displays for the same coded concept." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.method" ] ;
+       fhir:display [ fhir:v "A.5.2.4 Observation method" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.method" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.device" ] ;
+       fhir:display [ fhir:v "A.5.2.5 Observation device" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.device" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "When it refers to the measuring device, including kits, and device of type Device" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.device" ] ;
+       fhir:display [ fhir:v "A.5.2.5 Observation device" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.device.device" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "When it refers to the measuring device and device of type DeviceMeasure" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.device" ] ;
+       fhir:display [ fhir:v "A.5.2.5 Observation device" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.device" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "With device of type DeviceMeasure.\nThis resource can be used to capture some information about the setting (including calibration)" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.order" ] ;
+       fhir:display [ fhir:v "A.5.2.8 Order" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.basedOn" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.performer" ] ;
+       fhir:display [ fhir:v "A.5.2.9 Performer" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.performer" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.reporter" ] ;
+       fhir:display [ fhir:v "A.5.2.10 Reporter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.performer" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "For interpreter: performer.extension:performerFunction = AUT (author)\nIf the person responsible for validation:  performer.extension:performerFunction = AUTHEN or LA" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.result" ] ;
+       fhir:display [ fhir:v "A.5.2.11 Observation result" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.value[x]" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.result" ] ;
+       fhir:display [ fhir:v "A.5.2.11 Observation result" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.component.value[x]" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.interpretation" ] ;
+       fhir:display [ fhir:v "A.5.2.12 Observation interpretation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.interpretation" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.interpretation" ] ;
+       fhir:display [ fhir:v "A.5.2.12 Observation interpretation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.component.interpretation" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "depends on the type of test" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.description" ] ;
+       fhir:display [ fhir:v "A.5.2.13 Result description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.accreditationStatus" ] ;
+       fhir:display [ fhir:v "A.5.2.14 Accreditation status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.performer.qualification" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "performer ofType PractitionerRole" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.accreditationStatus" ] ;
+       fhir:display [ fhir:v "A.5.2.14 Accreditation status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Observation.performer.organization.qualification" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "performer ofType Organization" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Result.narrative" ] ;
+       fhir:display [ fhir:v "A.5.1 Laboratory report narrative" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.report" ] ;
+       fhir:display [ fhir:v "A.5.1.1 Narrative report" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.notes" ] ;
+       fhir:display [ fhir:v "A.5.1.2 Comments, interpretation and recommendations" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.conclusion" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if related to the overall report conclusions" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation" ] ;
+       fhir:display [ fhir:v "A.5.2 Observation details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.dateTime" ] ;
+       fhir:display [ fhir:v "A.5.2.1 Observation date" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code" ] ;
+       fhir:display [ fhir:v "A.5.2.3 Observation code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.name" ] ;
+       fhir:display [ fhir:v "A.5.2.3.1 Observation name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.originalName" ] ;
+       fhir:display [ fhir:v "A.5.2.3.2 Observation original name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.displayName" ] ;
+       fhir:display [ fhir:v "A.5.2.3.3 Observation display name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.method" ] ;
+       fhir:display [ fhir:v "A.5.2.4 Observation method" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.device" ] ;
+       fhir:display [ fhir:v "A.5.2.5 Observation device" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.order" ] ;
+       fhir:display [ fhir:v "A.5.2.8 Order" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.performer" ] ;
+       fhir:display [ fhir:v "A.5.2.9 Performer" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.reporter" ] ;
+       fhir:display [ fhir:v "A.5.2.10 Reporter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.result" ] ;
+       fhir:display [ fhir:v "A.5.2.11 Observation result" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.interpretation" ] ;
+       fhir:display [ fhir:v "A.5.2.12 Observation interpretation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.description" ] ;
+       fhir:display [ fhir:v "A.5.2.13 Result description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.accreditationStatus" ] ;
+       fhir:display [ fhir:v "A.5.2.14 Accreditation status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "DiagnosticReport.result" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] )
+  ] [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Result"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Result.narrative" ] ;
+       fhir:display [ fhir:v "A.5.1 Laboratory report narrative" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.report" ] ;
+       fhir:display [ fhir:v "A.5.1.1 Narrative report" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.report" ] ;
+       fhir:display [ fhir:v "A.5.1.1 Narrative report" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if single section" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.report" ] ;
+       fhir:display [ fhir:v "A.5.1.1 Narrative report" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-subsections.section.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if multiple sections" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.notes" ] ;
+       fhir:display [ fhir:v "A.5.1.2 Comments, interpretation and recommendations" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if single section" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.narrative.notes" ] ;
+       fhir:display [ fhir:v "A.5.1.2 Comments, interpretation and recommendations" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-subsections.section.text" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if multiple sections" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation" ] ;
+       fhir:display [ fhir:v "A.5.2 Observation details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if single section" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation" ] ;
+       fhir:display [ fhir:v "A.5.2 Observation details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-subsections.section.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if multiple sections" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.dateTime" ] ;
+       fhir:display [ fhir:v "A.5.2.1 Observation date" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code" ] ;
+       fhir:display [ fhir:v "A.5.2.3 Observation code" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.name" ] ;
+       fhir:display [ fhir:v "A.5.2.3.1 Observation name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.originalName" ] ;
+       fhir:display [ fhir:v "A.5.2.3.2 Observation original name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.code.displayName" ] ;
+       fhir:display [ fhir:v "A.5.2.3.3 Observation display name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.method" ] ;
+       fhir:display [ fhir:v "A.5.2.4 Observation method" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.device" ] ;
+       fhir:display [ fhir:v "A.5.2.5 Observation device" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.order" ] ;
+       fhir:display [ fhir:v "A.5.2.8 Order" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.performer" ] ;
+       fhir:display [ fhir:v "A.5.2.9 Performer" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.reporter" ] ;
+       fhir:display [ fhir:v "A.5.2.10 Reporter" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.result" ] ;
+       fhir:display [ fhir:v "A.5.2.11 Observation result" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.interpretation" ] ;
+       fhir:display [ fhir:v "A.5.2.12 Observation interpretation" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.description" ] ;
+       fhir:display [ fhir:v "A.5.2.13 Result description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Result.observation.accreditationStatus" ] ;
+       fhir:display [ fhir:v "A.5.2.14 Accreditation status" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "Composition.section:lab-no-subsections.entry" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "see details in the Observation group" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

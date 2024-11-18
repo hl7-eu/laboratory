@@ -1,0 +1,1007 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Regione Lazio" ]
+     ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2022-03-30T11:24:26+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c> )
+  ] ) . # 
+
+<urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740> a fhir:Composition ;
+  fhir:id [ fhir:v "26032a57-083a-4ddf-b019-e566ae02f740"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "it-IT"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it-IT\" lang=\"it-IT\"><a name=\"Composition_26032a57-083a-4ddf-b019-e566ae02f740\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 26032a57-083a-4ddf-b019-e566ae02f740</b></p><a name=\"26032a57-083a-4ddf-b019-e566ae02f740\"> </a><a name=\"hc26032a57-083a-4ddf-b019-e566ae02f740\"> </a><a name=\"26032a57-083a-4ddf-b019-e566ae02f740-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: it-IT</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Referto di laboratorio</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 18719-5}\">Chemistry studies (set)</span></p><p><b>encounter</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>date</b>: 2022-03-30 11:24:26+0100</p><p><b>author</b>: </p><ul><li><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-88868d3e-7ab1-4ee5-983e-b979c4971f5c\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li><li><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-84b2e517-abc2-4268-975d-b12fa8174d30\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li></ul><p><b>title</b>: REFERTO DI LABORATORIO</p><p><b>confidentiality</b>: normal</p><blockquote><p><b>attester</b></p><p><b>mode</b>: Professional</p><p><b>party</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0bbabe57-7c43-4211-9e19-81fcec65686d\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Legal</p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Professional</p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-13792187-4721-4309-a8a4-4a57ffb4e6a1\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><p><b>custodian</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-03-24 11:24:26+0100 --&gt; (ongoing)</td><td><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1b4b120e-0371-4878-b4c9-b69434e84c72\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Regione Lazio" ]
+     ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] ) ;
+     fhir:text [ fhir:v "Referto di laboratorio" ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:18719-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18719-5" ] ;
+       fhir:display [ fhir:v "Chemistry studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a" ]
+  ] ; # 
+  fhir:date [ fhir:v "2022-03-30T11:24:26+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:reference [ fhir:v "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "REFERTO DI LABORATORIO"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "professional" ] ;
+     fhir:party [
+       fhir:reference [ fhir:v "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d" ]
+     ]
+  ] [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2022-03-25T11:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:reference [ fhir:v "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce" ]
+     ]
+  ] [
+     fhir:mode [ fhir:v "professional" ] ;
+     fhir:time [ fhir:v "2022-03-25T11:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:reference [ fhir:v "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d" ]
+  ] ; # 
+  fhir:event ( [
+     fhir:period [
+       fhir:start [ fhir:v "2022-03-24T11:24:26+01:00"^^xsd:dateTime ]
+     ] ;
+     fhir:detail ( [
+       fhir:reference [ fhir:v "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72" ]
+     ] )
+  ] ) ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Esami delle Urine" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:18729-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "18729-4" ] ;
+         fhir:display [ fhir:v "Urinalysis studies (set)" ]
+       ] ) ;
+       fhir:text [ fhir:v "ESAMI DELLE URINE" ]
+     ] ;
+     fhir:section ( [
+       fhir:title [ fhir:v "Albumina nelle Urine" ] ;
+       fhir:code [
+         fhir:coding ( [
+           a loinc:14957-5 ;
+           fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "14957-5" ] ;
+           fhir:display [ fhir:v "Microalbumin [Mass/volume] in Urine" ]
+         ] [
+           fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.2.30.6.11"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "0090334.02" ] ;
+           fhir:display [ fhir:v "Microalbumina" ]
+         ] ) ;
+         fhir:text [ fhir:v "Microalbumin Massa/Volume in Urine" ]
+       ] ;
+       fhir:text [
+         fhir:status [ fhir:v "generated" ] ;
+         fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>16</td><td/><td>mg/L</td><td>0 - 20</td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
+       ] ;
+       fhir:entry ( [
+         fhir:reference [ fhir:v "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee" ]
+       ] )
+     ] )
+  ] ) . # 
+
+<urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04> a fhir:Patient ;
+  fhir:id [ fhir:v "dc2b606f-3cf7-4711-a2ff-52da04b89e04"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_dc2b606f-3cf7-4711-a2ff-52da04b89e04\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient dc2b606f-3cf7-4711-a2ff-52da04b89e04</b></p><a name=\"dc2b606f-3cf7-4711-a2ff-52da04b89e04\"> </a><a name=\"hcdc2b606f-3cf7-4711-a2ff-52da04b89e04\"> </a><a name=\"dc2b606f-3cf7-4711-a2ff-52da04b89e04-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Giuseppe Verdi  Male, DoB: 1993-06-19 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#TKLEYP93Y27Z315J)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:giuseppe.verdi@gmail.com\">giuseppe.verdi@gmail.com</a></li><li>ph: 33224456(Mobile)</li><li>Via Aurora 12 Roma 120 00187 100 (home)</li><li>Via Canevari 12B Roma 120 00138 100 (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\">Via voltri 3 Roma 120 100 </td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Address ;
+       fhir:line ( [ fhir:v "Via voltri 3" ] ) ;
+       fhir:city [ fhir:v "Roma" ] ;
+       fhir:district [ fhir:v "RM" ] ;
+       fhir:state [ fhir:v "120" ] ;
+       fhir:country [ fhir:v "100" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "TKLEYP93Y27Z315J" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Verdi" ] ;
+     fhir:given ( [ fhir:v "Giuseppe" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "giuseppe.verdi@gmail.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "33224456" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1993-06-19"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "Via Aurora 12" ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00187" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "Via Canevari 12B" ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00138" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "b8c9663d-2c2b-4a5a-99ea-17eae127fc60"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_b8c9663d-2c2b-4a5a-99ea-17eae127fc60\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport b8c9663d-2c2b-4a5a-99ea-17eae127fc60</b></p><a name=\"b8c9663d-2c2b-4a5a-99ea-17eae127fc60\"> </a><a name=\"hcb8c9663d-2c2b-4a5a-99ea-17eae127fc60\"> </a><a name=\"b8c9663d-2c2b-4a5a-99ea-17eae127fc60-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Referto di laboratorio</span> (<span title=\"Codes:{http://loinc.org 18719-5}\">Chemistry studies (set)</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>Identifier</td><td> <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:reference [ fhir:v "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Regione Lazio" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "registered"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:18719-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "18719-5" ] ;
+       fhir:display [ fhir:v "Chemistry studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] ) ;
+     fhir:text [ fhir:v "Referto di laboratorio" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a" ]
+  ] ; # 
+  fhir:specimen ( [
+     fhir:reference [ fhir:v "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:reference [ fhir:v "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee" ]
+  ] ) . # 
+
+<urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb> a fhir:Specimen ;
+  fhir:id [ fhir:v "5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen 5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb</b></p><a name=\"5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\"> </a><a name=\"hc5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\"> </a><a name=\"5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb-en-US\"> </a><p><b>type</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.5.129 UR}\">Urine</span></p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.5.129"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "UR" ] ;
+       fhir:display [ fhir:v "Urine" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04" ]
+  ] . # 
+
+<urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee> a fhir:Observation ;
+  fhir:id [ fhir:v "763f7902-8103-4d10-8bd1-546a726d43ee"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_763f7902-8103-4d10-8bd1-546a726d43ee\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 763f7902-8103-4d10-8bd1-546a726d43ee</b></p><a name=\"763f7902-8103-4d10-8bd1-546a726d43ee\"> </a><a name=\"hc763f7902-8103-4d10-8bd1-546a726d43ee\"> </a><a name=\"763f7902-8103-4d10-8bd1-546a726d43ee-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14957-5}, {urn:oid:2.16.840.1.113883.2.9.2.30.6.11 0090334.02}\">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>encounter</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>effective</b>: 2022-03-30 11:24:26+0100</p><p><b>performer</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>value</b>: 16 mg/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/L = 'mg/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>specimen</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>0 mg/L</td><td>20 mg/L</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14957-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14957-5" ] ;
+       fhir:display [ fhir:v "Microalbumin [Mass/volume] in Urine" ]
+     ] [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.2.30.6.11"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0090334.02" ] ;
+       fhir:display [ fhir:v "Albumina nelle urine" ]
+     ] ) ;
+     fhir:text [ fhir:v "Microalbumin Massa/Volume in Urine" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-03-30T11:24:26+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:reference [ fhir:v "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "16"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mg/L" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mg/L" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ) ; # 
+  fhir:specimen [
+     fhir:reference [ fhir:v "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "0"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/L" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "20"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/L" ]
+     ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "Normal" ]
+       ] )
+     ]
+  ] ) . # 
+
+<urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2> a fhir:Practitioner ;
+  fhir:id [ fhir:v "ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ab279a0b-320f-483b-9a5d-f1f7e8ceacb2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ab279a0b-320f-483b-9a5d-f1f7e8ceacb2</b></p><a name=\"ab279a0b-320f-483b-9a5d-f1f7e8ceacb2\"> </a><a name=\"hcab279a0b-320f-483b-9a5d-f1f7e8ceacb2\"> </a><a name=\"ab279a0b-320f-483b-9a5d-f1f7e8ceacb2-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href=\"mailto:matteo.cervone@gmail.it\">matteo.cervone@gmail.it</a>, <a href=\"mailto:matteo.cervone@pec.it\">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MTCORV58E63L294G" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Cervone" ] ;
+     fhir:given ( [ fhir:v "Matteo" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "matteo.cervone@gmail.it" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "matteo.cervone@pec.it" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3478129873" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Milano 7" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00184" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "84b2e517-abc2-4268-975d-b12fa8174d30"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_84b2e517-abc2-4268-975d-b12fa8174d30\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 84b2e517-abc2-4268-975d-b12fa8174d30</b></p><a name=\"84b2e517-abc2-4268-975d-b12fa8174d30\"> </a><a name=\"hc84b2e517-abc2-4268-975d-b12fa8174d30\"> </a><a name=\"84b2e517-abc2-4268-975d-b12fa8174d30-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-68740937-f732-4ff9-a2e4-bf502d2d125f\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f" ]
+  ] . # 
+
+<urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f> a fhir:Practitioner ;
+  fhir:id [ fhir:v "68740937-f732-4ff9-a2e4-bf502d2d125f"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_68740937-f732-4ff9-a2e4-bf502d2d125f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 68740937-f732-4ff9-a2e4-bf502d2d125f</b></p><a name=\"68740937-f732-4ff9-a2e4-bf502d2d125f\"> </a><a name=\"hc68740937-f732-4ff9-a2e4-bf502d2d125f\"> </a><a name=\"68740937-f732-4ff9-a2e4-bf502d2d125f-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/FPSSBN85G54D398H</p><p><b>name</b>: Filippo Mancusi </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "FPSSBN85G54D398H" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Mancusi" ] ;
+     fhir:given ( [ fhir:v "Filippo" ] )
+  ] ) . # 
+
+<urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d> a fhir:Organization ;
+  fhir:id [ fhir:v "a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d</b></p><a name=\"a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\"> </a><a name=\"hca59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\"> </a><a name=\"a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "120148" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "SAN RAFFAELE NOMENTANA"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "390 666 0581" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Emilio Praga 39" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00137" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d> a fhir:Practitioner ;
+  fhir:id [ fhir:v "0bbabe57-7c43-4211-9e19-81fcec65686d"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_0bbabe57-7c43-4211-9e19-81fcec65686d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 0bbabe57-7c43-4211-9e19-81fcec65686d</b></p><a name=\"0bbabe57-7c43-4211-9e19-81fcec65686d\"> </a><a name=\"hc0bbabe57-7c43-4211-9e19-81fcec65686d\"> </a><a name=\"0bbabe57-7c43-4211-9e19-81fcec65686d-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MURRSI88Y67R012G</p><p><b>name</b>: Maura Rossi </p><p><b>telecom</b>: ph: 062866794(Work)</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MURRSI88Y67R012G" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Rossi" ] ;
+     fhir:given ( [ fhir:v "Maura" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "062866794" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "a199dc05-af73-44a0-a218-bda5dec557ce"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_a199dc05-af73-44a0-a218-bda5dec557ce\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole a199dc05-af73-44a0-a218-bda5dec557ce</b></p><a name=\"a199dc05-af73-44a0-a218-bda5dec557ce\"> </a><a name=\"hca199dc05-af73-44a0-a218-bda5dec557ce\"> </a><a name=\"a199dc05-af73-44a0-a218-bda5dec557ce-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c" ]
+  ] . # 
+
+<urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c> a fhir:Practitioner ;
+  fhir:id [ fhir:v "b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c</b></p><a name=\"b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\"> </a><a name=\"hcb2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\"> </a><a name=\"b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/GPSDGK80E76C765V</p><p><b>name</b>: Federico Righi </p><p><b>telecom</b>: <a href=\"mailto:righi.federico@gmail.com\">righi.federico@gmail.com</a>, ph: 330987986(Mobile)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "GPSDGK80E76C765V" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Righi" ] ;
+     fhir:given ( [ fhir:v "Federico" ] ) ;
+     fhir:prefix ( [ fhir:v "Dttr." ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "righi.federico@gmail.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "330987986" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Corvetto 3" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00164" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "13792187-4721-4309-a8a4-4a57ffb4e6a1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_13792187-4721-4309-a8a4-4a57ffb4e6a1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 13792187-4721-4309-a8a4-4a57ffb4e6a1</b></p><a name=\"13792187-4721-4309-a8a4-4a57ffb4e6a1\"> </a><a name=\"hc13792187-4721-4309-a8a4-4a57ffb4e6a1\"> </a><a name=\"13792187-4721-4309-a8a4-4a57ffb4e6a1-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-852cec21-4ff9-4cea-b86d-00de92b46894\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894" ]
+  ] . # 
+
+<urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894> a fhir:Practitioner ;
+  fhir:id [ fhir:v "852cec21-4ff9-4cea-b86d-00de92b46894"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_852cec21-4ff9-4cea-b86d-00de92b46894\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 852cec21-4ff9-4cea-b86d-00de92b46894</b></p><a name=\"852cec21-4ff9-4cea-b86d-00de92b46894\"> </a><a name=\"hc852cec21-4ff9-4cea-b86d-00de92b46894\"> </a><a name=\"852cec21-4ff9-4cea-b86d-00de92b46894-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/RBTAMA67H99H467D</p><p><b>name</b>: Roberta Rossi </p><p><b>telecom</b>: <a href=\"mailto:maggi.roberta@gmail.com\">maggi.roberta@gmail.com</a>, ph: 22998276800(Home)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "RBTAMA67H99H467D" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Rossi" ] ;
+     fhir:given ( [ fhir:v "Roberta" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "maggi.roberta@gmail.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "22998276800" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Corvetto 3" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00164" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "c20acec2-5d67-4c05-b35e-d528c35f9ed1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_c20acec2-5d67-4c05-b35e-d528c35f9ed1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole c20acec2-5d67-4c05-b35e-d528c35f9ed1</b></p><a name=\"c20acec2-5d67-4c05-b35e-d528c35f9ed1\"> </a><a name=\"hcc20acec2-5d67-4c05-b35e-d528c35f9ed1\"> </a><a name=\"c20acec2-5d67-4c05-b35e-d528c35f9ed1-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-f7fa317a-66ac-4adf-9199-9bfe1e2eaa21\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>organization</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c1f46c0d-a0f9-41d7-8a33-15ffcf954354\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>code</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.2.9.5.1.88 PRE}\">PRE</span></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21" ]
+  ] ; # 
+  fhir:organization [
+     fhir:reference [ fhir:v "urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.5.1.88"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "PRE" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21> a fhir:Practitioner ;
+  fhir:id [ fhir:v "f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_f7fa317a-66ac-4adf-9199-9bfe1e2eaa21\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner f7fa317a-66ac-4adf-9199-9bfe1e2eaa21</b></p><a name=\"f7fa317a-66ac-4adf-9199-9bfe1e2eaa21\"> </a><a name=\"hcf7fa317a-66ac-4adf-9199-9bfe1e2eaa21\"> </a><a name=\"f7fa317a-66ac-4adf-9199-9bfe1e2eaa21-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/STVMG77F45N079MF</p><p><b>name</b>: Silvia Maggi </p><p><b>telecom</b>: <a href=\"mailto:maggi.silvia@gmail.com\">maggi.silvia@gmail.com</a></p><p><b>address</b>: Via Vittorio Veneto 3 Roma 120 00187 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "STVMG77F45N079MF" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Maggi" ] ;
+     fhir:given ( [ fhir:v "Silvia" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "maggi.silvia@gmail.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Vittorio Veneto 3" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00187" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354> a fhir:Organization ;
+  fhir:id [ fhir:v "c1f46c0d-a0f9-41d7-8a33-15ffcf954354"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_c1f46c0d-a0f9-41d7-8a33-15ffcf954354\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization c1f46c0d-a0f9-41d7-8a33-15ffcf954354</b></p><a name=\"c1f46c0d-a0f9-41d7-8a33-15ffcf954354\"> </a><a name=\"hcc1f46c0d-a0f9-41d7-8a33-15ffcf954354\"> </a><a name=\"c1f46c0d-a0f9-41d7-8a33-15ffcf954354-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "120148" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "SAN RAFFAELE NOMENTANA"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "390 666 0581" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Emilio Praga 39" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00137" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+<urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1> a fhir:ServiceRequest ;
+  fhir:id [ fhir:v "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest 1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1</b></p><a name=\"1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\"> </a><a name=\"hc1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\"> </a><a name=\"1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.9</code>/[NRE]</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>priority</b>: ASAP</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14957-5}\">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>encounter</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.9"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "[NRE]" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero delle Finanze" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:108252007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "108252007" ] ;
+       fhir:display [ fhir:v "Laboratory procedure" ]
+     ] )
+  ] ) ; # 
+  fhir:priority [ fhir:v "asap"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:14957-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "14957-5" ] ;
+       fhir:display [ fhir:v "Microalbumin [Mass/volume] in Urine" ]
+     ] ) ;
+     fhir:text [ fhir:v "Microalbumin Massa/Volume in Urine" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:reference [ fhir:v "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a" ]
+  ] . # 
+
+<urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "1b4b120e-0371-4878-b4c9-b69434e84c72"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_1b4b120e-0371-4878-b4c9-b69434e84c72\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 1b4b120e-0371-4878-b4c9-b69434e84c72</b></p><a name=\"1b4b120e-0371-4878-b4c9-b69434e84c72\"> </a><a name=\"hc1b4b120e-0371-4878-b4c9-b69434e84c72\"> </a><a name=\"1b4b120e-0371-4878-b4c9-b69434e84c72-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c1bb11b3-87e6-4682-a214-10975487b643\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>organization</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-508f4b29-09ca-4c94-8343-657f1923303a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643" ]
+  ] ; # 
+  fhir:organization [
+     fhir:reference [ fhir:v "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a" ]
+  ] . # 
+
+<urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643> a fhir:Practitioner ;
+  fhir:id [ fhir:v "c1bb11b3-87e6-4682-a214-10975487b643"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_c1bb11b3-87e6-4682-a214-10975487b643\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner c1bb11b3-87e6-4682-a214-10975487b643</b></p><a name=\"c1bb11b3-87e6-4682-a214-10975487b643\"> </a><a name=\"hcc1bb11b3-87e6-4682-a214-10975487b643\"> </a><a name=\"c1bb11b3-87e6-4682-a214-10975487b643-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MRSSIO79H59Z317K</p><p><b>name</b>: Mario Rossi </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MRSSIO79H59Z317K" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Rossi" ] ;
+     fhir:given ( [ fhir:v "Mario" ] )
+  ] ) . # 
+
+<urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a> a fhir:Organization ;
+  fhir:id [ fhir:v "508f4b29-09ca-4c94-8343-657f1923303a"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_508f4b29-09ca-4c94-8343-657f1923303a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 508f4b29-09ca-4c94-8343-657f1923303a</b></p><a name=\"508f4b29-09ca-4c94-8343-657f1923303a\"> </a><a name=\"hc508f4b29-09ca-4c94-8343-657f1923303a\"> </a><a name=\"508f4b29-09ca-4c94-8343-657f1923303a-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.3</code>/327700102</p><p><b>name</b>: Nuovo Ospedale S.Agostino (MO)</p><p><b>partOf</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-206fa15d-51ae-4f3d-b8d0-71ee6290ff52\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.3"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "327700102" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Nuovo Ospedale S.Agostino (MO)"] ; # 
+  fhir:partOf [
+     fhir:reference [ fhir:v "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52" ]
+  ] . # 
+
+<urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52> a fhir:Organization ;
+  fhir:id [ fhir:v "206fa15d-51ae-4f3d-b8d0-71ee6290ff52"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_206fa15d-51ae-4f3d-b8d0-71ee6290ff52\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 206fa15d-51ae-4f3d-b8d0-71ee6290ff52</b></p><a name=\"206fa15d-51ae-4f3d-b8d0-71ee6290ff52\"> </a><a name=\"hc206fa15d-51ae-4f3d-b8d0-71ee6290ff52\"> </a><a name=\"206fa15d-51ae-4f3d-b8d0-71ee6290ff52-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/080105</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "080105" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "83ef1c55-566b-4547-affd-f6d7b993a094"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_83ef1c55-566b-4547-affd-f6d7b993a094\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 83ef1c55-566b-4547-affd-f6d7b993a094</b></p><a name=\"83ef1c55-566b-4547-affd-f6d7b993a094\"> </a><a name=\"hc83ef1c55-566b-4547-affd-f6d7b993a094\"> </a><a name=\"83ef1c55-566b-4547-affd-f6d7b993a094-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1a3064fd-9658-47f1-98f3-3f368761a9da\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da" ]
+  ] . # 
+
+<urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da> a fhir:Practitioner ;
+  fhir:id [ fhir:v "1a3064fd-9658-47f1-98f3-3f368761a9da"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_1a3064fd-9658-47f1-98f3-3f368761a9da\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 1a3064fd-9658-47f1-98f3-3f368761a9da</b></p><a name=\"1a3064fd-9658-47f1-98f3-3f368761a9da\"> </a><a name=\"hc1a3064fd-9658-47f1-98f3-3f368761a9da\"> </a><a name=\"1a3064fd-9658-47f1-98f3-3f368761a9da-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/SVATPR85Y37T079B</p><p><b>name</b>: Silvia Turri </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "SVATPR85Y37T079B" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Turri" ] ;
+     fhir:given ( [ fhir:v "Silvia" ] )
+  ] ) . # 
+
+<urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21> a fhir:Location ;
+  fhir:id [ fhir:v "6373bbff-d136-4cfe-a7bc-fab4bff2fc21"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_6373bbff-d136-4cfe-a7bc-fab4bff2fc21\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 6373bbff-d136-4cfe-a7bc-fab4bff2fc21</b></p><a name=\"6373bbff-d136-4cfe-a7bc-fab4bff2fc21\"> </a><a name=\"hc6373bbff-d136-4cfe-a7bc-fab4bff2fc21\"> </a><a name=\"6373bbff-d136-4cfe-a7bc-fab4bff2fc21-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.6</code>/XXX</p><p><b>managingOrganization</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.6"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "XXX" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:reference [ fhir:v "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17" ]
+  ] . # 
+
+<urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17> a fhir:Organization ;
+  fhir:id [ fhir:v "0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17</b></p><a name=\"0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\"> </a><a name=\"hc0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\"> </a><a name=\"0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/XXX</p><p><b>name</b>: [nome_presidio]</p><p><b>telecom</b>: ph: 0115678965(Work)</p><p><b>partOf</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-d5f71fc0-6075-4fed-ad99-b3c609d27f6b\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "XXX" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "[nome_presidio]"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "0115678965" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:partOf [
+     fhir:reference [ fhir:v "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b" ]
+  ] . # 
+
+<urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b> a fhir:Organization ;
+  fhir:id [ fhir:v "d5f71fc0-6075-4fed-ad99-b3c609d27f6b"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_d5f71fc0-6075-4fed-ad99-b3c609d27f6b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization d5f71fc0-6075-4fed-ad99-b3c609d27f6b</b></p><a name=\"d5f71fc0-6075-4fed-ad99-b3c609d27f6b\"> </a><a name=\"hcd5f71fc0-6075-4fed-ad99-b3c609d27f6b\"> </a><a name=\"d5f71fc0-6075-4fed-ad99-b3c609d27f6b-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/XXX</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.1.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "XXX" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "Ministero della Salute" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a> a fhir:Encounter ;
+  fhir:id [ fhir:v "195a7abc-d109-404a-9dc7-ad2e80bafc8a"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_195a7abc-d109-404a-9dc7-ad2e80bafc8a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter 195a7abc-d109-404a-9dc7-ad2e80bafc8a</b></p><a name=\"195a7abc-d109-404a-9dc7-ad2e80bafc8a\"> </a><a name=\"hc195a7abc-d109-404a-9dc7-ad2e80bafc8a\"> </a><a name=\"195a7abc-d109-404a-9dc7-ad2e80bafc8a-en-US\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode AMB</a>: ambulatory</p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>basedOn</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType REF}\">referrer</span></p><p><b>period</b>: 2022-03-20 11:00:00+0100 --&gt; (ongoing)</p><p><b>individual</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c20acec2-5d67-4c05-b35e-d528c35f9ed1\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>individual</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-83ef1c55-566b-4547-affd-f6d7b993a094\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><p><b>period</b>: 2022-03-30 11:24:26+0100 --&gt; (ongoing)</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-6373bbff-d136-4cfe-a7bc-fab4bff2fc21\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04" ]
+  ] ; # 
+  fhir:basedOn ( [
+     fhir:reference [ fhir:v "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1" ]
+  ] ) ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "REF" ]
+       ] )
+     ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2022-03-20T11:00:00+01:00"^^xsd:dateTime ]
+     ] ;
+     fhir:individual [
+       fhir:reference [ fhir:v "urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1" ]
+     ]
+  ] [
+     fhir:individual [
+       fhir:reference [ fhir:v "urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-03-30T11:24:26+01:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:reference [ fhir:v "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "88868d3e-7ab1-4ee5-983e-b979c4971f5c"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_88868d3e-7ab1-4ee5-983e-b979c4971f5c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 88868d3e-7ab1-4ee5-983e-b979c4971f5c</b></p><a name=\"88868d3e-7ab1-4ee5-983e-b979c4971f5c\"> </a><a name=\"hc88868d3e-7ab1-4ee5-983e-b979c4971f5c\"> </a><a name=\"88868d3e-7ab1-4ee5-983e-b979c4971f5c-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:reference [ fhir:v "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

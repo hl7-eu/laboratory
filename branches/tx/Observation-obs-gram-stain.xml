@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="obs-gram-stain"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation obs-gram-stain</b></p><a name="obs-gram-stain"> </a><a name="hcobs-gram-stain"> </a><a name="obs-gram-stain-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Gram Stain</span></p><p><b>subject</b>: <a href="Patient-pat-lab-example.html">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Observation-obs-wbc.html">Observation Leukocytes [Presence] in Specimen by Gram stain</a></li><li><a href="Observation-obs-gs-org1.html">Observation Microscopic observation [Identifier] in Specimen by Gram stain</a></li></ul></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <text value="Gram Stain"/>
+  </code>
+  <subject>
+    <reference value="Patient/pat-lab-example"/>
+  </subject>
+  <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+  <performer>
+    <display value="MUDr. Aleš Procházka"/>
+  </performer>
+  <hasMember>
+    <reference value="Observation/obs-wbc"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/obs-gs-org1"/>
+  </hasMember>
+</Observation>

@@ -1,0 +1,91 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"Result","Result","","","",0,*,"","","","null {[]} {[]}
+","A.5 - Results data elements","Results data elements. Section A5 of the eHN guideline.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Result.narrative","Result.narrative","","","",0,1,"","","","BackboneElement {[]} {[]}
+","A.5.1 Laboratory report narrative","A.5.1 Laboratory report narrative","","","","","","","","","",,,,,"",,,,"Result.narrative",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Result.narrative.id","Result.narrative.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Result.narrative.extension","Result.narrative.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Result.narrative.modifierExtension","Result.narrative.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Result.narrative.report","Result.narrative.report","","","",0,*,"","","","Narrative {[]} {[]}
+","A.5.1.1 Narrative report","Entire report (textual summary inside the laboratory result report document) as issued by the laboratory.","","","","","","","","","",,,,,"",,,,"Result.narrative.report",0,*,"",""
+"Result.narrative.notes","Result.narrative.notes","","","",0,*,"","","","Narrative {[]} {[]}
+","A.5.1.2 Comments, interpretation and recommendations","Comments, such as a textual interpretation or advice accompanying the result report, for example.","","","","","","","","","",,,,,"",,,,"Result.narrative.notes",0,*,"",""
+"Result.observation","Result.observation","","","",0,*,"","","","BackboneElement {[]} {[]}
+","A.5.2 Observation details","A.5.2 Observation details (report could consist of multiple observations)","","","","","","","","","",,,,,"",,,,"Result.observation",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Result.observation.id","Result.observation.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Result.observation.extension","Result.observation.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Result.observation.modifierExtension","Result.observation.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Result.observation.dateTime","Result.observation.dateTime","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.5.2.1 Observation date","Date and time of the observation - Preferred system(s): ISO 8601","","","","","","","","","",,,,,"",,,,"Result.observation.dateTime",0,*,"",""
+"Result.observation.code","Result.observation.code","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.5.2.3 Observation code","Code representing the observation using the agreed code systems.
+- Preferred system(s): LOINC
+ - Preferred system(s): NPU
+ - Preferred system(s): SNOMED CT","","","","","","","","","",,,,,"",,,,"Result.observation.code",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Result.observation.code.id","Result.observation.code.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"Result.observation.code.extension","Result.observation.code.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Result.observation.code.coding","Result.observation.code.coding","","","",0,*,"","","Y","Coding {[]} {[]}
+","Code defined by a terminology system","A reference to a code defined by a terminology system.","Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"",,,,"CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Result.observation.code.text","Result.observation.code.text","","","",0,1,"","","Y","string {[]} {[]}
+","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"Result.observation.code.name","Result.observation.code.name","","","",0,*,"","","","string {[]} {[]}
+","A.5.2.3.1 Observation name","Full name of the observation according to the used test coding standard.","","","","","","","","","",,,,,"",,,,"Result.observation.code.name",0,*,"",""
+"Result.observation.code.originalName","Result.observation.code.originalName","","","",0,*,"","","","string {[]} {[]}
+","A.5.2.3.2 Observation original name","Original (conventional) name of the observation as used by the laboratory","","","","","","","","","",,,,,"",,,,"Result.observation.code.originalName",0,*,"",""
+"Result.observation.code.displayName","Result.observation.code.displayName","","","",0,*,"","","","string {[]} {[]}
+","A.5.2.3.3 Observation display name","Simplified (short name of the observation) for display.","","","","","","","","","",,,,,"",,,,"Result.observation.code.displayName",0,*,"",""
+"Result.observation.method","Result.observation.method","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.5.2.4 Observation method","Observation method (measurement principle) to obtain the result.
+- Preferred system(s): SNOMED CT","","","","","","","","","",,,,,"",,,,"Result.observation.method",0,*,"",""
+"Result.observation.device","Result.observation.device","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.5.2.5 Observation device","Device (analyser), laboratory test kit and used calibrator information (identifier, type, name, model, manufacturer)
+- Preferred system(s): SNOMED CT
+ - Preferred system(s): EMDN","","","","","","","","","",,,,,"",,,,"Result.observation.device",0,*,"",""
+"Result.observation.order","Result.observation.order","","","",0,*,"","","","BackboneElement {[]} {[]}
+","A.5.2.8 Order","Identifies order and order placer this observation belongs to.","","","","","","","","","",,,,,"",,,,"Result.observation.order",0,*,"",""
+"Result.observation.performer","Result.observation.performer","","","",0,*,"","","","BackboneElement {[]} {[]}
+","A.5.2.9 Performer","Identifies the originator/author and provides provenance information about the source of the results data that may have not originated with the source of the whole Laboratory Report document.","","","","","","","","","",,,,,"",,,,"Result.observation.performer",0,*,"",""
+"Result.observation.reporter","Result.observation.reporter","","","",0,*,"","","","BackboneElement {[]} {[]}
+","A.5.2.10 Reporter","With certain observation results, e.g. there may also be an interpreter or a person responsible for validation.","","","","","","","","","",,,,,"",,,,"Result.observation.reporter",0,*,"",""
+"Result.observation.result","Result.observation.result","","","",0,*,"","","","BackboneElement {[]} {[]}
+","A.5.2.11 Observation result","Result of the observation including text, numeric and coded results of the measurement and measurement uncertainty. Content of the observation result will vary according to the type of the observation. 
+- Preferred system(s): SNOMED CT (for ordinal or nominal scale results and result interpretation)
+ - Preferred system(s): UCUM (for units)","","","","","","","","","",,,,,"",,,,"Result.observation.result",0,*,"",""
+"Result.observation.interpretation","Result.observation.interpretation","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.5.2.12 Observation interpretation","Information about reference intervals and result interpretation.
+ - Preferred system(s): SNOMED CT
+ - Preferred system(s): HL7 v3 Code System ObservationInterpretation","","","","","","","","","",,,,,"",,,,"Result.observation.interpretation",0,*,"",""
+"Result.observation.description","Result.observation.description","","","",0,*,"","","","Narrative {[]} {[]}
+","A.5.2.13 Result description","Comments and narrative representation of the observation result and findings.","","","","","","","","","",,,,,"",,,,"Result.observation.description",0,*,"",""
+"Result.observation.accreditationStatus","Result.observation.accreditationStatus","","","",0,*,"","","","BackboneElement {[]} {[]}
+","A.5.2.14 Accreditation status","Accreditation status of the laboratory for the particular observation.","","","","","","","","","",,,,,"",,,,"Result.observation.accreditationStatus",0,*,"",""

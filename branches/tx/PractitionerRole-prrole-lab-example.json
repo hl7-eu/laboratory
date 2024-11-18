@@ -1,0 +1,14 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "prrole-lab-example",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole prrole-lab-example</b></p><a name=\"prrole-lab-example\"> </a><a name=\"hcprrole-lab-example\"> </a><a name=\"prrole-lab-example-en-US\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-pr-lab-example.html\">Practitioner Matteo Cervone </a></p></div>"
+  },
+  "practitioner" : {
+    "reference" : "Practitioner/pr-lab-example"
+  }
+}

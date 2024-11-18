@@ -1,0 +1,18 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"Recipient","Recipient","","","",0,*,"","","","null {[]} {[]}
+","A.1.4 - Information recipient","Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable.
+Section A1.4 of the eHN guideline.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Recipient.identifier","Recipient.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","A.1.4.1 Recipient identifier","The health professional identification number.
+Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the license or registration number.
+In case when recipient is not a health professional, e.g. patient, appropriate personal identifier should be used.","","","","","","","","","",,,,,"",,,,"Recipient.identifier",0,1,"",""
+"Recipient.name","Recipient.name","","","",0,*,"","","","HumanName {[]} {[]}
+","A.1.4.2 Recipient name","Person name.","","","","","","","","","",,,,,"",,,,"Recipient.name",0,*,"",""
+"Recipient.organization","Recipient.organization","","","",0,*,"","","","Organization {[]} {[]}
+","A.1.4.3 Recipient organization","The healthcare provider organization information.","","","","","","","","","",,,,,"",,,,"Recipient.organization",0,*,"",""
+"Recipient.address","Recipient.address","","","",0,*,"","","","Address {[]} {[]}
+","A.1.4.4 Address","Mailing and home or office addresses. The addresses are always sequences of address parts (e.g., street address line, country, ZIP code, city) even if postal address formats may vary depending on the country. An address may or may not include a specific use code; if this attribute is not present it is assumed to be the default address useful for any purpose. - Preferred system(s):","","","","","","","","","",,,,,"",,,,"Recipient.address",0,*,"",""
+"Recipient.country","Recipient.country","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","A.1.4.5 Country","Country of the recipient. - Preferred system(s): ISO 3166","","","","","","","","","",,,,,"",,,,"Recipient.country",0,*,"",""
+"Recipient.telecom","Recipient.telecom","","","",0,*,"","","","ContactPoint {[]} {[]}
+","A.1.4.6 Telecom","Telecommunication contact information (addresses) associated to a person. Multiple telecommunication addresses might be provided. - Preferred system(s):","","","","","","","","","",,,,,"",,,,"Recipient.telecom",0,*,"",""

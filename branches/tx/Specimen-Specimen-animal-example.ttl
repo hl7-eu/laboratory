@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Specimen/Specimen-animal-example> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Specimen-animal-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen Specimen-animal-example</b></p><a name=\"Specimen-animal-example\"> </a><a name=\"hcSpecimen-animal-example\"> </a><a name=\"Specimen-animal-example-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Blood specimen</span></p><p><b>subject</b>: <a href=\"Patient-Patient-animal-example.html\">Anonymous Patient (no stated gender), DoB Unknown</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:119297000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119297000" ] ;
+       fhir:display [ fhir:v "Blood specimen" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.eu/fhir/laboratory/Patient/Patient-animal-example> ;
+     fhir:reference [ fhir:v "Patient/Patient-animal-example" ]
+  ] ; # 
+  fhir:collection [
+     fhir:collected [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

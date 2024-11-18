@@ -1,0 +1,45 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Observation/obs-aerobic-culture> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "obs-aerobic-culture"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-aerobic-culture</b></p><a name=\"obs-aerobic-culture\"> </a><a name=\"hcobs-aerobic-culture\"> </a><a name=\"obs-aerobic-culture-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Aerobic Culture</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: <a href=\"Observation-obs-org-id1.html\">Observation Bacteria identified in Specimen by Aerobe culture</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Aerobic Culture" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.eu/fhir/laboratory/Patient/pat-lab-example> ;
+     fhir:reference [ fhir:v "Patient/pat-lab-example" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1> ;
+     fhir:reference [ fhir:v "Observation/obs-org-id1" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

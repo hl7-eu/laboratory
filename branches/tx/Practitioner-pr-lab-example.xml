@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="pr-lab-example"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner pr-lab-example</b></p><a name="pr-lab-example"> </a><a name="hcpr-lab-example"> </a><a name="pr-lab-example-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href="mailto:matteo.cervone@gmail.it">matteo.cervone@gmail.it</a>, <a href="mailto:matteo.cervone@pec.it">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.9.4.3.2"/>
+    <value value="MTCORV58E63L294G"/>
+    <assigner>
+      <display value="MEF"/>
+    </assigner>
+  </identifier>
+  <name>
+    <family value="Cervone"/>
+    <given value="Matteo"/>
+    <prefix value="Dr"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="matteo.cervone@gmail.it"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="matteo.cervone@pec.it"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="phone"/>
+    <value value="3478129873"/>
+    <use value="mobile"/>
+  </telecom>
+  <address>
+    <line value="Via Milano 7">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract">
+        <valueString value="058091"/>
+      </extension>
+    </line>
+    <city value="Roma"/>
+    <district value="RM"/>
+    <state value="120"/>
+    <postalCode value="00184"/>
+    <country value="100"/>
+  </address>
+</Practitioner>

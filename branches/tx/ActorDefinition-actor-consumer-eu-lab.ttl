@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Basic/actor-consumer-eu-lab> a fhir:Basic ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "actor-consumer-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ActorDefinition actor-consumer-eu-lab</b></p><a name=\"actor-consumer-eu-lab\"> </a><a name=\"hcactor-consumer-eu-lab\"> </a><a name=\"actor-consumer-eu-lab-en-US\"> </a><table class=\"grid\"><tr><td><b>Actor: LabReportConsumer </b></td><td/><td>Type: system </td></tr><tr><td colspan=\"3\"><div><p>This actor represents the Laboratory Report consumers. That is the system using the report received or retrieved.\nUsing includes, but is not limited to, the report display, storage or processing.</p>\n</div></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab"^^xsd:anyURI ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "0.2.0-ci" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "LabReportConsumer" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "active" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "HL7 Europe" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "HL7 Europe" ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "url" ] ;
+         fhir:value [ fhir:v "http://hl7.eu" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.jurisdiction"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "150" ] ;
+         fhir:display [ fhir:v "Europe" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.copyright"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "system" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "This actor represents the Laboratory Report consumers. That is the system using the report received or retrieved.\nUsing includes, but is not limited to, the report display, storage or processing." ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/fhir-types"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "ActorDefinition" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

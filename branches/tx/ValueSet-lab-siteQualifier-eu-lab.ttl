@@ -1,0 +1,129 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "lab-siteQualifier-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet lab-siteQualifier-eu-lab</b></p><a name=\"lab-siteQualifier-eu-lab\"> </a><a name=\"hclab-siteQualifier-eu-lab\"> </a><a name=\"lab-siteQualifier-eu-lab-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/7771000\">7771000</a></td><td>Left</td></tr><tr><td><a href=\"http://snomed.info/id/24028007\">24028007</a></td><td>Right</td></tr><tr><td><a href=\"http://snomed.info/id/51440002\">51440002</a></td><td>Bilateral</td></tr><tr><td><a href=\"http://snomed.info/id/46053002\">46053002</a></td><td>Distal</td></tr><tr><td><a href=\"http://snomed.info/id/255554000\">255554000</a></td><td>Dorsal</td></tr><tr><td><a href=\"http://snomed.info/id/261183002\">261183002</a></td><td>Upper</td></tr><tr><td><a href=\"http://snomed.info/id/261122009\">261122009</a></td><td>Lower</td></tr><tr><td><a href=\"http://snomed.info/id/255561001\">255561001</a></td><td>Medial</td></tr><tr><td><a href=\"http://snomed.info/id/49370004\">49370004</a></td><td>Lateral</td></tr><tr><td><a href=\"http://snomed.info/id/264217000\">264217000</a></td><td>Superior</td></tr><tr><td><a href=\"http://snomed.info/id/261089000\">261089000</a></td><td>Inferior</td></tr><tr><td><a href=\"http://snomed.info/id/255551008\">255551008</a></td><td>Posterior</td></tr><tr><td><a href=\"http://snomed.info/id/351726001\">351726001</a></td><td>Below</td></tr><tr><td><a href=\"http://snomed.info/id/352730000\">352730000</a></td><td>Above</td></tr><tr><td><a href=\"http://snomed.info/id/40415009\">40415009</a></td><td>Proximal (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/255549009\">255549009</a></td><td>Anterior (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/26283006\">26283006</a></td><td>Superficial (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/795002\">795002</a></td><td>Deep (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/57195005\">57195005</a></td><td>Basal (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/3583002\">3583002</a></td><td>Caudal (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/66787007\">66787007</a></td><td>Cephalic (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/255481003\">255481003</a></td><td>Left upper quadrant (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/255497008\">255497008</a></td><td>Right upper quadrant (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/255480002\">255480002</a></td><td>Left lower quadrant (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/255495000\">255495000</a></td><td>Right lower quadrant (qualifier value)</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "trial-use" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LabSiteQualifierEuVs"] ; # 
+  fhir:title [ fhir:v "Body Structure Qualifier"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "7771000" ] ;
+         fhir:display [ fhir:v "Left" ]
+       ] [
+         fhir:code [ fhir:v "24028007" ] ;
+         fhir:display [ fhir:v "Right" ]
+       ] [
+         fhir:code [ fhir:v "51440002" ] ;
+         fhir:display [ fhir:v "Bilateral" ]
+       ] [
+         fhir:code [ fhir:v "46053002" ] ;
+         fhir:display [ fhir:v "Distal" ]
+       ] [
+         fhir:code [ fhir:v "255554000" ] ;
+         fhir:display [ fhir:v "Dorsal" ]
+       ] [
+         fhir:code [ fhir:v "261183002" ] ;
+         fhir:display [ fhir:v "Upper" ]
+       ] [
+         fhir:code [ fhir:v "261122009" ] ;
+         fhir:display [ fhir:v "Lower" ]
+       ] [
+         fhir:code [ fhir:v "255561001" ] ;
+         fhir:display [ fhir:v "Medial" ]
+       ] [
+         fhir:code [ fhir:v "49370004" ] ;
+         fhir:display [ fhir:v "Lateral" ]
+       ] [
+         fhir:code [ fhir:v "264217000" ] ;
+         fhir:display [ fhir:v "Superior" ]
+       ] [
+         fhir:code [ fhir:v "261089000" ] ;
+         fhir:display [ fhir:v "Inferior" ]
+       ] [
+         fhir:code [ fhir:v "255551008" ] ;
+         fhir:display [ fhir:v "Posterior" ]
+       ] [
+         fhir:code [ fhir:v "351726001" ] ;
+         fhir:display [ fhir:v "Below" ]
+       ] [
+         fhir:code [ fhir:v "352730000" ] ;
+         fhir:display [ fhir:v "Above" ]
+       ] [
+         fhir:code [ fhir:v "40415009" ] ;
+         fhir:display [ fhir:v "Proximal (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "255549009" ] ;
+         fhir:display [ fhir:v "Anterior (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "26283006" ] ;
+         fhir:display [ fhir:v "Superficial (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "795002" ] ;
+         fhir:display [ fhir:v "Deep (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "57195005" ] ;
+         fhir:display [ fhir:v "Basal (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "3583002" ] ;
+         fhir:display [ fhir:v "Caudal (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "66787007" ] ;
+         fhir:display [ fhir:v "Cephalic (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "255481003" ] ;
+         fhir:display [ fhir:v "Left upper quadrant (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "255497008" ] ;
+         fhir:display [ fhir:v "Right upper quadrant (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "255480002" ] ;
+         fhir:display [ fhir:v "Left lower quadrant (qualifier value)" ]
+       ] [
+         fhir:code [ fhir:v "255495000" ] ;
+         fhir:display [ fhir:v "Right lower quadrant (qualifier value)" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

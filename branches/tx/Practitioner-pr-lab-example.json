@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "pr-lab-example",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner pr-lab-example</b></p><a name=\"pr-lab-example\"> </a><a name=\"hcpr-lab-example\"> </a><a name=\"pr-lab-example-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href=\"mailto:matteo.cervone@gmail.it\">matteo.cervone@gmail.it</a>, <a href=\"mailto:matteo.cervone@pec.it\">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+    "value" : "MTCORV58E63L294G",
+    "assigner" : {
+      "display" : "MEF"
+    }
+  }],
+  "name" : [{
+    "family" : "Cervone",
+    "given" : ["Matteo"],
+    "prefix" : ["Dr"]
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "matteo.cervone@gmail.it",
+    "use" : "home"
+  },
+  {
+    "system" : "email",
+    "value" : "matteo.cervone@pec.it",
+    "use" : "work"
+  },
+  {
+    "system" : "phone",
+    "value" : "3478129873",
+    "use" : "mobile"
+  }],
+  "address" : [{
+    "line" : ["Via Milano 7"],
+    "_line" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+        "valueString" : "058091"
+      }]
+    }],
+    "city" : "Roma",
+    "district" : "RM",
+    "state" : "120",
+    "postalCode" : "00184",
+    "country" : "100"
+  }]
+}

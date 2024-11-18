@@ -1,0 +1,264 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-129",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b909da1-c5bf-4b1a-aa39-38e4f1561517-129",
+  "name" : "IntersectionLabSpecimenContainerEuAndLabSpecimenContainerEu",
+  "title" : "Intersection of Specimen Container And Specimen Container",
+  "status" : "active",
+  "date" : "2024-11-18T16:53:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "702290003",
+        "display" : "Cervical cytology microscopy slide"
+      },
+      {
+        "code" : "706057008",
+        "display" : "Cytology specimen container"
+      },
+      {
+        "code" : "706052002",
+        "display" : "Evacuated blood collection tube"
+      },
+      {
+        "code" : "702292006",
+        "display" : "Evacuated blood collection tube, K3EDTA/sodium fluoride"
+      },
+      {
+        "code" : "767387006",
+        "display" : "Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole"
+      },
+      {
+        "code" : "767384004",
+        "display" : "Evacuated blood collection tube with clot activator"
+      },
+      {
+        "code" : "767390000",
+        "display" : "Evacuated blood collection tube with heparin lithium and gel separator"
+      },
+      {
+        "code" : "767382000",
+        "display" : "Evacuated blood collection tube with heparin sodium"
+      },
+      {
+        "code" : "767660003",
+        "display" : "Evacuated blood collection tube with sodium fluoride"
+      },
+      {
+        "code" : "767389009",
+        "display" : "Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin"
+      },
+      {
+        "code" : "702279008",
+        "display" : "Evacuated blood collection tube, gel separator"
+      },
+      {
+        "code" : "702293001",
+        "display" : "Evacuated blood collection tube, K2EDTA/aprotinin"
+      },
+      {
+        "code" : "702278000",
+        "display" : "Evacuated blood collection tube, no additive/metal-free"
+      },
+      {
+        "code" : "702280006",
+        "display" : "Evacuated blood collection tube, RNA stabiliser"
+      },
+      {
+        "code" : "702281005",
+        "display" : "Evacuated blood collection tube, thrombin/clot activator/gel separator"
+      },
+      {
+        "code" : "702310001",
+        "display" : "Evacuated saliva specimen container, sodium azide"
+      },
+      {
+        "code" : "706056004",
+        "display" : "Evacuated urine specimen container"
+      },
+      {
+        "code" : "702302002",
+        "display" : "Evacuated urine specimen container, boric acid (H3BO3)"
+      },
+      {
+        "code" : "702288004",
+        "display" : "Evacuated urine specimen container, boric acid (H3BO3)/sodium formate"
+      },
+      {
+        "code" : "702289007",
+        "display" : "Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine"
+      },
+      {
+        "code" : "702303007",
+        "display" : "Evacuated urine specimen container, multiple preservative"
+      },
+      {
+        "code" : "702308003",
+        "display" : "Evacuated urine specimen container, no additive"
+      },
+      {
+        "code" : "706047007",
+        "display" : "Fecal specimen container"
+      },
+      {
+        "code" : "706053007",
+        "display" : "General specimen container"
+      },
+      {
+        "code" : "702268003",
+        "display" : "General specimen container, no additive, non-sterile"
+      },
+      {
+        "code" : "702269006",
+        "display" : "General specimen container, no additive, sterile"
+      },
+      {
+        "code" : "874799005",
+        "display" : "Microbial cryotube"
+      },
+      {
+        "code" : "706050005",
+        "display" : "Microcapillary blood collection tube"
+      },
+      {
+        "code" : "702275002",
+        "display" : "Microcapillary blood collection tube, ammonium heparin"
+      },
+      {
+        "code" : "702276001",
+        "display" : "Microcapillary blood collection tube, K2EDTA"
+      },
+      {
+        "code" : "702277005",
+        "display" : "Microcapillary blood collection tube, no additive"
+      },
+      {
+        "code" : "702304001",
+        "display" : "Microcapillary blood transfer tube, clot activator"
+      },
+      {
+        "code" : "702306004",
+        "display" : "Microcapillary blood transfer tube, EDTA"
+      },
+      {
+        "code" : "702307008",
+        "display" : "Microcapillary blood transfer tube, heparin"
+      },
+      {
+        "code" : "702305000",
+        "display" : "Microcapillary sodium fluoride blood transfer tube"
+      },
+      {
+        "code" : "702224000",
+        "display" : "Midstream urine specimen container"
+      },
+      {
+        "code" : "706051009",
+        "display" : "Non-evacuated blood collection tube"
+      },
+      {
+        "code" : "702283008",
+        "display" : "Non-evacuated blood collection tube with gel separator"
+      },
+      {
+        "code" : "702297000",
+        "display" : "Non-evacuated blood collection tube, clot activator"
+      },
+      {
+        "code" : "702295008",
+        "display" : "Non-evacuated blood collection tube, clot activator/gel separator"
+      },
+      {
+        "code" : "702282003",
+        "display" : "Non-evacuated blood collection tube, EDTA"
+      },
+      {
+        "code" : "702299002",
+        "display" : "Non-evacuated blood collection tube, K2EDTA"
+      },
+      {
+        "code" : "702298005",
+        "display" : "Non-evacuated blood collection tube, K3EDTA"
+      },
+      {
+        "code" : "702284002",
+        "display" : "Non-evacuated blood collection tube, lithium heparin"
+      },
+      {
+        "code" : "702300005",
+        "display" : "Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile"
+      },
+      {
+        "code" : "702285001",
+        "display" : "Non-evacuated blood collection tube, lithium heparin/gel separator, sterile"
+      },
+      {
+        "code" : "702286000",
+        "display" : "Non-evacuated blood collection tube, NaEDTA/sodium fluoride"
+      },
+      {
+        "code" : "702256007",
+        "display" : "Non-evacuated blood collection tube, no additive"
+      },
+      {
+        "code" : "702287009",
+        "display" : "Non-evacuated blood collection tube, potassium oxalate/sodium fluoride"
+      },
+      {
+        "code" : "702296009",
+        "display" : "Non-evacuated blood collection tube, sodium citrate"
+      },
+      {
+        "code" : "702264001",
+        "display" : "Non-sterile urine specimen container"
+      },
+      {
+        "code" : "702309006",
+        "display" : "Saliva specimen container, no additive"
+      },
+      {
+        "code" : "706058003",
+        "display" : "Secretory specimen container"
+      },
+      {
+        "code" : "706046003",
+        "display" : "Specimen receptacle"
+      },
+      {
+        "code" : "702223006",
+        "display" : "Sputum specimen container"
+      },
+      {
+        "code" : "702244006",
+        "display" : "Sterile urine specimen container"
+      },
+      {
+        "code" : "702232008",
+        "display" : "Sweat specimen container"
+      },
+      {
+        "code" : "702294007",
+        "display" : "Syringe-blood collection tube transfer"
+      },
+      {
+        "code" : "706054001",
+        "display" : "Urine specimen container"
+      },
+      {
+        "code" : "767385003",
+        "display" : "Aerobic blood culture bottle"
+      },
+      {
+        "code" : "767383005",
+        "display" : "Anaerobic blood culture bottle"
+      }]
+    }]
+  }
+}

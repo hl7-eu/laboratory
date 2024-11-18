@@ -1,0 +1,36 @@
+{
+  "resourceType" : "Observation",
+  "id" : "obs-gs-org1-quant",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-gs-org1-quant</b></p><a name=\"obs-gs-org1-quant\"> </a><a name=\"hcobs-gs-org1-quant\"> </a><a name=\"obs-gs-org1-quant-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Observed Quantity</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 441614007}\">+</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory"
+    }]
+  }],
+  "code" : {
+    "text" : "Observed Quantity"
+  },
+  "subject" : {
+    "reference" : "Patient/pat-lab-example"
+  },
+  "effectiveDateTime" : "2022-10-25T13:35:00+01:00",
+  "performer" : [{
+    "display" : "MUDr. Aleš Procházka"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "441614007",
+      "display" : "Present + out of +++"
+    }],
+    "text" : "+"
+  }
+}

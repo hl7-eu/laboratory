@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-siteQualifier-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-siteQualifier-eu-lab</b></p><a name="lab-siteQualifier-eu-lab"> </a><a name="hclab-siteQualifier-eu-lab"> </a><a name="lab-siteQualifier-eu-lab-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/7771000">7771000</a></td><td>Left</td></tr><tr><td><a href="http://snomed.info/id/24028007">24028007</a></td><td>Right</td></tr><tr><td><a href="http://snomed.info/id/51440002">51440002</a></td><td>Bilateral</td></tr><tr><td><a href="http://snomed.info/id/46053002">46053002</a></td><td>Distal</td></tr><tr><td><a href="http://snomed.info/id/255554000">255554000</a></td><td>Dorsal</td></tr><tr><td><a href="http://snomed.info/id/261183002">261183002</a></td><td>Upper</td></tr><tr><td><a href="http://snomed.info/id/261122009">261122009</a></td><td>Lower</td></tr><tr><td><a href="http://snomed.info/id/255561001">255561001</a></td><td>Medial</td></tr><tr><td><a href="http://snomed.info/id/49370004">49370004</a></td><td>Lateral</td></tr><tr><td><a href="http://snomed.info/id/264217000">264217000</a></td><td>Superior</td></tr><tr><td><a href="http://snomed.info/id/261089000">261089000</a></td><td>Inferior</td></tr><tr><td><a href="http://snomed.info/id/255551008">255551008</a></td><td>Posterior</td></tr><tr><td><a href="http://snomed.info/id/351726001">351726001</a></td><td>Below</td></tr><tr><td><a href="http://snomed.info/id/352730000">352730000</a></td><td>Above</td></tr><tr><td><a href="http://snomed.info/id/40415009">40415009</a></td><td>Proximal (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/255549009">255549009</a></td><td>Anterior (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/26283006">26283006</a></td><td>Superficial (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/795002">795002</a></td><td>Deep (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/57195005">57195005</a></td><td>Basal (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/3583002">3583002</a></td><td>Caudal (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66787007">66787007</a></td><td>Cephalic (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/255481003">255481003</a></td><td>Left upper quadrant (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/255497008">255497008</a></td><td>Right upper quadrant (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/255480002">255480002</a></td><td>Left lower quadrant (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/255495000">255495000</a></td><td>Right lower quadrant (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabSiteQualifierEuVs"/>
+  <title value="Body Structure Qualifier"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="7771000"/>
+        <display value="Left"/>
+      </concept>
+      <concept>
+        <code value="24028007"/>
+        <display value="Right"/>
+      </concept>
+      <concept>
+        <code value="51440002"/>
+        <display value="Bilateral"/>
+      </concept>
+      <concept>
+        <code value="46053002"/>
+        <display value="Distal"/>
+      </concept>
+      <concept>
+        <code value="255554000"/>
+        <display value="Dorsal"/>
+      </concept>
+      <concept>
+        <code value="261183002"/>
+        <display value="Upper"/>
+      </concept>
+      <concept>
+        <code value="261122009"/>
+        <display value="Lower"/>
+      </concept>
+      <concept>
+        <code value="255561001"/>
+        <display value="Medial"/>
+      </concept>
+      <concept>
+        <code value="49370004"/>
+        <display value="Lateral"/>
+      </concept>
+      <concept>
+        <code value="264217000"/>
+        <display value="Superior"/>
+      </concept>
+      <concept>
+        <code value="261089000"/>
+        <display value="Inferior"/>
+      </concept>
+      <concept>
+        <code value="255551008"/>
+        <display value="Posterior"/>
+      </concept>
+      <concept>
+        <code value="351726001"/>
+        <display value="Below"/>
+      </concept>
+      <concept>
+        <code value="352730000"/>
+        <display value="Above"/>
+      </concept>
+      <concept>
+        <code value="40415009"/>
+        <display value="Proximal (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="255549009"/>
+        <display value="Anterior (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="26283006"/>
+        <display value="Superficial (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="795002"/>
+        <display value="Deep (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="57195005"/>
+        <display value="Basal (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="3583002"/>
+        <display value="Caudal (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66787007"/>
+        <display value="Cephalic (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="255481003"/>
+        <display value="Left upper quadrant (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="255497008"/>
+        <display value="Right upper quadrant (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="255480002"/>
+        <display value="Left lower quadrant (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="255495000"/>
+        <display value="Right lower quadrant (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

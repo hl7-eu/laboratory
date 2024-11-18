@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="lab-localCs-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem lab-localCs-eu-lab</b></p><a name="lab-localCs-eu-lab"> </a><a name="hclab-localCs-eu-lab"> </a><a name="lab-localCs-eu-lab-en-US"> </a><p>This case-insensitive code system <code>http://example.org/lab-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">3002989<a name="lab-localCs-eu-lab-3002989"> </a></td><td>Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT</td></tr><tr><td style="white-space:nowrap">0020089<a name="lab-localCs-eu-lab-0020089"> </a></td><td>Hepatitis B Surface Antigen</td></tr><tr><td style="white-space:nowrap">0020092<a name="lab-localCs-eu-lab-0020092"> </a></td><td>Hepatitis B Core Antibody, IgM</td></tr><tr><td style="white-space:nowrap">0020093<a name="lab-localCs-eu-lab-0020093"> </a></td><td>Hepatitis A Antibody, IgM</td></tr><tr><td style="white-space:nowrap">3003128<a name="lab-localCs-eu-lab-3003128"> </a></td><td>Hepatitis C Antibody by CIA Interp</td></tr><tr><td style="white-space:nowrap">2002404<a name="lab-localCs-eu-lab-2002404"> </a></td><td>Hepatitis C Antibody by CIA Index</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/>
+  </extension>
+  <url value="http://example.org/lab-codes"/>
+  <version value="0.2.0-ci"/>
+  <name value="LaboratoryLocalCS"/>
+  <title value="Laboratory Code: example"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="List of local coded concepts used for supporting the examples defined in this guide."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="3002989"/>
+    <display value="Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"/>
+  </concept>
+  <concept>
+    <code value="0020089"/>
+    <display value="Hepatitis B Surface Antigen"/>
+  </concept>
+  <concept>
+    <code value="0020092"/>
+    <display value="Hepatitis B Core Antibody, IgM"/>
+  </concept>
+  <concept>
+    <code value="0020093"/>
+    <display value="Hepatitis A Antibody, IgM"/>
+  </concept>
+  <concept>
+    <code value="3003128"/>
+    <display value="Hepatitis C Antibody by CIA Interp"/>
+  </concept>
+  <concept>
+    <code value="2002404"/>
+    <display value="Hepatitis C Antibody by CIA Index"/>
+  </concept>
+</CodeSystem>

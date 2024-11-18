@@ -1,0 +1,12 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/lab-codes",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LaboratoryLocalCS",
+      "title" : "Laboratory Code: example",
+      "description" : "List of local coded concepts used for supporting the examples defined in this guide."
+    }
+  ]
+}

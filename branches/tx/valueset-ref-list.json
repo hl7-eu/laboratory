@@ -1,0 +1,258 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-certifiedRefMaterial-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabCertifiedReferenceMaterialVS",
+      "title" : "Laboratory Certified Reference Material",
+      "description" : "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU].",
+      "systems" : ["http://niaid.nih.gov", "http://pei.de", "http://nibsc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-observation-certifiedRefMaterialCodeable.html" : "Certified Reference Material: CodeableConcept"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-laterality-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabLateralityEuVs",
+      "title" : "Body Structure Laterality",
+      "description" : "Body Structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected. (based on SNOMED CT)",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-eu-lab.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LaboratoryResultStandardEuVs",
+      "title" : "Laboratory Code",
+      "description" : "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems.",
+      "systems" : ["http://loinc.org", "http://npu-terminology.org"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-eu-lab.html" : "Observation Results: laboratory"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-loinc-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LoincVs",
+      "title" : "Laboratory Code: LOINC",
+      "description" : "Laboratory observation codes based on the LOINC code system.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "ValueSet-lab-obsCode-eu-lab.html" : "Laboratory Code"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "NpuVs",
+      "title" : "Laboratory Code: NPU",
+      "description" : "Laboratory observation codes based on the NPU code system.",
+      "systems" : ["http://npu-terminology.org"],
+      "uses" : {
+      },
+      "ValueSet-lab-obsCode-eu-lab.html" : "Laboratory Code"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabOrderCodesEuVs",
+      "title" : "Laboratory Order",
+      "description" : "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-ServiceRequest-eu-lab.html" : "ServiceRequest: Laboratory Order"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-reportType-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabReportTypesEuVs",
+      "title" : "Laboratory Report Types",
+      "description" : "Laboratory Report Types.\nThis version includes only one code as suggested by the eHN guideline.\nCategory can be used for filtering per study type or specialty.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-eu-lab.html" : "DiagnosticReport: Laboratory Report",
+      "StructureDefinition-Composition-eu-lab.html" : "Composition: Laboratory Report"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSiteQualifierEuVs",
+      "title" : "Body Structure Qualifier",
+      "description" : "Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-eu-lab.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecialtyEuVs",
+      "title" : "Laboratory Specialty",
+      "description" : "Laboratory Specialties.\nNotes:\nNote 1: This value set is based on analysis of national coding practices in 8 European countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.\nNote 2: Many European countries are using additional laboratory specialty types, which should be mapped towards this value set.\nNote 3: In case of documented need, this value set could be extended.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-eu-lab.html" : "DiagnosticReport: Laboratory Report",
+      "StructureDefinition-Observation-resultslab-eu-lab.html" : "Observation Results: laboratory",
+      "StructureDefinition-Composition-eu-lab.html" : "Composition: Laboratory Report"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-speciesType-eu-vs",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpeciesTypesEuVs",
+      "title" : "Types of species",
+      "description" : "Types of animal species for non-human subjects",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Patient-animal-eu-lab.html" : "Patient: Animal"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecimenAdditiveEu",
+      "title" : "Specimen Additive",
+      "description" : "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Substance-additive-eu-lab.html" : "Substance: Specimen Additive Substance"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecimenContainerEu",
+      "title" : "Specimen Container",
+      "description" : "List of the containers commonly used to collect specimens (e.g. urine, blood,..).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-eu-lab.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabSpecimenTypesEuVs",
+      "title" : "Specimen Types",
+      "description" : "Laboratory Specimen Types",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Specimen-eu-lab.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabStudyTypesEuVs",
+      "title" : "Laboratory Study Types",
+      "description" : "Laboratory Study Types\nNotes:\nNote 1:26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticReport-eu-lab.html" : "DiagnosticReport: Laboratory Report",
+      "StructureDefinition-Observation-resultslab-eu-lab.html" : "Observation Results: laboratory",
+      "StructureDefinition-Composition-eu-lab.html" : "Composition: Laboratory Report"
+    },
+    {
+      "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab",
+      "version" : "0.2.0-ci",
+      "status" : "draft",
+      "name" : "LabTechniqueEuVs",
+      "title" : "Laboratory Techniques",
+      "description" : "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT).",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-Observation-resultslab-eu-lab.html" : "Observation Results: laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.141"],
+      "sources" : ["2.16.840.1.113883.4.642.3.141"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-eu-lab.html" : "Body structure: Laboratory",
+      "StructureDefinition-Specimen-eu-lab.html" : "Specimen: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/bodystructure-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMorphologicAbnormalities",
+      "title" : "SNOMED CT Morphologic Abnormalities",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.142"],
+      "sources" : ["2.16.840.1.113883.4.642.3.142"],
+      "uses" : {
+      },
+      "StructureDefinition-BodyStructure-eu-lab.html" : "Body structure: Laboratory"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "systems" : ["http://hl7.org/fhir/composition-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.241"],
+      "sources" : ["2.16.840.1.113883.4.642.3.241"],
+      "uses" : {
+      },
+      "ConceptMap-ConceptMap-eu-diagRptStatus2CompStatus.html" : "DiagnosticReport to Composition status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticReportStatus",
+      "title" : "DiagnosticReportStatus",
+      "description" : "The status of the diagnostic report.",
+      "systems" : ["http://hl7.org/fhir/diagnostic-report-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.235"],
+      "sources" : ["2.16.840.1.113883.4.642.3.235"],
+      "uses" : {
+      },
+      "ConceptMap-ConceptMap-eu-diagRptStatus2CompStatus.html" : "DiagnosticReport to Composition status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Iso3166-1-2",
+      "title" : "Iso 3166 Part 1: 2 Letter Codes",
+      "description" : "This value set defines the ISO 3166 Part 1 2-letter codes",
+      "systems" : ["urn:iso:std:iso:3166"],
+      "uses" : {
+      },
+      "StructureDefinition-Address-eu.html" : "Address (EU)"
+    }
+  ]
+}

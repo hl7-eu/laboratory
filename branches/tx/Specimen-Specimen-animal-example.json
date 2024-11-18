@@ -1,0 +1,25 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "Specimen-animal-example",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen Specimen-animal-example</b></p><a name=\"Specimen-animal-example\"> </a><a name=\"hcSpecimen-animal-example\"> </a><a name=\"Specimen-animal-example-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Blood specimen</span></p><p><b>subject</b>: <a href=\"Patient-Patient-animal-example.html\">Anonymous Patient (no stated gender), DoB Unknown</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></div>"
+  },
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119297000",
+      "display" : "Blood specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Patient-animal-example"
+  },
+  "collection" : {
+    "collectedDateTime" : "2022-10-25T13:35:00+01:00"
+  }
+}

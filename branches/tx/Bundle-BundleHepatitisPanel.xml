@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="BundleHepatitisPanel"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"/>
+  </meta>
+  <identifier>
+    <system value="http://example.org"/>
+    <value value="V1CZ454557891308174803488707671420"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2022-10-25T14:30:00+01:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"/>
+    <resource>
+      <Composition>
+        <id value="4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Composition_4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><p class="res-header-id"><b>Generated Narrative: Composition 4028a0b8-37fc-4491-a8e7-0f28e6fc59b4</b></p><a name="4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><a name="hc4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"> </a><a name="4028a0b8-37fc-4491-a8e7-0f28e6fc59b4-en-US"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>
+        </text>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11502-2"/>
+            <display value="Laboratory report"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <date value="2022-10-25T14:30:00+01:00"/>
+        <author>
+          <display value="MUDr. Aleš Procházka"/>
+        </author>
+        <title value="Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30"/>
+        <confidentiality value="N"/>
+        <attester>
+          <mode value="legal"/>
+          <time value="2020-12-27T14:30:00+01:00"/>
+          <party>
+            <reference value="urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"/>
+          </party>
+        </attester>
+        <custodian>
+          <reference value="urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"/>
+        </custodian>
+        <section>
+          <title value="Hepatitis screening panel"/>
+          <code>
+            <coding>
+              <system value="http://example.org/lab-codes"/>
+              <code value="3002989"/>
+              <display value="Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"/>
+            </coding>
+            <text value="Acute Hepatitis Panel, reflex to confirmation"/>
+          </code>
+          <entry>
+            <reference value="urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+    <resource>
+      <Patient>
+        <id value="8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><p class="res-header-id"><b>Generated Narrative: Patient 8472931c-fbd0-437b-9ed1-4f66472c78b5</b></p><a name="8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><a name="hc8472931c-fbd0-437b-9ed1-4f66472c78b5"> </a><a name="8472931c-fbd0-437b-9ed1-4f66472c78b5-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="NIIP"/>
+            </coding>
+          </type>
+          <system value="urn:oid:1.2.203.24341.1.20.2"/>
+          <value value="740512852"/>
+        </identifier>
+        <identifier>
+          <system value="urn:oid:1.2.203.24341.1.20.9.1"/>
+          <value value="A225961454"/>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              <code value="PPN"/>
+            </coding>
+          </type>
+          <system value="urn:oid:2.16.840.1.113883.4.330.203"/>
+          <value value="5484136"/>
+        </identifier>
+        <name>
+          <family value="Očkovaný"/>
+          <given value="František"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="2000-03-21"/>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3a743273-237a-446a-a8da-9e7521cce614"/>
+    <resource>
+      <DiagnosticReport>
+        <id value="3a743273-237a-446a-a8da-9e7521cce614"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="DiagnosticReport_3a743273-237a-446a-a8da-9e7521cce614"> </a><p class="res-header-id"><b>Generated Narrative: DiagnosticReport 3a743273-237a-446a-a8da-9e7521cce614</b></p><a name="3a743273-237a-446a-a8da-9e7521cce614"> </a><a name="hc3a743273-237a-446a-a8da-9e7521cce614"> </a><a name="3a743273-237a-446a-a8da-9e7521cce614-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}, {http://example.org/lab-codes 3002989}">Acute Hepatitis Panel, reflex to confirmation</span> </h2><table class="grid"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition">
+          <valueReference>
+            <reference value="urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"/>
+          </valueReference>
+        </extension>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11502-2"/>
+            <display value="Laboratory report"/>
+          </coding>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="3002989"/>
+            <display value="Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"/>
+          </coding>
+          <text value="Acute Hepatitis Panel, reflex to confirmation"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <specimen>
+          <reference value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        </specimen>
+        <result>
+          <reference value="urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"/>
+        </result>
+      </DiagnosticReport>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+    <resource>
+      <Specimen>
+        <id value="3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Specimen_3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><p class="res-header-id"><b>Generated Narrative: Specimen 3c9bd730-3ff9-40ee-9da1-4f3d5c526f13</b></p><a name="3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><a name="hc3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"> </a><a name="3c9bd730-3ff9-40ee-9da1-4f3d5c526f13-en-US"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119364003}">Serum specimen</span></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td></tr><tr><td style="display: none">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></div>
+        </text>
+        <status value="available"/>
+        <type>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="119364003"/>
+            <display value="Serum specimen"/>
+          </coding>
+        </type>
+        <collection>
+          <collectedDateTime value="2022-10-25T13:35:00+01:00"/>
+        </collection>
+      </Specimen>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"/>
+    <resource>
+      <Observation>
+        <id value="2c72163e-b741-44a3-aff7-c52f17f7a1ba"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><p class="res-header-id"><b>Generated Narrative: Observation 2c72163e-b741-44a3-aff7-c52f17f7a1ba</b></p><a name="2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><a name="hc2c72163e-b741-44a3-aff7-c52f17f7a1ba"> </a><a name="2c72163e-b741-44a3-aff7-c52f17f7a1ba-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 3002989}">Acute Hepatitis Panel, reflex to confirmation</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-104a5829-565b-46a6-85d6-36751ef79a40">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-01b8ec35-9b20-45a4-bd41-42eeae2fd521">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-096e27da-0768-47e4-b33c-9f1be93e1f88">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-861e7b48-5497-410a-bed8-2cde814e09fc">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleHepatitisPanel.html#urn-uuid-cc96d499-3e0e-4588-a021-4fe576766112">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="3002989"/>
+            <display value="Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"/>
+          </coding>
+          <text value="Acute Hepatitis Panel, reflex to confirmation"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <hasMember>
+          <reference value="urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40"/>
+        </hasMember>
+        <hasMember>
+          <reference value="urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521"/>
+        </hasMember>
+        <hasMember>
+          <reference value="urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88"/>
+        </hasMember>
+        <hasMember>
+          <reference value="urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc"/>
+        </hasMember>
+        <hasMember>
+          <reference value="urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112"/>
+        </hasMember>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40"/>
+    <resource>
+      <Observation>
+        <id value="104a5829-565b-46a6-85d6-36751ef79a40"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_104a5829-565b-46a6-85d6-36751ef79a40"> </a><p class="res-header-id"><b>Generated Narrative: Observation 104a5829-565b-46a6-85d6-36751ef79a40</b></p><a name="104a5829-565b-46a6-85d6-36751ef79a40"> </a><a name="hc104a5829-565b-46a6-85d6-36751ef79a40"> </a><a name="104a5829-565b-46a6-85d6-36751ef79a40-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 0020089}, {http://loinc.org 5196-1}">Hepatitis B Surface Antigen</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td>Negative</td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="0020089"/>
+            <display value="Hepatitis B Surface Antigen"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="5196-1"/>
+            <display value="Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"/>
+          </coding>
+          <text value="Hepatitis B Surface Antigen"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+        <specimen>
+          <reference value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        </specimen>
+        <referenceRange>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+          <text value="Negative"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521"/>
+    <resource>
+      <Observation>
+        <id value="01b8ec35-9b20-45a4-bd41-42eeae2fd521"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><p class="res-header-id"><b>Generated Narrative: Observation 01b8ec35-9b20-45a4-bd41-42eeae2fd521</b></p><a name="01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><a name="hc01b8ec35-9b20-45a4-bd41-42eeae2fd521"> </a><a name="01b8ec35-9b20-45a4-bd41-42eeae2fd521-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 0020092}, {http://loinc.org 24113-3}">Hepatitis B Core Antibody, IgM</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td>Negative</td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="0020092"/>
+            <display value="Hepatitis B Core Antibody, IgM"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="24113-3"/>
+            <display value="Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay"/>
+          </coding>
+          <text value="Hepatitis B Core Antibody, IgM"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+        <specimen>
+          <reference value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        </specimen>
+        <referenceRange>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+          <text value="Negative"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88"/>
+    <resource>
+      <Observation>
+        <id value="096e27da-0768-47e4-b33c-9f1be93e1f88"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><p class="res-header-id"><b>Generated Narrative: Observation 096e27da-0768-47e4-b33c-9f1be93e1f88</b></p><a name="096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><a name="hc096e27da-0768-47e4-b33c-9f1be93e1f88"> </a><a name="096e27da-0768-47e4-b33c-9f1be93e1f88-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 0020093}, {http://loinc.org 13950-1}">Hepatitis A Antibody, IgM</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260385009}">Negative</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td>Negative</td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="0020093"/>
+            <display value="Hepatitis A Antibody, IgM"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="13950-1"/>
+            <display value="Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"/>
+          </coding>
+          <text value="Hepatitis A Antibody, IgM"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="260385009"/>
+            <display value="Negative"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+        <specimen>
+          <reference value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        </specimen>
+        <referenceRange>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+          <text value="Negative"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc"/>
+    <resource>
+      <Observation>
+        <id value="861e7b48-5497-410a-bed8-2cde814e09fc"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_861e7b48-5497-410a-bed8-2cde814e09fc"> </a><p class="res-header-id"><b>Generated Narrative: Observation 861e7b48-5497-410a-bed8-2cde814e09fc</b></p><a name="861e7b48-5497-410a-bed8-2cde814e09fc"> </a><a name="hc861e7b48-5497-410a-bed8-2cde814e09fc"> </a><a name="861e7b48-5497-410a-bed8-2cde814e09fc-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 3003128}, {http://loinc.org 13955-0}">Hepatitis C Antibody by CIA Interp</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 10828004}">Positive</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}">Abnormal</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td><td>Negative</td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="3003128"/>
+            <display value="Hepatitis C Antibody by CIA Interp"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="13955-0"/>
+            <display value="Hepatitis C virus Ab [Presence] in Serum or Plasma by Immunoassay"/>
+          </coding>
+          <text value="Hepatitis C Antibody by CIA Interp"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="10828004"/>
+            <display value="Positive"/>
+          </coding>
+        </valueCodeableConcept>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="A"/>
+            <display value="Abnormal"/>
+          </coding>
+        </interpretation>
+        <specimen>
+          <reference value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        </specimen>
+        <referenceRange>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+          <text value="Negative"/>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112"/>
+    <resource>
+      <Observation>
+        <id value="cc96d499-3e0e-4588-a021-4fe576766112"/>
+        <meta>
+          <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_cc96d499-3e0e-4588-a021-4fe576766112"> </a><p class="res-header-id"><b>Generated Narrative: Observation cc96d499-3e0e-4588-a021-4fe576766112</b></p><a name="cc96d499-3e0e-4588-a021-4fe576766112"> </a><a name="hccc96d499-3e0e-4588-a021-4fe576766112"> </a><a name="cc96d499-3e0e-4588-a021-4fe576766112-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://example.org/lab-codes 2002404}, {http://loinc.org 57006-9}">Hepatitis C Antibody by CIA Index</span></p><p><b>subject</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: 9.89 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">Low Positive</span></p><p><b>specimen</b>: <a href="Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><blockquote><p><b>referenceRange</b></p><p><b>high</b>: 0.79 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 0.8 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>high</b>: 0.99 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:">Equivocal</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 1 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>high</b>: 10.99 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:">Low Positive</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 11 IV<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title="Codes:">High Positive</span></p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://example.org/lab-codes"/>
+            <code value="2002404"/>
+            <display value="Hepatitis C Antibody by CIA Index"/>
+          </coding>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="57006-9"/>
+            <display value="Hepatitis C virus IgG Ab [Units/volume] in Serum by Immunoassay"/>
+          </coding>
+          <text value="Hepatitis C Antibody by CIA Index"/>
+        </code>
+        <subject>
+          <reference value="urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"/>
+        </subject>
+        <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+        <performer>
+          <display value="MUDr. Aleš Procházka"/>
+        </performer>
+        <valueQuantity>
+          <value value="9.89"/>
+          <unit value="IV"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="[arb'U]/mL"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+          <text value="Low Positive"/>
+        </interpretation>
+        <specimen>
+          <reference value="urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"/>
+        </specimen>
+        <referenceRange>
+          <high>
+            <value value="0.79"/>
+            <unit value="IV"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="[arb'U]/mL"/>
+          </high>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+              <code value="normal"/>
+              <display value="Normal Range"/>
+            </coding>
+          </type>
+        </referenceRange>
+        <referenceRange>
+          <low>
+            <value value="0.8"/>
+            <unit value="IV"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="[arb'U]/mL"/>
+          </low>
+          <high>
+            <value value="0.99"/>
+            <unit value="IV"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="[arb'U]/mL"/>
+          </high>
+          <type>
+            <text value="Equivocal"/>
+          </type>
+        </referenceRange>
+        <referenceRange>
+          <low>
+            <value value="1"/>
+            <unit value="IV"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="[arb'U]/mL"/>
+          </low>
+          <high>
+            <value value="10.99"/>
+            <unit value="IV"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="[arb'U]/mL"/>
+          </high>
+          <type>
+            <text value="Low Positive"/>
+          </type>
+        </referenceRange>
+        <referenceRange>
+          <low>
+            <value value="11"/>
+            <unit value="IV"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="[arb'U]/mL"/>
+          </low>
+          <type>
+            <text value="High Positive"/>
+          </type>
+        </referenceRange>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"/>
+    <resource>
+      <Organization>
+        <id value="608b5309-2609-4d03-b6da-c758bfa1de70"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_608b5309-2609-4d03-b6da-c758bfa1de70"> </a><p class="res-header-id"><b>Generated Narrative: Organization 608b5309-2609-4d03-b6da-c758bfa1de70</b></p><a name="608b5309-2609-4d03-b6da-c758bfa1de70"> </a><a name="hc608b5309-2609-4d03-b6da-c758bfa1de70"> </a><a name="608b5309-2609-4d03-b6da-c758bfa1de70-en-US"> </a><p><b>identifier</b>: <code>http://example.org/czech-orgs</code>/24341</p><p><b>name</b>: Ministry of Health of the Czech Republic</p></div>
+        </text>
+        <identifier>
+          <system value="http://example.org/czech-orgs"/>
+          <value value="24341"/>
+        </identifier>
+        <name value="Ministry of Health of the Czech Republic"/>
+      </Organization>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Specimen Container - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"24.61"}
+    h3,h4,h5,h6{--heading-prefix:"24.61"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Specimen Container</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-lab-specimenContainer-eu-lab.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-lab-specimenContainer-eu-lab.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-lab-specimenContainer-eu-lab.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Specimen Container
+
+  </h2>
+  <table class="colstu">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.2.0-ci<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab|0.2.0-ci"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="3">
+        
+          <i>
+            
+            Standards status:
+          </i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Trial-use</a>
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 2
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">LabSpecimenContainerEu</span></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p>
+</td>
+    </tr>
+
+  </table>
+
+<p>
+<p>List of the containers commonly used to collect specimens (e.g. urine, blood,..).</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-Specimen-eu-lab.html">Specimen: Laboratory</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-specimenContainer-eu-lab</b></p><a name="lab-specimenContainer-eu-lab"> </a><a name="hclab-specimenContainer-eu-lab"> </a><a name="lab-specimenContainer-eu-lab-en-US"> </a>
+<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/702290003">702290003</a></td><td>Cervical cytology microscopy slide</td></tr><tr><td><a href="http://snomed.info/id/706057008">706057008</a></td><td>Cytology specimen container</td></tr><tr><td><a href="http://snomed.info/id/706052002">706052002</a></td><td>Evacuated blood collection tube</td></tr><tr><td><a href="http://snomed.info/id/702292006">702292006</a></td><td>Evacuated blood collection tube, K3EDTA/sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/767387006">767387006</a></td><td>Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole</td></tr><tr><td><a href="http://snomed.info/id/767384004">767384004</a></td><td>Evacuated blood collection tube with clot activator</td></tr><tr><td><a href="http://snomed.info/id/767390000">767390000</a></td><td>Evacuated blood collection tube with heparin lithium and gel separator</td></tr><tr><td><a href="http://snomed.info/id/767382000">767382000</a></td><td>Evacuated blood collection tube with heparin sodium</td></tr><tr><td><a href="http://snomed.info/id/767660003">767660003</a></td><td>Evacuated blood collection tube with sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/767389009">767389009</a></td><td>Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin</td></tr><tr><td><a href="http://snomed.info/id/702279008">702279008</a></td><td>Evacuated blood collection tube, gel separator</td></tr><tr><td><a href="http://snomed.info/id/702293001">702293001</a></td><td>Evacuated blood collection tube, K2EDTA/aprotinin</td></tr><tr><td><a href="http://snomed.info/id/702278000">702278000</a></td><td>Evacuated blood collection tube, no additive/metal-free</td></tr><tr><td><a href="http://snomed.info/id/702280006">702280006</a></td><td>Evacuated blood collection tube, RNA stabiliser</td></tr><tr><td><a href="http://snomed.info/id/702281005">702281005</a></td><td>Evacuated blood collection tube, thrombin/clot activator/gel separator</td></tr><tr><td><a href="http://snomed.info/id/702310001">702310001</a></td><td>Evacuated saliva specimen container, sodium azide</td></tr><tr><td><a href="http://snomed.info/id/706056004">706056004</a></td><td>Evacuated urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/702302002">702302002</a></td><td>Evacuated urine specimen container, boric acid (H3BO3)</td></tr><tr><td><a href="http://snomed.info/id/702288004">702288004</a></td><td>Evacuated urine specimen container, boric acid (H3BO3)/sodium formate</td></tr><tr><td><a href="http://snomed.info/id/702289007">702289007</a></td><td>Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine</td></tr><tr><td><a href="http://snomed.info/id/702303007">702303007</a></td><td>Evacuated urine specimen container, multiple preservative</td></tr><tr><td><a href="http://snomed.info/id/702308003">702308003</a></td><td>Evacuated urine specimen container, no additive</td></tr><tr><td><a href="http://snomed.info/id/706047007">706047007</a></td><td>Fecal specimen container</td></tr><tr><td><a href="http://snomed.info/id/706053007">706053007</a></td><td>General specimen container</td></tr><tr><td><a href="http://snomed.info/id/702268003">702268003</a></td><td>General specimen container, no additive, non-sterile</td></tr><tr><td><a href="http://snomed.info/id/702269006">702269006</a></td><td>General specimen container, no additive, sterile</td></tr><tr><td><a href="http://snomed.info/id/874799005">874799005</a></td><td>Microbial cryotube</td></tr><tr><td><a href="http://snomed.info/id/706050005">706050005</a></td><td>Microcapillary blood collection tube</td></tr><tr><td><a href="http://snomed.info/id/702275002">702275002</a></td><td>Microcapillary blood collection tube, ammonium heparin</td></tr><tr><td><a href="http://snomed.info/id/702276001">702276001</a></td><td>Microcapillary blood collection tube, K2EDTA</td></tr><tr><td><a href="http://snomed.info/id/702277005">702277005</a></td><td>Microcapillary blood collection tube, no additive</td></tr><tr><td><a href="http://snomed.info/id/702304001">702304001</a></td><td>Microcapillary blood transfer tube, clot activator</td></tr><tr><td><a href="http://snomed.info/id/702306004">702306004</a></td><td>Microcapillary blood transfer tube, EDTA</td></tr><tr><td><a href="http://snomed.info/id/702307008">702307008</a></td><td>Microcapillary blood transfer tube, heparin</td></tr><tr><td><a href="http://snomed.info/id/702305000">702305000</a></td><td>Microcapillary sodium fluoride blood transfer tube</td></tr><tr><td><a href="http://snomed.info/id/702224000">702224000</a></td><td>Midstream urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/706051009">706051009</a></td><td>Non-evacuated blood collection tube</td></tr><tr><td><a href="http://snomed.info/id/702283008">702283008</a></td><td>Non-evacuated blood collection tube with gel separator</td></tr><tr><td><a href="http://snomed.info/id/702297000">702297000</a></td><td>Non-evacuated blood collection tube, clot activator</td></tr><tr><td><a href="http://snomed.info/id/702295008">702295008</a></td><td>Non-evacuated blood collection tube, clot activator/gel separator</td></tr><tr><td><a href="http://snomed.info/id/702282003">702282003</a></td><td>Non-evacuated blood collection tube, EDTA</td></tr><tr><td><a href="http://snomed.info/id/702299002">702299002</a></td><td>Non-evacuated blood collection tube, K2EDTA</td></tr><tr><td><a href="http://snomed.info/id/702298005">702298005</a></td><td>Non-evacuated blood collection tube, K3EDTA</td></tr><tr><td><a href="http://snomed.info/id/702284002">702284002</a></td><td>Non-evacuated blood collection tube, lithium heparin</td></tr><tr><td><a href="http://snomed.info/id/702300005">702300005</a></td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile</td></tr><tr><td><a href="http://snomed.info/id/702285001">702285001</a></td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, sterile</td></tr><tr><td><a href="http://snomed.info/id/702286000">702286000</a></td><td>Non-evacuated blood collection tube, NaEDTA/sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/702256007">702256007</a></td><td>Non-evacuated blood collection tube, no additive</td></tr><tr><td><a href="http://snomed.info/id/702287009">702287009</a></td><td>Non-evacuated blood collection tube, potassium oxalate/sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/702296009">702296009</a></td><td>Non-evacuated blood collection tube, sodium citrate</td></tr><tr><td><a href="http://snomed.info/id/702264001">702264001</a></td><td>Non-sterile urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/702309006">702309006</a></td><td>Saliva specimen container, no additive</td></tr><tr><td><a href="http://snomed.info/id/706058003">706058003</a></td><td>Secretory specimen container</td></tr><tr><td><a href="http://snomed.info/id/706046003">706046003</a></td><td>Specimen receptacle</td></tr><tr><td><a href="http://snomed.info/id/702223006">702223006</a></td><td>Sputum specimen container</td></tr><tr><td><a href="http://snomed.info/id/702244006">702244006</a></td><td>Sterile urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/702232008">702232008</a></td><td>Sweat specimen container</td></tr><tr><td><a href="http://snomed.info/id/702294007">702294007</a></td><td>Syringe-blood collection tube transfer</td></tr><tr><td><a href="http://snomed.info/id/706054001">706054001</a></td><td>Urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/767385003">767385003</a></td><td>Aerobic blood culture bottle</td></tr><tr><td><a href="http://snomed.info/id/767383005">767383005</a></td><td>Anaerobic blood culture bottle</td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet </b></p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 01-Aug 2024</p><p>This value set contains 61 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702290003"> </a>  <a href="http://snomed.info/id/702290003">702290003</a></td><td>http://snomed.info/sct</td><td>Cervical cytology microscopy slide</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706057008"> </a>  <a href="http://snomed.info/id/706057008">706057008</a></td><td>http://snomed.info/sct</td><td>Cytology specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706052002"> </a>  <a href="http://snomed.info/id/706052002">706052002</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702292006"> </a>  <a href="http://snomed.info/id/702292006">702292006</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube, K3EDTA/sodium fluoride</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767387006"> </a>  <a href="http://snomed.info/id/767387006">767387006</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole (physical object)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767384004"> </a>  <a href="http://snomed.info/id/767384004">767384004</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube with clot activator (physical object)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767390000"> </a>  <a href="http://snomed.info/id/767390000">767390000</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube with heparin lithium and gel separator (physical object)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767382000"> </a>  <a href="http://snomed.info/id/767382000">767382000</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube with heparin sodium</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767660003"> </a>  <a href="http://snomed.info/id/767660003">767660003</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube with sodium fluoride</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767389009"> </a>  <a href="http://snomed.info/id/767389009">767389009</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin (physical object)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702279008"> </a>  <a href="http://snomed.info/id/702279008">702279008</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube, gel separator</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702293001"> </a>  <a href="http://snomed.info/id/702293001">702293001</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube, K2EDTA/aprotinin</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702278000"> </a>  <a href="http://snomed.info/id/702278000">702278000</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube, no additive/metal-free</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702280006"> </a>  <a href="http://snomed.info/id/702280006">702280006</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube, RNA stabiliser</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702281005"> </a>  <a href="http://snomed.info/id/702281005">702281005</a></td><td>http://snomed.info/sct</td><td>Evacuated blood collection tube, thrombin/clot activator/gel separator</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702310001"> </a>  <a href="http://snomed.info/id/702310001">702310001</a></td><td>http://snomed.info/sct</td><td>Evacuated saliva specimen container IVD, sodium azide</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706056004"> </a>  <a href="http://snomed.info/id/706056004">706056004</a></td><td>http://snomed.info/sct</td><td>Evacuated urine specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702302002"> </a>  <a href="http://snomed.info/id/702302002">702302002</a></td><td>http://snomed.info/sct</td><td>Evacuated urine specimen container, boric acid (H3BO3)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702288004"> </a>  <a href="http://snomed.info/id/702288004">702288004</a></td><td>http://snomed.info/sct</td><td>Evacuated urine specimen container, boric acid (H3BO3)/sodium formate</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702289007"> </a>  <a href="http://snomed.info/id/702289007">702289007</a></td><td>http://snomed.info/sct</td><td>Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702303007"> </a>  <a href="http://snomed.info/id/702303007">702303007</a></td><td>http://snomed.info/sct</td><td>Evacuated urine specimen container, multiple preservative</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702308003"> </a>  <a href="http://snomed.info/id/702308003">702308003</a></td><td>http://snomed.info/sct</td><td>Evacuated urine specimen container IVD, no additive</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706047007"> </a>  <a href="http://snomed.info/id/706047007">706047007</a></td><td>http://snomed.info/sct</td><td>Faecal specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706053007"> </a>  <a href="http://snomed.info/id/706053007">706053007</a></td><td>http://snomed.info/sct</td><td>General specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702268003"> </a>  <a href="http://snomed.info/id/702268003">702268003</a></td><td>http://snomed.info/sct</td><td>General specimen container, no additive, non-sterile</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702269006"> </a>  <a href="http://snomed.info/id/702269006">702269006</a></td><td>http://snomed.info/sct</td><td>General specimen container, no additive, sterile</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-874799005"> </a>  <a href="http://snomed.info/id/874799005">874799005</a></td><td>http://snomed.info/sct</td><td>Microbial cryotube (physical object)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706050005"> </a>  <a href="http://snomed.info/id/706050005">706050005</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood collection tube</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702275002"> </a>  <a href="http://snomed.info/id/702275002">702275002</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood collection tube, ammonium heparin</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702276001"> </a>  <a href="http://snomed.info/id/702276001">702276001</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood collection tube, K2EDTA</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702277005"> </a>  <a href="http://snomed.info/id/702277005">702277005</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood collection tube, no additive</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702304001"> </a>  <a href="http://snomed.info/id/702304001">702304001</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood transfer tube, clot activator</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702306004"> </a>  <a href="http://snomed.info/id/702306004">702306004</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood transfer tube, EDTA</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702307008"> </a>  <a href="http://snomed.info/id/702307008">702307008</a></td><td>http://snomed.info/sct</td><td>Microcapillary blood transfer tube IVD, heparin</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702305000"> </a>  <a href="http://snomed.info/id/702305000">702305000</a></td><td>http://snomed.info/sct</td><td>Microcapillary sodium fluoride blood transfer tube</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702224000"> </a>  <a href="http://snomed.info/id/702224000">702224000</a></td><td>http://snomed.info/sct</td><td>Midstream urine specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706051009"> </a>  <a href="http://snomed.info/id/706051009">706051009</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702283008"> </a>  <a href="http://snomed.info/id/702283008">702283008</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube with gel separator</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702297000"> </a>  <a href="http://snomed.info/id/702297000">702297000</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, clot activator</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702295008"> </a>  <a href="http://snomed.info/id/702295008">702295008</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, clot activator/gel separator</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702282003"> </a>  <a href="http://snomed.info/id/702282003">702282003</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, EDTA</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702299002"> </a>  <a href="http://snomed.info/id/702299002">702299002</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, K2EDTA</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702298005"> </a>  <a href="http://snomed.info/id/702298005">702298005</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, K3EDTA</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702284002"> </a>  <a href="http://snomed.info/id/702284002">702284002</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, lithium heparin</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702300005"> </a>  <a href="http://snomed.info/id/702300005">702300005</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702285001"> </a>  <a href="http://snomed.info/id/702285001">702285001</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, sterile</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702286000"> </a>  <a href="http://snomed.info/id/702286000">702286000</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, NaEDTA/sodium fluoride</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702256007"> </a>  <a href="http://snomed.info/id/702256007">702256007</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, no additive</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702287009"> </a>  <a href="http://snomed.info/id/702287009">702287009</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, potassium oxalate/sodium fluoride</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702296009"> </a>  <a href="http://snomed.info/id/702296009">702296009</a></td><td>http://snomed.info/sct</td><td>Non-evacuated blood collection tube, sodium citrate</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702264001"> </a>  <a href="http://snomed.info/id/702264001">702264001</a></td><td>http://snomed.info/sct</td><td>Non-sterile urine specimen container IVD</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702309006"> </a>  <a href="http://snomed.info/id/702309006">702309006</a></td><td>http://snomed.info/sct</td><td>Saliva specimen container IVD, no additive</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706058003"> </a>  <a href="http://snomed.info/id/706058003">706058003</a></td><td>http://snomed.info/sct</td><td>Secretory specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706046003"> </a>  <a href="http://snomed.info/id/706046003">706046003</a></td><td>http://snomed.info/sct</td><td>Specimen receptacle</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702223006"> </a>  <a href="http://snomed.info/id/702223006">702223006</a></td><td>http://snomed.info/sct</td><td>Sputum specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702244006"> </a>  <a href="http://snomed.info/id/702244006">702244006</a></td><td>http://snomed.info/sct</td><td>Sterile urine specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702232008"> </a>  <a href="http://snomed.info/id/702232008">702232008</a></td><td>http://snomed.info/sct</td><td>Sweat specimen container IVD</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-702294007"> </a>  <a href="http://snomed.info/id/702294007">702294007</a></td><td>http://snomed.info/sct</td><td>Syringe-blood collection tube transfer</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-706054001"> </a>  <a href="http://snomed.info/id/706054001">706054001</a></td><td>http://snomed.info/sct</td><td>Urine specimen container</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767385003"> </a>  <a href="http://snomed.info/id/767385003">767385003</a></td><td>http://snomed.info/sct</td><td>Aerobic blood culture bottle</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-767383005"> </a>  <a href="http://snomed.info/id/767383005">767383005</a></td><td>http://snomed.info/sct</td><td>Anaerobic blood culture bottle (physical object)</td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

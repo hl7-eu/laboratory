@@ -1,0 +1,464 @@
+[
+  {
+    "id" : "lab-localCs-eu-lab",
+    "type" : "CodeSystem",
+    "url" : "http://example.org/lab-codes",
+    "version" : "0.2.0-ci",
+    "name" : "LaboratoryLocalCS"
+  },
+  {
+    "id" : "ConceptMap-eu-diagRptStatus2CompStatus",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus",
+    "version" : "0.2.0-ci",
+    "name" : "ConceptMapDiagRptStatus2CompStatus"
+  },
+  {
+    "id" : "author2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/author2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabRptAuthor2FHIR"
+  },
+  {
+    "id" : "labRpt2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/labRpt2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabRpt2FHIR"
+  },
+  {
+    "id" : "legalAuth2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/legalAuth2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LegalAuth2Fhir"
+  },
+  {
+    "id" : "order2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/order2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "Order2Fhir"
+  },
+  {
+    "id" : "payer2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/payer2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "Payer2Fhir"
+  },
+  {
+    "id" : "recipient2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/recipient2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "Recipient2FHIR"
+  },
+  {
+    "id" : "result2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/result2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabRptResult2FHIR"
+  },
+  {
+    "id" : "specimen2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/specimen2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "Specimen2Fhir"
+  },
+  {
+    "id" : "subject2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/subject2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabRptSubject2Fhir"
+  },
+  {
+    "id" : "validator2FHIR-eu-lab",
+    "type" : "ConceptMap",
+    "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/validator2FHIR-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "Validator2Fhir"
+  },
+  {
+    "id" : "hl7.fhir.eu.laboratory",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory",
+    "version" : "0.2.0-ci",
+    "name" : "Hl7EuLaboratoryIg"
+  },
+  {
+    "id" : "Address-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu",
+    "version" : "0.2.0-ci",
+    "name" : "AddressEu"
+  },
+  {
+    "id" : "Author",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Author",
+    "version" : "0.2.0-ci",
+    "name" : "AuthorLabEhn"
+  },
+  {
+    "id" : "BodyStructure-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/BodyStructure-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "BodyStructureEuLab"
+  },
+  {
+    "id" : "Bundle-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "BundleLabReportEu"
+  },
+  {
+    "id" : "Composition-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "CompositionLabReportEu"
+  },
+  {
+    "id" : "DiagnosticReport-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "DiagnosticReportLabEu"
+  },
+  {
+    "id" : "HumanName-eu",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-eu",
+    "version" : "0.2.0-ci",
+    "name" : "HumanNameEu"
+  },
+  {
+    "id" : "HumanName-obl-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-obl-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "HumanNameEuObligations"
+  },
+  {
+    "id" : "LabReport",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport",
+    "version" : "0.2.0-ci",
+    "name" : "LabReportEhn"
+  },
+  {
+    "id" : "LegalAuthenticator",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/LegalAuthenticator",
+    "version" : "0.2.0-ci",
+    "name" : "LegalAuthenticatorLabEhn"
+  },
+  {
+    "id" : "Observation-obl-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-obl-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "ObservationEuObligations"
+  },
+  {
+    "id" : "Observation-resultslab-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "ObservationResultsLaboratoryEu"
+  },
+  {
+    "id" : "Order",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Order",
+    "version" : "0.2.0-ci",
+    "name" : "OrderLabEhn"
+  },
+  {
+    "id" : "Patient-animal-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "PatientAnimalEu"
+  },
+  {
+    "id" : "Patient-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "PatientEuLab"
+  },
+  {
+    "id" : "Patient-obl-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-obl-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "PatientEuObligations"
+  },
+  {
+    "id" : "Payer",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Payer",
+    "version" : "0.2.0-ci",
+    "name" : "PayerLabEhn"
+  },
+  {
+    "id" : "Practitioner-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "PractitionerEu"
+  },
+  {
+    "id" : "PractitionerRole-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "PractitionerRoleEu"
+  },
+  {
+    "id" : "Quantity-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Quantity-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "QuantityEuLab"
+  },
+  {
+    "id" : "Ratio-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Ratio-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "RatioEuLab"
+  },
+  {
+    "id" : "Recipient",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient",
+    "version" : "0.2.0-ci",
+    "name" : "RecipientLabEhn"
+  },
+  {
+    "id" : "Result",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Result",
+    "version" : "0.2.0-ci",
+    "name" : "ResultLabEhn"
+  },
+  {
+    "id" : "ServiceRequest-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "ServiceRequestLabEu"
+  },
+  {
+    "id" : "ServiceRequest-obl-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-obl-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "ServiceRequestEuObligations"
+  },
+  {
+    "id" : "Specimen-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "SpecimenEu"
+  },
+  {
+    "id" : "Specimen-obl-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-obl-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "SpecimenEuObligations"
+  },
+  {
+    "id" : "SpecimenLab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab",
+    "version" : "0.2.0-ci",
+    "name" : "SpecimenLabEhn"
+  },
+  {
+    "id" : "Subject",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Subject",
+    "version" : "0.2.0-ci",
+    "name" : "SubjectLabEhn"
+  },
+  {
+    "id" : "Substance-additive-eu-lab",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Substance-additive-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "SpecimenAdditiveSubstance"
+  },
+  {
+    "id" : "Validator",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Validator",
+    "version" : "0.2.0-ci",
+    "name" : "ValidatorLabEhn"
+  },
+  {
+    "id" : "composition-diagnosticReportReference",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference",
+    "version" : "0.2.0-ci",
+    "name" : "DiagnosticReportReference"
+  },
+  {
+    "id" : "observation-certifiedRefMaterialCodeable",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable",
+    "version" : "0.2.0-ci",
+    "name" : "ObservationCertifiedRefMaterialCodeable"
+  },
+  {
+    "id" : "observation-certifiedRefMaterialIdentifer",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer",
+    "version" : "0.2.0-ci",
+    "name" : "ObservationCertifiedRefMaterialIdentifer"
+  },
+  {
+    "id" : "observation-deviceLabTestKit",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit",
+    "version" : "0.2.0-ci",
+    "name" : "DeviceLabTestKit"
+  },
+  {
+    "id" : "lab-certifiedRefMaterial-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-certifiedRefMaterial-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabCertifiedReferenceMaterialVS"
+  },
+  {
+    "id" : "lab-laterality-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-laterality-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabLateralityEuVs"
+  },
+  {
+    "id" : "lab-obsCode-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LaboratoryResultStandardEuVs"
+  },
+  {
+    "id" : "lab-obsCode-loinc-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-loinc-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LoincVs"
+  },
+  {
+    "id" : "lab-obsCode-npu-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "NpuVs"
+  },
+  {
+    "id" : "lab-orderCodes-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabOrderCodesEuVs"
+  },
+  {
+    "id" : "lab-reportType-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-reportType-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabReportTypesEuVs"
+  },
+  {
+    "id" : "lab-siteQualifier-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabSiteQualifierEuVs"
+  },
+  {
+    "id" : "lab-specialty-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabSpecialtyEuVs"
+  },
+  {
+    "id" : "lab-speciesType-eu-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-speciesType-eu-vs",
+    "version" : "0.2.0-ci",
+    "name" : "LabSpeciesTypesEuVs"
+  },
+  {
+    "id" : "lab-specimenAdditive-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabSpecimenAdditiveEu"
+  },
+  {
+    "id" : "lab-specimenContainer-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabSpecimenContainerEu"
+  },
+  {
+    "id" : "lab-specimenType-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabSpecimenTypesEuVs"
+  },
+  {
+    "id" : "lab-studyType-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabStudyTypesEuVs"
+  },
+  {
+    "id" : "lab-technique-eu-lab",
+    "type" : "ValueSet",
+    "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabTechniqueEuVs"
+  },
+  {
+    "id" : "actor-consumer-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabReportConsumer"
+  },
+  {
+    "id" : "actor-creator-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-creator-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabReportCreator"
+  },
+  {
+    "id" : "actor-repos-eu-lab",
+    "type" : "ActorDefinition",
+    "url" : "http://hl7.eu/fhir/laboratory/actor-repos-eu-lab",
+    "version" : "0.2.0-ci",
+    "name" : "LabReportRepos"
+  }
+]

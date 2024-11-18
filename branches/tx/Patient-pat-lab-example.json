@@ -1,0 +1,51 @@
+{
+  "resourceType" : "Patient",
+  "id" : "pat-lab-example",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient pat-lab-example</b></p><a name=\"pat-lab-example\"> </a><a name=\"hcpat-lab-example\"> </a><a name=\"pat-lab-example-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "NIIP"
+      }]
+    },
+    "system" : "urn:oid:1.2.203.24341.1.20.2",
+    "value" : "740512852"
+  },
+  {
+    "system" : "urn:oid:1.2.203.24341.1.20.9.1",
+    "value" : "A225961454"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "PPN"
+      }]
+    },
+    "system" : "urn:oid:2.16.840.1.113883.4.330.203",
+    "value" : "5484136"
+  }],
+  "name" : [{
+    "family" : "Očkovaný Moreira",
+    "_family" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+        "valueString" : "Moreira"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+        "valueString" : "Očkovaný"
+      }]
+    },
+    "given" : ["František"]
+  }],
+  "gender" : "male",
+  "birthDate" : "2000-03-21"
+}

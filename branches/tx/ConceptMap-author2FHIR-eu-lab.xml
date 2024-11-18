@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="author2FHIR-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap author2FHIR-eu-lab</b></p><a name="author2FHIR-eu-lab"> </a><a name="hcauthor2FHIR-eu-lab"> </a><a name="author2FHIR-eu-lab-en-US"> </a><p>Mapping from <a href="StructureDefinition-Author.html">A.1.5 - Author</a> to <a href="StructureDefinition-Bundle-eu-lab.html">Bundle: Laboratory Report</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Author.html">A.1.5 - Author</a> to <a href="StructureDefinition-Composition-eu-lab.html">Composition: Laboratory Report</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Author.identifier (A.1.5.1 Author identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.identifier</td><td/></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.name</td><td>Human Author and author.ofType(Practitioner)</td></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.Practitioner.name</td><td>Human Author and  author.ofType(PractitionerRole)</td></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.device.name</td><td>Device Author, implies author.ofType(Device)</td></tr><tr><td>Author.organization (A.1.5.3 Author organization)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.organization</td><td>Human Author and author.ofType(PractitionerRole)</td></tr><tr><td>Author.organization (A.1.5.3 Author organization)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Composition.author.owner</td><td>Device Author, implies author.ofType(Device)</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="StructureDefinition-Author.html">A.1.5 - Author</a> to <a href="StructureDefinition-DiagnosticReport-eu-lab.html">DiagnosticReport: Laboratory Report</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Author.identifier (A.1.5.1 Author identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.resultsInterpreter.identifier</td><td>If the author is the interpreter</td></tr><tr><td>Author.identifier (A.1.5.1 Author identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.performer.identifier</td><td>If the author is the performer</td></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.resultsInterpreter.name</td><td>If the author is the interpreter and 
+resultsInterpreter.resolve().ofType(Practitioner)</td></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.resultsInterpreter.practitioner.name</td><td>If the author is the interpreter and resultsInterpreter.resolve().ofType(PractitionerRole)</td></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.performer.name</td><td>If the author is the performer and performer.resolve().ofType(Practitioner)</td></tr><tr><td>Author.name (A.1.5.2 Author name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.performer.Practitioner.name</td><td>If the author is the performer and performer.resolve().ofType(PractitionerRole)</td></tr><tr><td>Author.organization (A.1.5.3 Author organization)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.resultsInterpreter.organization</td><td>If the author is the interpreter and resultsInterpreter.resolve().ofType(PractitionerRole)</td></tr><tr><td>Author.organization (A.1.5.3 Author organization)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>DiagnosticReport.performer.organization</td><td>If the author is the performer and performer.resolve().ofType(PractitionerRole)</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ConceptMap/author2FHIR-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabRptAuthor2FHIR"/>
+  <title value="eHN Author to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="eHN Author Model to this guide Map"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="It shows how the Laboratory Report Author data set defined by the EU eHN guidelines is mapped into this guide"/>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceUri value="http://hl7.eu/fhir/laboratory/StructureDefinition/Author"/>
+  <targetUri value="http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"/>
+  <group>
+    <source value="http://hl7.eu/fhir/laboratory/StructureDefinition/Author"/>
+    <target value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"/>
+    <element>
+      <code value="Author.identifier"/>
+      <display value="A.1.5.1 Author identifier"/>
+      <target>
+        <code value="Composition.author.identifier"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="Composition.author.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="Human Author and author.ofType(Practitioner)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="Composition.author.Practitioner.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="Human Author and  author.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="Composition.device.name"/>
+        <equivalence value="equivalent"/>
+        <comment value="Device Author, implies author.ofType(Device)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.organization"/>
+      <display value="A.1.5.3 Author organization"/>
+      <target>
+        <code value="Composition.author.organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="Human Author and author.ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.organization"/>
+      <display value="A.1.5.3 Author organization"/>
+      <target>
+        <code value="Composition.author.owner"/>
+        <equivalence value="equivalent"/>
+        <comment value="Device Author, implies author.ofType(Device)"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.eu/fhir/laboratory/StructureDefinition/Author"/>
+    <target value="http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"/>
+    <element>
+      <code value="Author.identifier"/>
+      <display value="A.1.5.1 Author identifier"/>
+      <target>
+        <code value="DiagnosticReport.resultsInterpreter.identifier"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the interpreter"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.identifier"/>
+      <display value="A.1.5.1 Author identifier"/>
+      <target>
+        <code value="DiagnosticReport.performer.identifier"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the performer"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="DiagnosticReport.resultsInterpreter.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the interpreter and &#xA;resultsInterpreter.resolve().ofType(Practitioner)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="DiagnosticReport.resultsInterpreter.practitioner.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the interpreter and resultsInterpreter.resolve().ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="DiagnosticReport.performer.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the performer and performer.resolve().ofType(Practitioner)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.name"/>
+      <display value="A.1.5.2 Author name"/>
+      <target>
+        <code value="DiagnosticReport.performer.Practitioner.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the performer and performer.resolve().ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.organization"/>
+      <display value="A.1.5.3 Author organization"/>
+      <target>
+        <code value="DiagnosticReport.resultsInterpreter.organization"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the interpreter and resultsInterpreter.resolve().ofType(PractitionerRole)"/>
+      </target>
+    </element>
+    <element>
+      <code value="Author.organization"/>
+      <display value="A.1.5.3 Author organization"/>
+      <target>
+        <code value="DiagnosticReport.performer.organization"/>
+        <equivalence value="relatedto"/>
+        <comment value="If the author is the performer and performer.resolve().ofType(PractitionerRole)"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

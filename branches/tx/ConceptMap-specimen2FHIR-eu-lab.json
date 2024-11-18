@@ -1,0 +1,160 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "specimen2FHIR-eu-lab",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap specimen2FHIR-eu-lab</b></p><a name=\"specimen2FHIR-eu-lab\"> </a><a name=\"hcspecimen2FHIR-eu-lab\"> </a><a name=\"specimen2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-SpecimenLab.html\">A.4 - Specimen information</a> to <a href=\"StructureDefinition-Specimen-eu-lab.html\">Specimen: Laboratory</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-SpecimenLab.html\">A.4 - Specimen information</a> to <a href=\"StructureDefinition-Specimen-eu-lab.html\">Specimen: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>SpecimenLab.identifier (A.4.1 Specimen identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Specimen.identifier</td><td/></tr><tr><td>SpecimenLab.speciesType (A.4.2 Type of species)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Specimen.subject.extension:patient-animal.extension:species</td><td>subject.ofType(Patient)</td></tr><tr><td>SpecimenLab.material (A.4.3 Material)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Specimen.type</td><td/></tr><tr><td>SpecimenLab.collected (A.4.4 Collection period)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Specimen.collection.collected[x]</td><td/></tr><tr><td>SpecimenLab.anatomicLocation (A.4.5 Anatomic location)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Specimen.collection.bodySite</td><td/></tr><tr><td>SpecimenLab.anatomicLocation (A.4.5 Anatomic location)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.morphology (A.4.6 Morphology)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Specimen.collection.extension:bodySite</td><td>see Group 2 for details</td></tr><tr><td>SpecimenLab.sourceDevice (A.4.7 Source Device)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>Specimen.subject</td><td>When the device (e.g. the catheter) is what has been examinated.\nIf the device is meant instead as the mean used to collect the specimen (e.g blood collected from the catheter), then, this is represented by the collectionMethod attribute and mapped into the Specimen.collection.method</td></tr><tr><td>SpecimenLab.collectionMethod (A.4.8 Collection procedure/method)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Specimen.collection.method</td><td/></tr><tr><td>SpecimenLab.receivedDateTime (A.4.9 Received date)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Specimen.receivedTime</td><td/></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href=\"StructureDefinition-SpecimenLab.html\">A.4 - Specimen information</a> to <a href=\"StructureDefinition-BodyStructure-eu-lab.html\">Body structure: Laboratory</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>SpecimenLab.anatomicLocation (A.4.5 Anatomic location)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>BodyStructure.location</td><td/></tr><tr><td>SpecimenLab.anatomicLocation (A.4.5 Anatomic location)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>BodyStructure.extension:laterality</td><td>For details about laterality</td></tr><tr><td>SpecimenLab.morphology (A.4.6 Morphology)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>BodyStructure.morphology</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative"
+  }],
+  "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/specimen2FHIR-eu-lab",
+  "version" : "0.2.0-ci",
+  "name" : "Specimen2Fhir",
+  "title" : "eHN Specimen to this guide Map",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-11-18T16:52:16+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "eHN Specimen Model to this guide Map",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "purpose" : "It shows how the Specimen data set defined by the EU eHN guidelines is mapped into this guide",
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceUri" : "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab",
+  "targetUri" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab",
+  "group" : [{
+    "source" : "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab",
+    "target" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab",
+    "element" : [{
+      "code" : "SpecimenLab.identifier",
+      "display" : "A.4.1 Specimen identifier",
+      "target" : [{
+        "code" : "Specimen.identifier",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.speciesType",
+      "display" : "A.4.2 Type of species",
+      "target" : [{
+        "code" : "Specimen.subject.extension:patient-animal.extension:species",
+        "equivalence" : "relatedto",
+        "comment" : "subject.ofType(Patient)"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.material",
+      "display" : "A.4.3 Material",
+      "target" : [{
+        "code" : "Specimen.type",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.collected",
+      "display" : "A.4.4 Collection period",
+      "target" : [{
+        "code" : "Specimen.collection.collected[x]",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.anatomicLocation",
+      "display" : "A.4.5 Anatomic location",
+      "target" : [{
+        "code" : "Specimen.collection.bodySite",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.anatomicLocation",
+      "display" : "A.4.5 Anatomic location",
+      "target" : [{
+        "code" : "Specimen.collection.extension:bodySite",
+        "equivalence" : "relatedto",
+        "comment" : "see Group 2 for details"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.morphology",
+      "display" : "A.4.6 Morphology",
+      "target" : [{
+        "code" : "Specimen.collection.extension:bodySite",
+        "equivalence" : "relatedto",
+        "comment" : "see Group 2 for details"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.sourceDevice",
+      "display" : "A.4.7 Source Device",
+      "target" : [{
+        "code" : "Specimen.subject",
+        "equivalence" : "relatedto",
+        "comment" : "When the device (e.g. the catheter) is what has been examinated.\nIf the device is meant instead as the mean used to collect the specimen (e.g blood collected from the catheter), then, this is represented by the collectionMethod attribute and mapped into the Specimen.collection.method"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.collectionMethod",
+      "display" : "A.4.8 Collection procedure/method",
+      "target" : [{
+        "code" : "Specimen.collection.method",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.receivedDateTime",
+      "display" : "A.4.9 Received date",
+      "target" : [{
+        "code" : "Specimen.receivedTime",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  },
+  {
+    "source" : "http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab",
+    "target" : "http://hl7.eu/fhir/laboratory/StructureDefinition/BodyStructure-eu-lab",
+    "element" : [{
+      "code" : "SpecimenLab.anatomicLocation",
+      "display" : "A.4.5 Anatomic location",
+      "target" : [{
+        "code" : "BodyStructure.location",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.anatomicLocation",
+      "display" : "A.4.5 Anatomic location",
+      "target" : [{
+        "code" : "BodyStructure.extension:laterality",
+        "equivalence" : "equivalent",
+        "comment" : "For details about laterality"
+      }]
+    },
+    {
+      "code" : "SpecimenLab.morphology",
+      "display" : "A.4.6 Morphology",
+      "target" : [{
+        "code" : "BodyStructure.morphology",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

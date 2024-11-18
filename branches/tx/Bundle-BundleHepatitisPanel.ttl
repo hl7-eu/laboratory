@@ -1,0 +1,666 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Bundle/BundleHepatitisPanel> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BundleHepatitisPanel"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "http://example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "V1CZ454557891308174803488707671420" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2022-10-25T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:3a743273-237a-446a-a8da-9e7521cce614"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:3a743273-237a-446a-a8da-9e7521cce614> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70> )
+  ] ) . # 
+
+<urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4> a fhir:Composition ;
+  fhir:id [ fhir:v "4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_4028a0b8-37fc-4491-a8e7-0f28e6fc59b4\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 4028a0b8-37fc-4491-a8e7-0f28e6fc59b4</b></p><a name=\"4028a0b8-37fc-4491-a8e7-0f28e6fc59b4\"> </a><a name=\"hc4028a0b8-37fc-4491-a8e7-0f28e6fc59b4\"> </a><a name=\"4028a0b8-37fc-4491-a8e7-0f28e6fc59b4-en-US\"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-608b5309-2609-4d03-b6da-c758bfa1de70\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:date [ fhir:v "2022-10-25T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2020-12-27T14:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:reference [ fhir:v "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Hepatitis screening panel" ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "3002989" ] ;
+         fhir:display [ fhir:v "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT" ]
+       ] ) ;
+       fhir:text [ fhir:v "Acute Hepatitis Panel, reflex to confirmation" ]
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5> a fhir:Patient ;
+  fhir:id [ fhir:v "8472931c-fbd0-437b-9ed1-4f66472c78b5"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_8472931c-fbd0-437b-9ed1-4f66472c78b5\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 8472931c-fbd0-437b-9ed1-4f66472c78b5</b></p><a name=\"8472931c-fbd0-437b-9ed1-4f66472c78b5\"> </a><a name=\"hc8472931c-fbd0-437b-9ed1-4f66472c78b5\"> </a><a name=\"8472931c-fbd0-437b-9ed1-4f66472c78b5-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIIP" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "740512852" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.9.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A225961454" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.4.330.203"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5484136" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Očkovaný" ] ;
+     fhir:given ( [ fhir:v "František" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2000-03-21"^^xsd:date] . # 
+
+<urn:uuid:3a743273-237a-446a-a8da-9e7521cce614> a fhir:DiagnosticReport ;
+  fhir:id [ fhir:v "3a743273-237a-446a-a8da-9e7521cce614"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_3a743273-237a-446a-a8da-9e7521cce614\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport 3a743273-237a-446a-a8da-9e7521cce614</b></p><a name=\"3a743273-237a-446a-a8da-9e7521cce614\"> </a><a name=\"hc3a743273-237a-446a-a8da-9e7521cce614\"> </a><a name=\"3a743273-237a-446a-a8da-9e7521cce614-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}, {http://example.org/lab-codes 3002989}\">Acute Hepatitis Panel, reflex to confirmation</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:reference [ fhir:v "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3002989" ] ;
+       fhir:display [ fhir:v "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute Hepatitis Panel, reflex to confirmation" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:specimen ( [
+     fhir:reference [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:reference [ fhir:v "urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba" ]
+  ] ) . # 
+
+<urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13> a fhir:Specimen ;
+  fhir:id [ fhir:v "3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen 3c9bd730-3ff9-40ee-9da1-4f3d5c526f13</b></p><a name=\"3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\"> </a><a name=\"hc3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\"> </a><a name=\"3c9bd730-3ff9-40ee-9da1-4f3d5c526f13-en-US\"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119364003}\">Serum specimen</span></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Collected[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:119364003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119364003" ] ;
+       fhir:display [ fhir:v "Serum specimen" ]
+     ] )
+  ] ; # 
+  fhir:collection [
+     fhir:collected [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime ]
+  ] . # 
+
+<urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba> a fhir:Observation ;
+  fhir:id [ fhir:v "2c72163e-b741-44a3-aff7-c52f17f7a1ba"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_2c72163e-b741-44a3-aff7-c52f17f7a1ba\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 2c72163e-b741-44a3-aff7-c52f17f7a1ba</b></p><a name=\"2c72163e-b741-44a3-aff7-c52f17f7a1ba\"> </a><a name=\"hc2c72163e-b741-44a3-aff7-c52f17f7a1ba\"> </a><a name=\"2c72163e-b741-44a3-aff7-c52f17f7a1ba-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://example.org/lab-codes 3002989}\">Acute Hepatitis Panel, reflex to confirmation</span></p><p><b>subject</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-104a5829-565b-46a6-85d6-36751ef79a40\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-01b8ec35-9b20-45a4-bd41-42eeae2fd521\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-096e27da-0768-47e4-b33c-9f1be93e1f88\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-861e7b48-5497-410a-bed8-2cde814e09fc\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-cc96d499-3e0e-4588-a021-4fe576766112\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3002989" ] ;
+       fhir:display [ fhir:v "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute Hepatitis Panel, reflex to confirmation" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:reference [ fhir:v "urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc" ]
+  ] [
+     fhir:reference [ fhir:v "urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112" ]
+  ] ) . # 
+
+<urn:uuid:104a5829-565b-46a6-85d6-36751ef79a40> a fhir:Observation ;
+  fhir:id [ fhir:v "104a5829-565b-46a6-85d6-36751ef79a40"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_104a5829-565b-46a6-85d6-36751ef79a40\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 104a5829-565b-46a6-85d6-36751ef79a40</b></p><a name=\"104a5829-565b-46a6-85d6-36751ef79a40\"> </a><a name=\"hc104a5829-565b-46a6-85d6-36751ef79a40\"> </a><a name=\"104a5829-565b-46a6-85d6-36751ef79a40-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://example.org/lab-codes 0020089}, {http://loinc.org 5196-1}\">Hepatitis B Surface Antigen</span></p><p><b>subject</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 260385009}\">Negative</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>specimen</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span></td><td>Negative</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0020089" ] ;
+       fhir:display [ fhir:v "Hepatitis B Surface Antigen" ]
+     ] [
+       a loinc:5196-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "5196-1" ] ;
+       fhir:display [ fhir:v "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hepatitis B Surface Antigen" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:260385009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "260385009" ] ;
+       fhir:display [ fhir:v "Negative" ]
+     ] )
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ) ; # 
+  fhir:specimen [
+     fhir:reference [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/referencerange-meaning"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "normal" ] ;
+         fhir:display [ fhir:v "Normal Range" ]
+       ] )
+     ] ;
+     fhir:text [ fhir:v "Negative" ]
+  ] ) . # 
+
+<urn:uuid:01b8ec35-9b20-45a4-bd41-42eeae2fd521> a fhir:Observation ;
+  fhir:id [ fhir:v "01b8ec35-9b20-45a4-bd41-42eeae2fd521"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_01b8ec35-9b20-45a4-bd41-42eeae2fd521\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 01b8ec35-9b20-45a4-bd41-42eeae2fd521</b></p><a name=\"01b8ec35-9b20-45a4-bd41-42eeae2fd521\"> </a><a name=\"hc01b8ec35-9b20-45a4-bd41-42eeae2fd521\"> </a><a name=\"01b8ec35-9b20-45a4-bd41-42eeae2fd521-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://example.org/lab-codes 0020092}, {http://loinc.org 24113-3}\">Hepatitis B Core Antibody, IgM</span></p><p><b>subject</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 260385009}\">Negative</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>specimen</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span></td><td>Negative</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0020092" ] ;
+       fhir:display [ fhir:v "Hepatitis B Core Antibody, IgM" ]
+     ] [
+       a loinc:24113-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "24113-3" ] ;
+       fhir:display [ fhir:v "Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hepatitis B Core Antibody, IgM" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:260385009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "260385009" ] ;
+       fhir:display [ fhir:v "Negative" ]
+     ] )
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ) ; # 
+  fhir:specimen [
+     fhir:reference [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/referencerange-meaning"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "normal" ] ;
+         fhir:display [ fhir:v "Normal Range" ]
+       ] )
+     ] ;
+     fhir:text [ fhir:v "Negative" ]
+  ] ) . # 
+
+<urn:uuid:096e27da-0768-47e4-b33c-9f1be93e1f88> a fhir:Observation ;
+  fhir:id [ fhir:v "096e27da-0768-47e4-b33c-9f1be93e1f88"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_096e27da-0768-47e4-b33c-9f1be93e1f88\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 096e27da-0768-47e4-b33c-9f1be93e1f88</b></p><a name=\"096e27da-0768-47e4-b33c-9f1be93e1f88\"> </a><a name=\"hc096e27da-0768-47e4-b33c-9f1be93e1f88\"> </a><a name=\"096e27da-0768-47e4-b33c-9f1be93e1f88-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://example.org/lab-codes 0020093}, {http://loinc.org 13950-1}\">Hepatitis A Antibody, IgM</span></p><p><b>subject</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 260385009}\">Negative</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>specimen</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span></td><td>Negative</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "0020093" ] ;
+       fhir:display [ fhir:v "Hepatitis A Antibody, IgM" ]
+     ] [
+       a loinc:13950-1 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13950-1" ] ;
+       fhir:display [ fhir:v "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hepatitis A Antibody, IgM" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:260385009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "260385009" ] ;
+       fhir:display [ fhir:v "Negative" ]
+     ] )
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ) ; # 
+  fhir:specimen [
+     fhir:reference [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/referencerange-meaning"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "normal" ] ;
+         fhir:display [ fhir:v "Normal Range" ]
+       ] )
+     ] ;
+     fhir:text [ fhir:v "Negative" ]
+  ] ) . # 
+
+<urn:uuid:861e7b48-5497-410a-bed8-2cde814e09fc> a fhir:Observation ;
+  fhir:id [ fhir:v "861e7b48-5497-410a-bed8-2cde814e09fc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_861e7b48-5497-410a-bed8-2cde814e09fc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 861e7b48-5497-410a-bed8-2cde814e09fc</b></p><a name=\"861e7b48-5497-410a-bed8-2cde814e09fc\"> </a><a name=\"hc861e7b48-5497-410a-bed8-2cde814e09fc\"> </a><a name=\"861e7b48-5497-410a-bed8-2cde814e09fc-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://example.org/lab-codes 3003128}, {http://loinc.org 13955-0}\">Hepatitis C Antibody by CIA Interp</span></p><p><b>subject</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 10828004}\">Positive</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation A}\">Abnormal</span></p><p><b>specimen</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Text</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span></td><td>Negative</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "3003128" ] ;
+       fhir:display [ fhir:v "Hepatitis C Antibody by CIA Interp" ]
+     ] [
+       a loinc:13955-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "13955-0" ] ;
+       fhir:display [ fhir:v "Hepatitis C virus Ab [Presence] in Serum or Plasma by Immunoassay" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hepatitis C Antibody by CIA Interp" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:10828004 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "10828004" ] ;
+       fhir:display [ fhir:v "Positive" ]
+     ] )
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A" ] ;
+       fhir:display [ fhir:v "Abnormal" ]
+     ] )
+  ] ) ; # 
+  fhir:specimen [
+     fhir:reference [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/referencerange-meaning"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "normal" ] ;
+         fhir:display [ fhir:v "Normal Range" ]
+       ] )
+     ] ;
+     fhir:text [ fhir:v "Negative" ]
+  ] ) . # 
+
+<urn:uuid:cc96d499-3e0e-4588-a021-4fe576766112> a fhir:Observation ;
+  fhir:id [ fhir:v "cc96d499-3e0e-4588-a021-4fe576766112"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_cc96d499-3e0e-4588-a021-4fe576766112\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation cc96d499-3e0e-4588-a021-4fe576766112</b></p><a name=\"cc96d499-3e0e-4588-a021-4fe576766112\"> </a><a name=\"hccc96d499-3e0e-4588-a021-4fe576766112\"> </a><a name=\"cc96d499-3e0e-4588-a021-4fe576766112-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://example.org/lab-codes 2002404}, {http://loinc.org 57006-9}\">Hepatitis C Antibody by CIA Index</span></p><p><b>subject</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-8472931c-fbd0-437b-9ed1-4f66472c78b5\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: 9.89 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">Low Positive</span></p><p><b>specimen</b>: <a href=\"Bundle-BundleHepatitisPanel.html#urn-uuid-3c9bd730-3ff9-40ee-9da1-4f3d5c526f13\">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><blockquote><p><b>referenceRange</b></p><p><b>high</b>: 0.79 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 0.8 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>high</b>: 0.99 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title=\"Codes:\">Equivocal</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 1 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>high</b>: 10.99 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title=\"Codes:\">Low Positive</span></p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 11 IV<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code[arb'U]/mL = '[arb'U]/mL')</span></p><p><b>type</b>: <span title=\"Codes:\">High Positive</span></p></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2002404" ] ;
+       fhir:display [ fhir:v "Hepatitis C Antibody by CIA Index" ]
+     ] [
+       a loinc:57006-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "57006-9" ] ;
+       fhir:display [ fhir:v "Hepatitis C virus IgG Ab [Units/volume] in Serum by Immunoassay" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hepatitis C Antibody by CIA Index" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "9.89"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "IV" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "[arb'U]/mL" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] ) ;
+     fhir:text [ fhir:v "Low Positive" ]
+  ] ) ; # 
+  fhir:specimen [
+     fhir:reference [ fhir:v "urn:uuid:3c9bd730-3ff9-40ee-9da1-4f3d5c526f13" ]
+  ] ; # 
+  fhir:referenceRange ( [
+     fhir:high [
+       fhir:value [ fhir:v "0.79"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IV" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "[arb'U]/mL" ]
+     ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/referencerange-meaning"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "normal" ] ;
+         fhir:display [ fhir:v "Normal Range" ]
+       ] )
+     ]
+  ] [
+     fhir:low [
+       fhir:value [ fhir:v "0.8"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IV" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "[arb'U]/mL" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "0.99"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IV" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "[arb'U]/mL" ]
+     ] ;
+     fhir:type [
+       fhir:text [ fhir:v "Equivocal" ]
+     ]
+  ] [
+     fhir:low [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IV" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "[arb'U]/mL" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "10.99"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IV" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "[arb'U]/mL" ]
+     ] ;
+     fhir:type [
+       fhir:text [ fhir:v "Low Positive" ]
+     ]
+  ] [
+     fhir:low [
+       fhir:value [ fhir:v "11"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "IV" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "[arb'U]/mL" ]
+     ] ;
+     fhir:type [
+       fhir:text [ fhir:v "High Positive" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70> a fhir:Organization ;
+  fhir:id [ fhir:v "608b5309-2609-4d03-b6da-c758bfa1de70"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_608b5309-2609-4d03-b6da-c758bfa1de70\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 608b5309-2609-4d03-b6da-c758bfa1de70</b></p><a name=\"608b5309-2609-4d03-b6da-c758bfa1de70\"> </a><a name=\"hc608b5309-2609-4d03-b6da-c758bfa1de70\"> </a><a name=\"608b5309-2609-4d03-b6da-c758bfa1de70-en-US\"> </a><p><b>identifier</b>: <code>http://example.org/czech-orgs</code>/24341</p><p><b>name</b>: Ministry of Health of the Czech Republic</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://example.org/czech-orgs"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "24341" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Ministry of Health of the Czech Republic"] . # 
+
+# -------------------------------------------------------------------------------------
+

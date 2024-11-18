@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-specialty-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-specialty-eu-lab</b></p><a name="lab-specialty-eu-lab"> </a><a name="hclab-specialty-eu-lab"> </a><a name="lab-specialty-eu-lab-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/394596001">394596001</a></td><td>Chemical pathology</td></tr><tr><td><a href="http://snomed.info/id/394916005">394916005</a></td><td>Hematopathology</td></tr><tr><td><a href="http://snomed.info/id/421661004">421661004</a></td><td>Blood banking and transfusion medicine</td></tr><tr><td><a href="http://snomed.info/id/394915009">394915009</a></td><td>General pathology</td></tr><tr><td><a href="http://snomed.info/id/394598000">394598000</a></td><td>Immunopathology</td></tr><tr><td><a href="http://snomed.info/id/408454008">408454008</a></td><td>Clinical microbiology</td></tr><tr><td><a href="http://snomed.info/id/1236877003">1236877003</a></td><td>Genetic pathology</td></tr><tr><td><a href="http://snomed.info/id/1236878008">1236878008</a></td><td>Histocompatibility and Immunogenetics</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabSpecialtyEuVs"/>
+  <title value="Laboratory Specialty"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Laboratory Specialties.&#xA;Notes:&#xA;Note 1: This value set is based on analysis of national coding practices in 8 European countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.&#xA;Note 2: Many European countries are using additional laboratory specialty types, which should be mapped towards this value set.&#xA;Note 3: In case of documented need, this value set could be extended."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="394596001"/>
+        <display value="Chemical pathology"/>
+      </concept>
+      <concept>
+        <code value="394916005"/>
+        <display value="Hematopathology"/>
+      </concept>
+      <concept>
+        <code value="421661004"/>
+        <display value="Blood banking and transfusion medicine"/>
+      </concept>
+      <concept>
+        <code value="394915009"/>
+        <display value="General pathology"/>
+      </concept>
+      <concept>
+        <code value="394598000"/>
+        <display value="Immunopathology"/>
+      </concept>
+      <concept>
+        <code value="408454008"/>
+        <display value="Clinical microbiology"/>
+      </concept>
+      <concept>
+        <code value="1236877003"/>
+        <display value="Genetic pathology"/>
+      </concept>
+      <concept>
+        <code value="1236878008"/>
+        <display value="Histocompatibility and Immunogenetics"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

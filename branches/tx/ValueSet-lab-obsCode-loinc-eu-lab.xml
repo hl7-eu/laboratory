@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-obsCode-loinc-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-obsCode-loinc-eu-lab</b></p><a name="lab-obsCode-loinc-eu-lab"> </a><a name="hclab-obsCode-loinc-eu-lab"> </a><a name="lab-obsCode-loinc-eu-lab-en-US"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a> where CLASSTYPE  = 1</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-loinc-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LoincVs"/>
+  <title value="Laboratory Code: LOINC"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Laboratory observation codes based on the LOINC code system."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="1"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

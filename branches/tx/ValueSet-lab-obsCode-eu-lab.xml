@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-obsCode-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-obsCode-eu-lab</b></p><a name="lab-obsCode-eu-lab"> </a><a name="hclab-obsCode-eu-lab"> </a><a name="lab-obsCode-eu-lab-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-lab-obsCode-npu-eu-lab.html">Laboratory Code: NPU</a></li><li>Import all the codes that are contained in <a href="ValueSet-lab-obsCode-loinc-eu-lab.html">Laboratory Code: LOINC</a></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LaboratoryResultStandardEuVs"/>
+  <title value="Laboratory Code"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <valueSet value="http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab"/>
+    </include>
+    <include>
+      <valueSet value="http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-loinc-eu-lab"/>
+    </include>
+  </compose>
+</ValueSet>

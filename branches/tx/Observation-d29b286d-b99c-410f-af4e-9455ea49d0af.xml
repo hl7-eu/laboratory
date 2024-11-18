@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="d29b286d-b99c-410f-af4e-9455ea49d0af"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation d29b286d-b99c-410f-af4e-9455ea49d0af</b></p><a name="d29b286d-b99c-410f-af4e-9455ea49d0af"> </a><a name="hcd29b286d-b99c-410f-af4e-9455ea49d0af"> </a><a name="d29b286d-b99c-410f-af4e-9455ea49d0af-en-US"> </a><p><b>Device Laboratory Test Kit</b>: <a href="#hcd29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample">Device: manufacturer = Best manufacturer</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 1755-8}">Albumin (24H U) [Mass/Time]</span></p><p><b>subject</b>: <a href="Bundle-SimpleChemistryResultReport.html#urn-uuid-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8">Bundle: identifier = urn:oid:2.16.840.1.113883.2.51.1.1#8ccab76a-82ed-403e-b974-6b28022b0997; type = document; timestamp = 2023-03-27 13:13:19+0200</a></p><p><b>effective</b>: 2023-03-27 11:24:26+0100</p><p><b>performer</b>: Jan Laborant</p><p><b>value</b>: 15 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/24 h<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeh = 'h')</span></p><p><b>device</b>: <a href="#hcd29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample">Device: manufacturer = Best manufacturer</a></p><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Device  #TestKitExample</b></p><a name="d29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample"> </a><a name="hcd29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample"> </a><a name="d29b286d-b99c-410f-af4e-9455ea49d0af/TestKitExample-en-US"> </a><p><b>manufacturer</b>: Best manufacturer</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>BEST® Micro Albuminuria Test Kit</td><td>Manufacturer name</td></tr></table></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Device  #AnalyzerExample</b></p><a name="d29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample"> </a><a name="hcd29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample"> </a><a name="d29b286d-b99c-410f-af4e-9455ea49d0af/AnalyzerExample-en-US"> </a><p><b>manufacturer</b>: Best manufacturer</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>BEST® FLUORESCENCE PLUS ANALYZER</td><td>Manufacturer name</td></tr></table></blockquote></div>
+  </text>
+  <contained>
+    <Device>
+      <id value="TestKitExample"/>
+      <manufacturer value="Best manufacturer"/>
+      <deviceName>
+        <name value="BEST® Micro Albuminuria Test Kit"/>
+        <type value="manufacturer-name"/>
+      </deviceName>
+    </Device>
+  </contained>
+  <contained>
+    <Device>
+      <id value="AnalyzerExample"/>
+      <manufacturer value="Best manufacturer"/>
+      <deviceName>
+        <name value="BEST® FLUORESCENCE PLUS ANALYZER"/>
+        <type value="manufacturer-name"/>
+      </deviceName>
+    </Device>
+  </contained>
+  <extension url="http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit">
+    <valueReference>
+      <reference value="#TestKitExample"/>
+    </valueReference>
+  </extension>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="1755-8"/>
+      <display value="Albumin [Mass/time] in 24 hour Urine"/>
+    </coding>
+    <text value="Albumin (24H U) [Mass/Time]"/>
+  </code>
+  <subject>
+    <reference value="urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"/>
+  </subject>
+  <effectiveDateTime value="2023-03-27T11:24:26+01:00"/>
+  <performer>
+    <display value="Jan Laborant"/>
+  </performer>
+  <valueRatio>
+    <numerator>
+      <value value="15"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </numerator>
+    <denominator>
+      <value value="24"/>
+      <unit value="h"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="h"/>
+    </denominator>
+  </valueRatio>
+  <device>
+    <reference value="#AnalyzerExample"/>
+  </device>
+</Observation>

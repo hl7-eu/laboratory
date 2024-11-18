@@ -1,0 +1,92 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "validator2FHIR-eu-lab",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap validator2FHIR-eu-lab</b></p><a name=\"validator2FHIR-eu-lab\"> </a><a name=\"hcvalidator2FHIR-eu-lab\"> </a><a name=\"validator2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Validator.html\">A.1.7 - Result validator</a> to <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Validator.html\">A.1.7 - Result validator</a> to <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Validator.identifier (A.1.7.1 Result validator identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.identifier</td><td>attester.where(mode='professional')</td></tr><tr><td>Validator.name (A.1.7.2 Result validator name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.name</td><td>attester.where(mode='professional').party.resolve().ofType(Practitioner).name</td></tr><tr><td>Validator.name (A.1.7.2 Result validator name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.Practitioner.name</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>Validator.organization (A.1.7.3 Result validator organisation)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.party.organization</td><td>attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Validator.dateTime (A.1.7.4 Validation date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>Composition.attester.time</td><td>attester.where(mode='professional').time</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative"
+  }],
+  "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/validator2FHIR-eu-lab",
+  "version" : "0.2.0-ci",
+  "name" : "Validator2Fhir",
+  "title" : "eHN Validator to this guide Map",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-11-18T16:52:16+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "eHN Validator Model to this guide Map",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "purpose" : "It shows how the Validator Recipient data set defined by the EU eHN guidelines is mapped into this guide",
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceUri" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Validator",
+  "targetUri" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab",
+  "group" : [{
+    "source" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Validator",
+    "target" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab",
+    "element" : [{
+      "code" : "Validator.identifier",
+      "display" : "A.1.7.1 Result validator identifier",
+      "target" : [{
+        "code" : "Composition.attester.party.identifier",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional')"
+      }]
+    },
+    {
+      "code" : "Validator.name",
+      "display" : "A.1.7.2 Result validator name",
+      "target" : [{
+        "code" : "Composition.attester.party.name",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(Practitioner).name"
+      }]
+    },
+    {
+      "code" : "Validator.name",
+      "display" : "A.1.7.2 Result validator name",
+      "target" : [{
+        "code" : "Composition.attester.party.Practitioner.name",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).Practitioner.resolve().name"
+      }]
+    },
+    {
+      "code" : "Validator.organization",
+      "display" : "A.1.7.3 Result validator organisation",
+      "target" : [{
+        "code" : "Composition.attester.party.organization",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').party.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Validator.dateTime",
+      "display" : "A.1.7.4 Validation date and time",
+      "target" : [{
+        "code" : "Composition.attester.time",
+        "equivalence" : "equivalent",
+        "comment" : "attester.where(mode='professional').time"
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,1851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-specimenType-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-specimenType-eu-lab</b></p><a name="lab-specimenType-eu-lab"> </a><a name="hclab-specimenType-eu-lab"> </a><a name="lab-specimenType-eu-lab-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/258497007">258497007</a></td><td>Abscess swab</td></tr><tr><td><a href="http://snomed.info/id/258407001">258407001</a></td><td>Abscess tissue</td></tr><tr><td><a href="http://snomed.info/id/119373006">119373006</a></td><td>Amniotic fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/122552005">122552005</a></td><td>Arterial blood specimen</td></tr><tr><td><a href="http://snomed.info/id/309201001">309201001</a></td><td>Ascitic fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119341000">119341000</a></td><td>Bile specimen</td></tr><tr><td><a href="http://snomed.info/id/258493006">258493006</a></td><td>Bladder stone specimen</td></tr><tr><td><a href="http://snomed.info/id/258582006">258582006</a></td><td>Blood clot specimen</td></tr><tr><td><a href="http://snomed.info/id/119297000">119297000</a></td><td>Blood specimen</td></tr><tr><td><a href="http://snomed.info/id/309051001">309051001</a></td><td>Body fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/432825001">432825001</a></td><td>Body secretion specimen</td></tr><tr><td><a href="http://snomed.info/id/258583001">258583001</a></td><td>Bone marrow clot specimen</td></tr><tr><td><a href="http://snomed.info/id/119359002">119359002</a></td><td>Bone marrow specimen</td></tr><tr><td><a href="http://snomed.info/id/258417006">258417006</a></td><td>Bone tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/309176002">309176002</a></td><td>Bronchial brushings specimen</td></tr><tr><td><a href="http://snomed.info/id/258446004">258446004</a></td><td>Bronchial fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258564008">258564008</a></td><td>Buccal smear specimen</td></tr><tr><td><a href="http://snomed.info/id/258418001">258418001</a></td><td>Burn tissue</td></tr><tr><td><a href="http://snomed.info/id/258448003">258448003</a></td><td>Bursa fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309110000">309110000</a></td><td>Bursa tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/119350003">119350003</a></td><td>Calculus specimen</td></tr><tr><td><a href="http://snomed.info/id/258627009">258627009</a></td><td>Cannula tip submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/122554006">122554006</a></td><td>Capillary blood specimen</td></tr><tr><td><a href="http://snomed.info/id/309101008">309101008</a></td><td>Cartilage specimen</td></tr><tr><td><a href="http://snomed.info/id/119312009">119312009</a></td><td>Catheter tip submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258450006">258450006</a></td><td>Cerebrospinal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/122580007">122580007</a></td><td>Cerumen specimen</td></tr><tr><td><a href="http://snomed.info/id/258452003">258452003</a></td><td>Chylous fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258581004">258581004</a></td><td>Clotted blood specimen</td></tr><tr><td><a href="http://snomed.info/id/168136008">168136008</a></td><td>Colostomy fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119329007">119329007</a></td><td>Colostrum specimen</td></tr><tr><td><a href="http://snomed.info/id/258498002">258498002</a></td><td>Conjunctival swab</td></tr><tr><td><a href="http://snomed.info/id/122556008">122556008</a></td><td>Cord blood specimen</td></tr><tr><td><a href="http://snomed.info/id/258499005">258499005</a></td><td>Cough swab</td></tr><tr><td><a href="http://snomed.info/id/258419009">258419009</a></td><td>Curettings</td></tr><tr><td><a href="http://snomed.info/id/258453008">258453008</a></td><td>Cyst fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258420003">258420003</a></td><td>Cyst tissue</td></tr><tr><td><a href="http://snomed.info/id/119338009">119338009</a></td><td>Dentin specimen</td></tr><tr><td><a href="http://snomed.info/id/472919007">472919007</a></td><td>Device submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258454002">258454002</a></td><td>Dialysate specimen</td></tr><tr><td><a href="http://snomed.info/id/258439008">258439008</a></td><td>Discharge specimen</td></tr><tr><td><a href="http://snomed.info/id/258566005">258566005</a></td><td>Deoxyribonucleic acid specimen</td></tr><tr><td><a href="http://snomed.info/id/1003705007">1003705007</a></td><td>Drain tip submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258455001">258455001</a></td><td>Drainage fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119294007">119294007</a></td><td>Dried blood specimen</td></tr><tr><td><a href="http://snomed.info/id/258440005">258440005</a></td><td>Effusion specimen</td></tr><tr><td><a href="http://snomed.info/id/258456000">258456000</a></td><td>Empyema fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119336008">119336008</a></td><td>Exhaled air specimen</td></tr><tr><td><a href="http://snomed.info/id/258470000">258470000</a></td><td>Prostatic fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258441009">258441009</a></td><td>Exudate specimen</td></tr><tr><td><a href="http://snomed.info/id/309128003">309128003</a></td><td>Eye fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258487003">258487003</a></td><td>Fecal smear</td></tr><tr><td><a href="http://snomed.info/id/119339001">119339001</a></td><td>Stool specimen</td></tr><tr><td><a href="http://snomed.info/id/309117002">309117002</a></td><td>Fascia specimen</td></tr><tr><td><a href="http://snomed.info/id/258458004">258458004</a></td><td>Fistula fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258442002">258442002</a></td><td>Fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/445744006">445744006</a></td><td>Fluid specimen from seroma</td></tr><tr><td><a href="http://snomed.info/id/309502007">309502007</a></td><td>Fetus specimen</td></tr><tr><td><a href="http://snomed.info/id/447103002">447103002</a></td><td>Foreign body submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258492001">258492001</a></td><td>Gallstone specimen</td></tr><tr><td><a href="http://snomed.info/id/432657002">432657002</a></td><td>Ganglion cyst specimen</td></tr><tr><td><a href="http://snomed.info/id/309213006">309213006</a></td><td>Gastric brushings specimen</td></tr><tr><td><a href="http://snomed.info/id/309199003">309199003</a></td><td>Gastrointestinal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258562007">258562007</a></td><td>Genetic specimen</td></tr><tr><td><a href="http://snomed.info/id/258508008">258508008</a></td><td>Genital swab</td></tr><tr><td><a href="http://snomed.info/id/258559009">258559009</a></td><td>Gingivocrevicular fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/440493002">440493002</a></td><td>Graft specimen from patient</td></tr><tr><td><a href="http://snomed.info/id/258588005">258588005</a></td><td>Hematoma specimen</td></tr><tr><td><a href="http://snomed.info/id/119326000">119326000</a></td><td>Hair specimen</td></tr><tr><td><a href="http://snomed.info/id/258424007">258424007</a></td><td>Heart valve tissue</td></tr><tr><td><a href="http://snomed.info/id/258521001">258521001</a></td><td>High vaginal swab</td></tr><tr><td><a href="http://snomed.info/id/258461003">258461003</a></td><td>Hydrocele fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258462005">258462005</a></td><td>Ileostomy fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258479004">258479004</a></td><td>Interstitial fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309114009">309114009</a></td><td>Ligament specimen</td></tr><tr><td><a href="http://snomed.info/id/258522008">258522008</a></td><td>Low vaginal swab</td></tr><tr><td><a href="http://snomed.info/id/309171007">309171007</a></td><td>Lower respiratory fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/302795002">302795002</a></td><td>Lymph node aspirate</td></tr><tr><td><a href="http://snomed.info/id/258488008">258488008</a></td><td>Lymph node smear</td></tr><tr><td><a href="http://snomed.info/id/309078004">309078004</a></td><td>Lymph node tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/119340004">119340004</a></td><td>Meconium specimen</td></tr><tr><td><a href="http://snomed.info/id/119345009">119345009</a></td><td>Menstrual blood specimen</td></tr><tr><td><a href="http://snomed.info/id/119303007">119303007</a></td><td>Microbial isolate</td></tr><tr><td><a href="http://snomed.info/id/119328004">119328004</a></td><td>Mother's milk specimen</td></tr><tr><td><a href="http://snomed.info/id/258483004">258483004</a></td><td>Mucus specimen</td></tr><tr><td><a href="http://snomed.info/id/119327009">119327009</a></td><td>Nail specimen</td></tr><tr><td><a href="http://snomed.info/id/168141000">168141000</a></td><td>Nasal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258467004">258467004</a></td><td>Nasopharyngeal washings</td></tr><tr><td><a href="http://snomed.info/id/433799002">433799002</a></td><td>Nerve ganglion specimen</td></tr><tr><td><a href="http://snomed.info/id/309129006">309129006</a></td><td>Nerve tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/309131002">309131002</a></td><td>Neuroma specimen</td></tr><tr><td><a href="http://snomed.info/id/258468009">258468009</a></td><td>Edema fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309210009">309210009</a></td><td>Esophageal brushings specimen</td></tr><tr><td><a href="http://snomed.info/id/258494000">258494000</a></td><td>Pancreatic stone specimen</td></tr><tr><td><a href="http://snomed.info/id/122571007">122571007</a></td><td>Pericardial fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/168139001">168139001</a></td><td>Peritoneal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258469001">258469001</a></td><td>Pharyngeal washings</td></tr><tr><td><a href="http://snomed.info/id/119361006">119361006</a></td><td>Plasma specimen</td></tr><tr><td><a href="http://snomed.info/id/110913002">110913002</a></td><td>Pleural cytologic material</td></tr><tr><td><a href="http://snomed.info/id/418564007">418564007</a></td><td>Pleural fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258484005">258484005</a></td><td>Postmortem tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/258428005">258428005</a></td><td>Products of conception tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/119323008">119323008</a></td><td>Pus specimen</td></tr><tr><td><a href="http://snomed.info/id/258502009">258502009</a></td><td>Pus swab</td></tr><tr><td><a href="http://snomed.info/id/119351004">119351004</a></td><td>Erythrocyte specimen</td></tr><tr><td><a href="http://snomed.info/id/258495004">258495004</a></td><td>Renal stone specimen</td></tr><tr><td><a href="http://snomed.info/id/119342007">119342007</a></td><td>Saliva specimen</td></tr><tr><td><a href="http://snomed.info/id/258431006">258431006</a></td><td>Scrapings</td></tr><tr><td><a href="http://snomed.info/id/258432004">258432004</a></td><td>Sebum specimen</td></tr><tr><td><a href="http://snomed.info/id/119347001">119347001</a></td><td>Seminal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119364003">119364003</a></td><td>Serum specimen</td></tr><tr><td><a href="http://snomed.info/id/309261004">309261004</a></td><td>Sigmoid colon brushings specimen</td></tr><tr><td><a href="http://snomed.info/id/258475005">258475005</a></td><td>Sinus washings</td></tr><tr><td><a href="http://snomed.info/id/119331003">119331003</a></td><td>Skeletal muscle specimen</td></tr><tr><td><a href="http://snomed.info/id/119325001">119325001</a></td><td>Tissue specimen from skin</td></tr><tr><td><a href="http://snomed.info/id/258505006">258505006</a></td><td>Skin ulcer swab</td></tr><tr><td><a href="http://snomed.info/id/258433009">258433009</a></td><td>Smear specimen</td></tr><tr><td><a href="http://snomed.info/id/309072003">309072003</a></td><td>Soft tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/119300005">119300005</a></td><td>Specimen from blood product</td></tr><tr><td><a href="http://snomed.info/id/898201001">898201001</a></td><td>Specimen from device</td></tr><tr><td><a href="http://snomed.info/id/1003706008">1003706008</a></td><td>Specimen from drain tip</td></tr><tr><td><a href="http://snomed.info/id/119305000">119305000</a></td><td>Specimen from plasma bag</td></tr><tr><td><a href="http://snomed.info/id/119349003">119349003</a></td><td>Spermatozoa specimen</td></tr><tr><td><a href="http://snomed.info/id/258434003">258434003</a></td><td>Spun urinary sediment</td></tr><tr><td><a href="http://snomed.info/id/119334006">119334006</a></td><td>Sputum specimen</td></tr><tr><td><a href="http://snomed.info/id/257261003">257261003</a></td><td>Swab</td></tr><tr><td><a href="http://snomed.info/id/445160003">445160003</a></td><td>Swab of eye</td></tr><tr><td><a href="http://snomed.info/id/122569007">122569007</a></td><td>Sweat specimen</td></tr><tr><td><a href="http://snomed.info/id/119332005">119332005</a></td><td>Synovial fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309123007">309123007</a></td><td>Synovial specimen</td></tr><tr><td><a href="http://snomed.info/id/309121009">309121009</a></td><td>Synovial tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/440468004">440468004</a></td><td>Tampon submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258465007">258465007</a></td><td>Lacrimal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/122594008">122594008</a></td><td>Tears specimen</td></tr><tr><td><a href="http://snomed.info/id/309481000">309481000</a></td><td>Temporal artery specimen</td></tr><tr><td><a href="http://snomed.info/id/309107007">309107007</a></td><td>Tendon specimen</td></tr><tr><td><a href="http://snomed.info/id/258529004">258529004</a></td><td>Throat swab</td></tr><tr><td><a href="http://snomed.info/id/119376003">119376003</a></td><td>Tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/258538002">258538002</a></td><td>Transudate specimen</td></tr><tr><td><a href="http://snomed.info/id/258435002">258435002</a></td><td>Tumor tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/441479001">441479001</a></td><td>Fresh tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/439628000">439628000</a></td><td>Urinary collection bag submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/439580004">439580004</a></td><td>Urine collection pad submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/122567009">122567009</a></td><td>Urine sediment specimen</td></tr><tr><td><a href="http://snomed.info/id/122575003">122575003</a></td><td>Urine specimen</td></tr><tr><td><a href="http://snomed.info/id/258437005">258437005</a></td><td>Vegetation from heart valve</td></tr><tr><td><a href="http://snomed.info/id/122555007">122555007</a></td><td>Venous blood specimen</td></tr><tr><td><a href="http://snomed.info/id/122572000">122572000</a></td><td>Vomitus specimen</td></tr><tr><td><a href="http://snomed.info/id/258591005">258591005</a></td><td>White blood cell specimen</td></tr><tr><td><a href="http://snomed.info/id/258580003">258580003</a></td><td>Whole blood specimen</td></tr><tr><td><a href="http://snomed.info/id/438805006">438805006</a></td><td>Whole tooth specimen</td></tr><tr><td><a href="http://snomed.info/id/122566000">122566000</a></td><td>Fluid specimen from wound</td></tr><tr><td><a href="http://snomed.info/id/258531008">258531008</a></td><td>Wound swab</td></tr><tr><td><a href="http://snomed.info/id/446302006">446302006</a></td><td>Air specimen</td></tr><tr><td><a href="http://snomed.info/id/33631000087102">33631000087102</a></td><td>Allogeneic bone graft material submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/703430008">703430008</a></td><td>Arterial cord blood specimen</td></tr><tr><td><a href="http://snomed.info/id/16215211000119100">16215211000119100</a></td><td>Bartholin's gland fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/446129006">446129006</a></td><td>Bile specimen from common bile duct</td></tr><tr><td><a href="http://snomed.info/id/446817004">446817004</a></td><td>Bile specimen from gallbladder</td></tr><tr><td><a href="http://snomed.info/id/258490009">258490009</a></td><td>Biliary stone specimen</td></tr><tr><td><a href="http://snomed.info/id/309105004">309105004</a></td><td>Bone biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/258607008">258607008</a></td><td>Bronchoalveolar lavage fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/122577006">122577006</a></td><td>Cervical mucus specimen</td></tr><tr><td><a href="http://snomed.info/id/16216411000119106">16216411000119106</a></td><td>Conjunctival smear specimen</td></tr><tr><td><a href="http://snomed.info/id/1003707004">1003707004</a></td><td>Drain device submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/309216003">309216003</a></td><td>Duodenal biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/122574004">122574004</a></td><td>Duodenal fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309166000">309166000</a></td><td>Ear swab specimen</td></tr><tr><td><a href="http://snomed.info/id/119314005">119314005</a></td><td>Electrode submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/419695002">419695002</a></td><td>Environmental swab</td></tr><tr><td><a href="http://snomed.info/id/309211008">309211008</a></td><td>Gastric biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/122573005">122573005</a></td><td>Gastric contents specimen</td></tr><tr><td><a href="http://snomed.info/id/258459007">258459007</a></td><td>Gastric fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/122579009">122579009</a></td><td>Genital lochia specimen</td></tr><tr><td><a href="http://snomed.info/id/258512002">258512002</a></td><td>Glans penis swab</td></tr><tr><td><a href="http://snomed.info/id/473415003">473415003</a></td><td>Intrauterine contraceptive device submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258649003">258649003</a></td><td>Intravenous infusion fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309049000">309049000</a></td><td>Lesion specimen</td></tr><tr><td><a href="http://snomed.info/id/309203003">309203003</a></td><td>Liver biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/258589002">258589002</a></td><td>Lymph node specimen</td></tr><tr><td><a href="http://snomed.info/id/258466008">258466008</a></td><td>Middle ear fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119298005">119298005</a></td><td>Mixed venous blood specimen</td></tr><tr><td><a href="http://snomed.info/id/705054005">705054005</a></td><td>Muscle specimen</td></tr><tr><td><a href="http://snomed.info/id/309104000">309104000</a></td><td>Musculoskeletal specimen</td></tr><tr><td><a href="http://snomed.info/id/447339001">447339001</a></td><td>Nasal smear specimen</td></tr><tr><td><a href="http://snomed.info/id/258500001">258500001</a></td><td>Nasopharyngeal swab</td></tr><tr><td><a href="http://snomed.info/id/16220931000119104">16220931000119104</a></td><td>Pancreas cyst fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/119343002">119343002</a></td><td>Pancreatic fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309154006">309154006</a></td><td>Pituitary specimen</td></tr><tr><td><a href="http://snomed.info/id/708317005">708317005</a></td><td>Pooled specimen from vaginal introitus and rectal swab</td></tr><tr><td><a href="http://snomed.info/id/258513007">258513007</a></td><td>Prepuce swab</td></tr><tr><td><a href="http://snomed.info/id/258528007">258528007</a></td><td>Rectal swab</td></tr><tr><td><a href="http://snomed.info/id/410580001">410580001</a></td><td>Respiratory fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/732293002">732293002</a></td><td>Salivary calculus specimen</td></tr><tr><td><a href="http://snomed.info/id/309066003">309066003</a></td><td>Skin biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/430268003">430268003</a></td><td>Specimen from bone</td></tr><tr><td><a href="http://snomed.info/id/119398007">119398007</a></td><td>Specimen from brain</td></tr><tr><td><a href="http://snomed.info/id/122601001">122601001</a></td><td>Specimen from breast obtained by biopsy</td></tr><tr><td><a href="http://snomed.info/id/119307008">119307008</a></td><td>Specimen from endotracheal tube</td></tr><tr><td><a href="http://snomed.info/id/119399004">119399004</a></td><td>Specimen from eye</td></tr><tr><td><a href="http://snomed.info/id/127476006">127476006</a></td><td>Specimen from fallopian tube</td></tr><tr><td><a href="http://snomed.info/id/446951004">446951004</a></td><td>Specimen from granulation tissue</td></tr><tr><td><a href="http://snomed.info/id/127473003">127473003</a></td><td>Specimen from kidney</td></tr><tr><td><a href="http://snomed.info/id/119383005">119383005</a></td><td>Specimen from liver</td></tr><tr><td><a href="http://snomed.info/id/122610009">122610009</a></td><td>Specimen from lung obtained by biopsy</td></tr><tr><td><a href="http://snomed.info/id/447407009">447407009</a></td><td>Specimen from necrotic tissue</td></tr><tr><td><a href="http://snomed.info/id/127469001">127469001</a></td><td>Specimen from pancreas</td></tr><tr><td><a href="http://snomed.info/id/119403008">119403008</a></td><td>Specimen from placenta</td></tr><tr><td><a href="http://snomed.info/id/1003711005">1003711005</a></td><td>Specimen from prosthetic joint</td></tr><tr><td><a href="http://snomed.info/id/608969007">608969007</a></td><td>Specimen from skin</td></tr><tr><td><a href="http://snomed.info/id/433308004">433308004</a></td><td>Specimen from spleen</td></tr><tr><td><a href="http://snomed.info/id/119379005">119379005</a></td><td>Specimen from stomach</td></tr><tr><td><a href="http://snomed.info/id/445447003">445447003</a></td><td>Specimen from trachea obtained by aspiration</td></tr><tr><td><a href="http://snomed.info/id/441903006">441903006</a></td><td>Specimen obtained by bronchial aspiration</td></tr><tr><td><a href="http://snomed.info/id/440674008">440674008</a></td><td>Specimen obtained by lavage</td></tr><tr><td><a href="http://snomed.info/id/57711000052109">57711000052109</a></td><td>Specimen obtained by puncture procedure</td></tr><tr><td><a href="http://snomed.info/id/16220971000119101">16220971000119101</a></td><td>Specimen of fluid from cyst of kidney</td></tr><tr><td><a href="http://snomed.info/id/278020009">278020009</a></td><td>Spot urine specimen</td></tr><tr><td><a href="http://snomed.info/id/271514008">271514008</a></td><td>Sternal bone marrow specimen</td></tr><tr><td><a href="http://snomed.info/id/472894002">472894002</a></td><td>Swab from cornea</td></tr><tr><td><a href="http://snomed.info/id/472900002">472900002</a></td><td>Swab from gingiva</td></tr><tr><td><a href="http://snomed.info/id/472888005">472888005</a></td><td>Swab from larynx</td></tr><tr><td><a href="http://snomed.info/id/16210971000119108">16210971000119108</a></td><td>Swab from lesion</td></tr><tr><td><a href="http://snomed.info/id/472862007">472862007</a></td><td>Swab from lesion of skin</td></tr><tr><td><a href="http://snomed.info/id/472879001">472879001</a></td><td>Swab from placenta</td></tr><tr><td><a href="http://snomed.info/id/472885008">472885008</a></td><td>Swab from pressure injury</td></tr><tr><td><a href="http://snomed.info/id/472883001">472883001</a></td><td>Swab from surgical wound</td></tr><tr><td><a href="http://snomed.info/id/472866005">472866005</a></td><td>Swab from tongue</td></tr><tr><td><a href="http://snomed.info/id/472867001">472867001</a></td><td>Swab from tonsil</td></tr><tr><td><a href="http://snomed.info/id/461911000124106">461911000124106</a></td><td>Oropharyngeal swab</td></tr><tr><td><a href="http://snomed.info/id/309478005">309478005</a></td><td>Thrombus specimen</td></tr><tr><td><a href="http://snomed.info/id/258480001">258480001</a></td><td>Transtracheal aspirate specimen</td></tr><tr><td><a href="http://snomed.info/id/258436001">258436001</a></td><td>Umbilical cord tissue specimen</td></tr><tr><td><a href="http://snomed.info/id/258530009">258530009</a></td><td>Urethral swab</td></tr><tr><td><a href="http://snomed.info/id/444937002">444937002</a></td><td>Urine specimen from ureter</td></tr><tr><td><a href="http://snomed.info/id/447589008">447589008</a></td><td>Urine specimen obtained by single catheterization of bladder</td></tr><tr><td><a href="http://snomed.info/id/446907008">446907008</a></td><td>Urine specimen obtained from kidney</td></tr><tr><td><a href="http://snomed.info/id/258520000">258520000</a></td><td>Vaginal swab</td></tr><tr><td><a href="http://snomed.info/id/703431007">703431007</a></td><td>Venous cord blood specimen</td></tr><tr><td><a href="http://snomed.info/id/258482009">258482009</a></td><td>Vesicle fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258523003">258523003</a></td><td>Vulval swab</td></tr><tr><td><a href="http://snomed.info/id/258662004">258662004</a></td><td>Adhesive slide specimen</td></tr><tr><td><a href="http://snomed.info/id/258527002">258527002</a></td><td>Anal swab</td></tr><tr><td><a href="http://snomed.info/id/258415003">258415003</a></td><td>Biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/303248007">303248007</a></td><td>Blood film specimen</td></tr><tr><td><a href="http://snomed.info/id/737535000">737535000</a></td><td>Blood smear specimen</td></tr><tr><td><a href="http://snomed.info/id/122560006">122560006</a></td><td>Blood specimen from blood donor</td></tr><tr><td><a href="http://snomed.info/id/866033003">866033003</a></td><td>Blood specimen in aerobic blood culture bottle</td></tr><tr><td><a href="http://snomed.info/id/866032008">866032008</a></td><td>Blood specimen in anaerobic blood culture bottle</td></tr><tr><td><a href="http://snomed.info/id/878861003">878861003</a></td><td>Blood specimen in blood culture bottle</td></tr><tr><td><a href="http://snomed.info/id/445295009">445295009</a></td><td>Blood specimen with EDTA</td></tr><tr><td><a href="http://snomed.info/id/309061008">309061008</a></td><td>Breast fine needle aspirate specimen</td></tr><tr><td><a href="http://snomed.info/id/309503002">309503002</a></td><td>Breast nipple discharge specimen</td></tr><tr><td><a href="http://snomed.info/id/309174004">309174004</a></td><td>Bronchial biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/119308003">119308003</a></td><td>Cannula submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/473409003">473409003</a></td><td>Central venous catheter submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/472929000">472929000</a></td><td>Central venous catheter tip submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/445372002">445372002</a></td><td>Cerebrospinal fluid specimen from ventricle of brain</td></tr><tr><td><a href="http://snomed.info/id/258524009">258524009</a></td><td>Cervical swab</td></tr><tr><td><a href="http://snomed.info/id/440473005">440473005</a></td><td>Contact lens submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/440500007">440500007</a></td><td>Dried blood spot specimen</td></tr><tr><td><a href="http://snomed.info/id/119319000">119319000</a></td><td>Drug specimen</td></tr><tr><td><a href="http://snomed.info/id/309165001">309165001</a></td><td>Ear specimen</td></tr><tr><td><a href="http://snomed.info/id/258575007">258575007</a></td><td>Early morning urine specimen</td></tr><tr><td><a href="http://snomed.info/id/446676001">446676001</a></td><td>Expressed breast milk specimen</td></tr><tr><td><a href="http://snomed.info/id/122568004">122568004</a></td><td>Exudate specimen from wound</td></tr><tr><td><a href="http://snomed.info/id/258519006">258519006</a></td><td>Female genital swab</td></tr><tr><td><a href="http://snomed.info/id/737357006">737357006</a></td><td>Fetal blood specimen</td></tr><tr><td><a href="http://snomed.info/id/698276005">698276005</a></td><td>First stream urine specimen</td></tr><tr><td><a href="http://snomed.info/id/733056005">733056005</a></td><td>Fluid specimen from ear</td></tr><tr><td><a href="http://snomed.info/id/732976006">732976006</a></td><td>Fluid specimen from external auditory canal</td></tr><tr><td><a href="http://snomed.info/id/16214171000119101">16214171000119101</a></td><td>Genital fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/258570002">258570002</a></td><td>Genitourinary specimen</td></tr><tr><td><a href="http://snomed.info/id/309124001">309124001</a></td><td>Joint biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/431361003">431361003</a></td><td>Joint fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/309079007">309079007</a></td><td>Lymph node biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/309052008">309052008</a></td><td>Male genital specimen</td></tr><tr><td><a href="http://snomed.info/id/258574006">258574006</a></td><td>Mid-stream urine specimen</td></tr><tr><td><a href="http://snomed.info/id/119321005">119321005</a></td><td>Milk specimen</td></tr><tr><td><a href="http://snomed.info/id/119377007">119377007</a></td><td>Myocardial specimen</td></tr><tr><td><a href="http://snomed.info/id/16224371000119105">16224371000119105</a></td><td>Nasal lavage fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/16223051000119101">16223051000119101</a></td><td>Nasal sinus contents specimen</td></tr><tr><td><a href="http://snomed.info/id/258411007">258411007</a></td><td>Nasopharyngeal aspirate</td></tr><tr><td><a href="http://snomed.info/id/441620008">441620008</a></td><td>Oral fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/418932006">418932006</a></td><td>Oral swab</td></tr><tr><td><a href="http://snomed.info/id/258511009">258511009</a></td><td>Penile urethral swab</td></tr><tr><td><a href="http://snomed.info/id/258510005">258510005</a></td><td>Penis swab</td></tr><tr><td><a href="http://snomed.info/id/258526006">258526006</a></td><td>Perianal swab</td></tr><tr><td><a href="http://snomed.info/id/258525005">258525005</a></td><td>Perineal swab</td></tr><tr><td><a href="http://snomed.info/id/472923004">472923004</a></td><td>Peripheral vascular catheter tip submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/168140004">168140004</a></td><td>Peritoneal dialysate specimen</td></tr><tr><td><a href="http://snomed.info/id/788707000">788707000</a></td><td>Plasma specimen or serum specimen or whole blood specimen</td></tr><tr><td><a href="http://snomed.info/id/708049000">708049000</a></td><td>Plasma specimen with ethylenediamine tetraacetic acid</td></tr><tr><td><a href="http://snomed.info/id/309172000">309172000</a></td><td>Pleura biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/258471001">258471001</a></td><td>Prostatic massage fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/708112008">708112008</a></td><td>Retrouterine pouch fluid aspirate</td></tr><tr><td><a href="http://snomed.info/id/258664003">258664003</a></td><td>Scotch tape slide specimen</td></tr><tr><td><a href="http://snomed.info/id/119348006">119348006</a></td><td>Seminal plasma specimen</td></tr><tr><td><a href="http://snomed.info/id/122589008">122589008</a></td><td>Serum specimen from blood donor</td></tr><tr><td><a href="http://snomed.info/id/122590004">122590004</a></td><td>Serum specimen from patient</td></tr><tr><td><a href="http://snomed.info/id/258549008">258549008</a></td><td>Skin scale specimen</td></tr><tr><td><a href="http://snomed.info/id/258503004">258503004</a></td><td>Skin swab</td></tr><tr><td><a href="http://snomed.info/id/1179252003">1179252003</a></td><td>Slide submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/119371008">119371008</a></td><td>Specimen from abscess</td></tr><tr><td><a href="http://snomed.info/id/446972001">446972001</a></td><td>Specimen from abscess obtained by aspiration</td></tr><tr><td><a href="http://snomed.info/id/119392008">119392008</a></td><td>Specimen from anus</td></tr><tr><td><a href="http://snomed.info/id/127456000">127456000</a></td><td>Specimen from breast</td></tr><tr><td><a href="http://snomed.info/id/16211051000119109">16211051000119109</a></td><td>Specimen from deep wound</td></tr><tr><td><a href="http://snomed.info/id/119396006">119396006</a></td><td>Specimen from endometrium</td></tr><tr><td><a href="http://snomed.info/id/440229008">440229008</a></td><td>Specimen from environment</td></tr><tr><td><a href="http://snomed.info/id/16212771000119105">16212771000119105</a></td><td>Specimen from eyelid obtained by biopsy</td></tr><tr><td><a href="http://snomed.info/id/449446003">449446003</a></td><td>Specimen from gallbladder</td></tr><tr><td><a href="http://snomed.info/id/119344008">119344008</a></td><td>Specimen from genital system</td></tr><tr><td><a href="http://snomed.info/id/447098004">447098004</a></td><td>Specimen from nail obtained by scraping</td></tr><tr><td><a href="http://snomed.info/id/430248009">430248009</a></td><td>Specimen from nasopharyngeal structure</td></tr><tr><td><a href="http://snomed.info/id/447154002">447154002</a></td><td>Specimen from nose</td></tr><tr><td><a href="http://snomed.info/id/119397002">119397002</a></td><td>Specimen from penis</td></tr><tr><td><a href="http://snomed.info/id/434250007">434250007</a></td><td>Specimen from pericardium obtained by biopsy</td></tr><tr><td><a href="http://snomed.info/id/438660002">438660002</a></td><td>Specimen from prosthetic device</td></tr><tr><td><a href="http://snomed.info/id/446952006">446952006</a></td><td>Specimen from skin obtained by scraping</td></tr><tr><td><a href="http://snomed.info/id/119295008">119295008</a></td><td>Specimen obtained by aspiration</td></tr><tr><td><a href="http://snomed.info/id/119324002">119324002</a></td><td>Specimen of unknown material</td></tr><tr><td><a href="http://snomed.info/id/703691002">703691002</a></td><td>Spun cerebrospinal fluid</td></tr><tr><td><a href="http://snomed.info/id/258609006">258609006</a></td><td>Sputum specimen obtained by aspiration from trachea</td></tr><tr><td><a href="http://snomed.info/id/447488002">447488002</a></td><td>Suprapubic urine specimen</td></tr><tr><td><a href="http://snomed.info/id/373826004">373826004</a></td><td>Surgical excision specimen</td></tr><tr><td><a href="http://snomed.info/id/472896000">472896000</a></td><td>Swab from blister</td></tr><tr><td><a href="http://snomed.info/id/733104004">733104004</a></td><td>Swab from buccal mucosa</td></tr><tr><td><a href="http://snomed.info/id/472884007">472884007</a></td><td>Swab from deep wound</td></tr><tr><td><a href="http://snomed.info/id/472886009">472886009</a></td><td>Swab from gastrostomy stoma</td></tr><tr><td><a href="http://snomed.info/id/472901003">472901003</a></td><td>Swab from nasal sinus</td></tr><tr><td><a href="http://snomed.info/id/472881004">472881004</a></td><td>Swab from pharynx</td></tr><tr><td><a href="http://snomed.info/id/472882006">472882006</a></td><td>Swab from superficial wound</td></tr><tr><td><a href="http://snomed.info/id/33901000087104">33901000087104</a></td><td>Swab from tracheostomy stoma</td></tr><tr><td><a href="http://snomed.info/id/472871003">472871003</a></td><td>Swab from ulcer</td></tr><tr><td><a href="http://snomed.info/id/445364004">445364004</a></td><td>Swab of axilla</td></tr><tr><td><a href="http://snomed.info/id/445444005">445444005</a></td><td>Swab of groin</td></tr><tr><td><a href="http://snomed.info/id/445367006">445367006</a></td><td>Swab of umbilicus</td></tr><tr><td><a href="http://snomed.info/id/710069003">710069003</a></td><td>Tick specimen</td></tr><tr><td><a href="http://snomed.info/id/128157004">128157004</a></td><td>Tissue specimen from brain</td></tr><tr><td><a href="http://snomed.info/id/399492000">399492000</a></td><td>Tissue specimen from lung</td></tr><tr><td><a href="http://snomed.info/id/699874006">699874006</a></td><td>Tissue specimen from pericardium</td></tr><tr><td><a href="http://snomed.info/id/57741000052105">57741000052105</a></td><td>Tracheal secretion specimen</td></tr><tr><td><a href="http://snomed.info/id/472938003">472938003</a></td><td>Tracheal tube submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/122877000">122877000</a></td><td>Upper respiratory fluid specimen obtained by tracheal aspiration</td></tr><tr><td><a href="http://snomed.info/id/258604001">258604001</a></td><td>Upper respiratory specimen</td></tr><tr><td><a href="http://snomed.info/id/122565001">122565001</a></td><td>Urinary catheter specimen</td></tr><tr><td><a href="http://snomed.info/id/446130001">446130001</a></td><td>Urine specimen from bladder</td></tr><tr><td><a href="http://snomed.info/id/442173007">442173007</a></td><td>Urine specimen from nephrostomy tube</td></tr><tr><td><a href="http://snomed.info/id/446306009">446306009</a></td><td>Urine specimen obtained from urinary collection bag</td></tr><tr><td><a href="http://snomed.info/id/446846006">446846006</a></td><td>Urine specimen obtained via indwelling urinary catheter</td></tr><tr><td><a href="http://snomed.info/id/16221251000119108">16221251000119108</a></td><td>Urine specimen obtained via straight catheter</td></tr><tr><td><a href="http://snomed.info/id/258577004">258577004</a></td><td>Vaginal secretion specimen</td></tr><tr><td><a href="http://snomed.info/id/472932002">472932002</a></td><td>Vascular catheter submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/703432000">703432000</a></td><td>Venous plasma specimen</td></tr><tr><td><a href="http://snomed.info/id/472942000">472942000</a></td><td>Ventriculoperitoneal shunt submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258438000">258438000</a></td><td>Vitreous humor specimen</td></tr><tr><td><a href="http://snomed.info/id/119318008">119318008</a></td><td>Water specimen</td></tr><tr><td><a href="http://snomed.info/id/57921000052103">57921000052103</a></td><td>Whole blood specimen with edetic acid</td></tr><tr><td><a href="http://snomed.info/id/258565009">258565009</a></td><td>Chorionic villi specimen</td></tr><tr><td><a href="http://snomed.info/id/258599007">258599007</a></td><td>Contact lens solution specimen</td></tr><tr><td><a href="http://snomed.info/id/439961009">439961009</a></td><td>Implant submitted as specimen</td></tr><tr><td><a href="http://snomed.info/id/258603007">258603007</a></td><td>Specimen from respiratory system</td></tr><tr><td><a href="http://snomed.info/id/119368000">119368000</a></td><td>Specimen from cyst</td></tr><tr><td><a href="http://snomed.info/id/433861002">433861002</a></td><td>Specimen from nasal sinus obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/734379005">734379005</a></td><td>Specimen from periodontal tissue</td></tr><tr><td><a href="http://snomed.info/id/119369008">119369008</a></td><td>Specimen from ulcer</td></tr><tr><td><a href="http://snomed.info/id/430304001">430304001</a></td><td>Specimen from unspecified body site</td></tr><tr><td><a href="http://snomed.info/id/127479004">127479004</a></td><td>Specimen from uterus</td></tr><tr><td><a href="http://snomed.info/id/122550002">122550002</a></td><td>Specimen obtained by fine needle aspiration procedure</td></tr><tr><td><a href="http://snomed.info/id/258576008">258576008</a></td><td>Suprapubic aspirate specimen</td></tr><tr><td><a href="http://snomed.info/id/445297001">445297001</a></td><td>Swab of internal nose</td></tr><tr><td><a href="http://snomed.info/id/699287008">699287008</a></td><td>Urine specimen obtained via suprapubic indwelling urinary catheter</td></tr><tr><td><a href="http://snomed.info/id/444946008">444946008</a></td><td>Dialysis fluid specimen obtained before dialysis</td></tr><tr><td><a href="http://snomed.info/id/122592007">122592007</a></td><td>Serum or plasma specimen</td></tr><tr><td><a href="http://snomed.info/id/309141004">309141004</a></td><td>Adrenal gland specimen</td></tr><tr><td><a href="http://snomed.info/id/309479002">309479002</a></td><td>Artery specimen</td></tr><tr><td><a href="http://snomed.info/id/122558009">122558009</a></td><td>Blood specimen from blood product</td></tr><tr><td><a href="http://snomed.info/id/122559001">122559001</a></td><td>Blood specimen from control</td></tr><tr><td><a href="http://snomed.info/id/122562003">122562003</a></td><td>Blood specimen from newborn</td></tr><tr><td><a href="http://snomed.info/id/258587000">258587000</a></td><td>Buffy coat</td></tr><tr><td><a href="http://snomed.info/id/433116003">433116003</a></td><td>Specimen from liver obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/119346005">119346005</a></td><td>Egg yolk specimen</td></tr><tr><td><a href="http://snomed.info/id/122582004">122582004</a></td><td>Erythrocyte specimen from blood product</td></tr><tr><td><a href="http://snomed.info/id/119333000">119333000</a></td><td>Fibroblast specimen</td></tr><tr><td><a href="http://snomed.info/id/119320006">119320006</a></td><td>Food specimen</td></tr><tr><td><a href="http://snomed.info/id/122576002">122576002</a></td><td>Genital mucus specimen</td></tr><tr><td><a href="http://snomed.info/id/119337004">119337004</a></td><td>Inhaled gas specimen</td></tr><tr><td><a href="http://snomed.info/id/258606004">258606004</a></td><td>Lower respiratory tract specimen</td></tr><tr><td><a href="http://snomed.info/id/119316007">119316007</a></td><td>Non-biological fluid specimen</td></tr><tr><td><a href="http://snomed.info/id/122551003">122551003</a></td><td>Peripheral blood specimen</td></tr><tr><td><a href="http://snomed.info/id/119301009">119301009</a></td><td>Plant specimen</td></tr><tr><td><a href="http://snomed.info/id/119362004">119362004</a></td><td>Platelet poor plasma specimen</td></tr><tr><td><a href="http://snomed.info/id/119363009">119363009</a></td><td>Platelet rich plasma specimen</td></tr><tr><td><a href="http://snomed.info/id/119358005">119358005</a></td><td>Platelet specimen</td></tr><tr><td><a href="http://snomed.info/id/725946000">725946000</a></td><td>Reticulocyte specimen</td></tr><tr><td><a href="http://snomed.info/id/309508006">309508006</a></td><td>Soft tissue lesion fine needle aspirate specimen</td></tr><tr><td><a href="http://snomed.info/id/119391001">119391001</a></td><td>Specimen from bronchus</td></tr><tr><td><a href="http://snomed.info/id/119367005">119367005</a></td><td>Specimen from burn injury</td></tr><tr><td><a href="http://snomed.info/id/702701006">702701006</a></td><td>Specimen from cervix or vagina</td></tr><tr><td><a href="http://snomed.info/id/119400006">119400006</a></td><td>Specimen from cornea</td></tr><tr><td><a href="http://snomed.info/id/1003708009">1003708009</a></td><td>Specimen from drain device</td></tr><tr><td><a href="http://snomed.info/id/127462005">127462005</a></td><td>Specimen from heart</td></tr><tr><td><a href="http://snomed.info/id/127458004">127458004</a></td><td>Specimen from lung</td></tr><tr><td><a href="http://snomed.info/id/122614000">122614000</a></td><td>Specimen from lung obtained by fine needle aspiration procedure</td></tr><tr><td><a href="http://snomed.info/id/432382007">432382007</a></td><td>Specimen from lymph node obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/128155007">128155007</a></td><td>Specimen from ovary</td></tr><tr><td><a href="http://snomed.info/id/431406009">431406009</a></td><td>Specimen from pancreas obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/441695007">441695007</a></td><td>Specimen from parotid gland obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/430250001">430250001</a></td><td>Specimen from peritoneum</td></tr><tr><td><a href="http://snomed.info/id/127459007">127459007</a></td><td>Specimen from pleura</td></tr><tr><td><a href="http://snomed.info/id/119386002">119386002</a></td><td>Specimen from prostate</td></tr><tr><td><a href="http://snomed.info/id/384819001">384819001</a></td><td>Specimen from prostate obtained by needle biopsy</td></tr><tr><td><a href="http://snomed.info/id/434406008">434406008</a></td><td>Specimen from salivary gland obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/441810001">441810001</a></td><td>Specimen from soft tissue obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/441749007">441749007</a></td><td>Specimen from submandibular gland obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/128154006">128154006</a></td><td>Specimen from testis</td></tr><tr><td><a href="http://snomed.info/id/119389009">119389009</a></td><td>Specimen from throat</td></tr><tr><td><a href="http://snomed.info/id/399680007">399680007</a></td><td>Specimen from thyroid</td></tr><tr><td><a href="http://snomed.info/id/119390000">119390000</a></td><td>Specimen from trachea</td></tr><tr><td><a href="http://snomed.info/id/399411006">399411006</a></td><td>Specimen from trophoblast</td></tr><tr><td><a href="http://snomed.info/id/119393003">119393003</a></td><td>Specimen from urethra</td></tr><tr><td><a href="http://snomed.info/id/450872001">450872001</a></td><td>Specimen from urinary bladder</td></tr><tr><td><a href="http://snomed.info/id/119395005">119395005</a></td><td>Specimen from uterine cervix</td></tr><tr><td><a href="http://snomed.info/id/119394009">119394009</a></td><td>Specimen from vagina</td></tr><tr><td><a href="http://snomed.info/id/119365002">119365002</a></td><td>Specimen from wound</td></tr><tr><td><a href="http://snomed.info/id/309146009">309146009</a></td><td>Thyroid fine needle aspirate specimen</td></tr><tr><td><a href="http://snomed.info/id/122638001">122638001</a></td><td>Tissue specimen from small intestine</td></tr><tr><td><a href="http://snomed.info/id/258444001">258444001</a></td><td>Aqueous humor specimen</td></tr><tr><td><a href="http://snomed.info/id/258485006">258485006</a></td><td>Corneal scraping specimen</td></tr><tr><td><a href="http://snomed.info/id/168137004">168137004</a></td><td>Gastric aspirate specimen</td></tr><tr><td><a href="http://snomed.info/id/1259931002">1259931002</a></td><td>Hair of face specimen</td></tr><tr><td><a href="http://snomed.info/id/168145009">168145009</a></td><td>Lymph specimen</td></tr><tr><td><a href="http://snomed.info/id/309507001">309507001</a></td><td>Muscle biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/16224171000119108">16224171000119108</a></td><td>Nasotracheal aspirate</td></tr><tr><td><a href="http://snomed.info/id/309068002">309068002</a></td><td>Skin lesion specimen</td></tr><tr><td><a href="http://snomed.info/id/396997002">396997002</a></td><td>Specimen from bone marrow obtained by aspiration</td></tr><tr><td><a href="http://snomed.info/id/16215771000119101">16215771000119101</a></td><td>Specimen from inguinal lymph node obtained by fine needle aspiration biopsy</td></tr><tr><td><a href="http://snomed.info/id/430236006">430236006</a></td><td>Specimen from nerve</td></tr><tr><td><a href="http://snomed.info/id/472898004">472898004</a></td><td>Swab from hand</td></tr><tr><td><a href="http://snomed.info/id/472868006">472868006</a></td><td>Swab from peritoneal cavity structure</td></tr><tr><td><a href="http://snomed.info/id/444787003">444787003</a></td><td>Swab of endocervix</td></tr><tr><td><a href="http://snomed.info/id/16223971000119109">16223971000119109</a></td><td>Synovial fluid specimen obtained by fine needle aspiration procedure</td></tr><tr><td><a href="http://snomed.info/id/122656001">122656001</a></td><td>Tissue specimen from gallbladder</td></tr><tr><td><a href="http://snomed.info/id/122736005">122736005</a></td><td>Tissue specimen from placenta</td></tr><tr><td><a href="http://snomed.info/id/369611008">369611008</a></td><td>Tissue specimen obtained from small intestine by biopsy</td></tr><tr><td><a href="http://snomed.info/id/309191000">309191000</a></td><td>Tonsil biopsy specimen</td></tr><tr><td><a href="http://snomed.info/id/697989009">697989009</a></td><td>Anterior nares swab</td></tr><tr><td><a href="http://snomed.info/id/57931000052101">57931000052101</a></td><td>Combined cervical mucus and urine specimen</td></tr><tr><td><a href="http://snomed.info/id/433324003">433324003</a></td><td>Specimen from eye region</td></tr><tr><td><a href="http://snomed.info/id/16216171000119108">16216171000119108</a></td><td>Specimen from liver obtained by aspiration</td></tr><tr><td><a href="http://snomed.info/id/16221491000119104">16221491000119104</a></td><td>Voided urine specimen</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabSpecimenTypesEuVs"/>
+  <title value="Specimen Types"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Laboratory Specimen Types"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="258497007"/>
+        <display value="Abscess swab"/>
+      </concept>
+      <concept>
+        <code value="258407001"/>
+        <display value="Abscess tissue"/>
+      </concept>
+      <concept>
+        <code value="119373006"/>
+        <display value="Amniotic fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="122552005"/>
+        <display value="Arterial blood specimen"/>
+      </concept>
+      <concept>
+        <code value="309201001"/>
+        <display value="Ascitic fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119341000"/>
+        <display value="Bile specimen"/>
+      </concept>
+      <concept>
+        <code value="258493006"/>
+        <display value="Bladder stone specimen"/>
+      </concept>
+      <concept>
+        <code value="258582006"/>
+        <display value="Blood clot specimen"/>
+      </concept>
+      <concept>
+        <code value="119297000"/>
+        <display value="Blood specimen"/>
+      </concept>
+      <concept>
+        <code value="309051001"/>
+        <display value="Body fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="432825001"/>
+        <display value="Body secretion specimen"/>
+      </concept>
+      <concept>
+        <code value="258583001"/>
+        <display value="Bone marrow clot specimen"/>
+      </concept>
+      <concept>
+        <code value="119359002"/>
+        <display value="Bone marrow specimen"/>
+      </concept>
+      <concept>
+        <code value="258417006"/>
+        <display value="Bone tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="309176002"/>
+        <display value="Bronchial brushings specimen"/>
+      </concept>
+      <concept>
+        <code value="258446004"/>
+        <display value="Bronchial fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258564008"/>
+        <display value="Buccal smear specimen"/>
+      </concept>
+      <concept>
+        <code value="258418001"/>
+        <display value="Burn tissue"/>
+      </concept>
+      <concept>
+        <code value="258448003"/>
+        <display value="Bursa fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309110000"/>
+        <display value="Bursa tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="119350003"/>
+        <display value="Calculus specimen"/>
+      </concept>
+      <concept>
+        <code value="258627009"/>
+        <display value="Cannula tip submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="122554006"/>
+        <display value="Capillary blood specimen"/>
+      </concept>
+      <concept>
+        <code value="309101008"/>
+        <display value="Cartilage specimen"/>
+      </concept>
+      <concept>
+        <code value="119312009"/>
+        <display value="Catheter tip submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258450006"/>
+        <display value="Cerebrospinal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="122580007"/>
+        <display value="Cerumen specimen"/>
+      </concept>
+      <concept>
+        <code value="258452003"/>
+        <display value="Chylous fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258581004"/>
+        <display value="Clotted blood specimen"/>
+      </concept>
+      <concept>
+        <code value="168136008"/>
+        <display value="Colostomy fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119329007"/>
+        <display value="Colostrum specimen"/>
+      </concept>
+      <concept>
+        <code value="258498002"/>
+        <display value="Conjunctival swab"/>
+      </concept>
+      <concept>
+        <code value="122556008"/>
+        <display value="Cord blood specimen"/>
+      </concept>
+      <concept>
+        <code value="258499005"/>
+        <display value="Cough swab"/>
+      </concept>
+      <concept>
+        <code value="258419009"/>
+        <display value="Curettings"/>
+      </concept>
+      <concept>
+        <code value="258453008"/>
+        <display value="Cyst fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258420003"/>
+        <display value="Cyst tissue"/>
+      </concept>
+      <concept>
+        <code value="119338009"/>
+        <display value="Dentin specimen"/>
+      </concept>
+      <concept>
+        <code value="472919007"/>
+        <display value="Device submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258454002"/>
+        <display value="Dialysate specimen"/>
+      </concept>
+      <concept>
+        <code value="258439008"/>
+        <display value="Discharge specimen"/>
+      </concept>
+      <concept>
+        <code value="258566005"/>
+        <display value="Deoxyribonucleic acid specimen"/>
+      </concept>
+      <concept>
+        <code value="1003705007"/>
+        <display value="Drain tip submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258455001"/>
+        <display value="Drainage fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119294007"/>
+        <display value="Dried blood specimen"/>
+      </concept>
+      <concept>
+        <code value="258440005"/>
+        <display value="Effusion specimen"/>
+      </concept>
+      <concept>
+        <code value="258456000"/>
+        <display value="Empyema fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119336008"/>
+        <display value="Exhaled air specimen"/>
+      </concept>
+      <concept>
+        <code value="258470000"/>
+        <display value="Prostatic fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258441009"/>
+        <display value="Exudate specimen"/>
+      </concept>
+      <concept>
+        <code value="309128003"/>
+        <display value="Eye fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258487003"/>
+        <display value="Fecal smear"/>
+      </concept>
+      <concept>
+        <code value="119339001"/>
+        <display value="Stool specimen"/>
+      </concept>
+      <concept>
+        <code value="309117002"/>
+        <display value="Fascia specimen"/>
+      </concept>
+      <concept>
+        <code value="258458004"/>
+        <display value="Fistula fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258442002"/>
+        <display value="Fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="445744006"/>
+        <display value="Fluid specimen from seroma"/>
+      </concept>
+      <concept>
+        <code value="309502007"/>
+        <display value="Fetus specimen"/>
+      </concept>
+      <concept>
+        <code value="447103002"/>
+        <display value="Foreign body submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258492001"/>
+        <display value="Gallstone specimen"/>
+      </concept>
+      <concept>
+        <code value="432657002"/>
+        <display value="Ganglion cyst specimen"/>
+      </concept>
+      <concept>
+        <code value="309213006"/>
+        <display value="Gastric brushings specimen"/>
+      </concept>
+      <concept>
+        <code value="309199003"/>
+        <display value="Gastrointestinal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258562007"/>
+        <display value="Genetic specimen"/>
+      </concept>
+      <concept>
+        <code value="258508008"/>
+        <display value="Genital swab"/>
+      </concept>
+      <concept>
+        <code value="258559009"/>
+        <display value="Gingivocrevicular fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="440493002"/>
+        <display value="Graft specimen from patient"/>
+      </concept>
+      <concept>
+        <code value="258588005"/>
+        <display value="Hematoma specimen"/>
+      </concept>
+      <concept>
+        <code value="119326000"/>
+        <display value="Hair specimen"/>
+      </concept>
+      <concept>
+        <code value="258424007"/>
+        <display value="Heart valve tissue"/>
+      </concept>
+      <concept>
+        <code value="258521001"/>
+        <display value="High vaginal swab"/>
+      </concept>
+      <concept>
+        <code value="258461003"/>
+        <display value="Hydrocele fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258462005"/>
+        <display value="Ileostomy fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258479004"/>
+        <display value="Interstitial fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309114009"/>
+        <display value="Ligament specimen"/>
+      </concept>
+      <concept>
+        <code value="258522008"/>
+        <display value="Low vaginal swab"/>
+      </concept>
+      <concept>
+        <code value="309171007"/>
+        <display value="Lower respiratory fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="302795002"/>
+        <display value="Lymph node aspirate"/>
+      </concept>
+      <concept>
+        <code value="258488008"/>
+        <display value="Lymph node smear"/>
+      </concept>
+      <concept>
+        <code value="309078004"/>
+        <display value="Lymph node tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="119340004"/>
+        <display value="Meconium specimen"/>
+      </concept>
+      <concept>
+        <code value="119345009"/>
+        <display value="Menstrual blood specimen"/>
+      </concept>
+      <concept>
+        <code value="119303007"/>
+        <display value="Microbial isolate"/>
+      </concept>
+      <concept>
+        <code value="119328004"/>
+        <display value="Mother's milk specimen"/>
+      </concept>
+      <concept>
+        <code value="258483004"/>
+        <display value="Mucus specimen"/>
+      </concept>
+      <concept>
+        <code value="119327009"/>
+        <display value="Nail specimen"/>
+      </concept>
+      <concept>
+        <code value="168141000"/>
+        <display value="Nasal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258467004"/>
+        <display value="Nasopharyngeal washings"/>
+      </concept>
+      <concept>
+        <code value="433799002"/>
+        <display value="Nerve ganglion specimen"/>
+      </concept>
+      <concept>
+        <code value="309129006"/>
+        <display value="Nerve tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="309131002"/>
+        <display value="Neuroma specimen"/>
+      </concept>
+      <concept>
+        <code value="258468009"/>
+        <display value="Edema fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309210009"/>
+        <display value="Esophageal brushings specimen"/>
+      </concept>
+      <concept>
+        <code value="258494000"/>
+        <display value="Pancreatic stone specimen"/>
+      </concept>
+      <concept>
+        <code value="122571007"/>
+        <display value="Pericardial fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="168139001"/>
+        <display value="Peritoneal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258469001"/>
+        <display value="Pharyngeal washings"/>
+      </concept>
+      <concept>
+        <code value="119361006"/>
+        <display value="Plasma specimen"/>
+      </concept>
+      <concept>
+        <code value="110913002"/>
+        <display value="Pleural cytologic material"/>
+      </concept>
+      <concept>
+        <code value="418564007"/>
+        <display value="Pleural fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258484005"/>
+        <display value="Postmortem tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="258428005"/>
+        <display value="Products of conception tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="119323008"/>
+        <display value="Pus specimen"/>
+      </concept>
+      <concept>
+        <code value="258502009"/>
+        <display value="Pus swab"/>
+      </concept>
+      <concept>
+        <code value="119351004"/>
+        <display value="Erythrocyte specimen"/>
+      </concept>
+      <concept>
+        <code value="258495004"/>
+        <display value="Renal stone specimen"/>
+      </concept>
+      <concept>
+        <code value="119342007"/>
+        <display value="Saliva specimen"/>
+      </concept>
+      <concept>
+        <code value="258431006"/>
+        <display value="Scrapings"/>
+      </concept>
+      <concept>
+        <code value="258432004"/>
+        <display value="Sebum specimen"/>
+      </concept>
+      <concept>
+        <code value="119347001"/>
+        <display value="Seminal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119364003"/>
+        <display value="Serum specimen"/>
+      </concept>
+      <concept>
+        <code value="309261004"/>
+        <display value="Sigmoid colon brushings specimen"/>
+      </concept>
+      <concept>
+        <code value="258475005"/>
+        <display value="Sinus washings"/>
+      </concept>
+      <concept>
+        <code value="119331003"/>
+        <display value="Skeletal muscle specimen"/>
+      </concept>
+      <concept>
+        <code value="119325001"/>
+        <display value="Tissue specimen from skin"/>
+      </concept>
+      <concept>
+        <code value="258505006"/>
+        <display value="Skin ulcer swab"/>
+      </concept>
+      <concept>
+        <code value="258433009"/>
+        <display value="Smear specimen"/>
+      </concept>
+      <concept>
+        <code value="309072003"/>
+        <display value="Soft tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="119300005"/>
+        <display value="Specimen from blood product"/>
+      </concept>
+      <concept>
+        <code value="898201001"/>
+        <display value="Specimen from device"/>
+      </concept>
+      <concept>
+        <code value="1003706008"/>
+        <display value="Specimen from drain tip"/>
+      </concept>
+      <concept>
+        <code value="119305000"/>
+        <display value="Specimen from plasma bag"/>
+      </concept>
+      <concept>
+        <code value="119349003"/>
+        <display value="Spermatozoa specimen"/>
+      </concept>
+      <concept>
+        <code value="258434003"/>
+        <display value="Spun urinary sediment"/>
+      </concept>
+      <concept>
+        <code value="119334006"/>
+        <display value="Sputum specimen"/>
+      </concept>
+      <concept>
+        <code value="257261003"/>
+        <display value="Swab"/>
+      </concept>
+      <concept>
+        <code value="445160003"/>
+        <display value="Swab of eye"/>
+      </concept>
+      <concept>
+        <code value="122569007"/>
+        <display value="Sweat specimen"/>
+      </concept>
+      <concept>
+        <code value="119332005"/>
+        <display value="Synovial fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309123007"/>
+        <display value="Synovial specimen"/>
+      </concept>
+      <concept>
+        <code value="309121009"/>
+        <display value="Synovial tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="440468004"/>
+        <display value="Tampon submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258465007"/>
+        <display value="Lacrimal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="122594008"/>
+        <display value="Tears specimen"/>
+      </concept>
+      <concept>
+        <code value="309481000"/>
+        <display value="Temporal artery specimen"/>
+      </concept>
+      <concept>
+        <code value="309107007"/>
+        <display value="Tendon specimen"/>
+      </concept>
+      <concept>
+        <code value="258529004"/>
+        <display value="Throat swab"/>
+      </concept>
+      <concept>
+        <code value="119376003"/>
+        <display value="Tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="258538002"/>
+        <display value="Transudate specimen"/>
+      </concept>
+      <concept>
+        <code value="258435002"/>
+        <display value="Tumor tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="441479001"/>
+        <display value="Fresh tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="439628000"/>
+        <display value="Urinary collection bag submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="439580004"/>
+        <display value="Urine collection pad submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="122567009"/>
+        <display value="Urine sediment specimen"/>
+      </concept>
+      <concept>
+        <code value="122575003"/>
+        <display value="Urine specimen"/>
+      </concept>
+      <concept>
+        <code value="258437005"/>
+        <display value="Vegetation from heart valve"/>
+      </concept>
+      <concept>
+        <code value="122555007"/>
+        <display value="Venous blood specimen"/>
+      </concept>
+      <concept>
+        <code value="122572000"/>
+        <display value="Vomitus specimen"/>
+      </concept>
+      <concept>
+        <code value="258591005"/>
+        <display value="White blood cell specimen"/>
+      </concept>
+      <concept>
+        <code value="258580003"/>
+        <display value="Whole blood specimen"/>
+      </concept>
+      <concept>
+        <code value="438805006"/>
+        <display value="Whole tooth specimen"/>
+      </concept>
+      <concept>
+        <code value="122566000"/>
+        <display value="Fluid specimen from wound"/>
+      </concept>
+      <concept>
+        <code value="258531008"/>
+        <display value="Wound swab"/>
+      </concept>
+      <concept>
+        <code value="446302006"/>
+        <display value="Air specimen"/>
+      </concept>
+      <concept>
+        <code value="33631000087102"/>
+        <display value="Allogeneic bone graft material submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="703430008"/>
+        <display value="Arterial cord blood specimen"/>
+      </concept>
+      <concept>
+        <code value="16215211000119100"/>
+        <display value="Bartholin's gland fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="446129006"/>
+        <display value="Bile specimen from common bile duct"/>
+      </concept>
+      <concept>
+        <code value="446817004"/>
+        <display value="Bile specimen from gallbladder"/>
+      </concept>
+      <concept>
+        <code value="258490009"/>
+        <display value="Biliary stone specimen"/>
+      </concept>
+      <concept>
+        <code value="309105004"/>
+        <display value="Bone biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="258607008"/>
+        <display value="Bronchoalveolar lavage fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="122577006"/>
+        <display value="Cervical mucus specimen"/>
+      </concept>
+      <concept>
+        <code value="16216411000119106"/>
+        <display value="Conjunctival smear specimen"/>
+      </concept>
+      <concept>
+        <code value="1003707004"/>
+        <display value="Drain device submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="309216003"/>
+        <display value="Duodenal biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="122574004"/>
+        <display value="Duodenal fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309166000"/>
+        <display value="Ear swab specimen"/>
+      </concept>
+      <concept>
+        <code value="119314005"/>
+        <display value="Electrode submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="419695002"/>
+        <display value="Environmental swab"/>
+      </concept>
+      <concept>
+        <code value="309211008"/>
+        <display value="Gastric biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="122573005"/>
+        <display value="Gastric contents specimen"/>
+      </concept>
+      <concept>
+        <code value="258459007"/>
+        <display value="Gastric fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="122579009"/>
+        <display value="Genital lochia specimen"/>
+      </concept>
+      <concept>
+        <code value="258512002"/>
+        <display value="Glans penis swab"/>
+      </concept>
+      <concept>
+        <code value="473415003"/>
+        <display value="Intrauterine contraceptive device submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258649003"/>
+        <display value="Intravenous infusion fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309049000"/>
+        <display value="Lesion specimen"/>
+      </concept>
+      <concept>
+        <code value="309203003"/>
+        <display value="Liver biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="258589002"/>
+        <display value="Lymph node specimen"/>
+      </concept>
+      <concept>
+        <code value="258466008"/>
+        <display value="Middle ear fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119298005"/>
+        <display value="Mixed venous blood specimen"/>
+      </concept>
+      <concept>
+        <code value="705054005"/>
+        <display value="Muscle specimen"/>
+      </concept>
+      <concept>
+        <code value="309104000"/>
+        <display value="Musculoskeletal specimen"/>
+      </concept>
+      <concept>
+        <code value="447339001"/>
+        <display value="Nasal smear specimen"/>
+      </concept>
+      <concept>
+        <code value="258500001"/>
+        <display value="Nasopharyngeal swab"/>
+      </concept>
+      <concept>
+        <code value="16220931000119104"/>
+        <display value="Pancreas cyst fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="119343002"/>
+        <display value="Pancreatic fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309154006"/>
+        <display value="Pituitary specimen"/>
+      </concept>
+      <concept>
+        <code value="708317005"/>
+        <display value="Pooled specimen from vaginal introitus and rectal swab"/>
+      </concept>
+      <concept>
+        <code value="258513007"/>
+        <display value="Prepuce swab"/>
+      </concept>
+      <concept>
+        <code value="258528007"/>
+        <display value="Rectal swab"/>
+      </concept>
+      <concept>
+        <code value="410580001"/>
+        <display value="Respiratory fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="732293002"/>
+        <display value="Salivary calculus specimen"/>
+      </concept>
+      <concept>
+        <code value="309066003"/>
+        <display value="Skin biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="430268003"/>
+        <display value="Specimen from bone"/>
+      </concept>
+      <concept>
+        <code value="119398007"/>
+        <display value="Specimen from brain"/>
+      </concept>
+      <concept>
+        <code value="122601001"/>
+        <display value="Specimen from breast obtained by biopsy"/>
+      </concept>
+      <concept>
+        <code value="119307008"/>
+        <display value="Specimen from endotracheal tube"/>
+      </concept>
+      <concept>
+        <code value="119399004"/>
+        <display value="Specimen from eye"/>
+      </concept>
+      <concept>
+        <code value="127476006"/>
+        <display value="Specimen from fallopian tube"/>
+      </concept>
+      <concept>
+        <code value="446951004"/>
+        <display value="Specimen from granulation tissue"/>
+      </concept>
+      <concept>
+        <code value="127473003"/>
+        <display value="Specimen from kidney"/>
+      </concept>
+      <concept>
+        <code value="119383005"/>
+        <display value="Specimen from liver"/>
+      </concept>
+      <concept>
+        <code value="122610009"/>
+        <display value="Specimen from lung obtained by biopsy"/>
+      </concept>
+      <concept>
+        <code value="447407009"/>
+        <display value="Specimen from necrotic tissue"/>
+      </concept>
+      <concept>
+        <code value="127469001"/>
+        <display value="Specimen from pancreas"/>
+      </concept>
+      <concept>
+        <code value="119403008"/>
+        <display value="Specimen from placenta"/>
+      </concept>
+      <concept>
+        <code value="1003711005"/>
+        <display value="Specimen from prosthetic joint"/>
+      </concept>
+      <concept>
+        <code value="608969007"/>
+        <display value="Specimen from skin"/>
+      </concept>
+      <concept>
+        <code value="433308004"/>
+        <display value="Specimen from spleen"/>
+      </concept>
+      <concept>
+        <code value="119379005"/>
+        <display value="Specimen from stomach"/>
+      </concept>
+      <concept>
+        <code value="445447003"/>
+        <display value="Specimen from trachea obtained by aspiration"/>
+      </concept>
+      <concept>
+        <code value="441903006"/>
+        <display value="Specimen obtained by bronchial aspiration"/>
+      </concept>
+      <concept>
+        <code value="440674008"/>
+        <display value="Specimen obtained by lavage"/>
+      </concept>
+      <concept>
+        <code value="57711000052109"/>
+        <display value="Specimen obtained by puncture procedure"/>
+      </concept>
+      <concept>
+        <code value="16220971000119101"/>
+        <display value="Specimen of fluid from cyst of kidney"/>
+      </concept>
+      <concept>
+        <code value="278020009"/>
+        <display value="Spot urine specimen"/>
+      </concept>
+      <concept>
+        <code value="271514008"/>
+        <display value="Sternal bone marrow specimen"/>
+      </concept>
+      <concept>
+        <code value="472894002"/>
+        <display value="Swab from cornea"/>
+      </concept>
+      <concept>
+        <code value="472900002"/>
+        <display value="Swab from gingiva"/>
+      </concept>
+      <concept>
+        <code value="472888005"/>
+        <display value="Swab from larynx"/>
+      </concept>
+      <concept>
+        <code value="16210971000119108"/>
+        <display value="Swab from lesion"/>
+      </concept>
+      <concept>
+        <code value="472862007"/>
+        <display value="Swab from lesion of skin"/>
+      </concept>
+      <concept>
+        <code value="472879001"/>
+        <display value="Swab from placenta"/>
+      </concept>
+      <concept>
+        <code value="472885008"/>
+        <display value="Swab from pressure injury"/>
+      </concept>
+      <concept>
+        <code value="472883001"/>
+        <display value="Swab from surgical wound"/>
+      </concept>
+      <concept>
+        <code value="472866005"/>
+        <display value="Swab from tongue"/>
+      </concept>
+      <concept>
+        <code value="472867001"/>
+        <display value="Swab from tonsil"/>
+      </concept>
+      <concept>
+        <code value="461911000124106"/>
+        <display value="Oropharyngeal swab"/>
+      </concept>
+      <concept>
+        <code value="309478005"/>
+        <display value="Thrombus specimen"/>
+      </concept>
+      <concept>
+        <code value="258480001"/>
+        <display value="Transtracheal aspirate specimen"/>
+      </concept>
+      <concept>
+        <code value="258436001"/>
+        <display value="Umbilical cord tissue specimen"/>
+      </concept>
+      <concept>
+        <code value="258530009"/>
+        <display value="Urethral swab"/>
+      </concept>
+      <concept>
+        <code value="444937002"/>
+        <display value="Urine specimen from ureter"/>
+      </concept>
+      <concept>
+        <code value="447589008"/>
+        <display value="Urine specimen obtained by single catheterization of bladder"/>
+      </concept>
+      <concept>
+        <code value="446907008"/>
+        <display value="Urine specimen obtained from kidney"/>
+      </concept>
+      <concept>
+        <code value="258520000"/>
+        <display value="Vaginal swab"/>
+      </concept>
+      <concept>
+        <code value="703431007"/>
+        <display value="Venous cord blood specimen"/>
+      </concept>
+      <concept>
+        <code value="258482009"/>
+        <display value="Vesicle fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258523003"/>
+        <display value="Vulval swab"/>
+      </concept>
+      <concept>
+        <code value="258662004"/>
+        <display value="Adhesive slide specimen"/>
+      </concept>
+      <concept>
+        <code value="258527002"/>
+        <display value="Anal swab"/>
+      </concept>
+      <concept>
+        <code value="258415003"/>
+        <display value="Biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="303248007"/>
+        <display value="Blood film specimen"/>
+      </concept>
+      <concept>
+        <code value="737535000"/>
+        <display value="Blood smear specimen"/>
+      </concept>
+      <concept>
+        <code value="122560006"/>
+        <display value="Blood specimen from blood donor"/>
+      </concept>
+      <concept>
+        <code value="866033003"/>
+        <display value="Blood specimen in aerobic blood culture bottle"/>
+      </concept>
+      <concept>
+        <code value="866032008"/>
+        <display value="Blood specimen in anaerobic blood culture bottle"/>
+      </concept>
+      <concept>
+        <code value="878861003"/>
+        <display value="Blood specimen in blood culture bottle"/>
+      </concept>
+      <concept>
+        <code value="445295009"/>
+        <display value="Blood specimen with EDTA"/>
+      </concept>
+      <concept>
+        <code value="309061008"/>
+        <display value="Breast fine needle aspirate specimen"/>
+      </concept>
+      <concept>
+        <code value="309503002"/>
+        <display value="Breast nipple discharge specimen"/>
+      </concept>
+      <concept>
+        <code value="309174004"/>
+        <display value="Bronchial biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="119308003"/>
+        <display value="Cannula submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="473409003"/>
+        <display value="Central venous catheter submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="472929000"/>
+        <display value="Central venous catheter tip submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="445372002"/>
+        <display value="Cerebrospinal fluid specimen from ventricle of brain"/>
+      </concept>
+      <concept>
+        <code value="258524009"/>
+        <display value="Cervical swab"/>
+      </concept>
+      <concept>
+        <code value="440473005"/>
+        <display value="Contact lens submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="440500007"/>
+        <display value="Dried blood spot specimen"/>
+      </concept>
+      <concept>
+        <code value="119319000"/>
+        <display value="Drug specimen"/>
+      </concept>
+      <concept>
+        <code value="309165001"/>
+        <display value="Ear specimen"/>
+      </concept>
+      <concept>
+        <code value="258575007"/>
+        <display value="Early morning urine specimen"/>
+      </concept>
+      <concept>
+        <code value="446676001"/>
+        <display value="Expressed breast milk specimen"/>
+      </concept>
+      <concept>
+        <code value="122568004"/>
+        <display value="Exudate specimen from wound"/>
+      </concept>
+      <concept>
+        <code value="258519006"/>
+        <display value="Female genital swab"/>
+      </concept>
+      <concept>
+        <code value="737357006"/>
+        <display value="Fetal blood specimen"/>
+      </concept>
+      <concept>
+        <code value="698276005"/>
+        <display value="First stream urine specimen"/>
+      </concept>
+      <concept>
+        <code value="733056005"/>
+        <display value="Fluid specimen from ear"/>
+      </concept>
+      <concept>
+        <code value="732976006"/>
+        <display value="Fluid specimen from external auditory canal"/>
+      </concept>
+      <concept>
+        <code value="16214171000119101"/>
+        <display value="Genital fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="258570002"/>
+        <display value="Genitourinary specimen"/>
+      </concept>
+      <concept>
+        <code value="309124001"/>
+        <display value="Joint biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="431361003"/>
+        <display value="Joint fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="309079007"/>
+        <display value="Lymph node biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="309052008"/>
+        <display value="Male genital specimen"/>
+      </concept>
+      <concept>
+        <code value="258574006"/>
+        <display value="Mid-stream urine specimen"/>
+      </concept>
+      <concept>
+        <code value="119321005"/>
+        <display value="Milk specimen"/>
+      </concept>
+      <concept>
+        <code value="119377007"/>
+        <display value="Myocardial specimen"/>
+      </concept>
+      <concept>
+        <code value="16224371000119105"/>
+        <display value="Nasal lavage fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="16223051000119101"/>
+        <display value="Nasal sinus contents specimen"/>
+      </concept>
+      <concept>
+        <code value="258411007"/>
+        <display value="Nasopharyngeal aspirate"/>
+      </concept>
+      <concept>
+        <code value="441620008"/>
+        <display value="Oral fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="418932006"/>
+        <display value="Oral swab"/>
+      </concept>
+      <concept>
+        <code value="258511009"/>
+        <display value="Penile urethral swab"/>
+      </concept>
+      <concept>
+        <code value="258510005"/>
+        <display value="Penis swab"/>
+      </concept>
+      <concept>
+        <code value="258526006"/>
+        <display value="Perianal swab"/>
+      </concept>
+      <concept>
+        <code value="258525005"/>
+        <display value="Perineal swab"/>
+      </concept>
+      <concept>
+        <code value="472923004"/>
+        <display value="Peripheral vascular catheter tip submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="168140004"/>
+        <display value="Peritoneal dialysate specimen"/>
+      </concept>
+      <concept>
+        <code value="788707000"/>
+        <display value="Plasma specimen or serum specimen or whole blood specimen"/>
+      </concept>
+      <concept>
+        <code value="708049000"/>
+        <display value="Plasma specimen with ethylenediamine tetraacetic acid"/>
+      </concept>
+      <concept>
+        <code value="309172000"/>
+        <display value="Pleura biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="258471001"/>
+        <display value="Prostatic massage fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="708112008"/>
+        <display value="Retrouterine pouch fluid aspirate"/>
+      </concept>
+      <concept>
+        <code value="258664003"/>
+        <display value="Scotch tape slide specimen"/>
+      </concept>
+      <concept>
+        <code value="119348006"/>
+        <display value="Seminal plasma specimen"/>
+      </concept>
+      <concept>
+        <code value="122589008"/>
+        <display value="Serum specimen from blood donor"/>
+      </concept>
+      <concept>
+        <code value="122590004"/>
+        <display value="Serum specimen from patient"/>
+      </concept>
+      <concept>
+        <code value="258549008"/>
+        <display value="Skin scale specimen"/>
+      </concept>
+      <concept>
+        <code value="258503004"/>
+        <display value="Skin swab"/>
+      </concept>
+      <concept>
+        <code value="1179252003"/>
+        <display value="Slide submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="119371008"/>
+        <display value="Specimen from abscess"/>
+      </concept>
+      <concept>
+        <code value="446972001"/>
+        <display value="Specimen from abscess obtained by aspiration"/>
+      </concept>
+      <concept>
+        <code value="119392008"/>
+        <display value="Specimen from anus"/>
+      </concept>
+      <concept>
+        <code value="127456000"/>
+        <display value="Specimen from breast"/>
+      </concept>
+      <concept>
+        <code value="16211051000119109"/>
+        <display value="Specimen from deep wound"/>
+      </concept>
+      <concept>
+        <code value="119396006"/>
+        <display value="Specimen from endometrium"/>
+      </concept>
+      <concept>
+        <code value="440229008"/>
+        <display value="Specimen from environment"/>
+      </concept>
+      <concept>
+        <code value="16212771000119105"/>
+        <display value="Specimen from eyelid obtained by biopsy"/>
+      </concept>
+      <concept>
+        <code value="449446003"/>
+        <display value="Specimen from gallbladder"/>
+      </concept>
+      <concept>
+        <code value="119344008"/>
+        <display value="Specimen from genital system"/>
+      </concept>
+      <concept>
+        <code value="447098004"/>
+        <display value="Specimen from nail obtained by scraping"/>
+      </concept>
+      <concept>
+        <code value="430248009"/>
+        <display value="Specimen from nasopharyngeal structure"/>
+      </concept>
+      <concept>
+        <code value="447154002"/>
+        <display value="Specimen from nose"/>
+      </concept>
+      <concept>
+        <code value="119397002"/>
+        <display value="Specimen from penis"/>
+      </concept>
+      <concept>
+        <code value="434250007"/>
+        <display value="Specimen from pericardium obtained by biopsy"/>
+      </concept>
+      <concept>
+        <code value="438660002"/>
+        <display value="Specimen from prosthetic device"/>
+      </concept>
+      <concept>
+        <code value="446952006"/>
+        <display value="Specimen from skin obtained by scraping"/>
+      </concept>
+      <concept>
+        <code value="119295008"/>
+        <display value="Specimen obtained by aspiration"/>
+      </concept>
+      <concept>
+        <code value="119324002"/>
+        <display value="Specimen of unknown material"/>
+      </concept>
+      <concept>
+        <code value="703691002"/>
+        <display value="Spun cerebrospinal fluid"/>
+      </concept>
+      <concept>
+        <code value="258609006"/>
+        <display value="Sputum specimen obtained by aspiration from trachea"/>
+      </concept>
+      <concept>
+        <code value="447488002"/>
+        <display value="Suprapubic urine specimen"/>
+      </concept>
+      <concept>
+        <code value="373826004"/>
+        <display value="Surgical excision specimen"/>
+      </concept>
+      <concept>
+        <code value="472896000"/>
+        <display value="Swab from blister"/>
+      </concept>
+      <concept>
+        <code value="733104004"/>
+        <display value="Swab from buccal mucosa"/>
+      </concept>
+      <concept>
+        <code value="472884007"/>
+        <display value="Swab from deep wound"/>
+      </concept>
+      <concept>
+        <code value="472886009"/>
+        <display value="Swab from gastrostomy stoma"/>
+      </concept>
+      <concept>
+        <code value="472901003"/>
+        <display value="Swab from nasal sinus"/>
+      </concept>
+      <concept>
+        <code value="472881004"/>
+        <display value="Swab from pharynx"/>
+      </concept>
+      <concept>
+        <code value="472882006"/>
+        <display value="Swab from superficial wound"/>
+      </concept>
+      <concept>
+        <code value="33901000087104"/>
+        <display value="Swab from tracheostomy stoma"/>
+      </concept>
+      <concept>
+        <code value="472871003"/>
+        <display value="Swab from ulcer"/>
+      </concept>
+      <concept>
+        <code value="445364004"/>
+        <display value="Swab of axilla"/>
+      </concept>
+      <concept>
+        <code value="445444005"/>
+        <display value="Swab of groin"/>
+      </concept>
+      <concept>
+        <code value="445367006"/>
+        <display value="Swab of umbilicus"/>
+      </concept>
+      <concept>
+        <code value="710069003"/>
+        <display value="Tick specimen"/>
+      </concept>
+      <concept>
+        <code value="128157004"/>
+        <display value="Tissue specimen from brain"/>
+      </concept>
+      <concept>
+        <code value="399492000"/>
+        <display value="Tissue specimen from lung"/>
+      </concept>
+      <concept>
+        <code value="699874006"/>
+        <display value="Tissue specimen from pericardium"/>
+      </concept>
+      <concept>
+        <code value="57741000052105"/>
+        <display value="Tracheal secretion specimen"/>
+      </concept>
+      <concept>
+        <code value="472938003"/>
+        <display value="Tracheal tube submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="122877000"/>
+        <display value="Upper respiratory fluid specimen obtained by tracheal aspiration"/>
+      </concept>
+      <concept>
+        <code value="258604001"/>
+        <display value="Upper respiratory specimen"/>
+      </concept>
+      <concept>
+        <code value="122565001"/>
+        <display value="Urinary catheter specimen"/>
+      </concept>
+      <concept>
+        <code value="446130001"/>
+        <display value="Urine specimen from bladder"/>
+      </concept>
+      <concept>
+        <code value="442173007"/>
+        <display value="Urine specimen from nephrostomy tube"/>
+      </concept>
+      <concept>
+        <code value="446306009"/>
+        <display value="Urine specimen obtained from urinary collection bag"/>
+      </concept>
+      <concept>
+        <code value="446846006"/>
+        <display value="Urine specimen obtained via indwelling urinary catheter"/>
+      </concept>
+      <concept>
+        <code value="16221251000119108"/>
+        <display value="Urine specimen obtained via straight catheter"/>
+      </concept>
+      <concept>
+        <code value="258577004"/>
+        <display value="Vaginal secretion specimen"/>
+      </concept>
+      <concept>
+        <code value="472932002"/>
+        <display value="Vascular catheter submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="703432000"/>
+        <display value="Venous plasma specimen"/>
+      </concept>
+      <concept>
+        <code value="472942000"/>
+        <display value="Ventriculoperitoneal shunt submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258438000"/>
+        <display value="Vitreous humor specimen"/>
+      </concept>
+      <concept>
+        <code value="119318008"/>
+        <display value="Water specimen"/>
+      </concept>
+      <concept>
+        <code value="57921000052103"/>
+        <display value="Whole blood specimen with edetic acid"/>
+      </concept>
+      <concept>
+        <code value="258565009"/>
+        <display value="Chorionic villi specimen"/>
+      </concept>
+      <concept>
+        <code value="258599007"/>
+        <display value="Contact lens solution specimen"/>
+      </concept>
+      <concept>
+        <code value="439961009"/>
+        <display value="Implant submitted as specimen"/>
+      </concept>
+      <concept>
+        <code value="258603007"/>
+        <display value="Specimen from respiratory system"/>
+      </concept>
+      <concept>
+        <code value="119368000"/>
+        <display value="Specimen from cyst"/>
+      </concept>
+      <concept>
+        <code value="433861002"/>
+        <display value="Specimen from nasal sinus obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="734379005"/>
+        <display value="Specimen from periodontal tissue"/>
+      </concept>
+      <concept>
+        <code value="119369008"/>
+        <display value="Specimen from ulcer"/>
+      </concept>
+      <concept>
+        <code value="430304001"/>
+        <display value="Specimen from unspecified body site"/>
+      </concept>
+      <concept>
+        <code value="127479004"/>
+        <display value="Specimen from uterus"/>
+      </concept>
+      <concept>
+        <code value="122550002"/>
+        <display value="Specimen obtained by fine needle aspiration procedure"/>
+      </concept>
+      <concept>
+        <code value="258576008"/>
+        <display value="Suprapubic aspirate specimen"/>
+      </concept>
+      <concept>
+        <code value="445297001"/>
+        <display value="Swab of internal nose"/>
+      </concept>
+      <concept>
+        <code value="699287008"/>
+        <display value="Urine specimen obtained via suprapubic indwelling urinary catheter"/>
+      </concept>
+      <concept>
+        <code value="444946008"/>
+        <display value="Dialysis fluid specimen obtained before dialysis"/>
+      </concept>
+      <concept>
+        <code value="122592007"/>
+        <display value="Serum or plasma specimen"/>
+      </concept>
+      <concept>
+        <code value="309141004"/>
+        <display value="Adrenal gland specimen"/>
+      </concept>
+      <concept>
+        <code value="309479002"/>
+        <display value="Artery specimen"/>
+      </concept>
+      <concept>
+        <code value="122558009"/>
+        <display value="Blood specimen from blood product"/>
+      </concept>
+      <concept>
+        <code value="122559001"/>
+        <display value="Blood specimen from control"/>
+      </concept>
+      <concept>
+        <code value="122562003"/>
+        <display value="Blood specimen from newborn"/>
+      </concept>
+      <concept>
+        <code value="258587000"/>
+        <display value="Buffy coat"/>
+      </concept>
+      <concept>
+        <code value="433116003"/>
+        <display value="Specimen from liver obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="119346005"/>
+        <display value="Egg yolk specimen"/>
+      </concept>
+      <concept>
+        <code value="122582004"/>
+        <display value="Erythrocyte specimen from blood product"/>
+      </concept>
+      <concept>
+        <code value="119333000"/>
+        <display value="Fibroblast specimen"/>
+      </concept>
+      <concept>
+        <code value="119320006"/>
+        <display value="Food specimen"/>
+      </concept>
+      <concept>
+        <code value="122576002"/>
+        <display value="Genital mucus specimen"/>
+      </concept>
+      <concept>
+        <code value="119337004"/>
+        <display value="Inhaled gas specimen"/>
+      </concept>
+      <concept>
+        <code value="258606004"/>
+        <display value="Lower respiratory tract specimen"/>
+      </concept>
+      <concept>
+        <code value="119316007"/>
+        <display value="Non-biological fluid specimen"/>
+      </concept>
+      <concept>
+        <code value="122551003"/>
+        <display value="Peripheral blood specimen"/>
+      </concept>
+      <concept>
+        <code value="119301009"/>
+        <display value="Plant specimen"/>
+      </concept>
+      <concept>
+        <code value="119362004"/>
+        <display value="Platelet poor plasma specimen"/>
+      </concept>
+      <concept>
+        <code value="119363009"/>
+        <display value="Platelet rich plasma specimen"/>
+      </concept>
+      <concept>
+        <code value="119358005"/>
+        <display value="Platelet specimen"/>
+      </concept>
+      <concept>
+        <code value="725946000"/>
+        <display value="Reticulocyte specimen"/>
+      </concept>
+      <concept>
+        <code value="309508006"/>
+        <display value="Soft tissue lesion fine needle aspirate specimen"/>
+      </concept>
+      <concept>
+        <code value="119391001"/>
+        <display value="Specimen from bronchus"/>
+      </concept>
+      <concept>
+        <code value="119367005"/>
+        <display value="Specimen from burn injury"/>
+      </concept>
+      <concept>
+        <code value="702701006"/>
+        <display value="Specimen from cervix or vagina"/>
+      </concept>
+      <concept>
+        <code value="119400006"/>
+        <display value="Specimen from cornea"/>
+      </concept>
+      <concept>
+        <code value="1003708009"/>
+        <display value="Specimen from drain device"/>
+      </concept>
+      <concept>
+        <code value="127462005"/>
+        <display value="Specimen from heart"/>
+      </concept>
+      <concept>
+        <code value="127458004"/>
+        <display value="Specimen from lung"/>
+      </concept>
+      <concept>
+        <code value="122614000"/>
+        <display value="Specimen from lung obtained by fine needle aspiration procedure"/>
+      </concept>
+      <concept>
+        <code value="432382007"/>
+        <display value="Specimen from lymph node obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="128155007"/>
+        <display value="Specimen from ovary"/>
+      </concept>
+      <concept>
+        <code value="431406009"/>
+        <display value="Specimen from pancreas obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="441695007"/>
+        <display value="Specimen from parotid gland obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="430250001"/>
+        <display value="Specimen from peritoneum"/>
+      </concept>
+      <concept>
+        <code value="127459007"/>
+        <display value="Specimen from pleura"/>
+      </concept>
+      <concept>
+        <code value="119386002"/>
+        <display value="Specimen from prostate"/>
+      </concept>
+      <concept>
+        <code value="384819001"/>
+        <display value="Specimen from prostate obtained by needle biopsy"/>
+      </concept>
+      <concept>
+        <code value="434406008"/>
+        <display value="Specimen from salivary gland obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="441810001"/>
+        <display value="Specimen from soft tissue obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="441749007"/>
+        <display value="Specimen from submandibular gland obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="128154006"/>
+        <display value="Specimen from testis"/>
+      </concept>
+      <concept>
+        <code value="119389009"/>
+        <display value="Specimen from throat"/>
+      </concept>
+      <concept>
+        <code value="399680007"/>
+        <display value="Specimen from thyroid"/>
+      </concept>
+      <concept>
+        <code value="119390000"/>
+        <display value="Specimen from trachea"/>
+      </concept>
+      <concept>
+        <code value="399411006"/>
+        <display value="Specimen from trophoblast"/>
+      </concept>
+      <concept>
+        <code value="119393003"/>
+        <display value="Specimen from urethra"/>
+      </concept>
+      <concept>
+        <code value="450872001"/>
+        <display value="Specimen from urinary bladder"/>
+      </concept>
+      <concept>
+        <code value="119395005"/>
+        <display value="Specimen from uterine cervix"/>
+      </concept>
+      <concept>
+        <code value="119394009"/>
+        <display value="Specimen from vagina"/>
+      </concept>
+      <concept>
+        <code value="119365002"/>
+        <display value="Specimen from wound"/>
+      </concept>
+      <concept>
+        <code value="309146009"/>
+        <display value="Thyroid fine needle aspirate specimen"/>
+      </concept>
+      <concept>
+        <code value="122638001"/>
+        <display value="Tissue specimen from small intestine"/>
+      </concept>
+      <concept>
+        <code value="258444001"/>
+        <display value="Aqueous humor specimen"/>
+      </concept>
+      <concept>
+        <code value="258485006"/>
+        <display value="Corneal scraping specimen"/>
+      </concept>
+      <concept>
+        <code value="168137004"/>
+        <display value="Gastric aspirate specimen"/>
+      </concept>
+      <concept>
+        <code value="1259931002"/>
+        <display value="Hair of face specimen"/>
+      </concept>
+      <concept>
+        <code value="168145009"/>
+        <display value="Lymph specimen"/>
+      </concept>
+      <concept>
+        <code value="309507001"/>
+        <display value="Muscle biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="16224171000119108"/>
+        <display value="Nasotracheal aspirate"/>
+      </concept>
+      <concept>
+        <code value="309068002"/>
+        <display value="Skin lesion specimen"/>
+      </concept>
+      <concept>
+        <code value="396997002"/>
+        <display value="Specimen from bone marrow obtained by aspiration"/>
+      </concept>
+      <concept>
+        <code value="16215771000119101"/>
+        <display value="Specimen from inguinal lymph node obtained by fine needle aspiration biopsy"/>
+      </concept>
+      <concept>
+        <code value="430236006"/>
+        <display value="Specimen from nerve"/>
+      </concept>
+      <concept>
+        <code value="472898004"/>
+        <display value="Swab from hand"/>
+      </concept>
+      <concept>
+        <code value="472868006"/>
+        <display value="Swab from peritoneal cavity structure"/>
+      </concept>
+      <concept>
+        <code value="444787003"/>
+        <display value="Swab of endocervix"/>
+      </concept>
+      <concept>
+        <code value="16223971000119109"/>
+        <display value="Synovial fluid specimen obtained by fine needle aspiration procedure"/>
+      </concept>
+      <concept>
+        <code value="122656001"/>
+        <display value="Tissue specimen from gallbladder"/>
+      </concept>
+      <concept>
+        <code value="122736005"/>
+        <display value="Tissue specimen from placenta"/>
+      </concept>
+      <concept>
+        <code value="369611008"/>
+        <display value="Tissue specimen obtained from small intestine by biopsy"/>
+      </concept>
+      <concept>
+        <code value="309191000"/>
+        <display value="Tonsil biopsy specimen"/>
+      </concept>
+      <concept>
+        <code value="697989009"/>
+        <display value="Anterior nares swab"/>
+      </concept>
+      <concept>
+        <code value="57931000052101"/>
+        <display value="Combined cervical mucus and urine specimen"/>
+      </concept>
+      <concept>
+        <code value="433324003"/>
+        <display value="Specimen from eye region"/>
+      </concept>
+      <concept>
+        <code value="16216171000119108"/>
+        <display value="Specimen from liver obtained by aspiration"/>
+      </concept>
+      <concept>
+        <code value="16221491000119104"/>
+        <display value="Voided urine specimen"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

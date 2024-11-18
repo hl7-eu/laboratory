@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Patient-animal-example"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient Patient-animal-example</b></p><a name="Patient-animal-example"> </a><a name="hcPatient-animal-example"> </a><a name="Patient-animal-example-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Anonymous Patient (no stated gender), DoB Unknown</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="This patient is known to be an animal.">Patient Animal:</td><td colspan="3"><ul><li>species: <span title="Codes:{http://snomed.info/sct 448169003}">Domestic cat</span></li></ul></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-animal">
+    <extension url="species">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="448169003"/>
+          <display value="Domestic cat"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+</Patient>

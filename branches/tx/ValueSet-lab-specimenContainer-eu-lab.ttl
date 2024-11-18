@@ -1,0 +1,237 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "lab-specimenContainer-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet lab-specimenContainer-eu-lab</b></p><a name=\"lab-specimenContainer-eu-lab\"> </a><a name=\"hclab-specimenContainer-eu-lab\"> </a><a name=\"lab-specimenContainer-eu-lab-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/702290003\">702290003</a></td><td>Cervical cytology microscopy slide</td></tr><tr><td><a href=\"http://snomed.info/id/706057008\">706057008</a></td><td>Cytology specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/706052002\">706052002</a></td><td>Evacuated blood collection tube</td></tr><tr><td><a href=\"http://snomed.info/id/702292006\">702292006</a></td><td>Evacuated blood collection tube, K3EDTA/sodium fluoride</td></tr><tr><td><a href=\"http://snomed.info/id/767387006\">767387006</a></td><td>Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole</td></tr><tr><td><a href=\"http://snomed.info/id/767384004\">767384004</a></td><td>Evacuated blood collection tube with clot activator</td></tr><tr><td><a href=\"http://snomed.info/id/767390000\">767390000</a></td><td>Evacuated blood collection tube with heparin lithium and gel separator</td></tr><tr><td><a href=\"http://snomed.info/id/767382000\">767382000</a></td><td>Evacuated blood collection tube with heparin sodium</td></tr><tr><td><a href=\"http://snomed.info/id/767660003\">767660003</a></td><td>Evacuated blood collection tube with sodium fluoride</td></tr><tr><td><a href=\"http://snomed.info/id/767389009\">767389009</a></td><td>Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin</td></tr><tr><td><a href=\"http://snomed.info/id/702279008\">702279008</a></td><td>Evacuated blood collection tube, gel separator</td></tr><tr><td><a href=\"http://snomed.info/id/702293001\">702293001</a></td><td>Evacuated blood collection tube, K2EDTA/aprotinin</td></tr><tr><td><a href=\"http://snomed.info/id/702278000\">702278000</a></td><td>Evacuated blood collection tube, no additive/metal-free</td></tr><tr><td><a href=\"http://snomed.info/id/702280006\">702280006</a></td><td>Evacuated blood collection tube, RNA stabiliser</td></tr><tr><td><a href=\"http://snomed.info/id/702281005\">702281005</a></td><td>Evacuated blood collection tube, thrombin/clot activator/gel separator</td></tr><tr><td><a href=\"http://snomed.info/id/702310001\">702310001</a></td><td>Evacuated saliva specimen container, sodium azide</td></tr><tr><td><a href=\"http://snomed.info/id/706056004\">706056004</a></td><td>Evacuated urine specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/702302002\">702302002</a></td><td>Evacuated urine specimen container, boric acid (H3BO3)</td></tr><tr><td><a href=\"http://snomed.info/id/702288004\">702288004</a></td><td>Evacuated urine specimen container, boric acid (H3BO3)/sodium formate</td></tr><tr><td><a href=\"http://snomed.info/id/702289007\">702289007</a></td><td>Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine</td></tr><tr><td><a href=\"http://snomed.info/id/702303007\">702303007</a></td><td>Evacuated urine specimen container, multiple preservative</td></tr><tr><td><a href=\"http://snomed.info/id/702308003\">702308003</a></td><td>Evacuated urine specimen container, no additive</td></tr><tr><td><a href=\"http://snomed.info/id/706047007\">706047007</a></td><td>Fecal specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/706053007\">706053007</a></td><td>General specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/702268003\">702268003</a></td><td>General specimen container, no additive, non-sterile</td></tr><tr><td><a href=\"http://snomed.info/id/702269006\">702269006</a></td><td>General specimen container, no additive, sterile</td></tr><tr><td><a href=\"http://snomed.info/id/874799005\">874799005</a></td><td>Microbial cryotube</td></tr><tr><td><a href=\"http://snomed.info/id/706050005\">706050005</a></td><td>Microcapillary blood collection tube</td></tr><tr><td><a href=\"http://snomed.info/id/702275002\">702275002</a></td><td>Microcapillary blood collection tube, ammonium heparin</td></tr><tr><td><a href=\"http://snomed.info/id/702276001\">702276001</a></td><td>Microcapillary blood collection tube, K2EDTA</td></tr><tr><td><a href=\"http://snomed.info/id/702277005\">702277005</a></td><td>Microcapillary blood collection tube, no additive</td></tr><tr><td><a href=\"http://snomed.info/id/702304001\">702304001</a></td><td>Microcapillary blood transfer tube, clot activator</td></tr><tr><td><a href=\"http://snomed.info/id/702306004\">702306004</a></td><td>Microcapillary blood transfer tube, EDTA</td></tr><tr><td><a href=\"http://snomed.info/id/702307008\">702307008</a></td><td>Microcapillary blood transfer tube, heparin</td></tr><tr><td><a href=\"http://snomed.info/id/702305000\">702305000</a></td><td>Microcapillary sodium fluoride blood transfer tube</td></tr><tr><td><a href=\"http://snomed.info/id/702224000\">702224000</a></td><td>Midstream urine specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/706051009\">706051009</a></td><td>Non-evacuated blood collection tube</td></tr><tr><td><a href=\"http://snomed.info/id/702283008\">702283008</a></td><td>Non-evacuated blood collection tube with gel separator</td></tr><tr><td><a href=\"http://snomed.info/id/702297000\">702297000</a></td><td>Non-evacuated blood collection tube, clot activator</td></tr><tr><td><a href=\"http://snomed.info/id/702295008\">702295008</a></td><td>Non-evacuated blood collection tube, clot activator/gel separator</td></tr><tr><td><a href=\"http://snomed.info/id/702282003\">702282003</a></td><td>Non-evacuated blood collection tube, EDTA</td></tr><tr><td><a href=\"http://snomed.info/id/702299002\">702299002</a></td><td>Non-evacuated blood collection tube, K2EDTA</td></tr><tr><td><a href=\"http://snomed.info/id/702298005\">702298005</a></td><td>Non-evacuated blood collection tube, K3EDTA</td></tr><tr><td><a href=\"http://snomed.info/id/702284002\">702284002</a></td><td>Non-evacuated blood collection tube, lithium heparin</td></tr><tr><td><a href=\"http://snomed.info/id/702300005\">702300005</a></td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile</td></tr><tr><td><a href=\"http://snomed.info/id/702285001\">702285001</a></td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, sterile</td></tr><tr><td><a href=\"http://snomed.info/id/702286000\">702286000</a></td><td>Non-evacuated blood collection tube, NaEDTA/sodium fluoride</td></tr><tr><td><a href=\"http://snomed.info/id/702256007\">702256007</a></td><td>Non-evacuated blood collection tube, no additive</td></tr><tr><td><a href=\"http://snomed.info/id/702287009\">702287009</a></td><td>Non-evacuated blood collection tube, potassium oxalate/sodium fluoride</td></tr><tr><td><a href=\"http://snomed.info/id/702296009\">702296009</a></td><td>Non-evacuated blood collection tube, sodium citrate</td></tr><tr><td><a href=\"http://snomed.info/id/702264001\">702264001</a></td><td>Non-sterile urine specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/702309006\">702309006</a></td><td>Saliva specimen container, no additive</td></tr><tr><td><a href=\"http://snomed.info/id/706058003\">706058003</a></td><td>Secretory specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/706046003\">706046003</a></td><td>Specimen receptacle</td></tr><tr><td><a href=\"http://snomed.info/id/702223006\">702223006</a></td><td>Sputum specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/702244006\">702244006</a></td><td>Sterile urine specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/702232008\">702232008</a></td><td>Sweat specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/702294007\">702294007</a></td><td>Syringe-blood collection tube transfer</td></tr><tr><td><a href=\"http://snomed.info/id/706054001\">706054001</a></td><td>Urine specimen container</td></tr><tr><td><a href=\"http://snomed.info/id/767385003\">767385003</a></td><td>Aerobic blood culture bottle</td></tr><tr><td><a href=\"http://snomed.info/id/767383005\">767383005</a></td><td>Anaerobic blood culture bottle</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "trial-use" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LabSpecimenContainerEu"] ; # 
+  fhir:title [ fhir:v "Specimen Container"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "List of the containers commonly used to collect specimens (e.g. urine, blood,..)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "702290003" ] ;
+         fhir:display [ fhir:v "Cervical cytology microscopy slide" ]
+       ] [
+         fhir:code [ fhir:v "706057008" ] ;
+         fhir:display [ fhir:v "Cytology specimen container" ]
+       ] [
+         fhir:code [ fhir:v "706052002" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube" ]
+       ] [
+         fhir:code [ fhir:v "702292006" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube, K3EDTA/sodium fluoride" ]
+       ] [
+         fhir:code [ fhir:v "767387006" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole" ]
+       ] [
+         fhir:code [ fhir:v "767384004" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube with clot activator" ]
+       ] [
+         fhir:code [ fhir:v "767390000" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube with heparin lithium and gel separator" ]
+       ] [
+         fhir:code [ fhir:v "767382000" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube with heparin sodium" ]
+       ] [
+         fhir:code [ fhir:v "767660003" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube with sodium fluoride" ]
+       ] [
+         fhir:code [ fhir:v "767389009" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin" ]
+       ] [
+         fhir:code [ fhir:v "702279008" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube, gel separator" ]
+       ] [
+         fhir:code [ fhir:v "702293001" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube, K2EDTA/aprotinin" ]
+       ] [
+         fhir:code [ fhir:v "702278000" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube, no additive/metal-free" ]
+       ] [
+         fhir:code [ fhir:v "702280006" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube, RNA stabiliser" ]
+       ] [
+         fhir:code [ fhir:v "702281005" ] ;
+         fhir:display [ fhir:v "Evacuated blood collection tube, thrombin/clot activator/gel separator" ]
+       ] [
+         fhir:code [ fhir:v "702310001" ] ;
+         fhir:display [ fhir:v "Evacuated saliva specimen container, sodium azide" ]
+       ] [
+         fhir:code [ fhir:v "706056004" ] ;
+         fhir:display [ fhir:v "Evacuated urine specimen container" ]
+       ] [
+         fhir:code [ fhir:v "702302002" ] ;
+         fhir:display [ fhir:v "Evacuated urine specimen container, boric acid (H3BO3)" ]
+       ] [
+         fhir:code [ fhir:v "702288004" ] ;
+         fhir:display [ fhir:v "Evacuated urine specimen container, boric acid (H3BO3)/sodium formate" ]
+       ] [
+         fhir:code [ fhir:v "702289007" ] ;
+         fhir:display [ fhir:v "Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine" ]
+       ] [
+         fhir:code [ fhir:v "702303007" ] ;
+         fhir:display [ fhir:v "Evacuated urine specimen container, multiple preservative" ]
+       ] [
+         fhir:code [ fhir:v "702308003" ] ;
+         fhir:display [ fhir:v "Evacuated urine specimen container, no additive" ]
+       ] [
+         fhir:code [ fhir:v "706047007" ] ;
+         fhir:display [ fhir:v "Fecal specimen container" ]
+       ] [
+         fhir:code [ fhir:v "706053007" ] ;
+         fhir:display [ fhir:v "General specimen container" ]
+       ] [
+         fhir:code [ fhir:v "702268003" ] ;
+         fhir:display [ fhir:v "General specimen container, no additive, non-sterile" ]
+       ] [
+         fhir:code [ fhir:v "702269006" ] ;
+         fhir:display [ fhir:v "General specimen container, no additive, sterile" ]
+       ] [
+         fhir:code [ fhir:v "874799005" ] ;
+         fhir:display [ fhir:v "Microbial cryotube" ]
+       ] [
+         fhir:code [ fhir:v "706050005" ] ;
+         fhir:display [ fhir:v "Microcapillary blood collection tube" ]
+       ] [
+         fhir:code [ fhir:v "702275002" ] ;
+         fhir:display [ fhir:v "Microcapillary blood collection tube, ammonium heparin" ]
+       ] [
+         fhir:code [ fhir:v "702276001" ] ;
+         fhir:display [ fhir:v "Microcapillary blood collection tube, K2EDTA" ]
+       ] [
+         fhir:code [ fhir:v "702277005" ] ;
+         fhir:display [ fhir:v "Microcapillary blood collection tube, no additive" ]
+       ] [
+         fhir:code [ fhir:v "702304001" ] ;
+         fhir:display [ fhir:v "Microcapillary blood transfer tube, clot activator" ]
+       ] [
+         fhir:code [ fhir:v "702306004" ] ;
+         fhir:display [ fhir:v "Microcapillary blood transfer tube, EDTA" ]
+       ] [
+         fhir:code [ fhir:v "702307008" ] ;
+         fhir:display [ fhir:v "Microcapillary blood transfer tube, heparin" ]
+       ] [
+         fhir:code [ fhir:v "702305000" ] ;
+         fhir:display [ fhir:v "Microcapillary sodium fluoride blood transfer tube" ]
+       ] [
+         fhir:code [ fhir:v "702224000" ] ;
+         fhir:display [ fhir:v "Midstream urine specimen container" ]
+       ] [
+         fhir:code [ fhir:v "706051009" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube" ]
+       ] [
+         fhir:code [ fhir:v "702283008" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube with gel separator" ]
+       ] [
+         fhir:code [ fhir:v "702297000" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, clot activator" ]
+       ] [
+         fhir:code [ fhir:v "702295008" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, clot activator/gel separator" ]
+       ] [
+         fhir:code [ fhir:v "702282003" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, EDTA" ]
+       ] [
+         fhir:code [ fhir:v "702299002" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, K2EDTA" ]
+       ] [
+         fhir:code [ fhir:v "702298005" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, K3EDTA" ]
+       ] [
+         fhir:code [ fhir:v "702284002" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, lithium heparin" ]
+       ] [
+         fhir:code [ fhir:v "702300005" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile" ]
+       ] [
+         fhir:code [ fhir:v "702285001" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, lithium heparin/gel separator, sterile" ]
+       ] [
+         fhir:code [ fhir:v "702286000" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, NaEDTA/sodium fluoride" ]
+       ] [
+         fhir:code [ fhir:v "702256007" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, no additive" ]
+       ] [
+         fhir:code [ fhir:v "702287009" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, potassium oxalate/sodium fluoride" ]
+       ] [
+         fhir:code [ fhir:v "702296009" ] ;
+         fhir:display [ fhir:v "Non-evacuated blood collection tube, sodium citrate" ]
+       ] [
+         fhir:code [ fhir:v "702264001" ] ;
+         fhir:display [ fhir:v "Non-sterile urine specimen container" ]
+       ] [
+         fhir:code [ fhir:v "702309006" ] ;
+         fhir:display [ fhir:v "Saliva specimen container, no additive" ]
+       ] [
+         fhir:code [ fhir:v "706058003" ] ;
+         fhir:display [ fhir:v "Secretory specimen container" ]
+       ] [
+         fhir:code [ fhir:v "706046003" ] ;
+         fhir:display [ fhir:v "Specimen receptacle" ]
+       ] [
+         fhir:code [ fhir:v "702223006" ] ;
+         fhir:display [ fhir:v "Sputum specimen container" ]
+       ] [
+         fhir:code [ fhir:v "702244006" ] ;
+         fhir:display [ fhir:v "Sterile urine specimen container" ]
+       ] [
+         fhir:code [ fhir:v "702232008" ] ;
+         fhir:display [ fhir:v "Sweat specimen container" ]
+       ] [
+         fhir:code [ fhir:v "702294007" ] ;
+         fhir:display [ fhir:v "Syringe-blood collection tube transfer" ]
+       ] [
+         fhir:code [ fhir:v "706054001" ] ;
+         fhir:display [ fhir:v "Urine specimen container" ]
+       ] [
+         fhir:code [ fhir:v "767385003" ] ;
+         fhir:display [ fhir:v "Aerobic blood culture bottle" ]
+       ] [
+         fhir:code [ fhir:v "767383005" ] ;
+         fhir:display [ fhir:v "Anaerobic blood culture bottle" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

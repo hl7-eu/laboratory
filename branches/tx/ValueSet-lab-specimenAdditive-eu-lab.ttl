@@ -1,0 +1,111 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "lab-specimenAdditive-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet lab-specimenAdditive-eu-lab</b></p><a name=\"lab-specimenAdditive-eu-lab\"> </a><a name=\"hclab-specimenAdditive-eu-lab\"> </a><a name=\"lab-specimenAdditive-eu-lab-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/1259913003\">1259913003</a></td><td>Heparin ammonium</td></tr><tr><td><a href=\"http://snomed.info/id/386961008\">386961008</a></td><td>Aprotinin</td></tr><tr><td><a href=\"http://snomed.info/id/29725000\">29725000</a></td><td>Heparin calcium</td></tr><tr><td><a href=\"http://snomed.info/id/21611007\">21611007</a></td><td>Boric acid</td></tr><tr><td><a href=\"http://snomed.info/id/30531001\">30531001</a></td><td>Calcium oxalate</td></tr><tr><td><a href=\"http://snomed.info/id/69519002\">69519002</a></td><td>Edetic acid</td></tr><tr><td><a href=\"http://snomed.info/id/372628006\">372628006</a></td><td>Edetate</td></tr><tr><td><a href=\"http://snomed.info/id/27763000\">27763000</a></td><td>Hydrochloric acid</td></tr><tr><td><a href=\"http://snomed.info/id/414407009\">414407009</a></td><td>Hirudin</td></tr><tr><td><a href=\"http://snomed.info/id/1256100007\">1256100007</a></td><td>Edetate dipotassium</td></tr><tr><td><a href=\"http://snomed.info/id/1256101006\">1256101006</a></td><td>Edetate tripotassium</td></tr><tr><td><a href=\"http://snomed.info/id/1256102004\">1256102004</a></td><td>Heparin lithium</td></tr><tr><td><a href=\"http://snomed.info/id/387418006\">387418006</a></td><td>Edetate disodium</td></tr><tr><td><a href=\"http://snomed.info/id/412546005\">412546005</a></td><td>Sodium citrate</td></tr><tr><td><a href=\"http://snomed.info/id/50045009\">50045009</a></td><td>Heparin sodium</td></tr><tr><td><a href=\"http://snomed.info/id/6910009\">6910009</a></td><td>Sodium fluoride</td></tr><tr><td><a href=\"http://snomed.info/id/50306007\">50306007</a></td><td>Sodium tetraborate</td></tr><tr><td><a href=\"http://snomed.info/id/387168006\">387168006</a></td><td>Mannitol</td></tr><tr><td><a href=\"http://snomed.info/id/115281000146102\">115281000146102</a></td><td>Sodium formate</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "trial-use" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LabSpecimenAdditiveEu"] ; # 
+  fhir:title [ fhir:v "Specimen Additive"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "1259913003" ] ;
+         fhir:display [ fhir:v "Heparin ammonium" ]
+       ] [
+         fhir:code [ fhir:v "386961008" ] ;
+         fhir:display [ fhir:v "Aprotinin" ]
+       ] [
+         fhir:code [ fhir:v "29725000" ] ;
+         fhir:display [ fhir:v "Heparin calcium" ]
+       ] [
+         fhir:code [ fhir:v "21611007" ] ;
+         fhir:display [ fhir:v "Boric acid" ]
+       ] [
+         fhir:code [ fhir:v "30531001" ] ;
+         fhir:display [ fhir:v "Calcium oxalate" ]
+       ] [
+         fhir:code [ fhir:v "69519002" ] ;
+         fhir:display [ fhir:v "Edetic acid" ]
+       ] [
+         fhir:code [ fhir:v "372628006" ] ;
+         fhir:display [ fhir:v "Edetate" ]
+       ] [
+         fhir:code [ fhir:v "27763000" ] ;
+         fhir:display [ fhir:v "Hydrochloric acid" ]
+       ] [
+         fhir:code [ fhir:v "414407009" ] ;
+         fhir:display [ fhir:v "Hirudin" ]
+       ] [
+         fhir:code [ fhir:v "1256100007" ] ;
+         fhir:display [ fhir:v "Edetate dipotassium" ]
+       ] [
+         fhir:code [ fhir:v "1256101006" ] ;
+         fhir:display [ fhir:v "Edetate tripotassium" ]
+       ] [
+         fhir:code [ fhir:v "1256102004" ] ;
+         fhir:display [ fhir:v "Heparin lithium" ]
+       ] [
+         fhir:code [ fhir:v "387418006" ] ;
+         fhir:display [ fhir:v "Edetate disodium" ]
+       ] [
+         fhir:code [ fhir:v "412546005" ] ;
+         fhir:display [ fhir:v "Sodium citrate" ]
+       ] [
+         fhir:code [ fhir:v "50045009" ] ;
+         fhir:display [ fhir:v "Heparin sodium" ]
+       ] [
+         fhir:code [ fhir:v "6910009" ] ;
+         fhir:display [ fhir:v "Sodium fluoride" ]
+       ] [
+         fhir:code [ fhir:v "50306007" ] ;
+         fhir:display [ fhir:v "Sodium tetraborate" ]
+       ] [
+         fhir:code [ fhir:v "387168006" ] ;
+         fhir:display [ fhir:v "Mannitol" ]
+       ] [
+         fhir:code [ fhir:v "115281000146102" ] ;
+         fhir:display [ fhir:v "Sodium formate" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

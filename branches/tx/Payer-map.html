@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Payer Relationships - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"21"}
+    h3,h4,h5,h6{--heading-prefix:"21"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Payer Relationships</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Payer Relationships</h2>
+  
+  
+  
+  <div xmlns="http://www.w3.org/1999/xhtml">
+
+    <a name="1"/><h3 id="overview">Laboratory Report Model Map</h3>
+
+    <a> </a>
+
+    <p>Hereafter a browseable diagram showing how the Payer model is realized by the HL7 FHIR Profiles of this guide</p>
+
+    <a name="1"/><h4 id="model">Model Overview</h4>
+<a> </a>
+<p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="495px" preserveAspectRatio="none" style="width:458px;height:495px;background:#FFFFFF;" version="1.1" viewBox="0 0 458 495" width="458px" zoomAndPan="magnify"><defs/><g><!--class Payer--><a href="StructureDefinition-Payer.html" target="_top" title="StructureDefinition-Payer.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-Payer.html" xlink:show="new" xlink:title="StructureDefinition-Payer.html" xlink:type="simple"><g id="elem_Payer"><rect codeLine="10" fill="#FFCC00" height="56.2656" id="Payer" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="188.5" y="7"/><ellipse cx="203.5" cy="27.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M206.4688,32.7734 Q205.8906,33.0703 205.25,33.2109 Q204.6094,33.3672 203.9063,33.3672 Q201.4063,33.3672 200.0781,31.7266 Q198.7656,30.0703 198.7656,26.9453 Q198.7656,23.8203 200.0781,22.1641 Q201.4063,20.5078 203.9063,20.5078 Q204.6094,20.5078 205.25,20.6641 Q205.9063,20.8203 206.4688,21.1172 L206.4688,23.8359 Q205.8438,23.2578 205.25,22.9922 Q204.6563,22.7109 204.0313,22.7109 Q202.6875,22.7109 202,23.7891 Q201.3125,24.8516 201.3125,26.9453 Q201.3125,29.0391 202,30.1172 Q202.6875,31.1797 204.0313,31.1797 Q204.6563,31.1797 205.25,30.9141 Q205.8438,30.6328 206.4688,30.0547 L206.4688,32.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="94" x="215.5" y="23.1387">&#171;LogicalModel&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="243.5" y="38.9639">Payer</text><line style="stroke:#181818;stroke-width:0.5;" x1="189.5" x2="309.5" y1="47.2656" y2="47.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="189.5" x2="309.5" y1="55.2656" y2="55.2656"/></g></a><g id="elem_GMN3"><a href="ConceptMap-payer2FHIR-eu-lab.html" target="_top" title="ConceptMap-payer2FHIR-eu-lab.html" xlink:actuate="onRequest" xlink:href="ConceptMap-payer2FHIR-eu-lab.html" xlink:show="new" xlink:title="ConceptMap-payer2FHIR-eu-lab.html" xlink:type="simple"><path d="M346,22.5 L346,31 L310.53,35 L346,39 L346,47.6328 A0,0 0 0 0 346,47.6328 L451,47.6328 A0,0 0 0 0 451,47.6328 L451,32.5 L441,22.5 L346,22.5 A0,0 0 0 0 346,22.5 " fill="#AFEEEE" style="stroke:#181818;stroke-width:0.5;"/><path d="M441,22.5 L441,32.5 L451,32.5 L441,22.5 " fill="#AFEEEE" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="352" y="39.5669">Concept Map</text></a></g><!--class ServiceRequest-eu-lab--><a href="StructureDefinition-ServiceRequest-eu-lab.html" target="_top" title="StructureDefinition-ServiceRequest-eu-lab.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-ServiceRequest-eu-lab.html" xlink:show="new" xlink:title="StructureDefinition-ServiceRequest-eu-lab.html" xlink:type="simple"><g id="elem_ServiceRequest-eu-lab"><rect codeLine="14" fill="#CCCCFF" height="56.2656" id="ServiceRequest-eu-lab" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="189" x="7" y="123"/><ellipse cx="22" cy="143.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.9688,148.7734 Q24.3906,149.0703 23.75,149.2109 Q23.1094,149.3672 22.4063,149.3672 Q19.9063,149.3672 18.5781,147.7266 Q17.2656,146.0703 17.2656,142.9453 Q17.2656,139.8203 18.5781,138.1641 Q19.9063,136.5078 22.4063,136.5078 Q23.1094,136.5078 23.75,136.6641 Q24.4063,136.8203 24.9688,137.1172 L24.9688,139.8359 Q24.3438,139.2578 23.75,138.9922 Q23.1563,138.7109 22.5313,138.7109 Q21.1875,138.7109 20.5,139.7891 Q19.8125,140.8516 19.8125,142.9453 Q19.8125,145.0391 20.5,146.1172 Q21.1875,147.1797 22.5313,147.1797 Q23.1563,147.1797 23.75,146.9141 Q24.3438,146.6328 24.9688,146.0547 L24.9688,148.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="88" y="139.1387">&#171;Profile&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="36" y="154.9639">ServiceRequest-eu-lab</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="195" y1="163.2656" y2="163.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="195" y1="171.2656" y2="171.2656"/></g></a><!--class Coverage--><a href="http://hl7.org/fhir/StructureDefinition/Coverage" target="_top" title="http://hl7.org/fhir/StructureDefinition/Coverage" xlink:actuate="onRequest" xlink:href="http://hl7.org/fhir/StructureDefinition/Coverage" xlink:show="new" xlink:title="http://hl7.org/fhir/StructureDefinition/Coverage" xlink:type="simple"><g id="elem_Coverage"><rect codeLine="16" fill="#CCCCFF" height="56.2656" id="Coverage" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="169.5" y="239"/><ellipse cx="184.5" cy="259.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M187.4688,264.7734 Q186.8906,265.0703 186.25,265.2109 Q185.6094,265.3672 184.9063,265.3672 Q182.4063,265.3672 181.0781,263.7266 Q179.7656,262.0703 179.7656,258.9453 Q179.7656,255.8203 181.0781,254.1641 Q182.4063,252.5078 184.9063,252.5078 Q185.6094,252.5078 186.25,252.6641 Q186.9063,252.8203 187.4688,253.1172 L187.4688,255.8359 Q186.8438,255.2578 186.25,254.9922 Q185.6563,254.7109 185.0313,254.7109 Q183.6875,254.7109 183,255.7891 Q182.3125,256.8516 182.3125,258.9453 Q182.3125,261.0391 183,262.1172 Q183.6875,263.1797 185.0313,263.1797 Q185.6563,263.1797 186.25,262.9141 Q186.8438,262.6328 187.4688,262.0547 L187.4688,264.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="205" y="255.1387">&#171;Profile&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="198.5" y="270.9639">Coverage</text><line style="stroke:#181818;stroke-width:0.5;" x1="170.5" x2="266.5" y1="279.2656" y2="279.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="170.5" x2="266.5" y1="287.2656" y2="287.2656"/></g></a><!--class Patient-eu-lab--><a href="StructureDefinition-Patient-eu-lab.html" target="_top" title="StructureDefinition-Patient-eu-lab.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-Patient-eu-lab.html" xlink:show="new" xlink:title="StructureDefinition-Patient-eu-lab.html" xlink:type="simple"><g id="elem_Patient-eu-lab"><rect codeLine="19" fill="#CCCCFF" height="56.2656" id="Patient-eu-lab" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="205.5" y="355"/><ellipse cx="220.5" cy="375.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M223.4688,380.7734 Q222.8906,381.0703 222.25,381.2109 Q221.6094,381.3672 220.9063,381.3672 Q218.4063,381.3672 217.0781,379.7266 Q215.7656,378.0703 215.7656,374.9453 Q215.7656,371.8203 217.0781,370.1641 Q218.4063,368.5078 220.9063,368.5078 Q221.6094,368.5078 222.25,368.6641 Q222.9063,368.8203 223.4688,369.1172 L223.4688,371.8359 Q222.8438,371.2578 222.25,370.9922 Q221.6563,370.7109 221.0313,370.7109 Q219.6875,370.7109 219,371.7891 Q218.3125,372.8516 218.3125,374.9453 Q218.3125,377.0391 219,378.1172 Q219.6875,379.1797 221.0313,379.1797 Q221.6563,379.1797 222.25,378.9141 Q222.8438,378.6328 223.4688,378.0547 L223.4688,380.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="256" y="371.1387">&#171;Profile&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="234.5" y="386.9639">Patient-eu-lab</text><line style="stroke:#181818;stroke-width:0.5;" x1="206.5" x2="332.5" y1="395.2656" y2="395.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="206.5" x2="332.5" y1="403.2656" y2="403.2656"/></g></a><!--link Payer to ServiceRequest-eu-lab--><g id="link_Payer_ServiceRequest-eu-lab"><path codeLine="15" d="M192.25,63.08 C192.25,63.08 192.25,117.78 192.25,117.78 " fill="none" id="Payer-to-ServiceRequest-eu-lab" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="192.25,122.78,196.25,113.78,192.25,117.78,188.25,113.78,192.25,122.78" style="stroke:#181818;stroke-width:1.0;"/></g><!--link Payer to Coverage--><g id="link_Payer_Coverage"><path codeLine="17" d="M231.75,63.45 C231.75,63.45 231.75,233.68 231.75,233.68 " fill="none" id="Payer-to-Coverage" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="231.75,238.68,235.75,229.68,231.75,233.68,227.75,229.68,231.75,238.68" style="stroke:#181818;stroke-width:1.0;"/></g><!--link ServiceRequest-eu-lab to Coverage--><!--link Payer to Patient-eu-lab--><g id="link_Payer_Patient-eu-lab"><path codeLine="20" d="M289,63.18 C289,63.18 289,349.55 289,349.55 " fill="none" id="Payer-to-Patient-eu-lab" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="289,354.55,293,345.55,289,349.55,285,345.55,289,354.55" style="stroke:#181818;stroke-width:1.0;"/></g><!--link Coverage to Patient-eu-lab--><rect fill="#DDDDDD" height="46.5938" id="_legend" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="115" x="317" y="429.2656"/><rect fill="#FFCC00" height="16.2969" style="stroke:none;stroke-width:1.0;" width="4" x="322" y="436.2656"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="322" y="449.2607">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="330" y="449.2607">Logical Model</text><rect fill="#CCCCFF" height="16.2969" style="stroke:none;stroke-width:1.0;" width="4" x="322" y="452.5625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="322" y="465.5576">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="330" y="465.5576">Profile</text><line style="stroke:#000000;stroke-width:1.0;" x1="322" x2="427" y1="436.2656" y2="436.2656"/><line style="stroke:#000000;stroke-width:1.0;" x1="322" x2="427" y1="452.5625" y2="452.5625"/><line style="stroke:#000000;stroke-width:1.0;" x1="322" x2="427" y1="468.8594" y2="468.8594"/><line style="stroke:#000000;stroke-width:1.0;" x1="322" x2="322" y1="436.2656" y2="468.8594"/><line style="stroke:#000000;stroke-width:1.0;" x1="326" x2="326" y1="436.2656" y2="468.8594"/><line style="stroke:#000000;stroke-width:1.0;" x1="427" x2="427" y1="436.2656" y2="468.8594"/></g></svg></p>
+
+    
+
+    
+
+</div>
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

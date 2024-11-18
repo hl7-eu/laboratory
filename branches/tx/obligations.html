@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Obligations - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Obligations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Obligations</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
+  <li><a href="#obligations-list" id="markdown-toc-obligations-list">Obligations List</a></li>
+</ul>
+
+</div>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="stu-note">
+		<b>Informative for this version of the guide</b>
+		<p>Obligations have been added to this version of the guide only as informative material to collect feedback about their usage.</p>
+	</blockquote>
+</div>
+
+<h3 id="overview">Overview</h3>
+
+<p>Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.</p>
+
+<p>The current choice has been that of defining the obligation in StructureDefinitions distinct from those used for defining the structural constraints.</p>
+
+<p>This page describes also the actors that have been defined for specifying the obligations.</p>
+
+<h3 id="actors">Actors</h3>
+
+<p>Three actors have been specified:</p>
+<ul>
+  <li>the <a href="ActorDefinition-actor-creator-eu-lab.html">Creator</a> ;</li>
+  <li>the <a href="ActorDefinition-actor-repos-eu-lab.html">Repository</a> ; and</li>
+  <li>the <a href="ActorDefinition-actor-consumer-eu-lab.html">Consumer</a></li>
+</ul>
+
+<p>The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing. 
+The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
+The last actor is the system using the report received or retrieved.</p>
+
+<p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="191px" preserveAspectRatio="none" style="width:976px;height:191px;background:#FFFFFF;" version="1.1" viewBox="0 0 976 191" width="976px" zoomAndPan="magnify"><defs /><g><!--entity creator--><g id="elem_creator"><ellipse cx="181" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M181,22 L181,49 M168,30 L194,30 M181,49 L168,64 M181,49 L194,64 " fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="92" y="78.4951">Laboratory Report Creator</text></g><!--entity repos--><g id="elem_repos"><ellipse cx="499" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M499,22 L499,49 M486,30 L512,30 M499,49 L486,64 M499,49 L512,64 " fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="201" x="398.5" y="78.4951">Laboratory Report Repository</text></g><!--entity consumer--><g id="elem_consumer"><ellipse cx="818" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;" /><path d="M818,22 L818,49 M805,30 L831,30 M818,49 L805,64 M818,49 L831,64 " fill="none" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="718.5" y="78.4951">Laboratory Report Consumer</text></g><g id="elem_create"><ellipse cx="87.8658" cy="163.2732" fill="#F1F1F1" rx="81.8658" ry="18.7732" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="25.3805" y="166.4463">Generate a report</text></g><g id="elem_store"><ellipse cx="498.8049" cy="163.561" fill="#F1F1F1" rx="70.8049" ry="16.561" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95" x="448.3049" y="167.3085">Store a report</text></g><g id="elem_use"><ellipse cx="903.1678" cy="163.3336" fill="#F1F1F1" rx="67.1678" ry="15.8336" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="857.6678" y="167.0811">Use a report</text></g><g id="elem_send"><ellipse cx="299.1693" cy="163.6339" fill="#F1F1F1" rx="93.6693" ry="21.1339" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="150" x="224.1693" y="166.4805">Send/Provide a report</text></g><g id="elem_receive"><ellipse cx="703.211" cy="163.4422" fill="#F1F1F1" rx="97.711" ry="21.9422" style="stroke:#181818;stroke-width:0.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="623.711" y="166.2889">Receive/Query a report</text></g><!--link creator to create--><g id="link_creator_create"><path d="M151.83,81.51 C136.51,100.95 118.26,124.11 105.2,140.67 " fill="none" id="creator-to-create" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="102,144.73,110.7152,140.1426,105.0973,140.8049,104.435,135.1869,102,144.73" style="stroke:#181818;stroke-width:1.0;" /></g><!--link creator to send--><g id="link_creator_send"><path d="M218.01,81.51 C236.86,100.36 259.21,122.71 275.65,139.15 " fill="none" id="creator-to-send" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="279.27,142.77,275.7345,133.5776,275.7345,139.2345,270.0776,139.2345,279.27,142.77" style="stroke:#181818;stroke-width:1.0;" /></g><!--link consumer to use--><g id="link_consumer_use"><path d="M844.66,81.51 C859.47,102.07 877.28,126.79 889.29,143.47 " fill="none" id="consumer-to-use" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="892.22,147.53,890.1958,137.8914,889.2936,143.4759,883.7091,142.5737,892.22,147.53" style="stroke:#181818;stroke-width:1.0;" /></g><!--link consumer to receive--><g id="link_consumer_receive"><path d="M781.93,81.51 C763.92,99.99 742.65,121.82 726.73,138.15 " fill="none" id="consumer-to-receive" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="723.21,141.76,732.3588,138.1131,726.7023,138.1818,726.6336,132.5254,723.21,141.76" style="stroke:#181818;stroke-width:1.0;" /></g><!--link repos to store--><g id="link_repos_store"><path d="M499,81.51 C499,101.31 499,124.96 499,141.57 " fill="none" id="repos-to-store" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="499,146.92,503,137.92,499,141.92,495,137.92,499,146.92" style="stroke:#181818;stroke-width:1.0;" /></g><!--link repos to send--><g id="link_repos_send"><path d="M436.27,81.51 C403.1,101.08 363.55,124.41 335.45,141 " fill="none" id="repos-to-send" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="331.04,143.6,340.8245,142.4761,335.3475,141.0612,336.7624,135.5841,331.04,143.6" style="stroke:#181818;stroke-width:1.0;" /></g><!--link repos to receive--><g id="link_repos_receive"><path d="M562.99,81.51 C596.26,100.76 635.83,123.65 664.41,140.18 " fill="none" id="repos-to-receive" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="668.89,142.77,663.097,134.805,664.5603,140.2693,659.0959,141.7326,668.89,142.77" style="stroke:#181818;stroke-width:1.0;" /></g></g></svg></p>
+
+<h3 id="obligations-list">Obligations List</h3>
+
+<ol>
+  <li>Patient Obligations (<a href="StructureDefinition-Patient-obl-eu-lab.html">PatientEuObligations</a>)</li>
+  <li>Human Name Obligations (<a href="StructureDefinition-HumanName-obl-eu-lab.html">HumanNameEuObligations</a>)</li>
+  <li>Observation Obligations	(<a href="StructureDefinition-Observation-obl-eu-lab.html">ObservationEuObligations</a>)</li>
+  <li>ServiceRequest Obligations (<a href="StructureDefinition-ServiceRequest-obl-eu-lab.html">ServiceRequestEuObligations</a>)</li>
+  <li>Specimen Obligations (<a href="StructureDefinition-Specimen-obl-eu-lab.html">SpecimenEuObligations</a>)</li>
+</ol>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

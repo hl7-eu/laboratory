@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "lab-obsCode-npu-eu-lab",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet lab-obsCode-npu-eu-lab</b></p><a name=\"lab-obsCode-npu-eu-lab\"> </a><a name=\"hclab-obsCode-npu-eu-lab\"> </a><a name=\"lab-obsCode-npu-eu-lab-en-US\"> </a><ul><li>Include all codes defined in <code>http://npu-terminology.org</code></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use"
+  }],
+  "url" : "http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab",
+  "version" : "0.2.0-ci",
+  "name" : "NpuVs",
+  "title" : "Laboratory Code: NPU",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2024-11-18T16:52:16+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Laboratory observation codes based on the NPU code system.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "This material contains content from NPU Terminology (http://npu-terminology.org). NPU is copyright International Federation of Clinical Chemistry (IFCC) and International Union of Pure and Applied Chemistry (IUPAC) and is available at no cost under the license at https://www.labterm.dk/.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://npu-terminology.org"
+    }]
+  }
+}

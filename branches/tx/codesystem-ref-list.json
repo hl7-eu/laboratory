@@ -1,0 +1,78 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "oids" : ["2.16.840.1.113883.4.642.4.242"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-composition-status.html" : "CompositionStatus",
+      "ConceptMap-ConceptMap-eu-diagRptStatus2CompStatus.html" : "DiagnosticReport to Composition status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/diagnostic-report-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticReportStatus",
+      "title" : "DiagnosticReportStatus",
+      "description" : "The status of the diagnostic report.",
+      "oids" : ["2.16.840.1.113883.4.642.4.236"],
+      "uses" : {
+      },
+      "ConceptMap-ConceptMap-eu-diagRptStatus2CompStatus.html" : "DiagnosticReport to Composition status",
+      "http://hl7.org/fhir/R4/valueset-diagnostic-report-status.html" : "DiagnosticReportStatus"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "ValueSet-lab-obsCode-loinc-eu-lab.html" : "Laboratory Code: LOINC",
+      "ValueSet-lab-studyType-eu-lab.html" : "Laboratory Study Types",
+      "ValueSet-lab-reportType-eu-lab.html" : "Laboratory Report Types",
+      "ValueSet-lab-orderCodes-eu-lab.html" : "Laboratory Order"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "ValueSet-lab-specimenContainer-eu-lab.html" : "Specimen Container",
+      "http://hl7.org/fhir/R4/valueset-bodystructure-code.html" : "SNOMED CT Morphologic Abnormalities",
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+      "ValueSet-lab-siteQualifier-eu-lab.html" : "Body Structure Qualifier",
+      "ValueSet-lab-speciesType-eu-vs.html" : "Types of species",
+      "ValueSet-lab-specimenType-eu-lab.html" : "Specimen Types",
+      "ValueSet-lab-specimenAdditive-eu-lab.html" : "Specimen Additive",
+      "ValueSet-lab-laterality-eu-lab.html" : "Body Structure Laterality",
+      "ValueSet-lab-specialty-eu-lab.html" : "Laboratory Specialty",
+      "ValueSet-lab-technique-eu-lab.html" : "Laboratory Techniques"
+    },
+    {
+      "url" : "urn:iso:std:iso:3166",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "ISO3166Part1",
+      "title" : "ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code",
+      "description" : "ISO 3166-1 establishes codes that represent the current names of countries, dependencies, and other areas of particular geopolitical interest, on the basis of country names obtained from the United Nations.",
+      "oids" : ["1.0.3166.1"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-iso3166-1-2.html" : "Iso 3166 Part 1: 2 Letter Codes"
+    }
+  ]
+}

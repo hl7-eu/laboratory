@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Composition/comp-lab-example> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "comp-lab-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition comp-lab-example</b></p><a name=\"comp-lab-example\"> </a><a name=\"hccomp-lab-example\"> </a><a name=\"comp-lab-example-en-US\"> </a><p><b>Document DiagnosticReport Reference</b>: <a href=\"DiagnosticReport-dr-lab-example.html\">Diagnostic Report for 'Laboratory report' for '-&gt;František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))'</a></p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 26436-6}\">Laboratory Studies (set)</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td>Best Laboratory</td></tr></table><p><b>custodian</b>: Best Laboratory</p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hl7.eu/fhir/laboratory/DiagnosticReport/dr-lab-example> ;
+       fhir:reference [ fhir:v "DiagnosticReport/dr-lab-example" ]
+     ]
+  ] ) ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f" ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:26436-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "26436-6" ] ;
+       fhir:display [ fhir:v "Laboratory Studies (set)" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://hl7.eu/fhir/laboratory/Patient/pat-lab-example> ;
+     fhir:reference [ fhir:v "Patient/pat-lab-example" ]
+  ] ; # 
+  fhir:date [ fhir:v "2022-10-25T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Laboratory Report Bacterial Aerobic & Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2020-12-27T14:30:00+01:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:display [ fhir:v "Best Laboratory" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:display [ fhir:v "Best Laboratory" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Bacterial Aerobic & Anaerobic Culture & Susceptibility" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:18725-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "18725-2" ] ;
+         fhir:display [ fhir:v "Microbiology studies (set)" ]
+       ] )
+     ] ;
+     fhir:section ( [
+       fhir:title [ fhir:v "Gram Stain" ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Gram Stain" ]
+       ] ;
+       fhir:entry ( [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-gram-stain> ;
+         fhir:reference [ fhir:v "Observation/obs-gram-stain" ]
+       ] )
+     ] [
+       fhir:title [ fhir:v "Aerobic Culture" ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Aerobic Culture" ]
+       ] ;
+       fhir:entry ( [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-aerobic-culture> ;
+         fhir:reference [ fhir:v "Observation/obs-aerobic-culture" ]
+       ] )
+     ] [
+       fhir:title [ fhir:v "Anaerobic Culture" ] ;
+       fhir:code [
+         fhir:text [ fhir:v "Anaerobic Culture" ]
+       ] ;
+       fhir:entry ( [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-anaerobic-culture> ;
+         fhir:reference [ fhir:v "Observation/obs-anaerobic-culture" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

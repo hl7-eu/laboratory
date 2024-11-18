@@ -1,0 +1,1012 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883",
+  "meta" : {
+    "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"]
+  },
+  "identifier" : {
+    "system" : "urn:oid:2.16.840.1.113883.2.9.2.120.4.4",
+    "value" : "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju",
+    "assigner" : {
+      "display" : "Regione Lazio"
+    }
+  },
+  "type" : "document",
+  "timestamp" : "2022-03-30T11:24:26+01:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740",
+    "resource" : {
+      "resourceType" : "Composition",
+      "id" : "26032a57-083a-4ddf-b019-e566ae02f740",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"]
+      },
+      "language" : "it-IT",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it-IT\" lang=\"it-IT\"><a name=\"Composition_26032a57-083a-4ddf-b019-e566ae02f740\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition 26032a57-083a-4ddf-b019-e566ae02f740</b></p><a name=\"26032a57-083a-4ddf-b019-e566ae02f740\"> </a><a name=\"hc26032a57-083a-4ddf-b019-e566ae02f740\"> </a><a name=\"26032a57-083a-4ddf-b019-e566ae02f740-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: it-IT</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Composition-eu-lab.html\">Composition: Laboratory Report</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11502-2}\">Referto di laboratorio</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 18719-5}\">Chemistry studies (set)</span></p><p><b>encounter</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>date</b>: 2022-03-30 11:24:26+0100</p><p><b>author</b>: </p><ul><li><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-88868d3e-7ab1-4ee5-983e-b979c4971f5c\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li><li><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-84b2e517-abc2-4268-975d-b12fa8174d30\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></li></ul><p><b>title</b>: REFERTO DI LABORATORIO</p><p><b>confidentiality</b>: normal</p><blockquote><p><b>attester</b></p><p><b>mode</b>: Professional</p><p><b>party</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0bbabe57-7c43-4211-9e19-81fcec65686d\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Legal</p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Professional</p><p><b>time</b>: 2022-03-25 11:00:00+0100</p><p><b>party</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-13792187-4721-4309-a8a4-4a57ffb4e6a1\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><p><b>custodian</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td><td><b>Detail</b></td></tr><tr><td style=\"display: none\">*</td><td>2022-03-24 11:24:26+0100 --&gt; (ongoing)</td><td><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1b4b120e-0371-4878-b4c9-b69434e84c72\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></td></tr></table></div>"
+      },
+      "identifier" : {
+        "system" : "urn:oid:2.16.840.1.113883.2.9.2.120.4.4",
+        "value" : "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju",
+        "assigner" : {
+          "display" : "Regione Lazio"
+        }
+      },
+      "status" : "final",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11502-2",
+          "display" : "Laboratory report"
+        }],
+        "text" : "Referto di laboratorio"
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18719-5",
+          "display" : "Chemistry studies (set)"
+        }]
+      }],
+      "subject" : {
+        "reference" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
+      },
+      "date" : "2022-03-30T11:24:26+01:00",
+      "author" : [{
+        "reference" : "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c"
+      },
+      {
+        "reference" : "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30"
+      }],
+      "title" : "REFERTO DI LABORATORIO",
+      "confidentiality" : "N",
+      "attester" : [{
+        "mode" : "professional",
+        "party" : {
+          "reference" : "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d"
+        }
+      },
+      {
+        "mode" : "legal",
+        "time" : "2022-03-25T11:00:00+01:00",
+        "party" : {
+          "reference" : "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce"
+        }
+      },
+      {
+        "mode" : "professional",
+        "time" : "2022-03-25T11:00:00+01:00",
+        "party" : {
+          "reference" : "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1"
+        }
+      }],
+      "custodian" : {
+        "reference" : "urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d"
+      },
+      "event" : [{
+        "period" : {
+          "start" : "2022-03-24T11:24:26+01:00"
+        },
+        "detail" : [{
+          "reference" : "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72"
+        }]
+      }],
+      "section" : [{
+        "title" : "Esami delle Urine",
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "18729-4",
+            "display" : "Urinalysis studies (set)"
+          }],
+          "text" : "ESAMI DELLE URINE"
+        },
+        "section" : [{
+          "title" : "Albumina nelle Urine",
+          "code" : {
+            "coding" : [{
+              "system" : "http://loinc.org",
+              "code" : "14957-5",
+              "display" : "Microalbumin [Mass/volume] in Urine"
+            },
+            {
+              "system" : "urn:oid:2.16.840.1.113883.2.9.2.30.6.11",
+              "code" : "0090334.02",
+              "display" : "Microalbumina"
+            }],
+            "text" : "Microalbumin Massa/Volume in Urine"
+          },
+          "text" : {
+            "status" : "generated",
+            "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><table id=\"nota1\"><thead><tr><th>Esame</th><th>Metodo utilizzato per l'esame</th><th>Materiale utilizzato per l'esame</th><th>Risultato dell'esame</th><th>Commenti e note</th><th>Unità di Misura</th><th>Range di Riferimento</th><th>Criteri per il range di riferimento</th><th>Interpretazione</th><th>Allegati multimediali</th></tr></thead><tbody><tr><td>Microalbumina massa/volume in urine</td><td/><td>Urine</td><td>16</td><td/><td>mg/L</td><td>0 - 20</td><td/><td>N</td><td/></tr></tbody></table></li></ul></div>"
+          },
+          "entry" : [{
+            "reference" : "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
+          }]
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "dc2b606f-3cf7-4711-a2ff-52da04b89e04",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_dc2b606f-3cf7-4711-a2ff-52da04b89e04\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient dc2b606f-3cf7-4711-a2ff-52da04b89e04</b></p><a name=\"dc2b606f-3cf7-4711-a2ff-52da04b89e04\"> </a><a name=\"hcdc2b606f-3cf7-4711-a2ff-52da04b89e04\"> </a><a name=\"dc2b606f-3cf7-4711-a2ff-52da04b89e04-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Giuseppe Verdi  Male, DoB: 1993-06-19 ( urn:oid:2.16.840.1.113883.2.9.4.3.2#TKLEYP93Y27Z315J)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:giuseppe.verdi@gmail.com\">giuseppe.verdi@gmail.com</a></li><li>ph: 33224456(Mobile)</li><li>Via Aurora 12 Roma 120 00187 100 (home)</li><li>Via Canevari 12B Roma 120 00138 100 (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-birthPlace.html\">Patient Birth Place</a></td><td colspan=\"3\">Via voltri 3 Roma 120 100 </td></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+        "valueAddress" : {
+          "line" : ["Via voltri 3"],
+          "city" : "Roma",
+          "district" : "RM",
+          "state" : "120",
+          "country" : "100"
+        }
+      }],
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "TKLEYP93Y27Z315J",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Verdi",
+        "given" : ["Giuseppe"]
+      }],
+      "telecom" : [{
+        "system" : "email",
+        "value" : "giuseppe.verdi@gmail.com",
+        "use" : "home"
+      },
+      {
+        "system" : "phone",
+        "value" : "33224456",
+        "use" : "mobile"
+      }],
+      "gender" : "male",
+      "birthDate" : "1993-06-19",
+      "address" : [{
+        "use" : "home",
+        "line" : ["Via Aurora 12"],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00187",
+        "country" : "100"
+      },
+      {
+        "use" : "home",
+        "line" : ["Via Canevari 12B"],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00138",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "b8c9663d-2c2b-4a5a-99ea-17eae127fc60",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_b8c9663d-2c2b-4a5a-99ea-17eae127fc60\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport b8c9663d-2c2b-4a5a-99ea-17eae127fc60</b></p><a name=\"b8c9663d-2c2b-4a5a-99ea-17eae127fc60\"> </a><a name=\"hcb8c9663d-2c2b-4a5a-99ea-17eae127fc60\"> </a><a name=\"b8c9663d-2c2b-4a5a-99ea-17eae127fc60-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Referto di laboratorio</span> (<span title=\"Codes:{http://loinc.org 18719-5}\">Chemistry studies (set)</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>Identifier</td><td> <code>urn:oid:2.16.840.1.113883.2.9.2.120.4.4</code>/c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr></table></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition",
+        "valueReference" : {
+          "reference" : "urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740"
+        }
+      }],
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.2.120.4.4",
+        "value" : "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju",
+        "assigner" : {
+          "display" : "Regione Lazio"
+        }
+      }],
+      "status" : "registered",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "18719-5",
+          "display" : "Chemistry studies (set)"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11502-2",
+          "display" : "Laboratory report"
+        }],
+        "text" : "Referto di laboratorio"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
+      },
+      "specimen" : [{
+        "reference" : "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
+      }],
+      "result" : [{
+        "reference" : "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb",
+    "resource" : {
+      "resourceType" : "Specimen",
+      "id" : "5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Specimen_5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Specimen 5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb</b></p><a name=\"5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\"> </a><a name=\"hc5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\"> </a><a name=\"5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb-en-US\"> </a><p><b>type</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.5.129 UR}\">Urine</span></p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "type" : {
+        "coding" : [{
+          "system" : "urn:oid:2.16.840.1.113883.5.129",
+          "code" : "UR",
+          "display" : "Urine"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "763f7902-8103-4d10-8bd1-546a726d43ee",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_763f7902-8103-4d10-8bd1-546a726d43ee\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation 763f7902-8103-4d10-8bd1-546a726d43ee</b></p><a name=\"763f7902-8103-4d10-8bd1-546a726d43ee\"> </a><a name=\"hc763f7902-8103-4d10-8bd1-546a726d43ee\"> </a><a name=\"763f7902-8103-4d10-8bd1-546a726d43ee-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14957-5}, {urn:oid:2.16.840.1.113883.2.9.2.30.6.11 0090334.02}\">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>encounter</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>effective</b>: 2022-03-30 11:24:26+0100</p><p><b>performer</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-a199dc05-af73-44a0-a218-bda5dec557ce\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>value</b>: 16 mg/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/L = 'mg/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><p><b>specimen</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>0 mg/L</td><td>20 mg/L</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></td></tr></table></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "laboratory"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "14957-5",
+          "display" : "Microalbumin [Mass/volume] in Urine"
+        },
+        {
+          "system" : "urn:oid:2.16.840.1.113883.2.9.2.30.6.11",
+          "code" : "0090334.02",
+          "display" : "Albumina nelle urine"
+        }],
+        "text" : "Microalbumin Massa/Volume in Urine"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
+      },
+      "effectiveDateTime" : "2022-03-30T11:24:26+01:00",
+      "performer" : [{
+        "reference" : "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce"
+      }],
+      "valueQuantity" : {
+        "value" : 16,
+        "unit" : "mg/L",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg/L"
+      },
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "N",
+          "display" : "Normal"
+        }]
+      }],
+      "specimen" : {
+        "reference" : "urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
+      },
+      "referenceRange" : [{
+        "low" : {
+          "value" : 0,
+          "unit" : "mg/L"
+        },
+        "high" : {
+          "value" : 20,
+          "unit" : "mg/L"
+        },
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+            "code" : "N",
+            "display" : "Normal"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "ab279a0b-320f-483b-9a5d-f1f7e8ceacb2",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ab279a0b-320f-483b-9a5d-f1f7e8ceacb2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ab279a0b-320f-483b-9a5d-f1f7e8ceacb2</b></p><a name=\"ab279a0b-320f-483b-9a5d-f1f7e8ceacb2\"> </a><a name=\"hcab279a0b-320f-483b-9a5d-f1f7e8ceacb2\"> </a><a name=\"ab279a0b-320f-483b-9a5d-f1f7e8ceacb2-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href=\"mailto:matteo.cervone@gmail.it\">matteo.cervone@gmail.it</a>, <a href=\"mailto:matteo.cervone@pec.it\">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "MTCORV58E63L294G",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Cervone",
+        "given" : ["Matteo"],
+        "prefix" : ["Dr"]
+      }],
+      "telecom" : [{
+        "system" : "email",
+        "value" : "matteo.cervone@gmail.it",
+        "use" : "home"
+      },
+      {
+        "system" : "email",
+        "value" : "matteo.cervone@pec.it",
+        "use" : "work"
+      },
+      {
+        "system" : "phone",
+        "value" : "3478129873",
+        "use" : "mobile"
+      }],
+      "address" : [{
+        "line" : ["Via Milano 7"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+            "valueString" : "058091"
+          }]
+        }],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00184",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:84b2e517-abc2-4268-975d-b12fa8174d30",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "84b2e517-abc2-4268-975d-b12fa8174d30",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_84b2e517-abc2-4268-975d-b12fa8174d30\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 84b2e517-abc2-4268-975d-b12fa8174d30</b></p><a name=\"84b2e517-abc2-4268-975d-b12fa8174d30\"> </a><a name=\"hc84b2e517-abc2-4268-975d-b12fa8174d30\"> </a><a name=\"84b2e517-abc2-4268-975d-b12fa8174d30-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-68740937-f732-4ff9-a2e4-bf502d2d125f\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "68740937-f732-4ff9-a2e4-bf502d2d125f",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_68740937-f732-4ff9-a2e4-bf502d2d125f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 68740937-f732-4ff9-a2e4-bf502d2d125f</b></p><a name=\"68740937-f732-4ff9-a2e4-bf502d2d125f\"> </a><a name=\"hc68740937-f732-4ff9-a2e4-bf502d2d125f\"> </a><a name=\"68740937-f732-4ff9-a2e4-bf502d2d125f-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/FPSSBN85G54D398H</p><p><b>name</b>: Filippo Mancusi </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "FPSSBN85G54D398H",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Mancusi",
+        "given" : ["Filippo"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d</b></p><a name=\"a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\"> </a><a name=\"hca59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d\"> </a><a name=\"a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.2",
+        "value" : "120148",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }],
+      "name" : "SAN RAFFAELE NOMENTANA",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "390 666 0581",
+        "use" : "work"
+      }],
+      "address" : [{
+        "line" : ["Via Emilio Praga 39"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+            "valueString" : "058091"
+          }]
+        }],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00137",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "0bbabe57-7c43-4211-9e19-81fcec65686d",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_0bbabe57-7c43-4211-9e19-81fcec65686d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 0bbabe57-7c43-4211-9e19-81fcec65686d</b></p><a name=\"0bbabe57-7c43-4211-9e19-81fcec65686d\"> </a><a name=\"hc0bbabe57-7c43-4211-9e19-81fcec65686d\"> </a><a name=\"0bbabe57-7c43-4211-9e19-81fcec65686d-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MURRSI88Y67R012G</p><p><b>name</b>: Maura Rossi </p><p><b>telecom</b>: ph: 062866794(Work)</p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "MURRSI88Y67R012G",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Rossi",
+        "given" : ["Maura"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "062866794",
+        "use" : "work"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:a199dc05-af73-44a0-a218-bda5dec557ce",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "a199dc05-af73-44a0-a218-bda5dec557ce",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_a199dc05-af73-44a0-a218-bda5dec557ce\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole a199dc05-af73-44a0-a218-bda5dec557ce</b></p><a name=\"a199dc05-af73-44a0-a218-bda5dec557ce\"> </a><a name=\"hca199dc05-af73-44a0-a218-bda5dec557ce\"> </a><a name=\"a199dc05-af73-44a0-a218-bda5dec557ce-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c</b></p><a name=\"b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\"> </a><a name=\"hcb2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c\"> </a><a name=\"b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/GPSDGK80E76C765V</p><p><b>name</b>: Federico Righi </p><p><b>telecom</b>: <a href=\"mailto:righi.federico@gmail.com\">righi.federico@gmail.com</a>, ph: 330987986(Mobile)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "GPSDGK80E76C765V",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Righi",
+        "given" : ["Federico"],
+        "prefix" : ["Dttr."]
+      }],
+      "telecom" : [{
+        "system" : "email",
+        "value" : "righi.federico@gmail.com",
+        "use" : "home"
+      },
+      {
+        "system" : "phone",
+        "value" : "330987986",
+        "use" : "mobile"
+      }],
+      "address" : [{
+        "line" : ["Via Corvetto 3"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+            "valueString" : "058091"
+          }]
+        }],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00164",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:13792187-4721-4309-a8a4-4a57ffb4e6a1",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "13792187-4721-4309-a8a4-4a57ffb4e6a1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_13792187-4721-4309-a8a4-4a57ffb4e6a1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 13792187-4721-4309-a8a4-4a57ffb4e6a1</b></p><a name=\"13792187-4721-4309-a8a4-4a57ffb4e6a1\"> </a><a name=\"hc13792187-4721-4309-a8a4-4a57ffb4e6a1\"> </a><a name=\"13792187-4721-4309-a8a4-4a57ffb4e6a1-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-852cec21-4ff9-4cea-b86d-00de92b46894\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "852cec21-4ff9-4cea-b86d-00de92b46894",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_852cec21-4ff9-4cea-b86d-00de92b46894\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 852cec21-4ff9-4cea-b86d-00de92b46894</b></p><a name=\"852cec21-4ff9-4cea-b86d-00de92b46894\"> </a><a name=\"hc852cec21-4ff9-4cea-b86d-00de92b46894\"> </a><a name=\"852cec21-4ff9-4cea-b86d-00de92b46894-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/RBTAMA67H99H467D</p><p><b>name</b>: Roberta Rossi </p><p><b>telecom</b>: <a href=\"mailto:maggi.roberta@gmail.com\">maggi.roberta@gmail.com</a>, ph: 22998276800(Home)</p><p><b>address</b>: Via Corvetto 3 Roma 120 00164 100 </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "RBTAMA67H99H467D",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Rossi",
+        "given" : ["Roberta"]
+      }],
+      "telecom" : [{
+        "system" : "email",
+        "value" : "maggi.roberta@gmail.com",
+        "use" : "home"
+      },
+      {
+        "system" : "phone",
+        "value" : "22998276800",
+        "use" : "home"
+      }],
+      "address" : [{
+        "line" : ["Via Corvetto 3"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+            "valueString" : "058091"
+          }]
+        }],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00164",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "c20acec2-5d67-4c05-b35e-d528c35f9ed1",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_c20acec2-5d67-4c05-b35e-d528c35f9ed1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole c20acec2-5d67-4c05-b35e-d528c35f9ed1</b></p><a name=\"c20acec2-5d67-4c05-b35e-d528c35f9ed1\"> </a><a name=\"hcc20acec2-5d67-4c05-b35e-d528c35f9ed1\"> </a><a name=\"c20acec2-5d67-4c05-b35e-d528c35f9ed1-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-f7fa317a-66ac-4adf-9199-9bfe1e2eaa21\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>organization</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c1f46c0d-a0f9-41d7-8a33-15ffcf954354\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>code</b>: <span title=\"Codes:{urn:oid:2.16.840.1.113883.2.9.5.1.88 PRE}\">PRE</span></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21"
+      },
+      "organization" : {
+        "reference" : "urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354"
+      },
+      "code" : [{
+        "coding" : [{
+          "system" : "urn:oid:2.16.840.1.113883.2.9.5.1.88",
+          "code" : "PRE"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "f7fa317a-66ac-4adf-9199-9bfe1e2eaa21",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_f7fa317a-66ac-4adf-9199-9bfe1e2eaa21\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner f7fa317a-66ac-4adf-9199-9bfe1e2eaa21</b></p><a name=\"f7fa317a-66ac-4adf-9199-9bfe1e2eaa21\"> </a><a name=\"hcf7fa317a-66ac-4adf-9199-9bfe1e2eaa21\"> </a><a name=\"f7fa317a-66ac-4adf-9199-9bfe1e2eaa21-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/STVMG77F45N079MF</p><p><b>name</b>: Silvia Maggi </p><p><b>telecom</b>: <a href=\"mailto:maggi.silvia@gmail.com\">maggi.silvia@gmail.com</a></p><p><b>address</b>: Via Vittorio Veneto 3 Roma 120 00187 100 </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "STVMG77F45N079MF",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Maggi",
+        "given" : ["Silvia"]
+      }],
+      "telecom" : [{
+        "system" : "email",
+        "value" : "maggi.silvia@gmail.com",
+        "use" : "home"
+      }],
+      "address" : [{
+        "line" : ["Via Vittorio Veneto 3"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+            "valueString" : "058091"
+          }]
+        }],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00187",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "c1f46c0d-a0f9-41d7-8a33-15ffcf954354",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_c1f46c0d-a0f9-41d7-8a33-15ffcf954354\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization c1f46c0d-a0f9-41d7-8a33-15ffcf954354</b></p><a name=\"c1f46c0d-a0f9-41d7-8a33-15ffcf954354\"> </a><a name=\"hcc1f46c0d-a0f9-41d7-8a33-15ffcf954354\"> </a><a name=\"c1f46c0d-a0f9-41d7-8a33-15ffcf954354-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/120148</p><p><b>name</b>: SAN RAFFAELE NOMENTANA</p><p><b>telecom</b>: ph: 390 666 0581(Work)</p><p><b>address</b>: Via Emilio Praga 39 Roma 120 00137 100 </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.2",
+        "value" : "120148",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }],
+      "name" : "SAN RAFFAELE NOMENTANA",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "390 666 0581",
+        "use" : "work"
+      }],
+      "address" : [{
+        "line" : ["Via Emilio Praga 39"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract",
+            "valueString" : "058091"
+          }]
+        }],
+        "city" : "Roma",
+        "district" : "RM",
+        "state" : "120",
+        "postalCode" : "00137",
+        "country" : "100"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1",
+      "meta" : {
+        "profile" : ["http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest 1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1</b></p><a name=\"1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\"> </a><a name=\"hc1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\"> </a><a name=\"1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.9</code>/[NRE]</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>priority</b>: ASAP</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 14957-5}\">Microalbumin Massa/Volume in Urine</span></p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>encounter</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-195a7abc-d109-404a-9dc7-ad2e80bafc8a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.9",
+        "value" : "[NRE]",
+        "assigner" : {
+          "display" : "Ministero delle Finanze"
+        }
+      }],
+      "status" : "active",
+      "intent" : "order",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "108252007",
+          "display" : "Laboratory procedure"
+        }]
+      }],
+      "priority" : "asap",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "14957-5",
+          "display" : "Microalbumin [Mass/volume] in Urine"
+        }],
+        "text" : "Microalbumin Massa/Volume in Urine"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "1b4b120e-0371-4878-b4c9-b69434e84c72",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_1b4b120e-0371-4878-b4c9-b69434e84c72\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 1b4b120e-0371-4878-b4c9-b69434e84c72</b></p><a name=\"1b4b120e-0371-4878-b4c9-b69434e84c72\"> </a><a name=\"hc1b4b120e-0371-4878-b4c9-b69434e84c72\"> </a><a name=\"1b4b120e-0371-4878-b4c9-b69434e84c72-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c1bb11b3-87e6-4682-a214-10975487b643\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>organization</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-508f4b29-09ca-4c94-8343-657f1923303a\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643"
+      },
+      "organization" : {
+        "reference" : "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "c1bb11b3-87e6-4682-a214-10975487b643",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_c1bb11b3-87e6-4682-a214-10975487b643\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner c1bb11b3-87e6-4682-a214-10975487b643</b></p><a name=\"c1bb11b3-87e6-4682-a214-10975487b643\"> </a><a name=\"hcc1bb11b3-87e6-4682-a214-10975487b643\"> </a><a name=\"c1bb11b3-87e6-4682-a214-10975487b643-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MRSSIO79H59Z317K</p><p><b>name</b>: Mario Rossi </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "MRSSIO79H59Z317K",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Rossi",
+        "given" : ["Mario"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "508f4b29-09ca-4c94-8343-657f1923303a",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_508f4b29-09ca-4c94-8343-657f1923303a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 508f4b29-09ca-4c94-8343-657f1923303a</b></p><a name=\"508f4b29-09ca-4c94-8343-657f1923303a\"> </a><a name=\"hc508f4b29-09ca-4c94-8343-657f1923303a\"> </a><a name=\"508f4b29-09ca-4c94-8343-657f1923303a-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.3</code>/327700102</p><p><b>name</b>: Nuovo Ospedale S.Agostino (MO)</p><p><b>partOf</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-206fa15d-51ae-4f3d-b8d0-71ee6290ff52\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.3",
+        "value" : "327700102",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }],
+      "name" : "Nuovo Ospedale S.Agostino (MO)",
+      "partOf" : {
+        "reference" : "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "206fa15d-51ae-4f3d-b8d0-71ee6290ff52",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_206fa15d-51ae-4f3d-b8d0-71ee6290ff52\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 206fa15d-51ae-4f3d-b8d0-71ee6290ff52</b></p><a name=\"206fa15d-51ae-4f3d-b8d0-71ee6290ff52\"> </a><a name=\"hc206fa15d-51ae-4f3d-b8d0-71ee6290ff52\"> </a><a name=\"206fa15d-51ae-4f3d-b8d0-71ee6290ff52-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/080105</p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.1",
+        "value" : "080105",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "83ef1c55-566b-4547-affd-f6d7b993a094",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_83ef1c55-566b-4547-affd-f6d7b993a094\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 83ef1c55-566b-4547-affd-f6d7b993a094</b></p><a name=\"83ef1c55-566b-4547-affd-f6d7b993a094\"> </a><a name=\"hc83ef1c55-566b-4547-affd-f6d7b993a094\"> </a><a name=\"83ef1c55-566b-4547-affd-f6d7b993a094-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1a3064fd-9658-47f1-98f3-3f368761a9da\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "1a3064fd-9658-47f1-98f3-3f368761a9da",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_1a3064fd-9658-47f1-98f3-3f368761a9da\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 1a3064fd-9658-47f1-98f3-3f368761a9da</b></p><a name=\"1a3064fd-9658-47f1-98f3-3f368761a9da\"> </a><a name=\"hc1a3064fd-9658-47f1-98f3-3f368761a9da\"> </a><a name=\"1a3064fd-9658-47f1-98f3-3f368761a9da-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/SVATPR85Y37T079B</p><p><b>name</b>: Silvia Turri </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.3.2",
+        "value" : "SVATPR85Y37T079B",
+        "assigner" : {
+          "display" : "MEF"
+        }
+      }],
+      "name" : [{
+        "family" : "Turri",
+        "given" : ["Silvia"]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "6373bbff-d136-4cfe-a7bc-fab4bff2fc21",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Location_6373bbff-d136-4cfe-a7bc-fab4bff2fc21\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Location 6373bbff-d136-4cfe-a7bc-fab4bff2fc21</b></p><a name=\"6373bbff-d136-4cfe-a7bc-fab4bff2fc21\"> </a><a name=\"hc6373bbff-d136-4cfe-a7bc-fab4bff2fc21\"> </a><a name=\"6373bbff-d136-4cfe-a7bc-fab4bff2fc21-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.6</code>/XXX</p><p><b>managingOrganization</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.6",
+        "value" : "XXX",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }],
+      "managingOrganization" : {
+        "reference" : "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17</b></p><a name=\"0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\"> </a><a name=\"hc0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17\"> </a><a name=\"0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.2</code>/XXX</p><p><b>name</b>: [nome_presidio]</p><p><b>telecom</b>: ph: 0115678965(Work)</p><p><b>partOf</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-d5f71fc0-6075-4fed-ad99-b3c609d27f6b\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.2",
+        "value" : "XXX",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }],
+      "name" : "[nome_presidio]",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "0115678965",
+        "use" : "work"
+      }],
+      "partOf" : {
+        "reference" : "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "d5f71fc0-6075-4fed-ad99-b3c609d27f6b",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_d5f71fc0-6075-4fed-ad99-b3c609d27f6b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization d5f71fc0-6075-4fed-ad99-b3c609d27f6b</b></p><a name=\"d5f71fc0-6075-4fed-ad99-b3c609d27f6b\"> </a><a name=\"hcd5f71fc0-6075-4fed-ad99-b3c609d27f6b\"> </a><a name=\"d5f71fc0-6075-4fed-ad99-b3c609d27f6b-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.1.1</code>/XXX</p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.840.1.113883.2.9.4.1.1",
+        "value" : "XXX",
+        "assigner" : {
+          "display" : "Ministero della Salute"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "195a7abc-d109-404a-9dc7-ad2e80bafc8a",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_195a7abc-d109-404a-9dc7-ad2e80bafc8a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter 195a7abc-d109-404a-9dc7-ad2e80bafc8a</b></p><a name=\"195a7abc-d109-404a-9dc7-ad2e80bafc8a\"> </a><a name=\"hc195a7abc-d109-404a-9dc7-ad2e80bafc8a\"> </a><a name=\"195a7abc-d109-404a-9dc7-ad2e80bafc8a-en-US\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode AMB</a>: ambulatory</p><p><b>subject</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-dc2b606f-3cf7-4711-a2ff-52da04b89e04\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><p><b>basedOn</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType REF}\">referrer</span></p><p><b>period</b>: 2022-03-20 11:00:00+0100 --&gt; (ongoing)</p><p><b>individual</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-c20acec2-5d67-4c05-b35e-d528c35f9ed1\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>individual</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-83ef1c55-566b-4547-affd-f6d7b993a094\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></blockquote><p><b>period</b>: 2022-03-30 11:24:26+0100 --&gt; (ongoing)</p><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-6373bbff-d136-4cfe-a7bc-fab4bff2fc21\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></td></tr></table></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB",
+        "display" : "ambulatory"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04"
+      },
+      "basedOn" : [{
+        "reference" : "urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1"
+      }],
+      "participant" : [{
+        "type" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code" : "REF"
+          }]
+        }],
+        "period" : {
+          "start" : "2022-03-20T11:00:00+01:00"
+        },
+        "individual" : {
+          "reference" : "urn:uuid:c20acec2-5d67-4c05-b35e-d528c35f9ed1"
+        }
+      },
+      {
+        "individual" : {
+          "reference" : "urn:uuid:83ef1c55-566b-4547-affd-f6d7b993a094"
+        }
+      }],
+      "period" : {
+        "start" : "2022-03-30T11:24:26+01:00"
+      },
+      "location" : [{
+        "location" : {
+          "reference" : "urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:88868d3e-7ab1-4ee5-983e-b979c4971f5c",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "88868d3e-7ab1-4ee5-983e-b979c4971f5c",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_88868d3e-7ab1-4ee5-983e-b979c4971f5c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 88868d3e-7ab1-4ee5-983e-b979c4971f5c</b></p><a name=\"88868d3e-7ab1-4ee5-983e-b979c4971f5c\"> </a><a name=\"hc88868d3e-7ab1-4ee5-983e-b979c4971f5c\"> </a><a name=\"88868d3e-7ab1-4ee5-983e-b979c4971f5c-en-US\"> </a><p><b>practitioner</b>: <a href=\"Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.html#urn-uuid-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2\">Bundle: identifier = urn:oid:2.16.840.1.113883.2.9.2.120.4.4#c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju; type = document; timestamp = 2022-03-30 11:24:26+0100</a></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2"
+      }
+    }
+  }]
+}

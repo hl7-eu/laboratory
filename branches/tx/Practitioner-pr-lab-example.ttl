@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Practitioner/pr-lab-example> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pr-lab-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner pr-lab-example</b></p><a name=\"pr-lab-example\"> </a><a name=\"hcpr-lab-example\"> </a><a name=\"pr-lab-example-en-US\"> </a><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.2.9.4.3.2</code>/MTCORV58E63L294G</p><p><b>name</b>: Matteo Cervone </p><p><b>telecom</b>: <a href=\"mailto:matteo.cervone@gmail.it\">matteo.cervone@gmail.it</a>, <a href=\"mailto:matteo.cervone@pec.it\">matteo.cervone@pec.it</a>, ph: 3478129873(Mobile)</p><p><b>address</b>: Via Milano 7 Roma 120 00184 100 </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.2.9.4.3.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "MTCORV58E63L294G" ] ;
+     fhir:assigner [
+       fhir:display [ fhir:v "MEF" ]
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Cervone" ] ;
+     fhir:given ( [ fhir:v "Matteo" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "matteo.cervone@gmail.it" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "matteo.cervone@pec.it" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "3478129873" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [
+       fhir:v "Via Milano 7" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-censusTract"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "058091" ]
+       ] )
+     ] ) ;
+     fhir:city [ fhir:v "Roma" ] ;
+     fhir:district [ fhir:v "RM" ] ;
+     fhir:state [ fhir:v "120" ] ;
+     fhir:postalCode [ fhir:v "00184" ] ;
+     fhir:country [ fhir:v "100" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,129 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "ConceptMap-eu-diagRptStatus2CompStatus",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap ConceptMap-eu-diagRptStatus2CompStatus</b></p><a name=\"ConceptMap-eu-diagRptStatus2CompStatus\"> </a><a name=\"hcConceptMap-eu-diagRptStatus2CompStatus\"> </a><a name=\"ConceptMap-eu-diagRptStatus2CompStatus-en-US\"> </a><p>Mapping from <a href=\"http://hl7.org/fhir/R4/valueset-diagnostic-report-status.html\">DiagnosticReportStatus</a> to <a href=\"http://hl7.org/fhir/R4/valueset-composition-status.html\">CompositionStatus</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html\">DiagnosticReportStatusversion: null4.0.1)</a> to <a href=\"http://hl7.org/fhir/R4/codesystem-composition-status.html\">CompositionStatusversion: null4.0.1)</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>registered</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>preliminary</td></tr><tr><td>partial</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>preliminary</td></tr><tr><td>preliminary</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>preliminary</td></tr><tr><td>final</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>final</td></tr><tr><td>amended</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>amended</td></tr><tr><td>corrected</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>amended</td></tr><tr><td>appended</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>amended</td></tr><tr><td>cancelled</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>final</td></tr><tr><td>entered-in-error</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>entered-in-error</td></tr><tr><td>unknown</td><td colspan=\"2\" style=\"background-color: #efefef\">(not mapped)</td></tr></table></div>"
+  },
+  "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus",
+  "version" : "0.2.0-ci",
+  "name" : "ConceptMapDiagRptStatus2CompStatus",
+  "title" : "DiagnosticReport to Composition status",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-11-18T16:52:16+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "Proposed relationship between the statused used in the DiagnosticReport resource and that used for the Composition.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "purpose" : "It shows how to value the Composition status element based on the DiagnosticReport element.",
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceUri" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+  "targetUri" : "http://hl7.org/fhir/ValueSet/composition-status",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/diagnostic-report-status",
+    "sourceVersion" : "4.0.1",
+    "target" : "http://hl7.org/fhir/composition-status",
+    "targetVersion" : "4.0.1",
+    "element" : [{
+      "code" : "registered",
+      "display" : "Registered",
+      "target" : [{
+        "code" : "preliminary",
+        "display" : "Preliminary",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "partial",
+      "display" : "Partial",
+      "target" : [{
+        "code" : "preliminary",
+        "display" : "Preliminary",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "preliminary",
+      "display" : "Preliminary",
+      "target" : [{
+        "code" : "preliminary",
+        "display" : "Preliminary",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "final",
+      "display" : "Final",
+      "target" : [{
+        "code" : "final",
+        "display" : "Final",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "amended",
+      "display" : "Amended",
+      "target" : [{
+        "code" : "amended",
+        "display" : "Amended",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "corrected",
+      "display" : "Corrected",
+      "target" : [{
+        "code" : "amended",
+        "display" : "Amended",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "appended",
+      "display" : "Appended",
+      "target" : [{
+        "code" : "amended",
+        "display" : "Amended",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "cancelled",
+      "display" : "Cancelled",
+      "target" : [{
+        "code" : "final",
+        "display" : "Final",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "entered-in-error",
+      "display" : "Entered in Error",
+      "target" : [{
+        "code" : "entered-in-error",
+        "display" : "Entered in Error",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "unknown",
+      "display" : "Unknown",
+      "target" : [{
+        "equivalence" : "unmatched"
+      }]
+    }]
+  }]
+}

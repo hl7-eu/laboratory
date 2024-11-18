@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Observation/obs-gs-org1> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "obs-gs-org1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-gs-org1</b></p><a name=\"obs-gs-org1\"> </a><a name=\"hcobs-gs-org1\"> </a><a name=\"obs-gs-org1-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 664-3}\">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 70003006}\">Gram-positive cocci in clusters</span></p><p><b>hasMember</b>: <a href=\"Observation-obs-gs-org1-quant.html\">Observation </a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:664-3 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "664-3" ] ;
+       fhir:display [ fhir:v "Microscopic observation [Identifier] in Specimen by Gram stain" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.eu/fhir/laboratory/Patient/pat-lab-example> ;
+     fhir:reference [ fhir:v "Patient/pat-lab-example" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:70003006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "70003006" ] ;
+       fhir:display [ fhir:v "Gram-positive cocci in clusters" ]
+     ] )
+  ] ; # 
+  fhir:hasMember ( [
+     fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-gs-org1-quant> ;
+     fhir:reference [ fhir:v "Observation/obs-gs-org1-quant" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

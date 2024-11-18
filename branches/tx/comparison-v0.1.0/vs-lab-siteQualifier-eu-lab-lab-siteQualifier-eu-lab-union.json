@@ -1,0 +1,124 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-119",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b909da1-c5bf-4b1a-aa39-38e4f1561517-119",
+  "name" : "UnionLabSiteQualifierEuVsAndLabSiteQualifierEuVs",
+  "title" : "Union of Body Structure Qualifier (no laterality) And Body Structure Qualifier",
+  "status" : "active",
+  "date" : "2024-11-18T16:53:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "7771000",
+        "display" : "Left"
+      },
+      {
+        "code" : "24028007",
+        "display" : "Right"
+      },
+      {
+        "code" : "51440002",
+        "display" : "Bilateral"
+      },
+      {
+        "code" : "46053002",
+        "display" : "Distal"
+      },
+      {
+        "code" : "255554000",
+        "display" : "Dorsal"
+      },
+      {
+        "code" : "261183002",
+        "display" : "Upper"
+      },
+      {
+        "code" : "261122009",
+        "display" : "Lower"
+      },
+      {
+        "code" : "255561001",
+        "display" : "Medial"
+      },
+      {
+        "code" : "49370004",
+        "display" : "Lateral"
+      },
+      {
+        "code" : "264217000",
+        "display" : "Superior"
+      },
+      {
+        "code" : "261089000",
+        "display" : "Inferior"
+      },
+      {
+        "code" : "255551008",
+        "display" : "Posterior"
+      },
+      {
+        "code" : "351726001",
+        "display" : "Below"
+      },
+      {
+        "code" : "352730000",
+        "display" : "Above"
+      },
+      {
+        "code" : "40415009",
+        "display" : "Proximal (qualifier value)"
+      },
+      {
+        "code" : "255549009",
+        "display" : "Anterior (qualifier value)"
+      },
+      {
+        "code" : "26283006",
+        "display" : "Superficial (qualifier value)"
+      },
+      {
+        "code" : "795002",
+        "display" : "Deep (qualifier value)"
+      },
+      {
+        "code" : "57195005",
+        "display" : "Basal (qualifier value)"
+      },
+      {
+        "code" : "3583002",
+        "display" : "Caudal (qualifier value)"
+      },
+      {
+        "code" : "66787007",
+        "display" : "Cephalic (qualifier value)"
+      },
+      {
+        "code" : "255481003",
+        "display" : "Left upper quadrant (qualifier value)"
+      },
+      {
+        "code" : "255497008",
+        "display" : "Right upper quadrant (qualifier value)"
+      },
+      {
+        "code" : "255480002",
+        "display" : "Left lower quadrant (qualifier value)"
+      },
+      {
+        "code" : "255495000",
+        "display" : "Right lower quadrant (qualifier value)"
+      }],
+      "valueSet" : ["http://hl7.org/fhir/ValueSet/bodystructure-relative-location"]
+    }],
+    "exclude" : [{
+      "valueSet" : ["http://hl7.eu/fhir/laboratory/ValueSet/lab-laterality-eu-lab"]
+    }]
+  }
+}

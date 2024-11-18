@@ -1,0 +1,162 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ConceptMap/order2FHIR-eu-lab> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "order2FHIR-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap order2FHIR-eu-lab</b></p><a name=\"order2FHIR-eu-lab\"> </a><a name=\"hcorder2FHIR-eu-lab\"> </a><a name=\"order2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Order.html\">A2, A3 - Order</a> to <a href=\"StructureDefinition-ServiceRequest-eu-lab.html\">ServiceRequest: Laboratory Order</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Order.html\">A2, A3 - Order</a> to <a href=\"StructureDefinition-ServiceRequest-eu-lab.html\">ServiceRequest: Laboratory Order</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Order.orderDetails (A.2 Order information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest</td><td/></tr><tr><td>Order.orderDetails.identifier (A.2.1 Order Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.identifier</td><td/></tr><tr><td>Order.orderDetails.identifier (A.2.1 Order Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requisition</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.dateTime (A.2.2 Order date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.authoredOn</td><td/></tr><tr><td>Order.orderDetails.orderPlacerIdentifier (A.2.3 Order placer identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.identifier</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.orderPlacerName (A.2.4 Order placer name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.name</td><td>requester.resolve().ofType(Practitioner).name</td></tr><tr><td>Order.orderDetails.orderPlacerName (A.2.4 Order placer name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.Practitioner.name</td><td>requester.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(Practitioner).telecom</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.address</td><td>requester.resolve().ofType(Practitioner).address</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(PractitionerRole).telecom</td></tr><tr><td>Order.orderDetails.orderPlacerOrganization (A.2.6 Order placer organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester.organization</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.reason (A.3 Order reason)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.reasonCode</td><td/></tr><tr><td>Order.reason (A.3 Order reason)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.reasonReference</td><td/></tr><tr><td>Order.reason.code (A.3.1 Problem / diagnosis / condition description)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.reasonCode</td><td/></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "informative" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ConceptMap/order2FHIR-eu-lab"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "Order2Fhir"] ; # 
+  fhir:title [ fhir:v "eHN Order to this guide Map"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "eHN Order to this guide Map"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:purpose [ fhir:v "It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide"] ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Order"^^xsd:anyURI] ; # 
+  fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"^^xsd:anyURI] ; # 
+  fhir:group ( [
+     fhir:source [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Order"^^xsd:anyURI ] ;
+     fhir:target [ fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"^^xsd:anyURI ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "Order.orderDetails" ] ;
+       fhir:display [ fhir:v "A.2 Order information" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.identifier" ] ;
+       fhir:display [ fhir:v "A.2.1 Order Id" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.identifier" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.identifier" ] ;
+       fhir:display [ fhir:v "A.2.1 Order Id" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requisition" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if the Composite Request ID." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.dateTime" ] ;
+       fhir:display [ fhir:v "A.2.2 Order date and time" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.authoredOn" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerIdentifier" ] ;
+       fhir:display [ fhir:v "A.2.3 Order placer identifier" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.identifier" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "if the Composite Request ID." ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerName" ] ;
+       fhir:display [ fhir:v "A.2.4 Order placer name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.name" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "requester.resolve().ofType(Practitioner).name" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerName" ] ;
+       fhir:display [ fhir:v "A.2.4 Order placer name" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.Practitioner.name" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "requester.resolve().ofType(PractitionerRole).Practitioner.resolve().name" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerContacts" ] ;
+       fhir:display [ fhir:v "A.2.5 Order placer contact details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.telecom" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "requester.resolve().ofType(Practitioner).telecom" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerContacts" ] ;
+       fhir:display [ fhir:v "A.2.5 Order placer contact details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.address" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "requester.resolve().ofType(Practitioner).address" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerContacts" ] ;
+       fhir:display [ fhir:v "A.2.5 Order placer contact details" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.telecom" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ] ;
+         fhir:comment [ fhir:v "requester.resolve().ofType(PractitionerRole).telecom" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.orderDetails.orderPlacerOrganization" ] ;
+       fhir:display [ fhir:v "A.2.6 Order placer organization" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.requester.organization" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ] ;
+         fhir:comment [ fhir:v "requester.resolve().ofType(PractitionerRole).organization.resolve()" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.reason" ] ;
+       fhir:display [ fhir:v "A.3 Order reason" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.reasonCode" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.reason" ] ;
+       fhir:display [ fhir:v "A.3 Order reason" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.reasonReference" ] ;
+         fhir:equivalence [ fhir:v "relatedto" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "Order.reason.code" ] ;
+       fhir:display [ fhir:v "A.3.1 Problem / diagnosis / condition description" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "ServiceRequest.reasonCode" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

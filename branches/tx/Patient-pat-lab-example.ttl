@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Patient/pat-lab-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pat-lab-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient pat-lab-example</b></p><a name=\"pat-lab-example\"> </a><a name=\"hcpat-lab-example\"> </a><a name=\"pat-lab-example-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NIIP" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.2"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "740512852" ]
+  ] [
+     fhir:system [ fhir:v "urn:oid:1.2.203.24341.1.20.9.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "A225961454" ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.4.330.203"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "5484136" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [
+       fhir:v "Očkovaný Moreira" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Moreira" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Očkovaný" ]
+       ] )
+     ] ;
+     fhir:given ( [ fhir:v "František" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2000-03-21"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

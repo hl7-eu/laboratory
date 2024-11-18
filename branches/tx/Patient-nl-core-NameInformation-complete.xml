@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="nl-core-NameInformation-complete"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient nl-core-NameInformation-complete</b></p><a name="nl-core-NameInformation-complete"> </a><a name="hcnl-core-NameInformation-complete"> </a><a name="nl-core-NameInformation-complete-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Jo  (no stated gender), DoB Unknown</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Alternate names (see the one above)">Alt. Name:</td><td colspan="3">Johanna Petronella Maria (Jo) van der Giessen-van Putten(Official)</td></tr></table></div>
+  </text>
+  <name>
+    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+      <valueCode value="NL3"/>
+    </extension>
+    <use value="official"/>
+    <text value="Johanna Petronella Maria (Jo) van der Giessen-van Putten"/>
+    <family value="van der Giessen-van Putten">
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+        <valueString value="van"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+        <valueString value="Putten"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+        <valueString value="van der"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+        <valueString value="Giessen"/>
+      </extension>
+    </family>
+    <given value="Johanna">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <given value="Petronella">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <given value="Maria">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="BR"/>
+      </extension>
+    </given>
+    <prefix value="PhD"/>
+  </name>
+  <name>
+    <use value="usual"/>
+    <given value="Jo"/>
+  </name>
+</Patient>

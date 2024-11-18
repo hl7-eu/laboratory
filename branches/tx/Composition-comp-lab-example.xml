@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="comp-lab-example"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition comp-lab-example</b></p><a name="comp-lab-example"> </a><a name="hccomp-lab-example"> </a><a name="comp-lab-example-en-US"> </a><p><b>Document DiagnosticReport Reference</b>: <a href="DiagnosticReport-dr-lab-example.html">Diagnostic Report for 'Laboratory report' for '-&gt;František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))'</a></p><p><b>identifier</b>: <a href="http://terminology.hl7.org/5.3.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 26436-6}">Laboratory Studies (set)</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>Legal</td><td>2020-12-27 14:30:00+0100</td><td>Best Laboratory</td></tr></table><p><b>custodian</b>: Best Laboratory</p></div>
+  </text>
+  <extension url="http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference">
+    <valueReference>
+      <reference value="DiagnosticReport/dr-lab-example"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboratory Studies (set)"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/pat-lab-example"/>
+  </subject>
+  <date value="2022-10-25T14:30:00+01:00"/>
+  <author>
+    <display value="MUDr. Aleš Procházka"/>
+  </author>
+  <title value="Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30"/>
+  <confidentiality value="N"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2020-12-27T14:30:00+01:00"/>
+    <party>
+      <display value="Best Laboratory"/>
+    </party>
+  </attester>
+  <custodian>
+    <display value="Best Laboratory"/>
+  </custodian>
+  <section>
+    <title value="Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="18725-2"/>
+        <display value="Microbiology studies (set)"/>
+      </coding>
+    </code>
+    <section>
+      <title value="Gram Stain"/>
+      <code>
+        <text value="Gram Stain"/>
+      </code>
+      <entry>
+        <reference value="Observation/obs-gram-stain"/>
+      </entry>
+    </section>
+    <section>
+      <title value="Aerobic Culture"/>
+      <code>
+        <text value="Aerobic Culture"/>
+      </code>
+      <entry>
+        <reference value="Observation/obs-aerobic-culture"/>
+      </entry>
+    </section>
+    <section>
+      <title value="Anaerobic Culture"/>
+      <code>
+        <text value="Anaerobic Culture"/>
+      </code>
+      <entry>
+        <reference value="Observation/obs-anaerobic-culture"/>
+      </entry>
+    </section>
+  </section>
+</Composition>

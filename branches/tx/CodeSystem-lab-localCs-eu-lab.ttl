@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/CodeSystem/lab-localCs-eu-lab> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "lab-localCs-eu-lab"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem lab-localCs-eu-lab</b></p><a name=\"lab-localCs-eu-lab\"> </a><a name=\"hclab-localCs-eu-lab\"> </a><a name=\"lab-localCs-eu-lab-en-US\"> </a><p>This case-insensitive code system <code>http://example.org/lab-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">3002989<a name=\"lab-localCs-eu-lab-3002989\"> </a></td><td>Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT</td></tr><tr><td style=\"white-space:nowrap\">0020089<a name=\"lab-localCs-eu-lab-0020089\"> </a></td><td>Hepatitis B Surface Antigen</td></tr><tr><td style=\"white-space:nowrap\">0020092<a name=\"lab-localCs-eu-lab-0020092\"> </a></td><td>Hepatitis B Core Antibody, IgM</td></tr><tr><td style=\"white-space:nowrap\">0020093<a name=\"lab-localCs-eu-lab-0020093\"> </a></td><td>Hepatitis A Antibody, IgM</td></tr><tr><td style=\"white-space:nowrap\">3003128<a name=\"lab-localCs-eu-lab-3003128\"> </a></td><td>Hepatitis C Antibody by CIA Interp</td></tr><tr><td style=\"white-space:nowrap\">2002404<a name=\"lab-localCs-eu-lab-2002404\"> </a></td><td>Hepatitis C Antibody by CIA Index</td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "informative" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://example.org/lab-codes"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "LaboratoryLocalCS"] ; # 
+  fhir:title [ fhir:v "Laboratory Code: example"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "List of local coded concepts used for supporting the examples defined in this guide."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:caseSensitive [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "6"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "3002989" ] ;
+     fhir:display [ fhir:v "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT" ]
+  ] [
+     fhir:code [ fhir:v "0020089" ] ;
+     fhir:display [ fhir:v "Hepatitis B Surface Antigen" ]
+  ] [
+     fhir:code [ fhir:v "0020092" ] ;
+     fhir:display [ fhir:v "Hepatitis B Core Antibody, IgM" ]
+  ] [
+     fhir:code [ fhir:v "0020093" ] ;
+     fhir:display [ fhir:v "Hepatitis A Antibody, IgM" ]
+  ] [
+     fhir:code [ fhir:v "3003128" ] ;
+     fhir:display [ fhir:v "Hepatitis C Antibody by CIA Interp" ]
+  ] [
+     fhir:code [ fhir:v "2002404" ] ;
+     fhir:display [ fhir:v "Hepatitis C Antibody by CIA Index" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

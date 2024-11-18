@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Certified reference material - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Certified reference material</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Certified reference material</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#traceability-to-reference-materials-of-higher-order" id="markdown-toc-traceability-to-reference-materials-of-higher-order">Traceability to reference materials of higher order</a></li>
+  <li><a href="#references" id="markdown-toc-references">References:</a></li>
+</ul>
+
+</div>
+<h3 id="traceability-to-reference-materials-of-higher-order">Traceability to reference materials of higher order</h3>
+
+<p>Any measurement depends on a comparison between an unknown amount – for the clinical laboratory the unknown is usually hidden in a sample – and something with a known amount. This process is called calibration and to ensure correct outcome the EC regulation (EU) 2017/746 demands that the calibrators used in the in vitro diagnostic measuring procedure (IVD-MP) have an assigned amount that are traceable to reference materials of “higher order”.</p>
+
+<p>Ideally, the knowledge of the amount in the calibrator relies on a reference measurement procedure (RMP) by which values of the amount have been transferred from a certified primary reference material with the ultimate weight or amount of the pure substances and expressed in SI units. This is however only the case for simple molecules like glucose and creatinine.</p>
+
+<p>Many analytes of interest in medicine are not just that well defined. They are biological active substances like hormones or proteins with various functions. These substances appear in multiple forms (called isoforms), for example more or less phosphorylated, glycosylated, or complexed with other substances or with each other. Thus, “insulin”, “prostatic specific antigen (PSA)”, “ferritin” or “albumin” are not single molecular species but are more or less complex mixtures of different isoforms. In addition, the measuring methods used in clinical laboratory are not direct measuring techniques like mass spectrometry, but they are based on the binding of antibodies to the analyte of interest (also called immunoassays). These immunoassays are known to react differently to the specific isoforms of the analyte, and they can be affected by the matrix of the sample. Therefore, it is often not possible to use a certified primary reference material directly to assign a value to the calibrators in an IVD-MPs. A secondary reference material needs to be created which has very similar characteristics to the real clinical samples (also called commutability).</p>
+
+<p>In case that the analyte measured by the IVD-MP is sufficiently well-defined, it is usually possible to produce a commutable certified secondary reference material with an assigned amount value expressed in SI units (usually g/L). This assigned amount is obtained by a series of comparisons that start at the level of the certified primary reference material and transfer its value via a reference measurement procedure (RMP).</p>
+
+<p>In case that the analyte measured by the IVD-MP is insufficiently defined or if a stable certified primary reference material of reference measurement procedure is not available a conventional international calibrator can be created. These materials usually have an amount value expressed in “International Unit (IU)” and the composition of the analyte is also defined by the isoform mixture present in this specific material.</p>
+
+<p>Primary and secondary certified reference materials and international conventional calibrators are produced as higher order reference materials by scientific institutions and are used by manufacturers to produce replicates to which the amount value is transferred in a calibration hierarchy to manufacturers working standards and to end-user calibrators that are used by the laboratories to assign a value to an unknown amount in a patient sample.</p>
+
+<p>To fully define what is measured, in case of measurement of complex molecules, the laboratory should refer to the CRM or conventional international calibrator to which the measured value is traceable via the end user calibrator. The measured value, e.g., 5 IU/L of a substance, is then expressed as if the composition in the sample equals to the equivalent amount of the conventional international calibrator.</p>
+
+<p>The higher order reference material, as well as the measurement unit, is a feature of the measured value, that is what is observed.</p>
+
+<p>The primary and secondary certified reference materials that are produced in line with the requirements of ISO 15194 and that are considered to higher order reference materials are listed by JCTLM (https://www.jctlmdb.org/#/app/home).</p>
+
+<p>Most of the international conventional calibrators of WHO are available via its designated laboratory MHRA (former NIBSC) (https://www.nibsc.org/)</p>
+
+<p>Some examples (in plain text, without the specific syntax used by LOINC and NPU) to describe what is measured in a laboratory test.</p>
+
+<ul>
+  <li><a href="Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.html">The concentration of insulin in a sample is 50 mIU/L with reference to IS 66/304</a> (https://www.nibsc.org/documents/ifu/66-304.pdf)</li>
+  <li>The concentration of ferritin in a sample is 25 µg/L with reference to IS 19/118 (https://nibsc.org/documents/ifu/19-118.pdf)</li>
+  <li>The concentration of albumin in a sample is 45 g/L with reference to ERM-DA470k/IFCC (https://www.jctlmdb.org/#/app/home)</li>
+  <li>The concentration of PSA in the sample is 6,8 µg/L with reference to IS 17/100 (https://www.nibsc.org/documents/ifu/17-100.pdf)</li>
+</ul>
+
+<p>Secondary certified reference materials and international conventional calibrators are usually produced from material of human origin like blood or serum, and they are therefore available in a limited stock that will eventually be depleted.</p>
+
+<p>Certified secondary reference materials for which the analyte is well-defined can be reproduced. The value can either be transferred (1) from the old batch to a new one or (2) from the primary certified reference material using the reference measurement procedure. If the process is done correctly and if commutability of both the old and the new batch is guaranteed the new batch of CRMs does not lead to a shift of values of the IVD-MPs.</p>
+
+<p>For international conventional calibrators containing a complex and ill- defined mixture of isoforms reproduction can be more challenging. New stocks might have a different mixture of isoforms and the composition of the analyte will therefore be redefined with the new batches and a new value with a measurement unit will be assigned. Therefore, a shift of value in the IVD-MPs is usually observed, making comparison of measurement values unsafe when they are traceable to different international conventional calibrators.</p>
+
+<h3 id="references">References:</h3>
+
+<p>BIPM. VIM: International vocabulary of metrology – Basic and general concepts and associated terms, 3rd edition (2012),(https://www.bipm.org/en/committees/jc/jcgm/publications)</p>
+
+<p>EC regulation (EU) 2017/746</p>
+
+<p>ISO. In vitro diagnostic medical devices — Requirements for establishing metrological traceability of values assigned to calibrators, trueness control materials and human samples. ISO 17511:2020.</p>
+
+<p>ISO. In vitro diagnostic medical devices — Measurement of quantities in samples of biological origin. Requirements for certified reference materials and the content of supporting documentation. ISO 15194:2009.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

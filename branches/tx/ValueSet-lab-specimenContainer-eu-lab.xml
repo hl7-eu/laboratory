@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-specimenContainer-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-specimenContainer-eu-lab</b></p><a name="lab-specimenContainer-eu-lab"> </a><a name="hclab-specimenContainer-eu-lab"> </a><a name="lab-specimenContainer-eu-lab-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/702290003">702290003</a></td><td>Cervical cytology microscopy slide</td></tr><tr><td><a href="http://snomed.info/id/706057008">706057008</a></td><td>Cytology specimen container</td></tr><tr><td><a href="http://snomed.info/id/706052002">706052002</a></td><td>Evacuated blood collection tube</td></tr><tr><td><a href="http://snomed.info/id/702292006">702292006</a></td><td>Evacuated blood collection tube, K3EDTA/sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/767387006">767387006</a></td><td>Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole</td></tr><tr><td><a href="http://snomed.info/id/767384004">767384004</a></td><td>Evacuated blood collection tube with clot activator</td></tr><tr><td><a href="http://snomed.info/id/767390000">767390000</a></td><td>Evacuated blood collection tube with heparin lithium and gel separator</td></tr><tr><td><a href="http://snomed.info/id/767382000">767382000</a></td><td>Evacuated blood collection tube with heparin sodium</td></tr><tr><td><a href="http://snomed.info/id/767660003">767660003</a></td><td>Evacuated blood collection tube with sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/767389009">767389009</a></td><td>Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin</td></tr><tr><td><a href="http://snomed.info/id/702279008">702279008</a></td><td>Evacuated blood collection tube, gel separator</td></tr><tr><td><a href="http://snomed.info/id/702293001">702293001</a></td><td>Evacuated blood collection tube, K2EDTA/aprotinin</td></tr><tr><td><a href="http://snomed.info/id/702278000">702278000</a></td><td>Evacuated blood collection tube, no additive/metal-free</td></tr><tr><td><a href="http://snomed.info/id/702280006">702280006</a></td><td>Evacuated blood collection tube, RNA stabiliser</td></tr><tr><td><a href="http://snomed.info/id/702281005">702281005</a></td><td>Evacuated blood collection tube, thrombin/clot activator/gel separator</td></tr><tr><td><a href="http://snomed.info/id/702310001">702310001</a></td><td>Evacuated saliva specimen container, sodium azide</td></tr><tr><td><a href="http://snomed.info/id/706056004">706056004</a></td><td>Evacuated urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/702302002">702302002</a></td><td>Evacuated urine specimen container, boric acid (H3BO3)</td></tr><tr><td><a href="http://snomed.info/id/702288004">702288004</a></td><td>Evacuated urine specimen container, boric acid (H3BO3)/sodium formate</td></tr><tr><td><a href="http://snomed.info/id/702289007">702289007</a></td><td>Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine</td></tr><tr><td><a href="http://snomed.info/id/702303007">702303007</a></td><td>Evacuated urine specimen container, multiple preservative</td></tr><tr><td><a href="http://snomed.info/id/702308003">702308003</a></td><td>Evacuated urine specimen container, no additive</td></tr><tr><td><a href="http://snomed.info/id/706047007">706047007</a></td><td>Fecal specimen container</td></tr><tr><td><a href="http://snomed.info/id/706053007">706053007</a></td><td>General specimen container</td></tr><tr><td><a href="http://snomed.info/id/702268003">702268003</a></td><td>General specimen container, no additive, non-sterile</td></tr><tr><td><a href="http://snomed.info/id/702269006">702269006</a></td><td>General specimen container, no additive, sterile</td></tr><tr><td><a href="http://snomed.info/id/874799005">874799005</a></td><td>Microbial cryotube</td></tr><tr><td><a href="http://snomed.info/id/706050005">706050005</a></td><td>Microcapillary blood collection tube</td></tr><tr><td><a href="http://snomed.info/id/702275002">702275002</a></td><td>Microcapillary blood collection tube, ammonium heparin</td></tr><tr><td><a href="http://snomed.info/id/702276001">702276001</a></td><td>Microcapillary blood collection tube, K2EDTA</td></tr><tr><td><a href="http://snomed.info/id/702277005">702277005</a></td><td>Microcapillary blood collection tube, no additive</td></tr><tr><td><a href="http://snomed.info/id/702304001">702304001</a></td><td>Microcapillary blood transfer tube, clot activator</td></tr><tr><td><a href="http://snomed.info/id/702306004">702306004</a></td><td>Microcapillary blood transfer tube, EDTA</td></tr><tr><td><a href="http://snomed.info/id/702307008">702307008</a></td><td>Microcapillary blood transfer tube, heparin</td></tr><tr><td><a href="http://snomed.info/id/702305000">702305000</a></td><td>Microcapillary sodium fluoride blood transfer tube</td></tr><tr><td><a href="http://snomed.info/id/702224000">702224000</a></td><td>Midstream urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/706051009">706051009</a></td><td>Non-evacuated blood collection tube</td></tr><tr><td><a href="http://snomed.info/id/702283008">702283008</a></td><td>Non-evacuated blood collection tube with gel separator</td></tr><tr><td><a href="http://snomed.info/id/702297000">702297000</a></td><td>Non-evacuated blood collection tube, clot activator</td></tr><tr><td><a href="http://snomed.info/id/702295008">702295008</a></td><td>Non-evacuated blood collection tube, clot activator/gel separator</td></tr><tr><td><a href="http://snomed.info/id/702282003">702282003</a></td><td>Non-evacuated blood collection tube, EDTA</td></tr><tr><td><a href="http://snomed.info/id/702299002">702299002</a></td><td>Non-evacuated blood collection tube, K2EDTA</td></tr><tr><td><a href="http://snomed.info/id/702298005">702298005</a></td><td>Non-evacuated blood collection tube, K3EDTA</td></tr><tr><td><a href="http://snomed.info/id/702284002">702284002</a></td><td>Non-evacuated blood collection tube, lithium heparin</td></tr><tr><td><a href="http://snomed.info/id/702300005">702300005</a></td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile</td></tr><tr><td><a href="http://snomed.info/id/702285001">702285001</a></td><td>Non-evacuated blood collection tube, lithium heparin/gel separator, sterile</td></tr><tr><td><a href="http://snomed.info/id/702286000">702286000</a></td><td>Non-evacuated blood collection tube, NaEDTA/sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/702256007">702256007</a></td><td>Non-evacuated blood collection tube, no additive</td></tr><tr><td><a href="http://snomed.info/id/702287009">702287009</a></td><td>Non-evacuated blood collection tube, potassium oxalate/sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/702296009">702296009</a></td><td>Non-evacuated blood collection tube, sodium citrate</td></tr><tr><td><a href="http://snomed.info/id/702264001">702264001</a></td><td>Non-sterile urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/702309006">702309006</a></td><td>Saliva specimen container, no additive</td></tr><tr><td><a href="http://snomed.info/id/706058003">706058003</a></td><td>Secretory specimen container</td></tr><tr><td><a href="http://snomed.info/id/706046003">706046003</a></td><td>Specimen receptacle</td></tr><tr><td><a href="http://snomed.info/id/702223006">702223006</a></td><td>Sputum specimen container</td></tr><tr><td><a href="http://snomed.info/id/702244006">702244006</a></td><td>Sterile urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/702232008">702232008</a></td><td>Sweat specimen container</td></tr><tr><td><a href="http://snomed.info/id/702294007">702294007</a></td><td>Syringe-blood collection tube transfer</td></tr><tr><td><a href="http://snomed.info/id/706054001">706054001</a></td><td>Urine specimen container</td></tr><tr><td><a href="http://snomed.info/id/767385003">767385003</a></td><td>Aerobic blood culture bottle</td></tr><tr><td><a href="http://snomed.info/id/767383005">767383005</a></td><td>Anaerobic blood culture bottle</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabSpecimenContainerEu"/>
+  <title value="Specimen Container"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="List of the containers commonly used to collect specimens (e.g. urine, blood,..)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="702290003"/>
+        <display value="Cervical cytology microscopy slide"/>
+      </concept>
+      <concept>
+        <code value="706057008"/>
+        <display value="Cytology specimen container"/>
+      </concept>
+      <concept>
+        <code value="706052002"/>
+        <display value="Evacuated blood collection tube"/>
+      </concept>
+      <concept>
+        <code value="702292006"/>
+        <display value="Evacuated blood collection tube, K3EDTA/sodium fluoride"/>
+      </concept>
+      <concept>
+        <code value="767387006"/>
+        <display value="Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole"/>
+      </concept>
+      <concept>
+        <code value="767384004"/>
+        <display value="Evacuated blood collection tube with clot activator"/>
+      </concept>
+      <concept>
+        <code value="767390000"/>
+        <display value="Evacuated blood collection tube with heparin lithium and gel separator"/>
+      </concept>
+      <concept>
+        <code value="767382000"/>
+        <display value="Evacuated blood collection tube with heparin sodium"/>
+      </concept>
+      <concept>
+        <code value="767660003"/>
+        <display value="Evacuated blood collection tube with sodium fluoride"/>
+      </concept>
+      <concept>
+        <code value="767389009"/>
+        <display value="Evacuated blood collection tube with tripotassium and ethylene diamine tetraacetic acid and aprotinin"/>
+      </concept>
+      <concept>
+        <code value="702279008"/>
+        <display value="Evacuated blood collection tube, gel separator"/>
+      </concept>
+      <concept>
+        <code value="702293001"/>
+        <display value="Evacuated blood collection tube, K2EDTA/aprotinin"/>
+      </concept>
+      <concept>
+        <code value="702278000"/>
+        <display value="Evacuated blood collection tube, no additive/metal-free"/>
+      </concept>
+      <concept>
+        <code value="702280006"/>
+        <display value="Evacuated blood collection tube, RNA stabiliser"/>
+      </concept>
+      <concept>
+        <code value="702281005"/>
+        <display value="Evacuated blood collection tube, thrombin/clot activator/gel separator"/>
+      </concept>
+      <concept>
+        <code value="702310001"/>
+        <display value="Evacuated saliva specimen container, sodium azide"/>
+      </concept>
+      <concept>
+        <code value="706056004"/>
+        <display value="Evacuated urine specimen container"/>
+      </concept>
+      <concept>
+        <code value="702302002"/>
+        <display value="Evacuated urine specimen container, boric acid (H3BO3)"/>
+      </concept>
+      <concept>
+        <code value="702288004"/>
+        <display value="Evacuated urine specimen container, boric acid (H3BO3)/sodium formate"/>
+      </concept>
+      <concept>
+        <code value="702289007"/>
+        <display value="Evacuated urine specimen container, ethyl paraben/sodium propionate/chlorhexidine"/>
+      </concept>
+      <concept>
+        <code value="702303007"/>
+        <display value="Evacuated urine specimen container, multiple preservative"/>
+      </concept>
+      <concept>
+        <code value="702308003"/>
+        <display value="Evacuated urine specimen container, no additive"/>
+      </concept>
+      <concept>
+        <code value="706047007"/>
+        <display value="Fecal specimen container"/>
+      </concept>
+      <concept>
+        <code value="706053007"/>
+        <display value="General specimen container"/>
+      </concept>
+      <concept>
+        <code value="702268003"/>
+        <display value="General specimen container, no additive, non-sterile"/>
+      </concept>
+      <concept>
+        <code value="702269006"/>
+        <display value="General specimen container, no additive, sterile"/>
+      </concept>
+      <concept>
+        <code value="874799005"/>
+        <display value="Microbial cryotube"/>
+      </concept>
+      <concept>
+        <code value="706050005"/>
+        <display value="Microcapillary blood collection tube"/>
+      </concept>
+      <concept>
+        <code value="702275002"/>
+        <display value="Microcapillary blood collection tube, ammonium heparin"/>
+      </concept>
+      <concept>
+        <code value="702276001"/>
+        <display value="Microcapillary blood collection tube, K2EDTA"/>
+      </concept>
+      <concept>
+        <code value="702277005"/>
+        <display value="Microcapillary blood collection tube, no additive"/>
+      </concept>
+      <concept>
+        <code value="702304001"/>
+        <display value="Microcapillary blood transfer tube, clot activator"/>
+      </concept>
+      <concept>
+        <code value="702306004"/>
+        <display value="Microcapillary blood transfer tube, EDTA"/>
+      </concept>
+      <concept>
+        <code value="702307008"/>
+        <display value="Microcapillary blood transfer tube, heparin"/>
+      </concept>
+      <concept>
+        <code value="702305000"/>
+        <display value="Microcapillary sodium fluoride blood transfer tube"/>
+      </concept>
+      <concept>
+        <code value="702224000"/>
+        <display value="Midstream urine specimen container"/>
+      </concept>
+      <concept>
+        <code value="706051009"/>
+        <display value="Non-evacuated blood collection tube"/>
+      </concept>
+      <concept>
+        <code value="702283008"/>
+        <display value="Non-evacuated blood collection tube with gel separator"/>
+      </concept>
+      <concept>
+        <code value="702297000"/>
+        <display value="Non-evacuated blood collection tube, clot activator"/>
+      </concept>
+      <concept>
+        <code value="702295008"/>
+        <display value="Non-evacuated blood collection tube, clot activator/gel separator"/>
+      </concept>
+      <concept>
+        <code value="702282003"/>
+        <display value="Non-evacuated blood collection tube, EDTA"/>
+      </concept>
+      <concept>
+        <code value="702299002"/>
+        <display value="Non-evacuated blood collection tube, K2EDTA"/>
+      </concept>
+      <concept>
+        <code value="702298005"/>
+        <display value="Non-evacuated blood collection tube, K3EDTA"/>
+      </concept>
+      <concept>
+        <code value="702284002"/>
+        <display value="Non-evacuated blood collection tube, lithium heparin"/>
+      </concept>
+      <concept>
+        <code value="702300005"/>
+        <display value="Non-evacuated blood collection tube, lithium heparin/gel separator, non-sterile"/>
+      </concept>
+      <concept>
+        <code value="702285001"/>
+        <display value="Non-evacuated blood collection tube, lithium heparin/gel separator, sterile"/>
+      </concept>
+      <concept>
+        <code value="702286000"/>
+        <display value="Non-evacuated blood collection tube, NaEDTA/sodium fluoride"/>
+      </concept>
+      <concept>
+        <code value="702256007"/>
+        <display value="Non-evacuated blood collection tube, no additive"/>
+      </concept>
+      <concept>
+        <code value="702287009"/>
+        <display value="Non-evacuated blood collection tube, potassium oxalate/sodium fluoride"/>
+      </concept>
+      <concept>
+        <code value="702296009"/>
+        <display value="Non-evacuated blood collection tube, sodium citrate"/>
+      </concept>
+      <concept>
+        <code value="702264001"/>
+        <display value="Non-sterile urine specimen container"/>
+      </concept>
+      <concept>
+        <code value="702309006"/>
+        <display value="Saliva specimen container, no additive"/>
+      </concept>
+      <concept>
+        <code value="706058003"/>
+        <display value="Secretory specimen container"/>
+      </concept>
+      <concept>
+        <code value="706046003"/>
+        <display value="Specimen receptacle"/>
+      </concept>
+      <concept>
+        <code value="702223006"/>
+        <display value="Sputum specimen container"/>
+      </concept>
+      <concept>
+        <code value="702244006"/>
+        <display value="Sterile urine specimen container"/>
+      </concept>
+      <concept>
+        <code value="702232008"/>
+        <display value="Sweat specimen container"/>
+      </concept>
+      <concept>
+        <code value="702294007"/>
+        <display value="Syringe-blood collection tube transfer"/>
+      </concept>
+      <concept>
+        <code value="706054001"/>
+        <display value="Urine specimen container"/>
+      </concept>
+      <concept>
+        <code value="767385003"/>
+        <display value="Aerobic blood culture bottle"/>
+      </concept>
+      <concept>
+        <code value="767383005"/>
+        <display value="Anaerobic blood culture bottle"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

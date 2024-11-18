@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="dr-lab-example"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport dr-lab-example</b></p><a name="dr-lab-example"> </a><a name="hcdr-lab-example"> </a><a name="dr-lab-example-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}">Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</span> (<span title="Codes:{http://loinc.org 26436-6}">Laboratory Studies (set)</span>) </h2><table class="grid"><tr><td>Subject</td><td>František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr><tr><td>Identifier</td><td> <a href="http://terminology.hl7.org/5.3.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td></tr><tr><td><a href="Observation-obs-gram-stain.html"><span title="Codes:">Gram Stain</span></a></td><td/><td>Final</td></tr><tr><td><a href="Observation-obs-aerobic-culture.html"><span title="Codes:">Aerobic Culture</span></a></td><td/><td>Final</td></tr><tr><td><a href="Observation-obs-anaerobic-culture.html"><span title="Codes:{http://loinc.org 635-3}">Anaerobic Culture</span></a></td><td><span title="Codes:{http://snomed.info/sct 264868006}">No growth</span></td><td>Final</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition">
+    <valueReference>
+      <reference value="Composition/comp-lab-example"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"/>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboratory Studies (set)"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+    <text value="Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility"/>
+  </code>
+  <subject>
+    <reference value="Patient/pat-lab-example"/>
+  </subject>
+  <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+  <performer>
+    <display value="MUDr. Aleš Procházka"/>
+  </performer>
+  <specimen>
+    <display value="Specimen from wound collected on October 25th, 2022"/>
+  </specimen>
+  <result>
+    <reference value="Observation/obs-gram-stain"/>
+  </result>
+  <result>
+    <reference value="Observation/obs-aerobic-culture"/>
+  </result>
+  <result>
+    <reference value="Observation/obs-anaerobic-culture"/>
+  </result>
+</DiagnosticReport>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="obs-org-id1-susc-2"/>
+  <meta>
+    <profile value="http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation obs-org-id1-susc-2</b></p><a name="obs-org-id1-susc-2"> </a><a name="hcobs-org-id1-susc-2"> </a><a name="obs-org-id1-susc-2-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 20629-2}">levoFLOXacin [Susceptibility]</span></p><p><b>subject</b>: <a href="Patient-pat-lab-example.html">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;4 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}">Resistant</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="20629-2"/>
+      <display value="levoFLOXacin [Susceptibility]"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pat-lab-example"/>
+  </subject>
+  <effectiveDateTime value="2022-10-25T13:35:00+01:00"/>
+  <performer>
+    <display value="MUDr. Aleš Procházka"/>
+  </performer>
+  <valueQuantity>
+    <value value="4"/>
+    <comparator value="&gt;"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="1"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="R"/>
+      <display value="Resistant"/>
+    </coding>
+  </interpretation>
+</Observation>

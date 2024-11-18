@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="ConceptMap-eu-diagRptStatus2CompStatus"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap ConceptMap-eu-diagRptStatus2CompStatus</b></p><a name="ConceptMap-eu-diagRptStatus2CompStatus"> </a><a name="hcConceptMap-eu-diagRptStatus2CompStatus"> </a><a name="ConceptMap-eu-diagRptStatus2CompStatus-en-US"> </a><p>Mapping from <a href="http://hl7.org/fhir/R4/valueset-diagnostic-report-status.html">DiagnosticReportStatus</a> to <a href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a></p><br/><p><b>Group 1 </b>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-diagnostic-report-status.html">DiagnosticReportStatusversion: null4.0.1)</a> to <a href="http://hl7.org/fhir/R4/codesystem-composition-status.html">CompositionStatusversion: null4.0.1)</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>registered</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>preliminary</td></tr><tr><td>partial</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>preliminary</td></tr><tr><td>preliminary</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>preliminary</td></tr><tr><td>final</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>final</td></tr><tr><td>amended</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>amended</td></tr><tr><td>corrected</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>amended</td></tr><tr><td>appended</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>amended</td></tr><tr><td>cancelled</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>final</td></tr><tr><td>entered-in-error</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>entered-in-error</td></tr><tr><td>unknown</td><td colspan="2" style="background-color: #efefef">(not mapped)</td></tr></table></div>
+  </text>
+  <url value="http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus"/>
+  <version value="0.2.0-ci"/>
+  <name value="ConceptMapDiagRptStatus2CompStatus"/>
+  <title value="DiagnosticReport to Composition status"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Proposed relationship between the statused used in the DiagnosticReport resource and that used for the Composition."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="It shows how to value the Composition status element based on the DiagnosticReport element."/>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceUri value="http://hl7.org/fhir/ValueSet/diagnostic-report-status"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/composition-status"/>
+  <group>
+    <source value="http://hl7.org/fhir/diagnostic-report-status"/>
+    <sourceVersion value="4.0.1"/>
+    <target value="http://hl7.org/fhir/composition-status"/>
+    <targetVersion value="4.0.1"/>
+    <element>
+      <code value="registered"/>
+      <display value="Registered"/>
+      <target>
+        <code value="preliminary"/>
+        <display value="Preliminary"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="partial"/>
+      <display value="Partial"/>
+      <target>
+        <code value="preliminary"/>
+        <display value="Preliminary"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="preliminary"/>
+      <display value="Preliminary"/>
+      <target>
+        <code value="preliminary"/>
+        <display value="Preliminary"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="final"/>
+      <display value="Final"/>
+      <target>
+        <code value="final"/>
+        <display value="Final"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="amended"/>
+      <display value="Amended"/>
+      <target>
+        <code value="amended"/>
+        <display value="Amended"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="corrected"/>
+      <display value="Corrected"/>
+      <target>
+        <code value="amended"/>
+        <display value="Amended"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="appended"/>
+      <display value="Appended"/>
+      <target>
+        <code value="amended"/>
+        <display value="Amended"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="cancelled"/>
+      <display value="Cancelled"/>
+      <target>
+        <code value="final"/>
+        <display value="Final"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="entered-in-error"/>
+      <display value="Entered in Error"/>
+      <target>
+        <code value="entered-in-error"/>
+        <display value="Entered in Error"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="unknown"/>
+      <display value="Unknown"/>
+      <target>
+        <equivalence value="unmatched"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Authors and contributors - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Authors and contributors</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Authors and contributors</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="authors-and-contributors">Authors and Contributors</h3>
+
+<p>This guide is the result of a multi  stakeholders effort involving different experts from several European countries, projects (e.g. XpanDH) and initiatives (e.g. MyHealth@EU); organized in two collaborating sub-groups:</p>
+<ul>
+  <li>one focusing on semantic and functional requirements, and</li>
+  <li>one working on the HL7 FHIR specifications</li>
+</ul>
+
+<p>The following picture provide an overview of the origin of the participants.</p>
+
+<div>
+<img src="eu-coverage.png" alt="Coverage" width="40%" />
+<p>Figure 1 - Experts distribution</p>
+<p></p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Name</th>
+      <th>Affiliation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project facilitator</td>
+      <td>Hynek Kružík</td>
+      <td>HL7 CZ/Europe</td>
+    </tr>
+    <tr>
+      <td>Project facilitator</td>
+      <td>Giorgio Cangioli</td>
+      <td>HL7 IT/Europe</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Alexander Henket</td>
+      <td>NICTIZ, HL7 NL</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Robert Hausam</td>
+      <td>Hausam Consulting, US</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Ulrike Merrick</td>
+      <td>APHL, US</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Daniel Karlsson</td>
+      <td>E-hälsomyndigheten, HL7 SE</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Oliver Egger</td>
+      <td>ahdis, HL7 CH</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Gabriel Kleinoscheg</td>
+      <td>ELGA, HL7 AT</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Declan Kieran</td>
+      <td>NHS England, UK</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Manel Domingo</td>
+      <td>MoH Spain, SP</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Petra Lavrikova</td>
+      <td>NCEZ MoH Czech, CZ</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Gunnar Nordin</td>
+      <td>Equalis, SE</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Ferruccio Ceriotti</td>
+      <td>Policlinico di Milano, IT</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Sara Russo</td>
+      <td>SPMS, PT</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Feikje Hielkema</td>
+      <td>NICTIZ, NL</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Karolina Buckow</td>
+      <td>DE</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Kerli Linna</td>
+      <td>TEHIK, EE</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>Eugenia Rinaldi</td>
+      <td>Charité (Univ. Med. Berlin), DE</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>David Barnet</td>
+      <td>NHS England, UK</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Michaela Ziegler</td>
+      <td>ahdis, HL7 CH</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Rasa Visinskiene</td>
+      <td>MyHealth@EU  Solution Providers</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Mathias Ghys</td>
+      <td>MyHealth@EU  Solution Providers</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>João Almeida</td>
+      <td>HL7 PT/Europe</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Kai U. Heitmann</td>
+      <td>HL7 DE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Christof Gessner</td>
+      <td>HL7 DE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Martina Sender</td>
+      <td>mio42, DE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Dennis Kipping</td>
+      <td>mio42, DE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Jose Costa-Teixeira</td>
+      <td>HL7 BE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Lucas Lundbäck</td>
+      <td>Montrima, SE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Jeremy Lieth</td>
+      <td>BfArM, DE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>David Wattien</td>
+      <td>NICTIZ, NL</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Leonardo Alcaro</td>
+      <td>DIT, HL7 IT</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Samuel Danhardt</td>
+      <td>Agence eSanté, LU</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Philip Brennan</td>
+      <td>NHS England, UK</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Marcel Hanselmann</td>
+      <td>HL7 CH</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Kristiina Kuldkepp</td>
+      <td>TEHIK, EE</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Rik Smithies</td>
+      <td>HL7 UK</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Petr Siblík</td>
+      <td>HL7 CZ</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Nathalie Nikodym</td>
+      <td>Nictiz, NL</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Karim Nashar</td>
+      <td>NHS England, UK</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Adam Page</td>
+      <td>NHS England, UK</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Stefano Dalmiani</td>
+      <td>F. Monasterio, HL7 IT</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Juergen Brandstaetter</td>
+      <td>CodeWerk, AT</td>
+    </tr>
+    <tr>
+      <td>Contributor</td>
+      <td>Juan Antonio de los Cobos</td>
+      <td>MoH Spain, SP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Participants</strong>: | Peter Keßler(mio42 DE), Mario Sicuranza (CNR IT); Mario Ciampi (CNR IT); 
+Marta Burek (MedCom DK); Jean Michel Polfliet (eGezondheid/eSanté Belgium); Michael Johansen (MedCom DK);
+Monika Budvytiene (LT) ; Bart Decuypere (HL7 BE); Frédéric Bulckaen (MyHealth@EU  Solution Providers);
+Prerna Arora (MyHealth@EU  Solution Providers); Sebastian Bojanowski (HL7 PL);
+François Macary (HL7 FR); Renato Calamai (HL7 IT); Rebeca Ceder (SE);
+Sanchita Farruque (SE); Jagjit Singh Bhamra (NO); Simreen Kaur Johal,(NO);
+Marte Espnes Temre (NO); Jostein Ven (NO); Samuel Danhardt (LU);
+Mar Matanzo (SP); Chrenova Katerina (CZ); Irena Rubesova (CZ);
+Miroslav Zvolsky (CZ); Michaela Warzecha (BfArM DE); Alexander Mense (HL7 AT);
+Mika Tuomainen (FI); Marcus Fearnett (NHS England UK); 
+ Oyvind Aassve (HL7 NO); Rick Busbridge (Nictiz NL); Ignacio Fernandez (SP); Nina Zenkovič (NIJZ SI)
+Naeme Nekooguyan (ANS FR); Michal Cermak (Norsk helsenett NO); Linn Brandt (Norwegian Directorate of e-Health); Paavo Kauranne (Kela FI)</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

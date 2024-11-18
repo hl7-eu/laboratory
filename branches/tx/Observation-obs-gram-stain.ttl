@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/Observation/obs-gram-stain> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "obs-gram-stain"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+       fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation obs-gram-stain</b></p><a name=\"obs-gram-stain\"> </a><a name=\"hcobs-gram-stain\"> </a><a name=\"obs-gram-stain-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:\">Gram Stain</span></p><p><b>subject</b>: <a href=\"Patient-pat-lab-example.html\">František Očkovaný Moreira  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-obs-wbc.html\">Observation Leukocytes [Presence] in Specimen by Gram stain</a></li><li><a href=\"Observation-obs-gs-org1.html\">Observation Microscopic observation [Identifier] in Specimen by Gram stain</a></li></ul></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:text [ fhir:v "Gram Stain" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.eu/fhir/laboratory/Patient/pat-lab-example> ;
+     fhir:reference [ fhir:v "Patient/pat-lab-example" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-10-25T13:35:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:display [ fhir:v "MUDr. Aleš Procházka" ]
+  ] ) ; # 
+  fhir:hasMember ( [
+     fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-wbc> ;
+     fhir:reference [ fhir:v "Observation/obs-wbc" ]
+  ] [
+     fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-gs-org1> ;
+     fhir:reference [ fhir:v "Observation/obs-gs-org1" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,324 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-98",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b909da1-c5bf-4b1a-aa39-38e4f1561517-98",
+  "name" : "UnionLabCertifiedReferenceMaterialVSAndLabCertifiedReferenceMaterialVS",
+  "title" : "Union of Laboratory Certified Reference Material And Laboratory Certified Reference Material",
+  "status" : "draft",
+  "date" : "2024-11-18T16:53:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "06/140",
+        "display" : "Pertussis antiserum (human), anti-PT IgG, Lyophilized, 335 IU and anti-PT IgA 65 IU / ampoule; anti-FHA IgG 130 IU and anti-FHA IgA 65 IU / ampoule; anti-69K IgG 65 IU and anti-PT IgA 42 IU / ampoule"
+      },
+      {
+        "code" : "00/588",
+        "display" : "Hepatitis B virus surface antigen, subtype adw2, genotype A, Lyophilized, 33 IU/vial."
+      },
+      {
+        "code" : "01/600",
+        "display" : "Anti-toxoplasma serum (IgG), Lyophilized, 20 IU / ampoule."
+      },
+      {
+        "code" : "01/608",
+        "display" : "Low Molecular Weight Heparin"
+      },
+      {
+        "code" : "02/150",
+        "display" : "Blood Coagulation Factor VIII and Von Willebrand Factor in Plasma, Human"
+      },
+      {
+        "code" : "02/206",
+        "display" : "Blood coagulation factor XIII, Lyophilized, Activity 0.91 IU/ampoule; Antigen 0.93 IU/ampoule"
+      },
+      {
+        "code" : "02/342",
+        "display" : "Protein C, Lyophilized, 0.85 IU/ampoule (function), 0.84 IU/ampoule (antigen)."
+      },
+      {
+        "code" : "03/116",
+        "display" : "Blood coagulation factor V, Lyophilized, 0.74 IU of Factor V:C per ampoule"
+      },
+      {
+        "code" : "03/228",
+        "display" : "Protein S, Lyophilized, 0.83 IU/ampoule (total antigen), 0.81 IU/ampoule (free antigen), 0.77 IU/ampoule (function)."
+      },
+      {
+        "code" : "04/102",
+        "display" : "Blood coagulation factor XI, plasma human, Lyophilized., 0.86 International Units per ampoule"
+      },
+      {
+        "code" : "07/164",
+        "display" : "Anti-hepatitis B immunoglobulin, Lyophilized, 100 IU/ampoule"
+      },
+      {
+        "code" : "07/316",
+        "display" : "Blood coagulation factor VIII and von Willebrand factor, Lyophilized, Factor VIII: C 0.68 IU/ amp; Factor VIII:Antigen 1.04 IU/ amp; VWF:Antigen 1.00 IU/ amp; VWF:Ristocetin cofactor 0.87 IU/amp; VWF:Collagen binding 1.03 IU/amp; VWFpp 1.03 IU/amp"
+      },
+      {
+        "code" : "07/364",
+        "display" : "Chorionic gonadotrophin, Lyophilized 179 International Units or 0.39 nmol per ampoule for calibration of immunossays, and 162 International Units per ampoule for calibration of biossay, ,"
+      },
+      {
+        "code" : "08/204",
+        "display" : "Thyroid-stimulating antibody, Lyophilized, 0.113 IU / ampoule."
+      },
+      {
+        "code" : "08/258",
+        "display" : "Antithrombin, Lyophilized, Functional potency - 0.95 IU/ampoule, Antigenic potency - 0.96 IU/ampoule"
+      },
+      {
+        "code" : "08/266",
+        "display" : "Sex hormone binding globulin (SHBG), Lyophilized, 180 IU / ampoule."
+      },
+      {
+        "code" : "09/162",
+        "display" : "Human cytomegalovirus DNA, Lyophilized, 5,000,000 IU/vial."
+      },
+      {
+        "code" : "09/172",
+        "display" : "Blood coagulation factors II, VII, IX, X, Lyophilized, 0.89 IU (factor II), 0.99 IU (factor VII), 0.9 IU (factor IX), 0.89 IU (factor X) / ampoule."
+      },
+      {
+        "code" : "09/260",
+        "display" : "Epstein Barr virus DNA, Lyophilized, 5,000,000 IU/ml"
+      },
+      {
+        "code" : "09/264",
+        "display" : "Fibrinogen, Lyophilized, 2.7 mg/ampoule"
+      },
+      {
+        "code" : "10/152",
+        "display" : "HIV-1 RNA, Lyophilized, 185,000 IU/ml (5.27 log10 IU/ml)"
+      },
+      {
+        "code" : "10/262",
+        "display" : "Diphtheria Antitoxin Human IgG, Lyophilized, 2 IU / ampoule"
+      },
+      {
+        "code" : "10/264",
+        "display" : "Hepatitis B virus DNA, Lyophilized., 850,000 IU / vial."
+      },
+      {
+        "code" : "11/176",
+        "display" : "Heparin, low molecular weight, Lyophilized, Anti-Xa: 1068 IU/ampoule, Anti-Iia: 342 IU/ampoule"
+      },
+      {
+        "code" : "11/234",
+        "display" : "Human serum immunoglobulin E, Lyophilized, 13,500 IU/mL"
+      },
+      {
+        "code" : "11/700",
+        "display" : "Erythropoietin, rDNA-derived, Lyophilized, 1,650 IU / ampoule."
+      },
+      {
+        "code" : "12/252",
+        "display" : "A Disintegrin And Metalloprotease with ThromboSpondin type 1 motifs 13 (ADAMTS13), plasma, Lyophilized., Function: 0.91 IU/ampoule Antigen: 0.92 IU/ampoule"
+      },
+      {
+        "code" : "14/114",
+        "display" : "JC polyomavirus DNA, Lyophilized., 7.0 log10 IU/ mL"
+      },
+      {
+        "code" : "14/212",
+        "display" : "BK polyomavirus DNA, Lyophilized., 7.2 log10 IU/ mL"
+      },
+      {
+        "code" : "15/180",
+        "display" : "Factor XI, plasma, human, Lyophilized, Functional activity: 0.71 IU per ampoule, Antigen: 0.78 IU per ampoule"
+      },
+      {
+        "code" : "16/368",
+        "display" : "HSV-1"
+      },
+      {
+        "code" : "17/100",
+        "display" : "Prostate Specific Antigen (human)(total: PSA-ACT + free PSA)"
+      },
+      {
+        "code" : "17/122",
+        "display" : "HSV-2"
+      },
+      {
+        "code" : "66/304",
+        "display" : "Insulin, human, for immunoassay, Lyophilized, 3 IU / ampoule."
+      },
+      {
+        "code" : "67/086",
+        "display" : "Human serum immunoglobulins G, A, and M (IgG, IgA and IgM), Lyophilized, 100 IU IgG, 100 IU IgA and 100 IU IgM/ampoule."
+      },
+      {
+        "code" : "67/343",
+        "display" : "Erythropoietin, human, urinary, Lyophilized, 10 IU / ampoule."
+      },
+      {
+        "code" : "68/356",
+        "display" : "Renin, human, Lyophilized, 0.1 IU / ampoule."
+      },
+      {
+        "code" : "69/194",
+        "display" : "Glucagon, porcine, Lyophilized, 1.49 IU / ampoule."
+      },
+      {
+        "code" : "73/545",
+        "display" : "Placental lactogen, human, for immunoassay, Lyophilized, 0.000 850 IU / ampoule."
+      },
+      {
+        "code" : "73/601",
+        "display" : "Carcinoembryonic antigen (CEA), Lyophilized, 100 IU/ampoule"
+      },
+      {
+        "code" : "75/551",
+        "display" : "Chorionic gonadotrophin, beta subunit, human, for immunoassay, Lyophilized, 70 IU / ampoule."
+      },
+      {
+        "code" : "75/569",
+        "display" : "Chorionic gonadotrophin, alpha subunit, human, for immunoassay, Lyophilized, 70 IU / ampoule."
+      },
+      {
+        "code" : "75/589",
+        "display" : "Chorionic gonadotrophin, human, Lyophilized, 650 IU / ampoule."
+      },
+      {
+        "code" : "78/554",
+        "display" : "Luteinizing hormone, human, pituitary, alpha subunit, Lyophilized, 10 IU / ampoule."
+      },
+      {
+        "code" : "78/556",
+        "display" : "Luteinizing hormone, human, pituitary, beta subunit, Lyophilized, 10 IU / ampoule."
+      },
+      {
+        "code" : "79/500",
+        "display" : "Parathyroid hormone, human, for immunoassay, Lyophilized, 0.1 IU / ampoule."
+      },
+      {
+        "code" : "80/505",
+        "display" : "Human growth hormone, pituitary, Lyophilized, 4.4 IU / ampoule."
+      },
+      {
+        "code" : "80/552",
+        "display" : "Luteinizing hormone, human, pituitary, Lyophilized, 35 IU / ampoule."
+      },
+      {
+        "code" : "81/565",
+        "display" : "Thyroid stimulating hormone, human, for immunoassay, Lyophilized, 11.5 x -3 log 10 IU / ampoule."
+      },
+      {
+        "code" : "82/585",
+        "display" : "Anti-poliovirus serum (Types 1, 2, 3), Lyophilized, 11 IU/ampoule (Type 1), 32 IU/ampoule (Type 2), 3 IU/ampoule (Type 3)"
+      },
+      {
+        "code" : "82/587",
+        "display" : "Interferon Gamma (Human, Leukocyte derived)"
+      },
+      {
+        "code" : "83/501",
+        "display" : "Beta-thromboglobulin, Lyophilized, 500 IU/ampoule."
+      },
+      {
+        "code" : "83/505",
+        "display" : "Platelet factor 4, Lyophilized, 400 IU/ampoule"
+      },
+      {
+        "code" : "83/575",
+        "display" : "Follicle stimulating hormone, human, pituitary, Lyophilized, 80 IU / ampoule."
+      },
+      {
+        "code" : "84/500",
+        "display" : "Prolactin, human, Lyophilized., 0.053 IU / ampoule."
+      },
+      {
+        "code" : "85/506",
+        "display" : "C-reactive protein, Lyophilized, 0.049 IU/ampoule"
+      },
+      {
+        "code" : "85/669",
+        "display" : "Atrial natriuretic factor, human, Lyophilized, 2.5 IU / ampoule."
+      },
+      {
+        "code" : "88/638",
+        "display" : "Thyroxine-binding globulin, Lyophilized, 30 IU / ampoule."
+      },
+      {
+        "code" : "89/620",
+        "display" : "Calcitonin, human, Lyophilized, 17.5 IU / ampoule."
+      },
+      {
+        "code" : "91/554",
+        "display" : "Insulin-like growth factor I for bioassay, Lyophilized, 150 IU / ampoule."
+      },
+      {
+        "code" : "91/624",
+        "display" : "Inhibin A, human, recombinant, Lyophilized, 150,000 IU / ampoule."
+      },
+      {
+        "code" : "92/510",
+        "display" : "Follicle stimulating hormone, human, recombinant for immunoassay, Lyophilized, 60 IU / ampoule."
+      },
+      {
+        "code" : "92/654",
+        "display" : "Plasminogen-Activator Inhibitor 1 (PAI-1), Lyophilized, Tissueplasminogen-activator: 27.5 IU of neutralising activity/ampoule. Urinary-plasminogen-activator: 7 IU of neutralising activity/ampoule."
+      },
+      {
+        "code" : "94/572",
+        "display" : "Ferritin, recombinant, Lyophilized, 6.3 μg/ampoule"
+      },
+      {
+        "code" : "96/670",
+        "display" : "Prostate specific antigen (90:10), Lyophilized, 1 μg total PSA per vial."
+      },
+      {
+        "code" : "97/550",
+        "display" : "Islet cell antibodies, Lyophilized, 20 units/ampoule of islet cell antibodies; 100 units/ampoule of anti-GAD65; 100 units/ampoule of anti-IA-2."
+      },
+      {
+        "code" : "97/646",
+        "display" : "Anti-Hepatitis A Immunoglobulin, Human (W1041) WHO International Standard"
+      },
+      {
+        "code" : "98/574",
+        "display" : "Somatropin (rDNA-derived human growth hormone), Lyophilized, 1.95 mg protein / ampoule."
+      },
+      {
+        "code" : "AFP",
+        "display" : "Alphafoetoprotein, Lyophilized, 100,000 IU / ampoule."
+      },
+      {
+        "code" : "RAI",
+        "display" : "Anti-rabies immunoglobulin, Lyophilized, 30 IU/ampoule"
+      },
+      {
+        "code" : "rTF/16",
+        "display" : "Thromboplastin, Human, Recombinant, Plain 5th International Standard 2016."
+      },
+      {
+        "code" : "RUBI-1-94",
+        "display" : "Anti-rubella immunoglobulin, Lyophilized, 1,600 IU/vial"
+      },
+      {
+        "code" : "W1066",
+        "display" : "Rheumatoid arthritis serum, Lyophilized, 100 IU/ampoule"
+      }]
+    },
+    {
+      "concept" : [{
+        "code" : "7657/12",
+        "display" : "Hepatitis D virus RNA, Lyophilized, 575,000 IU/mL"
+      }]
+    },
+    {
+      "concept" : [{
+        "code" : "Gxg01-902535",
+        "display" : "Interferon gamma, human, recombinant, Lyophilized, 80,000 IU / ampoule."
+      }]
+    }]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "order2FHIR-eu-lab",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap order2FHIR-eu-lab</b></p><a name=\"order2FHIR-eu-lab\"> </a><a name=\"hcorder2FHIR-eu-lab\"> </a><a name=\"order2FHIR-eu-lab-en-US\"> </a><p>Mapping from <a href=\"StructureDefinition-Order.html\">A2, A3 - Order</a> to <a href=\"StructureDefinition-ServiceRequest-eu-lab.html\">ServiceRequest: Laboratory Order</a></p><br/><p><b>Group 1 </b>Mapping from <a href=\"StructureDefinition-Order.html\">A2, A3 - Order</a> to <a href=\"StructureDefinition-ServiceRequest-eu-lab.html\">ServiceRequest: Laboratory Order</a></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Order.orderDetails (A.2 Order information)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest</td><td/></tr><tr><td>Order.orderDetails.identifier (A.2.1 Order Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.identifier</td><td/></tr><tr><td>Order.orderDetails.identifier (A.2.1 Order Id)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requisition</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.dateTime (A.2.2 Order date and time)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.authoredOn</td><td/></tr><tr><td>Order.orderDetails.orderPlacerIdentifier (A.2.3 Order placer identifier)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.identifier</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.orderPlacerName (A.2.4 Order placer name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.name</td><td>requester.resolve().ofType(Practitioner).name</td></tr><tr><td>Order.orderDetails.orderPlacerName (A.2.4 Order placer name)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.Practitioner.name</td><td>requester.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(Practitioner).telecom</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.address</td><td>requester.resolve().ofType(Practitioner).address</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(PractitionerRole).telecom</td></tr><tr><td>Order.orderDetails.orderPlacerOrganization (A.2.6 Order placer organization)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.requester.organization</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.reason (A.3 Order reason)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.reasonCode</td><td/></tr><tr><td>Order.reason (A.3 Order reason)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto\" title=\"relatedto\">is related to</a></td><td>ServiceRequest.reasonReference</td><td/></tr><tr><td>Order.reason.code (A.3.1 Problem / diagnosis / condition description)</td><td><a href=\"http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>ServiceRequest.reasonCode</td><td/></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative"
+  }],
+  "url" : "http://hl7.eu/fhir/laboratory/ConceptMap/order2FHIR-eu-lab",
+  "version" : "0.2.0-ci",
+  "name" : "Order2Fhir",
+  "title" : "eHN Order to this guide Map",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-11-18T16:52:16+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "eHN Order to this guide Map",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "purpose" : "It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide",
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "sourceUri" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Order",
+  "targetUri" : "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab",
+  "group" : [{
+    "source" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Order",
+    "target" : "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab",
+    "element" : [{
+      "code" : "Order.orderDetails",
+      "display" : "A.2 Order information",
+      "target" : [{
+        "code" : "ServiceRequest",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.identifier",
+      "display" : "A.2.1 Order Id",
+      "target" : [{
+        "code" : "ServiceRequest.identifier",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.identifier",
+      "display" : "A.2.1 Order Id",
+      "target" : [{
+        "code" : "ServiceRequest.requisition",
+        "equivalence" : "relatedto",
+        "comment" : "if the Composite Request ID."
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.dateTime",
+      "display" : "A.2.2 Order date and time",
+      "target" : [{
+        "code" : "ServiceRequest.authoredOn",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerIdentifier",
+      "display" : "A.2.3 Order placer identifier",
+      "target" : [{
+        "code" : "ServiceRequest.requester.identifier",
+        "equivalence" : "relatedto",
+        "comment" : "if the Composite Request ID."
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerName",
+      "display" : "A.2.4 Order placer name",
+      "target" : [{
+        "code" : "ServiceRequest.requester.name",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(Practitioner).name"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerName",
+      "display" : "A.2.4 Order placer name",
+      "target" : [{
+        "code" : "ServiceRequest.requester.Practitioner.name",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(PractitionerRole).Practitioner.resolve().name"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerContacts",
+      "display" : "A.2.5 Order placer contact details",
+      "target" : [{
+        "code" : "ServiceRequest.requester.telecom",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(Practitioner).telecom"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerContacts",
+      "display" : "A.2.5 Order placer contact details",
+      "target" : [{
+        "code" : "ServiceRequest.requester.address",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(Practitioner).address"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerContacts",
+      "display" : "A.2.5 Order placer contact details",
+      "target" : [{
+        "code" : "ServiceRequest.requester.telecom",
+        "equivalence" : "relatedto",
+        "comment" : "requester.resolve().ofType(PractitionerRole).telecom"
+      }]
+    },
+    {
+      "code" : "Order.orderDetails.orderPlacerOrganization",
+      "display" : "A.2.6 Order placer organization",
+      "target" : [{
+        "code" : "ServiceRequest.requester.organization",
+        "equivalence" : "equivalent",
+        "comment" : "requester.resolve().ofType(PractitionerRole).organization.resolve()"
+      }]
+    },
+    {
+      "code" : "Order.reason",
+      "display" : "A.3 Order reason",
+      "target" : [{
+        "code" : "ServiceRequest.reasonCode",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.reason",
+      "display" : "A.3 Order reason",
+      "target" : [{
+        "code" : "ServiceRequest.reasonReference",
+        "equivalence" : "relatedto"
+      }]
+    },
+    {
+      "code" : "Order.reason.code",
+      "display" : "A.3.1 Problem / diagnosis / condition description",
+      "target" : [{
+        "code" : "ServiceRequest.reasonCode",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

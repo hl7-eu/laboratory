@@ -1,0 +1,19 @@
+{
+  "url" : "http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory",
+  "name" : "Hl7EuLaboratoryIg",
+  "title" : "HL7 Europe Laboratory Report",
+  "description" : "This guide describes how the Laboratory Report can be represented in the European REALM.",
+  "status" : "draft",
+  "package-id" : "hl7.fhir.eu.laboratory",
+  "ig-ver" : "0.2.0-ci",
+  "date" : "Mon, 18 Nov, 2024 16:52:16 +0000",
+  "dateISO8601" : "2024-11-18T16:52:16+00:00",
+  "errs" : 39,
+  "warnings" : 56,
+  "hints" : 47,
+  "suppressed-hints" : 14,
+  "suppressed-warnings" : 29,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2839543808
+}

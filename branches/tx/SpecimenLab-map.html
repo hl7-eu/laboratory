@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>SpecimenLab Relationships - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"19"}
+    h3,h4,h5,h6{--heading-prefix:"19"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>SpecimenLab Relationships</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>SpecimenLab Relationships</h2>
+  
+  
+  
+  <div xmlns="http://www.w3.org/1999/xhtml">
+
+    <a name="1"/><h3 id="overview">Laboratory Report Model Map</h3>
+
+    <a> </a>
+
+    <p>Hereafter a browseable diagram showing how the SpecimenLab model is realized by the HL7 FHIR Profiles of this guide</p>
+
+    <a name="1"/><h4 id="model">Model Overview</h4>
+<a> </a>
+<p><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="379px" preserveAspectRatio="none" style="width:354px;height:379px;background:#FFFFFF;" version="1.1" viewBox="0 0 354 379" width="354px" zoomAndPan="magnify"><defs/><g><!--class SpecimenLab--><a href="StructureDefinition-SpecimenLab.html" target="_top" title="StructureDefinition-SpecimenLab.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-SpecimenLab.html" xlink:show="new" xlink:title="StructureDefinition-SpecimenLab.html" xlink:type="simple"><g id="elem_SpecimenLab"><rect codeLine="10" fill="#FFCC00" height="56.2656" id="SpecimenLab" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="82" y="7"/><ellipse cx="97" cy="27.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M99.9688,32.7734 Q99.3906,33.0703 98.75,33.2109 Q98.1094,33.3672 97.4063,33.3672 Q94.9063,33.3672 93.5781,31.7266 Q92.2656,30.0703 92.2656,26.9453 Q92.2656,23.8203 93.5781,22.1641 Q94.9063,20.5078 97.4063,20.5078 Q98.1094,20.5078 98.75,20.6641 Q99.4063,20.8203 99.9688,21.1172 L99.9688,23.8359 Q99.3438,23.2578 98.75,22.9922 Q98.1563,22.7109 97.5313,22.7109 Q96.1875,22.7109 95.5,23.7891 Q94.8125,24.8516 94.8125,26.9453 Q94.8125,29.0391 95.5,30.1172 Q96.1875,31.1797 97.5313,31.1797 Q98.1563,31.1797 98.75,30.9141 Q99.3438,30.6328 99.9688,30.0547 L99.9688,32.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="94" x="110.5" y="23.1387">&#171;LogicalModel&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="111" y="38.9639">SpecimenLab</text><line style="stroke:#181818;stroke-width:0.5;" x1="83" x2="206" y1="47.2656" y2="47.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="83" x2="206" y1="55.2656" y2="55.2656"/></g></a><g id="elem_GMN3"><a href="ConceptMap-specimen2FHIR-eu-lab.html" target="_top" title="ConceptMap-specimen2FHIR-eu-lab.html" xlink:actuate="onRequest" xlink:href="ConceptMap-specimen2FHIR-eu-lab.html" xlink:show="new" xlink:title="ConceptMap-specimen2FHIR-eu-lab.html" xlink:type="simple"><path d="M242,22.5 L242,31 L207.24,35 L242,39 L242,47.6328 A0,0 0 0 0 242,47.6328 L347,47.6328 A0,0 0 0 0 347,47.6328 L347,32.5 L337,22.5 L242,22.5 A0,0 0 0 0 242,22.5 " fill="#AFEEEE" style="stroke:#181818;stroke-width:0.5;"/><path d="M337,22.5 L337,32.5 L347,32.5 L337,22.5 " fill="#AFEEEE" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="248" y="39.5669">Concept Map</text></a></g><!--class Specimen-eu-lab--><a href="StructureDefinition-Specimen-eu-lab.html" target="_top" title="StructureDefinition-Specimen-eu-lab.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-Specimen-eu-lab.html" xlink:show="new" xlink:title="StructureDefinition-Specimen-eu-lab.html" xlink:type="simple"><g id="elem_Specimen-eu-lab"><rect codeLine="14" fill="#CCCCFF" height="56.2656" id="Specimen-eu-lab" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="149" x="7" y="123"/><ellipse cx="22" cy="143.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.9688,148.7734 Q24.3906,149.0703 23.75,149.2109 Q23.1094,149.3672 22.4063,149.3672 Q19.9063,149.3672 18.5781,147.7266 Q17.2656,146.0703 17.2656,142.9453 Q17.2656,139.8203 18.5781,138.1641 Q19.9063,136.5078 22.4063,136.5078 Q23.1094,136.5078 23.75,136.6641 Q24.4063,136.8203 24.9688,137.1172 L24.9688,139.8359 Q24.3438,139.2578 23.75,138.9922 Q23.1563,138.7109 22.5313,138.7109 Q21.1875,138.7109 20.5,139.7891 Q19.8125,140.8516 19.8125,142.9453 Q19.8125,145.0391 20.5,146.1172 Q21.1875,147.1797 22.5313,147.1797 Q23.1563,147.1797 23.75,146.9141 Q24.3438,146.6328 24.9688,146.0547 L24.9688,148.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="68" y="139.1387">&#171;Profile&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="36" y="154.9639">Specimen-eu-lab</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="155" y1="163.2656" y2="163.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="155" y1="171.2656" y2="171.2656"/></g></a><!--class BodyStructure-eu-lab--><a href="StructureDefinition-BodyStructure-eu-lab.html" target="_top" title="StructureDefinition-BodyStructure-eu-lab.html" xlink:actuate="onRequest" xlink:href="StructureDefinition-BodyStructure-eu-lab.html" xlink:show="new" xlink:title="StructureDefinition-BodyStructure-eu-lab.html" xlink:type="simple"><g id="elem_BodyStructure-eu-lab"><rect codeLine="16" fill="#CCCCFF" height="56.2656" id="BodyStructure-eu-lab" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="55" y="239"/><ellipse cx="70" cy="259.1328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M72.9688,264.7734 Q72.3906,265.0703 71.75,265.2109 Q71.1094,265.3672 70.4063,265.3672 Q67.9063,265.3672 66.5781,263.7266 Q65.2656,262.0703 65.2656,258.9453 Q65.2656,255.8203 66.5781,254.1641 Q67.9063,252.5078 70.4063,252.5078 Q71.1094,252.5078 71.75,252.6641 Q72.4063,252.8203 72.9688,253.1172 L72.9688,255.8359 Q72.3438,255.2578 71.75,254.9922 Q71.1563,254.7109 70.5313,254.7109 Q69.1875,254.7109 68.5,255.7891 Q67.8125,256.8516 67.8125,258.9453 Q67.8125,261.0391 68.5,262.1172 Q69.1875,263.1797 70.5313,263.1797 Q71.1563,263.1797 71.75,262.9141 Q72.3438,262.6328 72.9688,262.0547 L72.9688,264.7734 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="131" y="255.1387">&#171;Profile&#187;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="147" x="84" y="270.9639">BodyStructure-eu-lab</text><line style="stroke:#181818;stroke-width:0.5;" x1="56" x2="233" y1="279.2656" y2="279.2656"/><line style="stroke:#181818;stroke-width:0.5;" x1="56" x2="233" y1="287.2656" y2="287.2656"/></g></a><!--link SpecimenLab to Specimen-eu-lab--><g id="link_SpecimenLab_Specimen-eu-lab"><path codeLine="15" d="M119,63.08 C119,63.08 119,117.78 119,117.78 " fill="none" id="SpecimenLab-to-Specimen-eu-lab" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="119,122.78,123,113.78,119,117.78,115,113.78,119,122.78" style="stroke:#181818;stroke-width:1.0;"/></g><!--link SpecimenLab to BodyStructure-eu-lab--><g id="link_SpecimenLab_BodyStructure-eu-lab"><path codeLine="17" d="M181.5,63.45 C181.5,63.45 181.5,233.68 181.5,233.68 " fill="none" id="SpecimenLab-to-BodyStructure-eu-lab" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="181.5,238.68,185.5,229.68,181.5,233.68,177.5,229.68,181.5,238.68" style="stroke:#181818;stroke-width:1.0;"/></g><!--link Specimen-eu-lab to BodyStructure-eu-lab--><rect fill="#DDDDDD" height="46.5938" id="_legend" rx="7.5" ry="7.5" style="stroke:#000000;stroke-width:1.0;" width="115" x="213" y="313.2656"/><rect fill="#FFCC00" height="16.2969" style="stroke:none;stroke-width:1.0;" width="4" x="218" y="320.2656"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="218" y="333.2607">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="226" y="333.2607">Logical Model</text><rect fill="#CCCCFF" height="16.2969" style="stroke:none;stroke-width:1.0;" width="4" x="218" y="336.5625"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="218" y="349.5576">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="226" y="349.5576">Profile</text><line style="stroke:#000000;stroke-width:1.0;" x1="218" x2="323" y1="320.2656" y2="320.2656"/><line style="stroke:#000000;stroke-width:1.0;" x1="218" x2="323" y1="336.5625" y2="336.5625"/><line style="stroke:#000000;stroke-width:1.0;" x1="218" x2="323" y1="352.8594" y2="352.8594"/><line style="stroke:#000000;stroke-width:1.0;" x1="218" x2="218" y1="320.2656" y2="352.8594"/><line style="stroke:#000000;stroke-width:1.0;" x1="222" x2="222" y1="320.2656" y2="352.8594"/><line style="stroke:#000000;stroke-width:1.0;" x1="323" x2="323" y1="320.2656" y2="352.8594"/></g></svg></p>
+
+    
+
+    
+
+</div>
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

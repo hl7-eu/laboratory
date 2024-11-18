@@ -1,0 +1,2124 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hl7.fhir.eu.laboratory"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.eu.laboratory</b></p><a name=\"hl7.fhir.eu.laboratory\"> </a><a name=\"hchl7.fhir.eu.laboratory\"> </a><a name=\"hl7.fhir.eu.laboratory-en-US\"> </a><h2>Hl7EuLaboratoryIg</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory</pre><div><p>This guide describes how the Laboratory Report can be represented in the European REALM.</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0-ci"] ; # 
+  fhir:name [ fhir:v "Hl7EuLaboratoryIg"] ; # 
+  fhir:title [ fhir:v "HL7 Europe Laboratory Report"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-11-18T16:52:16+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Europe"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Europe" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7.eu" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This guide describes how the Laboratory Report can be represented in the European REALM."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "150" ] ;
+       fhir:display [ fhir:v "Europe" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "Used by permission of HL7 Europe, all rights reserved Creative Commons License"] ; # 
+  fhir:packageId [ fhir:v "hl7.fhir.eu.laboratory"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "6.0.2" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_ips" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.ips" ] ;
+     fhir:version [ fhir:v "current" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_eu_extensions" ] ;
+     fhir:uri [
+       fhir:v "http://fhir.org/packages/hl7.fhir.eu.extensions/ImplementationGuide/hl7.fhir.eu.extensions"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/packages/hl7.fhir.eu.extensions/ImplementationGuide/hl7.fhir.eu.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.eu.extensions" ] ;
+     fhir:version [ fhir:v "0.1.x" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2023+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "special-url" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.eu/fhir/StructureDefinition/information-recipient" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "special-url" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "special-url" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://example.org/lab-codes" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "show-inherited-invariants" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "usage-stats-opt-out" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.eu/fhir/laboratory/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools.r4#0.3.0" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2023+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "special-url" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.eu/fhir/StructureDefinition/information-recipient" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "special-url" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "special-url" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://example.org/lab-codes" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "show-inherited-invariants" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "usage-stats-opt-out" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.eu/fhir/laboratory/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:grouping ( [
+       fhir:id [ fhir:v "eHNGuidelines" ] ;
+       fhir:name [ fhir:v "eHN Laboratory Guidelines (Informative)" ] ;
+       fhir:description [ fhir:v "Logical models representing the eHN Laboratory Guidelines. This is informative material." ]
+     ] [
+       fhir:id [ fhir:v "logicalModelsMaps" ] ;
+       fhir:name [ fhir:v "eHN Logical Model mappings (Informative)" ] ;
+       fhir:description [ fhir:v "Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide." ]
+     ] [
+       fhir:id [ fhir:v "obligations" ] ;
+       fhir:name [ fhir:v "Actors and Obligations (Informative)" ] ;
+       fhir:description [ fhir:v "Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide." ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/LabReport> ;
+         fhir:reference [ fhir:v "StructureDefinition/LabReport" ]
+       ] ;
+       fhir:name [ fhir:v "A - Laboratory Report" ] ;
+       fhir:description [ fhir:v "Laboratory Report. eHN guideline model." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/labRpt2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/labRpt2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A - Laboratory Report model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Subject> ;
+         fhir:reference [ fhir:v "StructureDefinition/Subject" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.1, A.1.2 - Subject of care" ] ;
+       fhir:description [ fhir:v "Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/subject2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/subject2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.1, A.1.2 - Subject of care model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the Subject data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Payer> ;
+         fhir:reference [ fhir:v "StructureDefinition/Payer" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.3 - Health insurance and payment information" ] ;
+       fhir:description [ fhir:v "Health insurance and payment information.  Section A1.3 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/payer2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/payer2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.3 - Health insurance and payment information model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.1.3 - Health insurance and payment information data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient> ;
+         fhir:reference [ fhir:v "StructureDefinition/Recipient" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.4 - Information recipient" ] ;
+       fhir:description [ fhir:v "Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable.\nSection A1.4 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/recipient2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/recipient2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.4 - Information recipient model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.1.4 - Information recipient data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Author> ;
+         fhir:reference [ fhir:v "StructureDefinition/Author" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.5 - Author" ] ;
+       fhir:description [ fhir:v "Author (by whom the Laboratory result report or a subset of its results was authored). Section A1.5 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/author2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/author2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.5 - Author model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.1.5 - Author data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/LegalAuthenticator> ;
+         fhir:reference [ fhir:v "StructureDefinition/LegalAuthenticator" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.6 - Legal authenticator" ] ;
+       fhir:description [ fhir:v "Legal authenticator (The person taking responsibility for the medical content of the document).\nSection A1.6 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/legalAuth2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/legalAuth2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.6 - Legal authenticator model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.1.6 - Legal authenticator data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Validator> ;
+         fhir:reference [ fhir:v "StructureDefinition/Validator" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.7 - Result validator" ] ;
+       fhir:description [ fhir:v "Result validator. Section A1.7 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/validator2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/validator2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.1.7 - Result validator model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.1.7 - Result validator data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Order> ;
+         fhir:reference [ fhir:v "StructureDefinition/Order" ]
+       ] ;
+       fhir:name [ fhir:v "A.2, A.3 - Order" ] ;
+       fhir:description [ fhir:v "Order information and reason. Sections A.2 and A.3 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/order2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/order2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.2, A.3 - Order model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/SpecimenLab> ;
+         fhir:reference [ fhir:v "StructureDefinition/SpecimenLab" ]
+       ] ;
+       fhir:name [ fhir:v "A.4 - Specimen information" ] ;
+       fhir:description [ fhir:v "Specimen information. Section A4 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/specimen2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/specimen2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.4 - Specimen information model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.4 - Specimen information data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Result> ;
+         fhir:reference [ fhir:v "StructureDefinition/Result" ]
+       ] ;
+       fhir:name [ fhir:v "A.5 - Results data elements" ] ;
+       fhir:description [ fhir:v "Results data elements. Section A5 of the eHN guideline." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "eHNGuidelines" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/result2FHIR-eu-lab> ;
+         fhir:reference [ fhir:v "ConceptMap/result2FHIR-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "A.5 - Results data elements model to this guide" ] ;
+       fhir:description [ fhir:v "It shows how the A.5 - Results data elements data set defined by the EU eHN guidelines is mapped into this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "logicalModelsMaps" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActorDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ActorDefinition/actor-consumer-eu-lab> ;
+         fhir:reference [ fhir:v "ActorDefinition/actor-consumer-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Actor Laboratory Report Consumer" ] ;
+       fhir:description [ fhir:v "Laboratory Report Report Consumer: a system receiving/querying and using a Laboratory Report." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActorDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ActorDefinition/actor-creator-eu-lab> ;
+         fhir:reference [ fhir:v "ActorDefinition/actor-creator-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Actor Laboratory Report Creator" ] ;
+       fhir:description [ fhir:v "Laboratory Report Creator: a system generating and sending/providing a Laboratory Report to a Consumer or to a Repository for report storage and sharing." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ActorDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ActorDefinition/actor-repos-eu-lab> ;
+         fhir:reference [ fhir:v "ActorDefinition/actor-repos-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Actor Laboratory Report Repository" ] ;
+       fhir:description [ fhir:v "Laboratory Report Report Repository: a system maintaining a copy of the received Laboratory Report, to store and make it available for the consumers." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu> ;
+         fhir:reference [ fhir:v "StructureDefinition/Address-eu" ]
+       ] ;
+       fhir:name [ fhir:v "Address (EU)" ] ;
+       fhir:description [ fhir:v "This profile extends the Address data type for supporting streetname, housenumber and postal box." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-laterality-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-laterality-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Body Structure Laterality" ] ;
+       fhir:description [ fhir:v "Body Structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected. (based on SNOMED CT)" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-siteQualifier-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-siteQualifier-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Body Structure Qualifier" ] ;
+       fhir:description [ fhir:v "Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/BodyStructure-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/BodyStructure-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Body structure: Laboratory" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent Body Structure in HL7 FHIR for the purpose of this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883> ;
+         fhir:reference [ fhir:v "Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle: converted from CDA" ] ;
+       fhir:description [ fhir:v "Example of Laboratory Report (Bundle) converted from a CDA report" ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Bundle/BundleHepatitisPanel> ;
+         fhir:reference [ fhir:v "Bundle/BundleHepatitisPanel" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle: Hepatitis Panel" ] ;
+       fhir:description [ fhir:v "Example of Laboratory Report (Bundle) including a Hepatitis Panel" ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Bundle-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle: Laboratory Report" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Bundle/BundleLabResultMicroCultureSusc> ;
+         fhir:reference [ fhir:v "Bundle/BundleLabResultMicroCultureSusc" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle: Microbiology Culture + Susceptibility" ] ;
+       fhir:description [ fhir:v "Example of Laboratory Report (Bundle) with Microbiology Culture plus Susceptibility Results" ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Bundle/BundleLabResultReportPOC> ;
+         fhir:reference [ fhir:v "Bundle/BundleLabResultReportPOC" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle: MyHealth@EU Proof Of Concept" ] ;
+       fhir:description [ fhir:v "Example of Laboratory Report (Bundle) used in the MyHealth@EU Proof Of Concept." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Bundle/SimpleChemistryResultReport> ;
+         fhir:reference [ fhir:v "Bundle/SimpleChemistryResultReport" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle: two sections" ] ;
+       fhir:description [ fhir:v "Example of Laboratory Report (Bundle) including two sections with a single observations expressed in LOINC and with Czech national codes.\nNote: this example merges results from a Czech report example with header information from an Italian one, please do not focus on possible inconsistencies between these two parts." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable> ;
+         fhir:reference [ fhir:v "StructureDefinition/observation-certifiedRefMaterialCodeable" ]
+       ] ;
+       fhir:name [ fhir:v "Certified Reference Material: CodeableConcept" ] ;
+       fhir:description [ fhir:v "This extension links this observation with the certified reference material used for the calibration.\nThe certified reference material is identified by using a CodeableConcept.\nThis extension should be used when the unit is UCUM [IU]." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer> ;
+         fhir:reference [ fhir:v "StructureDefinition/observation-certifiedRefMaterialIdentifer" ]
+       ] ;
+       fhir:name [ fhir:v "Certified Reference Material: Identifier" ] ;
+       fhir:description [ fhir:v "This extension links this observation with the certified reference material used for the calibration.\nThe certified reference material is identified by using an Identifier.\nThis extension should be used when the unit is UCUM [IU]." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Composition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Composition/comp-lab-example> ;
+         fhir:reference [ fhir:v "Composition/comp-lab-example" ]
+       ] ;
+       fhir:name [ fhir:v "Composition: example" ] ;
+       fhir:description [ fhir:v "Example of Composition conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Composition-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Composition: Laboratory Report" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit> ;
+         fhir:reference [ fhir:v "StructureDefinition/observation-deviceLabTestKit" ]
+       ] ;
+       fhir:name [ fhir:v "Device Laboratory Test Kit" ] ;
+       fhir:description [ fhir:v "This extension links this observation with the laboratory test kit used for this test.\n Usually only one laboratory test kit is referred" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ConceptMap" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus> ;
+         fhir:reference [ fhir:v "ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport to Composition status" ] ;
+       fhir:description [ fhir:v "Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DiagnosticReport" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/DiagnosticReport/dr-lab-example> ;
+         fhir:reference [ fhir:v "DiagnosticReport/dr-lab-example" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport: example" ] ;
+       fhir:description [ fhir:v "Example of DiagnosticReport conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/DiagnosticReport-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport: Laboratory Report" ] ;
+       fhir:description [ fhir:v "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/composition-diagnosticReportReference> ;
+         fhir:reference [ fhir:v "StructureDefinition/composition-diagnosticReportReference" ]
+       ] ;
+       fhir:name [ fhir:v "Document DiagnosticReport Reference" ] ;
+       fhir:description [ fhir:v "This extension provides a reference to the DiagnosticReport instance that is associated with this Composition." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-obl-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/HumanName-obl-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Human Name Obligations" ] ;
+       fhir:description [ fhir:v "Specify the functional capabilities that the defined actors may, should or shall applied to the Human Name profile elements." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-eu> ;
+         fhir:reference [ fhir:v "StructureDefinition/HumanName-eu" ]
+       ] ;
+       fhir:name [ fhir:v "HumanName (Eu)" ] ;
+       fhir:description [ fhir:v "This profile extends the HumanName data type for supporting multiple family names." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-certifiedRefMaterial-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-certifiedRefMaterial-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Certified Reference Material" ] ;
+       fhir:description [ fhir:v "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU]." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-obsCode-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Code" ] ;
+       fhir:description [ fhir:v "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/CodeSystem/lab-localCs-eu-lab> ;
+         fhir:reference [ fhir:v "CodeSystem/lab-localCs-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Code: example" ] ;
+       fhir:description [ fhir:v "List of local coded concepts used for supporting the examples defined in this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-loinc-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-obsCode-loinc-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Code: LOINC" ] ;
+       fhir:description [ fhir:v "Laboratory observation codes based on the LOINC code system." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-obsCode-npu-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Code: NPU" ] ;
+       fhir:description [ fhir:v "Laboratory observation codes based on the NPU code system." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-orderCodes-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Order" ] ;
+       fhir:description [ fhir:v "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-reportType-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-reportType-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Report Types" ] ;
+       fhir:description [ fhir:v "Laboratory Report Types.\nThis version includes only one code as suggested by the eHN guideline.\nCategory can be used for filtering per study type or specialty." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-specialty-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Specialty" ] ;
+       fhir:description [ fhir:v "Laboratory Specialties.\nNotes:\nNote 1: This value set is based on analysis of national coding practices in 8 European countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.\nNote 2: Many European countries are using additional laboratory specialty types, which should be mapped towards this value set.\nNote 3: In case of documented need, this value set could be extended." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-studyType-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Study Types" ] ;
+       fhir:description [ fhir:v "Laboratory Study Types\nNotes:\nNote 1:26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-technique-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratory Techniques" ] ;
+       fhir:description [ fhir:v "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-obl-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-obl-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Observation Obligations" ] ;
+       fhir:description [ fhir:v "Specify the functional capabilities that the defined actors may, should or shall applied to the Observation profile elements." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-resultslab-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Observation Results: laboratory" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Europe project.\nThis observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as \"has-member\" child observations." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-aerobic-culture> ;
+         fhir:reference [ fhir:v "Observation/obs-aerobic-culture" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Aerobic Culture example" ] ;
+       fhir:description [ fhir:v "Example of Aerobic Culture Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-anaerobic-culture> ;
+         fhir:reference [ fhir:v "Observation/obs-anaerobic-culture" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Anaerobic Culture example" ] ;
+       fhir:description [ fhir:v "Example of Anaerobic Culture Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/4335db48-7090-45b3-a2c2-45b45f94a67c> ;
+         fhir:reference [ fhir:v "Observation/4335db48-7090-45b3-a2c2-45b45f94a67c" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: certified reference material" ] ;
+       fhir:description [ fhir:v "Example of Observation with a concentration of insulin of 50 mIU/L, using as certified reference material https://www.nibsc.org/documents/ifu/66-304.pdf" ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-gram-stain> ;
+         fhir:reference [ fhir:v "Observation/obs-gram-stain" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Gram Staining example" ] ;
+       fhir:description [ fhir:v "Example of Gram Staining result Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-gs-org1> ;
+         fhir:reference [ fhir:v "Observation/obs-gs-org1" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Gram-positive cocci example" ] ;
+       fhir:description [ fhir:v "Example of Gram-positive cocci in clusters by gram staining  Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-gs-org1-quant> ;
+         fhir:reference [ fhir:v "Observation/obs-gs-org1-quant" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Gram-positive cocci, observed quantity, example" ] ;
+       fhir:description [ fhir:v "Example of Gram-positive cocci in clusters by gram staining, observed quantity, Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-wbc> ;
+         fhir:reference [ fhir:v "Observation/obs-wbc" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Leukocytes Presence example" ] ;
+       fhir:description [ fhir:v "Example of Leukocytes Presence by gram staining  Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/d29b286d-b99c-410f-af4e-9455ea49d0af> ;
+         fhir:reference [ fhir:v "Observation/d29b286d-b99c-410f-af4e-9455ea49d0af" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: ratio example" ] ;
+       fhir:description [ fhir:v "Example of Observation with ratio result" ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1-susc-1> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1-susc-1" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus Cephalothin susceptibility example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus Cephalothin susceptibility Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1-growth> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1-growth" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus Growth example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus Growth Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus identified example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus identified by Aerobe culture Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1-susc-2> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1-susc-2" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus levoFLOXacin susceptibility example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus levoFLOXacin susceptibility Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1-susc-3> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1-susc-3" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus Oxacillin susceptibility example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus Oxacillin susceptibility Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1-susc-panel> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1-susc-panel" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus susceptibility panel example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus susceptibility panel Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Observation/obs-org-id1-susc-4> ;
+         fhir:reference [ fhir:v "Observation/obs-org-id1-susc-4" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: Staphylococcus aureus Vancomycin susceptibility example" ] ;
+       fhir:description [ fhir:v "Example of Staphylococcus aureus Vancomycin susceptibility Observation conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-obl-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Patient-obl-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Patient Obligations" ] ;
+       fhir:description [ fhir:v "Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Patient-animal-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: Animal" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide.\nThis is used to identify the species when a specimen is collected from an animal" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Patient/Patient-animal-example> ;
+         fhir:reference [ fhir:v "Patient/Patient-animal-example" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: animal example" ] ;
+       fhir:description [ fhir:v "Example of Patient resource used for indicating an animal (cat) conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Patient/nl-core-NameInformation-complete> ;
+         fhir:reference [ fhir:v "Patient/nl-core-NameInformation-complete" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: Dutch complete name" ] ;
+       fhir:description [ fhir:v "Example of Patient including a complete Dutch name." ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Patient/pat-lab-example> ;
+         fhir:reference [ fhir:v "Patient/pat-lab-example" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: example" ] ;
+       fhir:description [ fhir:v "Example of Patient conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Patient-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: Person" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent a human Patient in FHIR for the purpose of this guide.\nWhen the ips-pat-1 invariant is satisfied \\(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\\) then this profile complies with the IPS patient profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Practitioner/pr-lab-example> ;
+         fhir:reference [ fhir:v "Practitioner/pr-lab-example" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner: example" ] ;
+       fhir:description [ fhir:v "Example of Practitioner conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Practitioner-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner: Laboratory Report" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent Practitioners in FHIR for the purpose of the  HL7 Europe project." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/PractitionerRole/prrole-lab-example> ;
+         fhir:reference [ fhir:v "PractitionerRole/prrole-lab-example" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRole: example" ] ;
+       fhir:description [ fhir:v "Example of PractitionerRole conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/PractitionerRole-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRole: Laboratory Report" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent Practitioners (with their roles) in FHIR for the purpose of the  HL7 Europe project." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Quantity-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Quantity-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Quantity (Eu Lab)" ] ;
+       fhir:description [ fhir:v "This profile constrains the Quantity data type to use UCUM as the code system for units and optionally share measurement uncertainty" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Ratio-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ratio-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Ratio (Eu Lab)" ] ;
+       fhir:description [ fhir:v "This profile constrains the Ratio data type to use UCUM as the code system for units and optionally share measurement uncertainty" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-obl-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/ServiceRequest-obl-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "ServiceRequest Obligations" ] ;
+       fhir:description [ fhir:v "Specify the functional capabilities that the defined actors may, should or shall applied to the ServiceRequest profile elements." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ServiceRequest/srv-request-example> ;
+         fhir:reference [ fhir:v "ServiceRequest/srv-request-example" ]
+       ] ;
+       fhir:name [ fhir:v "ServiceRequest: example" ] ;
+       fhir:description [ fhir:v "Example of ServiceRequest conforming this guide." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/ServiceRequest-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "ServiceRequest: Laboratory Order" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent an laboratory orders using the HL7 FHIR ServiceRequest for the purpose of this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-specimenAdditive-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen Additive" ] ;
+       fhir:description [ fhir:v "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenContainer-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-specimenContainer-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen Container" ] ;
+       fhir:description [ fhir:v "List of the containers commonly used to collect specimens (e.g. urine, blood,..)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-obl-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Specimen-obl-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen Obligations" ] ;
+       fhir:description [ fhir:v "Specify the functional capabilities that the defined actors may, should or shall applied to the Specimen profile elements." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "obligations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab> ;
+         fhir:reference [ fhir:v "ValueSet/lab-specimenType-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen Types" ] ;
+       fhir:description [ fhir:v "Laboratory Specimen Types" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Specimen" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/Specimen/Specimen-animal-example> ;
+         fhir:reference [ fhir:v "Specimen/Specimen-animal-example" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen: animal example" ] ;
+       fhir:description [ fhir:v "Example of Specimen collected from an animal." ] ;
+       fhir:example [
+         fhir:v "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"^^xsd:anyURI ;
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Specimen-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen: Laboratory" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/StructureDefinition/Substance-additive-eu-lab> ;
+         fhir:reference [ fhir:v "StructureDefinition/Substance-additive-eu-lab" ]
+       ] ;
+       fhir:name [ fhir:v "Substance: Specimen Additive Substance" ] ;
+       fhir:description [ fhir:v "This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.eu/fhir/laboratory/ValueSet/lab-speciesType-eu-vs> ;
+         fhir:reference [ fhir:v "ValueSet/lab-speciesType-eu-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Types of species" ] ;
+       fhir:description [ fhir:v "Types of animal species for non-human subjects" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "background.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "background.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Background" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "scenarios.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "scenarios.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Laboratory Report scenarios" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "status-mgmt.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "status-mgmt.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Managing Laboratory Report statuses" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "design-choice.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "design-choice.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Design choices" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "challenges.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "challenges.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Challenges" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "notes.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "notes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Implementation notes" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "crm.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "crm.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Certified reference material" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "logicalModel.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "logicalModel.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "eHN guideline data set" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "contributors.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "contributors.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Authors and contributors" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "obligations.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "obligations.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Obligations" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "knownIusses.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "knownIusses.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Known Issues" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Recipient-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Recipient-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Recipient Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Result-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Result-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Result Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Author-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Author-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Author Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "LabReport-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "LabReport-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "LabReport Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Validator-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Validator-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Validator Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "SpecimenLab-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "SpecimenLab-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "SpecimenLab Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "LegalAuthenticator-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "LegalAuthenticator-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "LegalAuthenticator Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Payer-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Payer-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Payer Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Order-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Order-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Order Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Subject-map.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Subject-map.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Subject Relationships" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

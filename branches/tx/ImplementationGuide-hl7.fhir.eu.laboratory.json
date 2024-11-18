@@ -1,0 +1,2179 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "hl7.fhir.eu.laboratory",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.eu.laboratory</b></p><a name=\"hl7.fhir.eu.laboratory\"> </a><a name=\"hchl7.fhir.eu.laboratory\"> </a><a name=\"hl7.fhir.eu.laboratory-en-US\"> </a><h2>Hl7EuLaboratoryIg</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory</pre><div><p>This guide describes how the Laboratory Report can be represented in the European REALM.</p>\n</div></div>"
+  },
+  "url" : "http://hl7.eu/fhir/laboratory/ImplementationGuide/hl7.fhir.eu.laboratory",
+  "version" : "0.2.0-ci",
+  "name" : "Hl7EuLaboratoryIg",
+  "title" : "HL7 Europe Laboratory Report",
+  "status" : "draft",
+  "date" : "2024-11-18T16:52:16+00:00",
+  "publisher" : "HL7 Europe",
+  "contact" : [{
+    "name" : "HL7 Europe",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7.eu"
+    }]
+  }],
+  "description" : "This guide describes how the Laboratory Report can be represented in the European REALM.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "copyright" : "Used by permission of HL7 Europe, all rights reserved Creative Commons License",
+  "packageId" : "hl7.fhir.eu.laboratory",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "6.0.2"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.1.0"
+  },
+  {
+    "id" : "hl7_fhir_uv_ips",
+    "uri" : "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+    "packageId" : "hl7.fhir.uv.ips",
+    "version" : "current"
+  },
+  {
+    "id" : "hl7_fhir_eu_extensions",
+    "uri" : "http://fhir.org/packages/hl7.fhir.eu.extensions/ImplementationGuide/hl7.fhir.eu.extensions",
+    "packageId" : "hl7.fhir.eu.extensions",
+    "version" : "0.1.x"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2023+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.eu/fhir/StructureDefinition/information-recipient"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://example.org/lab-codes"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "usage-stats-opt-out"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.eu/fhir/laboratory/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.3.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2023+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.eu/fhir/StructureDefinition/information-recipient"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://example.org/lab-codes"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "show-inherited-invariants"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "usage-stats-opt-out"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.eu/fhir/laboratory/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "grouping" : [{
+      "id" : "eHNGuidelines",
+      "name" : "eHN Laboratory Guidelines (Informative)",
+      "description" : "Logical models representing the eHN Laboratory Guidelines. This is informative material."
+    },
+    {
+      "id" : "logicalModelsMaps",
+      "name" : "eHN Logical Model mappings (Informative)",
+      "description" : "Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide."
+    },
+    {
+      "id" : "obligations",
+      "name" : "Actors and Obligations (Informative)",
+      "description" : "Actors and Obligations used to describe the Laboratory Report functional requirements for the specified data elements. Informative for this version of the guide."
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/LabReport"
+      },
+      "name" : "A - Laboratory Report",
+      "description" : "Laboratory Report. eHN guideline model.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/labRpt2FHIR-eu-lab"
+      },
+      "name" : "A - Laboratory Report model to this guide",
+      "description" : "It shows how the Laboratory Report data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Subject"
+      },
+      "name" : "A.1.1, A.1.2 - Subject of care",
+      "description" : "Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/subject2FHIR-eu-lab"
+      },
+      "name" : "A.1.1, A.1.2 - Subject of care model to this guide",
+      "description" : "It shows how the Subject data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Payer"
+      },
+      "name" : "A.1.3 - Health insurance and payment information",
+      "description" : "Health insurance and payment information.  Section A1.3 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/payer2FHIR-eu-lab"
+      },
+      "name" : "A.1.3 - Health insurance and payment information model to this guide",
+      "description" : "It shows how the A.1.3 - Health insurance and payment information data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Recipient"
+      },
+      "name" : "A.1.4 - Information recipient",
+      "description" : "Information recipient (intended recipient or recipients of the report, additional recipients might be identified by the ordering party, e.g. GP, other specialist), if applicable.\nSection A1.4 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/recipient2FHIR-eu-lab"
+      },
+      "name" : "A.1.4 - Information recipient model to this guide",
+      "description" : "It shows how the A.1.4 - Information recipient data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Author"
+      },
+      "name" : "A.1.5 - Author",
+      "description" : "Author (by whom the Laboratory result report or a subset of its results was authored). Section A1.5 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/author2FHIR-eu-lab"
+      },
+      "name" : "A.1.5 - Author model to this guide",
+      "description" : "It shows how the A.1.5 - Author data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/LegalAuthenticator"
+      },
+      "name" : "A.1.6 - Legal authenticator",
+      "description" : "Legal authenticator (The person taking responsibility for the medical content of the document).\nSection A1.6 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/legalAuth2FHIR-eu-lab"
+      },
+      "name" : "A.1.6 - Legal authenticator model to this guide",
+      "description" : "It shows how the A.1.6 - Legal authenticator data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Validator"
+      },
+      "name" : "A.1.7 - Result validator",
+      "description" : "Result validator. Section A1.7 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/validator2FHIR-eu-lab"
+      },
+      "name" : "A.1.7 - Result validator model to this guide",
+      "description" : "It shows how the A.1.7 - Result validator data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Order"
+      },
+      "name" : "A.2, A.3 - Order",
+      "description" : "Order information and reason. Sections A.2 and A.3 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/order2FHIR-eu-lab"
+      },
+      "name" : "A.2, A.3 - Order model to this guide",
+      "description" : "It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/SpecimenLab"
+      },
+      "name" : "A.4 - Specimen information",
+      "description" : "Specimen information. Section A4 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/specimen2FHIR-eu-lab"
+      },
+      "name" : "A.4 - Specimen information model to this guide",
+      "description" : "It shows how the A.4 - Specimen information data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Result"
+      },
+      "name" : "A.5 - Results data elements",
+      "description" : "Results data elements. Section A5 of the eHN guideline.",
+      "exampleBoolean" : false,
+      "groupingId" : "eHNGuidelines"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/result2FHIR-eu-lab"
+      },
+      "name" : "A.5 - Results data elements model to this guide",
+      "description" : "It shows how the A.5 - Results data elements data set defined by the EU eHN guidelines is mapped into this guide.",
+      "exampleBoolean" : false,
+      "groupingId" : "logicalModelsMaps"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/actor-consumer-eu-lab"
+      },
+      "name" : "Actor Laboratory Report Consumer",
+      "description" : "Laboratory Report Report Consumer: a system receiving/querying and using a Laboratory Report.",
+      "exampleBoolean" : true,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/actor-creator-eu-lab"
+      },
+      "name" : "Actor Laboratory Report Creator",
+      "description" : "Laboratory Report Creator: a system generating and sending/providing a Laboratory Report to a Consumer or to a Repository for report storage and sharing.",
+      "exampleBoolean" : true,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/actor-repos-eu-lab"
+      },
+      "name" : "Actor Laboratory Report Repository",
+      "description" : "Laboratory Report Report Repository: a system maintaining a copy of the received Laboratory Report, to store and make it available for the consumers.",
+      "exampleBoolean" : true,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Address-eu"
+      },
+      "name" : "Address (EU)",
+      "description" : "This profile extends the Address data type for supporting streetname, housenumber and postal box.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-laterality-eu-lab"
+      },
+      "name" : "Body Structure Laterality",
+      "description" : "Body Structure site laterality qualifier. It indicates the body site laterality from which a laboratory specimen is collected. (based on SNOMED CT)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-siteQualifier-eu-lab"
+      },
+      "name" : "Body Structure Qualifier",
+      "description" : "Body Structure site qualifier. It indicates the body site qualifier from which a laboratory specimen is collected. (based on SNOMED CT)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/BodyStructure-eu-lab"
+      },
+      "name" : "Body structure: Laboratory",
+      "description" : "This profile defines how to represent Body Structure in HL7 FHIR for the purpose of this guide.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883"
+      },
+      "name" : "Bundle: converted from CDA",
+      "description" : "Example of Laboratory Report (Bundle) converted from a CDA report",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/BundleHepatitisPanel"
+      },
+      "name" : "Bundle: Hepatitis Panel",
+      "description" : "Example of Laboratory Report (Bundle) including a Hepatitis Panel",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Bundle-eu-lab"
+      },
+      "name" : "Bundle: Laboratory Report",
+      "description" : "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/BundleLabResultMicroCultureSusc"
+      },
+      "name" : "Bundle: Microbiology Culture + Susceptibility",
+      "description" : "Example of Laboratory Report (Bundle) with Microbiology Culture plus Susceptibility Results",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/BundleLabResultReportPOC"
+      },
+      "name" : "Bundle: MyHealth@EU Proof Of Concept",
+      "description" : "Example of Laboratory Report (Bundle) used in the MyHealth@EU Proof Of Concept.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/SimpleChemistryResultReport"
+      },
+      "name" : "Bundle: two sections",
+      "description" : "Example of Laboratory Report (Bundle) including two sections with a single observations expressed in LOINC and with Czech national codes.\nNote: this example merges results from a Czech report example with header information from an Italian one, please do not focus on possible inconsistencies between these two parts.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/observation-certifiedRefMaterialCodeable"
+      },
+      "name" : "Certified Reference Material: CodeableConcept",
+      "description" : "This extension links this observation with the certified reference material used for the calibration.\nThe certified reference material is identified by using a CodeableConcept.\nThis extension should be used when the unit is UCUM [IU].",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/observation-certifiedRefMaterialIdentifer"
+      },
+      "name" : "Certified Reference Material: Identifier",
+      "description" : "This extension links this observation with the certified reference material used for the calibration.\nThe certified reference material is identified by using an Identifier.\nThis extension should be used when the unit is UCUM [IU].",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Composition"
+      }],
+      "reference" : {
+        "reference" : "Composition/comp-lab-example"
+      },
+      "name" : "Composition: example",
+      "description" : "Example of Composition conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Composition-eu-lab"
+      },
+      "name" : "Composition: Laboratory Report",
+      "description" : "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/observation-deviceLabTestKit"
+      },
+      "name" : "Device Laboratory Test Kit",
+      "description" : "This extension links this observation with the laboratory test kit used for this test.\n Usually only one laboratory test kit is referred",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus"
+      },
+      "name" : "DiagnosticReport to Composition status",
+      "description" : "Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/dr-lab-example"
+      },
+      "name" : "DiagnosticReport: example",
+      "description" : "Example of DiagnosticReport conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/DiagnosticReport-eu-lab"
+      },
+      "name" : "DiagnosticReport: Laboratory Report",
+      "description" : "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/composition-diagnosticReportReference"
+      },
+      "name" : "Document DiagnosticReport Reference",
+      "description" : "This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/HumanName-obl-eu-lab"
+      },
+      "name" : "Human Name Obligations",
+      "description" : "Specify the functional capabilities that the defined actors may, should or shall applied to the Human Name profile elements.",
+      "exampleBoolean" : false,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/HumanName-eu"
+      },
+      "name" : "HumanName (Eu)",
+      "description" : "This profile extends the HumanName data type for supporting multiple family names.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-certifiedRefMaterial-eu-lab"
+      },
+      "name" : "Laboratory Certified Reference Material",
+      "description" : "List of the coded concepts describing the certified reference material used for the calibration, typically used when the unit of the result is UCUM [IU].",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-obsCode-eu-lab"
+      },
+      "name" : "Laboratory Code",
+      "description" : "Laboratory observation codes. List of Laboratory observation codes derived from the LOINC and NPU code systems.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/lab-localCs-eu-lab"
+      },
+      "name" : "Laboratory Code: example",
+      "description" : "List of local coded concepts used for supporting the examples defined in this guide.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-obsCode-loinc-eu-lab"
+      },
+      "name" : "Laboratory Code: LOINC",
+      "description" : "Laboratory observation codes based on the LOINC code system.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-obsCode-npu-eu-lab"
+      },
+      "name" : "Laboratory Code: NPU",
+      "description" : "Laboratory observation codes based on the NPU code system.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-orderCodes-eu-lab"
+      },
+      "name" : "Laboratory Order",
+      "description" : "List of LOINC Laboratory codes of type 'Order' or 'Both. This value set is built upon the IPS value set 'Results Laboratory Observation - IPS'",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-reportType-eu-lab"
+      },
+      "name" : "Laboratory Report Types",
+      "description" : "Laboratory Report Types.\nThis version includes only one code as suggested by the eHN guideline.\nCategory can be used for filtering per study type or specialty.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-specialty-eu-lab"
+      },
+      "name" : "Laboratory Specialty",
+      "description" : "Laboratory Specialties.\nNotes:\nNote 1: This value set is based on analysis of national coding practices in 8 European countries (AT, CZ, DE, FR, IE, IT, PT, SE) and agreed by involved lab experts as a common lab specialty value set.\nNote 2: Many European countries are using additional laboratory specialty types, which should be mapped towards this value set.\nNote 3: In case of documented need, this value set could be extended.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-studyType-eu-lab"
+      },
+      "name" : "Laboratory Study Types",
+      "description" : "Laboratory Study Types\nNotes:\nNote 1:26436-6 (Laboratory studies) enables issuing a report putting together observations from multiple specialties (disciplines) in the same text block, allowing delivery of a global interpretation comment at the end of the text block that will be rendered at the end of the report.\nNote 2:Mycology and parasitology, as well as bacteriology, are part of the 18725-2 (Microbiology studies (set)) studies.\nNote 3:Virology MAY be included in 18725-2 (MICROBIOLOGY STUDIES) or 18727-8 (SEROLOGY STUDIES) or split between both study types, depending upon the Content Creator Actor’s choice.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-technique-eu-lab"
+      },
+      "name" : "Laboratory Techniques",
+      "description" : "Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-obl-eu-lab"
+      },
+      "name" : "Observation Obligations",
+      "description" : "Specify the functional capabilities that the defined actors may, should or shall applied to the Observation profile elements.",
+      "exampleBoolean" : false,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Observation-resultslab-eu-lab"
+      },
+      "name" : "Observation Results: laboratory",
+      "description" : "This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Europe project.\nThis observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as \"has-member\" child observations.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-aerobic-culture"
+      },
+      "name" : "Observation: Aerobic Culture example",
+      "description" : "Example of Aerobic Culture Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-anaerobic-culture"
+      },
+      "name" : "Observation: Anaerobic Culture example",
+      "description" : "Example of Anaerobic Culture Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/4335db48-7090-45b3-a2c2-45b45f94a67c"
+      },
+      "name" : "Observation: certified reference material",
+      "description" : "Example of Observation with a concentration of insulin of 50 mIU/L, using as certified reference material https://www.nibsc.org/documents/ifu/66-304.pdf",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-gram-stain"
+      },
+      "name" : "Observation: Gram Staining example",
+      "description" : "Example of Gram Staining result Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-gs-org1"
+      },
+      "name" : "Observation: Gram-positive cocci example",
+      "description" : "Example of Gram-positive cocci in clusters by gram staining  Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-gs-org1-quant"
+      },
+      "name" : "Observation: Gram-positive cocci, observed quantity, example",
+      "description" : "Example of Gram-positive cocci in clusters by gram staining, observed quantity, Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-wbc"
+      },
+      "name" : "Observation: Leukocytes Presence example",
+      "description" : "Example of Leukocytes Presence by gram staining  Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/d29b286d-b99c-410f-af4e-9455ea49d0af"
+      },
+      "name" : "Observation: ratio example",
+      "description" : "Example of Observation with ratio result",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1-susc-1"
+      },
+      "name" : "Observation: Staphylococcus aureus Cephalothin susceptibility example",
+      "description" : "Example of Staphylococcus aureus Cephalothin susceptibility Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1-growth"
+      },
+      "name" : "Observation: Staphylococcus aureus Growth example",
+      "description" : "Example of Staphylococcus aureus Growth Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1"
+      },
+      "name" : "Observation: Staphylococcus aureus identified example",
+      "description" : "Example of Staphylococcus aureus identified by Aerobe culture Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1-susc-2"
+      },
+      "name" : "Observation: Staphylococcus aureus levoFLOXacin susceptibility example",
+      "description" : "Example of Staphylococcus aureus levoFLOXacin susceptibility Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1-susc-3"
+      },
+      "name" : "Observation: Staphylococcus aureus Oxacillin susceptibility example",
+      "description" : "Example of Staphylococcus aureus Oxacillin susceptibility Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1-susc-panel"
+      },
+      "name" : "Observation: Staphylococcus aureus susceptibility panel example",
+      "description" : "Example of Staphylococcus aureus susceptibility panel Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/obs-org-id1-susc-4"
+      },
+      "name" : "Observation: Staphylococcus aureus Vancomycin susceptibility example",
+      "description" : "Example of Staphylococcus aureus Vancomycin susceptibility Observation conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Patient-obl-eu-lab"
+      },
+      "name" : "Patient Obligations",
+      "description" : "Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.",
+      "exampleBoolean" : false,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Patient-animal-eu-lab"
+      },
+      "name" : "Patient: Animal",
+      "description" : "This profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide.\nThis is used to identify the species when a specimen is collected from an animal",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Patient-animal-example"
+      },
+      "name" : "Patient: animal example",
+      "description" : "Example of Patient resource used for indicating an animal (cat) conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/nl-core-NameInformation-complete"
+      },
+      "name" : "Patient: Dutch complete name",
+      "description" : "Example of Patient including a complete Dutch name.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/pat-lab-example"
+      },
+      "name" : "Patient: example",
+      "description" : "Example of Patient conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Patient-eu-lab"
+      },
+      "name" : "Patient: Person",
+      "description" : "This profile defines how to represent a human Patient in FHIR for the purpose of this guide.\nWhen the ips-pat-1 invariant is satisfied \\(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\\) then this profile complies with the IPS patient profile.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/pr-lab-example"
+      },
+      "name" : "Practitioner: example",
+      "description" : "Example of Practitioner conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Practitioner-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Practitioner-eu-lab"
+      },
+      "name" : "Practitioner: Laboratory Report",
+      "description" : "This profile defines how to represent Practitioners in FHIR for the purpose of the  HL7 Europe project.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/prrole-lab-example"
+      },
+      "name" : "PractitionerRole: example",
+      "description" : "Example of PractitionerRole conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/PractitionerRole-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/PractitionerRole-eu-lab"
+      },
+      "name" : "PractitionerRole: Laboratory Report",
+      "description" : "This profile defines how to represent Practitioners (with their roles) in FHIR for the purpose of the  HL7 Europe project.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Quantity-eu-lab"
+      },
+      "name" : "Quantity (Eu Lab)",
+      "description" : "This profile constrains the Quantity data type to use UCUM as the code system for units and optionally share measurement uncertainty",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Ratio-eu-lab"
+      },
+      "name" : "Ratio (Eu Lab)",
+      "description" : "This profile constrains the Ratio data type to use UCUM as the code system for units and optionally share measurement uncertainty",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ServiceRequest-obl-eu-lab"
+      },
+      "name" : "ServiceRequest Obligations",
+      "description" : "Specify the functional capabilities that the defined actors may, should or shall applied to the ServiceRequest profile elements.",
+      "exampleBoolean" : false,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/srv-request-example"
+      },
+      "name" : "ServiceRequest: example",
+      "description" : "Example of ServiceRequest conforming this guide.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ServiceRequest-eu-lab"
+      },
+      "name" : "ServiceRequest: Laboratory Order",
+      "description" : "This profile defines how to represent an laboratory orders using the HL7 FHIR ServiceRequest for the purpose of this guide.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-specimenAdditive-eu-lab"
+      },
+      "name" : "Specimen Additive",
+      "description" : "List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-specimenContainer-eu-lab"
+      },
+      "name" : "Specimen Container",
+      "description" : "List of the containers commonly used to collect specimens (e.g. urine, blood,..).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Specimen-obl-eu-lab"
+      },
+      "name" : "Specimen Obligations",
+      "description" : "Specify the functional capabilities that the defined actors may, should or shall applied to the Specimen profile elements.",
+      "exampleBoolean" : false,
+      "groupingId" : "obligations"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-specimenType-eu-lab"
+      },
+      "name" : "Specimen Types",
+      "description" : "Laboratory Specimen Types",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/Specimen-animal-example"
+      },
+      "name" : "Specimen: animal example",
+      "description" : "Example of Specimen collected from an animal.",
+      "exampleCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Specimen-eu-lab"
+      },
+      "name" : "Specimen: Laboratory",
+      "description" : "This profile defines how to represent Specimens in HL7 FHIR for the purpose of this guide.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/Substance-additive-eu-lab"
+      },
+      "name" : "Substance: Specimen Additive Substance",
+      "description" : "This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lab-speciesType-eu-vs"
+      },
+      "name" : "Types of species",
+      "description" : "Types of animal species for non-human subjects",
+      "exampleBoolean" : false
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "background.html"
+        }],
+        "nameUrl" : "background.html",
+        "title" : "Background",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "scenarios.html"
+        }],
+        "nameUrl" : "scenarios.html",
+        "title" : "Laboratory Report scenarios",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "status-mgmt.html"
+        }],
+        "nameUrl" : "status-mgmt.html",
+        "title" : "Managing Laboratory Report statuses",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "design-choice.html"
+        }],
+        "nameUrl" : "design-choice.html",
+        "title" : "Design choices",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "challenges.html"
+        }],
+        "nameUrl" : "challenges.html",
+        "title" : "Challenges",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "notes.html"
+        }],
+        "nameUrl" : "notes.html",
+        "title" : "Implementation notes",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "crm.html"
+        }],
+        "nameUrl" : "crm.html",
+        "title" : "Certified reference material",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "downloads.html"
+        }],
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "logicalModel.html"
+        }],
+        "nameUrl" : "logicalModel.html",
+        "title" : "eHN guideline data set",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "contributors.html"
+        }],
+        "nameUrl" : "contributors.html",
+        "title" : "Authors and contributors",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "obligations.html"
+        }],
+        "nameUrl" : "obligations.html",
+        "title" : "Obligations",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "knownIusses.html"
+        }],
+        "nameUrl" : "knownIusses.html",
+        "title" : "Known Issues",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Recipient-map.html"
+        }],
+        "nameUrl" : "Recipient-map.html",
+        "title" : "Recipient Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Result-map.html"
+        }],
+        "nameUrl" : "Result-map.html",
+        "title" : "Result Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Author-map.html"
+        }],
+        "nameUrl" : "Author-map.html",
+        "title" : "Author Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "LabReport-map.html"
+        }],
+        "nameUrl" : "LabReport-map.html",
+        "title" : "LabReport Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Validator-map.html"
+        }],
+        "nameUrl" : "Validator-map.html",
+        "title" : "Validator Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "SpecimenLab-map.html"
+        }],
+        "nameUrl" : "SpecimenLab-map.html",
+        "title" : "SpecimenLab Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "LegalAuthenticator-map.html"
+        }],
+        "nameUrl" : "LegalAuthenticator-map.html",
+        "title" : "LegalAuthenticator Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Payer-map.html"
+        }],
+        "nameUrl" : "Payer-map.html",
+        "title" : "Payer Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Order-map.html"
+        }],
+        "nameUrl" : "Order-map.html",
+        "title" : "Order Relationships",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "Subject-map.html"
+        }],
+        "nameUrl" : "Subject-map.html",
+        "title" : "Subject Relationships",
+        "generation" : "html"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}

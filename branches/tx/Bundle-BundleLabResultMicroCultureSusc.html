@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Bundle: Microbiology Culture + Susceptibility - HL7 Europe Laboratory Report v0.2.0-ci</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+<!-- <link href="assets/css/hl7.css" rel="stylesheet"/> -->
+<link href="assets/css/hl7eu.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"24.68"}
+    h3,h4,h5,h6{--heading-prefix:"24.68"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <!-- <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.it">
+            <img height="61" alt="Project home" src="assets/images/hl7-eu-logo.png"/>
+          </a>
+        </div> -->
+
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu"><img height="60" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/> </a>
+        </div>
+
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="60" alt="HL7 Europe website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>      
+
+
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 Europe Laboratory Report</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-ci - ci-build
+
+
+
+  <span title="">150</span>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="challenges.html">Challenges</a>
+      </li>
+      <li>
+        <a href="design-choice.html">Design Choices</a>
+      </li>
+      <li>
+        <a href="crm.html">Certified reference material</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Specifications
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="scenarios.html">Scenarios</a>
+      </li>
+      <li>
+        <a href="status-mgmt.html">Managing statuses</a>
+      </li>
+      <li>
+        <a href="logicalModel.html">eHN Guideline dataset</a>
+      </li>
+      <li>
+        <a href="obligations.html">Obligations</a>
+      </li>
+      <li>
+        <a href="notes.html">Implementation notes</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Model Maps
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Recipient-map.html">Recipient</a>
+      </li>
+      <li>
+        <a href="Result-map.html">Result</a>
+      </li>
+      <li>
+        <a href="Author-map.html">Author</a>
+      </li>
+      <li>
+        <a href="LabReport-map.html">LabReport</a>
+      </li>
+      <li>
+        <a href="Validator-map.html">Validator</a>
+      </li>
+      <li>
+        <a href="SpecimenLab-map.html">SpecimenLab</a>
+      </li>
+      <li>
+        <a href="LegalAuthenticator-map.html">LegalAuthenticator</a>
+      </li>
+      <li>
+        <a href="Payer-map.html">Payer</a>
+      </li>
+      <li>
+        <a href="Order-map.html">Order</a>
+      </li>
+      <li>
+        <a href="Subject-map.html">Subject</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">About
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="contributors.html">Authors and contributors</a>
+      </li>
+      <li>
+        <a href="knownIusses.html">Known Issues</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Bundle: Microbiology Culture + Susceptibility</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 Europe Laboratory Report, published by HL7 Europe. This guide is not an authorized publication; it is the continuous build for version 0.2.0-ci built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-eu/laboratory/tree/tx">https://github.com/hl7-eu/laboratory/tree/tx</a> and changes regularly. See the <a href="http://hl7.eu/fhir/laboratory/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-BundleLabResultMicroCultureSusc.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-BundleLabResultMicroCultureSusc.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-BundleLabResultMicroCultureSusc.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Bundle: Bundle: Microbiology Culture + Susceptibility</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Details</b></p><p class="res-header-id"><b>Generated Narrative: Bundle Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30</b></p><a name="BundleLabResultMicroCultureSusc"> </a><a name="hcBundleLabResultMicroCultureSusc"> </a><a name="BundleLabResultMicroCultureSusc-en-US"> </a></div><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Subject</b></p><p class="res-header-id"><b>Generated Narrative: Patient 5bb42c3f-56fb-4bbc-b939-73910a6cce3b</b></p><a name="BundleLabResultMicroCultureSusc/5bb42c3f-56fb-4bbc-b939-73910a6cce3b"> </a><a name="hcBundleLabResultMicroCultureSusc/5bb42c3f-56fb-4bbc-b939-73910a6cce3b"> </a><a name="BundleLabResultMicroCultureSusc/5bb42c3f-56fb-4bbc-b939-73910a6cce3b-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></div><hr/><div style="border: 1px solid maroon; padding: 10px; background-color: #f2faf9; min-height: 160px;"><p><b>Document Content</b></p><div><h2>Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</h2></div><div><h3>Gram Stain</h3></div><div><h3>Aerobic Culture</h3></div><div><h3>Anaerobic Culture</h3></div></div><hr/><h2>Additional Resources Included in Document</h2><a name="urn-uuid-4789a3ee-92b1-41b2-9b97-83daacf2a239"> </a><a name="Composition_4789a3ee-92b1-41b2-9b97-83daacf2a239"> </a><a name="hcComposition_4789a3ee-92b1-41b2-9b97-83daacf2a239"> </a><hr/><p>Entry 1 - fullUrl = urn:uuid:4789a3ee-92b1-41b2-9b97-83daacf2a239</p><p>Resource Composition:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Composition 4789a3ee-92b1-41b2-9b97-83daacf2a239</b></p><a name="BundleLabResultMicroCultureSusc/4789a3ee-92b1-41b2-9b97-83daacf2a239"> </a><a name="hcBundleLabResultMicroCultureSusc/4789a3ee-92b1-41b2-9b97-83daacf2a239"> </a><a name="BundleLabResultMicroCultureSusc/4789a3ee-92b1-41b2-9b97-83daacf2a239-en-US"> </a><p><b>identifier</b>: <a href="http://terminology.hl7.org/5.3.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</p><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 26436-6}">Laboratory Studies (set)</span></p><p><b>date</b>: 2022-10-25 14:30:00+0100</p><p><b>author</b>: MUDr. Aleš Procházka</p><p><b>title</b>: Laboratory Report Bacterial Aerobic &amp; Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://hl7.org/fhir/composition-attestation-mode legal}">Legal</span></td><td>2020-12-27 14:30:00+0100</td><td><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></td></tr></table><p><b>custodian</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></blockquote><a name="urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b"> </a><a name="Patient_5bb42c3f-56fb-4bbc-b939-73910a6cce3b"> </a><a name="hcPatient_5bb42c3f-56fb-4bbc-b939-73910a6cce3b"> </a><hr/><p>Entry 2 - fullUrl = urn:uuid:5bb42c3f-56fb-4bbc-b939-73910a6cce3b</p><p>Resource Patient:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Patient 5bb42c3f-56fb-4bbc-b939-73910a6cce3b</b></p><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">František Očkovaný  Male, DoB: 2000-03-21 ( National Insurance Payor Identifier (Payor))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>urn:oid:1.2.203.24341.1.20.9.1</code>/A225961454</li><li>Passport number/5484136</li></ul></td></tr></table></blockquote><a name="urn-uuid-b864303b-91ab-4e29-ad74-31a7d6566875"> </a><a name="DiagnosticReport_b864303b-91ab-4e29-ad74-31a7d6566875"> </a><a name="hcDiagnosticReport_b864303b-91ab-4e29-ad74-31a7d6566875"> </a><hr/><p>Entry 3 - fullUrl = urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875</p><p>Resource DiagnosticReport:</p><blockquote><p class="res-header-id"><b>Generated Narrative: DiagnosticReport b864303b-91ab-4e29-ad74-31a7d6566875</b></p><a name="BundleLabResultMicroCultureSusc/b864303b-91ab-4e29-ad74-31a7d6566875"> </a><a name="hcBundleLabResultMicroCultureSusc/b864303b-91ab-4e29-ad74-31a7d6566875"> </a><a name="BundleLabResultMicroCultureSusc/b864303b-91ab-4e29-ad74-31a7d6566875-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}">Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</span> (<span title="Codes:{http://loinc.org 26436-6}">Laboratory Studies (set)</span>) </h2><table class="grid"><tr><td>Subject</td><td>Not done yet</td></tr><tr><td>When For</td><td>2022-10-25 13:35:00+0100</td></tr><tr><td>Performer</td><td> MUDr. Aleš Procházka</td></tr><tr><td>Identifier</td><td> <a href="http://terminology.hl7.org/5.3.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td/><td/></tr><tr><td/><td/></tr><tr><td/><td/></tr></table></blockquote><a name="urn-uuid-bab0016e-1800-4e54-b595-72bd9041ffbc"> </a><a name="Specimen_bab0016e-1800-4e54-b595-72bd9041ffbc"> </a><a name="hcSpecimen_bab0016e-1800-4e54-b595-72bd9041ffbc"> </a><hr/><p>Entry 4 - fullUrl = urn:uuid:bab0016e-1800-4e54-b595-72bd9041ffbc</p><p>Resource Specimen:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Specimen bab0016e-1800-4e54-b595-72bd9041ffbc</b></p><a name="BundleLabResultMicroCultureSusc/bab0016e-1800-4e54-b595-72bd9041ffbc"> </a><a name="hcBundleLabResultMicroCultureSusc/bab0016e-1800-4e54-b595-72bd9041ffbc"> </a><a name="BundleLabResultMicroCultureSusc/bab0016e-1800-4e54-b595-72bd9041ffbc-en-US"> </a><p><b>status</b>: Available</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 119365002}">Specimen from wound</span></p><h3>Collections</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Collected[x]</b></td></tr><tr><td style="display: none">*</td><td>2022-10-25 13:35:00+0100</td></tr></table></blockquote><a name="urn-uuid-40278a69-87aa-470f-a38f-bff1e8aee175"> </a><a name="Observation_40278a69-87aa-470f-a38f-bff1e8aee175"> </a><a name="hcObservation_40278a69-87aa-470f-a38f-bff1e8aee175"> </a><hr/><p>Entry 5 - fullUrl = urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 40278a69-87aa-470f-a38f-bff1e8aee175</b></p><a name="BundleLabResultMicroCultureSusc/40278a69-87aa-470f-a38f-bff1e8aee175"> </a><a name="hcBundleLabResultMicroCultureSusc/40278a69-87aa-470f-a38f-bff1e8aee175"> </a><a name="BundleLabResultMicroCultureSusc/40278a69-87aa-470f-a38f-bff1e8aee175-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Gram Stain</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1097929f-890e-4e27-a31d-58599f3e2479">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-fcf220c3-7f3e-44f8-b669-48552a20fa0a">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-331d513e-a57f-4464-9eec-25533aeb6d06">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-1097929f-890e-4e27-a31d-58599f3e2479"> </a><a name="Observation_1097929f-890e-4e27-a31d-58599f3e2479"> </a><a name="hcObservation_1097929f-890e-4e27-a31d-58599f3e2479"> </a><hr/><p>Entry 6 - fullUrl = urn:uuid:1097929f-890e-4e27-a31d-58599f3e2479</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 1097929f-890e-4e27-a31d-58599f3e2479</b></p><a name="BundleLabResultMicroCultureSusc/1097929f-890e-4e27-a31d-58599f3e2479"> </a><a name="hcBundleLabResultMicroCultureSusc/1097929f-890e-4e27-a31d-58599f3e2479"> </a><a name="BundleLabResultMicroCultureSusc/1097929f-890e-4e27-a31d-58599f3e2479-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 72163-9}">Leukocytes [Presence] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 2667000}">None observed</span></p></blockquote><a name="urn-uuid-fcf220c3-7f3e-44f8-b669-48552a20fa0a"> </a><a name="Observation_fcf220c3-7f3e-44f8-b669-48552a20fa0a"> </a><a name="hcObservation_fcf220c3-7f3e-44f8-b669-48552a20fa0a"> </a><hr/><p>Entry 7 - fullUrl = urn:uuid:fcf220c3-7f3e-44f8-b669-48552a20fa0a</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation fcf220c3-7f3e-44f8-b669-48552a20fa0a</b></p><a name="BundleLabResultMicroCultureSusc/fcf220c3-7f3e-44f8-b669-48552a20fa0a"> </a><a name="hcBundleLabResultMicroCultureSusc/fcf220c3-7f3e-44f8-b669-48552a20fa0a"> </a><a name="BundleLabResultMicroCultureSusc/fcf220c3-7f3e-44f8-b669-48552a20fa0a-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 664-3}">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 70003006}">Gram-positive cocci in clusters</span></p><p><b>hasMember</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></blockquote><a name="urn-uuid-2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"> </a><a name="Observation_2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"> </a><a name="hcObservation_2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"> </a><hr/><p>Entry 8 - fullUrl = urn:uuid:2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e</b></p><a name="BundleLabResultMicroCultureSusc/2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"> </a><a name="hcBundleLabResultMicroCultureSusc/2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e"> </a><a name="BundleLabResultMicroCultureSusc/2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Observed Quantity</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 441614007}">+</span></p></blockquote><a name="urn-uuid-331d513e-a57f-4464-9eec-25533aeb6d06"> </a><a name="Observation_331d513e-a57f-4464-9eec-25533aeb6d06"> </a><a name="hcObservation_331d513e-a57f-4464-9eec-25533aeb6d06"> </a><hr/><p>Entry 9 - fullUrl = urn:uuid:331d513e-a57f-4464-9eec-25533aeb6d06</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 331d513e-a57f-4464-9eec-25533aeb6d06</b></p><a name="BundleLabResultMicroCultureSusc/331d513e-a57f-4464-9eec-25533aeb6d06"> </a><a name="hcBundleLabResultMicroCultureSusc/331d513e-a57f-4464-9eec-25533aeb6d06"> </a><a name="BundleLabResultMicroCultureSusc/331d513e-a57f-4464-9eec-25533aeb6d06-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 664-3}">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 87172008}">Gram-negative rods</span></p><p><b>hasMember</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-931c6459-0fb0-4f02-8268-08e6d94a8f5c">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p></blockquote><a name="urn-uuid-931c6459-0fb0-4f02-8268-08e6d94a8f5c"> </a><a name="Observation_931c6459-0fb0-4f02-8268-08e6d94a8f5c"> </a><a name="hcObservation_931c6459-0fb0-4f02-8268-08e6d94a8f5c"> </a><hr/><p>Entry 10 - fullUrl = urn:uuid:931c6459-0fb0-4f02-8268-08e6d94a8f5c</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 931c6459-0fb0-4f02-8268-08e6d94a8f5c</b></p><a name="BundleLabResultMicroCultureSusc/931c6459-0fb0-4f02-8268-08e6d94a8f5c"> </a><a name="hcBundleLabResultMicroCultureSusc/931c6459-0fb0-4f02-8268-08e6d94a8f5c"> </a><a name="BundleLabResultMicroCultureSusc/931c6459-0fb0-4f02-8268-08e6d94a8f5c-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Observed Quantity</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 441517005}">++</span></p></blockquote><a name="urn-uuid-8754019d-256b-4df9-94f2-f80c07e08d47"> </a><a name="Observation_8754019d-256b-4df9-94f2-f80c07e08d47"> </a><a name="hcObservation_8754019d-256b-4df9-94f2-f80c07e08d47"> </a><hr/><p>Entry 11 - fullUrl = urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 8754019d-256b-4df9-94f2-f80c07e08d47</b></p><a name="BundleLabResultMicroCultureSusc/8754019d-256b-4df9-94f2-f80c07e08d47"> </a><a name="hcBundleLabResultMicroCultureSusc/8754019d-256b-4df9-94f2-f80c07e08d47"> </a><a name="BundleLabResultMicroCultureSusc/8754019d-256b-4df9-94f2-f80c07e08d47-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Aerobic Culture</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-083ee3df-1381-4ed2-849f-77808eb81a36">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-d49839fe-515c-44b6-8d19-3cc5d48feb49">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-083ee3df-1381-4ed2-849f-77808eb81a36"> </a><a name="Observation_083ee3df-1381-4ed2-849f-77808eb81a36"> </a><a name="hcObservation_083ee3df-1381-4ed2-849f-77808eb81a36"> </a><hr/><p>Entry 12 - fullUrl = urn:uuid:083ee3df-1381-4ed2-849f-77808eb81a36</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 083ee3df-1381-4ed2-849f-77808eb81a36</b></p><a name="BundleLabResultMicroCultureSusc/083ee3df-1381-4ed2-849f-77808eb81a36"> </a><a name="hcBundleLabResultMicroCultureSusc/083ee3df-1381-4ed2-849f-77808eb81a36"> </a><a name="BundleLabResultMicroCultureSusc/083ee3df-1381-4ed2-849f-77808eb81a36-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 634-6}">Bacteria identified in Specimen by Aerobe culture</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 3092008}">Staphylococcus aureus</span></p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-758d2270-a997-4a8f-872f-b3fbaef209fa">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-61f8e930-46e0-41ab-9448-0d1dc74925df">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-758d2270-a997-4a8f-872f-b3fbaef209fa"> </a><a name="Observation_758d2270-a997-4a8f-872f-b3fbaef209fa"> </a><a name="hcObservation_758d2270-a997-4a8f-872f-b3fbaef209fa"> </a><hr/><p>Entry 13 - fullUrl = urn:uuid:758d2270-a997-4a8f-872f-b3fbaef209fa</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 758d2270-a997-4a8f-872f-b3fbaef209fa</b></p><a name="BundleLabResultMicroCultureSusc/758d2270-a997-4a8f-872f-b3fbaef209fa"> </a><a name="hcBundleLabResultMicroCultureSusc/758d2270-a997-4a8f-872f-b3fbaef209fa"> </a><a name="BundleLabResultMicroCultureSusc/758d2270-a997-4a8f-872f-b3fbaef209fa-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Microorganism Growth</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 441517005}">++</span></p></blockquote><a name="urn-uuid-61f8e930-46e0-41ab-9448-0d1dc74925df"> </a><a name="Observation_61f8e930-46e0-41ab-9448-0d1dc74925df"> </a><a name="hcObservation_61f8e930-46e0-41ab-9448-0d1dc74925df"> </a><hr/><p>Entry 14 - fullUrl = urn:uuid:61f8e930-46e0-41ab-9448-0d1dc74925df</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 61f8e930-46e0-41ab-9448-0d1dc74925df</b></p><a name="BundleLabResultMicroCultureSusc/61f8e930-46e0-41ab-9448-0d1dc74925df"> </a><a name="hcBundleLabResultMicroCultureSusc/61f8e930-46e0-41ab-9448-0d1dc74925df"> </a><a name="BundleLabResultMicroCultureSusc/61f8e930-46e0-41ab-9448-0d1dc74925df-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 29576-6}">Bacterial susceptibility panel</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-85230b86-9b90-4faf-a750-d5fa82520ce9">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1fb64f47-4272-43ae-a119-c3b4c3367829">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-af249f79-f487-4533-9935-d19ab7043724">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-a4469ca9-d0be-4c58-853a-44cea24484b8">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-85230b86-9b90-4faf-a750-d5fa82520ce9"> </a><a name="Observation_85230b86-9b90-4faf-a750-d5fa82520ce9"> </a><a name="hcObservation_85230b86-9b90-4faf-a750-d5fa82520ce9"> </a><hr/><p>Entry 15 - fullUrl = urn:uuid:85230b86-9b90-4faf-a750-d5fa82520ce9</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 85230b86-9b90-4faf-a750-d5fa82520ce9</b></p><a name="BundleLabResultMicroCultureSusc/85230b86-9b90-4faf-a750-d5fa82520ce9"> </a><a name="hcBundleLabResultMicroCultureSusc/85230b86-9b90-4faf-a750-d5fa82520ce9"> </a><a name="BundleLabResultMicroCultureSusc/85230b86-9b90-4faf-a750-d5fa82520ce9-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18900-1}">Cephalothin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=2 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><a name="urn-uuid-1fb64f47-4272-43ae-a119-c3b4c3367829"> </a><a name="Observation_1fb64f47-4272-43ae-a119-c3b4c3367829"> </a><a name="hcObservation_1fb64f47-4272-43ae-a119-c3b4c3367829"> </a><hr/><p>Entry 16 - fullUrl = urn:uuid:1fb64f47-4272-43ae-a119-c3b4c3367829</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 1fb64f47-4272-43ae-a119-c3b4c3367829</b></p><a name="BundleLabResultMicroCultureSusc/1fb64f47-4272-43ae-a119-c3b4c3367829"> </a><a name="hcBundleLabResultMicroCultureSusc/1fb64f47-4272-43ae-a119-c3b4c3367829"> </a><a name="BundleLabResultMicroCultureSusc/1fb64f47-4272-43ae-a119-c3b4c3367829-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 20629-2}">levoFLOXacin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;4 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}">Resistant</span></p></blockquote><a name="urn-uuid-af249f79-f487-4533-9935-d19ab7043724"> </a><a name="Observation_af249f79-f487-4533-9935-d19ab7043724"> </a><a name="hcObservation_af249f79-f487-4533-9935-d19ab7043724"> </a><hr/><p>Entry 17 - fullUrl = urn:uuid:af249f79-f487-4533-9935-d19ab7043724</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation af249f79-f487-4533-9935-d19ab7043724</b></p><a name="BundleLabResultMicroCultureSusc/af249f79-f487-4533-9935-d19ab7043724"> </a><a name="hcBundleLabResultMicroCultureSusc/af249f79-f487-4533-9935-d19ab7043724"> </a><a name="BundleLabResultMicroCultureSusc/af249f79-f487-4533-9935-d19ab7043724-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18961-3}">Oxacillin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: 0.5 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><a name="urn-uuid-a4469ca9-d0be-4c58-853a-44cea24484b8"> </a><a name="Observation_a4469ca9-d0be-4c58-853a-44cea24484b8"> </a><a name="hcObservation_a4469ca9-d0be-4c58-853a-44cea24484b8"> </a><hr/><p>Entry 18 - fullUrl = urn:uuid:a4469ca9-d0be-4c58-853a-44cea24484b8</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation a4469ca9-d0be-4c58-853a-44cea24484b8</b></p><a name="BundleLabResultMicroCultureSusc/a4469ca9-d0be-4c58-853a-44cea24484b8"> </a><a name="hcBundleLabResultMicroCultureSusc/a4469ca9-d0be-4c58-853a-44cea24484b8"> </a><a name="BundleLabResultMicroCultureSusc/a4469ca9-d0be-4c58-853a-44cea24484b8-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 19000-9}">Vancomycin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><a name="urn-uuid-d49839fe-515c-44b6-8d19-3cc5d48feb49"> </a><a name="Observation_d49839fe-515c-44b6-8d19-3cc5d48feb49"> </a><a name="hcObservation_d49839fe-515c-44b6-8d19-3cc5d48feb49"> </a><hr/><p>Entry 19 - fullUrl = urn:uuid:d49839fe-515c-44b6-8d19-3cc5d48feb49</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation d49839fe-515c-44b6-8d19-3cc5d48feb49</b></p><a name="BundleLabResultMicroCultureSusc/d49839fe-515c-44b6-8d19-3cc5d48feb49"> </a><a name="hcBundleLabResultMicroCultureSusc/d49839fe-515c-44b6-8d19-3cc5d48feb49"> </a><a name="BundleLabResultMicroCultureSusc/d49839fe-515c-44b6-8d19-3cc5d48feb49-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 634-6}">Bacteria identified in Specimen by Aerobe culture</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 40886007}">Klebsiella oxytoca</span></p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-1ada4aeb-37cd-4d76-9815-46f627f5036c">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-d1636a51-d6c7-48de-9de6-29d741c96937">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-1ada4aeb-37cd-4d76-9815-46f627f5036c"> </a><a name="Observation_1ada4aeb-37cd-4d76-9815-46f627f5036c"> </a><a name="hcObservation_1ada4aeb-37cd-4d76-9815-46f627f5036c"> </a><hr/><p>Entry 20 - fullUrl = urn:uuid:1ada4aeb-37cd-4d76-9815-46f627f5036c</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 1ada4aeb-37cd-4d76-9815-46f627f5036c</b></p><a name="BundleLabResultMicroCultureSusc/1ada4aeb-37cd-4d76-9815-46f627f5036c"> </a><a name="hcBundleLabResultMicroCultureSusc/1ada4aeb-37cd-4d76-9815-46f627f5036c"> </a><a name="BundleLabResultMicroCultureSusc/1ada4aeb-37cd-4d76-9815-46f627f5036c-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:">Microorganism Growth</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 263866000}">Scanty growth</span></p></blockquote><a name="urn-uuid-d1636a51-d6c7-48de-9de6-29d741c96937"> </a><a name="Observation_d1636a51-d6c7-48de-9de6-29d741c96937"> </a><a name="hcObservation_d1636a51-d6c7-48de-9de6-29d741c96937"> </a><hr/><p>Entry 21 - fullUrl = urn:uuid:d1636a51-d6c7-48de-9de6-29d741c96937</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation d1636a51-d6c7-48de-9de6-29d741c96937</b></p><a name="BundleLabResultMicroCultureSusc/d1636a51-d6c7-48de-9de6-29d741c96937"> </a><a name="hcBundleLabResultMicroCultureSusc/d1636a51-d6c7-48de-9de6-29d741c96937"> </a><a name="BundleLabResultMicroCultureSusc/d1636a51-d6c7-48de-9de6-29d741c96937-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 29576-6}">Bacterial susceptibility panel</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>hasMember</b>: </p><ul><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-7b52c241-226a-43d3-ba6a-f2ca18d5b0dd">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-3923e71d-31b0-49d3-94f0-2c311600e54d">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-66e76861-53ed-4560-aa54-2efa5b4aff64">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li><li><a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5601b27d-69a7-44eb-be1a-af632aa54109">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></li></ul></blockquote><a name="urn-uuid-7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"> </a><a name="Observation_7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"> </a><a name="hcObservation_7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"> </a><hr/><p>Entry 22 - fullUrl = urn:uuid:7b52c241-226a-43d3-ba6a-f2ca18d5b0dd</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 7b52c241-226a-43d3-ba6a-f2ca18d5b0dd</b></p><a name="BundleLabResultMicroCultureSusc/7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"> </a><a name="hcBundleLabResultMicroCultureSusc/7b52c241-226a-43d3-ba6a-f2ca18d5b0dd"> </a><a name="BundleLabResultMicroCultureSusc/7b52c241-226a-43d3-ba6a-f2ca18d5b0dd-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18864-9}">Ampicillin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;16 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}">Resistant</span></p></blockquote><a name="urn-uuid-3923e71d-31b0-49d3-94f0-2c311600e54d"> </a><a name="Observation_3923e71d-31b0-49d3-94f0-2c311600e54d"> </a><a name="hcObservation_3923e71d-31b0-49d3-94f0-2c311600e54d"> </a><hr/><p>Entry 23 - fullUrl = urn:uuid:3923e71d-31b0-49d3-94f0-2c311600e54d</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 3923e71d-31b0-49d3-94f0-2c311600e54d</b></p><a name="BundleLabResultMicroCultureSusc/3923e71d-31b0-49d3-94f0-2c311600e54d"> </a><a name="hcBundleLabResultMicroCultureSusc/3923e71d-31b0-49d3-94f0-2c311600e54d"> </a><a name="BundleLabResultMicroCultureSusc/3923e71d-31b0-49d3-94f0-2c311600e54d-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18906-8}">Ciprofloxacin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=0.5 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><a name="urn-uuid-66e76861-53ed-4560-aa54-2efa5b4aff64"> </a><a name="Observation_66e76861-53ed-4560-aa54-2efa5b4aff64"> </a><a name="hcObservation_66e76861-53ed-4560-aa54-2efa5b4aff64"> </a><hr/><p>Entry 24 - fullUrl = urn:uuid:66e76861-53ed-4560-aa54-2efa5b4aff64</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 66e76861-53ed-4560-aa54-2efa5b4aff64</b></p><a name="BundleLabResultMicroCultureSusc/66e76861-53ed-4560-aa54-2efa5b4aff64"> </a><a name="hcBundleLabResultMicroCultureSusc/66e76861-53ed-4560-aa54-2efa5b4aff64"> </a><a name="BundleLabResultMicroCultureSusc/66e76861-53ed-4560-aa54-2efa5b4aff64-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18928-2}">Gentamicin [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &gt;8 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation R}">Resistant</span></p></blockquote><a name="urn-uuid-5601b27d-69a7-44eb-be1a-af632aa54109"> </a><a name="Observation_5601b27d-69a7-44eb-be1a-af632aa54109"> </a><a name="hcObservation_5601b27d-69a7-44eb-be1a-af632aa54109"> </a><hr/><p>Entry 25 - fullUrl = urn:uuid:5601b27d-69a7-44eb-be1a-af632aa54109</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 5601b27d-69a7-44eb-be1a-af632aa54109</b></p><a name="BundleLabResultMicroCultureSusc/5601b27d-69a7-44eb-be1a-af632aa54109"> </a><a name="hcBundleLabResultMicroCultureSusc/5601b27d-69a7-44eb-be1a-af632aa54109"> </a><a name="BundleLabResultMicroCultureSusc/5601b27d-69a7-44eb-be1a-af632aa54109-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 18932-4}">Imipenem [Susceptibility]</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: &lt;=1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p></blockquote><a name="urn-uuid-5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"> </a><a name="Observation_5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"> </a><a name="hcObservation_5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"> </a><hr/><p>Entry 26 - fullUrl = urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e</p><p>Resource Observation:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Observation 5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e</b></p><a name="BundleLabResultMicroCultureSusc/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"> </a><a name="hcBundleLabResultMicroCultureSusc/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e"> </a><a name="BundleLabResultMicroCultureSusc/5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 635-3}">Anaerobic Culture</span></p><p><b>subject</b>: <a href="Bundle-BundleLabResultMicroCultureSusc.html#urn-uuid-5bb42c3f-56fb-4bbc-b939-73910a6cce3b">Bundle: identifier = http://example.org#V1CZ454557891308174803488707671420; type = document; timestamp = 2022-10-25 14:30:00+0100</a></p><p><b>effective</b>: 2022-10-25 13:35:00+0100</p><p><b>performer</b>: MUDr. Aleš Procházka</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 264868006}">No growth</span></p></blockquote><a name="urn-uuid-1e139f41-4d0f-43dd-ad5a-98003c520349"> </a><a name="Organization_1e139f41-4d0f-43dd-ad5a-98003c520349"> </a><a name="hcOrganization_1e139f41-4d0f-43dd-ad5a-98003c520349"> </a><hr/><p>Entry 27 - fullUrl = urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349</p><p>Resource Organization:</p><blockquote><p class="res-header-id"><b>Generated Narrative: Organization 1e139f41-4d0f-43dd-ad5a-98003c520349</b></p><a name="BundleLabResultMicroCultureSusc/1e139f41-4d0f-43dd-ad5a-98003c520349"> </a><a name="hcBundleLabResultMicroCultureSusc/1e139f41-4d0f-43dd-ad5a-98003c520349"> </a><a name="BundleLabResultMicroCultureSusc/1e139f41-4d0f-43dd-ad5a-98003c520349-en-US"> </a><p><b>identifier</b>: <code>http://example.org/czech-orgs</code>/24341</p><p><b>name</b>: Ministry of Health of the Czech Republic</p></blockquote></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7.eu">HL7 Europe</a>.  Package hl7.fhir.eu.laboratory#0.2.0-ci based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Nov 18, 2024 16:52+0000">2024-11-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <div style="color: #333333">
+
+  Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+  <a style="color: #81BEF7" href="qa.html">QA Report</a>
+  <!--
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.eu/fhir/laboratory/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+-->
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;"
+      alt="CC0" src="cc0.png" /></a>
+  <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+  <a style="color: #81BEF7" target="_blank" href="http://jira.hl7.org">Propose a change<img alt="external"
+      style="vertical-align: baseline" src="external.png" /></a>
+
+  <div>
+  </div>
+
+</div>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

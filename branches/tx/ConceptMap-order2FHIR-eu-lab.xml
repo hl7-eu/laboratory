@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="order2FHIR-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap order2FHIR-eu-lab</b></p><a name="order2FHIR-eu-lab"> </a><a name="hcorder2FHIR-eu-lab"> </a><a name="order2FHIR-eu-lab-en-US"> </a><p>Mapping from <a href="StructureDefinition-Order.html">A2, A3 - Order</a> to <a href="StructureDefinition-ServiceRequest-eu-lab.html">ServiceRequest: Laboratory Order</a></p><br/><p><b>Group 1 </b>Mapping from <a href="StructureDefinition-Order.html">A2, A3 - Order</a> to <a href="StructureDefinition-ServiceRequest-eu-lab.html">ServiceRequest: Laboratory Order</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td><td><b>Comment</b></td></tr><tr><td>Order.orderDetails (A.2 Order information)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest</td><td/></tr><tr><td>Order.orderDetails.identifier (A.2.1 Order Id)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.identifier</td><td/></tr><tr><td>Order.orderDetails.identifier (A.2.1 Order Id)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requisition</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.dateTime (A.2.2 Order date and time)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.authoredOn</td><td/></tr><tr><td>Order.orderDetails.orderPlacerIdentifier (A.2.3 Order placer identifier)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requester.identifier</td><td>if the Composite Request ID.</td></tr><tr><td>Order.orderDetails.orderPlacerName (A.2.4 Order placer name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requester.name</td><td>requester.resolve().ofType(Practitioner).name</td></tr><tr><td>Order.orderDetails.orderPlacerName (A.2.4 Order placer name)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requester.Practitioner.name</td><td>requester.resolve().ofType(PractitionerRole).Practitioner.resolve().name</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(Practitioner).telecom</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requester.address</td><td>requester.resolve().ofType(Practitioner).address</td></tr><tr><td>Order.orderDetails.orderPlacerContacts (A.2.5 Order placer contact details)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.requester.telecom</td><td>requester.resolve().ofType(PractitionerRole).telecom</td></tr><tr><td>Order.orderDetails.orderPlacerOrganization (A.2.6 Order placer organization)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.requester.organization</td><td>requester.resolve().ofType(PractitionerRole).organization.resolve()</td></tr><tr><td>Order.reason (A.3 Order reason)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.reasonCode</td><td/></tr><tr><td>Order.reason (A.3 Order reason)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#relatedto" title="relatedto">is related to</a></td><td>ServiceRequest.reasonReference</td><td/></tr><tr><td>Order.reason.code (A.3.1 Problem / diagnosis / condition description)</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>ServiceRequest.reasonCode</td><td/></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ConceptMap/order2FHIR-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="Order2Fhir"/>
+  <title value="eHN Order to this guide Map"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="eHN Order to this guide Map"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="It shows how the Order data set defined by the EU eHN guidelines is mapped into this guide"/>
+  <copyright value="Used by permission of HL7 Europe, all rights reserved Creative Commons License"/>
+  <sourceUri value="http://hl7.eu/fhir/laboratory/StructureDefinition/Order"/>
+  <targetUri value="http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"/>
+  <group>
+    <source value="http://hl7.eu/fhir/laboratory/StructureDefinition/Order"/>
+    <target value="http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab"/>
+    <element>
+      <code value="Order.orderDetails"/>
+      <display value="A.2 Order information"/>
+      <target>
+        <code value="ServiceRequest"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.identifier"/>
+      <display value="A.2.1 Order Id"/>
+      <target>
+        <code value="ServiceRequest.identifier"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.identifier"/>
+      <display value="A.2.1 Order Id"/>
+      <target>
+        <code value="ServiceRequest.requisition"/>
+        <equivalence value="relatedto"/>
+        <comment value="if the Composite Request ID."/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.dateTime"/>
+      <display value="A.2.2 Order date and time"/>
+      <target>
+        <code value="ServiceRequest.authoredOn"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerIdentifier"/>
+      <display value="A.2.3 Order placer identifier"/>
+      <target>
+        <code value="ServiceRequest.requester.identifier"/>
+        <equivalence value="relatedto"/>
+        <comment value="if the Composite Request ID."/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerName"/>
+      <display value="A.2.4 Order placer name"/>
+      <target>
+        <code value="ServiceRequest.requester.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="requester.resolve().ofType(Practitioner).name"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerName"/>
+      <display value="A.2.4 Order placer name"/>
+      <target>
+        <code value="ServiceRequest.requester.Practitioner.name"/>
+        <equivalence value="relatedto"/>
+        <comment value="requester.resolve().ofType(PractitionerRole).Practitioner.resolve().name"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerContacts"/>
+      <display value="A.2.5 Order placer contact details"/>
+      <target>
+        <code value="ServiceRequest.requester.telecom"/>
+        <equivalence value="relatedto"/>
+        <comment value="requester.resolve().ofType(Practitioner).telecom"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerContacts"/>
+      <display value="A.2.5 Order placer contact details"/>
+      <target>
+        <code value="ServiceRequest.requester.address"/>
+        <equivalence value="relatedto"/>
+        <comment value="requester.resolve().ofType(Practitioner).address"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerContacts"/>
+      <display value="A.2.5 Order placer contact details"/>
+      <target>
+        <code value="ServiceRequest.requester.telecom"/>
+        <equivalence value="relatedto"/>
+        <comment value="requester.resolve().ofType(PractitionerRole).telecom"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.orderDetails.orderPlacerOrganization"/>
+      <display value="A.2.6 Order placer organization"/>
+      <target>
+        <code value="ServiceRequest.requester.organization"/>
+        <equivalence value="equivalent"/>
+        <comment value="requester.resolve().ofType(PractitionerRole).organization.resolve()"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.reason"/>
+      <display value="A.3 Order reason"/>
+      <target>
+        <code value="ServiceRequest.reasonCode"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.reason"/>
+      <display value="A.3 Order reason"/>
+      <target>
+        <code value="ServiceRequest.reasonReference"/>
+        <equivalence value="relatedto"/>
+      </target>
+    </element>
+    <element>
+      <code value="Order.reason.code"/>
+      <display value="A.3.1 Problem / diagnosis / condition description"/>
+      <target>
+        <code value="ServiceRequest.reasonCode"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

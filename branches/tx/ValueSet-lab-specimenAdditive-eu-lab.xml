@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-specimenAdditive-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-specimenAdditive-eu-lab</b></p><a name="lab-specimenAdditive-eu-lab"> </a><a name="hclab-specimenAdditive-eu-lab"> </a><a name="lab-specimenAdditive-eu-lab-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1259913003">1259913003</a></td><td>Heparin ammonium</td></tr><tr><td><a href="http://snomed.info/id/386961008">386961008</a></td><td>Aprotinin</td></tr><tr><td><a href="http://snomed.info/id/29725000">29725000</a></td><td>Heparin calcium</td></tr><tr><td><a href="http://snomed.info/id/21611007">21611007</a></td><td>Boric acid</td></tr><tr><td><a href="http://snomed.info/id/30531001">30531001</a></td><td>Calcium oxalate</td></tr><tr><td><a href="http://snomed.info/id/69519002">69519002</a></td><td>Edetic acid</td></tr><tr><td><a href="http://snomed.info/id/372628006">372628006</a></td><td>Edetate</td></tr><tr><td><a href="http://snomed.info/id/27763000">27763000</a></td><td>Hydrochloric acid</td></tr><tr><td><a href="http://snomed.info/id/414407009">414407009</a></td><td>Hirudin</td></tr><tr><td><a href="http://snomed.info/id/1256100007">1256100007</a></td><td>Edetate dipotassium</td></tr><tr><td><a href="http://snomed.info/id/1256101006">1256101006</a></td><td>Edetate tripotassium</td></tr><tr><td><a href="http://snomed.info/id/1256102004">1256102004</a></td><td>Heparin lithium</td></tr><tr><td><a href="http://snomed.info/id/387418006">387418006</a></td><td>Edetate disodium</td></tr><tr><td><a href="http://snomed.info/id/412546005">412546005</a></td><td>Sodium citrate</td></tr><tr><td><a href="http://snomed.info/id/50045009">50045009</a></td><td>Heparin sodium</td></tr><tr><td><a href="http://snomed.info/id/6910009">6910009</a></td><td>Sodium fluoride</td></tr><tr><td><a href="http://snomed.info/id/50306007">50306007</a></td><td>Sodium tetraborate</td></tr><tr><td><a href="http://snomed.info/id/387168006">387168006</a></td><td>Mannitol</td></tr><tr><td><a href="http://snomed.info/id/115281000146102">115281000146102</a></td><td>Sodium formate</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenAdditive-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabSpecimenAdditiveEu"/>
+  <title value="Specimen Additive"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="List of the specimen additives. Additives are commonly added to the vacutainer tubes to preserve the specimen for laboratory analysis"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="1259913003"/>
+        <display value="Heparin ammonium"/>
+      </concept>
+      <concept>
+        <code value="386961008"/>
+        <display value="Aprotinin"/>
+      </concept>
+      <concept>
+        <code value="29725000"/>
+        <display value="Heparin calcium"/>
+      </concept>
+      <concept>
+        <code value="21611007"/>
+        <display value="Boric acid"/>
+      </concept>
+      <concept>
+        <code value="30531001"/>
+        <display value="Calcium oxalate"/>
+      </concept>
+      <concept>
+        <code value="69519002"/>
+        <display value="Edetic acid"/>
+      </concept>
+      <concept>
+        <code value="372628006"/>
+        <display value="Edetate"/>
+      </concept>
+      <concept>
+        <code value="27763000"/>
+        <display value="Hydrochloric acid"/>
+      </concept>
+      <concept>
+        <code value="414407009"/>
+        <display value="Hirudin"/>
+      </concept>
+      <concept>
+        <code value="1256100007"/>
+        <display value="Edetate dipotassium"/>
+      </concept>
+      <concept>
+        <code value="1256101006"/>
+        <display value="Edetate tripotassium"/>
+      </concept>
+      <concept>
+        <code value="1256102004"/>
+        <display value="Heparin lithium"/>
+      </concept>
+      <concept>
+        <code value="387418006"/>
+        <display value="Edetate disodium"/>
+      </concept>
+      <concept>
+        <code value="412546005"/>
+        <display value="Sodium citrate"/>
+      </concept>
+      <concept>
+        <code value="50045009"/>
+        <display value="Heparin sodium"/>
+      </concept>
+      <concept>
+        <code value="6910009"/>
+        <display value="Sodium fluoride"/>
+      </concept>
+      <concept>
+        <code value="50306007"/>
+        <display value="Sodium tetraborate"/>
+      </concept>
+      <concept>
+        <code value="387168006"/>
+        <display value="Mannitol"/>
+      </concept>
+      <concept>
+        <code value="115281000146102"/>
+        <display value="Sodium formate"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

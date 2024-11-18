@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="lab-technique-eu-lab"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet lab-technique-eu-lab</b></p><a name="lab-technique-eu-lab"> </a><a name="hclab-technique-eu-lab"> </a><a name="lab-technique-eu-lab-en-US"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1259932009">1259932009</a></td><td>Loop-mediated isothermal amplification technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1259933004">1259933004</a></td><td>Strand displacement amplification technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1259934005">1259934005</a></td><td>Microparticle enzyme immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1259935006">1259935006</a></td><td>Chemiluminescent immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1259936007">1259936007</a></td><td>Enzyme-linked fluorescence assay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258035006">258035006</a></td><td>High pressure liquid chromatography (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258036007">258036007</a></td><td>Immunoblotting (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258037003">258037003</a></td><td>Immunoradiometry (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258066000">258066000</a></td><td>Polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258075003">258075003</a></td><td>Serotyping (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258087005">258087005</a></td><td>Agar dilution (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/258099003">258099003</a></td><td>Fluorescence microscopy technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264272003">264272003</a></td><td>Conductivity technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264275001">264275001</a></td><td>Fluorescence polarization immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/264788002">264788002</a></td><td>Biotyping (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/278289002">278289002</a></td><td>Microscopy technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/359838000">359838000</a></td><td>Nephelometry (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66691000052100">66691000052100</a></td><td>Electrochemiluminescence immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66701000052100">66701000052100</a></td><td>Fluorescent enzyme immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66711000052103">66711000052103</a></td><td>Line immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66721000052106">66721000052106</a></td><td>Recombinant immunoblot assay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66731000052108">66731000052108</a></td><td>Immunochromatographic test technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/66741000052102">66741000052102</a></td><td>Chemiluminescent microparticle immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/68431000052104">68431000052104</a></td><td>Enzyme-linked immunosorbent assay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/702660003">702660003</a></td><td>Test strip technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/702661004">702661004</a></td><td>Light microscopy technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/702873001">702873001</a></td><td>Calculation technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/702946003">702946003</a></td><td>Coagulation technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703444002">703444002</a></td><td>Fluorescent immunoassay (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703445001">703445001</a></td><td>Ion selective electrode measurement technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703447009">703447009</a></td><td>Enzyme immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703448004">703448004</a></td><td>Latex agglutination test technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703449007">703449007</a></td><td>Radioimmunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703450007">703450007</a></td><td>Electrophoresis technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703454003">703454003</a></td><td>Centrifugation technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703458000">703458000</a></td><td>Neutralization method (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703459008">703459008</a></td><td>Westergren technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703725008">703725008</a></td><td>Culture technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703750006">703750006</a></td><td>Aerobic culture technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703751005">703751005</a></td><td>Anaerobic culture technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703752003">703752003</a></td><td>Organism specific culture technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70521000052109">70521000052109</a></td><td>Affinity chromatography technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70531000052106">70531000052106</a></td><td>Agarose gel electrophoresis technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70541000052100">70541000052100</a></td><td>Chemiluminescence technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70551000052102">70551000052102</a></td><td>Enzyme-multiplied immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70561000052104">70561000052104</a></td><td>Gas chromatography technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70581000052105">70581000052105</a></td><td>Capillary electrophoresis technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70591000052107">70591000052107</a></td><td>Pyrosequencing technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70601000052104">70601000052104</a></td><td>Real-time polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70611000052102">70611000052102</a></td><td>Melting curve technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/70621000052105">70621000052105</a></td><td>Spectrophotometric technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708058007">708058007</a></td><td>Flow cytometry technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708061008">708061008</a></td><td>Gram stain technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708062001">708062001</a></td><td>Immunodiffusion technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708063006">708063006</a></td><td>Immunoelectrophoresis technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708064000">708064000</a></td><td>Immunofixation technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708075001">708075001</a></td><td>Potassium hydroxide preparation technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708097004">708097004</a></td><td>Immunohistochemistry technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708099001">708099001</a></td><td>Rapid immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708104000">708104000</a></td><td>Agglutination technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708131002">708131002</a></td><td>Anti human globulin test technique, direct (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/708133004">708133004</a></td><td>Complement fixation technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/726449005">726449005</a></td><td>Immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/726748001">726748001</a></td><td>Radioallergosorbent testing technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/767095001">767095001</a></td><td>Direct immunofluorescence technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/767096000">767096000</a></td><td>Indirect immunofluorescence technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/83561000052101">83561000052101</a></td><td>Photometry technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/83581000052107">83581000052107</a></td><td>Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/83591000052109">83591000052109</a></td><td>Particle-enhanced turbidimetric immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/83601000052101">83601000052101</a></td><td>Potentiometry technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/83611000052104">83611000052104</a></td><td>Turbidimetry technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1304095001">1304095001</a></td><td>Refractometry (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1304230000">1304230000</a></td><td>Viscometry (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/1304094002">1304094002</a></td><td>X-ray diffraction (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab"/>
+  <version value="0.2.0-ci"/>
+  <name value="LabTechniqueEuVs"/>
+  <title value="Laboratory Techniques"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2024-11-18T16:52:16+00:00"/>
+  <publisher value="HL7 Europe"/>
+  <contact>
+    <name value="HL7 Europe"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.eu"/>
+    </telecom>
+  </contact>
+  <description value="Laboratory technique (method of measurement) used for the result measurement (based on SNOMED CT)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="150"/>
+      <display value="Europe"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="1259932009"/>
+        <display value="Loop-mediated isothermal amplification technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1259933004"/>
+        <display value="Strand displacement amplification technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1259934005"/>
+        <display value="Microparticle enzyme immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1259935006"/>
+        <display value="Chemiluminescent immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1259936007"/>
+        <display value="Enzyme-linked fluorescence assay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258035006"/>
+        <display value="High pressure liquid chromatography (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258036007"/>
+        <display value="Immunoblotting (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258037003"/>
+        <display value="Immunoradiometry (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258066000"/>
+        <display value="Polymerase chain reaction technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258075003"/>
+        <display value="Serotyping (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258087005"/>
+        <display value="Agar dilution (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="258099003"/>
+        <display value="Fluorescence microscopy technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="264272003"/>
+        <display value="Conductivity technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="264275001"/>
+        <display value="Fluorescence polarization immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="264788002"/>
+        <display value="Biotyping (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="278289002"/>
+        <display value="Microscopy technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="359838000"/>
+        <display value="Nephelometry (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66691000052100"/>
+        <display value="Electrochemiluminescence immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66701000052100"/>
+        <display value="Fluorescent enzyme immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66711000052103"/>
+        <display value="Line immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66721000052106"/>
+        <display value="Recombinant immunoblot assay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66731000052108"/>
+        <display value="Immunochromatographic test technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="66741000052102"/>
+        <display value="Chemiluminescent microparticle immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="68431000052104"/>
+        <display value="Enzyme-linked immunosorbent assay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="702660003"/>
+        <display value="Test strip technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="702661004"/>
+        <display value="Light microscopy technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="702873001"/>
+        <display value="Calculation technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="702946003"/>
+        <display value="Coagulation technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703444002"/>
+        <display value="Fluorescent immunoassay (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703445001"/>
+        <display value="Ion selective electrode measurement technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703447009"/>
+        <display value="Enzyme immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703448004"/>
+        <display value="Latex agglutination test technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703449007"/>
+        <display value="Radioimmunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703450007"/>
+        <display value="Electrophoresis technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703454003"/>
+        <display value="Centrifugation technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703458000"/>
+        <display value="Neutralization method (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703459008"/>
+        <display value="Westergren technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703725008"/>
+        <display value="Culture technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703750006"/>
+        <display value="Aerobic culture technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703751005"/>
+        <display value="Anaerobic culture technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703752003"/>
+        <display value="Organism specific culture technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70521000052109"/>
+        <display value="Affinity chromatography technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70531000052106"/>
+        <display value="Agarose gel electrophoresis technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70541000052100"/>
+        <display value="Chemiluminescence technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70551000052102"/>
+        <display value="Enzyme-multiplied immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70561000052104"/>
+        <display value="Gas chromatography technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70581000052105"/>
+        <display value="Capillary electrophoresis technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70591000052107"/>
+        <display value="Pyrosequencing technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70601000052104"/>
+        <display value="Real-time polymerase chain reaction technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70611000052102"/>
+        <display value="Melting curve technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="70621000052105"/>
+        <display value="Spectrophotometric technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708058007"/>
+        <display value="Flow cytometry technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708061008"/>
+        <display value="Gram stain technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708062001"/>
+        <display value="Immunodiffusion technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708063006"/>
+        <display value="Immunoelectrophoresis technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708064000"/>
+        <display value="Immunofixation technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708075001"/>
+        <display value="Potassium hydroxide preparation technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708097004"/>
+        <display value="Immunohistochemistry technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708099001"/>
+        <display value="Rapid immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708104000"/>
+        <display value="Agglutination technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708131002"/>
+        <display value="Anti human globulin test technique, direct (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="708133004"/>
+        <display value="Complement fixation technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="726449005"/>
+        <display value="Immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="726748001"/>
+        <display value="Radioallergosorbent testing technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="767095001"/>
+        <display value="Direct immunofluorescence technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="767096000"/>
+        <display value="Indirect immunofluorescence technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="83561000052101"/>
+        <display value="Photometry technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="83581000052107"/>
+        <display value="Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="83591000052109"/>
+        <display value="Particle-enhanced turbidimetric immunoassay technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="83601000052101"/>
+        <display value="Potentiometry technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="83611000052104"/>
+        <display value="Turbidimetry technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1304095001"/>
+        <display value="Refractometry (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1304230000"/>
+        <display value="Viscometry (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="1304094002"/>
+        <display value="X-ray diffraction (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,34 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "9b909da1-c5bf-4b1a-aa39-38e4f1561517-114",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/9b909da1-c5bf-4b1a-aa39-38e4f1561517-114",
+  "name" : "IntersectionLabOrderCodesEuVsAndLabOrderCodesEuVs",
+  "title" : "Intersection of Laboratory Order And Laboratory Order",
+  "status" : "active",
+  "date" : "2024-11-18T16:53:35+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "150",
+      "display" : "Europe"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "ORDER_OBS",
+        "op" : "=",
+        "value" : "Order"
+      }],
+      "valueSet" : ["http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips"]
+    },
+    {
+      "filter" : [{
+        "property" : "ORDER_OBS",
+        "op" : "=",
+        "value" : "Both"
+      }],
+      "valueSet" : ["http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips"]
+    }]
+  }
+}
