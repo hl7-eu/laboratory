@@ -144,7 +144,7 @@ Usage: #inline
 
 
 Instance: Inline-Patient-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8
-InstanceOf: PatientEuLab
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"
 * identifier[+].type = $v2-0203#NIIP
@@ -227,13 +227,13 @@ Usage: #inline
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 
 Instance: Inline-Instance-for-PractiotionerRole-88868d3e-7ab1-4ee5-983e-b979c4971f5c
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c"
 * practitioner = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
 
 Instance: Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MTCORV58E63L294G"
@@ -260,13 +260,13 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-PractitionerRole-84b2e517-abc2-4268-975d-b12fa8174d30
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "84b2e517-abc2-4268-975d-b12fa8174d30"
 * practitioner = Reference(urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-68740937-f732-4ff9-a2e4-bf502d2d125f
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "68740937-f732-4ff9-a2e4-bf502d2d125f"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -295,7 +295,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-0bbabe57-7c43-4211-9e19-81fcec65686d
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "0bbabe57-7c43-4211-9e19-81fcec65686d"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -308,7 +308,7 @@ Usage: #inline
 * telecom.use = #work
 
 Instance: Inl-Ins-Lab-technician-e512e2e2-9600-4c69-a269-af3ab5421e09
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "e512e2e2-9600-4c69-a269-af3ab5421e09"
 * identifier.system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
@@ -322,12 +322,12 @@ Usage: #inline
 
 
 Instance: 84476dc3-a732-455f-910e-f2b44428dcc9
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * practitioner = Reference(urn:uuid:8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3)
 
 Instance: 8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "GPSDGK80E76C765V"
@@ -351,13 +351,13 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-13792187-4721-4309-a8a4-4a57ffb4e6a1
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "13792187-4721-4309-a8a4-4a57ffb4e6a1"
 * practitioner = Reference(urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-852cec21-4ff9-4cea-b86d-00de92b46894
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "852cec21-4ff9-4cea-b86d-00de92b46894"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -399,14 +399,14 @@ Usage: #inline
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-1b4b120e-0371-4878-b4c9-b69434e84c72
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "1b4b120e-0371-4878-b4c9-b69434e84c72"
 * practitioner = Reference(urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde)
 * organization = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
 
 Instance: eb62a039-7e02-44cb-ba17-7e4fb42acdde
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MRSSIO79H59Z317K"

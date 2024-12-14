@@ -8,7 +8,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
-* subject only Reference ( PatientEuLab or PatientAnimalEu or Group  or Device or Substance or Location)
+* subject only Reference ( PatientEuCore or PatientAnimalEu or Group  or Device or Substance or Location)
 * type from LabSpecimenTypesEuVs (preferred)
 * type 0..1
   * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."

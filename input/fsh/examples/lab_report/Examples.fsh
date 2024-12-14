@@ -48,7 +48,7 @@ Usage: #example
 * section[lab-subsections].section[=].entry = Reference(obs-anaerobic-culture) // obs-anaerobic-culture
 
 Instance: pat-lab-example
-InstanceOf: PatientEuLab
+InstanceOf: PatientEuCore
 Usage: #example
 * identifier[+].type = $v2-0203#NIIP
 * identifier[=].system = "urn:oid:1.2.203.24341.1.20.2"
@@ -268,13 +268,13 @@ Usage: #example
 * valueCodeableConcept = $sct#264868006 "No growth"
 
 Instance: prrole-lab-example
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #example
 /* * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c" */
 * practitioner = Reference(pr-lab-example)
 
 Instance: pr-lab-example
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MTCORV58E63L294G"

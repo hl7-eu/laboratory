@@ -12,7 +12,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 * extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient].valueReference only Reference(PractitionerEu or Device or PatientEuLab or RelatedPerson or PractitionerRoleEu or Organization)
+* extension[information-recipient].valueReference only Reference(PractitionerEuCore or Device or PatientEuCore or RelatedPerson or PractitionerRoleEuCore or Organization)
 
 * extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
