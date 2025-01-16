@@ -16,7 +16,7 @@ The following picture provide an overview of the origin of the participants.
 |------------------|------------------|-------------|
 | Project facilitator|  Hynek Kružík | HL7 CZ/Europe |
 | Project facilitator|  Giorgio Cangioli | HL7 IT/Europe |
-| Author |  Alexander Henket   | NICTIZ, HL7 NL |
+| Author |  Alexander Henket   | Nictiz, HL7 NL |
 | Author |  Robert Hausam   | Hausam Consulting, US |
 | Author |  Ulrike Merrick  | APHL, US |
 | Author |  Daniel Karlsson | E-hälsomyndigheten, HL7 SE |

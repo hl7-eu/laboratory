@@ -5,7 +5,7 @@
 	<blockquote class="stu-note">
 		<h4>Based on order</h4>
 	<a name="dr-previous-results"> </a>
-		<p>This version of the guide uses the HL7 Europe <i>basedOn-order-or-requisition</i> extension to link this Composition to the to the order or requisition.</p>
+		<p>This version of the guide uses the HL7 Europe <i>basedOn-order-or-requisition</i> extension to link this Composition to the order or requisition.</p>
 		<p>Implementers are invited to provide their feedback about the possible adoption of the standard extension <i>event-basedOn</i> for referring the order fulfilled.</p>
 	</blockquote>
 </div>
