@@ -1,5 +1,5 @@
 Profile: PatientEuObligations
-Parent: PatientEuCore
+Parent: PatientEuLab
 Id: Patient-obl-eu-lab
 Title:    "Patient: Obligations"
 Description: "This profile defines obligations for an human Patient in FHIR for the purpose of this guide."

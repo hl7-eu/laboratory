@@ -8,10 +8,10 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
-* subject only Reference ( PatientEuCore or PatientAnimalEu or Group  or Device or Substance or Location)
+* subject only Reference ( PatientEuLab or PatientAnimalEu or Group  or Device or Substance or Location)
 * type from LabSpecimenTypesEuVs (preferred)
 * type 0..1
-  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
+  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite is present, it shall be coherent with the type"
 * parent only Reference(SpecimenEu)
 * request
   * ^short = "Why the specimen was collected."
@@ -22,7 +22,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 
 * collection
   * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
-    * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite is present, it shall be coherent with the type"
+    * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type"
   * extension contains $bodySite-reference named bodySite 0..1
   * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)

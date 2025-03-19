@@ -93,7 +93,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
 * entry contains patient 0..1
-* entry[patient].resource only Patient or PatientEuCore or PatientAnimalEu
+* entry[patient].resource only Patient or PatientEuLab or PatientAnimalEu
 
 * entry contains observation 0..*
 * entry[observation].resource only ObservationResultsLaboratoryEu
@@ -108,10 +108,10 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[organization].resource only Organization
 
 * entry contains practitioner 0..*
-* entry[practitioner].resource only PractitionerEuCore
+* entry[practitioner].resource only PractitionerEu
 
 * entry contains practitionerRole 0..*
-* entry[practitionerRole].resource only PractitionerRoleEuCore
+* entry[practitionerRole].resource only PractitionerRoleEu
 
 * entry contains bodyStructure 0..*
 * entry[bodyStructure].resource only BodyStructureEuLab

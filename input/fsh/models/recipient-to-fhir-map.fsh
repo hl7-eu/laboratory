@@ -11,8 +11,8 @@ Usage: #definition
 * experimental = true					
 * description = "eHN Recipient Model to this guide Map"					
 * purpose = "It shows how the Laboratory Report Recipient data set defined by the EU eHN guidelines is mapped into this guide"					
-* sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient"					
-* targetUri = "http://hl7.eu/fhir/StructureDefinition/information-recipient"					
+// * sourceUri = "http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient"					
+// * targetUri = "http://hl7.eu/fhir/StructureDefinition/information-recipient"					
 					
 * group[+].source = "http://hl7.eu/fhir/laboratory/StructureDefinition/Recipient"					
 * group[=].target = "http://hl7.eu/fhir/StructureDefinition/information-recipient"					

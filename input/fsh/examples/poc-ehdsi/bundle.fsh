@@ -64,7 +64,7 @@ Usage: #inline
 * performer[+].display = "Dr. Patrick Dempsey"
 
 Instance: Inline-Patient-laboratory-results-report-poc
-InstanceOf: PatientEuCore
+InstanceOf: PatientEuLab
 Usage: #inline
 * id = "1d252ca0-803c-464c-87d5-f12f73c12eda"
 * identifier[+].type = $v2-0203#NIIP

@@ -4,11 +4,11 @@ canonical: http://hl7.eu/fhir/laboratory
 name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
-status: draft # draft | active | retired | unknown
-version: 0.2.0-ci #
+status: active # draft | active | retired | unknown
+version: 0.1.1 #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -25,11 +25,9 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions: current
-  hl7.fhir.eu.base.r4: current
-
+  hl7.fhir.eu.extensions: 0.1.x
 
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -79,29 +77,6 @@ pages:
     title: Obligations
   knownIusses.md:
     title: Known Issues
-# ====  Map Pages begin ====    
-  Recipient-map.html:
-    title: Recipient Relationships
-  Result-map.html:
-    title: Result Relationships
-  Author-map.html:
-    title: Author Relationships
-  LabReport-map.html:
-    title: LabReport Relationships
-  Validator-map.html:
-    title: Validator Relationships
-  SpecimenLab-map.html:
-    title: SpecimenLab Relationships
-  LegalAuthenticator-map.html:
-    title: LegalAuthenticator Relationships
-  Payer-map.html:
-    title: Payer Relationships
-  Order-map.html:
-    title: Order Relationships
-  Subject-map.html:
-    title: Subject Relationships
-  # ====  Map Pages end ====
-
  # overview.md:
  #   title: Profiles overview
 
@@ -138,6 +113,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  auto-oid-root: 2.16.840.1.113883.2.51.22.1
   # excludexml: false
   # excludejson: false
   # excludettl: true
@@ -182,17 +158,6 @@ menu:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
     Implementation notes: notes.html
-  Model Maps:
-    Recipient: Recipient-map.html
-    Result: Result-map.html
-    Author: Author-map.html
-    LabReport: LabReport-map.html
-    Validator: Validator-map.html
-    SpecimenLab: SpecimenLab-map.html
-    LegalAuthenticator: LegalAuthenticator-map.html
-    Payer: Payer-map.html
-    Order: Order-map.html
-    Subject: Subject-map.html
   #  Profiles overview:  overview.html
   # Examples: examples.html
   Artifacts: artifacts.html

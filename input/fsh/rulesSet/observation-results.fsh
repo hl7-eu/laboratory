@@ -5,15 +5,15 @@ RuleSet: ObservationResultsEu
 * code only $CodeableConcept-uv-ips
 // * code MS
 * subject 1..
-// * subject only Reference(Patient or PatientEuCore or Group or Device or Location)
-* subject only Reference(PatientAnimalEu or PatientEuCore or Group or Device or Location)
+// * subject only Reference(Patient or PatientEuLab or Group or Device or Location)
+* subject only Reference(PatientAnimalEu or PatientEuLab or Group or Device or Location)
 * subject.reference 1..
 * effective[x] 1..
 * effective[x] only dateTime or Period
 * effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
-* performer only Reference(PractitionerEuCore or PractitionerRoleEuCore or $Organization-uv-ips or CareTeam or PatientEuCore or RelatedPerson)
+* performer only Reference(PractitionerEu or PractitionerRoleEu or $Organization-uv-ips or CareTeam or PatientEuLab or RelatedPerson)
 // * value[x] MS
 // removed circular reference
 // * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
@@ -22,6 +22,10 @@ RuleSet: ObservationResultsEu
 
 RuleSet: ObservationResultsValueEu
 //* value[x]
+
+
+// * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x] named value-r5 0..1
+
 * extension contains $observation-value-r5 named value-r5 0..1
 * extension[value-r5]
   * value[x] only Attachment
@@ -54,25 +58,34 @@ RuleSet: ObservationResultsValueEu
 * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
 * valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
+
+/* 
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
-* valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+* valueCodeableConcept ^binding.extension[+].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "ps-blood-group"
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #component
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set"
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a blood group findings value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
+* valueCodeableConcept ^binding.extension[+].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "ips-free-set"
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-snomed-ct-ips-free-set"
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a presence and absence findings (qualifier values) value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+* valueCodeableConcept ^binding.extension[+].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "ips-microorganism"
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #preferred
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-ct-ips-free-set"
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+ */

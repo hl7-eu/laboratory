@@ -20,8 +20,8 @@ RuleSet: ReportEncounterRule
 RuleSet: ReportSubjectRule
 * subject 1..
 * subject /* obeys labRpt-subject */
-// * subject only Reference (PatientEuCore or Patient or Group or Location or Device)
-* subject only Reference (PatientEuCore or PatientAnimalEu or Group or Location or Device)
+// * subject only Reference (PatientEuLab or Patient or Group or Location or Device)
+* subject only Reference (PatientEuLab or PatientAnimalEu or Group or Location or Device)
   * ^short = "Who and/or what this report is about"
   * ^definition = "Who or what this report is about. The report can be about a human patient, a living subject, a device (e.g. a machine), a location or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure)."
   * ^comment = "DiagnosticReport and Composition SHALL have the same subject"
@@ -50,7 +50,7 @@ RuleSet: ReportCategoryRule
   * ^definition = "Specifies the Report Category: usually Laboratory"
   * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
 * category only $CodeableConcept-uv-ips
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
