@@ -92,7 +92,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
-* entry contains patient 0..1
+* entry contains patient 0..*
 * entry[patient].resource only Patient or PatientEuLab or PatientAnimalEu
 
 * entry contains observation 0..*
