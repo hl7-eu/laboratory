@@ -135,7 +135,7 @@ Usage: #inline
 
 
 Instance: dc2b606f-3cf7-4711-a2ff-52da04b89e04
-InstanceOf: Patient
+InstanceOf: PatientEuCore
 Usage: #inline
 * extension.url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension.valueAddress.line = "Via voltri 3"
