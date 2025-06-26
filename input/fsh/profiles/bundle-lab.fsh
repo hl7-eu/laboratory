@@ -16,19 +16,19 @@ Severity:    #error
 
 Invariant: dr-comp-type
 Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
-Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()" 
+Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"
 Severity:    #error
 
 Invariant: dr-comp-category
 Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
-Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()" 
+Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()"
 Severity:    #error
 
 Invariant: dr-comp-identifier
 Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
 /* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists" */
 
-Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()" 
+Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
 Severity:    #error
 
 Invariant: one-comp
@@ -92,7 +92,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
-* entry contains patient 0..1
+* entry contains patient 0..*
 * entry[patient].resource only Patient or PatientEuCore or PatientAnimalEu
 
 * entry contains observation 0..*
