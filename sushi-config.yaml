@@ -25,10 +25,10 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions: current
-  hl7.fhir.eu.base.r4: current
+  hl7.fhir.eu.base: current
 
 
 #   hl7.fhir.us.mcode:
@@ -79,7 +79,7 @@ pages:
     title: Obligations
   knownIusses.md:
     title: Known Issues
-# ====  Map Pages begin ====    
+# ====  Map Pages begin ====
   Recipient-map.html:
     title: Recipient Relationships
   Result-map.html:
