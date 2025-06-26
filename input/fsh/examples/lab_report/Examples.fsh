@@ -13,7 +13,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * specimen.display = "Specimen from wound collected on October 25th, 2022"
-* result[+] = Reference(obs-gram-stain) 
+* result[+] = Reference(obs-gram-stain)
 * result[+] = Reference(obs-aerobic-culture)
 * result[+] = Reference(obs-anaerobic-culture)
 
@@ -59,8 +59,8 @@ Usage: #example
 * identifier[=].system = "urn:oid:2.16.840.1.113883.4.330.203"
 * identifier[=].value = "5484136"
 * name[+].family = "Očkovaný Moreira"
-  * extension[fathersFamily][+].valueString = "Moreira"
-  * extension[mothersFamily][+].valueString = "Očkovaný"
+//  * extension[fathersFamily][+].valueString = "Moreira"
+//  * extension[mothersFamily][+].valueString = "Očkovaný"
 * name[=].given[+] = "František"
 * gender = #male
 * birthDate = "2000-03-21"
@@ -111,7 +111,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#70003006 "Gram-positive cocci in clusters"
-* hasMember[+] = Reference(obs-gs-org1-quant) 
+* hasMember[+] = Reference(obs-gs-org1-quant)
 
 Instance: obs-gs-org1-quant
 InstanceOf: ObservationResultsLaboratoryEu
@@ -138,7 +138,7 @@ Usage: #example
 * subject = Reference(pat-lab-example)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
-* hasMember[+] = Reference(obs-org-id1) 
+* hasMember[+] = Reference(obs-org-id1)
 
 Instance: obs-org-id1
 InstanceOf: ObservationResultsLaboratoryEu
@@ -152,7 +152,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
-* hasMember[+] = Reference(obs-org-id1-growth) 
+* hasMember[+] = Reference(obs-org-id1-growth)
 * hasMember[+] = Reference(obs-org-id1-susc-panel)
 
 Instance: obs-org-id1-growth
