@@ -116,7 +116,7 @@ Usage: #inline
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture Inline-Observation-anaerobic-culture
 
 Instance: Inline-Patient-micro
-InstanceOf: Patient
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "5bb42c3f-56fb-4bbc-b939-73910a6cce3b"
 * identifier[+].type = $v2-0203#NIIP
