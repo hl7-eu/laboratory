@@ -71,7 +71,7 @@ Usage: #inline
 * result[+] = Reference(urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba)
 
 Instance: Inline-Patient-hepatitis-panel
-InstanceOf: Patient
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "8472931c-fbd0-437b-9ed1-4f66472c78b5"
 * identifier[+].type = $v2-0203#NIIP
