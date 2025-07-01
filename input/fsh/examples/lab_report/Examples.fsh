@@ -59,8 +59,6 @@ Usage: #example
 * identifier[=].system = "urn:oid:2.16.840.1.113883.4.330.203"
 * identifier[=].value = "5484136"
 * name[+].family = "Očkovaný Moreira"
-//  * extension[fathersFamily][+].valueString = "Moreira"
-//  * extension[mothersFamily][+].valueString = "Očkovaný"
 * name[=].given[+] = "František"
 * gender = #male
 * birthDate = "2000-03-21"
