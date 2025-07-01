@@ -297,7 +297,7 @@ Usage: #example
 * performer[0] = Reference(Organization/stockholmLab) // Mapped from body/recipientUnit and header/accountableCareUnit
 
 Instance: practitionerJohannaOlsson
-InstanceOf: PractitionerUvIps
+InstanceOf: PractitionerEuCore
 Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000013"
 * identifier[0].system = "urn:oid:1.2.752.129.2.1.4.1" // Mapped from body/referral/requester/id
@@ -308,7 +308,7 @@ Usage: #example
 * qualification[0].code.text = "Läkare" // Mapped from body/referral
 
 Instance: practitionerRoleJohannaOlsson
-InstanceOf: PractitionerRoleUvIps
+InstanceOf: PractitionerRoleEuCore
 Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000014"
 * practitioner = Reference(practitionerJohannaOlsson) // Mapped from body/referral/requester
@@ -316,7 +316,7 @@ Usage: #example
 * code.coding[0] = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor
 
 Instance: stockholmEmergency
-InstanceOf: OrganizationUvIps
+InstanceOf: OrganizationEuCore
 Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000015"
 * identifier[0].system = "urn:oid:1.2.752.129.2.1.4.1" // Mapped from body/recipientUnit/id and body/referral/requester/orgUnit/id
@@ -324,7 +324,7 @@ Usage: #example
 * name = "Akutmottagning, Stockholm" // Mapped from body/recipientUnit/name and body/referral/requester/orgUnit/name
 
 Instance: stockholmLab
-InstanceOf: OrganizationUvIps
+InstanceOf: OrganizationEuCore
 Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000016"
 * identifier[0].system = "urn:oid:1.2.752.129.2.1.4.1" // Mapped from body/recipientUnit/id and body/referral/requester/orgUnit/id
