@@ -2,6 +2,8 @@
 
 Instance: mbReportBundle
 InstanceOf: BundleLabReportEu
+Title: "Bundle: NPU Microbiology Example"
+Description: "Example bundle for a microbiology lab report using NPU codes."
 Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000001"
 * type = #document
