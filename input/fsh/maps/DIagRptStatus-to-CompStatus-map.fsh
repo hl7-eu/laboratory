@@ -9,7 +9,7 @@ Usage: #definition
 * title = "DiagnosticReport to Composition status"
 * status = #draft
 * experimental = true
-* description = "Proposed relationship between the statused used in the DiagnosticReport resource and that used for the Composition."
+* description = "Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition."
 * purpose = "It shows how to value the Composition status element based on the DiagnosticReport element."
 * sourceUri = "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
 * targetUri = "http://hl7.org/fhir/ValueSet/composition-status"
