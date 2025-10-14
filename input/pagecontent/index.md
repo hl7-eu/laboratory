@@ -2,15 +2,15 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">		
-		<p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>		
+	<blockquote class="stu-note">
+		<p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>
 		<p>For more details about obligations please refer to the <a href="obligations.html">Obligations page</a></p>
 	</blockquote>
 </div>
 
 
 ### The Laboratory Domain
-Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients. 
+Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients.
 The availability of high quality test results, and the capacity of sharing them, is therefore essential being often the basis for clinical decision making.
 For this reason the Laboratory has been selected as one of the priority domains for the European EHR eXchange Format (E-EHRxF).
 
@@ -18,7 +18,7 @@ For this reason the Laboratory has been selected as one of the priority domains 
 
 Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
 
-This Implementation Guide applies to laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains like histopathology or medical genetics. 
+This Implementation Guide applies to laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains like histopathology or medical genetics.
 This version focuses only on common rules that apply to all the in-scope situations, without specifying specialized domain-specific profiles, as for example microbiology profiles.
 
 This guide is not limited to test results performed by clinical laboratories on Human specimens (from human subject), but it considers also results on non-human materials or living subjects; or non-human specimens paired with a human subject. Derived guides may restrict the scope as needed (e.g. limiting the scope to well-identified human beings)
@@ -68,19 +68,19 @@ The second the profiles included in the document bundle ( [BundleLabReportEu] ) 
 
 ### Dependencies
 
-{% include dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 ### Cross Version Analysis
 
-{% include cross-version-analysis.xhtml %}
+{% include cross-version-analysis-en.xhtml %}
 
 ### Global Profiles
 
-{% include globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
 
 ### IP statements
 
-{% include ip-statements.xhtml %}
+{% include ip-statements-en.xhtml %}
 
 ### Authors and Contributors
 
