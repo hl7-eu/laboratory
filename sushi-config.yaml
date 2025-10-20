@@ -24,15 +24,11 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: current
+  # hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions: current
-<<<<<<< .mine
-  hl7.fhir.eu.base: current
-=======
-  hl7.fhir.eu.base.r4: dev # change to current
->>>>>>> .theirs
+  hl7.fhir.eu.base.r4: current 
 
 
 #   hl7.fhir.us.mcode:
