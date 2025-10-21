@@ -38,17 +38,17 @@ Annotation Comment
 * insert ReportStatusRule
 
 /* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11 
+Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 * basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..* */
 
 * identifier
   * ^comment = "Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order."
-  
+
 * insert ReportIdentifierRule
-* insert ReportCategoryRule 
+* insert ReportCategoryRule
 // add binding
-/* * code 1.. 
+/* * code 1..
 * code only $CodeableConcept-uv-ips
 * code from LabReportTypesEuVs (preferred) // value set to be revised add alternative value sets
 * code ^binding.extension.extension[0].url = "purpose"
@@ -73,6 +73,18 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * specimen only Reference (SpecimenEu)
   * ^short = "Specimens this report is based on."
 * result only Reference (ObservationResultsLaboratoryEu)
-  * ^short = "results" 
+  * ^short = "results"
 * imagingStudy 0..0
 * presentedForm ^short = "Entire report as issued (pdf recommended)"
+* media
+  * ^short = "Additional data (like images, diagrams or documents) associated with this report"
+  * ^definition = "A list of additional data, other then presented form of the report, associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
+  * ^requirements = "Some diagnostic reports may include additional data such as images, diagrams or documents that are relevant to the report. This additional information can provide further context and support for the findings presented in the report."
+  * ^alias = "DICOM; Slides; Scans; Pictures; Documents; Diagrams"
+  * comment
+    * ^short = "Comment about the image or data (e.g. explanation)"
+    * ^definition = "Allows for a comment about the image or data, such as an explanation of its significance or context within the diagnostic report."
+    * ^requirements = "The provider of the report should make a comment about each image or data included in the report. This comment can provide valuable context and help the reader understand the significance of the image or data in relation to the overall findings of the report."
+  * link
+    * ^short = "Reference to the image or data"
+    * ^definition = "A reference to the image or data associated with this report."
