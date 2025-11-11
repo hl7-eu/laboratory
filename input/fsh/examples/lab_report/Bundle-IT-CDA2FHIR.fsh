@@ -76,6 +76,7 @@ Usage: #example
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: CompositionLabReportEu
 Usage: #inline
+* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #it-IT
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -193,20 +194,20 @@ Usage: #inline
 * location.location = Reference(urn:uuid:6373bbff-d136-4cfe-a7bc-fab4bff2fc21)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-3
-InstanceOf: Specimen
+InstanceOf: SpecimenEu
 Usage: #inline
 * id = "5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb"
 * type = urn:oid:2.16.840.1.113883.5.129#UR "Urine"
 * subject = Reference(urn:uuid:dc2b606f-3cf7-4711-a2ff-52da04b89e04)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-4
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c"
 * practitioner = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
 
 Instance: ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MTCORV58E63L294G"
@@ -233,13 +234,13 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-5
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "84b2e517-abc2-4268-975d-b12fa8174d30"
 * practitioner = Reference(urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-6
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "68740937-f732-4ff9-a2e4-bf502d2d125f"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -249,7 +250,7 @@ Usage: #inline
 * name.given = "Filippo"
 
 Instance: a59d2bf2-7d6c-49a5-9ceb-c3f165ebd20d
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.2"
 * identifier.value = "120148"
@@ -268,7 +269,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-7
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "0bbabe57-7c43-4211-9e19-81fcec65686d"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -281,12 +282,12 @@ Usage: #inline
 * telecom.use = #work
 
 Instance: a199dc05-af73-44a0-a218-bda5dec557ce
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * practitioner = Reference(urn:uuid:b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c)
 
 Instance: b2ba9ea7-8098-4f7a-a2a5-c6a51a35c61c
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "GPSDGK80E76C765V"
@@ -310,13 +311,13 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-8
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "13792187-4721-4309-a8a4-4a57ffb4e6a1"
 * practitioner = Reference(urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-9
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "852cec21-4ff9-4cea-b86d-00de92b46894"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -340,14 +341,14 @@ Usage: #inline
 * address.country = "100"
 
 Instance: c20acec2-5d67-4c05-b35e-d528c35f9ed1
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * practitioner = Reference(urn:uuid:f7fa317a-66ac-4adf-9199-9bfe1e2eaa21)
 * organization = Reference(urn:uuid:c1f46c0d-a0f9-41d7-8a33-15ffcf954354)
 * code = urn:oid:2.16.840.1.113883.2.9.5.1.88#PRE
 
 Instance: f7fa317a-66ac-4adf-9199-9bfe1e2eaa21
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "STVMG77F45N079MF"
@@ -367,7 +368,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: c1f46c0d-a0f9-41d7-8a33-15ffcf954354
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.2"
 * identifier.value = "120148"
@@ -402,14 +403,14 @@ Usage: #inline
 * encounter = Reference(urn:uuid:195a7abc-d109-404a-9dc7-ad2e80bafc8a)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-11
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "1b4b120e-0371-4878-b4c9-b69434e84c72"
 * practitioner = Reference(urn:uuid:c1bb11b3-87e6-4682-a214-10975487b643)
 * organization = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
 
 Instance: c1bb11b3-87e6-4682-a214-10975487b643
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MRSSIO79H59Z317K"
@@ -418,7 +419,7 @@ Usage: #inline
 * name.given = "Mario"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-12
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "508f4b29-09ca-4c94-8343-657f1923303a"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.3"
@@ -428,21 +429,22 @@ Usage: #inline
 * partOf = Reference(urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-13
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.1"
 * identifier.value = "080105"
 * identifier.assigner.display = "Ministero della Salute"
+* name = "Example Health Trust"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-14
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "83ef1c55-566b-4547-affd-f6d7b993a094"
 * practitioner = Reference(urn:uuid:1a3064fd-9658-47f1-98f3-3f368761a9da)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-15
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "1a3064fd-9658-47f1-98f3-3f368761a9da"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -461,7 +463,7 @@ Usage: #inline
 * managingOrganization = Reference(urn:uuid:0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-17
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "0a0cfca8-f1d3-4ed5-8b04-0d6cdcee3a17"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.2"
@@ -474,20 +476,21 @@ Usage: #inline
 * partOf = Reference(urn:uuid:d5f71fc0-6075-4fed-ad99-b3c609d27f6b)
 
 Instance: d5f71fc0-6075-4fed-ad99-b3c609d27f6b
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.1"
 * identifier.value = "XXX"
 * identifier.assigner.display = "Ministero della Salute"
+* name = "[nome_ente_sanitario]"
 
 
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-19
-InstanceOf: Observation
+InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "763f7902-8103-4d10-8bd1-546a726d43ee"
 * status = #final
-* category = $observation-category#laboratory
+* category[laboratory] = $observation-category#laboratory
 * code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
 * code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Albumina nelle urine"
 * code.text = "Microalbumin Massa/Volume in Urine"
