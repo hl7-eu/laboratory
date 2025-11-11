@@ -8,19 +8,19 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * . ^definition = "Laboratory Report composition.
 \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
-* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
-* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
+// removed based on resolution of the Jira issue FHIR-51567
+//* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+//* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerEuCore or Device or PatientEuCore or RelatedPerson or PractitionerRoleEuCore or Organization)
 
-* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
+* extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
-
   * ^comment = """Added to the FHIR R4 guide to strictly conform with the R4 rules for document bundle resources inclusion.
-  Using this extension implies to accept a circular reference Composition to/from  DiagnosticReport"""
+  Using this extension implies to accept a circular reference Composition to/from DiagnosticReport"""
 
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule
