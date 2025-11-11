@@ -86,8 +86,7 @@ Instance: Inline-Composition-micro
 InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "4789a3ee-92b1-41b2-9b97-83daacf2a239"
-/* * extension[+].url = $composition-diagnostic-report-reference
-* extension[=].valueReference = Reference(DiagnosticReport/b864303b-91ab-4e29-ad74-31a7d6566875) */
+* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875) //DiagnosticReport/Inline-Diag-Report-micro)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
