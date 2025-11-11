@@ -1,4 +1,4 @@
-// based on https://inera.atlassian.net/wiki/spaces/OITOF/pages/3354624510/1.3.3+Urinodling+kvantitativ+och+resistensbest+mning+SIR
+/* // based on https://inera.atlassian.net/wiki/spaces/OITOF/pages/3354624510/1.3.3+Urinodling+kvantitativ+och+resistensbest+mning+SIR
 
 Instance: mbReportBundle
 InstanceOf: BundleLabReportEu
@@ -68,6 +68,7 @@ Usage: #example
 * section[lab-no-subsections].code = $loinc#18725-2 "Microbiology studies (set)"
 * section[lab-no-subsections].title = "Urinodling kvantitativ och resistensbestämning SIR" // Mapped from body/groupOfAnalyses/name
 * section[lab-no-subsections].entry = Reference(labOrderOutcomeObservation)
+* extension[diagnosticReport-reference].valueReference = Reference(mbDiagnosticReport)  // HK: added link to DiagnosticReport for strict conformance with FHIR R4 rules for document bundle resources inclusion
 
 Instance: mbDiagnosticReport
 InstanceOf: DiagnosticReportLabEu
@@ -78,6 +79,20 @@ Usage: #example
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(mbReportComposition)
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(patientAnnaAndersson)
+* result[+] = Reference(labOrderOutcomeObservation)  //HK: added all observations/results below
+* result[+] = Reference(labOrderOutcomeObservation1)
+* result[+] = Reference(colonyCount1)
+* result[+] = Reference(amoxicillinSensitivity)
+* result[+] = Reference(piperacillinTazobactamSensitivity)
+* result[+] = Reference(ciprofloxacinSensitivity)
+* result[+] = Reference(trimetoprimSensitivity)
+* result[+] = Reference(labOrderOutcomeObservation2)
+* result[+] = Reference(colonyCount2)
+* result[+] = Reference(amoxicillinKlavulansyraSensitivity)
+* result[+] = Reference(mecillinamSensitivity)
+* result[+] = Reference(nitrofurantoinSensitivity)
+* result[+] = Reference(trimetoprimSensitivity2)
+
 
 Instance: labOrderOutcomeObservation
 InstanceOf: ObservationResultsLaboratoryEu
@@ -281,7 +296,7 @@ Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000011"
 * identifier[0].system = "LOAD-MOCKS" // Mapped from body/analysis/identifier
 * identifier[0].value = "LOAD-MOCKS-GMH-DEMO-9"
-* type = http://snomed.info/sct#258574006 "urine, midstream" // Mapped from body/analysis/specimen/material
+* type = http://snomed.info/sct#258574006 "Mid-stream urine specimen" // Mapped from body/analysis/specimen/material
 * collection.collectedDateTime = "2018-01-02T14:30:00+01:00" // Mapped from body/analysis/specimen/timestamp
 
 Instance: laboratoryServiceRequest
@@ -296,7 +311,7 @@ Usage: #example
 * subject = Reference(patientAnnaAndersson) // Assuming a patient context
 * authoredOn = "2018-01-02T14:30:00+01:00" // Mapped from body/referral/timestamp
 * requester = Reference(practitionerJohannaOlsson)
-* performer[0] = Reference(Organization/stockholmLab) // Mapped from body/recipientUnit and header/accountableCareUnit
+* performer[0] = Reference(stockholmLab) // Mapped from body/recipientUnit and header/accountableCareUnit
 
 Instance: practitionerJohannaOlsson
 InstanceOf: PractitionerEuCore
@@ -339,4 +354,4 @@ Usage: #example
 * id = "7e4b1c10-1a2b-4c3d-8e5f-000000000017"
 * name[0].given[0] = "Anna"
 * name[0].family = "Andersson"
-* birthDate = "1980-01-01"
+* birthDate = "1980-01-01" */

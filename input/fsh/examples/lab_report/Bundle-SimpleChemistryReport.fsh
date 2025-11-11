@@ -64,8 +64,8 @@ Usage: #inline
   * valueReference = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
     * display = "Nuovo Ospedale S.Agostino (MO)"
 
-* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
-
+//* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
+* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #cs-CZ
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -115,7 +115,7 @@ Usage: #inline
 * section[lab-subsections].section[=].code.text = "Examination of blood"
 * section[lab-subsections].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div = 
+* section[lab-subsections].section[=].text.div =
 "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
 <thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
 <tbody>
@@ -134,6 +134,7 @@ Usage: #inline
 * identifier.assigner.display = "Regione Lazio"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
+* basedOn = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
@@ -415,7 +416,7 @@ Usage: #inline
 * name.given = "Mario"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-508f4b29-09ca-4c94-8343-657f1923303a
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "508f4b29-09ca-4c94-8343-657f1923303a"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.3"
@@ -425,12 +426,13 @@ Usage: #inline
 * partOf = Reference(urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-206fa15d-51ae-4f3d-b8d0-71ee6290ff52
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.1"
 * identifier.value = "080105"
 * identifier.assigner.display = "Ministero della Salute"
+* name = "AUSL MODENA"
 
 Instance: Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
 InstanceOf: ObservationResultsLaboratoryEu
