@@ -114,7 +114,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[practitionerRole].resource only PractitionerRoleEuCore
 
 * entry contains bodyStructure 0..*
-* entry[bodyStructure].resource only BodyStructureEu
+* entry[bodyStructure].resource only BodyStructureEuCore
 
 * entry contains encounter 0..*
 * entry[encounter].resource only Encounter
