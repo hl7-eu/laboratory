@@ -34,7 +34,7 @@ Description: "This profile constrains the Ratio data type to use UCUM as the cod
   * code 1..1
 
 Profile: RangeEuLab
-Parent: Ratio
+Parent: Range
 Id: Range-eu-lab
 Title: "Range (Eu Lab)"
 Description: "This profile constrains the Range data type to use UCUM as the code system for units and optionally share measurement uncertainty"
