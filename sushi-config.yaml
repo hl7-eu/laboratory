@@ -31,7 +31,8 @@ dependencies:
   # to be removed
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions.r4: 1.2.0
-  hl7.fhir.eu.base: 2.0.0-xtehr
+  # hl7.fhir.eu.base: 2.0.0-xtehr
+  hl7.fhir.eu.base: current
 
 
 
