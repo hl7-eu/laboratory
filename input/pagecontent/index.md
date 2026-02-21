@@ -66,22 +66,6 @@ The second the profiles included in the document bundle ( [BundleLabReportEu] ) 
 </div>
 
 
-### Dependencies
-
-{% include dependency-table-en.xhtml %}
-
-### Cross Version Analysis
-
-{% include cross-version-analysis-en.xhtml %}
-
-### Global Profiles
-
-{% include globals-table-en.xhtml %}
-
-### IP statements
-
-{% include ip-statements-en.xhtml %}
-
 ### Authors and Contributors
 
 Please refer to the [Authors and Contributors](contributors.html) page.

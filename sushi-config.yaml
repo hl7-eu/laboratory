@@ -5,7 +5,7 @@ name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 0.2.0-ci #
+version: 2.0.0-ci #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -24,11 +24,11 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: 1.1.0
-  # hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions: current
-  hl7.fhir.eu.base: current
+  hl7.fhir.uv.ips: 2.0.0
+  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
+  hl7.fhir.eu.extensions.r4: 1.2.0
+  hl7.fhir.eu.base: 2.0.0-xtehr
+
 
 
 #   hl7.fhir.us.mcode:
@@ -77,29 +77,37 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
-  knownIusses.md:
+  knownIssues.md:
     title: Known Issues
+  copyright.md:
+    title: Copyright
+  crossversionanalysis.md:
+    title: Cross-version Analysis
+  dependencies.md:
+    title: Dependencies
 # ====  Map Pages begin ====
-  Recipient-map.html:
-    title: Recipient Relationships
-  Result-map.html:
-    title: Result Relationships
-  Author-map.html:
-    title: Author Relationships
-  LabReport-map.html:
-    title: LabReport Relationships
-  Validator-map.html:
-    title: Validator Relationships
-  SpecimenLab-map.html:
-    title: SpecimenLab Relationships
-  LegalAuthenticator-map.html:
-    title: LegalAuthenticator Relationships
-  Payer-map.html:
-    title: Payer Relationships
-  Order-map.html:
-    title: Order Relationships
-  Subject-map.html:
-    title: Subject Relationships
+  modelmap.html:
+    title: Mapping to Profiles
+#  Recipient-map.html:
+#    title: Recipient Relationships
+#  Result-map.html:
+#    title: Result Relationships
+#  Author-map.html:
+#    title: Author Relationships
+#  LabReport-map.html:
+#    title: LabReport Relationships
+#  Validator-map.html:
+#    title: Validator Relationships
+#  SpecimenLab-map.html:
+#    title: SpecimenLab Relationships
+#  LegalAuthenticator-map.html:
+#    title: LegalAuthenticator Relationships
+#  Payer-map.html:
+#    title: Payer Relationships
+#  Order-map.html:
+#    title: Order Relationships
+#  Subject-map.html:
+#    title: Subject Relationships
   # ====  Map Pages end ====
 
  # overview.md:
@@ -182,24 +190,19 @@ menu:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
     Implementation notes: notes.html
-  Model Maps:
-    Recipient: Recipient-map.html
-    Result: Result-map.html
-    Author: Author-map.html
-    LabReport: LabReport-map.html
-    Validator: Validator-map.html
-    SpecimenLab: SpecimenLab-map.html
-    LegalAuthenticator: LegalAuthenticator-map.html
-    Payer: Payer-map.html
-    Order: Order-map.html
-    Subject: Subject-map.html
+  Implementation:
+    Mapping to Profiles: modelmap.html
   #  Profiles overview:  overview.html
   # Examples: examples.html
-  Artifacts: artifacts.html
   About:
-    Downloads: downloads.html
-    Authors and contributors: contributors.html
-    Known Issues: knownIusses.html
+    Authors and Contributors: contributors.html
+    Known/Open Issues: knownIssues.html
+    Download: downloads.html
+    Dependencies: dependencies.html
+    #  Change Log: changes.html <== TO BE ADDED
+    Copyright: copyright.html
+    Cross-version Analysis: crossversionanalysis.html
+  Artifacts: artifacts.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
