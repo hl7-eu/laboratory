@@ -47,7 +47,9 @@
                     <td>
                         <a href="StructureDefinition-Bundle-eu-lab.html"><code>BundleLabReportEu</code></a>,
                         <a href="StructureDefinition-Composition-eu-lab.html"><code>CompositionLabReportEu</code></a>,
-                        <a href="StructureDefinition-DiagnosticReport-eu-lab.html"><code>DiagnosticReportLabEu</code></a>
+                        <a href="StructureDefinition-DiagnosticReport-eu-lab.html"><code>DiagnosticReportLabEu</code></a>,
+                        <a href="StructureDefinition-Observation-resultslab-eu-lab.html"><code>ObservationResultsLaboratoryEu</code></a>,
+                        <a href="StructureDefinition-ServiceRequest-eu-lab.html"><code>ServiceRequestLabEu</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdslaboratoryreport.html">EHDSLaboratoryReport Mapping</a>
@@ -74,8 +76,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html" target="_blank">EHDSLaboratoryObservation</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-Observation-resultslab-eu-lab.html"><code>ObservationResultsLaboratoryEu</code></a>,
-                        <a href="https://hl7.eu/fhir/base/2.0.0-ballot/StructureDefinition-medicaltestresult-eu-core.html"><code>MedicalTestResultEuCore</code></a>
+                        <a href="StructureDefinition-Observation-resultslab-eu-lab.html"><code>ObservationResultsLaboratoryEu</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdslaboratoryobservation.html">EHDSLaboratoryObservation Mapping</a>
@@ -101,6 +102,17 @@
                     </td>
                     <td>
                         <a class="pill" href="SpecimenLab-map.html">Specimen Mapping</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationAdministration.html" target="_blank">EHDSMedicationAdministration</a>
+                    </td>
+                    <td>
+                        <a href="https://hl7.org/fhir/medicationadministration.html"><code>MedicationAdministration</code></a>
+                    </td>
+                    <td>
+                        <span>-</span>
                     </td>
                 </tr>
                 <tr>
@@ -192,17 +204,6 @@
                     </td>
                     <td>
                         <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdsobservation.html">EHDSObservation Mapping</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationAdministration.html" target="_blank">EHDSMedicationAdministration</a>
-                    </td>
-                    <td>
-                        <a href="https://hl7.org/fhir/medicationadministration.html"><code>MedicationAdministration</code></a>
-                    </td>
-                    <td>
-                        <span>-</span>
                     </td>
                 </tr>
                 <tr>

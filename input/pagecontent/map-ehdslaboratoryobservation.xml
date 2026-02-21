@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSLaboratoryObservation -> MedicalTestResultEuCore</title>
+    <title>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -23,7 +23,7 @@
           the mappings. </div>
       </div>
     </div>
-    <h3>EHDSLaboratoryObservation -> MedicalTestResultEuCore</h3>
+    <h3>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</h3>
     <a> </a>
     <p></p>
     <p>
@@ -44,22 +44,21 @@
         </li>
         <li>
           <strong>Target FHIR profile:</strong>
-          <a
-            href="https://hl7.eu/fhir/base/2.0.0-ballot/StructureDefinition-medicalTestResult-eu-core.html">
-            MedicalTestResultEuCore
+          <a href="StructureDefinition-Observation-resultslab-eu-lab.html">
+            ObservationResultsLaboratoryEu
           </a>
         </li>
       </ul>
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSLaboratoryObservation -> MedicalTestResultEuCore">
-        <caption>EHDSLaboratoryObservation -> MedicalTestResultEuCore</caption>
+      <table summary="EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu">
+        <caption>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</caption>
         <thead>
           <tr>
             <th colspan="2" class="src-head">EHDSLaboratoryObservation (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">MedicalTestResultEuCore (Observation)</th>
+            <th colspan="4" class="tgt-head">ObservationResultsLaboratoryEu (Observation)</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>

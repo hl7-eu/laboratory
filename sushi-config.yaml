@@ -95,6 +95,8 @@ pages:
     title: Mapping to Profiles
     map-ehdslaboratoryreport.html:
       title: EHDS Laboratory Report Mapping
+    map-ehdslaboratoryobservation.html:
+      title: EHDS Laboratory Observation Mapping
 #  Recipient-map.html:
 #    title: Recipient Relationships
 #  Result-map.html:

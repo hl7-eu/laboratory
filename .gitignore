@@ -43,3 +43,4 @@ ig-template/package/.index.json
 *.fsh-bak
 /input/images-source/map
 /input/pagecontent/map
+runJekyll.bat
