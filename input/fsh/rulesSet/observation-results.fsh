@@ -33,7 +33,7 @@ RuleSet: ObservationResultsValueEu
 * valueString only string
 // * valueString MS
 * valueString ^sliceName = "valueString"
-* valueRange only $Range-uv-ips
+* valueRange only RangeEuLab
 // no practical examples found for the time being
 // reverted to the original statement
 // * valueRange only Range-eu-lab

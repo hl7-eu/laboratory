@@ -87,9 +87,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // ---------------------------------
 
 * insert SectionCommonRules
-/* * section.title 1..
-* section.code 1..
-* section.code only $CodeableConcept-uv-ips */
+
 
 // -------------------------------------
 // Single section  0 .. 1
@@ -99,11 +97,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * ^short = "Variant 1: EU Laboratory Report section with entries and no sub-sections"
   * ^definition = """Variant 1: With this option, all laboratory report data entries are provided in the top level sections and no sub-sections are allowed."""
   * insert SectionElementsRules
-/*   * code from LabStudyTypesEuVs (preferred)
-  * text ^short = "Text summary of the section, for human interpretation."
-  * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-  * entry 1..
-  * section ..0 */
+
 
 // -------------------------------------
 // Structured sections  0 .. 1
@@ -118,8 +112,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * entry 0..0
   * insert SectionCommonRules
   * section 1..
-/*     * code 1..
-    * code only $CodeableConcept-uv-ips */
+
     * insert SectionElementsRules
     * code from LabStudyTypesEuVs (preferred)
 /*        * text ^short = "Text summary of the section, for human interpretation."
