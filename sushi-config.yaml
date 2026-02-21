@@ -92,6 +92,8 @@ pages:
 # ====  Map Pages begin ====
   modelmap.html:
     title: Mapping to Profiles
+    map-ehdslaboratoryreport.html:
+      title: EHDS Laboratory Report Mapping
 #  Recipient-map.html:
 #    title: Recipient Relationships
 #  Result-map.html:

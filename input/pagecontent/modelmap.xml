@@ -50,9 +50,25 @@
                         <a href="StructureDefinition-DiagnosticReport-eu-lab.html"><code>DiagnosticReportLabEu</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="LabReport-map.html">EHDSLaboratoryReport Mapping</a>
+                        <a class="pill" href="map-ehdslaboratoryreport.html">EHDSLaboratoryReport Mapping</a>
                     </td>
                 </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h4>Related Laboratory Models in this IG</h4>
+    <a> </a>
+    <div class="table-wrapper">
+        <table class="model-index">
+            <thead>
+                <tr>
+                    <th>EHDS Logical Model</th>
+                    <th>FHIR Profile / Type in this IG</th>
+                    <th>Mapping Details</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html" target="_blank">EHDSLaboratoryObservation</a>
