@@ -139,15 +139,6 @@
             <td>header.status</td>
             <td>Workflow/clinical status of the report.</td>
             <td>equivalent</td>
-            <td>Composition</td>
-            <td>status</td>
-            <td>Status of the composition document.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>header.status</td>
-            <td>Workflow/clinical status of the report.</td>
-            <td>equivalent</td>
             <td>DiagnosticReport</td>
             <td>status</td>
             <td>Status of the diagnostic report.</td>
@@ -203,7 +194,7 @@
             <td>Business version of the report document.</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>extension:version</td>
+            <td>extension:versionNumber</td>
             <td>Business-level document version.</td>
             <td></td>
           </tr>
@@ -261,14 +252,14 @@
             <td>When legal authentication was recorded.</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>header.eventType</td>
-            <td>Type of event/service represented by the report.</td>
+            <td>Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.)..</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>event.code</td>
-            <td>Coded event context for the document.</td>
-            <td></td>
+            <td>category</td>
+            <td>Report Category</td>
+            <td>The type of event should be event.code, but the description seems to be a report classification.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>header.serviceSpecialty</td>
@@ -316,14 +307,14 @@
             <td>Structured narrative/data sections of the report.</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>body.orderInformation</td>
             <td>Order/request context of the report.</td>
             <td>related-to</td>
             <td>ServiceRequest</td>
             <td>.</td>
             <td>Requested service represented as ServiceRequestLabEu.</td>
-            <td></td>
+            <td>ServiceRequest referred in the DiagnosticReport as basedOn.</td>
           </tr>
           <tr>
             <td>body.orderInformation.orderId</td>
@@ -443,7 +434,7 @@
             <td>Diagnostic interpretation summary.</td>
             <td>When implemented in the DiagnosticReport profile instance.</td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>attachments</td>
             <td>Report attachments.</td>
             <td>equivalent</td>
