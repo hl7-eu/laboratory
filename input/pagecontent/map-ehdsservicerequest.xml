@@ -36,7 +36,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSServiceRequest.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSServiceRequest.html" target="_blank">
             EHDSServiceRequest
           </a>
         </li>
@@ -131,13 +131,13 @@
             <td></td>
           </tr>
 
-          <tr>
+          <tr class="highlight-yellow">
             <td>description</td>
             <td>Textual description of the requested service.</td>
             <td>related-to</td>
             <td>ServiceRequest</td>
-            <td>note</td>
-            <td>Additional textual detail.</td>
+            <td>text</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
@@ -152,7 +152,7 @@
           <tr>
             <td>quantity</td>
             <td>Amount of requested services of same type.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>ServiceRequest</td>
             <td>quantity[x]</td>
             <td>Requested quantity.</td>
@@ -163,8 +163,8 @@
             <td>Anatomic location/laterality of requested procedure.</td>
             <td>related-to</td>
             <td>ServiceRequest</td>
-            <td>bodySite / bodyStructure</td>
-            <td>Target site/body structure.</td>
+            <td>bodySite</td>
+            <td>Target site</td>
             <td></td>
           </tr>
           <tr>
@@ -172,9 +172,18 @@
             <td>Reason why service is requested.</td>
             <td>equivalent</td>
             <td>ServiceRequest</td>
-            <td>reasonCode / reasonReference</td>
+            <td>reasonCode</td>
             <td>Clinical justification.</td>
-            <td>String reasons map to text in reasonCode or note.</td>
+            <td>If reason is a coded value, it maps to reasonCode.</td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Reason why service is requested.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>reasonReference</td>
+            <td>Clinical justification.</td>
+            <td>Reason details are represented as references to other resources.</td>
           </tr>
           <tr>
             <td>priority</td>

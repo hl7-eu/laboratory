@@ -27,7 +27,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSSpecimen.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSSpecimen.html" target="_blank">
             EHDSSpecimen
           </a>
         </li>
@@ -112,19 +112,19 @@
             <td>Related service request(s).</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>combined</td>
             <td>Whether specimen is grouped/pooled.</td>
-            <td>equivalent</td>
+            <td>no-map</td>
             <td>Specimen</td>
             <td>combined</td>
             <td>Combined specimen indicator.</td>
-            <td></td>
+            <td>Missing element</td>
           </tr>
           <tr>
             <td>collection</td>
             <td>Collection details container.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Specimen</td>
             <td>collection</td>
             <td>Collection details.</td>
@@ -166,10 +166,10 @@
             <td>Collection method.</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>collection.device</td>
             <td>Device used for collection.</td>
-            <td>equivalent</td>
+            <td>no-map</td>
             <td>Specimen</td>
             <td>collection.device</td>
             <td>Collection device.</td>
@@ -180,7 +180,7 @@
             <td>Anatomic location of collection.</td>
             <td>equivalent</td>
             <td>Specimen</td>
-            <td>collection.bodySite / extension:bodySite</td>
+            <td>extension:bodySite</td>
             <td>Collection site/body structure.</td>
             <td></td>
           </tr>
@@ -196,7 +196,7 @@
           <tr>
             <td>container</td>
             <td>Container details.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Specimen</td>
             <td>container</td>
             <td>Container slice(s).</td>

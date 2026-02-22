@@ -28,7 +28,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationAdministration.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationAdministration.html" target="_blank">
             EHDSMedicationAdministration
           </a>
         </li>
@@ -59,15 +59,6 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>EHDSMedicationAdministration</td>
-            <td>Medication administration model.</td>
-            <td>equivalent</td>
-            <td>MedicationAdministration</td>
-            <td>.</td>
-            <td>MedicationAdministration resource instance.</td>
-            <td></td>
-          </tr>
           <tr>
             <td>header</td>
             <td>Common header inherited from EHDSDataSet.</td>
@@ -152,16 +143,25 @@
           <tr>
             <td>reason[x]</td>
             <td>Reason why medication was administered.</td>
-            <td>equivalent</td>
+            <td>source-is-broader-than-target</td>
             <td>MedicationAdministration</td>
-            <td>reasonCode / reasonReference</td>
+            <td>reasonCode</td>
             <td>Clinical reason for administration.</td>
-            <td></td>
+            <td>If coded reason.</td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Reason why medication was administered.</td>
+            <td>source-is-broader-than-target</td>
+            <td>MedicationAdministration</td>
+            <td>reasonReference</td>
+            <td>Clinical reason for administration.</td>
+            <td>If details about the reason are provided in a separate resource.</td>
           </tr>
           <tr>
             <td>dosageInstructions</td>
             <td>How medication was administered.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>MedicationAdministration</td>
             <td>dosage</td>
             <td>Dosage details (route, dose, rate).</td>
