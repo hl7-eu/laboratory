@@ -105,24 +105,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationAdministration.html" target="_blank">EHDSMedicationAdministration</a>
-                    </td>
-                    <td>
-                        <a href="https://hl7.org/fhir/medicationadministration.html"><code>MedicationAdministration</code></a>
-                    </td>
-                    <td>
-                        <a class="pill" href="map-ehdsmedicationadministration.html">EHDSMedicationAdministration Mapping</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDevice.html" target="_blank">EHDSDevice</a>
                     </td>
                     <td>
                         <a href="https://hl7.org/fhir/device.html"><code>Device</code></a>
                     </td>
                     <td>
-                        <span>-</span>
+                        <a class="pill" href="map-ehdsdevice.html">EHDSDevice Mapping</a>
                     </td>
                 </tr>
                 <tr>
