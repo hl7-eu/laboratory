@@ -97,6 +97,12 @@ pages:
       title: EHDS Laboratory Report Mapping
     map-ehdslaboratoryobservation.html:
       title: EHDS Laboratory Observation Mapping
+    map-ehdsservicerequest.html:
+      title: EHDS ServiceRequest Mapping
+    map-ehdsattachment.html:
+      title: EHDS Attachment Mapping
+    map-ehdsrelatedperson.html:
+      title: EHDS RelatedPerson Mapping
 #  Recipient-map.html:
 #    title: Recipient Relationships
 #  Result-map.html:

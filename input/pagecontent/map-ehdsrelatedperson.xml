@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSRelatedPerson -> RelatedPerson (HDR)</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+              The Xt-EHR logical models are under active revision and continuous refinement.
+              Updates from Xt-EHR will be progressively incorporated into this Implementation
+              Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+    <h3>EHDSRelatedPerson -> RelatedPerson (HDR)</h3>
+    <a> </a>
+    <p></p>
+    <p>
+      This page explains how conceptual elements from the EHDSRelatedPerson logical model are expressed
+      in the corresponding FHIR RelatedPerson resource used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
+            EHDSRelatedPerson
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="https://hl7.org/fhir/relatedperson.html">
+            RelatedPerson
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSRelatedPerson -> RelatedPerson (HDR)">
+        <caption>EHDSRelatedPerson -> RelatedPerson (HDR)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSRelatedPerson (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">RelatedPerson (HDR)</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>personalIdentifier</td>
+            <td>Identifier of the related person.</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>identifier</td>
+            <td>Identifiers for the related person.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>Name associated with the person.</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>name</td>
+            <td>Names of the related person.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>subject</td>
+            <td>The patient in relation to whom the related person is defined.</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>patient</td>
+            <td>The patient to which this related person is related.</td>
+            <td>Reference to PatientEuCore.</td>
+          </tr>
+          <tr>
+            <td>relationship</td>
+            <td>Relationship between patient and related person.</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>relationship</td>
+            <td>Relationship role.</td>
+            <td>Preferred binding to HL7 RoleCode.</td>
+          </tr>
+          <tr>
+            <td>address</td>
+            <td>Mailing and home or office address.</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>address</td>
+            <td>Addresses for the related person.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>telecom</td>
+            <td>Telecommunication contact information.</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>telecom</td>
+            <td>Contact points for the related person.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

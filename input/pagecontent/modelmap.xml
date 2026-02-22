@@ -90,7 +90,7 @@
                         <a href="StructureDefinition-ServiceRequest-eu-lab.html"><code>ServiceRequestLabEu</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="Order-map.html">Order / ServiceRequest Mapping</a>
+                        <a class="pill" href="map-ehdsservicerequest.html">EHDSServiceRequest Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -117,13 +117,35 @@
                 </tr>
                 <tr>
                     <td>
+                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDevice.html" target="_blank">EHDSDevice</a>
+                    </td>
+                    <td>
+                        <a href="https://hl7.org/fhir/device.html"><code>Device</code></a>
+                    </td>
+                    <td>
+                        <span>-</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSRelatedPerson.html" target="_blank">EHDSRelatedPerson</a>
+                    </td>
+                    <td>
+                        <a href="https://hl7.org/fhir/relatedperson.html"><code>RelatedPerson</code></a>
+                    </td>
+                    <td>
+                        <a class="pill" href="map-ehdsrelatedperson.html">EHDSRelatedPerson Mapping</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSAttachment.html" target="_blank">EHDSAttachment</a>
                     </td>
                     <td>
                         <a href="https://hl7.org/fhir/datatypes.html#Attachment"><code>Attachment</code></a>
                     </td>
                     <td>
-                        <span>-</span>
+                        <a class="pill" href="map-ehdsattachment.html">EHDSAttachment Mapping</a>
                     </td>
                 </tr>
             </tbody>
@@ -215,28 +237,6 @@
                     </td>
                     <td>
                         <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdsimmunisation.html">EHDSImmunisation Mapping</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDevice.html" target="_blank">EHDSDevice</a>
-                    </td>
-                    <td>
-                        <a href="https://hl7.org/fhir/device.html"><code>Device</code></a>
-                    </td>
-                    <td>
-                        <span>-</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSRelatedPerson.html" target="_blank">EHDSRelatedPerson</a>
-                    </td>
-                    <td>
-                        <a href="https://hl7.org/fhir/relatedperson.html"><code>RelatedPerson</code></a>
-                    </td>
-                    <td>
-                        <span>-</span>
                     </td>
                 </tr>
             </tbody>
