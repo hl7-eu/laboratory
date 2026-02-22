@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSMedicationAdministration -> MedicationAdministration</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong> The Xt-EHR logical models are under active revision
+          and continuous refinement. Updates from Xt-EHR will be progressively incorporated into
+          this Implementation Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+
+    <h3>EHDSMedicationAdministration -> MedicationAdministration</h3>
+    <a> </a>
+    <p>
+      This page explains how conceptual elements from the EHDS Medication Administration logical
+      model are expressed in the corresponding FHIR MedicationAdministration resource used by this
+      Implementation Guide.
+    </p>
+
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationAdministration.html" target="_blank">
+            EHDSMedicationAdministration
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR resource:</strong>
+          <a href="https://hl7.org/fhir/medicationadministration.html">MedicationAdministration</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="EHDSMedicationAdministration -> MedicationAdministration">
+        <caption>EHDSMedicationAdministration -> MedicationAdministration</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSMedicationAdministration (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">MedicationAdministration</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>header</td>
+            <td>Common header inherited from EHDSDataSet.</td>
+            <td>related-to</td>
+            <td>MedicationAdministration</td>
+            <td>.</td>
+            <td>General metadata container.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.author[x]</td>
+            <td>Responsible person for recording the administration.</td>
+            <td>related-to</td>
+            <td>MedicationAdministration</td>
+            <td>performer.actor</td>
+            <td>Who administered medication.</td>
+            <td>No dedicated recorder field in core MedicationAdministration.</td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of administration (completed, on-hold, etc.).</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration</td>
+            <td>status</td>
+            <td>Medication administration status.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>medication</td>
+            <td>Administered medication.</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration</td>
+            <td>medication[x]</td>
+            <td>Medication administered.</td>
+            <td>Typically Reference(Medication).</td>
+          </tr>
+          <tr>
+            <td>occurrence[x]</td>
+            <td>Date/time or period of administration.</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration</td>
+            <td>effective[x]</td>
+            <td>When administration occurred.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Reason why medication was administered.</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration</td>
+            <td>reasonCode / reasonReference</td>
+            <td>Clinical reason for administration.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dosageInstructions</td>
+            <td>How medication was administered.</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration</td>
+            <td>dosage</td>
+            <td>Dosage details (route, dose, rate).</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Textual notes about administration.</td>
+            <td>equivalent</td>
+            <td>MedicationAdministration</td>
+            <td>note</td>
+            <td>Comments or annotations.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

@@ -99,6 +99,12 @@ pages:
       title: EHDS Laboratory Observation Mapping
     map-ehdsservicerequest.html:
       title: EHDS ServiceRequest Mapping
+    map-ehdsspecimen.html:
+      title: EHDS Specimen Mapping
+    map-ehdsmedicationadministration.html:
+      title: EHDS MedicationAdministration Mapping
+    map-ehdsdevice.html:
+      title: EHDS Device Mapping
     map-ehdsattachment.html:
       title: EHDS Attachment Mapping
     map-ehdsrelatedperson.html:

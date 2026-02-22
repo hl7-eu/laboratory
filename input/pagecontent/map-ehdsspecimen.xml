@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSSpecimen -> SpecimenEu</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong> The Xt-EHR logical models are under active revision
+          and continuous refinement. Updates from Xt-EHR will be progressively incorporated into
+          this Implementation Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+
+    <h3>EHDSSpecimen -> SpecimenEu</h3>
+    <a> </a>
+    <p>
+      This page explains how conceptual elements from the EHDS Specimen logical model are expressed
+      in the corresponding FHIR Specimen profile used by this Implementation Guide.
+    </p>
+
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSSpecimen.html" target="_blank">
+            EHDSSpecimen
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-Specimen-eu-lab.html">SpecimenEu</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="EHDSSpecimen -> SpecimenEu">
+        <caption>EHDSSpecimen -> SpecimenEu</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSSpecimen (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">SpecimenEu</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>identifier</td>
+            <td>Identifier(s) of specimen.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>identifier</td>
+            <td>Business identifiers.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>status</td>
+            <td>Availability/status of specimen.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>status</td>
+            <td>Specimen status.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>Kind of material in specimen.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>type</td>
+            <td>Specimen type.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>specimenSource[x]</td>
+            <td>Source subject/location/device.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>subject</td>
+            <td>Who/what specimen is from.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>parentSpecimen</td>
+            <td>Parent specimen(s).</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>parent</td>
+            <td>Derived from parent specimen.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>request</td>
+            <td>Why specimen was collected.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>request</td>
+            <td>Related service request(s).</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>combined</td>
+            <td>Whether specimen is grouped/pooled.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>combined</td>
+            <td>Combined specimen indicator.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection</td>
+            <td>Collection details container.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection</td>
+            <td>Collection details.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection.performer[x]</td>
+            <td>Collector person/organization.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection.collector</td>
+            <td>Who collected specimen.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection.collected[x]</td>
+            <td>Date/time or period of collection.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection.collected[x]</td>
+            <td>When specimen was collected.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection.quantity</td>
+            <td>Quantity collected.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection.quantity</td>
+            <td>Collected amount.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection.method</td>
+            <td>Method used to collect specimen.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection.method</td>
+            <td>Collection method.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection.device</td>
+            <td>Device used for collection.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection.device</td>
+            <td>Collection device.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>collection.bodySite</td>
+            <td>Anatomic location of collection.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>collection.bodySite / extension:bodySite</td>
+            <td>Collection site/body structure.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>receivedDate</td>
+            <td>Date/time specimen received by lab.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>receivedTime</td>
+            <td>Received time in testing lab.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>container</td>
+            <td>Container details.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>container</td>
+            <td>Container slice(s).</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>container.specimenQuantity</td>
+            <td>Quantity inside container.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>container.specimenQuantity</td>
+            <td>Amount in container.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>container.containerDevice</td>
+            <td>Device resource representing container.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>container.extension:device</td>
+            <td>Container device reference.</td>
+            <td>Mapped via specimen-container-device extension in this IG.</td>
+          </tr>
+          <tr>
+            <td>condition</td>
+            <td>State/condition of specimen.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>condition</td>
+            <td>Current specimen condition.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Notes/issues about specimen.</td>
+            <td>equivalent</td>
+            <td>Specimen</td>
+            <td>note</td>
+            <td>Annotation text.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

@@ -48,7 +48,6 @@
                         <a href="StructureDefinition-Bundle-eu-lab.html"><code>BundleLabReportEu</code></a>,
                         <a href="StructureDefinition-Composition-eu-lab.html"><code>CompositionLabReportEu</code></a>,
                         <a href="StructureDefinition-DiagnosticReport-eu-lab.html"><code>DiagnosticReportLabEu</code></a>,
-                        <a href="StructureDefinition-Observation-resultslab-eu-lab.html"><code>ObservationResultsLaboratoryEu</code></a>,
                         <a href="StructureDefinition-ServiceRequest-eu-lab.html"><code>ServiceRequestLabEu</code></a>
                     </td>
                     <td>
@@ -101,7 +100,7 @@
                         <a href="StructureDefinition-Specimen-eu-lab.html"><code>SpecimenEu</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="SpecimenLab-map.html">Specimen Mapping</a>
+                        <a class="pill" href="map-ehdsspecimen.html">EHDSSpecimen Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -112,7 +111,7 @@
                         <a href="https://hl7.org/fhir/medicationadministration.html"><code>MedicationAdministration</code></a>
                     </td>
                     <td>
-                        <span>-</span>
+                        <a class="pill" href="map-ehdsmedicationadministration.html">EHDSMedicationAdministration Mapping</a>
                     </td>
                 </tr>
                 <tr>
