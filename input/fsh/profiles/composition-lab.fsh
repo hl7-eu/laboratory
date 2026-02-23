@@ -17,7 +17,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
-* extension[diagnosticReport-reference].valueReference 1..1
+* extension[diagnosticReport-reference].valueReference 0..1 
 * extension[diagnosticReport-reference].valueReference.reference 1..
   * ^comment = """Added to the FHIR R4 guide to strictly conform with the R4 rules for document bundle resources inclusion.
   Using this extension implies to accept a circular reference Composition to/from DiagnosticReport"""
