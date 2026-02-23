@@ -7,5 +7,5 @@ Description: "List of LOINC Laboratory codes of type 'Order' or 'Both. This valu
 // * ^copyright = "HL7 Europe"
 * insert LOINCCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)
-* include codes from system $loinc and valueset $results-laboratory-observations-uv-ips where ORDER_OBS = "Order"
-* include codes from system $loinc and valueset $results-laboratory-observations-uv-ips where ORDER_OBS = "Both"
+* include codes from system $loinc and valueset $results-laboratory-pathology-observations-uv-ips  where ORDER_OBS = "Order"
+* include codes from system $loinc and valueset $results-laboratory-pathology-observations-uv-ips  where ORDER_OBS = "Both"

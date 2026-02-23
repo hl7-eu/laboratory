@@ -53,7 +53,7 @@ RuleSet: ObservationResultsValueEu
 * valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
-* valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
+* valueCodeableConcept from $results-coded-values-laboratory-pathology-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
