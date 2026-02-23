@@ -5,10 +5,10 @@ name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 2.0.0-ci #
+version: 2.0.0-alpha #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: qa-preview # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -31,8 +31,8 @@ dependencies:
   # to be removed
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions.r4: 1.2.0
-  # hl7.fhir.eu.base: 2.0.0-xtehr
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 2.0.0-xtehr
+  # hl7.fhir.eu.base: current
 
 
 

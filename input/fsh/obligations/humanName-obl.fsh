@@ -1,5 +1,5 @@
 Profile: HumanNameEuObligations
-Parent: HumanNameEu
+Parent: HumanName
 Id: HumanName-obl-eu-lab
 Title:    "Human Name: Obligations"
 Description: "This profile defines obligations for an human Patient name in FHIR for the purpose of this guide."
@@ -10,6 +10,4 @@ Description: "This profile defines obligations for an human Patient name in FHIR
 // TEST OBLIGATIONS  ====>
 
 * family insert ObligationSet1
-  * extension[fathersFamily] insert ObligationSet3
-  * extension[mothersFamily] insert ObligationSet3
 * given insert ObligationSet1
