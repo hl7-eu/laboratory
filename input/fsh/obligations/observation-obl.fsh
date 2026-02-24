@@ -16,7 +16,7 @@ Description: "This profile defines obligations for Observation in FHIR for the p
 * code insert ObligationSet1
 * subject insert ObligationSet1
 * effective[x] insert ObligationSet1
-* effective[x].extension[data-absent-reason] insert ObligationSet1
+// * effective[x].extension[data-absent-reason] insert ObligationSet1
 * performer insert ObligationSet1
 * performer.extension[performerFunction] insert ObligationSet2
 * hasMember insert ObligationSet1

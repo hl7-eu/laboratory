@@ -28,8 +28,8 @@ dependencies:
   hl7.fhir.uv.ips: 2.0.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
   # error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x] requires the following dependency to be declared in your sushi-config.yaml file:  
-  # to be removed
-  hl7.fhir.extensions.r5: 4.0.1
+  # to be added when R5 value[x] extension will be used
+  # hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions.r4: 1.2.0
   hl7.fhir.eu.base: 2.0.0-xtehr
   # hl7.fhir.eu.base: current
