@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSDevice -> Device</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+              The Xt-EHR logical models are under active revision and continuous refinement.
+              Updates from Xt-EHR will be progressively incorporated into this Implementation
+              Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow row/cells:</strong>
+              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
+        </div>
+      </div>
+    </div>
+    <h3>EHDSDevice -> Device</h3>
+    <a> </a>
+    <p></p>
+    <p>
+  This page explains how conceptual elements from the EHDS logical model are expressed
+  in the corresponding FHIR Device resource used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDevice.html" target="_blank">
+        EHDSDevice
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR resource:</strong>
+          <a href="https://hl7.org/fhir/device.html">
+        Device
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSDevice -> Device">
+        <caption>EHDSDevice -> Device</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSDevice (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">Device</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>instanceIdentifier</td>
+            <td>Identifier of the device instance.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>identifier</td>
+            <td>Business identifiers for the device.</td>
+            <td>Repeat for multiple instance identifiers.</td>
+          </tr>
+          <tr>
+            <td>udiCarrier</td>
+            <td>Unique Device Identifier (UDI) value.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>udiCarrier</td>
+            <td>UDI carrier information for the device.</td>
+            <td>Repeat for multiple UDI carrier identifiers when present.</td>
+          </tr>
+          <tr>
+            <td>manufacturer</td>
+            <td>Name of device manufacturer.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>manufacturer</td>
+            <td>Device manufacturer.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>manufactureDate</td>
+            <td>The date and time when the device was manufactured.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>manufactureDate</td>
+            <td>Manufacture date.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>expiryDate</td>
+            <td>The date and time beyond which this device is no longer valid or should not be used (if applicable).</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>expirationDate</td>
+            <td>Expiration date.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>lotNumber</td>
+            <td>Lot number of manufacture.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>lotNumber</td>
+            <td>Lot number.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>serialNumber</td>
+            <td>Serial number assigned by the manufacturer.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>serialNumber</td>
+            <td>Serial number.</td>
+            <td></td>
+          </tr>
+                    <tr>
+            <td>name</td>
+            <td>The name of the device as known to e.g. the manufacturer and/or patient.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>deviceName</td>
+            <td>The name of the device as given by the manufacturer</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name.value</td>
+            <td>The name of the device as known to e.g. the manufacturer and/or patient.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>deviceName.name</td>
+            <td>The device name value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name.type</td>
+            <td>The type of name, e.g. UDI Label name, user friendly name.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>deviceName.type</td>
+            <td>The kind of device name.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>modelNumber</td>
+            <td>The manufacturer's model number for the device.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>modelNumber</td>
+            <td>Model number.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>The actual design of the device or software version running on the device.</td>
+            <td>related-to</td>
+            <td>Device</td>
+            <td>version.value</td>
+            <td>Device version.</td>
+            <td>Repeat for multiple versions.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>Device type.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>type</td>
+            <td>Type of device.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Device notes and comments.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>note</td>
+            <td>Notes about the device.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

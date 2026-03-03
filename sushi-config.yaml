@@ -80,6 +80,24 @@ pages:
   knownIusses.md:
     title: Known Issues
 # ====  Map Pages begin ====
+  modelmap.html:
+    title: Mapping to Profiles
+    map-ehdslaboratoryreport.html:
+      title: EHDS Laboratory Report Mapping
+    map-ehdslaboratoryobservation.html:
+      title: EHDS Laboratory Observation Mapping
+    map-ehdsservicerequest.html:
+      title: EHDS ServiceRequest Mapping
+    map-ehdsspecimen.html:
+      title: EHDS Specimen Mapping
+    map-ehdsmedicationadministration.html:
+      title: EHDS MedicationAdministration Mapping
+    map-ehdsdevice.html:
+      title: EHDS Device Mapping
+    map-ehdsattachment.html:
+      title: EHDS Attachment Mapping
+    map-ehdsrelatedperson.html:
+      title: EHDS RelatedPerson Mapping
  
   # ====  Map Pages end ====
 
@@ -150,28 +168,31 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html
-  Table of Contents: toc.html
-  Background:
+  Home: index.html  
+  Introduction:
     Background: background.html
     Challenges: challenges.html
     Design Choices: design-choice.html
     Certified reference material: crm.html
-  Functional Specifications:
+  Functional:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
     Implementation notes: notes.html
-  Model Maps:
-
+  Implementation:
+    Mapping to Profiles: modelmap.html
   #  Profiles overview:  overview.html
   # Examples: examples.html
-  Artifacts: artifacts.html
   About:
-    Downloads: downloads.html
-    Authors and contributors: contributors.html
-    Known Issues: knownIusses.html
+    Authors and Contributors: contributors.html
+    Known/Open Issues: knownIssues.html
+    Download: downloads.html
+    Dependencies: dependencies.html
+    #  Change Log: changes.html <== TO BE ADDED
+    Copyright: copyright.html
+    Cross-version Analysis: crossversionanalysis.html
+  Artifacts: artifacts.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
