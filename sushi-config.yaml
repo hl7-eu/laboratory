@@ -191,7 +191,7 @@ menu:
     Known/Open Issues: knownIssues.html
     Download: downloads.html
     Dependencies: dependencies.html
-    #  Change Log: changes.html <== TO BE ADDED
+    Change Log: changes.html
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
