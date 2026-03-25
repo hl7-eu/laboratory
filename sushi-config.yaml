@@ -25,13 +25,8 @@ copyright: >-
 #
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
-  # hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions: current
-  hl7.fhir.eu.base.r4: dev # change to current
-  hl7.fhir.eu.extensions.r4:
-    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
-    version: current
+  hl7.fhir.eu.extensions.r4: current
   hl7.fhir.eu.base: current
 
 
@@ -81,8 +76,16 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
-  knownIusses.md:
+  knownIssues.md:
     title: Known Issues
+  dependencies.md:
+    title: Dependencies
+  changes.md:
+    title: Change Log
+  copyright.md:
+    title: Copyright
+  crossversionanalysis.md:
+    title: Cross-version Analysis
 # ====  Map Pages begin ====
   modelmap.html:
     title: Mapping to Profiles

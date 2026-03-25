@@ -29,14 +29,14 @@ url of bundle is  [[StructureDefinition-Bundle-eu-lab.html]]
 url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
 url of diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
 url of result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
-url of humanPatient [[StructureDefinition-Patient-eu-lab.html]]
+url of humanPatient [[https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
 url of animalPatient [[StructureDefinition-Patient-animal-eu-lab.html]]
-url of Practitioner [[StructureDefinition-Practitioner-eu-lab.html]]
-url of PractitionerRole [[StructureDefinition-PractitionerRole-eu-lab.html]]
+url of Practitioner [[https://hl7.eu/fhir/base/StructureDefinition-practitioner-eu-core.html]]
+url of PractitionerRole [[https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
 url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
 url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
 url of Substance [[StructureDefinition-Substance-additive-eu-lab.html]]
-url of bodyStructure [[StructureDefinition-BodyStructure-eu-lab.html]]
+url of bodyStructure [[https://hl7.eu/fhir/base/StructureDefinition-bodyStructure-eu-core.html]]
 
 bundle o-- composition
 bundle o-- diagnosticReport
