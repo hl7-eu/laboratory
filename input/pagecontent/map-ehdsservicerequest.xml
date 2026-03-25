@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSServiceRequest -> ServiceRequestLabEu</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong> The Xt-EHR logical models are under active revision
+          and continuous refinement. Updates from Xt-EHR will be progressively incorporated into
+          this Implementation Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow row/cells:</strong> In this ballot publication, some row/cells of the
+          mapping table have been left in yellow to indicate areas requiring further review or
+          refinement; including feedback from the Xt-EHR joint action.
+        </div>
+      </div>
+    </div>
+
+    <h3>EHDSServiceRequest -> ServiceRequestLabEu</h3>
+    <a> </a>
+    <p>
+      This page explains how conceptual elements from the EHDS Service Request logical model are
+      expressed in the corresponding FHIR ServiceRequest profile used by this Implementation Guide.
+    </p>
+
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSServiceRequest.html" target="_blank">
+            EHDSServiceRequest
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-ServiceRequest-eu-lab.html">ServiceRequestLabEu</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="EHDSServiceRequest -> ServiceRequestLabEu">
+        <caption>EHDSServiceRequest -> ServiceRequestLabEu</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSServiceRequest (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">ServiceRequestLabEu</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>header</td>
+            <td>Common header inherited from EHDSDataSet.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>.</td>
+            <td>General metadata container.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient/subject of care.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>subject</td>
+            <td>Who or what the request is about.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>identifier</td>
+            <td>Placer/filler order identifiers.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.author[x]</td>
+            <td>Author of the resource.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>requester</td>
+            <td>Requester of the service.</td>
+            <td>Closest fit; semantic alignment may vary by workflow.</td>
+          </tr>
+          <tr>
+            <td>header.date</td>
+            <td>Date and time of authoring.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>authoredOn</td>
+            <td>Date request was created.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the request.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>status</td>
+            <td>Request lifecycle state.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the resource.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>language</td>
+            <td>Language of content/narrative.</td>
+            <td></td>
+          </tr>
+
+          <tr class="highlight-yellow">
+            <td>description</td>
+            <td>Textual description of the requested service.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>code</td>
+            <td>Code and name identifying requested service.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>code</td>
+            <td>What is being requested.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>quantity</td>
+            <td>Amount of requested services of same type.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>quantity[x]</td>
+            <td>Requested quantity.</td>
+            <td>Typically Quantity in laboratory use cases.</td>
+          </tr>
+          <tr>
+            <td>bodySite</td>
+            <td>Anatomic location/laterality of requested procedure.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>bodySite</td>
+            <td>Target site</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Reason why service is requested.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>reasonCode</td>
+            <td>Clinical justification.</td>
+            <td>If reason is a coded value, it maps to reasonCode.</td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Reason why service is requested.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>reasonReference</td>
+            <td>Clinical justification.</td>
+            <td>Reason details are represented as references to other resources.</td>
+          </tr>
+          <tr>
+            <td>priority</td>
+            <td>How quickly request should be addressed.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>priority</td>
+            <td>Routine | urgent | asap | stat.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>supportingInformation[x]</td>
+            <td>Additional clinical info relevant to interpretation.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Supporting references.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>specimen</td>
+            <td>Specimen(s) to be used for laboratory procedure.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>specimen</td>
+            <td>Referenced specimen resources.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>encounter</td>
+            <td>Encounter context of the request.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>encounter</td>
+            <td>Healthcare context of request.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>occurrence[x]</td>
+            <td>Expected time of the service.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>occurrence[x]</td>
+            <td>Requested occurrence timing.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>patientInstructions</td>
+            <td>Patient or consumer-oriented instructions.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>patientInstruction</td>
+            <td>Instructions to patient/subject.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

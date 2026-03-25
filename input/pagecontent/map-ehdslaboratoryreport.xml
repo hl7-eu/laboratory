@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSLaboratoryReport -> Bundle, Composition, DiagnosticReport, ServiceRequest</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+          The Xt-EHR logical models are under active revision and continuous refinement.
+          Updates from Xt-EHR will be progressively incorporated into this Implementation
+          Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+
+    <h3>EHDSLaboratoryReport -> Bundle, Composition, DiagnosticReport, ServiceRequest</h3>
+    <a> </a>
+    <p>
+      This page explains how conceptual elements from the EHDSLaboratoryReport logical model are
+      expressed in the corresponding FHIR document profiles used by this Implementation Guide.
+      It follows the same mapping style used in the patient summary mapping pages.
+    </p>
+
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryReport.html" target="_blank">
+            EHDSLaboratoryReport
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-Bundle-eu-lab.html">BundleLabReportEu</a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-Composition-eu-lab.html">CompositionLabReportEu</a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-DiagnosticReport-eu-lab.html">DiagnosticReportLabEu</a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-ServiceRequest-eu-lab.html">ServiceRequestLabEu</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table summary="EHDSLaboratoryReport -> Bundle, Composition, DiagnosticReport, ServiceRequest">
+        <caption>EHDSLaboratoryReport -> Bundle, Composition, DiagnosticReport, ServiceRequest</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSLaboratoryReport (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">Bundle/Composition/DiagnosticReport/ServiceRequest (EU Lab)</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>header</td>
+            <td>Laboratory report header.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>.</td>
+            <td>Document-level metadata container.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Subject of care for the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>subject</td>
+            <td>Who/what the document is about.</td>
+            <td>Also aligned with DiagnosticReport.subject.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier of the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>identifier</td>
+            <td>Identifier for the composition instance.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier of the report.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>identifier</td>
+            <td>Identifier(s) for the diagnostic report.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier of the report.</td>
+            <td>equivalent</td>
+            <td>Bundle</td>
+            <td>identifier</td>
+            <td>Identifier of the document bundle.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.author[x]</td>
+            <td>Author(s) of the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>author</td>
+            <td>Who and/or what authored the report.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.date</td>
+            <td>Date/time when the report document is authored.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>date</td>
+            <td>Composition authoring time.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Workflow/clinical status of the report.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>status</td>
+            <td>Status of the diagnostic report.</td>
+            <td>Composition and DiagnosticReport status are expected to be aligned.</td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the report content.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>language</td>
+            <td>Language of the narrative/document.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentType</td>
+            <td>Type of document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>type</td>
+            <td>Coded type of the document.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentType</td>
+            <td>Type of document.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>code</td>
+            <td>Coded report type.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentTitle</td>
+            <td>Human-readable document title.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>title</td>
+            <td>Document title.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.period</td>
+            <td>Time period covered by the report content.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>event.period</td>
+            <td>Period covered by the documented event.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.version</td>
+            <td>Business version of the report document.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>extension:versionNumber</td>
+            <td>Business-level document version.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation</td>
+            <td>Attestation information.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td>Attestation container.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.attester[x]</td>
+            <td>Attester validating the report content.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td>Attesting actor.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.datetime</td>
+            <td>Date and time of attestation.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td>When the report was attested.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication</td>
+            <td>Legal authentication information.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td>Legal authenticator details.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.legalAuthenticator[x]</td>
+            <td>Legal authenticator of the report.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td>Party taking legal responsibility.</td>
+            <td>May require attester mode constraints by implementation rules.</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.datetime</td>
+            <td>Date and time of legal authentication.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td>When legal authentication was recorded.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.eventType</td>
+            <td>Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.)..</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>category</td>
+            <td>Report Category</td>
+            <td>The type of event should be event.code, but the description seems to be a report classification.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.serviceSpecialty</td>
+            <td>Clinical/laboratory specialty context.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>category</td>
+            <td>Document categorization.</td>
+            <td>Target usage may vary by implementation constraints.</td>
+          </tr>
+          <tr>
+            <td>header.custodian</td>
+            <td>Organization responsible for maintaining the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>custodian</td>
+            <td>Custodian organization.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>presentedForm</td>
+            <td>Rendered document payload of the report.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>presentedForm</td>
+            <td>Entire report as issued (e.g. PDF).</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>intendedRecipient[x]</td>
+            <td>Intended recipients of the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>extension:information-recipient</td>
+            <td>Recipients of the document.</td>
+            <td>Uses EU extension on Composition.</td>
+          </tr>
+
+          <tr>
+            <td>body</td>
+            <td>Laboratory report structured body.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section</td>
+            <td>Structured narrative/data sections of the report.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.orderInformation</td>
+            <td>Order/request context of the report.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>.</td>
+            <td>Requested service represented as ServiceRequestLabEu.</td>
+            <td>ServiceRequest referred in the DiagnosticReport as basedOn.</td>
+          </tr>
+          <tr>
+            <td>body.orderInformation.orderId</td>
+            <td>Identifier(s) of the order.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>identifier</td>
+            <td>Business identifier of the request.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.orderInformation.orderDateAndTime</td>
+            <td>Date/time of order placement.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>authoredOn</td>
+            <td>When the request was authored.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.orderInformation.orderPlacer[x]</td>
+            <td>Placer/requester of the order.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>requester</td>
+            <td>Who initiated the request.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.orderInformation.orderReason[x]</td>
+            <td>Clinical reason/justification for the request.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>reasonCode / reasonReference</td>
+            <td>Why the service is requested.</td>
+            <td>Mapping depends on coded, textual, or referenced reason source.</td>
+          </tr>
+          <tr>
+            <td>body.orderInformation.clinicalQuestion</td>
+            <td>Clinical question to be answered.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>note</td>
+            <td>Additional textual context for the request.</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>body.supportingInformation</td>
+            <td>Additional context that supports ordering/interpretation.</td>
+            <td>related-to</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Container for supporting clinical context.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.specimen</td>
+            <td>Specimen information used by the report.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>specimen</td>
+            <td>Specimen references used in the report.</td>
+            <td>Also represented as Bundle entries of type SpecimenEu.</td>
+          </tr>
+          <tr>
+            <td>body.serviceRequest</td>
+            <td>Service request(s) answered by the report.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>basedOn</td>
+            <td>Request fulfilled by this report.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.resultData</td>
+            <td>Container for report result content.</td>
+            <td>related-to</td>
+            <td>DiagnosticReport</td>
+            <td>result / conclusion / presentedForm</td>
+            <td>Result-bearing part of the report.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.resultData.laboratoryTestResults</td>
+            <td>Structured laboratory observations in the report.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>result</td>
+            <td>Result observation references.</td>
+            <td>Observation resources are included as Bundle entries.</td>
+          </tr>
+          <tr>
+            <td>body.resultData.laboratoryTestResults</td>
+            <td>Structured laboratory observations in the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.entry</td>
+            <td>Narrative sections link to observation entries.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.resultData.commentsInterpretationAndRecommendations</td>
+            <td>Narrative comments, interpretation, and recommendations.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:text</td>
+            <td>Human-readable report commentary.</td>
+            <td>Often represented in annotation/comment section.</td>
+          </tr>
+          <tr>
+            <td>body.resultData.commentsInterpretationAndRecommendations</td>
+            <td>Narrative comments, interpretation, and recommendations.</td>
+            <td>related-to</td>
+            <td>DiagnosticReport</td>
+            <td>conclusion / conclusionCode</td>
+            <td>Diagnostic interpretation summary.</td>
+            <td>When implemented in the DiagnosticReport profile instance.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>attachments</td>
+            <td>Report attachments.</td>
+            <td>equivalent</td>
+            <td>DiagnosticReport</td>
+            <td>presentedForm / media.link</td>
+            <td>Attached reports and additional media.</td>
+            <td>May include PDF, image, or other renderable payload.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

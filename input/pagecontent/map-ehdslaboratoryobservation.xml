@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong> The Xt-EHR logical models are under active revision
+          and continuous refinement. Updates from Xt-EHR will be progressively incorporated into
+          this Implementation Guide to maintain alignment with the evolving EHDS specifications. </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow row/cells:</strong> In this ballot publication, some row/cells of the
+          mapping table have been left in yellow to indicate areas requiring further review or
+          refinement; including feedback from the Xt-EHR joint action (see note above). These
+          highlights will be addressed in subsequent updates to ensure accuracy and completeness of
+          the mappings. </div>
+      </div>
+    </div>
+    <h3>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</h3>
+    <a> </a>
+    <p></p>
+    <p>
+      This page explains how conceptual elements from the EHDS logical model are expressed
+      in the corresponding FHIR Observation profile or type used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a
+            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html"
+            target="_blank">
+            EHDSLaboratoryObservation
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-Observation-resultslab-eu-lab.html">
+            ObservationResultsLaboratoryEu
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu">
+        <caption>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSLaboratoryObservation (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">ObservationResultsLaboratoryEu (Observation)</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>header</td>
+            <td>Common header for all patient-related data.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>.</td>
+            <td>General metadata.</td>
+            <td>Dataset-level; not usually carried in Observation as-is.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient who is receiving health care.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>subject</td>
+            <td>Who/what the observation is about.</td>
+            <td>Reference to Patient (or other allowed subject types).</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier for the object.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>identifier</td>
+            <td>Business identifier for this observation.</td>
+            <td>Copy over all identifiers if multiple.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.author[x]</td>
+            <td>Author(s) who issued the resource.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td></td>
+            <td></td>
+            <td>Observation lacks a dedicated recorder.</td>
+          </tr>
+          <tr>
+            <td>header.date</td>
+            <td>Date and time of authoring/issuing.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>issued</td>
+            <td>When the observation result was issued.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the resource.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>status</td>
+            <td>Registered | preliminary | final | amended | ...</td>
+            <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7
+              ObservationStatus.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.source</td>
+            <td>Source of the information (e.g. patient, proxy).</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>No core element; use an extension if the source is required.</td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language in which the resource is written.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>language</td>
+            <td>Language of the resource.</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>header.directSubject[x]</td>
+            <td>The direct subject of the observation if different from the patient.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>focus</td>
+            <td>Focus of the observation when not the primary subject.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>observationDate[x]</td>
+            <td>Clinically relevant time or period for the observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>effective[x]</td>
+            <td>Clinically relevant time or time-period.</td>
+            <td>Map to <code>
+                effectiveDateTime</code> or <code>effectivePeriod</code>.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>Observation type.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>code</td>
+            <td>What is being observed.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>originalName</td>
+            <td>Original (conventional) name of the observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>code.text</td>
+            <td>Text representation of the observation code.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>method</td>
+            <td>Observation method.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>method</td>
+            <td>How it was done.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>specimen</td>
+            <td>Specimen used for the observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>specimen</td>
+            <td>Specimen used for this observation.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>order</td>
+            <td>Order this observation belongs to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>basedOn</td>
+            <td>Plan or request fulfilled by this observation.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>performer[x]</td>
+            <td>Performer of the observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>performer</td>
+            <td>Who performed or produced the observation.</td>
+            <td>Supports Practitioner, PractitionerRole, Patient, RelatedPerson.</td>
+          </tr>
+          <tr>
+            <td>bodySite</td>
+            <td>Anatomic location and laterality.</td>
+            <td>source-is-broader-than-target</td>
+            <td>Observation</td>
+            <td>bodySite</td>
+            <td>Observed body site.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>bodySite</td>
+            <td>Anatomic location and laterality.</td>
+            <td>source-is-broader-than-target</td>
+            <td>Observation</td>
+            <td>extension[bodyStructure]<span style="color:#2e7d32;font-weight:600;">〔R4〕</span></td>
+            <td>Observed body structure</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>bodySite</td>
+            <td>Anatomic location and laterality.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>bodyStructure<span style="color:#2e7d32;font-weight:600;">〔R5〕</span></td>
+            <td>Observed body structure</td>
+            <td></td>
+          </tr>
+          <!-- result -->
+          <tr>
+            <td>result</td>
+            <td>Result of the observation.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>.</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>result.value[x]</td>
+            <td>Observation result value.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>value[x]</td>
+            <td>Result value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>result.uncertainty</td>
+            <td>Measurement uncertainty type and interval.</td>
+            <td>related-to</td>           
+            <td>Quantity</td>
+            <td>extension</td>
+            <td>-</td>
+            <td>See included elements for mapping details</td>
+          </tr>
+          <tr>
+            <td>result.uncertaint.value</td>
+            <td>Measurement uncertainty type and interval.</td>
+            <td>equivalent</td>
+            <td>Quantity</td>
+            <td>extension:uncertainty</td>
+            <td>Uncertainty value</td>
+            <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty extension for the
+              Quantity data type.</td>
+          </tr>
+          <tr>
+            <td>result.uncertainty.type</td>
+            <td>Type of measurement uncertainty.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>extension:uncertaintyType	</td>
+            <td>Uncertainty type</td>
+            <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
+              Quantity data type.</td>
+          </tr>
+          <tr>
+            <td>result.dataAbsentReason</td>
+            <td>Why the expected value is missing.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>dataAbsentReason</td>
+            <td>Reason for missing result.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange</td>
+            <td>Reference range(s) for interpretation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange</td>
+            <td>Guidance for interpretation.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>interpretation</td>
+            <td>Reference interval and result interpretation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>interpretation</td>
+            <td>High/low/abnormal, etc.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Comments and narrative representation.</td>
+            <td>source-is-broader-than-target</td>
+            <td>Observation</td>
+            <td>note</td>
+            <td>Comment or annotation.</td>
+            <td></td>
+          </tr><!-- component -->
+          <tr>
+            <td>component</td>
+            <td>Sub-observations (e.g. panel members).</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component</td>
+            <td>Observation component.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.code</td>
+            <td>Code representing the observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.code</td>
+            <td>What is being observed.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.originalName</td>
+            <td>Original name of the component observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.code.text</td>
+            <td>Text representation of the component code.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.result</td>
+            <td>Result of the sub-observation.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>component</td>
+            <td>Component result value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.result.value[x]</td>
+            <td>Component result value.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.value[x]</td>
+            <td>Component result value.</td>
+            <td></td>
+          </tr>
+             <tr>
+            <td>component.result.uncertainty</td>
+            <td>Measurement uncertainty type and interval.</td>
+            <td>related-to</td>
+            <td>Quantity</td>
+            <td>extension</td>
+            <td>-</td>
+            <td>See included elements for mapping details</td>
+          </tr>
+          <tr>
+            <td>component.result.uncertaint.value</td>
+            <td>Measurement uncertainty type and interval.</td>
+            <td>equivalent</td>
+            <td>Quantity</td>
+            <td>extension:uncertainty</td>
+            <td>Uncertainty value</td>
+            <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty extension for the
+              Quantity data type.</td>
+          </tr>
+          <tr>
+            <td>component.result.uncertainty.type</td>
+            <td>Type of measurement uncertainty.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>extension:uncertaintyType	</td>
+            <td>Uncertainty type</td>
+            <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
+              Quantity data type.</td>
+          </tr>
+          <tr>
+            <td>component.result.dataAbsentReason</td>
+            <td>Why the component value is missing.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.dataAbsentReason</td>
+            <td>Reason for missing component result.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange</td>
+            <td>Reference range for the component.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange</td>
+            <td>Guidance for interpreting the component value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.interpretation</td>
+            <td>Component interpretation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.interpretation</td>
+            <td>Interpretation of the component.</td>
+            <td></td>
+          </tr>
+          <!-- relationships -->
+          <tr>
+            <td>derivedFrom[x]</td>
+            <td>Related resource from which this observation is derived.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>derivedFrom</td>
+            <td>What the observation is based on.</td>
+            <td>Supports references to Observation, ImagingStudy, DiagnosticReport, etc.</td>
+          </tr>
+
+          <tr>
+            <td>hasMember[x]</td>
+            <td>Group observation that includes the target as a member.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>hasMember</td>
+            <td>Related members of a panel or battery.</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>triggeredBy[x]</td>
+            <td>References to the observation(s) that triggered this observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>extension:triggeredBy</td>
+            <td>Triggering observation(s)</td>
+            <td></td>
+          </tr>          
+          <tr>
+            <td>testKit</td>
+            <td>Laboratory test kit used during measurement.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>extension:labTestKit</td>
+            <td>Device Laboratory Test Kit</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>calibrator</td>
+            <td>Calibrator used for the measurement.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>extension:certifiedRefMaterialCodeable</td>
+            <td>Certified Reference Material: CodeableConcept</td>
+            <td></td>
+          </tr>
+           <tr>
+            <td>calibrator</td>
+            <td>Calibrator used for the measurement.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>extension:certifiedRefMaterialIdentifier</td>
+            <td>Certified Reference Material: Identifier</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>accreditationStatus</td>
+            <td>Accreditation status of the laboratory for the observation.</td>
+            <td>related-to</td>
+            <td>Organization</td>
+            <td>extension:qualification</td>
+            <td></td>
+            <td>Observation.performer (of type Organization), or Observation.performer.organization if performer is of type PractitionerRole. Organization.qualification is preadopted from R5.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>previousResults</td>
+            <td>Previous results of the same observation.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>extension:supportingInfo</td>
+            <td>Other information that may be relevant to this event.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>pointOfCareTest</td>
+            <td>Indicates if the observation is a point-of-care test.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>category</td>
+            <td>Observation Classification</td>
+            <td></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;"> Return to overview: <a href="modelmap.html">EHDS Logical
+      Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>
