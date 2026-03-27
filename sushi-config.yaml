@@ -71,8 +71,8 @@ pages:
     title: Certified reference material
   downloads.md:
     title: Downloads
-  logicalModel.md:
-    title: eHN guideline data set
+  logicalmodels.md:
+    title: Logical Models
   contributors.md:
     title: Authors and contributors
   obligations.md:
@@ -185,7 +185,7 @@ menu:
   Functional:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
-    eHN Guideline dataset: logicalModel.html
+    Logical Models: logicalmodels.html
     Obligations: obligations.html
     Implementation notes: notes.html
   Implementation:
