@@ -96,7 +96,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[patient].resource only Patient or PatientEuCore or PatientAnimalEu
 
 * entry contains observation 0..*
-* entry[observation].resource only ObservationResultsLaboratoryEu
+* entry[observation].resource only Observation // ObservationResultsLaboratoryEu
 
 * entry contains specimen 0..*
 * entry[specimen].resource only SpecimenEu
@@ -120,7 +120,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[encounter].resource only Encounter
 
 * entry contains location 0..*
-* entry[location].resource only Location
+* entry[location].resource only LocationEuCore
 
 * entry contains provenance 0..*
 * entry[provenance].resource only Provenance
@@ -130,6 +130,21 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * entry contains device 0..*
 * entry[device].resource only Device
+
+* entry contains condition 0..*
+* entry[condition].resource only ConditionEuCore
+
+* entry contains procedure 0..*
+* entry[procedure].resource only ProcedureEuCore
+
+* entry contains medication 0..*
+* entry[medication].resource only MedicationEuCore
+
+* entry contains medicationStatement 0..*
+* entry[medicationStatement].resource only MedicationStatementEuCore
+
+* entry contains medicationAdministration 0..*
+* entry[medicationAdministration].resource only MedicationAdministration
 
 //* entry contains documentReference 0..*
 //* entry[documentReference].resource only DocumentReference

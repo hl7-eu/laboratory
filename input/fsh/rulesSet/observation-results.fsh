@@ -1,5 +1,7 @@
 RuleSet: ObservationResultsEu
 //  insert SetFmmandStatusRule ( 2, trial-use)
+
+
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 * category only $CodeableConcept-uv-ips
 * code only $CodeableConcept-uv-ips
@@ -7,12 +9,15 @@ RuleSet: ObservationResultsEu
 * subject 1..
 // * subject only Reference(Patient or PatientEuCore or Group or Device or Location)
 * subject only Reference(PatientAnimalEu or PatientEuCore or Group or Device or Location)
-* subject.reference 1..
+// * subject.reference 1..
 * effective[x] 1..
+/*
 * effective[x] only dateTime or Period
 * effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
-* effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
+* effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing." 
+*/
+
 * performer only Reference(PractitionerEuCore or PractitionerRoleEuCore or $Organization-uv-ips or CareTeam or PatientEuCore or RelatedPerson)
 // * value[x] MS
 // removed circular reference
@@ -22,10 +27,14 @@ RuleSet: ObservationResultsEu
 
 RuleSet: ObservationResultsValueEu
 //* value[x]
+
+/* Removed for the time being because of the processing error 
+-----------------------------------------------------------------
 * extension contains $observation-value-r5 named value-r5 0..1
 * extension[value-r5]
   * value[x] only Attachment
-  * ^short = "only for result of type Attachment"
+  * ^short = "only for result of type Attachment" 
+  --------------------------------------- */
 
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
@@ -33,7 +42,7 @@ RuleSet: ObservationResultsValueEu
 * valueString only string
 // * valueString MS
 * valueString ^sliceName = "valueString"
-* valueRange only $Range-uv-ips
+* valueRange only RangeEuLab
 // no practical examples found for the time being
 // reverted to the original statement
 // * valueRange only Range-eu-lab
@@ -53,7 +62,7 @@ RuleSet: ObservationResultsValueEu
 * valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
-* valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
+* valueCodeableConcept from $results-coded-values-laboratory-pathology-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate

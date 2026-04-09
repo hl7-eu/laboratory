@@ -15,11 +15,11 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerEuCore or Device or PatientEuCore or RelatedPerson or PractitionerRoleEuCore or Organization)
 
-* extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567
+* extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567 <= to be rediscussed NOT ALIGNED WITH INITIAL DISCUSSION, Imaging approach AND MYHEALTH@EU current solutions 
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
-  * ^comment = """Added to the FHIR R4 guide to strictly conform with the R4 rules for document bundle resources inclusion.
+  * ^comment = """Added to the FHIR R4 guide to allow strictly conformance with the R4 rules for document bundle resources inclusion.
   Using this extension implies to accept a circular reference Composition to/from DiagnosticReport"""
 
 * text ^short = "Narrative text"
@@ -143,4 +143,19 @@ Technical note: A list of accredited examination(s) is available at www.laborato
   * code = http://loinc.org#48767-8
   * text 1..
   * entry 0..0
+  * section 0..0
+
+
+// -------------------------------------
+// Attachment section  0 .. 1
+// -------------------------------------
+
+
+* section contains attachment ..* // check if ..1 or ..*
+* section[attachment]
+  * ^short = "Additional data (like images, diagrams) associated with this report"
+  * ^definition = """A  list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."""
+
+  * code = $loinc#77599-9
+  * entry only Reference (Binary or DocumentReference)
   * section 0..0
