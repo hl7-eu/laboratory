@@ -15,7 +15,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerEuCore or Device or PatientEuCore or RelatedPerson or PractitionerRoleEuCore or Organization)
 
-* extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567 <= to be rediscussed NOT ALIGNED WITH INITIAL DISCUSSION, Imaging approach AND MYHEALTH@EU current solutions 
+* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
