@@ -17,7 +17,7 @@ publisher:
   url: http://hl7.eu
   # email: test@example.org
 copyright: >-
-  Used by permission of HL7 Europe, all rights reserved Creative Commons License
+  Copyright HL7 Europe. Licensed under creative commons public domain (CC0 1.0).
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
