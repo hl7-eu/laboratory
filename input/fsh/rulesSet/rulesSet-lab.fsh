@@ -50,7 +50,7 @@ RuleSet: ReportCategoryRule
   * ^definition = "Specifies the Report Category: usually Laboratory"
   * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
 * category only $CodeableConcept-uv-ips
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
