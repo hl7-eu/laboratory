@@ -157,5 +157,6 @@ Technical note: A list of accredited examination(s) is available at www.laborato
   * ^definition = """A  list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."""
 
   * code = $loinc#77599-9
+  * entry 1..
   * entry only Reference (Binary or DocumentReference)
   * section 0..0
