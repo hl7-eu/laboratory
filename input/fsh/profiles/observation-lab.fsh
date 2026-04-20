@@ -34,7 +34,7 @@ This observation may represent the result of a simple laboratory test such as he
 
 
 * category only $CodeableConcept-uv-ips
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the general type of observation being made."

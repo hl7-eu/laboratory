@@ -15,7 +15,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerEuCore or Device or PatientEuCore or RelatedPerson or PractitionerRoleEuCore or Organization)
 
-* extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567 <= to be rediscussed NOT ALIGNED WITH INITIAL DISCUSSION, Imaging approach AND MYHEALTH@EU current solutions 
+* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
@@ -157,5 +157,6 @@ Technical note: A list of accredited examination(s) is available at www.laborato
   * ^definition = """A  list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."""
 
   * code = $loinc#77599-9
+  * entry 1..
   * entry only Reference (Binary or DocumentReference)
   * section 0..0
