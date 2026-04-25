@@ -84,7 +84,18 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
   * comment
     * ^short = "Comment about the image or data (e.g. explanation)"
     * ^definition = "Allows for a comment about the image or data, such as an explanation of its significance or context within the diagnostic report."
-    * ^requirements = "The provider of the report should make a comment about each image or data included in the report. This comment can provide valuable context and help the reader understand the significance of the image or data in relation to the overall findings of the report."
+    * ^requirements = "The provider of the report should make a comment about each image or data included in the report. This comment can provide valuable context and help the reader understand the significance of the image or data in relation to the overall findings of the report."  
   * link
     * ^short = "Reference to the image or data"
     * ^definition = "A reference to the image or data associated with this report."
+    * reference 0..0
+    * type 0..0
+    * identifier 0..0
+    * display 1..1
+      * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the cross-version extension 'link'."
+      * ^short = "Text stating use of cross-version extension 'link'"
+    * extension contains $diagnosticReport-link-xver named link 0..1
+    * extension[link]
+      * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
+      * ^short = "DocumentReference containing additional information/attachments"
+      * valueReference only Reference(DocumentReference) 
