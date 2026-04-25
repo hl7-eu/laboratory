@@ -58,6 +58,7 @@ Alias: $recordedSexOrGender = http://hl7.org/fhir/StructureDefinition/individual
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+Alias: $diagnosticReport-link-xver = http://hl7.org/fhir/StructureDefinition/alternate-reference
 
 
 // --- Profiles
