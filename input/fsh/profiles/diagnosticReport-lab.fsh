@@ -98,5 +98,4 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
     * extension[link]
       * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
       * ^short = "DocumentReference containing additional information/attachments"
-      * valueReference 1..1
       * valueReference only Reference(DocumentReference) 
