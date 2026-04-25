@@ -41,3 +41,15 @@ Description: """This extension links this observation with the laboratory test k
 * insert ExtensionContext(Observation)
 * insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only Reference(Device)
+
+//TODO: will be moved to the extensions ig in the future. https://jira.hl7.org/browse/FHIR-56516
+Extension: LaboratoryAccreditedEu
+Id:   laboratory-accredited-eu
+Title:  "Laboratory Accredited"
+Description: """Simple accreditation extension.
+For Observation it indicates that the laboratory test was/is accredited.
+For ServiceRequest it indicates that the request shall be fulfilled by an accredited laboratory."""
+Context: Observation, ServiceRequest
+* ^url = "http://hl7.eu/fhir/StructureDefinition/laboratory-accredited"
+* insert SetFmmandStatusRule ( 2, trial-use)
+* value[x] only boolean

@@ -25,6 +25,7 @@ Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
 // ---- Extensions
 Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
+Alias: $laboratory-accredited = http://hl7.eu/fhir/StructureDefinition/laboratory-accredited
 // Alias: $obligation = http://hl7.org/fhir/tools/StructureDefinition/obligation
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $humanname-mothers-family = http://hl7.org/fhir/StructureDefinition/humanname-mothers-family
@@ -41,7 +42,6 @@ Alias: $specimen-collection-device-r5 = http://hl7.org/fhir/5.0/StructureDefinit
 Alias: $specimen-collection-body-site-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite
 Alias: $specimen-collection-body-site-reference-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite.reference
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
-Alias: $bodyStructure-laterality-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure.laterality
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
 Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber

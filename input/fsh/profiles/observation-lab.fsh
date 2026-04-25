@@ -27,6 +27,9 @@ This observation may represent the result of a simple laboratory test such as he
 
 * extension contains ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..*
 * extension contains ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..*
+* extension contains $laboratory-accredited named accredited 0..1
+  * ^short = "Accredited test"
+  * ^definition = "Indicates that this laboratory test was/is accredited."
 
 * extension contains DeviceLabTestKit named labTestKit 0..*
   * ^short = "Laboratory Test Kit"
