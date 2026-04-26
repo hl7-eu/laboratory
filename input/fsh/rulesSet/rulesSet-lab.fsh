@@ -37,7 +37,6 @@ RuleSet: ReportIdentifierRule
 RuleSet: ReportTypeRule (element)
 * {element} 1..
 /* * {element}  obeys labRpt-code */
-* {element}  only $CodeableConcept-uv-ips
 * {element}  from LabReportTypesEuVs (preferred) // value set to be revised add alternative value sets
   * ^short = "Type of (Laboratory) Report"
   * ^definition = "Specifies that it refers to a Laboratory Report"
@@ -49,13 +48,11 @@ RuleSet: ReportCategoryRule
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
   * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
-* category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies this laboratory report. Two basic categories has been selected in this guide: laboratory specialty and Study type. Laboratory specialty is characteristic of the laboratory that produced the test result while Study type is an arbitrary classificion of the test type."
 * category contains studyType 0..*
-* category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
 * category[studyType]
   * ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
@@ -65,7 +62,6 @@ RuleSet: ReportCategoryRule
 // "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 
 * category contains specialty 0..*
-* category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty]
   * ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
