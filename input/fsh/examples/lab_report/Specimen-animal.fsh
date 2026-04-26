@@ -8,6 +8,6 @@ Usage: #example
 * collection.collectedDateTime = "2022-10-25T13:35:00+01:00"
 
 Instance: Patient-animal-example
-InstanceOf: PatientAnimalEu
+InstanceOf: PatientAnimalEuCore
 Usage: #example
 * extension[$patient-animal].extension[species].valueCodeableConcept = $sct#448169003 "Domestic cat"

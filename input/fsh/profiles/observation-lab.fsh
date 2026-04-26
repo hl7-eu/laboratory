@@ -1,43 +1,34 @@
 Profile: ObservationResultsLaboratoryEu
-// Parent: MedicalTestResultEuCore  //TODO: Should be derived from MedicalTestResultEuCore, but currently there are problems that needs to be resolved first, see Jira ticket FHIR-56381
-Parent: Observation
+Parent: MedicalTestResultEuCore
 Id: Observation-resultslab-eu-lab
 Title:    "Observation Results: laboratory"
 Description: """This profile constrains the Observation resource to represent results produced by laboratory tests or panels/studies for the  HL7 Europe project.
 This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as "has-member" child observations.
 """
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 2, trial-use)
+* insert SetFmmandStatusRule (2, trial-use)
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
-* insert ObservationResultsEu
 * obeys eu-lab-1
 * obeys eu-lab-2
 * . ^short = "Laboratory result for a simple test or for a panel/study"
 * . ^definition = "This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and references the atomic results of the study as \"has-member\" child observations"
 * . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
-// * extension contains $observation-analysis-time named analysis-time 0..1
 * extension contains
   $workflow-supportingInfo named supportingInfo 0..* and
-  $observation-triggeredBy-r5 named triggeredBy 0..* and
-  $observation-bodyStructure-r5 named bodyStructure 0..1 and
   DeviceLabTestKit named labTestKit 0..* and
   ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
   ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* and
-  $laboratory-accredited named accredited 0..1 //and
-  //$observation-value-r5 named value-r5 0..1
+  $laboratory-accredited named accredited 0..1 
 
-* extension[triggeredBy]
-  * extension[observation] ^short = "Triggering observation."
-  * extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 * extension[labTestKit]
   * ^short = "Laboratory Test Kit"
   * ^definition = "The laboratory test kit used for this test."
 * extension[accredited]
   * ^short = "Accredited test"
   * ^definition = "Indicates that this laboratory test was/is accredited."
+
+* status ^short = "Status of this observation (e.g. preliminary, final,...)"
 
 * category 1..*
 * category only $CodeableConcept-uv-ips
@@ -57,17 +48,14 @@ This observation may represent the result of a simple laboratory test such as he
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
-* code
+* code only $CodeableConcept-uv-ips
 * code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 
-* performer 1..
-* performer only Reference(PractitionerRoleEuCore or PractitionerEuCore or OrganizationEuCore or PatientEuCore or RelatedPerson)  // or CareTeam
-* performer.extension contains $event-performerFunction named performerFunction 0..*
-* performer.extension[performerFunction]
-// * performer.extension[performerFunction] ^meaningWhenMissing = """The Performer Function is Participant"""
+* focus only Reference(AnimalSpecimenEuLab)  // If the observation belongs to a human patient but specimen is collected from an animal, then the focus of the observation is the animal specimen.
 
+* performer 1..
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
 * insert ObservationResultsValueEu
 * interpretation only $CodeableConcept-uv-ips
@@ -85,8 +73,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * hasMember ^comment = "This element is used in the context of international patient summary when there is a need to group a collection of observations, because they belong to the same panel, or because they share a common interpretation comment, or a common media attachment (illustrative image or graph). In these cases, the current observation is the grouper, and its set of sub-observations are related observations using the type \"has-member\".  For a discussion on the ways Observations can be assembled in groups together see [Observation Grouping](http://hl7.org/fhir/observation.html#obsgrouping)."
 * issued ^short = "Date/Time this result was made available"
 
-//* component obeys eu-lab-2
-* component
+* component ^short = "Laboratory result"
   * code only $CodeableConcept-uv-ips
   * code from LaboratoryResultStandardEuVs (preferred)
   * insert ObservationResultsValueEu
