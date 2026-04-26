@@ -8,6 +8,9 @@ Description: """This profile defines how to represent an laboratory orders using
 
 * . ^short = "Laboratory Order"
 * . ^definition = "Laboratory Order composition."
+* extension contains $laboratory-accredited named accreditedLab 0..1
+  * ^short = "Accredited laboratory requested"
+  * ^definition = "Indicates that the request shall be fulfilled by an accredited laboratory."
 * identifier 1..
 * code from LabOrderCodesEuVs (preferred)
 * subject 1..

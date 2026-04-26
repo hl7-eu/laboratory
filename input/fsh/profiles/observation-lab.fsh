@@ -22,19 +22,22 @@ This observation may represent the result of a simple laboratory test such as he
 * extension contains
   $workflow-supportingInfo named supportingInfo 0..* and
   $observation-triggeredBy-r5 named triggeredBy 0..* and
-  //$bodySite-reference named bodySite 0..1 and
   $observation-bodyStructure-r5 named bodyStructure 0..1 and
   DeviceLabTestKit named labTestKit 0..* and
   ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
-  ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* //and
+  ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* and
+  $laboratory-accredited named accredited 0..1 //and
   //$observation-value-r5 named value-r5 0..1
 
-* extension[triggeredBy].extension[observation] ^short = "Triggering observation."
-* extension[triggeredBy].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
-
+* extension[triggeredBy]
+  * extension[observation] ^short = "Triggering observation."
+  * extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 * extension[labTestKit]
   * ^short = "Laboratory Test Kit"
-  * ^definition = """The laboratory test kit used for this test."""
+  * ^definition = "The laboratory test kit used for this test."
+* extension[accredited]
+  * ^short = "Accredited test"
+  * ^definition = "Indicates that this laboratory test was/is accredited."
 
 * category 1..*
 * category only $CodeableConcept-uv-ips
