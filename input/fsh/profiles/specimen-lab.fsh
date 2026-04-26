@@ -8,7 +8,7 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
-* subject only Reference ( PatientEuCore or PatientAnimalEu or Group  or Device or Substance or Location)
+* subject only Reference ( PatientEuCore or Group  or Device or Substance or Location)
 * subject
   * extension contains SpecimenSubjectAnimalSource named specimenAnimalSource 0..1
   * extension[specimenAnimalSource].valueReference only Reference(AnimalSpecimenEuLab)
