@@ -115,7 +115,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051)
 
 Instance: Inline-Organization-laboratory-results-report-poc
-InstanceOf: OrganizationUvIps
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "608b5309-2609-4d03-b6da-c758bfa1de70"
 * name = "SAN RAFFAELE NOMENTANA"
