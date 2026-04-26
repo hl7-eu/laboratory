@@ -32,7 +32,7 @@ This observation may represent the result of a simple laboratory test such as he
 
 * category 1..*
 * category 
-  * insert SliceElement (#value, #this)
+  * insert SliceElement (#pattern, $this)
   * ^definition = "A code that classifies the general type of observation being made."
   * ^comment = "\"laboratory\" includes laboratory medicine and pathology"
 
