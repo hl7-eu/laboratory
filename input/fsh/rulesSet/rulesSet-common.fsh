@@ -94,3 +94,16 @@ RuleSet: ObligationActorAndCode(actor, code)
 RuleSet: ObligationElement(element)
 // Used for profile level obligations. Insert after obligation code and actor
 * ^extension[$obligation][=].extension[elementId].valueString = {element}
+
+RuleSet: SliceElement( type, path )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.ordered = false
+
+RuleSet: SliceElementWithDescription( type, path, description )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.description = "{description}"
+* ^slicing.ordered = false

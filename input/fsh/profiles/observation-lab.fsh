@@ -1,5 +1,5 @@
 Profile: ObservationResultsLaboratoryEu
-// Parent: ObservationResultsEu
+// Parent: MedicalTestResultEuCore  //TODO: Should be derived from MedicalTestResultEuCore, but currently there are problems that needs to be resolved first, see Jira ticket FHIR-56381
 Parent: Observation
 Id: Observation-resultslab-eu-lab
 Title:    "Observation Results: laboratory"
@@ -19,12 +19,22 @@ This observation may represent the result of a simple laboratory test such as he
 * . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
 // * extension contains $observation-analysis-time named analysis-time 0..1
-* extension contains $workflow-supportingInfo named supportingInfo 0..*
+* extension contains
+  $workflow-supportingInfo named supportingInfo 0..* and
+  $observation-triggeredBy-r5 named triggeredBy 0..* and
+  //$bodySite-reference named bodySite 0..1 and
+  $observation-bodyStructure-r5 named bodyStructure 0..1 and
+  DeviceLabTestKit named labTestKit 0..* and
+  ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
+  ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* //and
+  //$observation-value-r5 named value-r5 0..1
 
-* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
-* extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
-* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
+* extension[triggeredBy].extension[observation] ^short = "Triggering observation."
+* extension[triggeredBy].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 
+* extension[labTestKit]
+  * ^short = "Laboratory Test Kit"
+  * ^definition = """The laboratory test kit used for this test."""
 * extension contains ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..*
 * extension contains ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..*
 * extension contains $laboratory-accredited named accredited 0..1
@@ -35,33 +45,31 @@ This observation may represent the result of a simple laboratory test such as he
   * ^short = "Laboratory Test Kit"
   * ^definition = """The laboratory test kit used for this test."""
 
-
+* category 1..*
 * category only $CodeableConcept-uv-ips
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^definition = "A code that classifies the general type of observation being made."
-* category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
-* category contains laboratory 1..1
+  * insert SliceElement (#value, #this)
+  * ^definition = "A code that classifies the general type of observation being made."
+  * ^comment = "\"laboratory\" includes laboratory medicine and pathology"
+
+* category contains
+  laboratory 1..1 and
+  studyType 0..* and
+  specialty 0..*
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* category contains studyType 0..*
 * category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
-* category contains specialty 0..*
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 
 * code
-//* code from $results-laboratory-pathology-observations-uv-ips  (preferred)
 * code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
+
 * performer 1..
-* performer only Reference(PractitionerRoleEuCore or PractitionerEuCore or $Organization-uv-ips or CareTeam or PatientEuCore or RelatedPerson)
-
-
+* performer only Reference(PractitionerRoleEuCore or PractitionerEuCore or OrganizationEuCore or PatientEuCore or RelatedPerson)  // or CareTeam
 * performer.extension contains $event-performerFunction named performerFunction 0..*
 * performer.extension[performerFunction]
 // * performer.extension[performerFunction] ^meaningWhenMissing = """The Performer Function is Participant"""
@@ -86,7 +94,7 @@ That's why it is important to explicitly include informaiton about measurement m
 //* component obeys eu-lab-2
 * component
   * code only $CodeableConcept-uv-ips
-  * code from $results-laboratory-pathology-observations-uv-ips  (preferred)
+  * code from LaboratoryResultStandardEuVs (preferred)
   * insert ObservationResultsValueEu
 
 Invariant: eu-lab-1

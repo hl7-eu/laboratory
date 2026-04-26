@@ -9,32 +9,33 @@ RuleSet: ObservationResultsEu
 * subject 1..
 // * subject only Reference(Patient or PatientEuCore or Group or Device or Location)
 * subject only Reference(PatientAnimalEu or PatientEuCore or Group or Device or Location)
+* focus only Reference(AnimalSpecimenEuLab)  // If the observation belongs to a human patient but specimen is collected from an animal, then the focus of the observation is the animal specimen.
 // * subject.reference 1..
 * effective[x] 1..
 /*
 * effective[x] only dateTime or Period
 * effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
-* effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing." 
+* effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
 */
 
-* performer only Reference(PractitionerEuCore or PractitionerRoleEuCore or $Organization-uv-ips or CareTeam or PatientEuCore or RelatedPerson)
+* performer only Reference(PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore or PatientEuCore or RelatedPerson)
 // * value[x] MS
 // removed circular reference
 // * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
-* hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
+//* hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
 * component ^short = "Laboratory result"
 
 RuleSet: ObservationResultsValueEu
 //* value[x]
 
-/* Removed for the time being because of the processing error 
------------------------------------------------------------------
+/* Removed for the time being because of the processing error
+----------------------------------------------------------------- */
 * extension contains $observation-value-r5 named value-r5 0..1
 * extension[value-r5]
   * value[x] only Attachment
-  * ^short = "only for result of type Attachment" 
-  --------------------------------------- */
+  * ^short = "only for result of type Attachment"
+/* --------------------------------------- */
 
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"

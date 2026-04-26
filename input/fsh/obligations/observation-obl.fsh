@@ -8,9 +8,9 @@ Description: "This profile defines obligations for Observation in FHIR for the p
 
 // * extension[analysis-time] insert ObligationSet1
 * extension[supportingInfo] insert ObligationSet2
-* extension[triggeredBy-r5] insert ObligationSet2
-* extension[triggeredBy-r5].extension[observation] insert ObligationSet1
-* extension[triggeredBy-r5].extension[type] insert ObligationSet1
+* extension[triggeredBy] insert ObligationSet2
+* extension[triggeredBy].extension[observation] insert ObligationSet1
+* extension[triggeredBy].extension[type] insert ObligationSet1
 * status insert ObligationSet1
 * category insert ObligationSet1
 * code insert ObligationSet1
