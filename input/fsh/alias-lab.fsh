@@ -13,10 +13,6 @@ Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patie
 // --- Value Sets
 Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFlavor
 
-// NO more used in IPS 2.0
-// Alias: $results-laboratory-observations-uv-ips  = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
-// Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
-
 Alias: $results-laboratory-pathology-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips
 Alias: $results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips
 
@@ -42,7 +38,6 @@ Alias: $specimen-collection-device-r5 = http://hl7.org/fhir/5.0/StructureDefinit
 Alias: $specimen-collection-body-site-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite
 Alias: $specimen-collection-body-site-reference-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite.reference
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
-Alias: $observation-bodyStructure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.bodyStructure
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
 Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
