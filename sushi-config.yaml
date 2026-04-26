@@ -185,6 +185,7 @@ menu:
     Challenges: challenges.html
     Design Choices: design-choice.html
     Certified reference material: crm.html
+    Handling Missing Data: https://hl7.eu/fhir/base/2.0.0/missing-data.html
   Functional:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
@@ -347,9 +348,9 @@ resources:
     name: "ServiceRequest: example"
     description: Example of ServiceRequest conforming this guide.
 
-  Patient/Patient-animal-example:
-    name: "Patient: animal example"
-    description: Example of Patient resource used for indicating an animal (cat) conforming this guide.
+  RelatedPerson/RelatedPerson-animal-example:
+    name: "RelatedPerson: animal example"
+    description: Example of RelatedPerson resource used for indicating an animal (cat) as the specimen source, conforming this guide.
 
   # -------------  Obligations
   StructureDefinition/Patient-obl-eu-lab:
