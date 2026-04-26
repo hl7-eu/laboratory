@@ -93,7 +93,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[diagnosticReport].resource only DiagnosticReportLabEu
 
 * entry contains patient 0..*
-* entry[patient].resource only Patient // or PatientEuCore or PatientAnimalEu changed based on https://jira.hl7.org/browse/FHIR-56181
+* entry[patient].resource only Patient // or PatientEuCore or PatientAnimalEuCore changed based on https://jira.hl7.org/browse/FHIR-56181
 
 * entry contains observation 0..*
 * entry[observation].resource only Observation // ObservationResultsLaboratoryEu
