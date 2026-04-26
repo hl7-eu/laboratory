@@ -53,3 +53,12 @@ Context: Observation, ServiceRequest
 * ^url = "http://hl7.eu/fhir/StructureDefinition/laboratory-accredited"
 * insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only boolean
+
+// TODO: replace with official R6 backport extension when available.
+Extension: SpecimenSubjectAnimalSource
+Id: specimen-subject-animal-source
+Title: "Specimen Subject Animal Source"
+Description: "Reference to a related person representing an animal specimen source."
+* insert ExtensionContext(Specimen.subject)
+* insert SetFmmandStatusRule ( 2, trial-use)
+* value[x] only Reference(RelatedPerson)
