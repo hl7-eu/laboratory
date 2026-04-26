@@ -11,8 +11,7 @@ RuleSet: ObservationResultsValueEu
 // reverted to the original statement
 // * valueRange only Range-eu-lab
 * valueRange ^sliceName = "valueRange"
-//* valueRatio only $Ratio-uv-ips
-* valueRatio only Ratio-eu-lab
+* valueRatio only RatioEuLab
 * valueRatio ^sliceName = "valueRatio"
 * valueTime only time
 * valueTime ^sliceName = "valueTime"
@@ -20,12 +19,8 @@ RuleSet: ObservationResultsValueEu
 * valueDateTime ^sliceName = "valueDateTime"
 * valuePeriod only Period
 * valuePeriod ^sliceName = "valuePeriod"
-// * valueQuantity only $Quantity-uv-ips
-* valueQuantity only Quantity-eu-lab
-// * valueQuantity MS
+* valueQuantity only QuantityEuLab
 * valueQuantity ^sliceName = "valueQuantity"
-* valueCodeableConcept only $CodeableConcept-uv-ips
-// * valueCodeableConcept MS
 * valueCodeableConcept from $results-coded-values-laboratory-pathology-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
