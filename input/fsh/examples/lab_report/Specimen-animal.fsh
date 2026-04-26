@@ -5,7 +5,7 @@ Usage: #example
 * status = #available
 * type = $sct#119297000	"Blood specimen"
 * subject = Reference(pat-lab-example)
-* subject.extension[specimenAnimalSource].valueReference = Reference(Patient-animal-example)
+* subject.extension[specimenAnimalSource].valueReference = Reference(RelatedPerson-animal-example)
 * collection.collectedDateTime = "2022-10-25T13:35:00+01:00"
 
 Instance: RelatedPerson-animal-example
