@@ -1,46 +1,3 @@
-//===================================
-/// INVARIANTS
-//===================================
-
-Invariant: dr-comp-enc
-Description: "DiagnosticReport and Composition SHALL have the same encounter"
-/* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
-Expression: "( (entry.resource.ofType(Composition).encounter.empty() and entry.resource.ofType(DiagnosticReport).encounter.empty() ) or entry.resource.ofType(Composition).encounter = entry.resource.ofType(DiagnosticReport).encounter )"
-Severity:    #error
-
-Invariant: dr-comp-subj
-Description: "DiagnosticReport and Composition SHALL have the same subject"
-Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
-Severity:    #error
-
-
-Invariant: dr-comp-type
-Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
-Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"
-Severity:    #error
-
-Invariant: dr-comp-category
-Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
-Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()"
-Severity:    #error
-
-Invariant: dr-comp-identifier
-Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
-/* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists" */
-
-Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
-Severity:    #error
-
-Invariant: one-comp
-Description: "A laboratory report bundle SHALL include one and only one Composition"
-Expression: "entry.resource.ofType(Composition).count() = 1"
-Severity:    #error
-
-Invariant: one-dr
-Description: "A laboratory report SHALL include one and only one DiagnosticReport"
-Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
-Severity:    #error
-
 //==========================
 // PROFILE
 //==========================
@@ -50,8 +7,6 @@ Parent: Bundle
 Id: Bundle-eu-lab
 Title: "Bundle: Laboratory Report"
 Description: "Clinical document used to represent a Laboratory Report for the scope of the HL7 Europe project."
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report bundle"
 * . ^definition = "Laboratory Report bundle."
@@ -82,7 +37,6 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
-// * entry ^slicing.ordered = true => changed on 2023-07-19  to be checked
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
@@ -96,7 +50,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry[patient].resource only Patient // or PatientEuCore or PatientAnimalEuCore changed based on https://jira.hl7.org/browse/FHIR-56181
 
 * entry contains observation 0..*
-* entry[observation].resource only Observation // ObservationResultsLaboratoryEu
+* entry[observation].resource only Observation // not only LaboratoryObservation as this might be needed for ServiceRequest.supportingInformation
 
 * entry contains specimen 0..*
 * entry[specimen].resource only SpecimenEu
@@ -146,6 +100,45 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * entry contains medicationAdministration 0..*
 * entry[medicationAdministration].resource only MedicationAdministration
 
-//* entry contains documentReference 0..*
-//* entry[documentReference].resource only DocumentReference
+//===================================
+/// INVARIANTS
+//===================================
 
+Invariant: dr-comp-enc
+Description: "DiagnosticReport and Composition SHALL have the same encounter"
+/* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
+Expression: "( (entry.resource.ofType(Composition).encounter.empty() and entry.resource.ofType(DiagnosticReport).encounter.empty() ) or entry.resource.ofType(Composition).encounter = entry.resource.ofType(DiagnosticReport).encounter )"
+Severity:    #error
+
+Invariant: dr-comp-subj
+Description: "DiagnosticReport and Composition SHALL have the same subject"
+Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
+Severity:    #error
+
+
+Invariant: dr-comp-type
+Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"
+Severity:    #error
+
+Invariant: dr-comp-category
+Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
+Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()"
+Severity:    #error
+
+Invariant: dr-comp-identifier
+Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
+/* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists" */
+
+Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
+Severity:    #error
+
+Invariant: one-comp
+Description: "A laboratory report bundle SHALL include one and only one Composition"
+Expression: "entry.resource.ofType(Composition).count() = 1"
+Severity:    #error
+
+Invariant: one-dr
+Description: "A laboratory report SHALL include one and only one DiagnosticReport"
+Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
+Severity:    #error
