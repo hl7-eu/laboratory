@@ -69,11 +69,11 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^slicing.discriminator[=].path = "$this.section"
   * ^slicing.discriminator[+].type = #exists
   * ^slicing.discriminator[=].path = "$this.entry"
-/*   * ^slicing.discriminator[+].type = #type
-  * ^slicing.discriminator[=].path = "$this.entry.resolve()" */
+  // * ^slicing.discriminator[+].type = #type
+  // * ^slicing.discriminator[=].path = "$this.entry.resolve()" 
   // GC $this.code has a preferred binding, how can work ?
-/*   * ^slicing.discriminator[+].type = #pattern
-  * ^slicing.discriminator[=].path = "$this.code" */
+  * ^slicing.discriminator[+].type = #pattern
+  * ^slicing.discriminator[=].path = "$this.code"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
   * ^definition = """The \"body\" of the report is organized as a tree of up to two levels of sections: top level sections represent laboratory specialties. A top level section SHALL contain either one text block carrying all the text results produced for this specialty along with Laboratory Data Entries or a set of Laboratory Report Item Sections. In the first case the specialty section happens to also be a leaf section. In the latter case, each (second level) leaf section contained in the (top level) specialty section represents a Report Item: i.e., a battery, a specimen study (especially in microbiology), or an individual test. In addition, any leaf section SHALL contain a Laboratory Data Entries containing the observations of that section in a machine-readable format."""
