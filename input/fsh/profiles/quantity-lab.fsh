@@ -2,8 +2,10 @@ Profile: QuantityEuLab
 Parent: Quantity
 Id: Quantity-eu-lab
 Title: "Quantity (Eu Lab)"
-Description: "This profile constrains the Quantity data type to use UCUM as the code system for units and optionally share measurement uncertainty"
-// * ^publisher = "HL7 Europe"
+Description: """This profile constrains the Quantity data type to use UCUM for units. 
+When using the Quantity datatype, the unit is represented using a coded form with UCUM as the system in the code element. The human-readable textual representation is is captured in the unit element.
+If no suitable UCUM code exists, the code is set to “1”, and the textual unit representation is used. 
+If both coded and textual representations are present, they need to be semantically consistent."""
 * ^purpose = "This profile of the Quantity data type imposes the usage of the UCUM as the code system for units and allows expressing uncertainty of measurement"
 * . ^short = "A measured amount using UCUM"
 * . ^definition = "A measured amount (or an amount that can potentially be measured) and uncertainty of the measurement. Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.\r\nThis profile imposes that the code system for units be UCUM."
@@ -12,7 +14,6 @@ Description: "This profile constrains the Quantity data type to use UCUM as the 
 * extension contains $iso21090-uncertaintyType named uncertaintyType 0..1
 * system = "http://unitsofmeasure.org" 
 * system 0..1
-
 
 Profile: RatioEuLab
 Parent: Ratio
@@ -39,7 +40,6 @@ Parent: Range
 Id: Range-eu-lab
 Title: "Range (Eu Lab)"
 Description: "This profile constrains the Range data type to use UCUM as the code system for units and optionally share measurement uncertainty"
-// * ^publisher = "HL7 Europe"
 * ^purpose = "This profile of the Range data type imposes the usage of the UCUM as the code system for units and allows expressing uncertainty of measurement"
 * . ^short = "A measured range using UCUM"
 * . ^definition = "A measured range (or a range that can potentially be measured) and uncertainty of the measurement. This profile imposes that the code system for units be UCUM."

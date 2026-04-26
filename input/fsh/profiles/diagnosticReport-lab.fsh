@@ -49,7 +49,6 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * insert ReportCategoryRule
 // add binding
 /* * code 1..
-* code only $CodeableConcept-uv-ips
 * code from LabReportTypesEuVs (preferred) // value set to be revised add alternative value sets
 * code ^binding.extension.extension[0].url = "purpose"
 * code ^binding.extension.extension[=].valueCode = #candidate

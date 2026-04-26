@@ -31,7 +31,7 @@ This observation may represent the result of a simple laboratory test such as he
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 
 * category 1..*
-* category only $CodeableConcept-uv-ips
+* category 
   * insert SliceElement (#value, #this)
   * ^definition = "A code that classifies the general type of observation being made."
   * ^comment = "\"laboratory\" includes laboratory medicine and pathology"
@@ -41,14 +41,11 @@ This observation may represent the result of a simple laboratory test such as he
   studyType 0..* and
   specialty 0..*
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* category[studyType] only $CodeableConcept-uv-ips
 * category[studyType] from LabStudyTypesEuVs
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
-* category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
-
-* code only $CodeableConcept-uv-ips
+ 
 * code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
@@ -58,11 +55,9 @@ This observation may represent the result of a simple laboratory test such as he
 * performer 1..
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
 * insert ObservationResultsValueEu
-* interpretation only $CodeableConcept-uv-ips
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
 That's why it is important to explicitly include informaiton about measurement method is such cases."
-* method only $CodeableConcept-uv-ips
 * method from LabTechniqueEuVs (preferred) // added binding to an agreed eu lab measurement method value set
 * specimen only Reference(SpecimenEu)
   * ^comment = "When the specimen is applicable and known it shall be documented"
@@ -74,7 +69,6 @@ That's why it is important to explicitly include informaiton about measurement m
 * issued ^short = "Date/Time this result was made available"
 
 * component ^short = "Laboratory result"
-  * code only $CodeableConcept-uv-ips
   * code from LaboratoryResultStandardEuVs (preferred)
   * insert ObservationResultsValueEu
 
