@@ -9,9 +9,14 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^definition = "Laboratory specimen"
 
 * subject only Reference ( PatientEuCore or PatientAnimalEu or Group  or Device or Substance or Location)
+* subject
+  * extension contains SpecimenSubjectAnimalSource named specimenAnimalSource 0..1
+  * extension[specimenAnimalSource].valueReference only Reference(AnimalSpecimenEuLab)
+  * extension[specimenAnimalSource] ^short = "Animal specimen source"
+* type 1..1
 * type from LabSpecimenTypesEuVs (preferred)
-* type 0..1
-  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
+  * ^comment = """If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type.
+For a non-identifiable animal specimen source (e.g. 710069003 | Tick specimen (specimen) |), Specimen.type with the appropriate code shall be used."""
 * parent only Reference(SpecimenEu)
 * request
   * ^short = "Why the specimen was collected."
