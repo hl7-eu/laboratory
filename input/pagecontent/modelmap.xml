@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <h3>EHDS Laboratory Report Logical Model -> FHIR Profiles</h3>
+    <p><strong>EHDS Laboratory Report Logical Model -&gt; FHIR Profiles</strong></p>
     <p>
         This page maps the Xt-EHR EHDS Laboratory Report logical model to the FHIR profiles used in
         this Implementation Guide.
