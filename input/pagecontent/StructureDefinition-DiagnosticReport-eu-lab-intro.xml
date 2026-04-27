@@ -10,7 +10,6 @@
 
 	</blockquote>
 
-
 	<h4>Adding a PDF, images or other kind of additional data in a DiagnosticReport</h4>
 	<a name="pdf-and-images"> </a>
 	<p>In some cases it is requested to include PDF, images or other kind of additional data in a Diagnostic Report.</p>
@@ -19,4 +18,10 @@
 	<p>In case of images or other kinds of additional data (that can be a pdf document) used as support for the interpretation of the report, this is realized by using the optional element <i>media</i>.
 	</p>
 
+	<h4>Sorting of laboratory study groups and results</h4>
+	<a name="sorting-lab-results"> </a>
+	<p>The order of laboratory study groups as well the results within these groups are decided by the creator of the report.</p>
+	<p>The array order of these information is expected to be consited for laboratory reports that comply with the HL7 Europe Laboratory Report IG.</p>
+	<p>The persistence layer MUST also keep the provided array element order as standard sorting for laboratory reports in their system.</p>
+	<p>Users MAY also sort the data interactively in their system in other ways, provided the system offers such functions.</p>
 </div>
