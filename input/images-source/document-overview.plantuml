@@ -8,7 +8,7 @@ artifact "Bundle: Laboratory Report" as bundle
 artifact "Composition: Laboratory Report" as composition
 artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
 artifact "Observation Results: laboratory" as result
-artifact "Patient: Animal" as animalPatient
+artifact "RelatedPerson: Animal" as animalSpecimen
 artifact "Patient: Person" as humanPatient
 artifact "Practitioner: Laboratory Report" as Practitioner
 artifact "PractitionerRole: Laboratory Report" as PractitionerRole
@@ -30,7 +30,7 @@ url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
 url of diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
 url of result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
 url of humanPatient [[https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
-url of animalPatient [[StructureDefinition-Patient-animal-eu-lab.html]]
+url of animalSpecimen [[StructureDefinition-animal-specimen-eu-lab.html]]
 url of Practitioner [[https://hl7.eu/fhir/base/StructureDefinition-practitioner-eu-core.html]]
 url of PractitionerRole [[https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
 url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
@@ -42,7 +42,7 @@ bundle o-- composition
 bundle o-- diagnosticReport
 bundle o-- result
 bundle o-- humanPatient
-bundle o-- animalPatient
+bundle o-- animalSpecimen
 bundle o-- composition
 bundle o-- Practitioner
 bundle o-- PractitionerRole
@@ -58,7 +58,7 @@ bundle o-- Coverage
 bundle o-- Device
 
 composition --> result
-composition --> animalPatient
+composition --> animalSpecimen
 composition --> humanPatient
 composition --> Practitioner
 composition --> PractitionerRole

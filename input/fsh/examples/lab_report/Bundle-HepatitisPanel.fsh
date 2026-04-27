@@ -98,7 +98,7 @@ Usage: #inline
 
 
 Instance: Inline-Specimen-hepatitis-panel
-InstanceOf: Specimen-uv-ips
+InstanceOf: SpecimenEu
 Usage: #inline
 * id = "3c9bd730-3ff9-40ee-9da1-4f3d5c526f13"
 * status = #available

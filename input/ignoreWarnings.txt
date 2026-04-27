@@ -3,12 +3,6 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
-Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1'
-
-# == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
-The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set (error message = The provided code 'http://hl7.org/fhir/examplescenario-actor-type#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1')
-
 # == http:​/​/hl7​.eu​/fhir​/laboratory​/StructureDefinition​/HumanName-obl-eu-lab
 The Implementation Guide contains no examples for this data type profile
 
@@ -30,13 +24,6 @@ A definition for CodeSystem 'urn:oid:1.2.203.24341.11.2.2' could not be found, s
 # == fsh-generated\resources\Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.json ==
 A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
-
-# == fsh-generated\resources\ValueSet-lab-obsCode-eu-lab.json ==
-WARNING: ValueSet.where(id = 'lab-obsCode-eu-lab'): Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
-
-
-# == fsh-generated\resources\ValueSet-lab-specimenContainer-eu-lab.json ==
-This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
 
 # === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
 Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
@@ -64,3 +51,16 @@ The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-Con
 # Warnings referred to an Obligation profile
 The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
 The Implementation Guide contains no examples for this profile
+
+# Multiple matching profiles, caused by the cross-version dependency
+ %among choices: http://hl7.org/fhir/5.0/StructureDefinition/profile-Composition|0.1.0%
+
+# == Unknown Identifier Systems
+No definition could be found for URL value 'urn:oid:%
+No definition could be found for URL value 'https://ncez.mzcr.cz/standards/fhir/sid/%
+No definition could be found for URL value 'http://hospital.org/lis-order'
+
+# == Unknown CodeSystems
+No definition could be found for URL value 'http://nibsc.org'
+No definition could be found for URL value 'http://pei.de'
+No definition could be found for URL value 'http://niaid.nih.gov'
