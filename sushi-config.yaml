@@ -80,6 +80,8 @@ pages:
     title: Known Issues
   dependencies.md:
     title: Dependencies
+  expansion-params.md:
+    title: Expansion Parameters
   changes.md:
     title: Change Log
   copyright.md:
@@ -200,6 +202,7 @@ menu:
     Known/Open Issues: knownIssues.html
     Download: downloads.html
     Dependencies: dependencies.html
+    Expansion parameters: expansion-params.html
     Change Log: changes.html
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html

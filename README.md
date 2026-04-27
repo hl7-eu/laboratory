@@ -5,6 +5,7 @@ code: laboratory
 ## Sources
 
 * The **master** branch documents the STU 1 version and the current CI build for STU 2
+* The **2.0.0-xtehr-fixes** branch is used for managing errata on the STU 1, including STU 1.1
 
 ## Builds
 
