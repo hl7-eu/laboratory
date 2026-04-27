@@ -15,7 +15,7 @@ Alias: $iccc3 = http://terminology.hl7.org/CodeSystem/iccc-3 // FAKE URL NOT YET
 Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
 Alias: $loinc =  http://loinc.org
-Alias: $medicalDevice-cs = urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6 // ===> to be checked <====
+Alias: $medicalDevice-cs = http://hl7.eu/fhir/laboratory/CodeSystem/lab-emdn-eu-lab
 Alias: $niaid = http://niaid.nih.gov
 Alias: $nibsc = http://nibsc.org
 Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
