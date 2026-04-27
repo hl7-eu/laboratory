@@ -16,7 +16,6 @@ Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFla
 Alias: $results-laboratory-pathology-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips
 Alias: $results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips
 
-
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
 // ---- Extensions

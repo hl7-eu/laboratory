@@ -70,7 +70,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^slicing.discriminator[+].type = #exists
   * ^slicing.discriminator[=].path = "$this.entry"
   // * ^slicing.discriminator[+].type = #type
-  // * ^slicing.discriminator[=].path = "$this.entry.resolve()" 
+  // * ^slicing.discriminator[=].path = "$this.entry.resolve()"
   // GC $this.code has a preferred binding, how can work ?
   * ^slicing.discriminator[+].type = #pattern
   * ^slicing.discriminator[=].path = "$this.code"
@@ -96,11 +96,7 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
   * ^short = "Variant 1: EU Laboratory Report section with entries and no sub-sections"
   * ^definition = """Variant 1: With this option, all laboratory report data entries are provided in the top level sections and no sub-sections are allowed."""
   * insert SectionElementsRules
-/*   * code from LabStudyTypesEuVs (preferred)
-  * text ^short = "Text summary of the section, for human interpretation."
-  * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-  * entry 1..
-  * section ..0 */
+
 
 // -------------------------------------
 // Structured sections  0 .. 1

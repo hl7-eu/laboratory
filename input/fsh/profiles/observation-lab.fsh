@@ -19,7 +19,7 @@ This observation may represent the result of a simple laboratory test such as he
   DeviceLabTestKit named labTestKit 0..* and
   ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
   ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* and
-  $laboratory-accredited named accredited 0..1 
+  $laboratory-accredited named accredited 0..1
 
 * extension[labTestKit]
   * ^short = "Laboratory Test Kit"
@@ -31,7 +31,7 @@ This observation may represent the result of a simple laboratory test such as he
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 
 * category 1..*
-* category 
+* category
   * insert SliceElement (#pattern, $this)
   * ^definition = "A code that classifies the general type of observation being made."
   * ^comment = "\"laboratory\" includes laboratory medicine and pathology"
@@ -45,7 +45,7 @@ This observation may represent the result of a simple laboratory test such as he
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
- 
+
 * code from LaboratoryResultStandardEuVs (preferred)  // new binding to EU test codes VS
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."

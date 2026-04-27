@@ -92,10 +92,6 @@ The second the profiles included in the document bundle ( [BundleLabReportEu] ) 
 <p></p>
 </div>
 
-### Expansion Parameters
-
-{% include expansion-params.xhtml %}
-
 ### Authors and Contributors
 
 Please refer to the [Authors and Contributors](contributors.html) page.
