@@ -53,6 +53,7 @@ Context: Observation, ServiceRequest
 * ^url = "http://hl7.eu/fhir/StructureDefinition/laboratory-accredited"
 * insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only boolean
+* valueBoolean 1..1
 
 // TODO: replace with official R6 backport extension when available.
 Extension: SpecimenSubjectAnimalSource
