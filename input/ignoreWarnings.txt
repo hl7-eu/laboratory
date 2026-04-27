@@ -3,12 +3,6 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
-Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1'
-
-# == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
-The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set (error message = The provided code 'http://hl7.org/fhir/examplescenario-actor-type#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1')
-
 # == http:​/​/hl7​.eu​/fhir​/laboratory​/StructureDefinition​/HumanName-obl-eu-lab
 The Implementation Guide contains no examples for this data type profile
 
@@ -31,36 +25,31 @@ A definition for CodeSystem 'urn:oid:1.2.203.24341.11.2.2' could not be found, s
 A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
 
-# == fsh-generated\resources\ValueSet-lab-obsCode-eu-lab.json ==
-WARNING: ValueSet.where(id = 'lab-obsCode-eu-lab'): Unable to expand imported value set http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-npu-eu-lab: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org)
-
-
-# == fsh-generated\resources\ValueSet-lab-specimenContainer-eu-lab.json ==
-This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended  (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
-
-# === fsh-generated/resources/ValueSet-lab-certifiedRefMaterial-eu-lab.json
-Unknown System 'http://nibsc.org' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated)
-%Error from http://tx.fhir.org/r4: Unable to provide support for code system http://nibsc.org%
-Unknown System 'http://pei.de' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://pei.de' could not be found, so the code cannot be validated)
-Unknown System 'http://niaid.nih.gov' specified, so Concepts and Filters can't be checked (Details: A definition for CodeSystem 'http://niaid.nih.gov' could not be found, so the code cannot be validated)
-
-# Not recognized NPU system
-Error from http://tx.fhir.org/r4: Unable to provide support for code system http://npu-terminology.org
-
 # Pre adoption of R5 rules for Document Bundles
 %isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)%
 
-# no expansion available
-The value set expansion is incomplete
-
-# Reference to draft CodeSystem
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
-
-
-# New warning introduced by the publisher see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
-
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
-
 # Warnings referred to an Obligation profile
-The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
 The Implementation Guide contains no examples for this profile
+
+# Multiple matching profiles, caused by the cross-version dependency
+ %among choices: http://hl7.org/fhir/5.0/StructureDefinition/profile-Composition|0.1.0%
+
+# == Unknown Identifier Systems
+No definition could be found for URL value 'urn:oid:%
+No definition could be found for URL value 'https://ncez.mzcr.cz/standards/fhir/sid/%
+No definition could be found for URL value 'http://hospital.org/lis-order'
+
+# == Unknown CodeSystems
+No definition could be found for URL value 'http://nibsc.org'
+No definition could be found for URL value 'http://pei.de'
+No definition could be found for URL value 'http://niaid.nih.gov'
+Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://nibsc.org' could not be found, so the value set cannot be expanded
+
+# == Obligation missing slice Warnings
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# pattern slicing valid in R4
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+
+# type is uri, warning is wrong
+If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri

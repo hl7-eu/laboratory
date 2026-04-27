@@ -1,7 +1,7 @@
 @startuml
-"Laboratory Report Creator" as creator
-"Laboratory Report Repository" as repos
-"Laboratory Report Consumer" as consumer
+"Laboratory Result Report Creator" as creator
+"Laboratory Result Report Repository" as repos
+"Laboratory Result Report Consumer" as consumer
 "Generate a report" as (create)
 "Store a report" as (store)
 "Use a report" as (use)

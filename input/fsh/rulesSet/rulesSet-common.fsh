@@ -65,7 +65,6 @@ RuleSet: SectionElementsRules
 RuleSet: SectionCommonRules
 * section.title 1..
 * section.code 1..
-* section.code only $CodeableConcept-uv-ips
 
 RuleSet: SNOMEDCopyrightForVS
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
@@ -94,3 +93,16 @@ RuleSet: ObligationActorAndCode(actor, code)
 RuleSet: ObligationElement(element)
 // Used for profile level obligations. Insert after obligation code and actor
 * ^extension[$obligation][=].extension[elementId].valueString = {element}
+
+RuleSet: SliceElement( type, path )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.ordered = false
+
+RuleSet: SliceElementWithDescription( type, path, description )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.description = "{description}"
+* ^slicing.ordered = false

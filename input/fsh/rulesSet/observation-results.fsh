@@ -1,41 +1,5 @@
-RuleSet: ObservationResultsEu
-//  insert SetFmmandStatusRule ( 2, trial-use)
-
-
-* status ^short = "Status of this observation (e.g. preliminary, final,...)"
-* category only $CodeableConcept-uv-ips
-* code only $CodeableConcept-uv-ips
-// * code MS
-* subject 1..
-// * subject only Reference(Patient or PatientEuCore or Group or Device or Location)
-* subject only Reference(PatientAnimalEu or PatientEuCore or Group or Device or Location)
-// * subject.reference 1..
-* effective[x] 1..
-/*
-* effective[x] only dateTime or Period
-* effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
-* effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
-* effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing." 
-*/
-
-* performer only Reference(PractitionerEuCore or PractitionerRoleEuCore or $Organization-uv-ips or CareTeam or PatientEuCore or RelatedPerson)
-// * value[x] MS
-// removed circular reference
-// * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
-* hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
-* component ^short = "Laboratory result"
-
 RuleSet: ObservationResultsValueEu
-//* value[x]
-
-/* Removed for the time being because of the processing error 
------------------------------------------------------------------
-* extension contains $observation-value-r5 named value-r5 0..1
-* extension[value-r5]
-  * value[x] only Attachment
-  * ^short = "only for result of type Attachment" 
-  --------------------------------------- */
-
+//TODO: do we really want to have this as closed slicing?
 * value[x] ^slicing.discriminator.type = #type
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #closed
@@ -47,8 +11,7 @@ RuleSet: ObservationResultsValueEu
 // reverted to the original statement
 // * valueRange only Range-eu-lab
 * valueRange ^sliceName = "valueRange"
-//* valueRatio only $Ratio-uv-ips
-* valueRatio only Ratio-eu-lab
+* valueRatio only RatioEuLab
 * valueRatio ^sliceName = "valueRatio"
 * valueTime only time
 * valueTime ^sliceName = "valueTime"
@@ -56,12 +19,8 @@ RuleSet: ObservationResultsValueEu
 * valueDateTime ^sliceName = "valueDateTime"
 * valuePeriod only Period
 * valuePeriod ^sliceName = "valuePeriod"
-// * valueQuantity only $Quantity-uv-ips
-* valueQuantity only Quantity-eu-lab
-// * valueQuantity MS
+* valueQuantity only QuantityEuLab
 * valueQuantity ^sliceName = "valueQuantity"
-* valueCodeableConcept only $CodeableConcept-uv-ips
-// * valueCodeableConcept MS
 * valueCodeableConcept from $results-coded-values-laboratory-pathology-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
@@ -70,13 +29,17 @@ RuleSet: ObservationResultsValueEu
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set"
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a blood group findings value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "lab-blood-group"
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #preferred
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-presence-absence-snomed-ct-ips-free-set"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(LabPresenceAbsenceEuVs)
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
-* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a presence and absence findings (qualifier values) value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+* valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a presence and absence findings (qualifier values) value set for laboratory result values, aligned with the eHDSI PresenceAbsence value set adopted by the eEHMSEG."
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "lab-presence-absence"
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * valueCodeableConcept ^binding.extension[+].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
@@ -84,4 +47,6 @@ RuleSet: ObservationResultsValueEu
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/results-microorganism-snomed-ct-ips-free-set"
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+* valueCodeableConcept ^binding.extension[=].extension[+].url = "key"
+* valueCodeableConcept ^binding.extension[=].extension[=].valueId = "lab-microorganism"
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"

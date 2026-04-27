@@ -4,11 +4,11 @@ canonical: http://hl7.eu/fhir/laboratory
 name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
-status: draft # draft | active | retired | unknown
-version: 2.0.0-alpha #
+status: active # draft | active | retired | unknown
+version: 2.0.0-alpha # to be changed to 2.0.0 when ready for release
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: qa-preview # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -17,23 +17,17 @@ publisher:
   url: http://hl7.eu
   # email: test@example.org
 copyright: >-
-  Used by permission of HL7 Europe, all rights reserved Creative Commons License
+  Copyright HL7 Europe. Licensed under creative commons public domain (CC0 1.0).
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
- # to be changed
-  hl7.fhir.uv.ips: 2.0.0
-  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
-  # error The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x] requires the following dependency to be declared in your sushi-config.yaml file:  
-  # to be added when R5 value[x] extension will be used
-  # hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions.r4: 1.2.0
-  hl7.fhir.eu.base: 2.0.0-xtehr
-  # hl7.fhir.eu.base: current
-
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  hl7.fhir.eu.extensions.r4: 1.3.0
+  hl7.fhir.eu.base: current
+  # set to 2.0.0 when base will be released
 
 
 #   hl7.fhir.us.mcode:
@@ -76,20 +70,22 @@ pages:
     title: Certified reference material
   downloads.md:
     title: Downloads
-  logicalModel.md:
-    title: eHN guideline data set
+  logicalmodels.md:
+    title: Logical Models
   contributors.md:
     title: Authors and contributors
   obligations.md:
     title: Obligations
   knownIssues.md:
     title: Known Issues
+  dependencies.md:
+    title: Dependencies
+  changes.md:
+    title: Change Log
   copyright.md:
     title: Copyright
   crossversionanalysis.md:
     title: Cross-version Analysis
-  dependencies.md:
-    title: Dependencies
 # ====  Map Pages begin ====
   modelmap.html:
     title: Mapping to Profiles
@@ -109,26 +105,7 @@ pages:
       title: EHDS Attachment Mapping
     map-ehdsrelatedperson.html:
       title: EHDS RelatedPerson Mapping
-#  Recipient-map.html:
-#    title: Recipient Relationships
-#  Result-map.html:
-#    title: Result Relationships
-#  Author-map.html:
-#    title: Author Relationships
-#  LabReport-map.html:
-#    title: LabReport Relationships
-#  Validator-map.html:
-#    title: Validator Relationships
-#  SpecimenLab-map.html:
-#    title: SpecimenLab Relationships
-#  LegalAuthenticator-map.html:
-#    title: LegalAuthenticator Relationships
-#  Payer-map.html:
-#    title: Payer Relationships
-#  Order-map.html:
-#    title: Order Relationships
-#  Subject-map.html:
-#    title: Subject Relationships
+
   # ====  Map Pages end ====
 
  # overview.md:
@@ -150,7 +127,10 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
+    - http://hl7.eu/fhir/StructureDefinition/laboratory-accredited
     - http://example.org/lab-codes
+  path-expansion-params: ../resources/Parameters-exp-params.json
+  pin-canonicals: pin-multiples
 
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
@@ -198,16 +178,17 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Home: index.html  
+  Home: index.html
   Introduction:
     Background: background.html
     Challenges: challenges.html
     Design Choices: design-choice.html
     Certified reference material: crm.html
+    Handling Missing Data: https://hl7.eu/fhir/base/2.0.0/missing-data.html
   Functional:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
-    eHN Guideline dataset: logicalModel.html
+    Logical Models: logicalmodels.html
     Obligations: obligations.html
     Implementation notes: notes.html
   Implementation:
@@ -219,7 +200,7 @@ menu:
     Known/Open Issues: knownIssues.html
     Download: downloads.html
     Dependencies: dependencies.html
-    #  Change Log: changes.html <== TO BE ADDED
+    Change Log: changes.html
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
@@ -419,18 +400,14 @@ resources:
     name: "ServiceRequest: example"
     description: Example of ServiceRequest conforming this guide.
 
-  Patient/Patient-animal-example:
-    name: "Patient: animal example"
-    description: Example of Patient resource used for indicating an animal (cat) conforming this guide.
+  RelatedPerson/RelatedPerson-animal-example:
+    name: "RelatedPerson: animal example"
+    description: Example of RelatedPerson resource used for indicating an animal (cat) as the specimen source, conforming this guide.
 
   # -------------  Obligations
   StructureDefinition/Patient-obl-eu-lab:
     name: Patient Obligations
     description: Specify the functional capabilities that the defined actors may, should or shall applied to the Patient EU Lab profile elements.
-
-  StructureDefinition/HumanName-obl-eu-lab:
-    name: Human Name Obligations
-    description: Specify the functional capabilities that the defined actors may, should or shall applied to the Human Name profile elements.
 
   StructureDefinition/Specimen-obl-eu-lab:
     name: Specimen Obligations
@@ -463,35 +440,6 @@ resources:
 # URL when generating the IG JSON.
 #
 groups:
-#  eHNGuidelines:
-#    name:  eHN Laboratory Guidelines (Informative)
-#    description: Logical models representing the eHN Laboratory Guidelines. This is informative material.
-#    resources:
-#      - StructureDefinition/LabReport
-#      - StructureDefinition/Subject
-#      - StructureDefinition/Author
-#      - StructureDefinition/Validator
-#      - StructureDefinition/LegalAuthenticator
-#      - StructureDefinition/Recipient
-#      - StructureDefinition/Order
-#      - StructureDefinition/Result
-#      - StructureDefinition/SpecimenLab
-#      - StructureDefinition/Payer
-#
-#  logicalModelsMaps:
-#    name:  eHN Logical Model mappings (Informative)
-#    description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
-#    resources:
-#      - ConceptMap/labRpt2FHIR-eu-lab
-#      - ConceptMap/payer2FHIR-eu-lab
-#      - ConceptMap/recipient2FHIR-eu-lab
-#      - ConceptMap/subject2FHIR-eu-lab
-#      - ConceptMap/author2FHIR-eu-lab
-#      - ConceptMap/order2FHIR-eu-lab
-#      - ConceptMap/legalAuth2FHIR-eu-lab
-#      - ConceptMap/validator2FHIR-eu-lab
-#      - ConceptMap/specimen2FHIR-eu-lab
-#      - ConceptMap/result2FHIR-eu-lab
 
   obligations:
     name:  Actors and Obligations (Informative)
@@ -501,7 +449,6 @@ groups:
       - ActorDefinition/actor-creator-eu-lab
       - ActorDefinition/actor-repos-eu-lab
       - StructureDefinition/Patient-obl-eu-lab
-      - StructureDefinition/HumanName-obl-eu-lab
       - StructureDefinition/Specimen-obl-eu-lab
       - StructureDefinition/ServiceRequest-obl-eu-lab
       - StructureDefinition/Observation-obl-eu-lab

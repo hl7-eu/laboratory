@@ -3,7 +3,6 @@ Id:	       lab-specimenType-eu-lab
 Title:	       "Specimen Types"
 Description:   """Laboratory Specimen Types"""
 
-
 * insert SNOMEDCopyrightForVS
 * insert SetFmmandStatusRule ( 2, trial-use)
 * $sct#258497007 "Abscess swab"
@@ -250,8 +249,7 @@ Description:   """Laboratory Specimen Types"""
 * $sct#258662004 "Adhesive slide specimen"
 * $sct#258527002 "Anal swab"
 * $sct#258415003 "Biopsy specimen"
-* $sct#303248007 "Blood film specimen"
-* $sct#737535000 "Blood smear specimen"
+* $sct#303248007 "Blood smear specimen"
 * $sct#122560006 "Blood specimen from blood donor"
 * $sct#866033003 "Blood specimen in aerobic blood culture bottle"
 * $sct#866032008 "Blood specimen in anaerobic blood culture bottle"

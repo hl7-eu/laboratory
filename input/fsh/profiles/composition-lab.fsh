@@ -15,11 +15,11 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(PractitionerEuCore or Device or PatientEuCore or RelatedPerson or PractitionerRoleEuCore or Organization)
 
-* extension contains DiagnosticReportReference named diagnosticReport-reference 1..1  // Cardinality changed to 1..1 based on Jira FHIR-51567
+* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(DiagnosticReportLabEu)
-* extension[diagnosticReport-reference].valueReference 0..1 
+* extension[diagnosticReport-reference].valueReference 0..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
-  * ^comment = """Added to the FHIR R4 guide to strictly conform with the R4 rules for document bundle resources inclusion.
+  * ^comment = """Added to the FHIR R4 guide to allow strictly conformance with the R4 rules for document bundle resources inclusion.
   Using this extension implies to accept a circular reference Composition to/from DiagnosticReport"""
 
 * text ^short = "Narrative text"
@@ -69,11 +69,11 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^slicing.discriminator[=].path = "$this.section"
   * ^slicing.discriminator[+].type = #exists
   * ^slicing.discriminator[=].path = "$this.entry"
-/*   * ^slicing.discriminator[+].type = #type
-  * ^slicing.discriminator[=].path = "$this.entry.resolve()" */
+  // * ^slicing.discriminator[+].type = #type
+  // * ^slicing.discriminator[=].path = "$this.entry.resolve()"
   // GC $this.code has a preferred binding, how can work ?
-/*   * ^slicing.discriminator[+].type = #pattern
-  * ^slicing.discriminator[=].path = "$this.code" */
+  * ^slicing.discriminator[+].type = #pattern
+  * ^slicing.discriminator[=].path = "$this.code"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
   * ^definition = """The \"body\" of the report is organized as a tree of up to two levels of sections: top level sections represent laboratory specialties. A top level section SHALL contain either one text block carrying all the text results produced for this specialty along with Laboratory Data Entries or a set of Laboratory Report Item Sections. In the first case the specialty section happens to also be a leaf section. In the latter case, each (second level) leaf section contained in the (top level) specialty section represents a Report Item: i.e., a battery, a specimen study (especially in microbiology), or an individual test. In addition, any leaf section SHALL contain a Laboratory Data Entries containing the observations of that section in a machine-readable format."""
@@ -87,7 +87,6 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 // ---------------------------------
 
 * insert SectionCommonRules
-
 
 // -------------------------------------
 // Single section  0 .. 1
@@ -106,13 +105,11 @@ Variant 2: Text and Entry - With this option, the Laboratory Specialty Section t
 * section[lab-subsections]
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
-  * code only $CodeableConcept-uv-ips
   * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0
   * insert SectionCommonRules
   * section 1..
-
     * insert SectionElementsRules
     * code from LabStudyTypesEuVs (preferred)
 /*        * text ^short = "Text summary of the section, for human interpretation."
@@ -136,4 +133,20 @@ Technical note: A list of accredited examination(s) is available at www.laborato
   * code = http://loinc.org#48767-8
   * text 1..
   * entry 0..0
+  * section 0..0
+
+
+// -------------------------------------
+// Attachment section  0 .. 1
+// -------------------------------------
+
+
+* section contains attachment ..* // check if ..1 or ..*
+* section[attachment]
+  * ^short = "Additional data (like images, diagrams) associated with this report"
+  * ^definition = """A  list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."""
+
+  * code = $loinc#77599-9
+  * entry 1..
+  * entry only Reference (Binary or DocumentReference)
   * section 0..0
