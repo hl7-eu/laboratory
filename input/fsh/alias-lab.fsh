@@ -13,10 +13,6 @@ Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patie
 // --- Value Sets
 Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFlavor
 
-// NO more used in IPS 2.0
-// Alias: $results-laboratory-pathology-observations-uv-ips  = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips
-// Alias: $results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips
-
 Alias: $results-laboratory-pathology-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips
 Alias: $results-coded-values-laboratory-pathology-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips
 
