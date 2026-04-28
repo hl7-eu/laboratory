@@ -1,7 +1,7 @@
 Profile: AnimalSpecimenEuLab
 Parent: RelatedPerson
 Id: animal-specimen-eu-lab
-Title:    "RelatedPerson: Animal"
+Title:    "RelatedPerson: AnimalSpecimen"
 Description: """This profile defines how to represent an Animal as source of a specimen or focus of the observation in FHIR for the purpose of this guide.
 This is used to identify the species when a specimen is collected from an animal and observation made on this specimen. It can also be used to identify the species when an observation is focused directly on the animal, without a specimen being collected.
 """
