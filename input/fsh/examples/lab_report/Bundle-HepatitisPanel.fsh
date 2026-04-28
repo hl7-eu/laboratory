@@ -35,7 +35,9 @@ Instance: Inline-Composition-hepatitis-panel
 InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:3a743273-237a-446a-a8da-9e7521cce614)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:3a743273-237a-446a-a8da-9e7521cce614)
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
 * status = #final
 * type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
@@ -43,13 +45,16 @@ Usage: #inline
 * author[+].display = "MUDr. Aleš Procházka"
 * title = "Laboratory Report Hepatitis Panel - 27 Dec, 2020 14:30"
 * confidentiality = #N
-* attester[+].mode = #legal
+//TODO: PW legal will match the legal slice wich doesnt allow for organizations to be linked, needs to be changed in base? changed to official for now
+* attester[+].mode = #official
 * attester[=].time = "2020-12-27T14:30:00+01:00"
 * attester[=].party = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Hepatitis screening panel"
-* section[=].code = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+* section[=].code = $laboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * section[=].code.text = "Acute Hepatitis Panel, reflex to confirmation"
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hepatitis screening panel</div>"
 * section[=].entry[+] = Reference(urn:uuid:2c72163e-b741-44a3-aff7-c52f17f7a1ba)
 
 Instance: Inline-Diag-Report-hepatitis-panel
@@ -59,9 +64,11 @@ Usage: #inline
 // * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
 * status = #final
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
 /* * category = $v2-0074#MB "Microbiology" */
 * code.coding[+] = $loinc#11502-2 "Laboratory report"
-* code.coding[+] = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+* code.coding[+] = $laboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * code.text = "Acute Hepatitis Panel, reflex to confirmation"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -112,7 +119,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Microbiology"
-* code = LaboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
+* code = $laboratoryLocalCS#3002989 "Hepatitis Panel, Acute with Reflex to HBsAg Confirmation and Reflex to HCV by Quantitative NAAT"
 * code.text = "Acute Hepatitis Panel, reflex to confirmation"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -130,7 +137,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Microbiology"
-* code.coding[+] = LaboratoryLocalCS#0020089 "Hepatitis B Surface Antigen"
+* code.coding[+] = $laboratoryLocalCS#0020089 "Hepatitis B Surface Antigen"
 * code.coding[+] = $loinc#5196-1 "Hepatitis B virus surface Ag [Presence] in Serum or Plasma by Immunoassay"
 * code.text = "Hepatitis B Surface Antigen"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
@@ -149,7 +156,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Microbiology"
-* code.coding[+] = LaboratoryLocalCS#0020092 "Hepatitis B Core Antibody, IgM"
+* code.coding[+] = $laboratoryLocalCS#0020092 "Hepatitis B Core Antibody, IgM"
 * code.coding[+] = $loinc#24113-3 "Hepatitis B virus core IgM Ab [Presence] in Serum or Plasma by Immunoassay"
 * code.text = "Hepatitis B Core Antibody, IgM"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
@@ -168,7 +175,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Microbiology"
-* code.coding[+] = LaboratoryLocalCS#0020093 "Hepatitis A Antibody, IgM"
+* code.coding[+] = $laboratoryLocalCS#0020093 "Hepatitis A Antibody, IgM"
 * code.coding[+] = $loinc#13950-1 "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
 * code.text = "Hepatitis A Antibody, IgM"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
@@ -187,7 +194,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Microbiology"
-* code.coding[+] = LaboratoryLocalCS#3003128 "Hepatitis C Antibody by CIA Interp"
+* code.coding[+] = $laboratoryLocalCS#3003128 "Hepatitis C Antibody by CIA Interp"
 * code.coding[+] = $loinc#13955-0 "Hepatitis C virus Ab [Presence] in Serum or Plasma by Immunoassay"
 * code.text = "Hepatitis C Antibody by CIA Interp"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
@@ -206,7 +213,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 //* category[+] = $v2-0074#MB "Microbiology"
-* code.coding[+] = LaboratoryLocalCS#2002404 "Hepatitis C Antibody by CIA Index"
+* code.coding[+] = $laboratoryLocalCS#2002404 "Hepatitis C Antibody by CIA Index"
 * code.coding[+] = $loinc#57006-9 "Hepatitis C virus IgG Ab [Units/volume] in Serum by Immunoassay"
 * code.text = "Hepatitis C Antibody by CIA Index"
 * subject = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)

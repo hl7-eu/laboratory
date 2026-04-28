@@ -65,7 +65,7 @@ Usage: #inline
     * display = "Nuovo Ospedale S.Agostino (MO)"
 
 //* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #cs-CZ
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -82,6 +82,7 @@ Usage: #inline
 * title = "Laboratorní zpráva"
 * confidentiality = #N
 * attester[+].mode = #professional
+* attester[=].time = "2022-03-25T11:00:00+01:00"
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
 * attester[+].mode = #legal
 * attester[=].time = "2022-03-25T11:00:00+01:00"
@@ -92,30 +93,32 @@ Usage: #inline
 * custodian = Reference(urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c)
 * event.period.start = "2022-03-24T11:24:26+01:00"
 * event.detail = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
-* section[lab-subsections].title = "Laboratory examinations"
-* section[lab-subsections].code = $loinc#26436-6 "Laboratory studies (set)"
-* section[lab-subsections].code.text = "Laboratory studies"
-* section[lab-subsections].section[+].title = "Urine examinations"  // this title should be aligned with ibservation codes
-* section[lab-subsections].section[=].code.coding[+] = http://loinc.org#18729-4 "Urinalysis studies (set)"
-* section[lab-subsections].section[=].code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
-* section[lab-subsections].section[=].code.text = "ESAMI DELLE URINE"
-* section[lab-subsections].section[=].text.status = #generated
+* section[0].title = "Laboratory examinations"
+* section[0].code = $loinc#26436-6 "Laboratory studies (set)"
+* section[0].code.text = "Laboratory studies"
+* section[0].text.status = #generated
+* section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratory examinations</div>"
+* section[0].section[+].title = "Urine examinations"  // this title should be aligned with ibservation codes
+* section[0].section[=].code.coding[+] = http://loinc.org#18729-4 "Urinalysis studies (set)"
+* section[0].section[=].code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
+* section[0].section[=].code.text = "ESAMI DELLE URINE"
+* section[0].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
 <thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
 
 <tbody>
 <tr><td>2023-03-27</td><td>Urea (U) [Moles/Vol]</td><td>310</td><td>mmol/L</td><td> 67 - 580 mmol/L</td></tr>
 </tbody>
 </table></div>"
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+* section[0].section[=].entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 
-* section[lab-subsections].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
-* section[lab-subsections].section[=].code.coding[+] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* section[lab-subsections].section[=].code.text = "Examination of blood"
-* section[lab-subsections].section[=].text.status = #generated
+* section[0].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
+* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* section[0].section[=].code.text = "Examination of blood"
+* section[0].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div =
+* section[0].section[=].text.div =
 "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
 <thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
 <tbody>
@@ -123,7 +126,7 @@ Usage: #inline
 </tbody>
 </table></div>"
 
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
+* section[0].section[=].entry = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-5679723c-4fae-4ba7-9f09-5438a827bfda
 InstanceOf: DiagnosticReportLabEu

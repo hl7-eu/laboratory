@@ -65,10 +65,10 @@ Usage: #example
 * date = "2018-01-02T14:30:00+01:00" // Mapped from body/referral/timestamp
 * author[0] = Reference(practitionerJohannaOlsson) // Mapped from body/referral/requester
 * title = "Urinodling kvantitativ och resistensbestämning SIR" // M
-* section[lab-no-subsections].code = $loinc#18725-2 "Microbiology studies (set)"
-* section[lab-no-subsections].title = "Urinodling kvantitativ och resistensbestämning SIR" // Mapped from body/groupOfAnalyses/name
-* section[lab-no-subsections].entry = Reference(labOrderOutcomeObservation)
-* extension[diagnosticReport-reference].valueReference = Reference(mbDiagnosticReport)  // HK: added link to DiagnosticReport for strict conformance with FHIR R4 rules for document bundle resources inclusion
+* section[0].code = $loinc#18725-2 "Microbiology studies (set)"
+* section[0].title = "Urinodling kvantitativ och resistensbestämning SIR" // Mapped from body/groupOfAnalyses/name
+* section[0].entry = Reference(labOrderOutcomeObservation)
+* extension[diagnosticReport].valueReference = Reference(mbDiagnosticReport)  // HK: added link to DiagnosticReport for strict conformance with FHIR R4 rules for document bundle resources inclusion
 
 Instance: mbDiagnosticReport
 InstanceOf: DiagnosticReportLabEu
