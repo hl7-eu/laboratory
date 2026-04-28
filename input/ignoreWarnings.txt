@@ -7,21 +7,14 @@
 The Implementation Guide contains no examples for this data type profile
 
 # == fsh-generated\resources\Bundle-BundleHepatitisPanel.json ==
-
 %Reference to experimental CodeSystem http://example.org/lab-codes%
 
-# == fsh-generated\resources\Bundle-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883.json ==
-
+# == Unknown CodeSystems ==
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.5.129' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.5.1.88' could not be found, so the code cannot be validated
-
-# == fsh-generated\resources\Bundle-SimpleChemistryResultReport.json ==
-
 A definition for CodeSystem 'urn:oid:1.2.203.24341.11.2.2' could not be found, so the code cannot be validated
-
-
-# == fsh-generated\resources\Observation-4335db48-7090-45b3-a2c2-45b45f94a67c.json ==
+A definition for CodeSystem 'http://example.org/fhir/CodeSystem/LabCodes' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
 
@@ -53,3 +46,31 @@ The discriminator type 'pattern' is deprecated in R5+. For future compatibility,
 
 # type is uri, warning is wrong
 If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
+
+# == deprecated inherited VS ==
+Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+
+# == Could have an OID assigned for ActorDefinitions ==
+%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# == Filter pinning information ==
+%to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
+
+# == Filter expected slicing match informations for Composition examples ==
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab|2.0.0-alpha (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# == Filter expected slicing match informations for Bundle examples containing additional address extensions ==
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/Address-eu|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# == Filter expected slicing match informations for Bundle examples containing additional address extensions ==
+
+# == Filter binding expected binding information ==
+None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|2.0.0-alpha), and a coding is recommended to come from this value set%
+None of the codings provided are in the value set 'Results Coded Values Laboratory/Pathology - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips|2.0.0), and a coding is recommended to come from this value set%
+None of the codings provided are in the value set 'Laboratory Presence and Absence Findings' (http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu-lab|2.0.0-alpha) specified in an additional binding, and a coding is recommended to come from this value set%
+None of the codings provided are in the value set 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab|2.0.0-alpha), and a coding is recommended to come from this value set%
+None of the codings provided are in the value set 'Specimen Types' (http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab|2.0.0-alpha), and a coding is recommended to come from this value set%
+
+# == Filter informations for italian or CZ Loinc codes ==
+%for language(s) 'it-IT'.%
+%for language(s) 'cs-CZ'.%
