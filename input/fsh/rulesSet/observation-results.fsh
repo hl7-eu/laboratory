@@ -22,6 +22,7 @@ RuleSet: ObservationResultsValueEu
 * valueQuantity only QuantityEuLab
 * valueQuantity ^sliceName = "valueQuantity"
 * valueCodeableConcept from $results-coded-values-laboratory-pathology-uv-ips (preferred)
+//TODO: do we need this slicing?
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
