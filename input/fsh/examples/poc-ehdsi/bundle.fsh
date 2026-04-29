@@ -38,13 +38,16 @@ Usage: #inline
 * author[+].display = "Dr. Patrick Dempsey"
 * title = "Laboratory Report - 10 March, 2023 14:30"
 * confidentiality = #N
-* attester[+].mode = #legal
+//TODO: PW legal will match the legal slice wich doesnt allow for organizations to be linked, needs to be changed in base? changed to official for now
+* attester[+].mode = #official
 * attester[=].time = "2020-12-27T14:30:00+01:00"
 * attester[=].party = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Blood group lab result report"
 * section[=].code = $loinc#26436-6 "Laboratory studies (set)"
 * section[=].code.text = "LABORATORY STUDIES"
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood group lab result report</div>"
 //* section[=].entry[+] = Reference(Observation/8bd279af-125a-4318-b461-ba5629b12e7f)
 * section[=].entry[+] = Reference(urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f)
 

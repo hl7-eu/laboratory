@@ -54,7 +54,13 @@ Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition
 Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value
 Alias: $diagnosticReport-link-xver = http://hl7.org/fhir/StructureDefinition/alternate-reference
 
+// Extensions from EU Extensions:
+Alias: $composition-diagnosticReportReference = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
+
 
 // --- Profiles
+
+// --- LocalLabCS
+Alias: $laboratoryLocalCS = http://example.org/fhir/CodeSystem/LabCodes
 
 //=========================

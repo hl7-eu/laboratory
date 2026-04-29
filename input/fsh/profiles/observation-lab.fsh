@@ -50,7 +50,8 @@ This observation may represent the result of a simple laboratory test such as he
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 
-* focus only Reference(AnimalSpecimenEuLab)  // If the observation belongs to a human patient but specimen is collected from an animal, then the focus of the observation is the animal specimen.
+//TODO: add Substance and PatientAnimal as soon base is extended, needs discussion what has to be supported
+* focus only Reference(PatientEuCore or AnimalSpecimenEuLab or Group or Device or LocationEuCore)  // If the observation belongs to a human patient but specimen is collected from an animal, then the focus of the observation is the animal specimen.
 
 * performer 1..
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."

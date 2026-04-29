@@ -7,12 +7,11 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
-
-* subject only Reference ( PatientEuCore or Group  or Device or Substance or Location)
-* subject
-  * extension contains SpecimenSubjectAnimalSource named specimenAnimalSource 0..1
-  * extension[specimenAnimalSource].valueReference only Reference(AnimalSpecimenEuLab)
-  * extension[specimenAnimalSource] ^short = "Animal specimen source"
+* extension contains SpecimenFocus named focus 0..1
+* extension[focus].valueReference only Reference(AnimalSpecimenEuLab or Group or Device or Substance or Location)
+* extension[focus] ^short = "Animal specimen source"
+// TODO: add biological derived product?
+* subject only Reference (PatientEuCore or Group or Device or Substance or Location)
 * type 1..1
 * type from LabSpecimenTypesEuVs (preferred)
   * ^comment = """If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type.

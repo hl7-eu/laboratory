@@ -86,7 +86,7 @@ Instance: Inline-Composition-micro
 InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "4789a3ee-92b1-41b2-9b97-83daacf2a239"
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875) //DiagnosticReport/Inline-Diag-Report-micro)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:b864303b-91ab-4e29-ad74-31a7d6566875) //DiagnosticReport/Inline-Diag-Report-micro)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -98,21 +98,30 @@ Usage: #inline
 * author[+].display = "MUDr. Aleš Procházka"
 * title = "Laboratory Report Bacterial Aerobic & Anaerobic Culture and Susceptibility - 27 Dec, 2020 14:30"
 * confidentiality = #N
-* attester[+].mode = #legal
+//TODO: PW legal will match the legal slice wich doesnt allow for organizations to be linked, needs to be changed in base? changed to official for now
+* attester[+].mode = #official
 * attester[=].time = "2020-12-27T14:30:00+01:00"
 * attester[=].party = Reference(urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349)
 * custodian = Reference(urn:uuid:1e139f41-4d0f-43dd-ad5a-98003c520349)
-* section[lab-subsections].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section[lab-subsections].code = $loinc#18725-2 "Microbiology studies (set)"
-* section[lab-subsections].section[+].code.text = "Gram Stain"
-* section[lab-subsections].section[=].title = "Gram Stain" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
-* section[lab-subsections].section[+].code.text = "Aerobic Culture"
-* section[lab-subsections].section[=].title = "Aerobic Culture" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture Inline-Observation-aerobic-culture
-* section[lab-subsections].section[+].code.text = "Anaerobic Culture"
-* section[lab-subsections].section[=].title = "Anaerobic Culture" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture Inline-Observation-anaerobic-culture
+* section[0].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
+* section[0].code = $loinc#18725-2 "Microbiology studies (set)"
+* section[0].text.status = #generated
+* section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</div>"
+* section[0].section[+].code.text = "Gram Stain"
+* section[0].section[=].title = "Gram Stain" // Title to be checked
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Gram Stain</div>"
+* section[0].section[=].entry = Reference(urn:uuid:40278a69-87aa-470f-a38f-bff1e8aee175) // Inline-Observation-gram-stain
+* section[0].section[+].code.text = "Aerobic Culture"
+* section[0].section[=].title = "Aerobic Culture" // Title to be checked
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aerobic Culture</div>"
+* section[0].section[=].entry = Reference(urn:uuid:8754019d-256b-4df9-94f2-f80c07e08d47) // Inline-Observation-aerobic-culture Inline-Observation-aerobic-culture
+* section[0].section[+].code.text = "Anaerobic Culture"
+* section[0].section[=].title = "Anaerobic Culture" // Title to be checked
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Anaerobic Culture</div>"
+* section[0].section[=].entry = Reference(urn:uuid:5408f7d9-e6a2-492c-8ae3-dbf96b40bf6e) // Inline-Observation-anaerobic-culture Inline-Observation-anaerobic-culture
 
 Instance: Inline-Patient-micro
 InstanceOf: PatientEuCore

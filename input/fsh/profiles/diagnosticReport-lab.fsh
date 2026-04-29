@@ -1,5 +1,5 @@
 Profile: DiagnosticReportLabEu
-Parent: DiagnosticReport
+Parent: DiagnosticReportEuCore
 Id: DiagnosticReport-eu-lab
 Title: "DiagnosticReport: Laboratory Report"
 Description: "DiagnosticReport used to represent an entry of a Laboratory Report, including its context, for the scope of the HL7 Europe project."
@@ -9,12 +9,10 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
-
-* extension[DiagnosticReportCompositionR5]
+// TODO: PW: should be change to 0..1
+* extension[DiagnosticReportCompositionR5] 1..1
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
-  *  valueReference 1..1
   *  valueReference only Reference(CompositionLabReportEu)
 
 /*
@@ -35,7 +33,7 @@ Annotation Comment
 
 * basedOn only Reference ( ServiceRequestLabEu )
 
-* insert ReportStatusRule
+//* insert ReportStatusRule
 
 /* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Commented based on the suggestion form the 2023-05-26 meeting see https://github.com/hl7-eu/laboratory/issues/11
@@ -62,12 +60,9 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * insert ReportTypeRule ( code )
 * insert ReportSubjectRule
 * insert ReportEncounterRule
-* effective[x] ^short = "Clinically relevant time/time-period for report."
-* performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-  * insert ReportAuthorRule
+* performer 
   /* * obeys labRpt-author */
 * resultsInterpreter
-  * insert ReportAuthorRule
   /* * obeys labRpt-author */
 * specimen only Reference (SpecimenEu)
   * ^short = "Specimens this report is based on."
@@ -75,6 +70,7 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
   * ^short = "results"
 * imagingStudy 0..0
 * presentedForm ^short = "Entire report as issued (pdf recommended)"
+// TODO: is using docref instead of media relevant for the base spec?
 * media
   * ^short = "Additional data (like images, diagrams or documents) associated with this report"
   * ^definition = "A list of additional data, other then presented form of the report, associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."

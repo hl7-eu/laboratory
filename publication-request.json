@@ -1,10 +1,10 @@
 {
   "package-id" : "hl7.fhir.eu.laboratory",
-  "version" : "2.0.0-alpha",
-  "path" : "http://hl7.eu/fhir/laboratory/xtehr",
-  "desc" : "This publication is a qa preview version for the Xt-EHR projectathon.",
-  "descmd" : "This publication is qa preview version for the Xt-EHR projectathon",
-  "status" : "preview",
-  "sequence" : "STU",
-  "mode": "working"
+  "version" : "2.0.0",
+  "path" : "http://hl7.eu/fhir/laboratory/2.0.0",
+  "desc" : "This publication represents a new STU release (version 2.0.0). It incorporates new profiles, references to new logical models, updated model-to-profile mapping tables, terminology updates, and general publication cleanup.",
+  "status" : "trial-use",
+  "sequence" : "Release",
+  "mode": "milestone",
+  "changes" : "changes.html"
 }

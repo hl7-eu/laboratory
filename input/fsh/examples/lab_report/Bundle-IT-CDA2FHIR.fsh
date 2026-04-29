@@ -76,7 +76,7 @@ Usage: #example
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: CompositionLabReportEu
 Usage: #inline
-* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #it-IT
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -94,6 +94,7 @@ Usage: #inline
 * title = "REFERTO DI LABORATORIO"
 * confidentiality = #N
 * attester[+].mode = #professional
+* attester[=].time = "2022-03-25T11:00:00+01:00"
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
 * attester[+].mode = #legal
 * attester[=].time = "2022-03-25T11:00:00+01:00"
@@ -107,6 +108,8 @@ Usage: #inline
 * section.title = "Esami delle Urine"
 * section.code = http://loinc.org#18729-4 "Urinalysis studies (set)"
 * section.code.text = "ESAMI DELLE URINE"
+* section.text.status = #generated
+* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Esami delle Urine</div>"
 * section.section.title = "Albumina nelle Urine"
 * section.section.code.coding[+] = http://loinc.org#14957-5 "Microalbumin [Mass/volume] in Urine"
 * section.section.code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "Microalbumina"
@@ -509,4 +512,4 @@ Usage: #inline
 * referenceRange.low.unit = "mg/L"
 * referenceRange.high.value = 20
 * referenceRange.high.unit = "mg/L"
-* referenceRange.type = $v3-ObservationInterpretation#N "Normal"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
