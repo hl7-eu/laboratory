@@ -9,7 +9,7 @@ Description:   "List of the containers commonly used to collect specimens (e.g. 
 * $sct#702290003	"Cervical cytology microscopy slide"
 * $sct#706057008	"Cytology specimen container"
 * $sct#706052002	"Evacuated blood collection tube"
-* $sct#702292006	"Evacuated blood collection tube, K3EDTA/sodium fluoride"
+* $sct#702292006	"Evacuated blood collection tube , K3EDTA/sodium fluoride"
 * $sct#767387006	"Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole"
 * $sct#767384004	"Evacuated blood collection tube with clot activator"
 * $sct#767390000	"Evacuated blood collection tube with heparin lithium and gel separator"
