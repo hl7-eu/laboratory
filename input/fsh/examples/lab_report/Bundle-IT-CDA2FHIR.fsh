@@ -512,4 +512,4 @@ Usage: #inline
 * referenceRange.low.unit = "mg/L"
 * referenceRange.high.value = 20
 * referenceRange.high.unit = "mg/L"
-* referenceRange.type = $v3-ObservationInterpretation#N "Normal"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
