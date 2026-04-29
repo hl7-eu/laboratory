@@ -6,9 +6,6 @@
 # == http:​/​/hl7​.eu​/fhir​/laboratory​/StructureDefinition​/HumanName-obl-eu-lab
 The Implementation Guide contains no examples for this data type profile
 
-# == fsh-generated\resources\Bundle-BundleHepatitisPanel.json ==
-%Reference to experimental CodeSystem http://example.org/lab-codes%
-
 # == Unknown CodeSystems ==
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.5.129' could not be found, so the code cannot be validated
@@ -40,9 +37,6 @@ No definition could be found for URL value 'http://nibsc.org'
 No definition could be found for URL value 'http://pei.de'
 No definition could be found for URL value 'http://niaid.nih.gov'
 Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://nibsc.org' could not be found, so the value set cannot be expanded
-
-# == Obligation missing slice Warnings
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # pattern slicing valid in R4
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
@@ -91,8 +85,7 @@ The value set expansion is too large, and only a subset has been displayed
 
 # == filter wrong information message from ig publisher for SCT ==
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Blood banking and transfusion medicine (specialty), General pathology (specialty)] and examples for no FSN: [Chemical pathology, Hematopathology, Immunopathology, Clinical microbiology, Genetic pathology])
-This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube, K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
-
+This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube , K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
 # == Alternative display valuese were chosen to give better context/understanding ==
 Wrong Display Name 'Cow' for http://snomed.info/sct#34618005. Valid display is one of 4 choices: 'Bos taurus' (en), 'Aurochs' (en), 'Bos taurus (organism)' (en) or 'Bos taurus taurus' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
 Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008. Valid display is one of 5 choices: 'Subfamily Meleagridinae (organism)' (en), 'Meleagridinae' (en), 'Turkeys' (en), 'Subfamily Meleagridinae' (en) or 'Meleagridinae - turkeys' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
