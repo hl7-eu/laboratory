@@ -8,14 +8,13 @@
     <div class="model-map-block">
         <div class="callout-wrapper">
             <div class="callout-box">
-                <strong>Ongoing alignment:</strong> The Xt-EHR logical models are under active revision.
-                Updates from Xt-EHR will be progressively incorporated into this Implementation Guide
-                to maintain alignment with evolving EHDS specifications.
+                <strong>Ongoing alignment:</strong>The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
             </div>
         </div>
     </div>
 
-    <p><strong>EHDS Laboratory Report Logical Model -&gt; FHIR Profiles</strong></p>
+    <h3>EHDS Laboratory Report Logical Model -&gt; FHIR Profiles</h3>
+    <a>  </a>
     <p>
         This page maps the Xt-EHR EHDS Laboratory Report logical model to the FHIR profiles used in
         this Implementation Guide.
@@ -28,6 +27,7 @@
     </ul>
 
     <h4>Core Laboratory Report Models in this IG</h4>
+    <a>  </a>
     <div class="table-wrapper">
         <table class="model-index">
             <thead>
@@ -57,6 +57,7 @@
     </div>
 
     <h4>Related Laboratory Models in this IG</h4>
+    <a>  </a>
     <div class="table-wrapper">
         <table class="model-index">
             <thead>
@@ -149,6 +150,7 @@
     </div>
 
     <h4>Supporting Models mapped in HL7 Europe Base/Core</h4>
+    <a>  </a>
     <div class="callout-wrapper">
         <div class="callout-box">
             <p>

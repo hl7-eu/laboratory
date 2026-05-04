@@ -24,18 +24,6 @@
   </div>
 </div>
 
-<div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>This is a QA preview version:</strong>
-              this Implementation Guide is published for <b>review and discussion purposes only.</b>
-			  <p>
-The content is subject to change and is provided <b>as-is</b>, without warranty of any kind and <b>without liability for its use</b>.</p>
-        </div>
-      </div>
-    </div>
-
-
 ### The Laboratory Domain
 Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients.
 The availability of high quality test results, and the capacity of sharing them, is therefore essential being often the basis for clinical decision making.
