@@ -89,3 +89,6 @@ This SNOMED-CT based include has some concepts with semantic tags (FSN terms) an
 # == Alternative display valuese were chosen to give better context/understanding ==
 Wrong Display Name 'Cow' for http://snomed.info/sct#34618005. Valid display is one of 4 choices: 'Bos taurus' (en), 'Aurochs' (en), 'Bos taurus (organism)' (en) or 'Bos taurus taurus' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
 Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008. Valid display is one of 5 choices: 'Subfamily Meleagridinae (organism)' (en), 'Meleagridinae' (en), 'Turkeys' (en), 'Subfamily Meleagridinae' (en) or 'Meleagridinae - turkeys' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+
+# Duplicated anchors added by the template
+The html source has duplicate anchor Ids: 1
