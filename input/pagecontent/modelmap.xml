@@ -13,7 +13,8 @@
         </div>
     </div>
 
-    <p><strong>EHDS Laboratory Report Logical Model -&gt; FHIR Profiles</strong></p>
+    <h3>EHDS Laboratory Report Logical Model -&gt; FHIR Profiles</h3>
+    <a>  </a>
     <p>
         This page maps the Xt-EHR EHDS Laboratory Report logical model to the FHIR profiles used in
         this Implementation Guide.
@@ -26,6 +27,7 @@
     </ul>
 
     <h4>Core Laboratory Report Models in this IG</h4>
+    <a>  </a>
     <div class="table-wrapper">
         <table class="model-index">
             <thead>
@@ -55,6 +57,7 @@
     </div>
 
     <h4>Related Laboratory Models in this IG</h4>
+    <a>  </a>
     <div class="table-wrapper">
         <table class="model-index">
             <thead>
@@ -147,6 +150,7 @@
     </div>
 
     <h4>Supporting Models mapped in HL7 Europe Base/Core</h4>
+    <a>  </a>
     <div class="callout-wrapper">
         <div class="callout-box">
             <p>
