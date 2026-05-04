@@ -14,8 +14,10 @@ The following picture provide an overview of the origin of the participants.
 
 |Role | Name             | Affiliation |
 |------------------|------------------|-------------|
+| Project facilitator|  Patrick Werner | Gefyra GmbH, HL7 Germany |
 | Project facilitator|  Hynek Kružík | HL7 CZ/Europe |
-| Project facilitator|  Giorgio Cangioli | HL7 IT/Europe |
+| Project facilitator|  Ralf Herzog | Roche, CH |
+| Author |  Giorgio Cangioli | HL7 IT/Europe |
 | Author |  Alexander Henket   | Nictiz, HL7 NL |
 | Author |  Robert Hausam   | Hausam Consulting, US |
 | Author |  Ulrike Merrick  | APHL, US |
