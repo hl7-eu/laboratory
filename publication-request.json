@@ -4,7 +4,7 @@
   "path" : "http://hl7.eu/fhir/laboratory/2.0.0",
   "desc" : "This publication represents a new STU release (version 2.0.0). It incorporates new profiles, references to new logical models, updated model-to-profile mapping tables, terminology updates, and general publication cleanup.",
   "status" : "trial-use",
-  "sequence" : "Release",
+  "sequence" : "STU 2",
   "mode": "milestone",
   "changes" : "changes.html"
 }
