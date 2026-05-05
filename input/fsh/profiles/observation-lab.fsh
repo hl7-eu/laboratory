@@ -73,12 +73,14 @@ That's why it is important to explicitly include informaiton about measurement m
   * code from LaboratoryResultStandardEuVs (preferred)
   * insert ObservationResultsValueEu
 
+//TODO: use hasValue in next release
+
 Invariant: eu-lab-1
 Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "(status in ('registered'|'cancelled')) or value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+Expression: "(status in ('registered'|'cancelled')) or value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
 Invariant: eu-lab-2
 Description: "If observation has components and observation status is other then \"registered\" or \"cancelled\", at least one of these Observation.component elements shall be provided:  \"value\" or \"dataAbsentReason\""
 Severity: #error
-Expression: "component.exists() implies (status in ('registered'|'cancelled')) or component.value.exists() or component.dataAbsentReason.exists()"
+Expression: "component.exists() implies (status in ('registered'|'cancelled')) or component.value.exists() or component.extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').exists() or component.dataAbsentReason.exists()"

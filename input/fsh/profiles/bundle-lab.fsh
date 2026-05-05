@@ -107,22 +107,27 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 Invariant: dr-comp-enc
 Description: "DiagnosticReport and Composition SHALL have the same encounter"
 /* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
+// TODO: Consider comparing encounter.reference instead of the full Reference object. FHIRPath '=' compares complex objects structurally, so semantically equal references may fail if display, identifier, or reference style differs.
 Expression: "( (entry.resource.ofType(Composition).encounter.empty() and entry.resource.ofType(DiagnosticReport).encounter.empty() ) or entry.resource.ofType(Composition).encounter = entry.resource.ofType(DiagnosticReport).encounter )"
 Severity:    #error
 
 Invariant: dr-comp-subj
 Description: "DiagnosticReport and Composition SHALL have the same subject"
+// TODO: Consider comparing subject.reference instead of the full Reference object. FHIRPath '=' compares complex objects structurally, so semantically equal references may fail if display, identifier, or reference style differs.
 Expression: "( (entry.resource.ofType(Composition).subject.empty() and entry.resource.ofType(DiagnosticReport).subject.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
 Severity:    #error
 
 
 Invariant: dr-comp-type
 Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+// TODO: intersect() compares complete Coding elements. This may be too strict if system and code match but display or version differ; consider comparing system + code explicitly.
 Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"
 Severity:    #error
 
 Invariant: dr-comp-category
 Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
+// TODO: Check whether the implication should use 'and' instead of 'or'. With 'or', the invariant fails when only one side has category, because no intersection is possible.
+// TODO: intersect() compares complete Coding elements. This may be too strict if system and code match but display or version differ; consider comparing system + code explicitly.
 Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()"
 Severity:    #error
 
@@ -130,6 +135,8 @@ Invariant: dr-comp-identifier
 Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
 /* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists" */
 
+// TODO: The description only mentions DiagnosticReport.identifier, but the expression also triggers when only Composition.identifier exists. Consider using DiagnosticReport.identifier.exists() as the implication condition.
+// TODO: intersect() compares complete Identifier elements. This may be too strict if system and value match but assigner, type, period, or use differ; consider comparing system + value explicitly.
 Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
 Severity:    #error
 
