@@ -1,39 +1,11 @@
 
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">
-		<b>Informative for this version of the guide</b>
-		<p>Obligations have been added to this version of the guide only as informative material to collect feedback about their usage.</p>
-	</blockquote>
-</div>
-
-
 ### Overview 
 
-Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.
 
-The current choice has been that of defining the obligation in StructureDefinitions distinct from those used for defining the structural constraints.
+Obligations are a mechanism provided by [HL7 FHIR](https://hl7.org/fhir/R5/obligations.html) to describe the functional expectations placed on system actors with respect to specific data elements defined in profiles. These expectations indicate whether an actor **MAY**, **SHOULD**, or **SHALL** perform certain actions or support particular capabilities.
 
-This page describes also the actors that have been defined for specifying the obligations.
+In the previous version of this Implementation Guide, an initial proposal for obligations, together with the associated actors, was included as informative material (see the [v0.1.1 obligations page](https://hl7.eu/fhir/laboratory/0.1.1/obligations.html)).
 
-### Actors
+In the current version, obligations are not formally specified. Their inclusion is deferred pending further analysis, alignment, and consolidation across relevant stakeholders and implementation contexts.
 
-{% include fsh-link-references.md %}
-
-Three actors have been specified:
-* the [Creator](ActorDefinition-actor-creator-eu-lab.html) ;
-* the [Repository](ActorDefinition-actor-repos-eu-lab.html) ; and 
-* the [Consumer](ActorDefinition-actor-consumer-eu-lab.html)
-
-The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing. 
-The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
-The last actor is the system using the report received or retrieved.
-
-<p>{% include actors.svg %}</p>
-
-### Obligations List
-
-1. Patient Obligations ([PatientEuObligations])
-1. Human Name Obligations ([HumanNameEuObligations])
-1. Observation Obligations	([ObservationEuObligations])
-1. ServiceRequest Obligations ([ServiceRequestEuObligations])
-1. Specimen Obligations ([SpecimenEuObligations])
+Updated obligations are expected to be reintroduced in future versions of this Implementation Guide once sufficient maturity and consensus have been achieved.

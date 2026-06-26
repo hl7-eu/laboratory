@@ -8,13 +8,9 @@
 
 ### Document Overview 
 
-Some text here ....
-
 <p>{% include document-overview.svg %}</p>
 
 
 ### Profile relationships
-
-Some text here ....
 
 <p>{% include links-overview.svg %}</p>

@@ -1,0 +1,65 @@
+/* iso_eu_ps_tables_modelcolors.css */
+:root{
+  --iso:#1e40af;          /* bluish for ISO */
+  --eu:#b91c1c;           /* redish for EU */
+  --mid:#6b21a8;          /* purple for Relationship */
+  --iso-col:#e8efff;      /* light blue cell background */
+  --eu-col:#ffe8e8;       /* light red cell background */
+  --mid-col:#f2e8ff;      /* light purple cell background */
+  --grid:#e5e7eb;
+  --text:#0f172a;
+  --muted:#64748b;
+  --dash:#94a3b8;
+  --note:#334155;
+  --highlight:#fff8c5;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:24px;color:var(--text)}
+h2{margin:28px 0 10px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--grid);vertical-align:top}
+.tbl thead th{color:#fff;text-align:left;font-weight:700;letter-spacing:.2px}
+.cap {
+  font-size: 16px;      /* smaller than 20px */
+  font-weight: 600;     /* keep bold but slightly lighter */
+  padding: 12px;
+}
+.cap.iso{background:var(--iso)}
+.cap.eu{background:var(--eu)}
+.cap.mid {
+  background: var(--mid);
+  color: #ffffff;       /* force white text */
+  text-align: center;
+}
+.hdr{color:#cbd5e1}
+.hdr.iso{background:#0b2a86}
+.hdr.eu{background:#7f0f0f}
+.hdr.mid{background:#4a0e78;color:#e9d5ff;text-align:center}
+/* Body cells by model */
+.cell-iso{background:var(--iso-col)}
+.cell-eu{background:var(--eu-col)}
+.cell-mid{background:var(--mid-col);text-align:center;font-weight:600}
+.muted{color:var(--muted)}
+.dash{color:var(--dash)}
+.note{color:var(--note)}
+.highlight td{background:var(--highlight)!important}
+/* Cell-level highlight helper */
+.hl{background:var(--highlight)!important}
+/* Hierarchy indentation helpers */
+/* Simpler, in-flow hierarchy markers (avoid overlap) */
+.lvl-1,.lvl-2,.lvl-3,.lvl-4,.lvl-5{position:static;padding-left:0}
+.lvl-1::after,.lvl-2::after,.lvl-3::after,.lvl-4::after,.lvl-5::after{content:none}
+.lvl-1::before{content:"\21B3";display:inline-block;width:1.25rem;margin-right:.25rem;color:var(--muted);font-weight:700}
+.lvl-2::before{content:"\2022";display:inline-block;width:2.25rem;margin-right:.25rem;color:var(--muted);font-size:18px;line-height:1}
+/* Third-level indent */
+.lvl-3::before{content:"\2013";display:inline-block;width:3.25rem;margin-right:.25rem;color:var(--muted);font-weight:700}
+/* Fourth- and fifth-level indents (reuse bullet, increase gutter) */
+.lvl-4::before{content:"\2022";display:inline-block;width:4.25rem;margin-right:.25rem;color:var(--muted);font-size:18px;line-height:1}
+.lvl-5::before{content:"\2022";display:inline-block;width:5.25rem;margin-right:.25rem;color:var(--muted);font-size:18px;line-height:1}
+@media (max-width: 900px){.tbl{font-size:14px}}
+
+
+/* Adjust first-row header font size */
+
+
+/* Ensure Relation text (middle column) is white */

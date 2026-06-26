@@ -64,8 +64,8 @@ Usage: #inline
   * valueReference = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
     * display = "Nuovo Ospedale S.Agostino (MO)"
 
-* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
-
+//* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #cs-CZ
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"
@@ -82,6 +82,7 @@ Usage: #inline
 * title = "Laboratorní zpráva"
 * confidentiality = #N
 * attester[+].mode = #professional
+* attester[=].time = "2022-03-25T11:00:00+01:00"
 * attester[=].party = Reference(urn:uuid:0bbabe57-7c43-4211-9e19-81fcec65686d)
 * attester[+].mode = #legal
 * attester[=].time = "2022-03-25T11:00:00+01:00"
@@ -92,30 +93,32 @@ Usage: #inline
 * custodian = Reference(urn:uuid:ce122b36-f942-4cee-8c6d-b13ece8cf23c)
 * event.period.start = "2022-03-24T11:24:26+01:00"
 * event.detail = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
-* section[lab-subsections].title = "Laboratory examinations"
-* section[lab-subsections].code = $loinc#26436-6 "Laboratory studies (set)"
-* section[lab-subsections].code.text = "Laboratory studies"
-* section[lab-subsections].section[+].title = "Urine examinations"  // this title should be aligned with ibservation codes
-* section[lab-subsections].section[=].code.coding[+] = http://loinc.org#18729-4 "Urinalysis studies (set)"
-* section[lab-subsections].section[=].code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
-* section[lab-subsections].section[=].code.text = "ESAMI DELLE URINE"
-* section[lab-subsections].section[=].text.status = #generated
+* section[0].title = "Laboratory examinations"
+* section[0].code = $loinc#26436-6 "Laboratory studies (set)"
+* section[0].code.text = "Laboratory studies"
+* section[0].text.status = #generated
+* section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratory examinations</div>"
+* section[0].section[+].title = "Urine examinations"  // this title should be aligned with ibservation codes
+* section[0].section[=].code.coding[+] = http://loinc.org#18729-4 "Urinalysis studies (set)"
+* section[0].section[=].code.coding[+] = urn:oid:2.16.840.1.113883.2.9.2.30.6.11#0090334.02 "XXX"
+* section[0].section[=].code.text = "ESAMI DELLE URINE"
+* section[0].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
 <thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
 
 <tbody>
 <tr><td>2023-03-27</td><td>Urea (U) [Moles/Vol]</td><td>310</td><td>mmol/L</td><td> 67 - 580 mmol/L</td></tr>
 </tbody>
 </table></div>"
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
+* section[0].section[=].entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 
-* section[lab-subsections].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
-* section[lab-subsections].section[=].code.coding[+] = http://loinc.org#18719-5 "Chemistry studies (set)"
-* section[lab-subsections].section[=].code.text = "Examination of blood"
-* section[lab-subsections].section[=].text.status = #generated
+* section[0].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
+* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* section[0].section[=].code.text = "Examination of blood"
+* section[0].section[=].text.status = #generated
 // ToDo: correct html text
-* section[lab-subsections].section[=].text.div = 
+* section[0].section[=].text.div =
 "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
 <thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
 <tbody>
@@ -123,7 +126,7 @@ Usage: #inline
 </tbody>
 </table></div>"
 
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
+* section[0].section[=].entry = Reference(urn:uuid:18bd102e-0abf-42b0-b4e6-97e47fd385eb)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-5679723c-4fae-4ba7-9f09-5438a827bfda
 InstanceOf: DiagnosticReportLabEu
@@ -134,6 +137,7 @@ Usage: #inline
 * identifier.assigner.display = "Regione Lazio"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:26032a57-083a-4ddf-b019-e566ae02f740)
 * status = #registered
+* basedOn = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
@@ -144,7 +148,7 @@ Usage: #inline
 
 
 Instance: Inline-Patient-de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8
-InstanceOf: PatientEuLab
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8"
 * identifier[+].type = $v2-0203#NIIP
@@ -227,13 +231,13 @@ Usage: #inline
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 
 Instance: Inline-Instance-for-PractiotionerRole-88868d3e-7ab1-4ee5-983e-b979c4971f5c
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c"
 * practitioner = Reference(urn:uuid:ab279a0b-320f-483b-9a5d-f1f7e8ceacb2)
 
 Instance: Inl-Instance-Practitioner-ab279a0b-320f-483b-9a5d-f1f7e8ceacb2
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MTCORV58E63L294G"
@@ -260,13 +264,13 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-PractitionerRole-84b2e517-abc2-4268-975d-b12fa8174d30
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "84b2e517-abc2-4268-975d-b12fa8174d30"
 * practitioner = Reference(urn:uuid:68740937-f732-4ff9-a2e4-bf502d2d125f)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-68740937-f732-4ff9-a2e4-bf502d2d125f
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "68740937-f732-4ff9-a2e4-bf502d2d125f"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -295,7 +299,7 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-0bbabe57-7c43-4211-9e19-81fcec65686d
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "0bbabe57-7c43-4211-9e19-81fcec65686d"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -308,7 +312,7 @@ Usage: #inline
 * telecom.use = #work
 
 Instance: Inl-Ins-Lab-technician-e512e2e2-9600-4c69-a269-af3ab5421e09
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "e512e2e2-9600-4c69-a269-af3ab5421e09"
 * identifier.system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
@@ -322,12 +326,12 @@ Usage: #inline
 
 
 Instance: 84476dc3-a732-455f-910e-f2b44428dcc9
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * practitioner = Reference(urn:uuid:8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3)
 
 Instance: 8ba59ab8-3cad-47ef-8ba9-72d2fcb934c3
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "GPSDGK80E76C765V"
@@ -351,13 +355,13 @@ Usage: #inline
 * address.country = "100"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-13792187-4721-4309-a8a4-4a57ffb4e6a1
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "13792187-4721-4309-a8a4-4a57ffb4e6a1"
 * practitioner = Reference(urn:uuid:852cec21-4ff9-4cea-b86d-00de92b46894)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-852cec21-4ff9-4cea-b86d-00de92b46894
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * id = "852cec21-4ff9-4cea-b86d-00de92b46894"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
@@ -399,14 +403,14 @@ Usage: #inline
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-1b4b120e-0371-4878-b4c9-b69434e84c72
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "1b4b120e-0371-4878-b4c9-b69434e84c72"
 * practitioner = Reference(urn:uuid:eb62a039-7e02-44cb-ba17-7e4fb42acdde)
 * organization = Reference(urn:uuid:508f4b29-09ca-4c94-8343-657f1923303a)
 
 Instance: eb62a039-7e02-44cb-ba17-7e4fb42acdde
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MRSSIO79H59Z317K"
@@ -415,7 +419,7 @@ Usage: #inline
 * name.given = "Mario"
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-508f4b29-09ca-4c94-8343-657f1923303a
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "508f4b29-09ca-4c94-8343-657f1923303a"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.3"
@@ -425,12 +429,13 @@ Usage: #inline
 * partOf = Reference(urn:uuid:206fa15d-51ae-4f3d-b8d0-71ee6290ff52)
 
 Instance: Inline-Instance-for-IT-CDA2FHIR-206fa15d-51ae-4f3d-b8d0-71ee6290ff52
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "206fa15d-51ae-4f3d-b8d0-71ee6290ff52"
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.1.1"
 * identifier.value = "080105"
 * identifier.assigner.display = "Ministero della Salute"
+* name = "AUSL MODENA"
 
 Instance: Inline-Instance-for-Observation-763f7902-8103-4d10-8bd1-546a726d43ee
 InstanceOf: ObservationResultsLaboratoryEu
@@ -448,13 +453,13 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * valueQuantity.code = $ucum#mmol/L
 * valueQuantity.unit = "mmol/L"
-* interpretation = $obs-interpretation#LU "Significantly low"
+* interpretation = $v3-ObservationInterpretation#LU "Significantly low"
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // urine specimen
 * referenceRange.low.value = 67
 * referenceRange.low.unit = "mmol/L"
 * referenceRange.high.value = 580
 * referenceRange.high.unit = "mmol/L"
-* referenceRange.type = $reference-range-meaning#normal "Normal Range"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
 Instance: Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
 InstanceOf: ObservationResultsLaboratoryEu
@@ -474,10 +479,10 @@ Usage: #inline
 * valueQuantity.code = $ucum#umol/L
 * valueQuantity.unit = "umol/L"
 * valueQuantity.extension[uncertainty].valueDecimal = 0.1
-* interpretation = $obs-interpretation#HH "Critical high"
+* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * specimen = Reference(urn:uuid:25dfb673-e7d6-43d0-b50b-6739f1ea9c91)
 * referenceRange.low.value = 136
 * referenceRange.low.unit = "umol/L"
 * referenceRange.high.value = 144
 * referenceRange.high.unit = "umol/L"
-* referenceRange.type = $reference-range-meaning#normal "Normal Range"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"

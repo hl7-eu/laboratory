@@ -9,7 +9,7 @@ Usage: #example
 * status = #active
 * type = #system
 // * type = #entity
-* documentation = """This actor represents the Laboratory Report creators. That is the actor creating the report that can be send to a consumer or to a repository for report storage and sharing."""
+* documentation = """This actor represents the Laboratory Report creators. That is the actor creating the report that can be sent to a consumer or to a repository for report storage and sharing."""
 
 Instance: actor-consumer-eu-lab
 InstanceOf: ActorDefinition

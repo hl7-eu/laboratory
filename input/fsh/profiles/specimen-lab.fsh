@@ -7,11 +7,15 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
-
-* subject only Reference ( PatientEuLab or PatientAnimalEu or Group  or Device or Substance or Location)
+* extension contains SpecimenFocus named focus 0..1
+* extension[focus].valueReference only Reference(AnimalSpecimenEuLab or Group or Device or Substance or Location)
+* extension[focus] ^short = "Animal specimen source"
+// TODO: add biological derived product?
+* subject only Reference (PatientEuCore or Group or Device or Substance or Location)
+* type 1..1
 * type from LabSpecimenTypesEuVs (preferred)
-* type 0..1
-  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
+  * ^comment = """If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type.
+For a non-identifiable animal specimen source (e.g. 710069003 | Tick specimen (specimen) |), Specimen.type with the appropriate code shall be used."""
 * parent only Reference(SpecimenEu)
 * request
   * ^short = "Why the specimen was collected."
@@ -23,8 +27,9 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 * collection
   * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
     * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite is present, it shall be coherent with the type"
+  //TODO: extension not allowed on Specimen, replace with backport extension
   * extension contains $bodySite-reference named bodySite 0..1
-  * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
+  * extension[bodySite].valueReference only Reference(BodyStructureEuCore)
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
 * container
   * type from LabSpecimenContainerEu (preferred)

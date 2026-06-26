@@ -6,7 +6,7 @@ scale 0.6
 artifact "Composition: Laboratory Report" as composition
 artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
 artifact "Observation Results: laboratory" as result
-artifact "Patient: Animal" as animalPatient
+artifact "RelatedPerson: Animal" as animalSpecimen
 artifact "Patient: Person" as humanPatient
 artifact "Practitioner: Laboratory Report" as Practitioner
 artifact "PractitionerRole: Laboratory Report" as PractitionerRole
@@ -19,19 +19,19 @@ artifact "Body structure: Laboratory" as bodyStructure
 url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
 url of diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
 url of result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
-url of humanPatient [[StructureDefinition-Patient-eu-lab.html]]
-url of animalPatient [[StructureDefinition-Patient-animal-eu-lab.html]]
-url of Practitioner [[StructureDefinition-Practitioner-eu-lab.html]]
-url of PractitionerRole [[StructureDefinition-PractitionerRole-eu-lab.html]]
+url of humanPatient [[https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
+url of animalSpecimen [[StructureDefinition-animal-specimen-eu-lab.html]]
+url of Practitioner [[https://hl7.eu/fhir/base/StructureDefinition-practitioner-eu-core.html]]
+url of PractitionerRole [[https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
 url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
 url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
 url of Substance [[StructureDefinition-Substance-additive-eu-lab.html]]
-url of bodyStructure [[StructureDefinition-BodyStructure-eu-lab.html]]
+url of bodyStructure [[https://hl7.eu/fhir/base/StructureDefinition-bodyStructure-eu-core.html]]
 
 
 diagnosticReport --> composition
 diagnosticReport --> result
-diagnosticReport --> animalPatient
+diagnosticReport --> animalSpecimen
 diagnosticReport --> humanPatient
 diagnosticReport --> Practitioner
 diagnosticReport --> PractitionerRole
@@ -40,21 +40,21 @@ diagnosticReport --> Specimen
 
 composition --> result
 composition --> diagnosticReport
-composition --> animalPatient
+composition --> animalSpecimen
 composition --> humanPatient
 composition --> Practitioner
 composition --> PractitionerRole
 composition --> ServiceRequest
 composition --> Specimen
 
-result --> animalPatient
+result --> animalSpecimen
 result --> humanPatient
 result --> Practitioner
 result --> PractitionerRole
 result --> ServiceRequest
 result --> Specimen
 
-Specimen --> animalPatient
+Specimen --> animalSpecimen
 Specimen --> humanPatient
 Specimen --> Practitioner
 Specimen --> PractitionerRole
