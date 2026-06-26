@@ -25,13 +25,13 @@ The following picture provides a planning overview for the new cross-border serv
 </div>
 
 
-With the future introduction of the [proposed EDSH regulation](https://health.ec.europa.eu/publications/proposal-regulation-European-health-data-space_en) the adoption of a common format for the sharing for these "priority domains"  will not be limited to the cross border services, but it will be likely required to be supported by any EHR in Europe.
+With the future introduction of the [proposed EHDS regulation](https://health.ec.europa.eu/publications/proposal-regulation-European-health-data-space_en) the adoption of a common format for the sharing for these "priority domains"  will not be limited to the cross border services, but it will be likely required to be supported by any EHR in Europe.
 
 Note 1: this "common format" is also known as the European EHR exchange format (E-EHRxF)
 
 ### Why this Guide and Why Now
 
-As highlighted in the previous figure, a set of EU driven (XpanDH, JA-09, xShare..) and national initiatives were planned or ongoing. The risk of potentially not aligned national choices was not negligeable.
+As highlighted in the previous figure, a set of EU driven (XpanDH, JA-09, xShare..) and national initiatives were planned or ongoing. The risk of potentially not aligned national choices was not negligible.
 
 Considering this landscape, HL7 Europe recognized the need of promoting a Standardization activity at the European level with the purpose of:
 - Facilitating the harmonization among the national initiatives

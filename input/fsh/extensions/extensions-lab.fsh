@@ -1,14 +1,3 @@
-
-Extension: DiagnosticReportReference
-Id:   composition-diagnosticReportReference
-Title:  "Document DiagnosticReport Reference"
-Description: "This extension provides a reference to the DiagnosticReport instance that is associated with this Composition."
-// publisher, contact, and other metadata here using caret (^) syntax (omitted)
-* insert ExtensionContext(Composition)
-* insert SetFmmandStatusRule ( 2, trial-use)
-* value[x] only Reference (DiagnosticReport)
-
-
 Extension: ObservationCertifiedRefMaterialCodeable
 Id:   observation-certifiedRefMaterialCodeable
 Title:  "Certified Reference Material: CodeableConcept"
@@ -41,3 +30,25 @@ Description: """This extension links this observation with the laboratory test k
 * insert ExtensionContext(Observation)
 * insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only Reference(Device)
+
+//TODO: will be moved to the extensions ig in the future. https://jira.hl7.org/browse/FHIR-56516
+Extension: LaboratoryAccreditedEu
+Id:   laboratory-accredited-eu
+Title:  "Laboratory Accredited"
+Description: """Simple accreditation extension.
+For Observation it indicates that the laboratory test was/is accredited.
+For ServiceRequest it indicates that the request shall be fulfilled by an accredited laboratory."""
+Context: Observation, ServiceRequest
+* ^url = "http://hl7.eu/fhir/StructureDefinition/laboratory-accredited"
+* insert SetFmmandStatusRule ( 2, trial-use)
+* value[x] only boolean
+* valueBoolean 1..1
+
+// TODO: replace with official R6 backport extension when available.
+Extension: SpecimenFocus
+Id: specimen-focus
+Title: "Specimen Focus"
+Description: "Specimen focus, Extension to represent the entity from which the specimen is collected when it is not the subject of record." 
+* insert ExtensionContext(Specimen)
+* insert SetFmmandStatusRule ( 2, trial-use)
+* value[x] only Reference(RelatedPerson or Group or Device or Substance or Location)

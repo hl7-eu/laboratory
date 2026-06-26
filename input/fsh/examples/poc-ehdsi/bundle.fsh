@@ -26,12 +26,11 @@ Instance: Inline-Composition-laboratory-results-report-poc
 InstanceOf: CompositionLabReportEu
 Usage: #inline
 * id = "80709186-426d-4cdf-abba-034c4f80acb4"
-/* * extension[+].url = $composition-diagnostic-report-reference
-* extension[=].valueReference = Reference(DiagnosticReport/3a743273-237a-446a-a8da-9e7521cce614) */
+* extension[DiagnosticReportReference].valueReference = Reference(urn:uuid:f5d20fe5-6d14-46de-80ea-8124f427a754)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)"
 * category[specialty] = $sct#394596001	"Chemical pathology"
 * type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
@@ -39,32 +38,36 @@ Usage: #inline
 * author[+].display = "Dr. Patrick Dempsey"
 * title = "Laboratory Report - 10 March, 2023 14:30"
 * confidentiality = #N
-* attester[+].mode = #legal
+//TODO: PW legal will match the legal slice wich doesnt allow for organizations to be linked, needs to be changed in base? changed to official for now
+* attester[+].mode = #official
 * attester[=].time = "2020-12-27T14:30:00+01:00"
 * attester[=].party = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * custodian = Reference(urn:uuid:608b5309-2609-4d03-b6da-c758bfa1de70)
 * section[+].title = "Blood group lab result report"
 * section[=].code = $loinc#26436-6 "Laboratory studies (set)"
 * section[=].code.text = "LABORATORY STUDIES"
+* section[=].text.status = #generated
+* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Blood group lab result report</div>"
 //* section[=].entry[+] = Reference(Observation/8bd279af-125a-4318-b461-ba5629b12e7f)
 * section[=].entry[+] = Reference(urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f)
 
 Instance: Inline-Diagnostic-Report-laboratory-results-report-poc
 InstanceOf: DiagnosticReportLabEu
 Usage: #inline
+* id = "f5d20fe5-6d14-46de-80ea-8124f427a754"
 * code = $loinc#11502-2 "Laboratory report"
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:80709186-426d-4cdf-abba-034c4f80acb4)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)" 
+* category[studyType] = $loinc#26436-6 "Laboratory Studies (set)"
 * category[specialty] = $sct#394596001	"Chemical pathology"
 * subject = Reference(urn:uuid:1d252ca0-803c-464c-87d5-f12f73c12eda)
 * effectiveDateTime = "2023-04-19T15:46:00+01:00"
 * performer[+].display = "Dr. Patrick Dempsey"
 
 Instance: Inline-Patient-laboratory-results-report-poc
-InstanceOf: PatientEuLab
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "1d252ca0-803c-464c-87d5-f12f73c12eda"
 * identifier[+].type = $v2-0203#NIIP
@@ -115,7 +118,7 @@ Usage: #inline
 * specimen = Reference(urn:uuid:cadaf2e3-b707-4207-9b63-5c29ffece051)
 
 Instance: Inline-Organization-laboratory-results-report-poc
-InstanceOf: OrganizationUvIps
+InstanceOf: OrganizationEuCore
 Usage: #inline
 * id = "608b5309-2609-4d03-b6da-c758bfa1de70"
 * name = "SAN RAFFAELE NOMENTANA"

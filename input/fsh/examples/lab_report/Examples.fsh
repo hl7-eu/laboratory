@@ -13,14 +13,14 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * specimen.display = "Specimen from wound collected on October 25th, 2022"
-* result[+] = Reference(obs-gram-stain) 
+* result[+] = Reference(obs-gram-stain)
 * result[+] = Reference(obs-aerobic-culture)
 * result[+] = Reference(obs-anaerobic-culture)
 
 Instance: comp-lab-example
 InstanceOf: CompositionLabReportEu
 Usage: #example
-* extension[diagnosticReport-reference].valueReference = Reference(dr-lab-example)
+* extension[diagnosticReport].valueReference = Reference(dr-lab-example)
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -35,20 +35,28 @@ Usage: #example
 * attester[=].time = "2020-12-27T14:30:00+01:00"
 * attester[=].party.display = "Best Laboratory"
 * custodian.display = "Best Laboratory"
-* section[lab-subsections].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section[lab-subsections].code = $loinc#18725-2 "Microbiology studies (set)"
-* section[lab-subsections].section[+].code.text = "Gram Stain"
-* section[lab-subsections].section[=].title = "Gram Stain" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(obs-gram-stain)
-* section[lab-subsections].section[+].code.text = "Aerobic Culture"
-* section[lab-subsections].section[=].title = "Aerobic Culture" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(obs-aerobic-culture) // obs-aerobic-culture
-* section[lab-subsections].section[+].code.text = "Anaerobic Culture"
-* section[lab-subsections].section[=].title = "Anaerobic Culture" // Title to be checked
-* section[lab-subsections].section[=].entry = Reference(obs-anaerobic-culture) // obs-anaerobic-culture
+* section[0].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
+* section[0].code = $loinc#18725-2 "Microbiology studies (set)"
+* section[0].text.status = #generated
+* section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Bacterial Aerobic &amp; Anaerobic Culture &amp; Susceptibility</div>"
+* section[0].section[+].code.text = "Gram Stain"
+* section[0].section[=].title = "Gram Stain" // Title to be checked
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Gram Stain</div>"
+* section[0].section[=].entry = Reference(obs-gram-stain)
+* section[0].section[+].code.text = "Aerobic Culture"
+* section[0].section[=].title = "Aerobic Culture" // Title to be checked
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aerobic Culture</div>"
+* section[0].section[=].entry = Reference(obs-aerobic-culture) // obs-aerobic-culture
+* section[0].section[+].code.text = "Anaerobic Culture"
+* section[0].section[=].title = "Anaerobic Culture" // Title to be checked
+* section[0].section[=].text.status = #generated
+* section[0].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Anaerobic Culture</div>"
+* section[0].section[=].entry = Reference(obs-anaerobic-culture) // obs-anaerobic-culture
 
 Instance: pat-lab-example
-InstanceOf: PatientEuLab
+InstanceOf: PatientEuCore
 Usage: #example
 * identifier[+].type = $v2-0203#NIIP
 * identifier[=].system = "urn:oid:1.2.203.24341.1.20.2"
@@ -59,8 +67,6 @@ Usage: #example
 * identifier[=].system = "urn:oid:2.16.840.1.113883.4.330.203"
 * identifier[=].value = "5484136"
 * name[+].family = "Očkovaný Moreira"
-  * extension[fathersFamily][+].valueString = "Moreira"
-  * extension[mothersFamily][+].valueString = "Očkovaný"
 * name[=].given[+] = "František"
 * gender = #male
 * birthDate = "2000-03-21"
@@ -111,7 +117,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#70003006 "Gram-positive cocci in clusters"
-* hasMember[+] = Reference(obs-gs-org1-quant) 
+* hasMember[+] = Reference(obs-gs-org1-quant)
 
 Instance: obs-gs-org1-quant
 InstanceOf: ObservationResultsLaboratoryEu
@@ -138,7 +144,7 @@ Usage: #example
 * subject = Reference(pat-lab-example)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
-* hasMember[+] = Reference(obs-org-id1) 
+* hasMember[+] = Reference(obs-org-id1)
 
 Instance: obs-org-id1
 InstanceOf: ObservationResultsLaboratoryEu
@@ -152,7 +158,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "MUDr. Aleš Procházka"
 * valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
-* hasMember[+] = Reference(obs-org-id1-growth) 
+* hasMember[+] = Reference(obs-org-id1-growth)
 * hasMember[+] = Reference(obs-org-id1-susc-panel)
 
 Instance: obs-org-id1-growth
@@ -200,7 +206,7 @@ Usage: #example
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: obs-org-id1-susc-2
 InstanceOf: ObservationResultsLaboratoryEu
@@ -217,7 +223,7 @@ Usage: #example
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#R "Resistant"
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
 
 Instance: obs-org-id1-susc-3
 InstanceOf: ObservationResultsLaboratoryEu
@@ -233,7 +239,7 @@ Usage: #example
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 Instance: obs-org-id1-susc-4
 InstanceOf: ObservationResultsLaboratoryEu
@@ -250,7 +256,7 @@ Usage: #example
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
-* interpretation = $obs-interpretation#S "Susceptible"
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
 
 
 Instance: obs-anaerobic-culture
@@ -268,13 +274,13 @@ Usage: #example
 * valueCodeableConcept = $sct#264868006 "No growth"
 
 Instance: prrole-lab-example
-InstanceOf: PractitionerRoleEu
+InstanceOf: PractitionerRoleEuCore
 Usage: #example
 /* * id = "88868d3e-7ab1-4ee5-983e-b979c4971f5c" */
 * practitioner = Reference(pr-lab-example)
 
 Instance: pr-lab-example
-InstanceOf: PractitionerEu
+InstanceOf: PractitionerEuCore
 Usage: #example
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.4.3.2"
 * identifier.value = "MTCORV58E63L294G"
