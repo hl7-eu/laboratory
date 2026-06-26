@@ -1,0 +1,45 @@
+@startuml
+skinparam linetype polyline
+' hide circle
+' hide stereotype
+hide empty members
+
+object "Specific Culture Observation" as sco  {
+    <color:blue>Code = LOINC ("specific culture", XXX, PrID)
+    <color:blue>   system = XXX</color>
+    <color:blue>   component = {specific culture}</color>
+    <color:blue>   scale = PrID</color>
+    ..
+    <color:green>Code = NPU ("specific culture", XXX, ???)
+    <color:green>   system = XXX</color>
+    <color:green>   component = {specific culture}</color>
+    <color:green>   property = ???</color>
+    ..
+    Method = SNOMED CT (703752003 | Organism specific culture technique)
+    ..
+    Result = SNOMED CT
+    <color:black>   264868006 | No growth</color>
+    <color:black>   365698005 |Organism growth)</color>
+    ..
+    Interpretation = SNOMED CT (264868006 | No growth (qualifier value)
+    ..
+    Data Absent Reason =
+}
+
+object Specimen {
+    type = {SNOMED CT specimen type}
+}
+
+object "LOINC Observation codes Valueset" as loinc {
+    Postcoordination filter = Method:"organism specific culture" AND System:XXX AND Property:Prid
+    Pre-coordination filter = Method:"organism specific culture" AND Property:Prid
+}
+
+object "NPU Observation codes Valueset" as npu {
+
+}
+
+
+sco --> Specimen
+sco .. loinc : > Code (LOINC)
+sco .. npu: > Code (NPU)
