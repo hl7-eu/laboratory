@@ -1,0 +1,53 @@
+@startuml
+skinparam linetype polyline
+' hide circle
+' hide stereotype
+hide empty members
+
+class "**Observation**" as results {
+  identifier 0..*
+  subject 1..1
+  status 1..1
+  authorship information 1..*
+  observationDate 1..1
+  <color:blue>**code 1..1**</color>
+  <color:blue>**method 0..1**</color>
+  'orderReference 0..1
+  performer 0..1
+  <color:blue>**value [quantity, code, range, ...] 0..1**</color>
+  dataAbsentReason 0..1
+  'uncertainty 0..1
+  <color:blue>**referenceRange 0..***</color>
+  <color:blue>**interpretationCode 0..***</color>
+  <color:blue>**device 0..1**</color>
+  'testKit 0..1
+  'calibrator 0..1
+  'accreditation status 0..1
+  component 0..*
+  ' **derivedFrom** 0..*
+  ' **triggeredBy** 0..*
+  ' **hasMember** 0..*
+  comments & narrative interpretations 0..*
+}
+
+results --> results: "triggeredBy 0..*"
+results --> results: "hasMember 0..*"
+results --> results: "derivedFrom 0..*"
+'results --> orderInformation: "orderReference 0..1"
+results --> specimen: "specimen 0..*"
+
+class "**Specimen**" as specimen {
+  identifier 0..*
+  status 0..1
+  <color:blue>**type 0..1**</color>
+  subject 0..1
+  'receivedTime 0..1
+  parent 0..*
+  <color:blue>**bodyStructure 0..1**</color>
+  'request 0..*
+  collection 0..1
+  processing 0..*
+  container 0..*
+  condition 0..*
+  note 0..*
+}
