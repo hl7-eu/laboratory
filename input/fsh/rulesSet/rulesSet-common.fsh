@@ -54,7 +54,7 @@ RuleSet: NoSubSectionsRules
 * section ^mustSupport = false
 
 RuleSet: SectionElementsRules
-* code from LabStudyTypesEuVs (preferred)
+* code from LabStudyTypesEuVs (required)
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference (ObservationResultsLaboratoryEu )
 // * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)

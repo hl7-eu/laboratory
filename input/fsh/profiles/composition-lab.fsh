@@ -66,6 +66,16 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * insert SectionCommonRules
 
 // -------------------------------------
+// Result section  0 .. *
+// -------------------------------------
+
+* section contains result 0..*
+* section[result]
+  * ^short = "Laboratory result section"
+  * ^definition = "A section containing laboratory results for a study type."
+  * insert SectionElementsRules
+
+// -------------------------------------
 // Annotation section  0 .. 1
 // -------------------------------------
 
