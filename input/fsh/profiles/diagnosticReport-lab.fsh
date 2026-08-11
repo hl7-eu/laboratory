@@ -72,8 +72,8 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * presentedForm ^short = "Entire report as issued (pdf recommended)"
 // TODO: is using docref instead of media relevant for the base spec?
 * media
-  * ^short = "Additional data (like images, diagrams or documents) associated with this report"
-  * ^definition = "A list of additional data, other then presented form of the report, associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
+  * ^short = "Additional data (like images, diagrams) associated with this report"
+  * ^definition = "A list of additional data associated with this report. This data is generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
   * ^requirements = "Some diagnostic reports may include additional data such as images, diagrams or documents that are relevant to the report. This additional information can provide further context and support for the findings presented in the report."
   * ^alias = "DICOM; Slides; Scans; Pictures; Documents; Diagrams"
   * comment
