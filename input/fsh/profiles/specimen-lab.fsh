@@ -12,7 +12,6 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * extension[focus] ^short = "Animal specimen source"
 // TODO: add biological derived product?
 * subject only Reference (PatientEuCore or Group or Device or Substance or Location)
-* type 1..1
 * type from LabSpecimenTypesEuVs (preferred)
   * ^comment = """If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type.
 For a non-identifiable animal specimen source (e.g. 710069003 | Tick specimen (specimen) |), Specimen.type with the appropriate code shall be used."""
