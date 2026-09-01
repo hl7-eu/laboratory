@@ -33,7 +33,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 * container
   * type from LabSpecimenContainerEu (preferred)
   * additive[x] 0..0
-  * extension contains $specimen-container-device-r5 named device 0..1
+  * extension contains $specimen-container-device-r5 named device 1..1
   * extension[device].valueReference only Reference(Device)
 
 // ----------------------------------------
