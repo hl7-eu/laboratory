@@ -4,6 +4,7 @@ This page summarizes the main changes applied to this version of the guide.
 ### From 2.0.0 to 2.0.1
 
 * Removed the `Composition.section:attachment` slice and added guidance on `DiagnosticReport.media` for additional data associated with the report (FHIR-53138).
+* Removed the additional bindings on `Observation.value[x]:valueCodeableConcept` and `Observation.component.value[x]:valueCodeableConcept`, as the blood group, presence/absence and microorganism value sets are already part of the value set bound to the element (FHIR-57048).
 * Aligned the cardinality of the `Specimen.container.device` R5 cross-version extension with its definition (`1..1`) and added an example using it (FHIR-58773).
 * Updated the `eu-lab-1` and `eu-lab-2` invariants to explicitly support the R5 `value[x]` and `component.value[x]` extensions, and added examples covering all valid ways a laboratory result value may be expressed (FHIR-56821).
 
