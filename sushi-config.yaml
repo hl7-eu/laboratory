@@ -322,6 +322,10 @@ resources:
     name: "Specimen: animal example"
     description: Example of Specimen collected from an animal.
 
+  Specimen/Specimen-container-device-example:
+    name: "Specimen: container device example"
+    description: Example of Specimen whose container is described by a Device resource, referenced through the R5 `Specimen.container.device` extension.
+
   DiagnosticReport/dr-lab-example:
     name: "DiagnosticReport: example"
     description: Example of DiagnosticReport conforming this guide.
