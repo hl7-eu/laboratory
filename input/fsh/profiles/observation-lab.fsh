@@ -30,6 +30,11 @@ This observation may represent the result of a simple laboratory test such as he
 
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
 
+* referenceRange.modifierExtension contains
+  ObservationReferenceRangeLowComparator named lowComparator 0..1 and
+  ObservationReferenceRangeHighComparator named highComparator 0..1
+* referenceRange ^comment = "Reference-range bounds are inclusive when no comparator is present. Use lowComparator or highComparator to state the comparator for an exclusive or explicitly inclusive bound. These modifier extensions pre-adopt the comparator on the reference-range bounds introduced in FHIR R6."
+
 * category 1..*
 * category
   * insert SliceElement (#pattern, $this)

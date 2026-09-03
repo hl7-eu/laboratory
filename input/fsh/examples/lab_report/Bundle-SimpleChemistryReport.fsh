@@ -457,8 +457,10 @@ Usage: #inline
 * specimen = Reference(urn:uuid:5837e9bf-8a2b-43c3-bec8-d68dbd7fa7fb)  // urine specimen
 * referenceRange.low.value = 67
 * referenceRange.low.unit = "mmol/L"
+* referenceRange.modifierExtension[lowComparator].valueCode = #>
 * referenceRange.high.value = 580
 * referenceRange.high.unit = "mmol/L"
+* referenceRange.modifierExtension[highComparator].valueCode = #<
 * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
 Instance: Inline-Instance-for-Observation-18bd102e-0abf-42b0-b4e6-97e47fd385eb
