@@ -52,3 +52,41 @@ Description: "Specimen focus, Extension to represent the entity from which the s
 * insert ExtensionContext(Specimen)
 * insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only Reference(RelatedPerson or Group or Device or Substance or Location)
+
+ValueSet: ReferenceRangeLowComparator
+Id: reference-range-low-comparator
+Title: "Reference Range Low Comparator"
+Description: "Comparators permitted for the low bound of an Observation reference range."
+* $quantity-comparator#>= "Greater or Equal to"
+* $quantity-comparator#> "Greater than"
+
+ValueSet: ReferenceRangeHighComparator
+Id: reference-range-high-comparator
+Title: "Reference Range High Comparator"
+Description: "Comparators permitted for the high bound of an Observation reference range."
+* $quantity-comparator#<= "Less or Equal to"
+* $quantity-comparator#< "Less than"
+
+Extension: ObservationReferenceRangeLowComparator
+Id: observation-reference-range-low-comparator
+Title: "Observation Reference Range Low Comparator"
+Description: "The comparator for Observation.referenceRange.low. This modifier extension pre-adopts the R6 comparator on the low reference-range bound."
+* insert ExtensionContext(Observation.referenceRange)
+* insert SetFmmandStatusRule ( 2, trial-use)
+* . ^isModifier = true
+* . ^isModifierReason = "Changes the interpretation of Observation.referenceRange.low by stating whether the bound is inclusive or exclusive."
+* value[x] only code
+* valueCode 1..1
+* valueCode from ReferenceRangeLowComparator (required)
+
+Extension: ObservationReferenceRangeHighComparator
+Id: observation-reference-range-high-comparator
+Title: "Observation Reference Range High Comparator"
+Description: "The comparator for Observation.referenceRange.high. This modifier extension pre-adopts the R6 comparator on the high reference-range bound."
+* insert ExtensionContext(Observation.referenceRange)
+* insert SetFmmandStatusRule ( 2, trial-use)
+* . ^isModifier = true
+* . ^isModifierReason = "Changes the interpretation of Observation.referenceRange.high by stating whether the bound is inclusive or exclusive."
+* value[x] only code
+* valueCode 1..1
+* valueCode from ReferenceRangeHighComparator (required)
