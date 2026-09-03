@@ -24,5 +24,5 @@ If the ServiceRequest can be updated when the specimen is collected then the Ser
 Otherwise the relationship is recorded in the Specimen.request element"""
   // add invariant ?
 * insurance only Reference (Coverage)
-* supportingInfo ^short = "Additional information: e.g AOEs and prior results"
+* supportingInfo ^short = "Additional information: e.g AOEs and prior results. Most common resource types expected are: Observation, Condition, QuestionnaireResponse, MedicationStatement, MedicationRequest."
 * authoredOn ^short = "When the order was placed"
