@@ -8,6 +8,7 @@ This page summarizes the main changes applied to this version of the guide.
 * Aligned the cardinality of the `Specimen.container.device` R5 cross-version extension with its definition (`1..1`) and added an example using it (FHIR-58773).
 * Updated the `eu-lab-1` and `eu-lab-2` invariants to explicitly support the R5 `value[x]` and `component.value[x]` extensions, and added examples covering all valid ways a laboratory result value may be expressed (FHIR-56821).
 * Added optional `lowComparator` and `highComparator` modifier extensions for exclusive or explicitly inclusive `Observation.referenceRange` bounds, pre-adopting the FHIR R6 solution (FHIR-55966).
+* Added guidance on the most common resource types expected in `ServiceRequest.supportingInfo`, while keeping its target resource types open (FHIR-56397).
 
 ### From 0.1.1 to 2.0.0
 
