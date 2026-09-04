@@ -15,6 +15,14 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
   *  valueReference only Reference(CompositionLabReportEu)
 
+// The core extension is used instead of a new one, based on the resolution of the Jira issue FHIR-57208
+* extension contains $event-statusReason named statusReason 0..1
+* extension[statusReason]
+  * ^short = "Reason for the current status"
+  * ^definition = "Captures the reason for the current state of this report, which is of interest whenever the report was withdrawn or revised."
+
+* status ^comment = "The statuses amended, corrected, appended, cancelled and entered-in-error SHOULD be accompanied by the reason for that status, conveyed in the statusReason extension."
+
 /*
 content to be referred...
 Specimen Collection 1.3.6.1.4.1.19376.1.3.1.2
