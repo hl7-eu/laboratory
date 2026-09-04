@@ -41,7 +41,8 @@ Title: "Specimen Focus"
 Description: "Specimen focus, Extension to represent the entity from which the specimen is collected when it is not the subject of record." 
 * insert ExtensionContext(Specimen)
 * insert SetFmmandStatusRule ( 2, trial-use)
-* value[x] only Reference(RelatedPerson or Group or Device or Substance or Location)
+// Patient and BiologicallyDerivedProduct added based on the resolution of the Jira issue FHIR-57050
+* value[x] only Reference(Patient or RelatedPerson or Group or Device or Substance or Location or BiologicallyDerivedProduct)
 
 ValueSet: ReferenceRangeLowComparator
 Id: reference-range-low-comparator
