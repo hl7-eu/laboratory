@@ -44,7 +44,6 @@ RuleSet: ReportCategoryRule
 * category /* obeys labRpt-category */
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
-  * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

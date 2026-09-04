@@ -15,7 +15,6 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 * obeys one-dr
 * obeys dr-comp-identifier
 * obeys dr-comp-type
-* obeys dr-comp-category
 * obeys dr-comp-subj
 * obeys dr-comp-enc
 
@@ -121,26 +120,21 @@ Expression: "(entry.resource.ofType(Composition).subject.reference.exists() and 
 Severity:    #warning
 
 
-Invariant: dr-comp-type
-Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
-// TODO: intersect() compares complete Coding elements. This may be too strict if system and code match but display or version differ; consider comparing system + code explicitly.
-Expression: "entry.resource.ofType(Composition).type.coding.intersect(entry.resource.ofType(DiagnosticReport).code.coding).exists()"
-Severity:    #error
+// Based on the resolution of the Jira issue FHIR-57053 the two invariants below compare the
+// distinguishing properties of the elements instead of the complete Coding and Identifier
+// elements, which failed as soon as display, version, assigner, type, period or use differed.
+// The dr-comp-category invariant was removed with the same resolution: Composition.category
+// classifies the document, while DiagnosticReport.category refers to the medical discipline
+// of the report, so the two are not required to be the same.
 
-Invariant: dr-comp-category
-Description: "At least one DiagnosticReport.category.coding and Composition.category.coding SHALL be equal"
-// TODO: Check whether the implication should use 'and' instead of 'or'. With 'or', the invariant fails when only one side has category, because no intersection is possible.
-// TODO: intersect() compares complete Coding elements. This may be too strict if system and code match but display or version differ; consider comparing system + code explicitly.
-Expression: "(entry.resource.ofType(Composition).category.exists() or entry.resource.ofType(DiagnosticReport).category.exists()) implies entry.resource.ofType(Composition).category.coding.intersect(entry.resource.ofType(DiagnosticReport).category.coding).exists()"
+Invariant: dr-comp-type
+Description: "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL have the same system, version and code"
+Expression: "entry.resource.ofType(Composition).type.coding.select(system & '|' & version & '|' & code).intersect(entry.resource.ofType(DiagnosticReport).code.coding.select(system & '|' & version & '|' & code)).exists()"
 Severity:    #error
 
 Invariant: dr-comp-identifier
-Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL be equal to the Composition.identifier"
-/* "Composition.identifier SHALL be equal to one of DiagnosticReport.identifier, if at least one exists" */
-
-// TODO: The description only mentions DiagnosticReport.identifier, but the expression also triggers when only Composition.identifier exists. Consider using DiagnosticReport.identifier.exists() as the implication condition.
-// TODO: intersect() compares complete Identifier elements. This may be too strict if system and value match but assigner, type, period, or use differ; consider comparing system + value explicitly.
-Expression: "(entry.resource.ofType(Composition).identifier.exists() or entry.resource.ofType(DiagnosticReport).identifier.exists()) implies entry.resource.ofType(Composition).identifier.intersect(entry.resource.ofType(DiagnosticReport).identifier).exists()"
+Description: "If one or more DiagnosticReport.identifiers are given, at least one of them SHALL have the same system and value as a Composition.identifier"
+Expression: "entry.resource.ofType(DiagnosticReport).identifier.exists() implies entry.resource.ofType(Composition).identifier.select(system & '|' & value).intersect(entry.resource.ofType(DiagnosticReport).identifier.select(system & '|' & value)).exists()"
 Severity:    #error
 
 Invariant: one-comp
