@@ -15,7 +15,12 @@ Description: """This profile defines how to represent an laboratory orders using
 * identifier 1..
 * code from LabOrderCodesEuVs (preferred)
 * subject 1..
-* subject only Reference (PatientEuCore or PatientAnimalEu or Group or Location or Device)
+// Based on the resolution of the Jira issue FHIR-57547 the target types are no longer narrowed:
+// the list below is the one of the base resource, with the Patient pinned to the EU core profile.
+// The requested open slicing is not possible, as FHIR only allows slicing on repeating or choice
+// elements and subject is 1..1.
+* subject only Reference(PatientEuCore or Group or Location or Device)
+  * ^short = "The patient the laboratory order is for"
 * requisition ^short = "Composite Request ID."
 * specimen	only Reference (SpecimenEu)
   * ^short = "Specimens to be used by the laboratory procedure"

@@ -64,6 +64,13 @@ This guidance is enforced by the invariant dr-comp-identifier, listed in the con
 
 * insert ReportTypeRule ( code )
 * insert ReportSubjectRule
+// Based on the resolution of the Jira issue FHIR-57547 the target types are no longer narrowed:
+// the list below is the one of the base resource, with the Patient pinned to the EU core profile.
+// The requested open slicing is not possible, as FHIR only allows slicing on repeating or choice
+// elements and subject is 0..1.
+* subject only Reference(PatientEuCore or Group or Location or Device)
+  * ^short = "The patient this report is about"
+
 * insert ReportEncounterRule
 * performer 
   /* * obeys labRpt-author */
