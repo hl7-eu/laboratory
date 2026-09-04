@@ -40,10 +40,15 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 * basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..* */
 
+// The guidance of the ReportIdentifierRule is repeated here instead of inserting the rule set,
+// which would replace the comment specific to the DiagnosticReport. Keep both in sync.
 * identifier
-  * ^comment = "Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order."
+  * ^comment = """Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order.
 
-* insert ReportIdentifierRule
+Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists.
+
+This guidance is enforced by the invariant dr-comp-identifier, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
+
 * insert ReportCategoryRule
 // add binding
 /* * code 1..
