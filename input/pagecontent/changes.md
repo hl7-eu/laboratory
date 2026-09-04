@@ -3,12 +3,36 @@ This page summarizes the main changes applied to this version of the guide.
 
 ### From 2.0.0 to 2.0.1
 
-* Removed the `Composition.section:attachment` slice and added guidance on `DiagnosticReport.media` for additional data associated with the report (FHIR-53138).
-* Removed the additional bindings on `Observation.value[x]:valueCodeableConcept` and `Observation.component.value[x]:valueCodeableConcept`, as the blood group, presence/absence and microorganism value sets are already part of the value set bound to the element (FHIR-57048).
-* Aligned the cardinality of the `Specimen.container.device` R5 cross-version extension with its definition (`1..1`) and added an example using it (FHIR-58773).
-* Updated the `eu-lab-1` and `eu-lab-2` invariants to explicitly support the R5 `value[x]` and `component.value[x]` extensions, and added examples covering all valid ways a laboratory result value may be expressed (FHIR-56821).
-* Added optional `lowComparator` and `highComparator` modifier extensions for exclusive or explicitly inclusive `Observation.referenceRange` bounds, pre-adopting the FHIR R6 solution (FHIR-55966).
-* Added guidance on the most common resource types expected in `ServiceRequest.supportingInfo`, while keeping its target resource types open (FHIR-56397).
+* Profiles and constraints
+  * FHIR-57444: Removed the `Composition.section:attachment` slice, following the resolution of FHIR-53138. Additional data such as images or diagrams is conveyed through `DiagnosticReport.media`, whose definition and short description were clarified.
+  * FHIR-57208: Added an optional `statusReason` extension to `ObservationResultsLaboratoryEu` and `DiagnosticReportLabEu`, together with a note on `status` that the statuses amended, corrected, cancelled and entered-in-error should be accompanied by the reason for that status.
+  * FHIR-55966: Added the optional `lowComparator` and `highComparator` modifier extensions on `Observation.referenceRange`, pre-adopting the R6 solution for exclusive or explicitly inclusive bounds.
+  * FHIR-57055: Added `Substance` and `BiologicallyDerivedProduct` to the reference targets of `Observation.focus`, now that the EU core profile allows them.
+  * FHIR-57050: Added `Patient` and `BiologicallyDerivedProduct` to the reference targets of the `SpecimenFocus` extension. The Specimen profile no longer narrows those targets a second time.
+  * FHIR-57901: Allowed a patient or a related person as the specimen collector, through the `alternate-reference` extension on `Specimen.collection.collector`.
+  * FHIR-57547: Removed the enumerated subject target types. `DiagnosticReportLabEu` and `ServiceRequestLabEu` now name exactly what the base resource allows, with the patient pinned to `patient-eu-core`. The animal patient profile is no longer named as a possible subject; the profile itself stays.
+  * FHIR-57895: Removed the `1..` constraint on `Specimen.type`.
+  * FHIR-57043: Removed the definition of the Laboratory Accredited extension. It is defined in the HL7 Europe Extensions IG from now on, under the unchanged canonical `http://hl7.eu/fhir/StructureDefinition/laboratory-accredited`. The profiles keep referencing it, so nothing changes for implementers.
+
+* Technical corrections
+  * FHIR-57051: Replaced the extension used on `Specimen.collection.bodySite`. The profile used `http://hl7.org/fhir/StructureDefinition/bodySite`, whose context is `Procedure.bodySite` and which was therefore never allowed here. It is replaced by the cross-version extension `extension-Specimen.collection.bodySite`, which declares the matching context and, carrying the reference half of what became a `CodeableReference` in R5, is nested under the `bodySite` element rather than under `collection`. Instances that use the old extension have to be migrated.
+  * FHIR-58773: Set `Specimen.container.extension:device` to `1..1`. The R5 cross-version extension defines its own root as `1..1` while the profile constrained the slice to `0..1` — a mismatch no tooling reports, because the cardinality of a `contains` rule is only checked against the base element. `Specimen.container` itself stays `0..*`, so the constraint applies only where a container is present.
+  * FHIR-57047: Removed the closed slicing on `Observation.value[x]` and `Observation.component.value[x]`. The parent profile `medicalTestResult-eu-core` already defines the same discriminator with an open slicing, so data types beyond the listed slices are no longer prohibited. The listed slices and their constraints are unchanged.
+  * FHIR-57048: Removed the additional bindings on `Observation.value[x]:valueCodeableConcept` and `Observation.component.value[x]:valueCodeableConcept`. The value set bound to the element already composes the IPS blood group, presence/absence, microorganism and pathology value sets, so the additional bindings covered ground the basic binding covers.
+  * FHIR-56821: Updated the `eu-lab-1` and `eu-lab-2` invariants to recognise the R5 `value[x]` and `component.value[x]` cross-version extensions, which they rejected before, and added examples covering every valid way a laboratory result value may be expressed. Removed the pinned version from the extension canonicals in the aliases.
+  * FHIR-57057: Changed `eu-lab-1` and `eu-lab-2` to test `hasValue()` instead of `exists()`, so that an element carrying an extension but no value no longer satisfies the invariant.
+  * FHIR-57052: Restricted `dr-comp-enc` and `dr-comp-subj` to comparing `Reference.reference`, and only where both references are present. Comparing the whole `Reference` reported a difference in display text or identifier as an error.
+  * FHIR-57053: Changed `dr-comp-type` to compare system, version and code rather than the whole coding, and removed `dr-comp-category` together with its `obeys` rule: the two categories need not be the same, one classifies the document and the other the medical discipline of the report.
+
+* Terminology
+  * FHIR-57058: Reworked the description of `LabStudyTypesEuVs`. Markdown collapses single line breaks, so the notes were rendered as a single paragraph, and their labels had no space after the colon.
+
+* Guidance
+  * FHIR-56397: Added guidance on the resource types most commonly expected in `ServiceRequest.supportingInfo`, while keeping its target types open.
+  * FHIR-57046: Kept the guidance that `Composition.identifier` has to equal one of the `DiagnosticReport.identifier` and pointed it at the invariant that enforces it, `dr-comp-identifier` in the constraints section of the Bundle profile.
+
+* Examples
+  * FHIR-58773: Added `Specimen-container-device-example`, a blood specimen collected into an evacuated tube whose container is described by a contained `Device` referenced through the extension.
 
 ### From 0.1.1 to 2.0.0
 
