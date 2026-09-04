@@ -25,7 +25,8 @@ copyright: >-
 #
 dependencies:
   hl7.fhir.uv.xver-r5.r4: 0.1.0
-  hl7.fhir.eu.extensions.r4: 1.3.0
+  # set to the next released version when the extensions IG is published
+  hl7.fhir.eu.extensions.r4: current
   hl7.fhir.eu.base: 2.0.0
 
 
@@ -129,7 +130,6 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
-    - http://hl7.eu/fhir/StructureDefinition/laboratory-accredited
     - http://example.org/lab-codes
   path-expansion-params: ../resources/Parameters-exp-params.json
   pin-canonicals: pin-multiples
