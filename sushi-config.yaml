@@ -27,7 +27,8 @@ dependencies:
   hl7.fhir.uv.xver-r5.r4: 0.1.0
   # set to the next released version when the extensions IG is published
   hl7.fhir.eu.extensions.r4: current
-  hl7.fhir.eu.base: 2.0.0
+  # set to the next released version when the base IG is published
+  hl7.fhir.eu.base: current
 
 
 
