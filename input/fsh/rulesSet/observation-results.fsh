@@ -1,8 +1,6 @@
 RuleSet: ObservationResultsValueEu
-//TODO: do we really want to have this as closed slicing?
-* value[x] ^slicing.discriminator.type = #type
-* value[x] ^slicing.discriminator.path = "$this"
-* value[x] ^slicing.rules = #closed
+// The closed slicing has been removed based on the resolution of the Jira issue FHIR-57047:
+// the parent profile already slices value[x] by type and leaves the slicing open
 * valueString only string
 // * valueString MS
 * valueString ^sliceName = "valueString"
