@@ -19,7 +19,8 @@ This observation may represent the result of a simple laboratory test such as he
   DeviceLabTestKit named labTestKit 0..* and
   ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
   ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* and
-  $laboratory-accredited named accredited 0..1
+  $laboratory-accredited named accredited 0..1 and
+  $event-statusReason named statusReason 0..1
 
 * extension[labTestKit]
   * ^short = "Laboratory Test Kit"
@@ -27,8 +28,13 @@ This observation may represent the result of a simple laboratory test such as he
 * extension[accredited]
   * ^short = "Accredited test"
   * ^definition = "Indicates that this laboratory test was/is accredited."
+// The core extension is used instead of a new one, based on the resolution of the Jira issue FHIR-57208
+* extension[statusReason]
+  * ^short = "Reason for the current status"
+  * ^definition = "Captures the reason for the current state of this observation, which is of interest whenever the result was withdrawn or revised."
 
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
+* status ^comment = "The statuses amended, corrected, cancelled and entered-in-error SHOULD be accompanied by the reason for that status, conveyed in the statusReason extension."
 
 * referenceRange.modifierExtension contains
   ObservationReferenceRangeLowComparator named lowComparator 0..1 and
