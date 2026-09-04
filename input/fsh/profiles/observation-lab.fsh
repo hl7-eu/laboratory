@@ -78,14 +78,18 @@ That's why it is important to explicitly include informaiton about measurement m
   * code from LaboratoryResultStandardEuVs (preferred)
   * insert ObservationResultsValueEu
 
-//TODO: use hasValue in next release
+// Based on the resolution of the Jira issue FHIR-57057 both invariants require an actual value
+// instead of an element that only carries extensions, such as a data absent reason.
+// hasValue() covers the primitive types; for the complex ones it is always false, so there the
+// check is that the value has children other than its extensions. The cross version extension
+// has to carry a value as well, its bare presence is not enough.
 
 Invariant: eu-lab-1
-Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", the R5 \"value[x]\" extension, \"dataAbsentReason\", \"hasMember\" or \"component\""
+Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided with an actual value:  \"value\", the R5 \"value[x]\" extension, \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "(status in ('registered'|'cancelled')) or value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+Expression: "(status in ('registered'|'cancelled')) or value.hasValue() or value.children().exclude(value.extension).exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
 Invariant: eu-lab-2
-Description: "If observation status is other then \"registered\" or \"cancelled\", every Observation.component shall provide one of these elements:  \"value\", the R5 \"component.value[x]\" extension or \"dataAbsentReason\""
+Description: "If observation status is other then \"registered\" or \"cancelled\", every Observation.component shall provide one of these elements with an actual value:  \"value\", the R5 \"component.value[x]\" extension or \"dataAbsentReason\""
 Severity: #error
-Expression: "(status in ('registered'|'cancelled')) or component.all(value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').exists() or dataAbsentReason.exists())"
+Expression: "(status in ('registered'|'cancelled')) or component.all(value.hasValue() or value.children().exclude(value.extension).exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').value.exists() or dataAbsentReason.exists())"
