@@ -8,9 +8,9 @@ Description: """This profile defines how to represent Specimens in HL7 FHIR for 
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 * extension contains SpecimenFocus named focus 0..1
-* extension[focus].valueReference only Reference(AnimalSpecimenEuLab or Group or Device or Substance or Location)
-* extension[focus] ^short = "Animal specimen source"
-// TODO: add biological derived product?
+// The reference targets are not constrained any further here, based on the resolution of the Jira issue FHIR-57050
+* extension[focus] ^short = "The entity the specimen was collected from, when it is not the subject of record"
+* extension[focus] ^comment = "For an animal specimen source the AnimalSpecimenEuLab profile is expected to be used."
 * subject only Reference (PatientEuCore or Group or Device or Substance or Location)
 * type from LabSpecimenTypesEuVs (preferred)
   * ^comment = """If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type.
