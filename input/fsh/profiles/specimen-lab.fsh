@@ -30,6 +30,19 @@ Otherwise the relationship is recorded in the Specimen.request element"""
     // based on the resolution of the Jira issue FHIR-57051
     * extension contains $specimen-collection-body-site-r5 named bodySite 0..1
     * extension[bodySite].valueReference only Reference(BodyStructureEuCore)
+
+// Patient and RelatedPerson, the collectors added in R5, are conveyed with the alternate-reference
+// extension, based on the resolution of the Jira issue FHIR-57901. This is the mechanism the
+// cross version profile for the R5 Specimen uses for this element as well.
+* collection.collector
+  * ^short = "Who collected the specimen"
+  * ^comment = """In FHIR R4 this element can only refer to a Practitioner or a PractitionerRole.
+When the specimen was collected by the patient or by a related person, the reference is conveyed in the alternate-reference extension instead."""
+* collection.collector.extension contains $alternate-reference named collector 0..1
+* collection.collector.extension[collector]
+  * ^short = "Patient or related person who collected the specimen"
+  * valueReference only Reference(PatientEuCore or RelatedPerson)
+
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
 * container
   * type from LabSpecimenContainerEu (preferred)

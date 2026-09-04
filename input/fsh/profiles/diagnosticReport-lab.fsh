@@ -109,7 +109,7 @@ This guidance is enforced by the invariant dr-comp-identifier, listed in the con
     * display 1..1
       * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the cross-version extension 'link'."
       * ^short = "Text stating use of cross-version extension 'link'"
-    * extension contains $diagnosticReport-link-xver named link 0..1
+    * extension contains $alternate-reference named link 0..1
     * extension[link]
       * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
       * ^short = "DocumentReference containing additional information/attachments"
