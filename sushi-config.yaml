@@ -27,10 +27,9 @@ dependencies:
   # restored: dropped along with an unrelated cleanup in 605d8aa, while the profiles keep binding to IPS value sets
   hl7.fhir.uv.ips: 2.0.1
   hl7.fhir.uv.xver-r5.r4: 0.1.0
-  # TODO: set to 1.4.0 once the extensions IG is published - this release cannot go out before it
-  hl7.fhir.eu.extensions.r4: current
-  # TODO: set to 2.0.1 once the base IG is published - this release cannot go out before it
-  hl7.fhir.eu.base: current
+  # Neither is published yet, so the build fails on them until they are
+  hl7.fhir.eu.extensions.r4: 1.3.1
+  hl7.fhir.eu.base: 2.0.1
 
 
 
