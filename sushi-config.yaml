@@ -4,11 +4,11 @@ canonical: http://hl7.eu/fhir/laboratory
 name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
-status: active # draft | active | retired | unknown
-version: 2.1.0
+status: draft # draft | active | retired | unknown
+version: 2.1.1-ci
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -27,9 +27,8 @@ dependencies:
   # restored: dropped along with an unrelated cleanup in 605d8aa, while the profiles keep binding to IPS value sets
   hl7.fhir.uv.ips: 2.0.1
   hl7.fhir.uv.xver-r5.r4: 0.1.0
-  # TODO: set to 1.4.0 once the extensions IG is published - this release cannot go out before it
+  # Development line, tracking the CI builds of both guides - a release branch pins them
   hl7.fhir.eu.extensions.r4: current
-  # TODO: set to 2.0.1 once the base IG is published - this release cannot go out before it
   hl7.fhir.eu.base: current
 
 
