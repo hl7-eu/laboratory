@@ -329,6 +329,34 @@ resources:
     name: "Specimen: container device example"
     description: Example of Specimen whose container is described by a Device resource, referenced through the R5 `Specimen.container.device` extension.
 
+  Specimen/Specimen-collection-example:
+    name: "Specimen: self collected capillary blood with a body site"
+    description: Example of Specimen whose collection body site is conveyed through the R5 `Specimen.collection.bodySite` extension and whose collector is the patient, conveyed through the `alternate-reference` extension.
+
+  Specimen/Specimen-focus-bdp-example:
+    name: "Specimen: sample taken from a blood unit"
+    description: Example of Specimen collected from a BiologicallyDerivedProduct rather than from the subject of record, conveyed through the `SpecimenFocus` extension.
+
+  Observation/obs-focus-substance-example:
+    name: "Observation: potassium concentration of an infusion solution"
+    description: Example of a laboratory result whose `focus` is a Substance prepared for the subject of record.
+
+  Observation/obs-focus-bdp-example:
+    name: "Observation: ABO group of a blood unit"
+    description: Example of a laboratory result whose `focus` is a BiologicallyDerivedProduct rather than the subject of record.
+
+  Observation/obs-status-reason-example:
+    name: "Observation: cancelled result with a status reason"
+    description: Example of a cancelled laboratory result carrying the reason for that status in the `statusReason` extension.
+
+  DiagnosticReport/dr-status-reason-media-example:
+    name: "DiagnosticReport: corrected report with a status reason and additional data"
+    description: Example of a corrected report carrying the reason for that status in the `statusReason` extension and the additional data in `DiagnosticReport.media`.
+
+  Observation/obs-corrected-glucose-example:
+    name: "Observation: corrected glucose result"
+    description: Example of the result the corrected report is issued for.
+
   DiagnosticReport/dr-lab-example:
     name: "DiagnosticReport: example"
     description: Example of DiagnosticReport conforming this guide.
