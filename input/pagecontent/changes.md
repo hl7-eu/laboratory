@@ -1,7 +1,9 @@
 This page summarizes the main changes applied to this version of the guide.
 
 
-### From 2.0.0 to 2.0.1
+### From 2.0.0 to 2.1.0
+
+Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections listed below it adds capability the published version does not offer, which is why it is an update rather than a technical correction.
 
 * Profiles and constraints
   * FHIR-57444: Removed the `Composition.section:attachment` slice, following the resolution of FHIR-53138. Additional data such as images or diagrams is conveyed through `DiagnosticReport.media`, whose definition and short description were clarified.
