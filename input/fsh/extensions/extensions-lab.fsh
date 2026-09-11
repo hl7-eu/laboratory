@@ -48,6 +48,8 @@ ValueSet: ReferenceRangeLowComparator
 Id: reference-range-low-comparator
 Title: "Reference Range Low Comparator"
 Description: "Comparators permitted for the low bound of an Observation reference range."
+* insert SetFmmandStatusRule ( 2, trial-use)
+* ^experimental = false
 * $quantity-comparator#>= "Greater or Equal to"
 * $quantity-comparator#> "Greater than"
 
@@ -55,6 +57,8 @@ ValueSet: ReferenceRangeHighComparator
 Id: reference-range-high-comparator
 Title: "Reference Range High Comparator"
 Description: "Comparators permitted for the high bound of an Observation reference range."
+* insert SetFmmandStatusRule ( 2, trial-use)
+* ^experimental = false
 * $quantity-comparator#<= "Less or Equal to"
 * $quantity-comparator#< "Less than"
 

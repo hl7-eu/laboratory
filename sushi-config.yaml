@@ -24,6 +24,8 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
+  # restored: dropped along with an unrelated cleanup in 605d8aa, while the profiles keep binding to IPS value sets
+  hl7.fhir.uv.ips: 2.0.1
   hl7.fhir.uv.xver-r5.r4: 0.1.0
   # set to the next released version when the extensions IG is published
   hl7.fhir.eu.extensions.r4: current
