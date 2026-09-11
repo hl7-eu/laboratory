@@ -33,6 +33,11 @@ This page summarizes the main changes applied to this version of the guide.
 
 * Examples
   * FHIR-58773: Added `Specimen-container-device-example`, a blood specimen collected into an evacuated tube whose container is described by a contained `Device` referenced through the extension.
+  * FHIR-57051 / FHIR-57901: Added `Specimen-collection-example`, a capillary blood specimen the patient collected themselves, with the collection body site conveyed through the R5 cross-version extension and the collector through the `alternate-reference` extension.
+  * FHIR-57050: Added `Specimen-focus-bdp-example`, a sample drawn from a red blood cell unit, where the entity the specimen was collected from is a `BiologicallyDerivedProduct` and the subject of record is the patient.
+  * FHIR-57055: Added `obs-focus-substance-example` and `obs-focus-bdp-example`, results about a substance and about a blood unit rather than about the patient directly.
+  * FHIR-57208: Added `obs-status-reason-example`, a cancelled result carrying the reason for that status.
+  * FHIR-57208 / FHIR-57444: Added `dr-status-reason-media-example`, a corrected report carrying the reason for that status and the additional data in `DiagnosticReport.media`, together with the result it is issued for.
 
 ### From 0.1.1 to 2.0.0
 
