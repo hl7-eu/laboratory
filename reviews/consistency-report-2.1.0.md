@@ -1,6 +1,6 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `3a36ac3` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `894e01e`; the IG Publisher run noted below is of commit `3a36ac3`, and the later commits change only comments and page text. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
@@ -56,7 +56,6 @@ Each open item has an id `<section>-<n>`. Ids are stable: fixed or accepted item
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.2-1 | Medium | `profiles/bundle-lab.fsh:123-133` | `dr-comp-type` still compares `version`, so a coding with a version on one side and none on the other fails with an error. The comment above it names a differing version as one of the false negatives the change was meant to remove. | Compare `system` and `code` only, and update the human text and `changes.md:28`, or correct the comment. |
 | 3.2-2 | Medium | `rulesSet/rulesSet-lab.fsh:19, 24, 40` | `ReportEncounterRule` and `ReportSubjectRule` still say the DiagnosticReport and the Composition "SHALL have the same" encounter and subject, but `dr-comp-enc` and `dr-comp-subj` are SHOULD / warning now. `ReportTypeRule` still says the codings "SHALL be equal". | Align the texts with the invariants. |
 | 3.2-3 | Low | `profiles/bundle-lab.fsh:112, 118` | The human texts don't say that the check applies only when both resources carry a `reference`. | E.g. "If both have an encounter reference, they SHOULD be the same." |
 | 3.2-4 | Low | `profiles/observation-lab.fsh:95, 100` | "other then" in `eu-lab-1` and `eu-lab-2`. | "other than". |
@@ -80,7 +79,7 @@ All eight invariant expressions were checked (context, precedence of `implies`/`
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.4-1 | Medium | `terminologies/lab-presenceAbsence.fsh` | `LabPresenceAbsenceEuVs` is bound nowhere since FHIR-57048 removed the additional binding that used it, but it is still published as active / trial-use. | Retire or rebind it, and say so in `changes.md`. |
+| 3.4-1 | Medium | `terminologies/lab-presenceAbsence.fsh`; `rulesSet/observation-results.fsh:22-26` | `LabPresenceAbsenceEuVs`, a copy of the MyHealth@EU value set `eHDSIPresenceAbsence` 0.1.1, is bound nowhere since FHIR-57048 removed the additional binding that used it (purpose `preferred` in 2.0.0). The resolution assumed that all removed bindings were covered by the basic binding, but 13 of its 38 codes are not: Normal, High, Low, Reactive, Non-Reactive, Inconclusive, Equivocal, Indeterminate, Indeterminate result, Invalid result, Not performed, Rare, Proven. The value set is still published as active / trial-use. The `changes.md` entry and the FSH comment for FHIR-57048 are corrected (commit `894e01e`). | A Jira issue decides between restoring the additional binding, adding the value set to the bound value set, and retiring it. If it is not resolved before publication, add a known issue. |
 | 3.4-2 | Medium | `terminologies/lab-testCodes-lab.fsh:8-11` | `LaboratoryResultStandardEuVs` includes `NpuVs` and `LoincVs` but carries only the LOINC copyright. | Add the NPU copyright. |
 | 3.4-3 | Low | `lab-certifiedRefMaterial.fsh:6, 84, 86`; `rulesSet-common.fsh:85-87` | The value set also includes PEI and NIAID codes but has only the NIBSC copyright. `NIBSCCopyrightForVS` sets `experimental = true` as a side effect. | Extend the copyright; set `experimental` in the value set. |
 | 3.4-4 | Low | `lab-species.fsh:7-9`; `lab-certifiedRefMaterial.fsh:7-8` | Two value sets stay FMM 1 / draft in a trial-use release; `knownIssues.md` covers only the CRM canonical URLs. | Confirm it is intended and list both in `knownIssues.md`. |
@@ -247,7 +246,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. `publication-request.json` (2-1, 2-2), the remaining Medium FSH items (3.2-1, 3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
+1. `publication-request.json` (2-1, 2-2), the remaining Medium FSH items (3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
 2. The Medium example items (5-1 to 5-12), then the suppressions they make obsolete (§7).
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
@@ -271,3 +270,4 @@ The other entries are justified: the unknown code system and identifier system e
 - **[3.1-2]** FHIR-55560: `DiagnosticReport.media.link.extension:link` is `1..1`; `changes.md` lists it under *Profiles and constraints*, because media entries without a DocumentReference now fail (commit `5463fb1`).
 - **[3.1-3]** The uncertainty extensions of `RatioEuLab` and `RangeEuLab` are on `numerator`/`denominator` and `low`/`high`, as intended in hl7-eu/laboratory#54; `changes.md` lists it under *Technical corrections* (commit `c8140cf`).
 - **[6.2-1]** `design-choice.md` links the DiagnosticReportReference extension in EU Extensions (commit `4004344`).
+- **[3.2-1]** FHIR-57053 resolved to compare system, code and version, so `dr-comp-type` is correct. The FSH comment that named a differing version as a false negative is corrected (commit `ca08b07`).
