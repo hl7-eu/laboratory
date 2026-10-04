@@ -1,10 +1,10 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `a1c113f`; the IG Publisher run noted below is of commit `3a36ac3`, and the later commits change only comments and page text. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `35a4c31` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
-  - The IG Publisher 2.3.4 run of 2026-10-04 15:44 (commit `3a36ac3`) built `hl7.fhir.eu.laboratory#2.1.0`, status `active`, release label `trial-use`. Resolved dependencies: `hl7.fhir.eu.base` 2.0.1, `hl7.fhir.eu.extensions.r4` 1.3.1, `hl7.fhir.uv.ips` 2.0.1 (fetched from packages2.fhir.org, see *Fixed since the first review*), `hl7.fhir.uv.xver-r5.r4` 0.1.0, `hl7.fhir.uv.extensions.r4` 5.3.0, `hl7.terminology.r4` 7.4.0.
+  - The IG Publisher 2.3.4 run of 2026-10-04 16:16 (commit `35a4c31`) built `hl7.fhir.eu.laboratory#2.1.0`, status `active`, release label `trial-use`. Resolved dependencies: `hl7.fhir.eu.base` 2.0.1, `hl7.fhir.eu.extensions.r4` 1.3.1, `hl7.fhir.uv.ips` 2.0.1 (fetched from packages2.fhir.org, see *Fixed since the first review*), `hl7.fhir.uv.xver-r5.r4` 0.1.0, `hl7.fhir.uv.extensions.r4` 5.3.0, `hl7.terminology.r4` 7.4.0.
   - It reports **0 errors, 1 warning and 0 information messages**, plus 109 suppressed warnings and 136 suppressed hints. The warning is the outdated Jira spec file, which HL7/JIRA-Spec-Artifacts#1592 updates.
   - A run of commit `a452eb5` with an empty `ignoreWarnings.txt` reports 0 errors, 105 warnings and 128 information messages; §7 uses it to show what the suppressions hide.
 
@@ -54,8 +54,6 @@ Each open item has an id `<section>-<n>`. Ids are stable: fixed or accepted item
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.2-2 | Medium | `rulesSet/rulesSet-lab.fsh:19, 24, 40` | `ReportEncounterRule` and `ReportSubjectRule` still say the DiagnosticReport and the Composition "SHALL have the same" encounter and subject, but `dr-comp-enc` and `dr-comp-subj` are SHOULD / warning now. `ReportTypeRule` still says the codings "SHALL be equal". | Align the texts with the invariants. |
-| 3.2-3 | Low | `profiles/bundle-lab.fsh:112, 118` | The human texts don't say that the check applies only when both resources carry a `reference`. | E.g. "If both have an encounter reference, they SHOULD be the same." |
 | 3.2-4 | Low | `profiles/observation-lab.fsh:95, 100` | "other then" in `eu-lab-1` and `eu-lab-2`. | "other than". |
 | 3.2-5 | Low | `bundle-lab.fsh:111-148`; `observation-lab.fsh:94-102` | The ids follow no common pattern (`one-comp`, `one-dr`, `dr-comp-*`, `eu-lab-n`). `one-dr` says "A laboratory report" where `one-comp` says "A laboratory report bundle". | Harmonise the texts; keep the published ids. |
 
@@ -78,7 +76,6 @@ All eight invariant expressions were checked (context, precedence of `implies`/`
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
 | 3.4-1 | Medium | `terminologies/lab-presenceAbsence.fsh`; `rulesSet/observation-results.fsh:22-26` | `LabPresenceAbsenceEuVs`, a copy of the MyHealth@EU value set `eHDSIPresenceAbsence` 0.1.1, is bound nowhere since FHIR-57048 removed the additional binding that used it (purpose `preferred` in 2.0.0). The resolution assumed that all removed bindings were covered by the basic binding, but 13 of its 38 codes are not: Normal, High, Low, Reactive, Non-Reactive, Inconclusive, Equivocal, Indeterminate, Indeterminate result, Invalid result, Not performed, Rare, Proven. The value set is still published as active / trial-use. The `changes.md` entry and the FSH comment for FHIR-57048 are corrected (commit `894e01e`). | FHIR-59528 proposes to restore the additional binding (alternatives: add the value set to the bound value set, or retire it). If it is not resolved before publication, add a known issue. |
-| 3.4-2 | Medium | `terminologies/lab-testCodes-lab.fsh:8-11` | `LaboratoryResultStandardEuVs` includes `NpuVs` and `LoincVs` but carries only the LOINC copyright. | Add the NPU copyright. |
 | 3.4-3 | Low | `lab-certifiedRefMaterial.fsh:6, 84, 86`; `rulesSet-common.fsh:85-87` | The value set also includes PEI and NIAID codes but has only the NIBSC copyright. `NIBSCCopyrightForVS` sets `experimental = true` as a side effect. | Extend the copyright; set `experimental` in the value set. |
 | 3.4-4 | Low | `lab-species.fsh:7-9`; `lab-certifiedRefMaterial.fsh:7-8` | Two value sets stay FMM 1 / draft in a trial-use release; `knownIssues.md` covers only the CRM canonical URLs. | Confirm it is intended and list both in `knownIssues.md`. |
 | 3.4-5 | Low | `rulesSet/rulesSet-common.fsh:70, 74` | The SNOMED CT text names IHTSDO; the LOINC copyright says "1995-2020". | "SNOMED International"; "1995+". |
@@ -194,7 +191,6 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 6.5-1 | Medium | `changes.md:27-28`; `profiles/bundle-lab.fsh:111-120, 135-138` | Unlisted invariant changes: `dr-comp-enc` and `dr-comp-subj` went from SHALL / error to SHOULD / warning (`0c12bbb`); `dr-comp-identifier` now compares system and value and fires only when the DiagnosticReport has identifiers (attributed to FHIR-57053 in the FSH, but not in `changes.md`). | Add them to the FHIR-57052 and FHIR-57053 entries. |
 | 6.5-2 | Medium | `changes.md:25` (FHIR-57048) | The entry says the removed bindings pointed to value sets the IPS value set already composes; the presence/absence binding pointed to this IG's own `LabPresenceAbsenceEuVs`, which is not among those includes and is now unbound (3.4-1). | Reword the entry and say what happens to `LabPresenceAbsenceEuVs`. |
 | 6.5-3 | Low | `changes.md` *Examples* | The comparator example (FHIR-55966, in `Bundle-SimpleChemistryReport`) is not listed under *Examples*. | List it. |
 | 6.5-4 | Low | `changes.md:22` (FHIR-57051) | "whose context is `Procedure.bodySite`" is incomplete: the contexts are Condition.bodySite, Observation.bodySite, Procedure.bodySite, MedicationAdministration.dose and Dosage.site. | "whose contexts do not include Specimen". |
@@ -206,7 +202,7 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 2.3.4 run of 2026-10-04 15:44, built as `2.1.0` / `active` / `trial-use`, and on a second run of the same commit with an empty `ignoreWarnings.txt`.
+This section is based on the IG Publisher 2.3.4 run of 2026-10-04 16:16, built as `2.1.0` / `active` / `trial-use`, and on a run of commit `a452eb5` with an empty `ignoreWarnings.txt`.
 
 **Visible messages:** 0 errors, 1 warning, 0 information messages. The warning is the outdated Jira spec file; it goes once HL7/JIRA-Spec-Artifacts#1592 is merged.
 
@@ -244,7 +240,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. The remaining Medium FSH items (3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
+1. 3.4-1 (FHIR-59528) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
 2. The Medium example items (5-1 to 5-12), then the suppressions they make obsolete (§7).
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
@@ -270,3 +266,6 @@ The other entries are justified: the unknown code system and identifier system e
 - **[6.2-1]** `design-choice.md` links the DiagnosticReportReference extension in EU Extensions (commit `4004344`).
 - **[3.2-1]** FHIR-57053 resolved to compare system, code and version, so `dr-comp-type` is correct. The FSH comment that named a differing version as a false negative is corrected (commit `ca08b07`).
 - **[2-1]** / **[2-2]** `desc` in `publication-request.json` names the removed attachment section, the required DocumentReference link in `DiagnosticReport.media`, the result required in every component and the new dependency versions. `descmd` is removed, so the history page shows `desc` (commit `a1c113f`).
+- **[3.2-2]** / **[3.2-3]** The comments of `ReportEncounterRule`, `ReportSubjectRule` and `ReportTypeRule` state the rules as `dr-comp-enc`, `dr-comp-subj` (SHOULD) and `dr-comp-type` (system, version and code) check them, and point to the Bundle constraints. The texts of `dr-comp-enc` and `dr-comp-subj` say that they apply only when both resources carry a reference (commit `d8d89da`).
+- **[6.5-1]** `changes.md` lists the lowered severity of `dr-comp-enc` and `dr-comp-subj` (FHIR-57052) and the changed comparison and condition of `dr-comp-identifier` (FHIR-57053) (commit `d8d89da`).
+- **[3.4-2]** `LaboratoryResultStandardEuVs` carries the LOINC and the NPU copyright (commit `35a4c31`).
