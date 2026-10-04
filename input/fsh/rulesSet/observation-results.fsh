@@ -19,9 +19,9 @@ RuleSet: ObservationResultsValueEu
 * valuePeriod ^sliceName = "valuePeriod"
 * valueQuantity only QuantityEuLab
 * valueQuantity ^sliceName = "valueQuantity"
-// The additional bindings have been removed based on the resolution of the Jira issue FHIR-57048:
-// the blood group, presence/absence and microorganism value sets they pointed to are already
-// part of the value set bound above, which is composed of the IPS blood group, presence/absence,
-// microorganism and pathology value sets.
+// The additional bindings have been removed based on the resolution of the Jira issue FHIR-57048.
+// The blood group and microorganism value sets they pointed to are subsets of the value set bound
+// below. The presence/absence value set LabPresenceAbsenceEuVs is not: 13 of its 38 codes are not
+// in the bound value set, and it is no longer bound anywhere.
 * valueCodeableConcept from $results-coded-values-laboratory-pathology-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
