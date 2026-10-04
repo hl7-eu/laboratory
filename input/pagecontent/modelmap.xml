@@ -174,10 +174,10 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSPatient.html" target="_blank">EHDSPatient</a>
                     </td>
                     <td>
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-patient-eu-core.html"><code>PatientEuCore</code></a>
+                        <a href="https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html"><code>PatientEuCore</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdspatient.html">EHDSPatient Mapping</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/map-ehdspatient.html">EHDSPatient Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -185,11 +185,11 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSHealthProfessional.html" target="_blank">EHDSHealthProfessional</a>
                     </td>
                     <td>
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitionerRole-eu-core.html"><code>PractitionerRoleEuCore</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitioner-eu-core.html"><code>PractitionerEuCore</code></a>
+                        <a href="https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html"><code>PractitionerRoleEuCore</code></a>,
+                        <a href="https://hl7.eu/fhir/base/StructureDefinition-practitioner-eu-core.html"><code>PractitionerEuCore</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdshealthprofessional.html">EHDSHealthProfessional Mapping</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/map-ehdshealthprofessional.html">EHDSHealthProfessional Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -197,10 +197,10 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSOrganisation.html" target="_blank">EHDSOrganisation</a>
                     </td>
                     <td>
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-organization-eu-core.html"><code>OrganizationEuCore</code></a>
+                        <a href="https://hl7.eu/fhir/base/StructureDefinition-organization-eu-core.html"><code>OrganizationEuCore</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdsorganisation.html">EHDSOrganisation Mapping</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/map-ehdsorganisation.html">EHDSOrganisation Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -208,10 +208,10 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSCondition.html" target="_blank">EHDSCondition</a>
                     </td>
                     <td>
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-condition-eu-core.html"><code>ConditionEuCore</code></a>
+                        <a href="https://hl7.eu/fhir/base/StructureDefinition-condition-eu-core.html"><code>ConditionEuCore</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdscondition.html">EHDSCondition Mapping</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/map-ehdscondition.html">EHDSCondition Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -222,7 +222,7 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdsobservation.html">EHDSObservation Mapping</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/map-ehdsobservation.html">EHDSObservation Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -230,10 +230,10 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSImmunisation.html" target="_blank">EHDSImmunisation</a>
                     </td>
                     <td>
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-immunization-eu-core.html"><code>ImmunizationEuCore</code></a>
+                        <a href="https://hl7.eu/fhir/base/StructureDefinition-immunization-eu-core.html"><code>ImmunizationEuCore</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="https://build.fhir.org/ig/hl7-eu/base/map-ehdsimmunisation.html">EHDSImmunisation Mapping</a>
+                        <a class="pill" href="https://hl7.eu/fhir/base/map-ehdsimmunisation.html">EHDSImmunisation Mapping</a>
                     </td>
                 </tr>
             </tbody>
