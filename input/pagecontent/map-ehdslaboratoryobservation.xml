@@ -14,11 +14,8 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Yellow row/cells:</strong> In this ballot publication, some row/cells of the
-          mapping table have been left in yellow to indicate areas requiring further review or
-          refinement; including feedback from the Xt-EHR joint action (see note above). These
-          highlights will be addressed in subsequent updates to ensure accuracy and completeness of
-          the mappings. </div>
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+        </div>
       </div>
     </div>
     <h3>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</h3>
@@ -485,14 +482,14 @@
             <td>Certified Reference Material: Identifier</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>accreditationStatus</td>
             <td>Accreditation status of the laboratory for the observation.</td>
-            <td>related-to</td>
-            <td>Organization</td>
-            <td>extension:qualification</td>
-            <td></td>
-            <td>Observation.performer (of type Organization), or Observation.performer.organization if performer is of type PractitionerRole. Organization.qualification is preadopted from R5.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>extension:accredited</td>
+            <td>Whether this laboratory test was/is accredited.</td>
+            <td>Laboratory Accredited extension (boolean), defined in the HL7 Europe Extensions IG.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>previousResults</td>

@@ -12,6 +12,13 @@
         </div>
       </div>
     </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+        </div>
+      </div>
+    </div>
 
     <h3>EHDSSpecimen -> SpecimenEu</h3>
     <a> </a>
@@ -131,11 +138,11 @@
           <tr>
             <td>collection.performer[x]</td>
             <td>Collector person/organization.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Specimen</td>
-            <td>collection.collector</td>
+            <td>collection.collector, collection.collector.extension:collector</td>
             <td>Who collected specimen.</td>
-            <td></td>
+            <td>A health professional is referenced in collection.collector (Practitioner or PractitionerRole). A patient or related person is referenced in the alternate-reference extension on collection.collector. FHIR R4 has no direct target for an organisation; reference a PractitionerRole of that organisation.</td>
           </tr>
           <tr>
             <td>collection.collected[x]</td>
@@ -178,9 +185,9 @@
             <td>Anatomic location of collection.</td>
             <td>equivalent</td>
             <td>Specimen</td>
-            <td>extension:bodySite</td>
-            <td>Collection site/body structure.</td>
-            <td></td>
+            <td>collection.bodySite.extension:bodySite</td>
+            <td>Body structure the specimen was collected from.</td>
+            <td>R5 cross-version extension carrying a reference to a BodyStructure, since collection.bodySite in FHIR R4 is a code only.</td>
           </tr>
           <tr>
             <td>receivedDate</td>

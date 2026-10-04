@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSRelatedPerson -> RelatedPerson (HDR)</title>
+    <title>EHDSRelatedPerson -> RelatedPerson</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <h3>EHDSRelatedPerson -> RelatedPerson (HDR)</h3>
+    <h3>EHDSRelatedPerson -> RelatedPerson</h3>
     <a> </a>
     <p></p>
     <p>
@@ -39,13 +39,13 @@
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSRelatedPerson -> RelatedPerson (HDR)">
-        <caption>EHDSRelatedPerson -> RelatedPerson (HDR)</caption>
+      <table summary="EHDSRelatedPerson -> RelatedPerson">
+        <caption>EHDSRelatedPerson -> RelatedPerson</caption>
         <thead>
           <tr>
             <th colspan="2" class="src-head">EHDSRelatedPerson (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">RelatedPerson (HDR)</th>
+            <th colspan="4" class="tgt-head">RelatedPerson</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>

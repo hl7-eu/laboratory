@@ -12,6 +12,13 @@
         </div>
       </div>
     </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+        </div>
+      </div>
+    </div>
 
     <h3>EHDSMedicationAdministration -> MedicationAdministration</h3>
     <a> </a>

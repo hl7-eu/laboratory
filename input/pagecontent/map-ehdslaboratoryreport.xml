@@ -12,13 +12,19 @@
         </div>
       </div>
     </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+        </div>
+      </div>
+    </div>
 
     <h3>EHDSLaboratoryReport -> Bundle, Composition, DiagnosticReport, ServiceRequest</h3>
     <a> </a>
     <p>
       This page explains how conceptual elements from the EHDSLaboratoryReport logical model are
       expressed in the corresponding FHIR document profiles used by this Implementation Guide.
-      It follows the same mapping style used in the patient summary mapping pages.
     </p>
 
     <div class="table-wrap">
