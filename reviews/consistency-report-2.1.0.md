@@ -228,7 +228,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. 3.4-1 (FHIR-59528), which mostly bring the pages in line with the 2.1.0 changes.
+1. 3.4-1, once FHIR-59528 is decided.
 2. The Medium example items (5-1 to 5-12), then the suppressions they make obsolete (§7).
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
