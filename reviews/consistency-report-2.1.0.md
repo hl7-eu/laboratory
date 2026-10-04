@@ -1,6 +1,6 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `5a71bbe` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies`, which is based on `2.1.0` at `c91e151`. #145 merged the first four commits of that branch into `2.1.0`; #155 brings this report and all later commits. Last updated after commit `5a71bbe` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
