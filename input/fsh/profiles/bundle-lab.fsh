@@ -109,20 +109,22 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 // semantically equal references may differ in display, identifier or reference style.
 
 Invariant: dr-comp-enc
-Description: "DiagnosticReport and Composition SHOULD have the same encounter"
+Description: "If both refer to an encounter, DiagnosticReport and Composition SHOULD have the same encounter"
 /* Expression: "( (entry:composition.resource.encounter.empty() and entry:diagnosticReport.resource.encounter.empty() ) or entry:composition.resource.encounter = entry:diagnosticReport.resource.encounter )" */
 Expression: "(entry.resource.ofType(Composition).encounter.reference.exists() and entry.resource.ofType(DiagnosticReport).encounter.reference.exists()) implies entry.resource.ofType(Composition).encounter.reference = entry.resource.ofType(DiagnosticReport).encounter.reference"
 Severity:    #warning
 
 Invariant: dr-comp-subj
-Description: "DiagnosticReport and Composition SHOULD have the same subject"
+Description: "If both refer to a subject, DiagnosticReport and Composition SHOULD have the same subject"
 Expression: "(entry.resource.ofType(Composition).subject.reference.exists() and entry.resource.ofType(DiagnosticReport).subject.reference.exists()) implies entry.resource.ofType(Composition).subject.reference = entry.resource.ofType(DiagnosticReport).subject.reference"
 Severity:    #warning
 
 
 // Based on the resolution of the Jira issue FHIR-57053 the two invariants below compare the
 // distinguishing properties of the elements instead of the complete Coding and Identifier
-// elements, which failed as soon as display, version, assigner, type, period or use differed.
+// elements, which failed as soon as a display, userSelected, assigner, type, period or use differed.
+// As the resolution asks, dr-comp-type still compares the version, so a version given on one side only
+// is a difference.
 // The dr-comp-category invariant was removed with the same resolution: Composition.category
 // classifies the document, while DiagnosticReport.category refers to the medical discipline
 // of the report, so the two are not required to be the same.

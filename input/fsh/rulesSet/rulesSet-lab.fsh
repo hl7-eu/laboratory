@@ -16,12 +16,15 @@ RuleSet: ReportEncounterRule
   * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
   * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
 
-  DiagnosticReport and Composition SHALL have the same encounter.
-  """
+If both refer to an encounter, DiagnosticReport and Composition SHOULD have the same encounter.
+
+This guidance is checked by the invariant dr-comp-enc, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
 RuleSet: ReportSubjectRule
 * subject
-  * ^comment = "DiagnosticReport and Composition SHALL have the same subject"
+  * ^comment = """If both refer to a subject, DiagnosticReport and Composition SHOULD have the same subject.
+
+This guidance is checked by the invariant dr-comp-subj, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
 
 RuleSet: ReportIdentifierRule
@@ -37,7 +40,9 @@ RuleSet: ReportTypeRule (element)
 * {element}  from LabReportTypesEuVs (preferred) // value set to be revised add alternative value sets
   * ^short = "Type of (Laboratory) Report"
   * ^definition = "Specifies that it refers to a Laboratory Report"
-  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+  * ^comment = """At least one DiagnosticReport.code.coding and Composition.type.coding SHALL have the same system, version and code.
+
+This guidance is enforced by the invariant dr-comp-type, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
 
 RuleSet: ReportCategoryRule

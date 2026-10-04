@@ -65,7 +65,6 @@ Usage: #inline
     * display = "Nuovo Ospedale S.Agostino (MO)"
 
 //* extension[basedOn-order-or-requisition].valueReference = Reference(urn:uuid:1d4cbcd1-e0d3-49b6-92d8-1893da8d08e1)
-* extension[diagnosticReport].valueReference = Reference(urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #cs-CZ
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"

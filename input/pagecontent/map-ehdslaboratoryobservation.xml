@@ -8,17 +8,14 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.</div>
+          <strong>Ongoing alignment:</strong> The mappings are based on the Xt-EHR models 1.0.0. The models may change with the EHDS implementing acts; this guide will follow such changes.</div>
       </div>
     </div>
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Yellow row/cells:</strong> In this ballot publication, some row/cells of the
-          mapping table have been left in yellow to indicate areas requiring further review or
-          refinement; including feedback from the Xt-EHR joint action (see note above). These
-          highlights will be addressed in subsequent updates to ensure accuracy and completeness of
-          the mappings. </div>
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+        </div>
       </div>
     </div>
     <h3>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</h3>
@@ -35,7 +32,7 @@
         <li>
           <strong>Source logical model:</strong>
           <a
-            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html"
+            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSLaboratoryObservation.html"
             target="_blank">
             EHDSLaboratoryObservation
           </a>
@@ -337,7 +334,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>component.code</td>
+            <td>component.type</td>
             <td>Code representing the observation.</td>
             <td>equivalent</td>
             <td>Observation</td>
@@ -469,7 +466,7 @@
           </tr>
           <tr>
             <td>calibrator</td>
-            <td>Calibrator used for the measurement.</td>
+            <td>Reference material or higher-order calibrator used for the measurement.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>extension:certifiedRefMaterialCodeable</td>
@@ -478,21 +475,21 @@
           </tr>
            <tr>
             <td>calibrator</td>
-            <td>Calibrator used for the measurement.</td>
+            <td>Reference material or higher-order calibrator used for the measurement.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>extension:certifiedRefMaterialIdentifier</td>
             <td>Certified Reference Material: Identifier</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>accreditationStatus</td>
             <td>Accreditation status of the laboratory for the observation.</td>
-            <td>related-to</td>
-            <td>Organization</td>
-            <td>extension:qualification</td>
-            <td></td>
-            <td>Observation.performer (of type Organization), or Observation.performer.organization if performer is of type PractitionerRole. Organization.qualification is preadopted from R5.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>extension:accredited</td>
+            <td>Whether this laboratory test was/is accredited.</td>
+            <td>Laboratory Accredited extension (boolean), defined in the HL7 Europe Extensions IG.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>previousResults</td>

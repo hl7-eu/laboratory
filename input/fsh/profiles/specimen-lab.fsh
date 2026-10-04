@@ -57,4 +57,5 @@ Parent: Substance
 Id: Substance-additive-eu-lab
 Title: "Substance: Specimen Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
+* insert SetFmmandStatusRule ( 2, trial-use)
 * code from LabSpecimenAdditiveEu (preferred)

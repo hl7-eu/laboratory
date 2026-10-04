@@ -76,7 +76,6 @@ Usage: #example
 Instance: Inline-Instance-for-IT-CDA2FHIR-17e2cad1-c3e3-4901-adb1-c35a0b82b883-1
 InstanceOf: CompositionLabReportEu
 Usage: #inline
-* extension[diagnosticReport].valueReference = Reference(urn:uuid:b8c9663d-2c2b-4a5a-99ea-17eae127fc60)
 * id = "26032a57-083a-4ddf-b019-e566ae02f740"
 * language = #it-IT
 * identifier.system = "urn:oid:2.16.840.1.113883.2.9.2.120.4.4"

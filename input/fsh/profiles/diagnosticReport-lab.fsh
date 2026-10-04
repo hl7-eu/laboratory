@@ -9,7 +9,7 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 
-// TODO: PW: should be change to 0..1
+// stays 1..1: with the R5 rules for document bundles pre-adopted (FHIR-57335) this link makes the report part of the document
 * extension[DiagnosticReportCompositionR5] 1..1
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
@@ -109,7 +109,7 @@ This guidance is enforced by the invariant dr-comp-identifier, listed in the con
     * display 1..1
       * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the cross-version extension 'link'."
       * ^short = "Text stating use of cross-version extension 'link'"
-    * extension contains $alternate-reference named link 0..1
+    * extension contains $alternate-reference named link 1..1
     * extension[link]
       * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
       * ^short = "DocumentReference containing additional information/attachments"
