@@ -216,7 +216,7 @@ The other entries are justified: the unknown code system and identifier system e
   - #153 missing examples for four profiles: 5-11
   - #154 minor corrections (checklist): 5-14 to 5-17, 5-19, 5-21 to 5-26
 - **[6.4-1]** `background.md` (MyHealth@EU wave 8, the timeline figure, the link to the EHDS proposal) is left unchanged for 2.1.0. A Liquid comment in the page records what has to be updated: MyHealth@EU has adopted this guide, and Regulation (EU) 2025/327 is in force (commit `09fcaa0`).
-- **[3.1-4]** Missing Bundle entry slices for DocumentReference, RelatedPerson, Substance, BiologicallyDerivedProduct, Group and CareTeam: deferred to 2.2.0, because new slices change what the Bundle profile validates. `knownIssues.md` documents the gap (commit `3a36ac3`); a Jira issue for 2.2.0 is to be filed.
+- **[3.1-4]** Missing Bundle entry slices for DocumentReference, RelatedPerson, Substance, BiologicallyDerivedProduct, Group and CareTeam: deferred to 2.2.0, because new slices change what the Bundle profile validates. `knownIssues.md` documents the gap (commit `3a36ac3`); FHIR-59530 proposes the slices for a later version.
 
 ---
 
