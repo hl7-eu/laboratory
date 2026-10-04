@@ -1,11 +1,11 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `cf1c073` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `3a36ac3` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
-  - The IG Publisher 2.3.4 run of 2026-10-04 15:15 (commit `cf1c073`) built `hl7.fhir.eu.laboratory#2.1.0`, status `active`, release label `trial-use`. Resolved dependencies: `hl7.fhir.eu.base` 2.0.1, `hl7.fhir.eu.extensions.r4` 1.3.1, `hl7.fhir.uv.ips` 2.0.1 (fetched from packages2.fhir.org, see *Fixed since the first review*), `hl7.fhir.uv.xver-r5.r4` 0.1.0, `hl7.fhir.uv.extensions.r4` 5.3.0, `hl7.terminology.r4` 7.4.0.
-  - It reports **0 errors, 1 warning and 0 information messages**, plus 104 suppressed warnings and 128 suppressed hints. The warning is the outdated Jira spec file, which HL7/JIRA-Spec-Artifacts#1592 updates.
+  - The IG Publisher 2.3.4 run of 2026-10-04 15:44 (commit `3a36ac3`) built `hl7.fhir.eu.laboratory#2.1.0`, status `active`, release label `trial-use`. Resolved dependencies: `hl7.fhir.eu.base` 2.0.1, `hl7.fhir.eu.extensions.r4` 1.3.1, `hl7.fhir.uv.ips` 2.0.1 (fetched from packages2.fhir.org, see *Fixed since the first review*), `hl7.fhir.uv.xver-r5.r4` 0.1.0, `hl7.fhir.uv.extensions.r4` 5.3.0, `hl7.terminology.r4` 7.4.0.
+  - It reports **0 errors, 1 warning and 0 information messages**, plus 109 suppressed warnings and 136 suppressed hints. The warning is the outdated Jira spec file, which HL7/JIRA-Spec-Artifacts#1592 updates.
   - A run of commit `a452eb5` with an empty `ignoreWarnings.txt` reports 0 errors, 105 warnings and 128 information messages; §7 uses it to show what the suppressions hide.
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 2.1.0. **Low** means cleanup or editorial.
@@ -44,17 +44,13 @@ Each open item has an id `<section>-<n>`. Ids are stable: fixed or accepted item
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.1-1 | Medium | `profiles/composition-lab.fsh:15-18`; `profiles/diagnosticReport-lab.fsh:12-13` | `extension[diagnosticReport]` on the Composition stays `0..1` (inherited from `CompositionEuCore`) and is not narrowed to `DiagnosticReportLabEu`, although the comment says it exists so the report is reachable under the R4 document rules. The reverse link `DiagnosticReport.extension[DiagnosticReportCompositionR5]` is `1..1`, under `// TODO: PW: should be change to 0..1`. | Decide on both directions, make the Composition link `1..1` with `only Reference(DiagnosticReportLabEu)`, and remove the TODO. |
-| 3.1-2 | Medium | `profiles/diagnosticReport-lab.fsh:103-116` | `media.link.reference`, `.type` and `.identifier` are `0..0` and `display` is `1..1`, but `extension[link]` (the DocumentReference) is `0..1`. A media entry can carry only a display text and no link. | Make `extension[link]` `1..1`. |
-| 3.1-3 | Medium | `profiles/quantity-lab.fsh:27-28, 46-47` | `RatioEuLab` and `RangeEuLab` put `iso21090-uncertainty` and `-uncertaintyType` on the Ratio/Range root. Both extensions have context `Quantity` only, so an instance using them fails validation (the same kind of defect as FHIR-57051). | Move them to `numerator`/`denominator` and `low`/`high`, or drop them. |
-| 3.1-4 | Medium | `profiles/bundle-lab.fsh:42-100` | Types the report can reference have no entry slice: `DocumentReference` (the `DiagnosticReport.media` link that replaces the attachment section), `RelatedPerson` (`AnimalSpecimenEuLab`, Specimen collector and focus), `Substance` (`Specimen.subject`, `SpecimenAdditiveSubstance`, `Observation.focus`), `Group`, `CareTeam` and `BiologicallyDerivedProduct`. Valid, as the slicing is open, but those entries are not checked against the lab profiles. | Add at least `documentReference`, `relatedPerson` and `substance` slices, or document the gap. |
 | 3.1-5 | Low | `profiles/bundle-lab.fsh:60-61` | `entry[organization]` uses plain `Organization`, while every Organization target in Composition, DiagnosticReport and Observation is `OrganizationEuCore`. | Use `OrganizationEuCore`. |
 | 3.1-6 | Low | `profiles/diagnosticReport-lab.fsh:79`; `serviceRequest-lab.fsh:22`; `specimen-lab.fsh:14, 19` | Plain types where EU Core or lab profiles exist: plain `Location` among the subject targets, plain `ServiceRequest` for `Specimen.request`, plain Practitioner/Organization for `ServiceRequest.requester`/`performer` and `Specimen.collection.collector`. | Use the EU Core or lab profiles. |
 | 3.1-7 | Low | `profiles/device-measuring.fsh`, `device-specimen.fsh`, `patient-animal.fsh`; `observation-lab.fsh:78`; `specimen-lab.fsh:14` | Nothing references `DeviceMeasuringLabReportEu` or `DeviceSpecimenLabReportEu`: `Observation.device` and `Specimen.subject` use plain `Device`. Since FHIR-57547 nothing references `PatientAnimalEu` either. | Reference them, or say on their pages that they are standalone. |
 | 3.1-8 | Low | `profiles/specimen-lab.fsh:46` | In `Reference(Substance or SpecimenAdditiveSubstance)`, `Substance` makes the profile pointless. | Keep one of the two. |
-| 3.1-9 | Low | `profiles/quantity-lab.fsh:32, 36, 51, 55` vs `:12` | Ratio and Range require `code 1..1`, while `QuantityEuLab` says code and system are not mandatory. | Align them. |
+| 3.1-9 | Low | `profiles/quantity-lab.fsh:32, 36, 51, 55` vs `:12` | Ratio and Range require `code 1..1`, while `QuantityEuLab` says code and system are not mandatory. | Align them (see FHIR-53529). |
 | 3.1-10 | Low | `bundle-lab.fsh:14-15, 140-148`; `composition-lab.fsh:51, 66, 82`; `serviceRequest-lab.fsh:17`; `observation-lab.fsh:44` | Constraints that repeat what already applies: `one-comp`/`one-dr` repeat the `1..1` type-discriminated slices; `title 1..`, `SectionCommonRules` and `section[annotations].text 1..` repeat `CompositionEuCore`; `ServiceRequest.subject 1..` and `Observation.category 1..*` repeat the parents. | Remove them, or keep the invariants only for their clearer message. |
-| 3.1-11 | Low | `observation-lab.fsh:46`; `composition-lab.fsh:56` | `Observation.category` and `Composition.section` slice with the deprecated `#pattern` discriminator (suppressed, see 7-6), while DiagnosticReport and Composition `category` use `#value`. | Use `#value` throughout. |
+| 3.1-11 | Low | `observation-lab.fsh:46`; `composition-lab.fsh:56` | `Observation.category` and `Composition.section` slice with the deprecated `#pattern` discriminator (suppressed, see 7-6), while DiagnosticReport and Composition `category` use `#value`. | Use `#value` throughout (see FHIR-58150). |
 
 ### 3.2 Invariants
 
@@ -72,7 +68,7 @@ All eight invariant expressions were checked (context, precedence of `implies`/`
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.3-1 | Low | `extensions-lab.fsh:37`; `rulesSet-lab.fsh:4-9`; `diagnosticReport-lab.fsh:93` | Open TODOs from the May list: the R6 backport for `SpecimenFocus`, the commented-out `ReportStatusRule` with its ConceptMap note, "docref instead of media". (The TODO on `DiagnosticReportCompositionR5` is 3.1-1.) | Resolve them, or move them to Jira and delete them. |
+| 3.3-1 | Low | `extensions-lab.fsh:37`; `rulesSet-lab.fsh:4-9`; `diagnosticReport-lab.fsh:93` | Open TODOs from the May list: the R6 backport for `SpecimenFocus`, the commented-out `ReportStatusRule` with its ConceptMap note, "docref instead of media". (The TODO on `DiagnosticReportCompositionR5` was resolved with 3.1-1.) | Resolve them, or move them to Jira and delete them. |
 | 3.3-2 | Low | `composition-lab.fsh:23-25, 37, 72`; `serviceRequest-lab.fsh:30`; `rulesSet-lab.fsh:37`; `diagnosticReport-lab.fsh:61, 63` | Review notes in the source: "HK: …", "RH - should attester be 1.. or 0..?", "check if ..1 or ..*", "add invariant ?", "value set to be revised…", "add binding". | Delete them or move them to Jira. |
 | 3.3-3 | Low | `diagnosticReport-lab.fsh:6-7, 26-40, 44, 46-49, 62-71, 84, 86`; `composition-lab.fsh:22, 26, 35`; `rulesSet-lab.fsh:13, 28, 36, 44`; `observation-lab.fsh:77`; `observation-results.fsh:5, 8-10`; `rulesSet-common.fsh:19, 60-61, 81-83`; `animal-specimen.fsh:8-9, 26-29`; `bundle-lab.fsh:113`; `device-*.fsh:7-8`; `quantity-lab.fsh:23`; value set files | Commented-out rules and blocks, including `obeys labRpt-*` for invariants that no longer exist and the old `dr-comp-enc` expression. `composition-lab.fsh:11-13`, which explains FHIR-51567, can stay. | Remove them. |
 | 3.3-4 | Low | `rulesSet/rulesSet-common.fsh:12-63, 93-95, 103-108` | Unused rulesets: `SetFmmandStatusRuleInstance`, `SectionComRules`, `SectionEntrySliceComRules`, `SectionEntrySliceDefRules`, `NoSubSectionsRules`, `SectionElementsRules`, `ObligationElement`, `SliceElementWithDescription`. | Remove them. |
@@ -166,7 +162,6 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 6.2-1 | Medium | `design-choice.md:62` | `[DiagnosticReportReference]` has no target in `fsh-link-references.md`, because the extension is defined in EU Extensions; the published 2.0.0 page shows the literal text. | Link `https://hl7.eu/fhir/extensions/StructureDefinition-composition-diagnosticReportReference.html`. |
 | 6.2-2 | Low | `modelmap.xml:109,120,131,142,222`; `map-ehdsmedicationadministration.xml:35`, `map-ehdsdevice.xml:43`, `map-ehdsrelatedperson.xml:35`, `map-ehdsattachment.xml:43` | Links to `https://hl7.org/fhir/<type>.html`, the current R5 spec, from an R4 IG. | Use `https://hl7.org/fhir/R4/…`. |
 
 
@@ -214,13 +209,13 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 2.3.4 run of 2026-10-04 15:15, built as `2.1.0` / `active` / `trial-use`, and on a second run of the same commit with an empty `ignoreWarnings.txt`.
+This section is based on the IG Publisher 2.3.4 run of 2026-10-04 15:44, built as `2.1.0` / `active` / `trial-use`, and on a second run of the same commit with an empty `ignoreWarnings.txt`.
 
 **Visible messages:** 0 errors, 1 warning, 0 information messages. The warning is the outdated Jira spec file; it goes once HL7/JIRA-Spec-Artifacts#1592 is merged.
 
 **Publication request check:** no issues reported (version 2.1.0, milestone, trial-use, STU 2). The content of `desc` is 2-1.
 
-**Suppressed messages:** 104 warnings and 128 hints. Every entry matches at least once.
+**Suppressed messages:** 109 warnings and 136 hints. Every entry matches at least once. Compared with commit `cf1c073`, the R5 document bundle entry matches five more DiagnosticReports, which are no longer referenced from their Composition (3.1-1), and the pinned-version entry matches eight more canonicals, from the uncertainty extensions on the quantities of Ratio and Range (3.1-3).
 
 **Suppressions that hide fixable issues or carry a wrong justification:**
 
@@ -228,7 +223,7 @@ This section is based on the IG Publisher 2.3.4 run of 2026-10-04 15:15, built a
 |---|---|---|---|
 | 7-2 | 6-7, 25-26 | "…no examples for this data type profile" (1) and "…no examples for this profile" (3). The comments name `HumanName-obl-eu-lab` and "an Obligation profile", but the IG has neither. They hide the missing examples for `Range-eu-lab`, `Device-measuring-eu-lab`, `Device-specimen-eu-lab` and `Substance-additive-eu-lab` (5-11). | Add the examples and delete the entries, or correct the comments. |
 | 7-3 | 62-67 | Non-matching slices on `Address-eu` (11), `Composition-eu-lab` (9) and `DiagnosticReport-eu-lab` (10). The heading on l.62 has no entries, so all three carry the reason of l.64, "Bundle examples containing additional address extensions", which fits only `Address-eu`. Fixable causes: the censusTract extension (5-14), the `official` attesters (5-15) and the display-only performers (5-16). Expected causes, to be named in the comments: top-level sections against the single `annotations` slice, and `effectiveDateTime` against EU Core's single `effectivePeriod` slice. | Fix the examples, drop the `Address-eu` entry, and give the remaining entries their own justification. |
-| 7-4 | 11, 23, 35, 73, 75, 76, 80, 83 | Single-use entries that hide example defects: v3 specimen type and 'Specimen Types' binding (IT-CDA2FHIR), 'Laboratory Code' (Hepatitis panel), 'Laboratory Order' (POC ServiceRequest), "isn't reachable" (POC ServiceRequest, see 5-7; the comment "pre-adoption of R5 rules" doesn't match the cause), `cs-CZ` not in Common Languages (SimpleChemistry, use `cs`), `http://hospital.org/lis-order` (5-19). | Fix the examples (5-7, 5-17, 5-19, 5-20) and delete the entries. |
+| 7-4 | 11, 23, 35, 73, 75, 76, 80, 83 | Single-use entries that hide example defects: v3 specimen type and 'Specimen Types' binding (IT-CDA2FHIR), 'Laboratory Code' (Hepatitis panel), 'Laboratory Order' (POC ServiceRequest), "isn't reachable" for the POC ServiceRequest (see 5-7; the entry is justified for the five DiagnosticReports it also covers), `cs-CZ` not in Common Languages (SimpleChemistry, use `cs`), `http://hospital.org/lis-order` (5-19). | Fix the examples (5-7, 5-17, 5-19, 5-20) and delete the entries. |
 | 7-5 | 62, 70 | Two headings without entries: their text is replaced by the next heading, so they never show as a reason. | Remove them. |
 
 The other entries are justified: the unknown code system and identifier system entries cover real national and external systems and the deliberately local hepatitis codes, the `it-IT`/`cs-CZ` display hints are expected for non-English documents, the cross-version "multiple matching profiles" entries and the deprecated-`pattern` entry (3.1-11) are tooling or R5-compatibility notes, and the 'Cow'/'Turkey' displays are chosen on purpose.
@@ -252,7 +247,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. `publication-request.json` (2-1, 2-2), the Medium FSH items (3.1-1 to 3.1-4, 3.2-1, 3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.2–6.5), which mostly bring the pages in line with the 2.1.0 changes.
+1. `publication-request.json` (2-1, 2-2), the remaining Medium FSH items (3.2-1, 3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
 2. The Medium example items (5-1 to 5-12), then the suppressions they make obsolete (§7).
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
@@ -262,7 +257,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## Won't fix (accepted)
 
-None yet.
+- **[3.1-4]** Missing Bundle entry slices for DocumentReference, RelatedPerson, Substance, BiologicallyDerivedProduct, Group and CareTeam: deferred to 2.2.0, because new slices change what the Bundle profile validates. `knownIssues.md` documents the gap (commit `3a36ac3`); a Jira issue for 2.2.0 is to be filed.
 
 ---
 
@@ -272,3 +267,7 @@ None yet.
 - **[1-3]** `QuantityEuLab`, `RatioEuLab`, `RangeEuLab` and `SpecimenAdditiveSubstance` insert `SetFmmandStatusRule (2, trial-use)`; `changes.md` lists it under *Technical corrections* (commit `a45bd05`).
 - **[1-4]** / **[7-1]** IPS 2.0.1: packages.fhir.org serves a faulty copy of the package (location `file:///web/publishing/work/task-89/draft/output`), packages2.fhir.org and hl7.org the correct one. Built with the correct package, the guide has no `file://` links. The suppression added in `a452eb5` is removed again, so a build with the faulty copy shows the problem in the QA (commit `fd8586f`). The publication build has to use the package from packages2.fhir.org or hl7.org.
 - **[1-5]** `logicalmodels.md` links the published Xt-EHR models at `https://www.xt-ehr.eu/fhir/models/`; no CI build of the models exists any more (commit `cf1c073`).
+- **[3.1-1]** FHIR-57335: the Composition profile no longer constrains the `diagnosticReport` extension inherited from Composition (EU core); the examples no longer carry it. `DiagnosticReport.extension:DiagnosticReportCompositionR5` stays `1..1`, and its TODO is replaced by a reference to FHIR-57335. `changes.md` lists it under *Technical corrections* (commit `4004344`).
+- **[3.1-2]** FHIR-55560: `DiagnosticReport.media.link.extension:link` is `1..1`; `changes.md` lists it under *Profiles and constraints*, because media entries without a DocumentReference now fail (commit `5463fb1`).
+- **[3.1-3]** The uncertainty extensions of `RatioEuLab` and `RangeEuLab` are on `numerator`/`denominator` and `low`/`high`, as intended in hl7-eu/laboratory#54; `changes.md` lists it under *Technical corrections* (commit `c8140cf`).
+- **[6.2-1]** `design-choice.md` links the DiagnosticReportReference extension in EU Extensions (commit `4004344`).
