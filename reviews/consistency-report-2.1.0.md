@@ -1,6 +1,6 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `894e01e`; the IG Publisher run noted below is of commit `3a36ac3`, and the later commits change only comments and page text. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `a1c113f`; the IG Publisher run noted below is of commit `3a36ac3`, and the later commits change only comments and page text. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
@@ -28,8 +28,6 @@ Each open item has an id `<section>-<n>`. Ids are stable: fixed or accepted item
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 2-1 | Medium | `publication-request.json:5` | `desc` leaves out the removal of `Composition.section:attachment` (FHIR-57444), the change implementers most need to know about. It also leaves out the relaxed `Specimen.type` (FHIR-57895), the container device `1..1` (FHIR-58773), the open `value[x]` slicing and the removed bindings (FHIR-57047/57048), the tightened `eu-lab-2` (1-2) and the restored IPS dependency. | Add at least the attachment removal, the `eu-lab-2` change and the IPS dependency. |
-| 2-2 | Medium | `publication-request.json:6` | `descmd` is a single sentence without a closing period. Where both are present, the history page shows `descmd` rather than `desc`, so the summary in `desc` is not shown there. | Make `descmd` the Markdown form of `desc`, or drop it. |
 | 2-3 | Low | `sushi-config.yaml:131-134` | The `special-url` entries `information-recipient`, `composition-basedOn-order-or-requisition` and `http://example.org/lab-codes` are not defined by this IG and are not used. They date from the XpanDH import (`48bc9b6`); the basedOn extension was removed for FHIR-51567. | Remove `special-url`. |
 | 2-4 | Low | `sushi-config.yaml:1, 12, 35-38, 57-60, 115-120, 140-173, 265-318, 443-458, 478-490` | Commented-out leftovers: the old id, the mCODE dependency template, the semantic-notes, overview and recommendations pages, unused parameters (l.159 "todo: remove and see4"), the ConceptMaps removed in 2.0.0, and the obligation resources and group. `license` (l.12) is commented out; SUSHI's CC0-1.0 default still applies. | Delete the leftovers and set `license: CC0-1.0` explicitly. |
 | 2-5 | Low | `sushi-config.yaml` pages (l.53-111) vs menu (l.183-210) | Menu labels and page titles differ: "Known/Open Issues" / "Known Issues", "Download" / "Downloads", "Managing statuses" / "Managing Laboratory Report statuses", "Scenarios" / "Laboratory Report scenarios", "Design Choices" / "Design choices", "Authors and Contributors" / "Authors and contributors", "Expansion parameters" / "Expansion Parameters". | Align them. |
@@ -212,7 +210,7 @@ This section is based on the IG Publisher 2.3.4 run of 2026-10-04 15:44, built a
 
 **Visible messages:** 0 errors, 1 warning, 0 information messages. The warning is the outdated Jira spec file; it goes once HL7/JIRA-Spec-Artifacts#1592 is merged.
 
-**Publication request check:** no issues reported (version 2.1.0, milestone, trial-use, STU 2). The content of `desc` is 2-1.
+**Publication request check:** no issues reported (version 2.1.0, milestone, trial-use, STU 2).
 
 **Suppressed messages:** 109 warnings and 136 hints. Every entry matches at least once. Compared with commit `cf1c073`, the R5 document bundle entry matches five more DiagnosticReports, which are no longer referenced from their Composition (3.1-1), and the pinned-version entry matches eight more canonicals, from the uncertainty extensions on the quantities of Ratio and Range (3.1-3).
 
@@ -246,7 +244,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. `publication-request.json` (2-1, 2-2), the remaining Medium FSH items (3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
+1. The remaining Medium FSH items (3.2-2, 3.4-1, 3.4-2) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
 2. The Medium example items (5-1 to 5-12), then the suppressions they make obsolete (§7).
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
@@ -271,3 +269,4 @@ The other entries are justified: the unknown code system and identifier system e
 - **[3.1-3]** The uncertainty extensions of `RatioEuLab` and `RangeEuLab` are on `numerator`/`denominator` and `low`/`high`, as intended in hl7-eu/laboratory#54; `changes.md` lists it under *Technical corrections* (commit `c8140cf`).
 - **[6.2-1]** `design-choice.md` links the DiagnosticReportReference extension in EU Extensions (commit `4004344`).
 - **[3.2-1]** FHIR-57053 resolved to compare system, code and version, so `dr-comp-type` is correct. The FSH comment that named a differing version as a false negative is corrected (commit `ca08b07`).
+- **[2-1]** / **[2-2]** `desc` in `publication-request.json` names the removed attachment section, the required DocumentReference link in `DiagnosticReport.media`, the result required in every component and the new dependency versions. `descmd` is removed, so the history page shows `desc` (commit `a1c113f`).
