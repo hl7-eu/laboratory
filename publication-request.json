@@ -2,7 +2,7 @@
   "package-id" : "hl7.fhir.eu.laboratory",
   "version" : "2.1.0",
   "path" : "http://hl7.eu/fhir/laboratory/2.1.0",
-  "desc" : "This publication is an STU update (version 2.1.0) of the STU release 2.0.0. The attachment section of the Composition is removed. Additional data is conveyed through DiagnosticReport.media, which now has to link a DocumentReference. Every component of a result now has to carry a value or a data absent reason. The update adds a status reason to the result and the report, comparators for exclusive reference range bounds, and further reference targets for Observation.focus, the specimen focus and the specimen collector. It corrects the specimen collection body site extension, the uncertainty extensions of Ratio and Range, the subject target types, and the invariants on result values and on the report. The Laboratory Accredited extension moves to the HL7 Europe Extensions IG with its canonical unchanged. The guide now depends on HL7 Europe Base 2.0.1, HL7 Europe Extensions 1.3.1 and IPS 2.0.1.",
+  "desc" : "This publication is an STU update (version 2.1.0) of the STU release 2.0.0. It removes the attachment section of the Composition, adds a status reason, reference range comparators and further reference targets, corrects several profiles and invariants, aligns the model mappings with version 1.0.0 of the Xt-EHR EHDS logical models, and updates the dependencies to HL7 Europe Base 2.0.1 and Extensions 1.3.1. Some of these changes make instances that were valid under 2.0.0 invalid; the change log marks them.",
   "status" : "trial-use",
   "sequence" : "STU 2",
   "mode": "milestone",
