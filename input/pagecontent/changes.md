@@ -8,7 +8,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
 * Profiles and constraints
   * FHIR-57444: Removed the `Composition.section:attachment` slice, following the resolution of FHIR-53138. Additional data such as images or diagrams is conveyed through `DiagnosticReport.media`, whose definition and short description were clarified.
   * FHIR-57208: Added an optional `statusReason` extension to `ObservationResultsLaboratoryEu` and `DiagnosticReportLabEu`, together with a note on `status` that the statuses amended, corrected, cancelled and entered-in-error, and for the report also appended, should be accompanied by the reason for that status.
-  * FHIR-55966: Added the optional `lowComparator` and `highComparator` modifier extensions on `Observation.referenceRange`, pre-adopting the R6 solution for exclusive or explicitly inclusive bounds.
+  * FHIR-55966: Added the optional `lowComparator` and `highComparator` modifier extensions on `Observation.referenceRange`, with the value sets `ReferenceRangeLowComparator` and `ReferenceRangeHighComparator`, pre-adopting the R6 solution for exclusive or explicitly inclusive bounds.
   * FHIR-57055: Added `Substance` and `BiologicallyDerivedProduct` to the reference targets of `Observation.focus`, now that the EU core profile allows them.
   * FHIR-57050: Added `Patient` and `BiologicallyDerivedProduct` to the reference targets of the `SpecimenFocus` extension. The Specimen profile no longer narrows those targets a second time.
   * FHIR-57901: Allowed a patient or a related person as the specimen collector, through the `alternate-reference` extension on `Specimen.collection.collector`.
@@ -52,6 +52,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
 * Dependencies
   * Updated `hl7.fhir.eu.base` from 2.0.0 to 2.0.1 and `hl7.fhir.eu.extensions.r4` from 1.3.0 to 1.3.1. Base 2.0.1 provides the `Observation.focus` targets added for FHIR-57055, and Extensions 1.3.1 defines the Laboratory Accredited extension moved for FHIR-57043.
   * Restored the dependency on `hl7.fhir.uv.ips` 2.0.1. Version 2.0.0 was published without it, neither directly nor through another dependency, although its result profile binds to an IPS value set and `LabOrderCodesEuVs` is built on another, so a validator working from the 2.0.0 package could not resolve them.
+  * Through Base 2.0.1, `Observation.component` uses the R5 cross-version extension `extension-Observation.component.value` instead of `extension-Observation.value`, together with the `obs-value-2` constraint, which forbids using both `component.value[x]` and that extension. `DiagnosticReport.performer` is sliced by `resolve()`. The snapshot of the 2.0.0 package restricted `Observation.subject` to the patient and `Observation.performer` to practitioners and organizations, although this guide does not constrain them; 2.1.0 has the targets of the EU core result profile, which add Device, Group and Location as subject and Patient and RelatedPerson as performer.
 
 ### From 0.1.1 to 2.0.0
 
