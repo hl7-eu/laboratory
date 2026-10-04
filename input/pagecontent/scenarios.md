@@ -52,7 +52,7 @@ In this case:
 
 In such case:
 * the status value should be updated to “cancelled” and 
-* the specific details given - preferably as coded values - in the statusReason extension of the DiagnosticReport (`DiagnosticReport.extension:statusReason`).
+* the reason SHOULD be given - preferably as coded values - in the statusReason extension of the DiagnosticReport (`DiagnosticReport.extension:statusReason`).
 * Additional information may be provided in the result comment element as well.
 
 
@@ -63,4 +63,4 @@ In such case:
 
 In this case:
 * the laboratory report status should be set to “entered-in-error”.
-* the reason SHOULD be given in the statusReason extension of the DiagnosticReport.
+* the reason SHOULD be given in the statusReason extension of the DiagnosticReport and of each result.
