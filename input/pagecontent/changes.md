@@ -41,6 +41,10 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
   * FHIR-57208: Added `obs-status-reason-example`, a cancelled result carrying the reason for that status.
   * FHIR-57208 / FHIR-57444: Added `dr-status-reason-media-example`, a corrected report carrying the reason for that status and the additional data in `DiagnosticReport.media`, together with the result it is issued for.
 
+* Dependencies
+  * Updated `hl7.fhir.eu.base` from 2.0.0 to 2.0.1 and `hl7.fhir.eu.extensions.r4` from 1.3.0 to 1.3.1. Base 2.0.1 provides the `Observation.focus` targets added for FHIR-57055, and Extensions 1.3.1 defines the Laboratory Accredited extension moved for FHIR-57043.
+  * Restored the dependency on `hl7.fhir.uv.ips` 2.0.1. Version 2.0.0 was published without it, neither directly nor through another dependency, although its result profile binds to an IPS value set and `LabOrderCodesEuVs` is built on another, so a validator working from the 2.0.0 package could not resolve them.
+
 ### From 0.1.1 to 2.0.0
 
 #### 🔧 Model Alignment and Refactoring

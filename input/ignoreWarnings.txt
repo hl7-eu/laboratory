@@ -7,13 +7,14 @@
 The Implementation Guide contains no examples for this data type profile
 
 # == Unknown CodeSystems ==
-A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' could not be found, so the code cannot be validated
+A definition for the code system 'urn:oid:2.16.840.1.113883.2.9.2.30.6.11' could not be found, so this coding was not checked%
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.5.129' could not be found, so the code cannot be validated
 A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.9.5.1.88' could not be found, so the code cannot be validated
-A definition for CodeSystem 'urn:oid:1.2.203.24341.11.2.2' could not be found, so the code cannot be validated
+A definition for the code system 'urn:oid:1.2.203.24341.11.2.2' could not be found, so this coding was not checked%
 A definition for CodeSystem 'http://example.org/fhir/CodeSystem/LabCodes' could not be found, so the code cannot be validated
+A definition for the code system 'http://example.org/fhir/CodeSystem/LabCodes' could not be found, so this coding was not checked%
 A definition for CodeSystem 'http://nibsc.org' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://npu-terminology.org' could not be found, so the code cannot be validated
+A definition for the code system 'http://npu-terminology.org' could not be found, so this coding was not checked%
 The concepts in the value set include have not been validated because the code system 'http://nibsc.org' is not known, and no terminology service supports it
 A definition for CodeSystem 'http://pei.de' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://niaid.nih.gov' could not be found, so the code cannot be validated
@@ -26,6 +27,7 @@ The Implementation Guide contains no examples for this profile
 
 # Multiple matching profiles, caused by the cross-version dependency
  %among choices: http://hl7.org/fhir/5.0/StructureDefinition/profile-Composition|0.1.0%
+%among choices: http://hl7.org/fhir/5.0/StructureDefinition/profile-Device|0.1.0%
 
 # == Unknown Identifier Systems
 No definition could be found for URL value 'urn:oid:%
@@ -42,15 +44,16 @@ Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://ni
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
 # type is uri, warning is wrong
-If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
+%The parameter 'system-version' has the same name as a parameter for at least one operation in the core specification%
 
 # == deprecated inherited artifacts ==
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
 
 
-# == Could have an OID assigned for ActorDefinitions ==
+# == No OIDs are assigned to the guide's artefacts ==
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+%should have an OID assigned to cater for possible use with OID based terminology systems%
 
 # == Filter pinning information for upstream HL7 canonicals, matched without versions; pinning of hl7.eu artefacts stays visible ==
 %Pinned the version of http://hl7.org/fhir/%
@@ -69,7 +72,6 @@ Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5
 # == Filter binding expected binding information ==
 %None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab%
 %None of the codings provided are in the value set 'Results Coded Values Laboratory/Pathology - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips%
-%None of the codings provided are in the value set 'Laboratory Presence and Absence Findings' (http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu-lab%
 %None of the codings provided are in the value set 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab%
 %None of the codings provided are in the value set 'Specimen Types' (http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab%
 
@@ -87,11 +89,11 @@ The value set expansion is too large, and only a subset has been displayed
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Blood banking and transfusion medicine (specialty), General pathology (specialty)] and examples for no FSN: [Chemical pathology, Hematopathology, Immunopathology, Clinical microbiology, Genetic pathology])
 This SNOMED-CT based include has some concepts with semantic tags (FSN terms) and some without (preferred terms) - check that this is what is intended (examples for FSN: [Evacuated urine specimen container, boric acid (H3BO3)] and examples for no FSN: [Cervical cytology microscopy slide, Cytology specimen container, Evacuated blood collection tube, Evacuated blood collection tube , K3EDTA/sodium fluoride, Evacuated blood collection tube with citrate and theophylline and adenosine and dipyramidole])
 # == Alternative display valuese were chosen to give better context/understanding ==
-Wrong Display Name 'Cow' for http://snomed.info/sct#34618005. Valid display is one of 4 choices: 'Bos taurus' (en), 'Aurochs' (en), 'Bos taurus (organism)' (en) or 'Bos taurus taurus' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
-Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008. Valid display is one of 5 choices: 'Subfamily Meleagridinae (organism)' (en), 'Meleagridinae' (en), 'Turkeys' (en), 'Subfamily Meleagridinae' (en) or 'Meleagridinae - turkeys' (en) (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+Wrong Display Name 'Cow' for http://snomed.info/sct#34618005.%
+Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008.%
 
 # Duplicated anchors added by the template
 The html source has duplicate anchor Ids: 1
 
-# == Base uses the wrong valueR5 extension on component, filtering the warning for the example, to be removed after base is fixed
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab%
+# The published IPS 2.0.1 package declares a file:// path as its location (an error in that package), so links to its value sets use that path
+%Hyperlink scheme 'file' in 'file:///web/publishing/work/task-89/draft/output/%
