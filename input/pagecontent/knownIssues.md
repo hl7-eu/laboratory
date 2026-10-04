@@ -1,14 +1,3 @@
-### Change requests not applied
-
-* [SpecimenFeatureTypeR5 resolves to FHIR R4](https://jira.hl7.org/browse/FHIR-43200)
-* [DiagnosticReportCompositionR5 resolves to FHIR R4](https://jira.hl7.org/browse/FHIR-43199)
-
-
-Both items refer to preadopted R5 elements: the link points to an non-exiting element in R4 FHIR specifications.
-
-Future version of the FHIR IG Publisher tool should fix this issue.
-
-
 ### Bundle entries without a slice
 
 The [Bundle profile](StructureDefinition-Bundle-eu-lab.html) defines entry slices for the main resources of a report, but none for some resource types that the profiles of this guide reference: DocumentReference (`DiagnosticReport.media`), RelatedPerson (specimen collector and specimen source), Substance (specimen source, specimen additive and result focus), BiologicallyDerivedProduct (specimen source and result focus), Group and CareTeam. The slicing is open, so these resources can be included in the document, but the Bundle profile does not check them against a profile. Slices for them are planned for a later version.
