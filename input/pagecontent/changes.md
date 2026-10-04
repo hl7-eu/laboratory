@@ -31,6 +31,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
   * FHIR-57053: Changed `dr-comp-type` to compare system, version and code rather than the whole coding. Changed `dr-comp-identifier` to compare system and value rather than the whole identifier. It now applies only when the DiagnosticReport has an identifier; before, it also failed when only the Composition had one. Removed `dr-comp-category` together with its `obeys` rule: the two categories need not be the same, one classifies the document and the other the medical discipline of the report.
 
 * Terminology
+  * Added the NPU copyright to `LaboratoryResultStandardEuVs`, which includes NPU codes but carried only the LOINC copyright.
   * FHIR-57058: Reworked the description of `LabStudyTypesEuVs`. Markdown collapses single line breaks, so the notes were rendered as a single paragraph, and their labels had no space after the colon.
 
 * Guidance
