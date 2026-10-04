@@ -17,7 +17,7 @@ Below is a simplified representation of a laboratory report. The data set compri
 ### EHDS Logical Data Models
 
 The EHDS logical models currently supported in this version of the guide are listed below.
-For the most recent and in-progress versions, please refer to the [**Xt-EHR EHDS Logical Information Models**](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common) Implementation Guide.
+For the published versions, please refer to the [**Xt-EHR EHDS Logical Information Models**](https://www.xt-ehr.eu/fhir/models/) Implementation Guide.
 
 
 <div class="model-map-block">
