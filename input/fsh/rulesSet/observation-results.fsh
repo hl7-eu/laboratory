@@ -1,6 +1,8 @@
 RuleSet: ObservationResultsValueEu
 // The closed slicing has been removed based on the resolution of the Jira issue FHIR-57047:
-// the parent profile already slices value[x] by type and leaves the slicing open
+// the parent profile already slices value[x] by type and leaves the slicing open.
+// The snapshot generator still closes type slicing, so every type of value[x] has a slice;
+// valueBoolean, valueInteger and valueSampledData carry no further constraints.
 * valueString only string
 // * valueString MS
 * valueString ^sliceName = "valueString"
@@ -17,6 +19,12 @@ RuleSet: ObservationResultsValueEu
 * valueDateTime ^sliceName = "valueDateTime"
 * valuePeriod only Period
 * valuePeriod ^sliceName = "valuePeriod"
+* valueBoolean only boolean
+* valueBoolean ^sliceName = "valueBoolean"
+* valueInteger only integer
+* valueInteger ^sliceName = "valueInteger"
+* valueSampledData only SampledData
+* valueSampledData ^sliceName = "valueSampledData"
 * valueQuantity only QuantityEuLab
 * valueQuantity ^sliceName = "valueQuantity"
 // The additional bindings have been removed based on the resolution of the Jira issue FHIR-57048.
