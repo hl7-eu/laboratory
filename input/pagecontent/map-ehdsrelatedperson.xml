@@ -8,8 +8,7 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>
-              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+          <strong>Ongoing alignment:</strong> The mappings are based on the Xt-EHR models 1.0.0. The models may change with the EHDS implementing acts; this guide will follow such changes.
         </div>
       </div>
     </div>
@@ -26,7 +25,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
             EHDSRelatedPerson
           </a>
         </li>

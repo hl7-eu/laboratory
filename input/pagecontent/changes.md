@@ -37,6 +37,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
 * Guidance
   * FHIR-56397: Added guidance on the resource types most commonly expected in `ServiceRequest.supportingInfo`, while keeping its target types open.
   * FHIR-57046: Kept the guidance that `Composition.identifier` has to equal one of the `DiagnosticReport.identifier` and pointed it at the invariant that enforces it, `dr-comp-identifier` in the constraints section of the Bundle profile.
+  * Mapped the Xt-EHR EHDS logical models 1.0.0 instead of 0.3.0. Four model elements were renamed in 1.0.0: `intendedRecipient[x]` of the laboratory report became `header.intendedRecipient[x]`, `component.code` of the laboratory observation became `component.type`, `udiCarrier` of the device became `udi` and `dosageInstructions` of the medication administration became `dosage`. The mappings themselves are unchanged. The logical models page and the mapping pages no longer describe the models as under development.
 
 * Examples
   * FHIR-58773: Added `Specimen-container-device-example`, a blood specimen collected into an evacuated tube whose container is described by a contained `Device` referenced through the extension.
