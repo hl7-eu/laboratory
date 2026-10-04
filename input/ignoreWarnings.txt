@@ -94,6 +94,3 @@ Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008.%
 
 # Duplicated anchors added by the template
 The html source has duplicate anchor Ids: 1
-
-# The published IPS 2.0.1 package declares a file:// path as its location (an error in that package), so links to its value sets use that path
-%Hyperlink scheme 'file' in 'file:///web/publishing/work/task-89/draft/output/%
