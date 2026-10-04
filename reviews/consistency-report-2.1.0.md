@@ -75,7 +75,6 @@ All eight invariant expressions were checked (context, precedence of `implies`/`
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.4-1 | Medium | `terminologies/lab-presenceAbsence.fsh`; `rulesSet/observation-results.fsh:22-26` | `LabPresenceAbsenceEuVs`, a copy of the MyHealth@EU value set `eHDSIPresenceAbsence` 0.1.1, is bound nowhere since FHIR-57048 removed the additional binding that used it (purpose `preferred` in 2.0.0). The resolution assumed that all removed bindings were covered by the basic binding, but 13 of its 38 codes are not: Normal, High, Low, Reactive, Non-Reactive, Inconclusive, Equivocal, Indeterminate, Indeterminate result, Invalid result, Not performed, Rare, Proven. The value set is still published as active / trial-use. The `changes.md` entry and the FSH comment for FHIR-57048 are corrected (commit `894e01e`). | FHIR-59528 proposes to restore the additional binding (alternatives: add the value set to the bound value set, or retire it). If it is not resolved before publication, add a known issue. |
 | 3.4-3 | Low | `lab-certifiedRefMaterial.fsh:6, 84, 86`; `rulesSet-common.fsh:85-87` | The value set also includes PEI and NIAID codes but has only the NIBSC copyright. `NIBSCCopyrightForVS` sets `experimental = true` as a side effect. | Extend the copyright; set `experimental` in the value set. |
 | 3.4-4 | Low | `lab-species.fsh:7-9`; `lab-certifiedRefMaterial.fsh:7-8` | Two value sets stay FMM 1 / draft in a trial-use release; `knownIssues.md` covers only the CRM canonical URLs. | Confirm it is intended and list both in `knownIssues.md`. |
 | 3.4-5 | Low | `rulesSet/rulesSet-common.fsh:70, 74` | The SNOMED CT text names IHTSDO; the LOINC copyright says "1995-2020". | "SNOMED International"; "1995+". |
@@ -201,7 +200,6 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. 3.4-1, once FHIR-59528 is decided.
 2. The suppressions in §7 that do not depend on the example issues #146 to #154.
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
@@ -211,6 +209,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## Won't fix (accepted)
 
+- **[3.4-1]** `LabPresenceAbsenceEuVs` stays unbound in 2.1.0. FHIR-59528 proposes to restore its additional binding and will be decided after the STU release; `knownIssues.md` documents the gap (commit `788642e`).
 - **[5-1] to [5-27]** The example findings are corrections of example data that need time, so they are moved to GitHub issues and addressed after 2.1.0:
   - #146 `SimpleChemistryResultReport`: 5-1, 5-2, 5-3, 5-13 and parts of 5-12 and 5-20
   - #147 `IT-CDA2FHIR`: 5-4 and parts of 5-12 and 5-20
@@ -241,7 +240,7 @@ The other entries are justified: the unknown code system and identifier system e
 - **[3.2-2]** / **[3.2-3]** The comments of `ReportEncounterRule`, `ReportSubjectRule` and `ReportTypeRule` state the rules as `dr-comp-enc`, `dr-comp-subj` (SHOULD) and `dr-comp-type` (system, version and code) check them, and point to the Bundle constraints. The texts of `dr-comp-enc` and `dr-comp-subj` say that they apply only when both resources carry a reference (commit `d8d89da`).
 - **[6.5-1]** `changes.md` lists the lowered severity of `dr-comp-enc` and `dr-comp-subj` (FHIR-57052) and the changed comparison and condition of `dr-comp-identifier` (FHIR-57053) (commit `d8d89da`).
 - **[3.4-2]** `LaboratoryResultStandardEuVs` carries the LOINC and the NPU copyright (commit `35a4c31`).
-- **[6.4-3]** The mapping pages map the Xt-EHR models 1.0.0, and all model links point to 1.0.0. The four elements renamed since 0.3.0 (`header.intendedRecipient[x]`, `component.type`, `udi`, `dosage`) use the new names; types and cardinalities are unchanged. `changes.md` lists the update under *Guidance* (commit `a1dd64f`). The update is a real change, so it needs a Jira issue like FHIR-58742 for EU Base; its number goes into `changes.md`.
+- **[6.4-3]** The mapping pages map the Xt-EHR models 1.0.0, and all model links point to 1.0.0. The four elements renamed since 0.3.0 (`header.intendedRecipient[x]`, `component.type`, `udi`, `dosage`) use the new names; types and cardinalities are unchanged. `changes.md` lists the update under *Guidance* (commit `a1dd64f`). The update is tracked in FHIR-59529, like FHIR-58742 for EU Base, and `changes.md` names it (commit `51e20a6`).
 - **[6.4-2]** `logicalmodels.md` describes the models as published (1.0.0, end-of-project release) and developed from the eHN guidelines; the second heading is "Supported models". The callout on the ten model pages states the mapped version and that the models may change with the EHDS implementing acts (commit `a1dd64f`).
 - **[6.5-2]** The FHIR-57048 entry in `changes.md` says which removed bindings were covered by the basic binding and that `LabPresenceAbsenceEuVs` was not; FHIR-59528 proposes to restore its binding (commits `894e01e`, `89d3f3c`).
 - **[6.3-1]** The outdated known issue on the R5 element links (FHIR-43200, FHIR-43199) and the unused `Specimen.feature` aliases are removed (commit `c365231`).
