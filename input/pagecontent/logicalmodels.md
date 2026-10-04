@@ -1,7 +1,7 @@
 
 ### EHDS Logical Data Models
 
-Logical data models (or information models) for the **European Health Data Space (EHDS)** have been developed by the [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/), which published version 1.0.0 as its end-of-project release. These models are the **basis for designing the European electronic health record exchange format** (EEHRxF).
+Logical data models (or information models) for the **European Health Data Space (EHDS)** have been developed by the [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/), which published version 1.0.0 as its end-of-project release. These models are the **basis for designing the European electronic health record exchange format** (E-EHRxF).
 
 They were developed from the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines) and refined to be machine-processable and consistent with each other.
 
