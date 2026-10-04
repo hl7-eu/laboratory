@@ -6,7 +6,9 @@ Applications consuming laboratory reports must take careful note of updated (rev
 
 For applications providing diagnostic reports, such as laboratory reports, a report should not be final until all the individual test results reported in it are final or cancelled.
 
-If the report has been withdrawn, following a previous final release, the report and associated results should be retracted by replacing the status codes with the “entered-in-error” and setting the conclusion/comment (if provided) and the text narrative to some text like “This report has been withdrawn” in the appropriate language. A reason for retraction may be provided in the narrative.
+If the report has been withdrawn, following a previous final release, the report and associated results should be retracted by replacing the status codes with the “entered-in-error” and setting the conclusion/comment (if provided) and the text narrative to some text like “This report has been withdrawn” in the appropriate language. The reason for the retraction SHOULD be given in the statusReason extension of the report and of the results.
+
+The statuses amended, corrected, appended (report only), cancelled and entered-in-error SHOULD be accompanied by the reason for that status, conveyed in the statusReason extension of the DiagnosticReport and of the Observation. See the [cancelled result example](Observation-obs-status-reason-example.html) and the [corrected report example](DiagnosticReport-dr-status-reason-media-example.html).
 
 The following paragraphs describe:
 * the statuses foreseen for the HL7 FHIR resources relevant for documenting Laboratory Reports and included results.

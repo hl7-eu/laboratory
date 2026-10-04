@@ -7,7 +7,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
 
 * Profiles and constraints
   * FHIR-57444: Removed the `Composition.section:attachment` slice, following the resolution of FHIR-53138. Additional data such as images or diagrams is conveyed through `DiagnosticReport.media`, whose definition and short description were clarified.
-  * FHIR-57208: Added an optional `statusReason` extension to `ObservationResultsLaboratoryEu` and `DiagnosticReportLabEu`, together with a note on `status` that the statuses amended, corrected, cancelled and entered-in-error should be accompanied by the reason for that status.
+  * FHIR-57208: Added an optional `statusReason` extension to `ObservationResultsLaboratoryEu` and `DiagnosticReportLabEu`, together with a note on `status` that the statuses amended, corrected, cancelled and entered-in-error, and for the report also appended, should be accompanied by the reason for that status.
   * FHIR-55966: Added the optional `lowComparator` and `highComparator` modifier extensions on `Observation.referenceRange`, pre-adopting the R6 solution for exclusive or explicitly inclusive bounds.
   * FHIR-57055: Added `Substance` and `BiologicallyDerivedProduct` to the reference targets of `Observation.focus`, now that the EU core profile allows them.
   * FHIR-57050: Added `Patient` and `BiologicallyDerivedProduct` to the reference targets of the `SpecimenFocus` extension. The Specimen profile no longer narrows those targets a second time.
@@ -39,6 +39,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
   * FHIR-57046: Kept the guidance that `Composition.identifier` has to equal one of the `DiagnosticReport.identifier` and pointed it at the invariant that enforces it, `dr-comp-identifier` in the constraints section of the Bundle profile.
   * Mapped the Xt-EHR EHDS logical models 1.0.0 instead of 0.3.0. Four model elements were renamed in 1.0.0: `intendedRecipient[x]` of the laboratory report became `header.intendedRecipient[x]`, `component.code` of the laboratory observation became `component.type`, `udiCarrier` of the device became `udi` and `dosageInstructions` of the medication administration became `dosage`. Apart from the new names, this does not change the mappings. The logical models page and the mapping pages no longer describe the models as under development.
   * Corrected three mappings of the logical models: `collection.bodySite` and `collection.performer[x]` of the specimen now map to the extensions introduced for FHIR-57051 and FHIR-57901, and `accreditationStatus` of the laboratory observation maps to the Laboratory Accredited extension on the Observation.
+  * FHIR-57208: The scenarios and the status management page now say that the statuses amended, corrected, appended, cancelled and entered-in-error SHOULD carry their reason in the statusReason extension, and link the status reason examples.
 
 * Examples
   * FHIR-58773: Added `Specimen-container-device-example`, a blood specimen collected into an evacuated tube whose container is described by a contained `Device` referenced through the extension.
