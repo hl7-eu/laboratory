@@ -68,7 +68,6 @@ Usage: #example
 * section[0].code = $loinc#18725-2 "Microbiology studies (set)"
 * section[0].title = "Urinodling kvantitativ och resistensbestämning SIR" // Mapped from body/groupOfAnalyses/name
 * section[0].entry = Reference(labOrderOutcomeObservation)
-* extension[diagnosticReport].valueReference = Reference(mbDiagnosticReport)  // HK: added link to DiagnosticReport for strict conformance with FHIR R4 rules for document bundle resources inclusion
 
 Instance: mbDiagnosticReport
 InstanceOf: DiagnosticReportLabEu

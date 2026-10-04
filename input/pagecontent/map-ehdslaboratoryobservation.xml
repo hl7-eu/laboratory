@@ -269,8 +269,8 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>result.uncertaint.value</td>
-            <td>Measurement uncertainty type and interval.</td>
+            <td>result.uncertainty.value</td>
+            <td>The numerical value of the measurement uncertainty.</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -379,8 +379,8 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>component.result.uncertaint.value</td>
-            <td>Measurement uncertainty type and interval.</td>
+            <td>component.result.uncertainty.value</td>
+            <td>The numerical value of the measurement uncertainty.</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -478,7 +478,7 @@
             <td>Reference material or higher-order calibrator used for the measurement.</td>
             <td>related-to</td>
             <td>Observation</td>
-            <td>extension:certifiedRefMaterialIdentifier</td>
+            <td>extension:certifiedRefMaterialIdentifer</td>
             <td>Certified Reference Material: Identifier</td>
             <td></td>
           </tr>

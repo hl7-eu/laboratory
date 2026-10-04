@@ -27,7 +27,7 @@
 ### The Laboratory Domain
 Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients.
 The availability of high quality test results, and the capacity of sharing them, is therefore essential being often the basis for clinical decision making.
-For this reason the Laboratory has been selected as one of the priority domains for the European EHR eXchange Format (E-EHRxF).
+For this reason the Laboratory has been selected as one of the priority domains for the European electronic health record exchange format (E-EHRxF).
 
 ### Scope
 
@@ -39,7 +39,7 @@ This version focuses only on common rules that apply to all the in-scope situati
 This guide is not limited to test results performed by clinical laboratories on Human specimens (from human subject), but it considers also results on non-human materials or living subjects; or non-human specimens paired with a human subject. Derived guides may restrict the scope as needed (e.g. limiting the scope to well-identified human beings)
 
 ### Purpose
-The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
+The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European electronic health record exchange format (E-EHRxF).
 
 This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
 

@@ -187,7 +187,7 @@
             <td>Specimen</td>
             <td>collection.bodySite.extension:bodySite</td>
             <td>Body structure the specimen was collected from.</td>
-            <td>R5 cross-version extension carrying a reference to a BodyStructure, since collection.bodySite in FHIR R4 is a code only.</td>
+            <td>R5 cross-version extension carrying a reference to a BodyStructure, since collection.bodySite in FHIR R4 is a CodeableConcept and cannot reference a BodyStructure.</td>
           </tr>
           <tr>
             <td>receivedDate</td>

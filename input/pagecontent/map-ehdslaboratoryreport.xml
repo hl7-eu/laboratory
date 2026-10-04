@@ -197,7 +197,7 @@
             <td>Business version of the report document.</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>extension:versionNumber</td>
+            <td>extension:version</td>
             <td>Business-level document version.</td>
             <td></td>
           </tr>
@@ -296,7 +296,7 @@
             <td>Intended recipients of the report.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>extension:information-recipient</td>
+            <td>extension:informationRecipient</td>
             <td>Recipients of the document.</td>
             <td>Uses EU extension on Composition.</td>
           </tr>

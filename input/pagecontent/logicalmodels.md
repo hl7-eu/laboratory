@@ -8,10 +8,13 @@ They were developed from the data sets described in the [**eHealth Network (eHN)
 This Implementation Guide (IG) **aligns with the EHDS logical models** and **provides HL7 FHIR profiles** that **realise the requirements identified in these models**.
 
 
-Below is a simplified representation of a laboratory report. The data set comprises several basic parts, as visualised in the diagrams below.
+Below is a simplified representation of the laboratory report data set of the eHN guidelines, from which the EHDS logical models were developed. The data set comprises several basic parts, as visualised in the diagrams below.
 
-{% include img.html img="LabReportModel-1.png" caption="Figure 1: Laboratory dataset model" width="70%" %}
-{% include img.html img="ObservationModel.png" caption="Figure 2: Laboratory observation dataset model" width="70%" %}
+{% comment %}
+TODO: replace the two figures with diagrams of the Xt-EHR EHDS logical models 1.0.0 (EHDSLaboratoryReport and EHDSLaboratoryObservation).
+{% endcomment %}
+{% include img.html img="LabReportModel-1.png" caption="Figure 1: Laboratory report data set of the eHN guidelines (simplified)" width="70%" %}
+{% include img.html img="ObservationModel.png" caption="Figure 2: Laboratory observation data set of the eHN guidelines (simplified)" width="70%" %}
 
 
 ### Supported models

@@ -14,7 +14,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 
 // extension[diagnosticReport] (inherited from CompositionEuCore) is no longer constrained here, based on the
 // resolution of the Jira issue FHIR-57335: the R5 rules for document bundles are pre-adopted, so the
-// DiagnosticReport is reached through its link to the Composition
+// DiagnosticReport is reached through its link to the Composition.
 
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule

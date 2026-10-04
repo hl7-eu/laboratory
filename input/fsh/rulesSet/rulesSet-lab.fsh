@@ -16,20 +16,20 @@ RuleSet: ReportEncounterRule
   * ^definition = """The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."""
   * ^comment = """This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).
 
-If both refer to an encounter, DiagnosticReport and Composition SHOULD have the same encounter.
+If both have a literal reference to an encounter, DiagnosticReport and Composition SHOULD have the same encounter.
 
 This guidance is checked by the invariant dr-comp-enc, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
 RuleSet: ReportSubjectRule
 * subject
-  * ^comment = """If both refer to a subject, DiagnosticReport and Composition SHOULD have the same subject.
+  * ^comment = """If both have a literal reference to a subject, DiagnosticReport and Composition SHOULD have the same subject.
 
 This guidance is checked by the invariant dr-comp-subj, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
 
 RuleSet: ReportIdentifierRule
 * identifier /* obeys labRpt-id */
-  * ^comment = """Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists.
+  * ^comment = """Composition.identifier SHALL have the same system and value as one of the DiagnosticReport.identifier, if at least one exists.
 
 This guidance is enforced by the invariant dr-comp-identifier, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 

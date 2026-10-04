@@ -53,7 +53,7 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * identifier
   * ^comment = """Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order.
 
-Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists.
+Composition.identifier SHALL have the same system and value as one of the DiagnosticReport.identifier, if at least one exists.
 
 This guidance is enforced by the invariant dr-comp-identifier, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
