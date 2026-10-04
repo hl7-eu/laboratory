@@ -59,4 +59,4 @@ This choice is justified by the fact that:
 * In R5 the link between the DiagnosticReport and the Composition is realized with a Reference from the DiagnosticReport. The team decided to follow the same design pattern to facilitate the R4 to R5 transition.
 * Adding a reference from the Composition to the DiagnosticReport would create an undesirable circular reference.
 
-However, this choice it is not imposed, so that usage contexts whishing to keep a full consistency with R4 rules, may used the [DiagnosticReportReference] extension to refer the DiagnosticReport from the Composition. The adoption of this extension implies the presence of a circular reference Composition to/from  DiagnosticReport.
+However, this choice is not imposed: usage contexts wishing to keep full consistency with the R4 rules may use the [DiagnosticReportReference](https://hl7.eu/fhir/extensions/StructureDefinition-composition-diagnosticReportReference.html) extension, which the Composition profile inherits from Composition (EU core), to refer to the DiagnosticReport from the Composition. Using this extension creates a circular reference between the Composition and the DiagnosticReport.

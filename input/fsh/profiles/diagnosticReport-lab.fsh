@@ -9,7 +9,7 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 
-// TODO: PW: should be change to 0..1
+// stays 1..1: with the R5 rules for document bundles pre-adopted (FHIR-57335) this link makes the report part of the document
 * extension[DiagnosticReportCompositionR5] 1..1
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."

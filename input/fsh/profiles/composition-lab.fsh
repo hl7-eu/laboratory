@@ -12,10 +12,9 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
 //* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 //* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
-* extension[diagnosticReport].valueReference 1..1
-* extension[diagnosticReport].valueReference.reference 1..
-  * ^comment = """Added to the FHIR R4 guide to allow strictly conformance with the R4 rules for document bundle resources inclusion.
-  Using this extension implies to accept a circular reference Composition to/from DiagnosticReport"""
+// extension[diagnosticReport] (inherited from CompositionEuCore) is no longer constrained here, based on the
+// resolution of the Jira issue FHIR-57335: the R5 rules for document bundles are pre-adopted, so the
+// DiagnosticReport is reached through its link to the Composition
 
 * text ^short = "Narrative text"
 * insert ReportIdentifierRule
