@@ -72,7 +72,6 @@ Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5
 # == Filter binding expected binding information ==
 %None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab%
 %None of the codings provided are in the value set 'Results Coded Values Laboratory/Pathology - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips%
-%None of the codings provided are in the value set 'Laboratory Presence and Absence Findings' (http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu-lab%
 %None of the codings provided are in the value set 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab%
 %None of the codings provided are in the value set 'Specimen Types' (http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab%
 
@@ -95,3 +94,6 @@ Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008.%
 
 # Duplicated anchors added by the template
 The html source has duplicate anchor Ids: 1
+
+# The published IPS 2.0.1 package declares a file:// path as its location (an error in that package), so links to its value sets use that path
+%Hyperlink scheme 'file' in 'file:///web/publishing/work/task-89/draft/output/%
