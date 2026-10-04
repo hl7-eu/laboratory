@@ -1,6 +1,6 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `a1dd64f`. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `8324450`. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
@@ -163,20 +163,12 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 6.3-1 | Medium | `knownIssues.md:1-9` | "Change requests not applied" is stale: no profile has used `SpecimenFeatureTypeR5` (FHIR-43200) since 0.1.0, and the DiagnosticReport composition extension (FHIR-43199) now links to the `xver-r5.r4` 0.1.0 page, not to a missing R4 element. | Remove the section, and the unused `$specimen-feature*` aliases. |
 | 6.3-2 | Low | `knownIssues.md` | Missing: the mapping pages are based on Xt-EHR models 0.3.0 (preview), not 1.0.0 (see 6.4-3); `PatientAnimalEu` cannot be the subject, because Base 2.0.1 allows only `patient-eu-core` (FHIR-57547); the open DiagnosticReport supportingInfo question (FHIR-59111); obligations deferred; the two draft value sets (3.4-4). | Add them. |
 
 ### 6.4 Content currency
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 6.4-4 | Medium | `map-ehdsdevice.xml:20`, `map-ehdsattachment.xml:20`, `map-ehdslaboratoryobservation.xml:17`, `map-ehdsservicerequest.xml:18` | The legend says "In this ballot publication, some row/cells… left in yellow". The device and attachment pages have the legend but no highlighted row; `map-ehdslaboratoryreport.xml` (4 rows), `map-ehdsspecimen.xml` (2) and `map-ehdsmedicationadministration.xml` (2) highlight rows without a legend. | Reword without "ballot" and put the legend on the pages that use the highlighting. |
-| 6.4-5 | Medium | `map-ehdsrelatedperson.xml:5,16,43,44,49`; `map-ehdslaboratoryreport.xml:22` | "RelatedPerson (HDR)" copied from the HDR IG; the lab report page says it "follows the same mapping style used in the patient summary mapping pages". | Use "RelatedPerson" (or `AnimalSpecimenEuLab`) and drop the sentence. |
-| 6.4-6 | Medium | `map-ehdsspecimen.xml:136, 181` | `collection.bodySite` is mapped to `extension:bodySite`, but since FHIR-57051 the extension is `collection.bodySite.extension:bodySite`. The collector row doesn't mention the `alternate-reference` extension (FHIR-57901). | Update both rows. |
-| 6.4-7 | Medium | `map-ehdslaboratoryobservation.xml:488-495` | `accreditationStatus` is mapped to `Organization.extension:qualification`; the profile carries `Observation.extension:accredited` (`laboratory-accredited`, now in the Extensions IG). | Map to `Observation.extension:accredited`. |
-| 6.4-8 | Medium | `scenarios.md:54`; `status-mgmt.md:9` | `scenarios.md` names `DiagnosticReport.extension:event-statusReason`, but the 2.1.0 slice is `extension:statusReason` on DiagnosticReport and Observation (FHIR-57208). `status-mgmt.md` says only that a reason "may be provided in the narrative". Neither page says that amended, corrected, cancelled and entered-in-error SHOULD carry a reason. | Update both pages and link the two status reason examples. |
-| 6.4-9 | Medium | `crossversionanalysis.md:3` | "parallel flavours for HL7 FHIR R4 and R5": the IG ships R4/R4B packages, and there is no `package.r5.tgz`. | Say R4/R4B, or remove the sentence. |
-| 6.4-10 | Medium | `index.md:34` | The scope says the rules are "coherent with the European eHN Guidelines"; since 2.0.0 the IG maps to the Xt-EHR EHDS models. | Refer to the EHDS logical models; keep eHN as background. |
 | 6.4-11 | Low | `obligations.md:7` | "In the previous version of this Implementation Guide" means 0.1.1; the previous version is now 2.0.0. | "In version 0.1.1". |
 | 6.4-12 | Low | `StructureDefinition-Patient-animal-eu-lab-intro.md:1-13` | The note is correct but calls the package "hl7-base", doesn't say that since FHIR-57547 DiagnosticReport and ServiceRequest no longer name the profile, and repeats the heading "Implementation status". | Reword; drop the duplicate heading. |
 | 6.4-13 | Low | `notes.md:9, 23` | l.9 defines reflex tests in a way that contradicts the Observation intro (l.47); l.23 names an "Observation.supportingInfo element", which in R4 is the `workflow-supportingInfo` extension. | Align the definition; name the extension. |
@@ -236,7 +228,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. 3.4-1 (FHIR-59528) and the Medium page items (§6.3–6.5), which mostly bring the pages in line with the 2.1.0 changes.
+1. 3.4-1 (FHIR-59528), which mostly bring the pages in line with the 2.1.0 changes.
 2. The Medium example items (5-1 to 5-12), then the suppressions they make obsolete (§7).
 3. `docker-compose.yaml` (8-1).
 4. Low items as time allows.
@@ -269,3 +261,9 @@ The other entries are justified: the unknown code system and identifier system e
 - **[6.4-3]** The mapping pages map the Xt-EHR models 1.0.0, and all model links point to 1.0.0. The four elements renamed since 0.3.0 (`header.intendedRecipient[x]`, `component.type`, `udi`, `dosage`) use the new names; types and cardinalities are unchanged. `changes.md` lists the update under *Guidance* (commit `a1dd64f`).
 - **[6.4-2]** `logicalmodels.md` describes the models as published (1.0.0, end-of-project release) and developed from the eHN guidelines; the second heading is "Supported models". The callout on the ten model pages states the mapped version and that the models may change with the EHDS implementing acts (commit `a1dd64f`).
 - **[6.5-2]** The FHIR-57048 entry in `changes.md` says which removed bindings were covered by the basic binding and that `LabPresenceAbsenceEuVs` was not; FHIR-59528 proposes to restore its binding (commits `894e01e`, `89d3f3c`).
+- **[6.3-1]** The outdated known issue on the R5 element links (FHIR-43200, FHIR-43199) and the unused `Specimen.feature` aliases are removed (commit `c365231`).
+- **[6.4-4]** The legend for the yellow rows no longer mentions a ballot publication and appears on exactly the five mapping pages that have yellow rows (commit `53ebdbe`).
+- **[6.4-5]** The related person mapping page no longer says "RelatedPerson (HDR)", and the laboratory report page no longer refers to patient summary mapping pages (commit `53ebdbe`).
+- **[6.4-6]** / **[6.4-7]** The specimen mapping uses `collection.bodySite.extension:bodySite` and names the `alternate-reference` extension for the collector (related-to, as an organisation has no direct R4 target). `accreditationStatus` maps to `Observation.extension:accredited`. `changes.md` lists the corrected mappings under *Guidance* (commit `53ebdbe`).
+- **[6.4-8]** `scenarios.md` and `status-mgmt.md` name the `statusReason` extension, say that the five statuses SHOULD carry a reason and link the two examples; the FHIR-57208 entry in `changes.md` names `appended` for the report (commit `238743c`).
+- **[6.4-9]** / **[6.4-10]** The cross-version page no longer claims an R5 flavour, and the scope on the home page refers to the Xt-EHR EHDS logical information models, which were developed from the eHN guidelines (commit `8324450`).
