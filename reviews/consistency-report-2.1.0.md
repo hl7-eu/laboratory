@@ -1,6 +1,6 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `35a4c31` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies` (PR #145, open), which is based on `2.1.0` at `c91e151`. Last updated after commit `a1dd64f`. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
@@ -170,9 +170,6 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 6.4-1 | Medium | `background.md:17, 19, 28` | "foreseen for MyHealth@EU wave 8 (2024-25)"; the timeline "as of the date of this publication" covers 2022-2025; "the proposed EHDS regulation" links the 2022 proposal, while Regulation (EU) 2025/327 is in force. | Past tense, date the figure, link `https://eur-lex.europa.eu/eli/reg/2025/327/oj`. |
-| 6.4-2 | Medium | `logicalmodels.md:2-8, 17, 27`; `modelmap.xml:11`; all 8 `map-*.xml` l.11-12 | The models are "currently being developed", "will form the basis… future EHDS Implementing Act", "emerging"; the "Ongoing alignment… expected to continue evolving" callout is on 10 pages. Xt-EHR models 1.0.0 was released on 2026-04-13. The heading "EHDS Logical Data Models" appears twice. | Reword in the present or past tense, remove the callout, rename one heading. |
-| 6.4-3 | Medium | `modelmap.xml` (14 links), 8 map pages vs `logicalmodels.md:40-60` | The model map and mapping pages link Xt-EHR `…/models/0.3.0/` (preview), while `logicalmodels.md` links the version-less URLs, which now resolve to 1.0.0. No page states which model version the mappings use. | State the mapped version and link it consistently, or re-check the mappings against 1.0.0. |
 | 6.4-4 | Medium | `map-ehdsdevice.xml:20`, `map-ehdsattachment.xml:20`, `map-ehdslaboratoryobservation.xml:17`, `map-ehdsservicerequest.xml:18` | The legend says "In this ballot publication, some row/cells… left in yellow". The device and attachment pages have the legend but no highlighted row; `map-ehdslaboratoryreport.xml` (4 rows), `map-ehdsspecimen.xml` (2) and `map-ehdsmedicationadministration.xml` (2) highlight rows without a legend. | Reword without "ballot" and put the legend on the pages that use the highlighting. |
 | 6.4-5 | Medium | `map-ehdsrelatedperson.xml:5,16,43,44,49`; `map-ehdslaboratoryreport.xml:22` | "RelatedPerson (HDR)" copied from the HDR IG; the lab report page says it "follows the same mapping style used in the patient summary mapping pages". | Use "RelatedPerson" (or `AnimalSpecimenEuLab`) and drop the sentence. |
 | 6.4-6 | Medium | `map-ehdsspecimen.xml:136, 181` | `collection.bodySite` is mapped to `extension:bodySite`, but since FHIR-57051 the extension is `collection.bodySite.extension:bodySite`. The collector row doesn't mention the `alternate-reference` extension (FHIR-57901). | Update both rows. |
@@ -191,7 +188,6 @@ No duplicate top-level ids were found. Every Bundle entry matches a `BundleLabRe
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 6.5-2 | Medium | `changes.md:25` (FHIR-57048) | The entry says the removed bindings pointed to value sets the IPS value set already composes; the presence/absence binding pointed to this IG's own `LabPresenceAbsenceEuVs`, which is not among those includes and is now unbound (3.4-1). | Reword the entry and say what happens to `LabPresenceAbsenceEuVs`. |
 | 6.5-3 | Low | `changes.md` *Examples* | The comparator example (FHIR-55966, in `Bundle-SimpleChemistryReport`) is not listed under *Examples*. | List it. |
 | 6.5-4 | Low | `changes.md:22` (FHIR-57051) | "whose context is `Procedure.bodySite`" is incomplete: the contexts are Condition.bodySite, Observation.bodySite, Procedure.bodySite, MedicationAdministration.dose and Dosage.site. | "whose contexts do not include Specimen". |
 | 6.5-5 | Low | `changes.md:10` (FHIR-57208); `:31` (FHIR-57058) | The DiagnosticReport status note also lists `appended`. The FHIR-57058 entry describes a formatting change only, but Note 3 (virology may go to 18727-8) was dropped. | Mention both. |
@@ -250,6 +246,7 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## Won't fix (accepted)
 
+- **[6.4-1]** `background.md` (MyHealth@EU wave 8, the timeline figure, the link to the EHDS proposal) is left unchanged for 2.1.0. A Liquid comment in the page records what has to be updated: MyHealth@EU has adopted this guide, and Regulation (EU) 2025/327 is in force (commit `09fcaa0`).
 - **[3.1-4]** Missing Bundle entry slices for DocumentReference, RelatedPerson, Substance, BiologicallyDerivedProduct, Group and CareTeam: deferred to 2.2.0, because new slices change what the Bundle profile validates. `knownIssues.md` documents the gap (commit `3a36ac3`); a Jira issue for 2.2.0 is to be filed.
 
 ---
@@ -269,3 +266,6 @@ The other entries are justified: the unknown code system and identifier system e
 - **[3.2-2]** / **[3.2-3]** The comments of `ReportEncounterRule`, `ReportSubjectRule` and `ReportTypeRule` state the rules as `dr-comp-enc`, `dr-comp-subj` (SHOULD) and `dr-comp-type` (system, version and code) check them, and point to the Bundle constraints. The texts of `dr-comp-enc` and `dr-comp-subj` say that they apply only when both resources carry a reference (commit `d8d89da`).
 - **[6.5-1]** `changes.md` lists the lowered severity of `dr-comp-enc` and `dr-comp-subj` (FHIR-57052) and the changed comparison and condition of `dr-comp-identifier` (FHIR-57053) (commit `d8d89da`).
 - **[3.4-2]** `LaboratoryResultStandardEuVs` carries the LOINC and the NPU copyright (commit `35a4c31`).
+- **[6.4-3]** The mapping pages map the Xt-EHR models 1.0.0, and all model links point to 1.0.0. The four elements renamed since 0.3.0 (`header.intendedRecipient[x]`, `component.type`, `udi`, `dosage`) use the new names; types and cardinalities are unchanged. `changes.md` lists the update under *Guidance* (commit `a1dd64f`).
+- **[6.4-2]** `logicalmodels.md` describes the models as published (1.0.0, end-of-project release) and developed from the eHN guidelines; the second heading is "Supported models". The callout on the ten model pages states the mapped version and that the models may change with the EHDS implementing acts (commit `a1dd64f`).
+- **[6.5-2]** The FHIR-57048 entry in `changes.md` says which removed bindings were covered by the basic binding and that `LabPresenceAbsenceEuVs` was not; FHIR-59528 proposes to restore its binding (commits `894e01e`, `89d3f3c`).
