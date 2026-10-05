@@ -1,11 +1,11 @@
 # HL7 Europe Laboratory Report – Consistency Review for 2.1.0 (STU update)
 
-- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies`, which is based on `2.1.0` at `c91e151`. #145 merged the first four commits of that branch into `2.1.0`, and #155 the remaining commits, including this report. A second review of all changes of 2026-10-04 led to the corrections in #156. Last updated with #156 (branch `2.1.0-review-followup`) and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-04. First review of commit `a452eb5` on branch `release-2.1.0-published-dependencies`, which is based on `2.1.0` at `c91e151`. #145 merged the first four commits of that branch into `2.1.0`, and #155 the remaining commits, including this report. A second review of all changes of 2026-10-04 led to the corrections in #156. Last updated with #156 (branch `2.1.0-review-followup`). Re-run on 2026-10-05 against `2.1.0` at `e2b7156` and the IG Publisher run noted below. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), examples, narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), the IG Publisher QA output (`output/qa.*`), `input/ignoreWarnings.txt` and the repository contents. `changes.md` was compared with `git diff v2.0.0..a452eb5` and with the published `hl7.fhir.eu.laboratory#2.0.0` package.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings.
-  - The IG Publisher 2.3.4 run of 2026-10-04 19:22 (commit `b14064f`) built `hl7.fhir.eu.laboratory#2.1.0`, status `active`, release label `trial-use`. Resolved dependencies: `hl7.fhir.eu.base` 2.0.1, `hl7.fhir.eu.extensions.r4` 1.3.1, `hl7.fhir.uv.ips` 2.0.1 (fetched from packages2.fhir.org, see *Fixed since the first review*), `hl7.fhir.uv.xver-r5.r4` 0.1.0, `hl7.fhir.uv.extensions.r4` 5.3.0, `hl7.terminology.r4` 7.4.0.
-  - It reports **0 errors, 1 warning and 0 information messages**, plus 109 suppressed warnings and 136 suppressed hints. The warning is the outdated Jira spec file, which HL7/JIRA-Spec-Artifacts#1592 updates.
+  - The IG Publisher 2.3.4 run of 2026-10-05 08:21 (commit `e2b7156`, working tree clean) built `hl7.fhir.eu.laboratory#2.1.0`, status `active`, release label `trial-use`. Resolved dependencies: `hl7.fhir.eu.base` 2.0.1, `hl7.fhir.eu.extensions.r4` 1.3.1, `hl7.fhir.uv.ips` 2.0.1 (fetched from packages2.fhir.org, see *Fixed since the first review*), `hl7.fhir.uv.xver-r5.r4` 0.1.0, `hl7.fhir.uv.extensions.r4` 5.3.0, `hl7.terminology.r4` 7.4.0.
+  - It reports **6 errors, 0 warnings and 4 information messages**, plus 108 suppressed warnings and 133 suppressed hints. All six errors are in `SimpleChemistryResultReport` (1-6). The run of 2026-10-04 19:22 (commit `b14064f`) reported 0 errors and 1 warning on the same example source; the errors depend on the Czech LOINC designations the terminology server returns (see 1-6). The Jira spec warning of that run no longer appears.
   - A run of commit `a452eb5` with an empty `ignoreWarnings.txt` reports 0 errors, 105 warnings and 128 information messages; §7 uses it to show what the suppressions hide.
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 2.1.0. **Low** means cleanup or editorial.
@@ -18,7 +18,9 @@ Each open item has an id `<section>-<n>`. Ids are stable: fixed or accepted item
 
 ## 1. Release blockers (High)
 
-No open items.
+| ID | Area | Finding | Fix |
+|---|---|---|---|
+| 1-6 | Examples / QA | **New:** The run of 2026-10-05 reports 6 errors in `SimpleChemistryResultReport`. The inline Composition declares `language = #cs-CZ` (`lab_report/Bundle-SimpleChemistryReport.fsh:69`) but has English LOINC displays: `18719-5` "Chemistry studies (set)" (l.74, 116), `11502-2` "Laboratory report" (l.75), `26436-6` "Laboratory studies (set)" (l.96). The Publisher checks displays against the resource language, and the local terminology cache holds Czech designations for these codes: 4 *Wrong Display Name … (for the language(s) 'cs-CZ')* errors. The Composition then fails validation, which causes 2 *Unable to find a profile match* errors on `DiagnosticReport.extension[0]` (against the core/R5 Composition and against `Composition-eu-lab`). The run of 2026-10-04 did not get these designations and reported 0 errors, so the outcome depends on the terminology server, and the publication build can fail the same way. Errors cannot be suppressed; the entry `%for language(s) 'cs-CZ'.%` (`ignoreWarnings.txt:80`) only matches the information variant. This is not one of the example findings deferred to #146. | Use the Czech displays ("biochemické laboratorní vyšetření", "laboratorní zpráva", "laboratorní vyšetření") on the four Composition codings, or remove `language` from the inline Composition. The DiagnosticReport codings (l.140-141) are not affected, as that resource declares no language. Rebuild. |
 
 ---
 
@@ -146,6 +148,7 @@ The example findings 5-1 to 5-27 are tracked in GitHub issues #146 to #154 and a
 | 6.4-15 | Low | `modelmap.xml:120`; `map-ehdsdevice.xml:42-44` | EHDSDevice is mapped to the base Device resource, although the IG defines `DeviceMeasuringLabReportEu` and `DeviceSpecimenLabReportEu`. | Name the profiles. |
 | 6.4-16 | Low | `index.md:63-81` (`input/images-source/links-overview.plantuml:34`) | The diagram shows DiagnosticReport → "RelatedPerson: Animal", but no `DiagnosticReportLabEu` element targets RelatedPerson; the profile title is "RelatedPerson: AnimalSpecimen". | Fix the arrow and the label. |
 | 6.4-17 | Low | `map-ehdslaboratoryobservation.xml` (rows `result.uncertainty.type` and `component.result.uncertainty.type`) | Both rows map to `extension:uncertaintyType`, but the snapshot of `ObservationResultsLaboratoryEu` has only `value[x]:valueQuantity.extension:uncertainty`, although `QuantityEuLab` defines both extensions. | Check why the snapshot drops `uncertaintyType`, then adjust the profile or the mapping. |
+| 6.4-18 | Low | `logicalmodels.md:12-14` | **New:** A Liquid comment (added in `8b68c6f`) says "TODO: replace the two figures with diagrams of the Xt-EHR EHDS logical models 1.0.0". It is not rendered, and the captions correctly describe the figures as the eHN data set. | Keep it as a reminder, or move it to a GitHub issue and delete the comment. |
 
 ### 6.5 `changes.md`
 
@@ -159,13 +162,13 @@ The example findings 5-1 to 5-27 are tracked in GitHub issues #146 to #154 and a
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 2.3.4 run of 2026-10-04 19:22, built as `2.1.0` / `active` / `trial-use`, and on a run of commit `a452eb5` with an empty `ignoreWarnings.txt`.
+This section is based on the IG Publisher 2.3.4 run of 2026-10-05 08:21, built as `2.1.0` / `active` / `trial-use`, and on a run of commit `a452eb5` with an empty `ignoreWarnings.txt`.
 
-**Visible messages:** 0 errors, 1 warning, 0 information messages. The warning is the outdated Jira spec file; it goes once HL7/JIRA-Spec-Artifacts#1592 is merged.
+**Visible messages:** 6 errors, 0 warnings, 4 information messages. The 6 errors and 3 of the information messages (*Details for … matching against profile*) belong to 1-6. The fourth information message, *None of the codings provided are in the value set 'FHIR Document Type Codes'* on the same Composition (`11502-2`), is expected: the binding is preferred. The Jira spec warning of the run of 2026-10-04 no longer appears.
 
 **Publication request check:** no issues reported (version 2.1.0, milestone, trial-use, STU 2).
 
-**Suppressed messages:** 109 warnings and 136 hints. Every entry matches at least once. Compared with commit `cf1c073`, the R5 document bundle entry matches five more DiagnosticReports, which are no longer referenced from their Composition (3.1-1), and the pinned-version entry matches eight more canonicals, from the uncertainty extensions on the quantities of Ratio and Range (3.1-3).
+**Suppressed messages:** 108 warnings and 133 hints (2026-10-04: 109 and 136). Every entry matches at least once. Compared with commit `cf1c073`, the R5 document bundle entry matches five more DiagnosticReports, which are no longer referenced from their Composition (3.1-1), and the pinned-version entry matches eight more canonicals, from the uncertainty extensions on the quantities of Ratio and Range (3.1-3).
 
 **Suppressions that hide fixable issues or carry a wrong justification:**
 
@@ -176,7 +179,7 @@ This section is based on the IG Publisher 2.3.4 run of 2026-10-04 19:22, built a
 | 7-4 | Low | 11, 23, 35, 73, 75, 76, 83 | Single-use entries that hide example defects: v3 specimen type and 'Specimen Types' binding (IT-CDA2FHIR), 'Laboratory Code' (Hepatitis panel), 'Laboratory Order' (POC ServiceRequest), "isn't reachable" for the POC ServiceRequest (see 5-7; the entry is justified for the five DiagnosticReports it also covers), `cs-CZ` not in Common Languages (SimpleChemistry, use `cs`), `http://hospital.org/lis-order` (5-19). | Fix the examples (5-7, 5-17, 5-19, 5-20) and delete the entries. |
 | 7-5 | Low | 62, 70 | Two headings without entries: their text is replaced by the next heading, so they never show as a reason. | Remove them. |
 
-The other entries are justified: the unknown code system and identifier system entries cover real national and external systems and the deliberately local hepatitis codes, the `it-IT`/`cs-CZ` display hints are expected for non-English documents, the cross-version "multiple matching profiles" entries and the deprecated-`pattern` entry (3.1-11) are tooling or R5-compatibility notes, and the 'Cow'/'Turkey' displays are chosen on purpose.
+The other entries are justified: the unknown code system and identifier system entries cover real national and external systems and the deliberately local hepatitis codes, the `it-IT`/`cs-CZ` display hints are expected for non-English documents (the `cs-CZ` displays that the Publisher reports as errors cannot be suppressed, see 1-6), the cross-version "multiple matching profiles" entries and the deprecated-`pattern` entry (3.1-11) are tooling or R5-compatibility notes, and the 'Cow'/'Turkey' displays are chosen on purpose.
 
 ---
 
@@ -196,9 +199,10 @@ The other entries are justified: the unknown code system and identifier system e
 
 ## 9. Suggested order of work
 
-1. The suppressions in §7 that do not depend on the example issues #146 to #154.
-2. Low items as time allows.
-3. If anything changes after 2026-10-04, repeat the comparison with the published 2.0.0 package for `changes.md` (see 1-1).
+1. Fix the displays in `SimpleChemistryResultReport` and rebuild (1-6).
+2. The suppressions in §7 that do not depend on the example issues #146 to #154.
+3. Low items as time allows.
+4. If anything changes after 2026-10-04, repeat the comparison with the published 2.0.0 package for `changes.md` (see 1-1).
 
 ---
 
