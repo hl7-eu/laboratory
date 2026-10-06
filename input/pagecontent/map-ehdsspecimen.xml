@@ -8,7 +8,14 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+          <strong>Ongoing alignment:</strong> The mappings are based on the Xt-EHR models 1.0.0. The models may change with the EHDS implementing acts; this guide will follow such changes.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark model elements that this guide cannot represent yet.
         </div>
       </div>
     </div>
@@ -25,7 +32,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSSpecimen.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSSpecimen.html" target="_blank">
             EHDSSpecimen
           </a>
         </li>
@@ -115,9 +122,9 @@
             <td>Whether specimen is grouped/pooled.</td>
             <td>no-map</td>
             <td>Specimen</td>
-            <td>combined</td>
-            <td>Combined specimen indicator.</td>
-            <td>Missing element</td>
+            <td>-</td>
+            <td></td>
+            <td>R4 Specimen has no such element. Specimen.combined exists only in R5.</td>
           </tr>
           <tr>
             <td>collection</td>
@@ -131,11 +138,11 @@
           <tr>
             <td>collection.performer[x]</td>
             <td>Collector person/organization.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Specimen</td>
-            <td>collection.collector</td>
+            <td>collection.collector, collection.collector.extension:collector</td>
             <td>Who collected specimen.</td>
-            <td></td>
+            <td>A health professional is referenced in collection.collector (Practitioner or PractitionerRole). A patient or related person is referenced in the alternate-reference extension on collection.collector. FHIR R4 has no direct target for an organisation; reference a PractitionerRole of that organisation.</td>
           </tr>
           <tr>
             <td>collection.collected[x]</td>
@@ -169,18 +176,18 @@
             <td>Device used for collection.</td>
             <td>no-map</td>
             <td>Specimen</td>
-            <td>collection.device</td>
-            <td>Collection device.</td>
+            <td>-</td>
             <td></td>
+            <td>R4 Specimen has no such element. Specimen.collection.device exists only in R5.</td>
           </tr>
           <tr>
             <td>collection.bodySite</td>
             <td>Anatomic location of collection.</td>
             <td>equivalent</td>
             <td>Specimen</td>
-            <td>extension:bodySite</td>
-            <td>Collection site/body structure.</td>
-            <td></td>
+            <td>collection.bodySite.extension:bodySite</td>
+            <td>Body structure the specimen was collected from.</td>
+            <td>R5 cross-version extension carrying a reference to a BodyStructure, since collection.bodySite in FHIR R4 is a CodeableConcept and cannot reference a BodyStructure.</td>
           </tr>
           <tr>
             <td>receivedDate</td>

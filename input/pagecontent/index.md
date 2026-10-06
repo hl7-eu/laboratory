@@ -27,11 +27,11 @@
 ### The Laboratory Domain
 Clinical laboratory results play an important role in diagnosis, treatment, and follow-up of patients.
 The availability of high quality test results, and the capacity of sharing them, is therefore essential being often the basis for clinical decision making.
-For this reason the Laboratory has been selected as one of the priority domains for the European EHR eXchange Format (E-EHRxF).
+For this reason the Laboratory has been selected as one of the priority domains for the European electronic health record exchange format (E-EHRxF).
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
+Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Laboratory Report** in the **European** Context, coherently with the EHDS logical information models of the Xt-EHR Joint Action, which were developed from the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
 
 This Implementation Guide applies to laboratory reports within the core fields of in-vitro diagnostics, for example clinical biochemistry, haematology, immunohematology, microbiology, immunology, while leaving out some specialised laboratory domains like histopathology or medical genetics.
 This version focuses only on common rules that apply to all the in-scope situations, without specifying specialized domain-specific profiles, as for example microbiology profiles.
@@ -39,7 +39,7 @@ This version focuses only on common rules that apply to all the in-scope situati
 This guide is not limited to test results performed by clinical laboratories on Human specimens (from human subject), but it considers also results on non-human materials or living subjects; or non-human specimens paired with a human subject. Derived guides may restrict the scope as needed (e.g. limiting the scope to well-identified human beings)
 
 ### Purpose
-The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
+The goal of this Implementation Guide is to define an European standard for the Laboratory Report to facilitate the harmonization among the national initiatives and prepare the ground for the European electronic health record exchange format (E-EHRxF).
 
 This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
 

@@ -8,17 +8,14 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.</div>
+          <strong>Ongoing alignment:</strong> The mappings are based on the Xt-EHR models 1.0.0. The models may change with the EHDS implementing acts; this guide will follow such changes.</div>
       </div>
     </div>
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Yellow row/cells:</strong> In this ballot publication, some row/cells of the
-          mapping table have been left in yellow to indicate areas requiring further review or
-          refinement; including feedback from the Xt-EHR joint action (see note above). These
-          highlights will be addressed in subsequent updates to ensure accuracy and completeness of
-          the mappings. </div>
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark model elements that this guide cannot represent yet.
+        </div>
       </div>
     </div>
     <h3>EHDSLaboratoryObservation -> ObservationResultsLaboratoryEu</h3>
@@ -35,7 +32,7 @@
         <li>
           <strong>Source logical model:</strong>
           <a
-            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html"
+            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSLaboratoryObservation.html"
             target="_blank">
             EHDSLaboratoryObservation
           </a>
@@ -96,14 +93,14 @@
             <td>Business identifier for this observation.</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.author[x]</td>
             <td>Author(s) who issued the resource.</td>
-            <td>no-map</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td></td>
-            <td></td>
-            <td>Observation lacks a dedicated recorder.</td>
+            <td>performer</td>
+            <td>Who is responsible for the observation.</td>
+            <td>Observation has no dedicated author. Usually the performer is also the author; if the two have to be distinguished, the performerFunction extension can be used.</td>
           </tr>
           <tr>
             <td>header.date</td>
@@ -131,7 +128,7 @@
             <td>Observation</td>
             <td>-</td>
             <td></td>
-            <td>No core element; use an extension if the source is required.</td>
+            <td>Observation has no element for the source of the information.</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -272,8 +269,8 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>result.uncertaint.value</td>
-            <td>Measurement uncertainty type and interval.</td>
+            <td>result.uncertainty.value</td>
+            <td>The numerical value of the measurement uncertainty.</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -310,6 +307,69 @@
             <td></td>
           </tr>
           <tr>
+            <td>referenceRange.low</td>
+            <td>Low limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.low</td>
+            <td>Low range, if relevant.</td>
+            <td>The bound is inclusive unless modifierExtension:lowComparator states otherwise.</td>
+          </tr>
+          <tr>
+            <td>referenceRange.high</td>
+            <td>High limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.high</td>
+            <td>High range, if relevant.</td>
+            <td>The bound is inclusive unless modifierExtension:highComparator states otherwise.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>referenceRange.normalValue</td>
+            <td>Normal value, if relevant for the reference range.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>R4 Observation has no such element. Observation.referenceRange.normalValue exists only in R5.</td>
+          </tr>
+          <tr>
+            <td>referenceRange.type</td>
+            <td>Type of reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.type</td>
+            <td>Reference range qualifier.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.appliesTo</td>
+            <td>Target population the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.appliesTo</td>
+            <td>Reference range population.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.age</td>
+            <td>Age range the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.age</td>
+            <td>Applicable age range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.text</td>
+            <td>Text-based reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.text</td>
+            <td>Text based reference range in an observation.</td>
+            <td></td>
+          </tr>
+          <tr>
             <td>interpretation</td>
             <td>Reference interval and result interpretation.</td>
             <td>equivalent</td>
@@ -337,7 +397,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>component.code</td>
+            <td>component.type</td>
             <td>Code representing the observation.</td>
             <td>equivalent</td>
             <td>Observation</td>
@@ -382,8 +442,8 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>component.result.uncertaint.value</td>
-            <td>Measurement uncertainty type and interval.</td>
+            <td>component.result.uncertainty.value</td>
+            <td>The numerical value of the measurement uncertainty.</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -417,6 +477,69 @@
             <td>Observation</td>
             <td>component.referenceRange</td>
             <td>Guidance for interpreting the component value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.low</td>
+            <td>Low limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.low</td>
+            <td>Low range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.high</td>
+            <td>High limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.high</td>
+            <td>High range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>component.referenceRange.normalValue</td>
+            <td>Normal value, if relevant for the reference range.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>R4 Observation has no such element. Observation.component.referenceRange.normalValue exists only in R5.</td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.type</td>
+            <td>Type of reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.type</td>
+            <td>Reference range qualifier.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.appliesTo</td>
+            <td>Target population the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.appliesTo</td>
+            <td>Reference range population.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.age</td>
+            <td>Age range the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.age</td>
+            <td>Applicable age range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.text</td>
+            <td>Text-based reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.text</td>
+            <td>Text based reference range in an observation.</td>
             <td></td>
           </tr>
           <tr>
@@ -469,7 +592,7 @@
           </tr>
           <tr>
             <td>calibrator</td>
-            <td>Calibrator used for the measurement.</td>
+            <td>Reference material or higher-order calibrator used for the measurement.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>extension:certifiedRefMaterialCodeable</td>
@@ -478,39 +601,39 @@
           </tr>
            <tr>
             <td>calibrator</td>
-            <td>Calibrator used for the measurement.</td>
+            <td>Reference material or higher-order calibrator used for the measurement.</td>
             <td>related-to</td>
             <td>Observation</td>
-            <td>extension:certifiedRefMaterialIdentifier</td>
+            <td>extension:certifiedRefMaterialIdentifer</td>
             <td>Certified Reference Material: Identifier</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>accreditationStatus</td>
             <td>Accreditation status of the laboratory for the observation.</td>
-            <td>related-to</td>
-            <td>Organization</td>
-            <td>extension:qualification</td>
-            <td></td>
-            <td>Observation.performer (of type Organization), or Observation.performer.organization if performer is of type PractitionerRole. Organization.qualification is preadopted from R5.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>extension:accredited</td>
+            <td>Whether this laboratory test was/is accredited.</td>
+            <td>Laboratory Accredited extension (boolean), defined in the HL7 Europe Extensions IG.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>previousResults</td>
             <td>Previous results of the same observation.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>extension:supportingInfo</td>
             <td>Other information that may be relevant to this event.</td>
-            <td></td>
+            <td>References earlier results of the same test.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>pointOfCareTest</td>
             <td>Indicates if the observation is a point-of-care test.</td>
-            <td>related-to</td>
+            <td>no-map</td>
             <td>Observation</td>
-            <td>category</td>
-            <td>Observation Classification</td>
+            <td>-</td>
             <td></td>
+            <td>This guide defines no element or code for point-of-care testing.</td>
           </tr>
 
         </tbody>
