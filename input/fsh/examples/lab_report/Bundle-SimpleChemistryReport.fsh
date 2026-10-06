@@ -71,8 +71,8 @@ Usage: #inline
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
 * identifier.assigner.display = "Regione Lazio"
 * status = #final
-* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
-* type = http://loinc.org#11502-2 "Laboratory report"
+* category[studyType] = $loinc#18719-5 "biochemické laboratorní vyšetření"
+* type = http://loinc.org#11502-2 "laboratorní zpráva"
 * type.text = "Laboratorní zpráva"
 * subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
 * date = "2022-03-30T11:24:26+01:00"
@@ -93,7 +93,7 @@ Usage: #inline
 * event.period.start = "2022-03-24T11:24:26+01:00"
 * event.detail = Reference(urn:uuid:1b4b120e-0371-4878-b4c9-b69434e84c72)
 * section[0].title = "Laboratory examinations"
-* section[0].code = $loinc#26436-6 "Laboratory studies (set)"
+* section[0].code = $loinc#26436-6 "laboratorní vyšetření"
 * section[0].code.text = "Laboratory studies"
 * section[0].text.status = #generated
 * section[0].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratory examinations</div>"
@@ -113,7 +113,7 @@ Usage: #inline
 * section[0].section[=].entry = Reference(urn:uuid:763f7902-8103-4d10-8bd1-546a726d43ee)
 
 * section[0].section[+].title = "Blood examinations"  // this title should be aligned with ibservation codes
-* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 "Chemistry studies (set)"
+* section[0].section[=].code.coding[+] = http://loinc.org#18719-5 "biochemické laboratorní vyšetření"
 * section[0].section[=].code.text = "Examination of blood"
 * section[0].section[=].text.status = #generated
 // ToDo: correct html text

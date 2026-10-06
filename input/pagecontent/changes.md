@@ -49,6 +49,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
   * FHIR-57055: Added `obs-focus-substance-example` and `obs-focus-bdp-example`, results about a substance and about a blood unit rather than about the patient directly.
   * FHIR-57208: Added `obs-status-reason-example`, a cancelled result carrying the reason for that status.
   * FHIR-57208 / FHIR-57444: Added `dr-status-reason-media-example`, a corrected report carrying the reason for that status and the additional data in `DiagnosticReport.media`, together with the result it is issued for.
+  * Replaced the English LOINC displays in the Composition of `SimpleChemistryResultReport` by the Czech displays. The Composition has the language cs-CZ, and the terminology server validates the displays of 18719-5, 26436-6 and 11502-2 against their Czech designations.
 
 * Dependencies
   * Updated `hl7.fhir.eu.base` from 2.0.0 to 2.0.1 and `hl7.fhir.eu.extensions.r4` from 1.3.0 to 1.3.1. Base 2.0.1 provides the `Observation.focus` targets added for FHIR-57055, and Extensions 1.3.1 defines the Laboratory Accredited extension moved for FHIR-57043.
