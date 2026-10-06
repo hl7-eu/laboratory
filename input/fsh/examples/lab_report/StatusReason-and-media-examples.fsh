@@ -40,7 +40,7 @@ Usage: #example
 * result[+] = Reference(obs-corrected-glucose-example)
 * media
   * comment = "Scanned instrument printout the corrected result is based on."
-  * link.display = "Linked through the cross-version extension 'link'"
+  * link.display = "Linked through the alternate-reference extension 'link'"
   * link.extension[link].valueReference = Reference(SmearImageDocumentReferenceExample)
 
 Instance: SmearImageDocumentReferenceExample

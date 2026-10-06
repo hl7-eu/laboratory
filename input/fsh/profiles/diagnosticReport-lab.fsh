@@ -107,8 +107,8 @@ This guidance is enforced by the invariant dr-comp-identifier, listed in the con
     * type 0..0
     * identifier 0..0
     * display 1..1
-      * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the cross-version extension 'link'."
-      * ^short = "Text stating use of cross-version extension 'link'"
+      * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the alternate-reference extension 'link'."
+      * ^short = "Text stating use of the alternate-reference extension 'link'"
     * extension contains $alternate-reference named link 1..1
     * extension[link]
       * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
