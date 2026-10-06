@@ -15,7 +15,7 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark model elements that this guide cannot represent yet.
         </div>
       </div>
     </div>
@@ -122,9 +122,9 @@
             <td>Whether specimen is grouped/pooled.</td>
             <td>no-map</td>
             <td>Specimen</td>
-            <td>combined</td>
-            <td>Combined specimen indicator.</td>
-            <td>Missing element</td>
+            <td>-</td>
+            <td></td>
+            <td>R4 Specimen has no such element. Specimen.combined exists only in R5.</td>
           </tr>
           <tr>
             <td>collection</td>
@@ -176,9 +176,9 @@
             <td>Device used for collection.</td>
             <td>no-map</td>
             <td>Specimen</td>
-            <td>collection.device</td>
-            <td>Collection device.</td>
+            <td>-</td>
             <td></td>
+            <td>R4 Specimen has no such element. Specimen.collection.device exists only in R5.</td>
           </tr>
           <tr>
             <td>collection.bodySite</td>
