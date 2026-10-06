@@ -9,7 +9,7 @@ Description: "DiagnosticReport used to represent an entry of a Laboratory Report
 * . ^short = "Laboratory Report DiagnosticReport"
 * . ^definition = "Laboratory Report DiagnosticReport"
 
-// TODO: PW: should be change to 0..1
+// stays 1..1: with the R5 rules for document bundles pre-adopted (FHIR-57335) this link makes the report part of the document
 * extension[DiagnosticReportCompositionR5] 1..1
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
@@ -53,7 +53,7 @@ Commented based on the suggestion form the 2023-05-26 meeting see https://github
 * identifier
   * ^comment = """Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order.
 
-Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists.
+Composition.identifier SHALL have the same system and value as one of the DiagnosticReport.identifier, if at least one exists.
 
 This guidance is enforced by the invariant dr-comp-identifier, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
@@ -107,9 +107,9 @@ This guidance is enforced by the invariant dr-comp-identifier, listed in the con
     * type 0..0
     * identifier 0..0
     * display 1..1
-      * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the cross-version extension 'link'."
-      * ^short = "Text stating use of cross-version extension 'link'"
-    * extension contains $alternate-reference named link 0..1
+      * ^definition = "Text stating that instead of a reference to a Media resource, a DocumentReference resource is linked through the alternate-reference extension 'link'."
+      * ^short = "Text stating use of the alternate-reference extension 'link'"
+    * extension contains $alternate-reference named link 1..1
     * extension[link]
       * ^definition = "Reference to a DocumentReference containing additional information/attachments associated with this report."
       * ^short = "DocumentReference containing additional information/attachments"

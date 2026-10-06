@@ -14,6 +14,9 @@ A set of new "priorities" services, beyond Patient Summary and ePrescription, ha
 
 All the new services will be based on HL7 FHIR.
 
+{% comment %}
+TODO: bring this section up to date. The MyHealth@EU wave 8 (2024-25) plan and the timeline figure "as of the date of this publication" are outdated; MyHealth@EU has since adopted this guide for the cross-border laboratory report service (see https://www.xt-ehr.eu/fhir/models/en/overview-medicaltestresult.html). The EHDS is no longer a proposal: Regulation (EU) 2025/327 (https://eur-lex.europa.eu/eli/reg/2025/327/oj) is in force since 26 March 2025.
+{% endcomment %}
 The Laboratory Report is planned to be the first implemented new service and foreseen for MyHealth@EU wave 8 (2024-25).
 
 The following picture provides a planning overview for the new cross-border services as of at the date of this publication.

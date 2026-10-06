@@ -44,6 +44,7 @@ In this case:
   * Status set to “amended” when changes were made to patient demographics or other parts of the report, that don't affect the result value (with units, if applicable) or result interpretation
   * Status set to “corrected” when changes are made to the result value (with units, if applicable) or result interpretation
   * Status set to “appended” when new results or interpretations are being added
+* The reason for the modification SHOULD be given in the statusReason extension of the DiagnosticReport and of each changed result (`Observation.extension:statusReason`). See the [corrected report example](DiagnosticReport-dr-status-reason-media-example.html).
 
 #### Cancelled Laboratory Report
 
@@ -51,7 +52,7 @@ In this case:
 
 In such case:
 * the status value should be updated to “cancelled” and 
-* the specific details given - preferably as coded values - in the DiagnosticReport.extension:event-statusReason element.
+* the reason SHOULD be given - preferably as coded values - in the statusReason extension of the DiagnosticReport (`DiagnosticReport.extension:statusReason`).
 * Additional information may be provided in the result comment element as well.
 
 
@@ -62,3 +63,4 @@ In such case:
 
 In this case:
 * the laboratory report status should be set to “entered-in-error”.
+* the reason SHOULD be given in the statusReason extension of the DiagnosticReport and of each result.
