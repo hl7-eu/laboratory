@@ -128,7 +128,7 @@
             <td>Observation</td>
             <td>-</td>
             <td></td>
-            <td>No core element; use an extension if the source is required.</td>
+            <td>Observation has no element for the source of the information.</td>
           </tr>
           <tr>
             <td>header.language</td>

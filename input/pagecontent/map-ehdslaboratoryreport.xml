@@ -399,7 +399,7 @@
             <td>Sex parameter for clinical use.</td>
             <td>related-to</td>
             <td>Patient</td>
-            <td>extension:sexParameterForClinicalUse</td>
+            <td>extension:sex-for-clinical-use</td>
             <td>Sex parameter for clinical use.</td>
             <td>PatientEuCore of HL7 Europe Base profiles this extension.</td>
           </tr>
@@ -491,7 +491,7 @@
             <td>DiagnosticReport</td>
             <td>media.link.extension:link</td>
             <td>DocumentReference containing additional information or attachments associated with the report.</td>
-            <td>Each attachment is a DocumentReference, referenced through the cross-version extension link on media.link. The rendered report itself maps from presentedForm.</td>
+            <td>Each attachment is a DocumentReference, referenced through the alternate-reference extension on media.link. The rendered report itself maps from presentedForm.</td>
           </tr>
         </tbody>
       </table>
