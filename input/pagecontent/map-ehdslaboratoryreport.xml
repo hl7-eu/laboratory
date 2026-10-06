@@ -12,13 +12,6 @@
         </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
-        </div>
-      </div>
-    </div>
 
     <h3>EHDSLaboratoryReport -> Bundle, Composition, DiagnosticReport, ServiceRequest</h3>
     <a> </a>
@@ -255,23 +248,23 @@
             <td>When legal authentication was recorded.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.eventType</td>
-            <td>Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.)..</td>
+            <td>Categorisation of the event covered by the document (e.g. laboratory study types, imaging study types including modality, etc.).</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>category</td>
-            <td>Report Category</td>
-            <td>The type of event should be event.code, but the description seems to be a report classification.</td>
+            <td>category:studyType</td>
+            <td>Grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study).</td>
+            <td>The model gives laboratory study types as an example. This guide carries them in the studyType slice, which DiagnosticReport.category has as well.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.serviceSpecialty</td>
             <td>Clinical/laboratory specialty context.</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>category</td>
-            <td>Document categorization.</td>
-            <td>Target usage may vary by implementation constraints.</td>
+            <td>category:specialty</td>
+            <td>Clinical domain of the laboratory (e.g. microbiology, toxicology, chemistry).</td>
+            <td>The slice is bound to LabSpecialtyEuVs. DiagnosticReport.category has the same slice.</td>
           </tr>
           <tr>
             <td>header.custodian</td>
@@ -310,14 +303,14 @@
             <td>Structured narrative/data sections of the report.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>body.orderInformation</td>
             <td>Order/request context of the report.</td>
             <td>related-to</td>
             <td>ServiceRequest</td>
             <td>.</td>
             <td>Requested service represented as ServiceRequestLabEu.</td>
-            <td>ServiceRequest referred in the DiagnosticReport as basedOn.</td>
+            <td>Each order is a ServiceRequestLabEu, which DiagnosticReport.basedOn references. The child elements map to elements of that ServiceRequest.</td>
           </tr>
           <tr>
             <td>body.orderInformation.orderId</td>
@@ -372,6 +365,60 @@
             <td>ServiceRequest</td>
             <td>supportingInfo</td>
             <td>Container for supporting clinical context.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.supportingInformation.observation</td>
+            <td>Clinical findings and other observations.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Reference to an Observation.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.supportingInformation.condition</td>
+            <td>Condition that may influence the service or result interpretation.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Reference to a Condition.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.supportingInformation.medicationAdministration</td>
+            <td>Medication administered before ordering the service.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Reference to a MedicationAdministration.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.supportingInformation.sexForClinicalUse</td>
+            <td>Sex parameter for clinical use.</td>
+            <td>related-to</td>
+            <td>Patient</td>
+            <td>extension:sex-for-clinical-use</td>
+            <td>Sex parameter for clinical use.</td>
+            <td>PatientEuCore of HL7 Europe Base profiles this extension.</td>
+          </tr>
+          <tr>
+            <td>body.supportingInformation.vaccination</td>
+            <td>Vaccination history of the patient.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Reference to an Immunization.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.supportingInformation.otherSupportingInformation</td>
+            <td>Any other relevant supporting information.</td>
+            <td>equivalent</td>
+            <td>ServiceRequest</td>
+            <td>supportingInfo</td>
+            <td>Reference to any other resource.</td>
             <td></td>
           </tr>
           <tr>
@@ -437,14 +484,14 @@
             <td>Diagnostic interpretation summary.</td>
             <td>When implemented in the DiagnosticReport profile instance.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>attachments</td>
             <td>Report attachments.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>DiagnosticReport</td>
-            <td>presentedForm / media.link</td>
-            <td>Attached reports and additional media.</td>
-            <td>May include PDF, image, or other renderable payload.</td>
+            <td>media.link.extension:link</td>
+            <td>DocumentReference containing additional information or attachments associated with the report.</td>
+            <td>Each attachment is a DocumentReference, referenced through the alternate-reference extension on media.link. The rendered report itself maps from presentedForm.</td>
           </tr>
         </tbody>
       </table>

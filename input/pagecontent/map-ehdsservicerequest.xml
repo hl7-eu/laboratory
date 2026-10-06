@@ -15,7 +15,7 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark model elements that this guide cannot represent yet.
         </div>
       </div>
     </div>
@@ -90,14 +90,14 @@
             <td>Placer/filler order identifiers.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.author[x]</td>
             <td>Author of the resource.</td>
             <td>related-to</td>
             <td>ServiceRequest</td>
             <td>requester</td>
             <td>Requester of the service.</td>
-            <td>Closest fit; semantic alignment may vary by workflow.</td>
+            <td>EHDSServiceRequest has no separate requester element, so the author of the request maps to its requester.</td>
           </tr>
           <tr>
             <td>header.date</td>
@@ -117,6 +117,15 @@
             <td>Request lifecycle state.</td>
             <td></td>
           </tr>
+          <tr class="highlight-yellow">
+            <td>header.source</td>
+            <td>Source of the information (e.g. patient, proxy).</td>
+            <td>no-map</td>
+            <td>ServiceRequest</td>
+            <td>-</td>
+            <td></td>
+            <td>ServiceRequest has no element for the source of the information.</td>
+          </tr>
           <tr>
             <td>header.language</td>
             <td>Language of the resource.</td>
@@ -127,14 +136,14 @@
             <td></td>
           </tr>
 
-          <tr class="highlight-yellow">
+          <tr>
             <td>description</td>
             <td>Textual description of the requested service.</td>
             <td>related-to</td>
             <td>ServiceRequest</td>
-            <td>text</td>
-            <td></td>
-            <td></td>
+            <td>code.text</td>
+            <td>Text representation of the requested service.</td>
+            <td>If the description adds information beyond the requested service, ServiceRequest.note can be used.</td>
           </tr>
           <tr>
             <td>code</td>

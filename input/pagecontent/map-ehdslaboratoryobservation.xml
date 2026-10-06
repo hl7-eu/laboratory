@@ -14,7 +14,7 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Yellow rows:</strong> Rows highlighted in yellow mark mappings that still need review or refinement, including feedback from the Xt-EHR Joint Action. They will be addressed in a later version of this guide.
+          <strong>Yellow rows:</strong> Rows highlighted in yellow mark model elements that this guide cannot represent yet.
         </div>
       </div>
     </div>
@@ -93,14 +93,14 @@
             <td>Business identifier for this observation.</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.author[x]</td>
             <td>Author(s) who issued the resource.</td>
-            <td>no-map</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td></td>
-            <td></td>
-            <td>Observation lacks a dedicated recorder.</td>
+            <td>performer</td>
+            <td>Who is responsible for the observation.</td>
+            <td>Observation has no dedicated author. Usually the performer is also the author; if the two have to be distinguished, the performerFunction extension can be used.</td>
           </tr>
           <tr>
             <td>header.date</td>
@@ -128,7 +128,7 @@
             <td>Observation</td>
             <td>-</td>
             <td></td>
-            <td>No core element; use an extension if the source is required.</td>
+            <td>Observation has no element for the source of the information.</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -307,6 +307,69 @@
             <td></td>
           </tr>
           <tr>
+            <td>referenceRange.low</td>
+            <td>Low limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.low</td>
+            <td>Low range, if relevant.</td>
+            <td>The bound is inclusive unless modifierExtension:lowComparator states otherwise.</td>
+          </tr>
+          <tr>
+            <td>referenceRange.high</td>
+            <td>High limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.high</td>
+            <td>High range, if relevant.</td>
+            <td>The bound is inclusive unless modifierExtension:highComparator states otherwise.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>referenceRange.normalValue</td>
+            <td>Normal value, if relevant for the reference range.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>R4 Observation has no such element. Observation.referenceRange.normalValue exists only in R5.</td>
+          </tr>
+          <tr>
+            <td>referenceRange.type</td>
+            <td>Type of reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.type</td>
+            <td>Reference range qualifier.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.appliesTo</td>
+            <td>Target population the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.appliesTo</td>
+            <td>Reference range population.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.age</td>
+            <td>Age range the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.age</td>
+            <td>Applicable age range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.text</td>
+            <td>Text-based reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>referenceRange.text</td>
+            <td>Text based reference range in an observation.</td>
+            <td></td>
+          </tr>
+          <tr>
             <td>interpretation</td>
             <td>Reference interval and result interpretation.</td>
             <td>equivalent</td>
@@ -417,6 +480,69 @@
             <td></td>
           </tr>
           <tr>
+            <td>component.referenceRange.low</td>
+            <td>Low limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.low</td>
+            <td>Low range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.high</td>
+            <td>High limit of the reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.high</td>
+            <td>High range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>component.referenceRange.normalValue</td>
+            <td>Normal value, if relevant for the reference range.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>R4 Observation has no such element. Observation.component.referenceRange.normalValue exists only in R5.</td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.type</td>
+            <td>Type of reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.type</td>
+            <td>Reference range qualifier.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.appliesTo</td>
+            <td>Target population the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.appliesTo</td>
+            <td>Reference range population.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.age</td>
+            <td>Age range the reference range applies to.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.age</td>
+            <td>Applicable age range, if relevant.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.text</td>
+            <td>Text-based reference range.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>component.referenceRange.text</td>
+            <td>Text based reference range in an observation.</td>
+            <td></td>
+          </tr>
+          <tr>
             <td>component.interpretation</td>
             <td>Component interpretation.</td>
             <td>equivalent</td>
@@ -491,23 +617,23 @@
             <td>Whether this laboratory test was/is accredited.</td>
             <td>Laboratory Accredited extension (boolean), defined in the HL7 Europe Extensions IG.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>previousResults</td>
             <td>Previous results of the same observation.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>extension:supportingInfo</td>
             <td>Other information that may be relevant to this event.</td>
-            <td></td>
+            <td>References earlier results of the same test.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>pointOfCareTest</td>
             <td>Indicates if the observation is a point-of-care test.</td>
-            <td>related-to</td>
+            <td>no-map</td>
             <td>Observation</td>
-            <td>category</td>
-            <td>Observation Classification</td>
+            <td>-</td>
             <td></td>
+            <td>This guide defines no element or code for point-of-care testing.</td>
           </tr>
 
         </tbody>
