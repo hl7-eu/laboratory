@@ -4,77 +4,76 @@ skinparam linetype ortho
 scale 0.5
 
 
-artifact "Bundle: Laboratory Report" as bundle
-artifact "Composition: Laboratory Report" as composition
-artifact "DiagnosticReport: Laboratory Report" as diagnosticReport
-artifact "Observation Results: laboratory" as result
-artifact "RelatedPerson: Animal" as animalSpecimen
-artifact "Patient: Person" as humanPatient
-artifact "Practitioner: Laboratory Report" as Practitioner
-artifact "PractitionerRole: Laboratory Report" as PractitionerRole
-artifact "ServiceRequest: Laboratory Order" as ServiceRequest
-artifact "Specimen: Laboratory" as Specimen
-artifact "Body structure: Laboratory" as bodyStructure
-artifact "Substance: Specimen Additive Substance" as Substance
+artifact "Bundle: Laboratory Report" as doc_bundle
+artifact "Composition: Laboratory Report" as doc_composition
+artifact "DiagnosticReport: Laboratory Report" as doc_diagnosticReport
+artifact "Observation Results: laboratory" as doc_result
+artifact "RelatedPerson: Animal" as doc_animalSpecimen
+artifact "Patient: Person" as doc_humanPatient
+artifact "Practitioner: Laboratory Report" as doc_Practitioner
+artifact "PractitionerRole: Laboratory Report" as doc_PractitionerRole
+artifact "ServiceRequest: Laboratory Order" as doc_ServiceRequest
+artifact "Specimen: Laboratory" as doc_Specimen
+artifact "Body structure: Laboratory" as doc_bodyStructure
+artifact "Substance: Specimen Additive Substance" as doc_Substance
 
-artifact Organization
-artifact Encounter
-artifact Location
-artifact Provenance
-artifact Coverage
-artifact Device
-
-
-url of bundle is  [[StructureDefinition-Bundle-eu-lab.html]]
-url of composition is  [[StructureDefinition-Composition-eu-lab.html]]
-url of diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
-url of result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
-url of humanPatient [[https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
-url of animalSpecimen [[StructureDefinition-animal-specimen-eu-lab.html]]
-url of Practitioner [[https://hl7.eu/fhir/base/StructureDefinition-practitioner-eu-core.html]]
-url of PractitionerRole [[https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
-url of ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
-url of Specimen [[StructureDefinition-Specimen-eu-lab.html]]
-url of Substance [[StructureDefinition-Substance-additive-eu-lab.html]]
-url of bodyStructure [[https://hl7.eu/fhir/base/StructureDefinition-bodyStructure-eu-core.html]]
-
-bundle o-- composition
-bundle o-- diagnosticReport
-bundle o-- result
-bundle o-- humanPatient
-bundle o-- animalSpecimen
-bundle o-- composition
-bundle o-- Practitioner
-bundle o-- PractitionerRole
-bundle o-- ServiceRequest
-bundle o-- Specimen
-bundle o-- Substance
-bundle o-- bodyStructure
-bundle o-- Organization
-bundle o-- Encounter
-bundle o-- Location
-bundle o-- Provenance
-bundle o-- Coverage
-bundle o-- Device
-
-composition --> result
-composition --> animalSpecimen
-composition --> humanPatient
-composition --> Practitioner
-composition --> PractitionerRole
-composition --> ServiceRequest
-composition --> Specimen
-composition --> Location
-composition --> Encounter
+artifact "Organization" as doc_Organization
+artifact "Encounter" as doc_Encounter
+artifact "Location" as doc_Location
+artifact "Provenance" as doc_Provenance
+artifact "Coverage" as doc_Coverage
+artifact "Device" as doc_Device
 
 
-diagnosticReport --> composition
-Specimen --> Substance
-Specimen --> bodyStructure
-PractitionerRole --> Practitioner
-PractitionerRole --> Organization
-result --> Device
-ServiceRequest --> Coverage
+url of doc_bundle is  [[StructureDefinition-Bundle-eu-lab.html]]
+url of doc_composition is  [[StructureDefinition-Composition-eu-lab.html]]
+url of doc_diagnosticReport is  [[StructureDefinition-DiagnosticReport-eu-lab.html]]
+url of doc_result [[StructureDefinition-Observation-resultslab-eu-lab.html]]
+url of doc_humanPatient [[https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
+url of doc_animalSpecimen [[StructureDefinition-animal-specimen-eu-lab.html]]
+url of doc_Practitioner [[https://hl7.eu/fhir/base/StructureDefinition-practitioner-eu-core.html]]
+url of doc_PractitionerRole [[https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
+url of doc_ServiceRequest [[StructureDefinition-ServiceRequest-eu-lab.html]]
+url of doc_Specimen [[StructureDefinition-Specimen-eu-lab.html]]
+url of doc_Substance [[StructureDefinition-Substance-additive-eu-lab.html]]
+url of doc_bodyStructure [[https://hl7.eu/fhir/base/StructureDefinition-bodyStructure-eu-core.html]]
+
+doc_bundle o-- doc_diagnosticReport
+doc_bundle o-- doc_result
+doc_bundle o-- doc_humanPatient
+doc_bundle o-- doc_animalSpecimen
+doc_bundle o-- doc_composition
+doc_bundle o-- doc_Practitioner
+doc_bundle o-- doc_PractitionerRole
+doc_bundle o-- doc_ServiceRequest
+doc_bundle o-- doc_Specimen
+doc_bundle o-- doc_Substance
+doc_bundle o-- doc_bodyStructure
+doc_bundle o-- doc_Organization
+doc_bundle o-- doc_Encounter
+doc_bundle o-- doc_Location
+doc_bundle o-- doc_Provenance
+doc_bundle o-- doc_Coverage
+doc_bundle o-- doc_Device
+
+doc_composition --> doc_result
+doc_composition --> doc_animalSpecimen
+doc_composition --> doc_humanPatient
+doc_composition --> doc_Practitioner
+doc_composition --> doc_PractitionerRole
+doc_composition --> doc_ServiceRequest
+doc_composition --> doc_Specimen
+doc_composition --> doc_Location
+doc_composition --> doc_Encounter
+
+
+doc_diagnosticReport --> doc_composition
+doc_Specimen --> doc_Substance
+doc_Specimen --> doc_bodyStructure
+doc_PractitionerRole --> doc_Practitioner
+doc_PractitionerRole --> doc_Organization
+doc_result --> doc_Device
+doc_ServiceRequest --> doc_Coverage
 
 
 @enduml
