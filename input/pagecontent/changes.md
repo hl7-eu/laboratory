@@ -30,6 +30,7 @@ Version 2.1.0 is an STU update of the 2.0.0 release. Alongside the corrections l
   * Moved the `iso21090-uncertainty` and `iso21090-uncertaintyType` extensions in `RatioEuLab` and `RangeEuLab` from the data type root to `numerator` and `denominator` and to `low` and `high`. Both extensions are defined for Quantity only, so they could not be used where the profiles placed them ([#54](https://github.com/hl7-eu/laboratory/issues/54)).
   * FHIR-57053: Changed `dr-comp-type` to compare system, version and code rather than the whole coding. Changed `dr-comp-identifier` to compare system and value rather than the whole identifier. It now applies only when the DiagnosticReport has an identifier; before, it also failed when only the Composition had one. Removed `dr-comp-category` together with its `obeys` rule: the two categories need not be the same, one classifies the document and the other the medical discipline of the report.
   * Corrected the definition and the short description of `DiagnosticReport.media.link.display`, which called the `alternate-reference` extension a cross-version extension.
+  * Changed the type of the `system-version` parameter in `exp-params` from `uri` to `canonical`, the type the `$expand` operation defines for it.
 
 * Terminology
   * Added the NPU copyright to `LaboratoryResultStandardEuVs`, which includes NPU codes but carried only the LOINC copyright.

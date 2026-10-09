@@ -43,9 +43,6 @@ Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://ni
 # pattern slicing valid in R4
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# system-version is kept as uri: with valueCanonical the terminology server reports the English LOINC displays of the Czech example as errors (#146)
-%The parameter 'system-version' has the same name as a parameter for at least one operation in the core specification%
-
 # == deprecated inherited artifacts ==
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
