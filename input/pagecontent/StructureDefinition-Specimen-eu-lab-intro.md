@@ -1,4 +1,4 @@
-#### Implementation note: specimen source beyond the subject of record
+### Implementation note: specimen source beyond the subject of record
 
 `Specimen.subject` represents the *subject of record* (the chart/record the specimen belongs to).
 In most cases, the specimen is collected from this same entity.

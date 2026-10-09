@@ -3,14 +3,14 @@
 
 
 	<blockquote class="stu-note">
-		<h4>Previous results</h4>
+		<h3>Previous results</h3>
 	<a name="dr-previous-results"> </a>
 		<p>This version of the guide uses the supportingInfo extension to the Observation lab results, for conveying the previous.</p>
 		<p>Implementers are invited to provide their feedback about the possible adoption of the supportingInfo extension to this DiagnosticReport profile</p>
 
 	</blockquote>
 
-	<h4>Adding a PDF, images or other kind of additional data in a DiagnosticReport</h4>
+	<h3>Adding a PDF, images or other kind of additional data in a DiagnosticReport</h3>
 	<a name="pdf-and-images"> </a>
 	<p>In some cases it is requested to include PDF, images or other kind of additional data in a Diagnostic Report.</p>
 	<p>If the PDF to be added is the representation of the entire Laboratory report, then this will be recorded in the optional element <i>presentedForm</i>
@@ -18,7 +18,7 @@
 	<p>In case of images or other kinds of additional data (that can be a pdf document) used as support for the interpretation of the report, this is realized by using the optional element <i>media</i>.
 	</p>
 
-	<h4>Sorting of laboratory study groups and results</h4>
+	<h3>Sorting of laboratory study groups and results</h3>
 	<a name="sorting-lab-results"> </a>
 	<p>The order of laboratory study groups as well the results within these groups are decided by the creator of the report.</p>
 	<p>The array order of these information is expected to be consited for laboratory reports that comply with the HL7 Europe Laboratory Report IG.</p>

@@ -118,7 +118,7 @@ Usage: #inline
 * section[0].section[=].text.status = #generated
 // ToDo: correct html text
 * section[0].section[=].text.div =
-"<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota1\">
+"<div xmlns=\"http://www.w3.org/1999/xhtml\"><table id=\"nota2\">
 <thead><tr><th>Date</th><th>Test</th><th>Value</th><th>Unit(s)</th><th>Reference Range</th><th>Interpretation</th></tr></thead>
 <tbody>
 <tr><td>2023-03-27</td><td>Sodium (Bld) [Moles/Vol]</td><td>156 +- 0.1</td><td>umol/L</td><td> 136 - 144 umol/L</td></tr>
