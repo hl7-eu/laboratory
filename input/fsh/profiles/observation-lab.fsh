@@ -19,7 +19,8 @@ This observation may represent the result of a simple laboratory test such as he
   DeviceLabTestKit named labTestKit 0..* and
   ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
   ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* and
-  $laboratory-accredited named accredited 0..1
+  $laboratory-accredited named accredited 0..1 and
+  $event-statusReason named statusReason 0..1
 
 * extension[labTestKit]
   * ^short = "Laboratory Test Kit"
@@ -27,8 +28,18 @@ This observation may represent the result of a simple laboratory test such as he
 * extension[accredited]
   * ^short = "Accredited test"
   * ^definition = "Indicates that this laboratory test was/is accredited."
+// The core extension is used instead of a new one, based on the resolution of the Jira issue FHIR-57208
+* extension[statusReason]
+  * ^short = "Reason for the current status"
+  * ^definition = "Captures the reason for the current state of this observation, which is of interest whenever the result was withdrawn or revised."
 
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
+* status ^comment = "The statuses amended, corrected, cancelled and entered-in-error SHOULD be accompanied by the reason for that status, conveyed in the statusReason extension."
+
+* referenceRange.modifierExtension contains
+  ObservationReferenceRangeLowComparator named lowComparator 0..1 and
+  ObservationReferenceRangeHighComparator named highComparator 0..1
+* referenceRange ^comment = "Reference-range bounds are inclusive when no comparator is present. Use lowComparator or highComparator to state the comparator for an exclusive or explicitly inclusive bound. These modifier extensions pre-adopt the comparator on the reference-range bounds introduced in FHIR R6."
 
 * category 1..*
 * category
@@ -50,8 +61,9 @@ This observation may represent the result of a simple laboratory test such as he
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 
-//TODO: add Substance and PatientAnimal as soon base is extended, needs discussion what has to be supported
-* focus only Reference(PatientEuCore or AnimalSpecimenEuLab or Group or Device or LocationEuCore)  // If the observation belongs to a human patient but specimen is collected from an animal, then the focus of the observation is the animal specimen.
+// Substance and BiologicallyDerivedProduct added based on the resolution of the Jira issue FHIR-57055,
+// after they were added to the focus of the EU core profile
+* focus only Reference(PatientEuCore or AnimalSpecimenEuLab or Group or Device or LocationEuCore or Substance or BiologicallyDerivedProduct)  // If the observation belongs to a human patient but specimen is collected from an animal, then the focus of the observation is the animal specimen.
 
 * performer 1..
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
@@ -73,14 +85,18 @@ That's why it is important to explicitly include informaiton about measurement m
   * code from LaboratoryResultStandardEuVs (preferred)
   * insert ObservationResultsValueEu
 
-//TODO: use hasValue in next release
+// Based on the resolution of the Jira issue FHIR-57057 both invariants require an actual value
+// instead of an element that only carries extensions, such as a data absent reason.
+// hasValue() covers the primitive types; for the complex ones it is always false, so there the
+// check is that the value has children other than its extensions. The cross version extension
+// has to carry a value as well, its bare presence is not enough.
 
 Invariant: eu-lab-1
-Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", the R5 \"value[x]\" extension, \"dataAbsentReason\", \"hasMember\" or \"component\""
+Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided with an actual value:  \"value\", the R5 \"value[x]\" extension, \"dataAbsentReason\", \"hasMember\" or \"component\""
 Severity: #error
-Expression: "(status in ('registered'|'cancelled')) or value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
+Expression: "(status in ('registered'|'cancelled')) or value.hasValue() or value.children().exclude(value.extension).exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').value.exists() or hasMember.exists() or component.exists() or dataAbsentReason.exists()"
 
 Invariant: eu-lab-2
-Description: "If observation status is other then \"registered\" or \"cancelled\", every Observation.component shall provide one of these elements:  \"value\", the R5 \"component.value[x]\" extension or \"dataAbsentReason\""
+Description: "If observation status is other then \"registered\" or \"cancelled\", every Observation.component shall provide one of these elements with an actual value:  \"value\", the R5 \"component.value[x]\" extension or \"dataAbsentReason\""
 Severity: #error
-Expression: "(status in ('registered'|'cancelled')) or component.all(value.exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').exists() or dataAbsentReason.exists())"
+Expression: "(status in ('registered'|'cancelled')) or component.all(value.hasValue() or value.children().exclude(value.extension).exists() or extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').value.exists() or dataAbsentReason.exists())"

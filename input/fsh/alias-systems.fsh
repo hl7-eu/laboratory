@@ -22,6 +22,7 @@ Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $orpha = https://www.orpha.net // Used urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5 for the MyHealth@EU lab guide to be checked <====
 Alias: $pei = http://pei.de
+Alias: $quantity-comparator = http://hl7.org/fhir/quantity-comparator
 Alias: $referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $sct = http://snomed.info/sct
 Alias: $sex-parameter-for-clinical-use = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use

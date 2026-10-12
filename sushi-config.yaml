@@ -5,10 +5,10 @@ name:  Hl7EuLaboratoryIg
 title: HL7 Europe Laboratory Report
 description: This guide describes how the Laboratory Report can be represented in the European REALM.
 status: active # draft | active | retired | unknown
-version: 2.0.0
+version: 2.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -24,9 +24,12 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
+  # restored: dropped along with an unrelated cleanup in 605d8aa, while the profiles keep binding to IPS value sets
+  hl7.fhir.uv.ips: 2.0.1
   hl7.fhir.uv.xver-r5.r4: 0.1.0
-  hl7.fhir.eu.extensions.r4: 1.3.0
-  hl7.fhir.eu.base: 2.0.0
+  # Neither is published yet, so the build fails on them until they are
+  hl7.fhir.eu.extensions.r4: 1.3.1
+  hl7.fhir.eu.base: 2.0.1
 
 
 
@@ -129,7 +132,6 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   special-url:
     - http://hl7.eu/fhir/StructureDefinition/information-recipient
     - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
-    - http://hl7.eu/fhir/StructureDefinition/laboratory-accredited
     - http://example.org/lab-codes
   path-expansion-params: ../resources/Parameters-exp-params.json
   pin-canonicals: pin-multiples
@@ -186,7 +188,7 @@ menu:
     Challenges: challenges.html
     Design Choices: design-choice.html
     Certified reference material: crm.html
-    Handling Missing Data: https://hl7.eu/fhir/base/2.0.0/missing-data.html
+    Handling Missing Data: https://hl7.eu/fhir/base/missing-data.html
   Functional:
     Scenarios: scenarios.html
     Managing statuses: status-mgmt.html
@@ -321,6 +323,38 @@ resources:
   Specimen/Specimen-animal-example:
     name: "Specimen: animal example"
     description: Example of Specimen collected from an animal.
+
+  Specimen/Specimen-container-device-example:
+    name: "Specimen: container device example"
+    description: Example of Specimen whose container is described by a Device resource, referenced through the R5 `Specimen.container.device` extension.
+
+  Specimen/Specimen-collection-example:
+    name: "Specimen: self collected capillary blood with a body site"
+    description: Example of Specimen whose collection body site is conveyed through the R5 `Specimen.collection.bodySite` extension and whose collector is the patient, conveyed through the `alternate-reference` extension.
+
+  Specimen/Specimen-focus-bdp-example:
+    name: "Specimen: sample taken from a blood unit"
+    description: Example of Specimen collected from a BiologicallyDerivedProduct rather than from the subject of record, conveyed through the `SpecimenFocus` extension.
+
+  Observation/obs-focus-substance-example:
+    name: "Observation: potassium concentration of an infusion solution"
+    description: Example of a laboratory result whose `focus` is a Substance prepared for the subject of record.
+
+  Observation/obs-focus-bdp-example:
+    name: "Observation: ABO group of a blood unit"
+    description: Example of a laboratory result whose `focus` is a BiologicallyDerivedProduct rather than the subject of record.
+
+  Observation/obs-status-reason-example:
+    name: "Observation: cancelled result with a status reason"
+    description: Example of a cancelled laboratory result carrying the reason for that status in the `statusReason` extension.
+
+  DiagnosticReport/dr-status-reason-media-example:
+    name: "DiagnosticReport: corrected report with a status reason and additional data"
+    description: Example of a corrected report carrying the reason for that status in the `statusReason` extension and the additional data in `DiagnosticReport.media`.
+
+  Observation/obs-corrected-glucose-example:
+    name: "Observation: corrected glucose result"
+    description: Example of the result the corrected report is issued for.
 
   DiagnosticReport/dr-lab-example:
     name: "DiagnosticReport: example"

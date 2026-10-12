@@ -35,7 +35,6 @@ Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/e
 Alias: $specimen-collection-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.device
 Alias: $specimen-collection-body-site-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite
 Alias: $specimen-collection-body-site-reference-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.collection.bodySite.reference
-Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $iso21090-ADXP-streetName = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName
 Alias: $iso21090-ADXP-houseNumber = http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber
@@ -52,7 +51,7 @@ Alias: $sexForClinicalUse = http://hl7.org/fhir/StructureDefinition/patient-sexP
 Alias: $recordedSexOrGender = http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender
 Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value
-Alias: $diagnosticReport-link-xver = http://hl7.org/fhir/StructureDefinition/alternate-reference
+Alias: $alternate-reference = http://hl7.org/fhir/StructureDefinition/alternate-reference
 
 // Extensions from EU Extensions:
 Alias: $composition-diagnosticReportReference = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference

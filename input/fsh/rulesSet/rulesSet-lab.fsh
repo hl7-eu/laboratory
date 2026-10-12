@@ -26,8 +26,9 @@ RuleSet: ReportSubjectRule
 
 RuleSet: ReportIdentifierRule
 * identifier /* obeys labRpt-id */
-  //TODO: do we really want to give this guidance?
-  * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
+  * ^comment = """Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists.
+
+This guidance is enforced by the invariant dr-comp-identifier, listed in the constraints section of the [Bundle: Laboratory Report](StructureDefinition-Bundle-eu-lab.html#constraints) profile."""
 
 
 RuleSet: ReportTypeRule (element)
@@ -43,7 +44,6 @@ RuleSet: ReportCategoryRule
 * category /* obeys labRpt-category */
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
-  * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

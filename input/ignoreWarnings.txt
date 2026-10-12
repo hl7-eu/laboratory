@@ -46,32 +46,32 @@ If the parameter 'system-version' is an instance of the parameter defined in the
 
 # == deprecated inherited artifacts ==
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
 
 
 # == Could have an OID assigned for ActorDefinitions ==
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
-# == Filter pinning information ==
-%to 5.2.0 from choices of 4.0.1 (hl7.fhir.r4.core#4.0.1), 5.2.0 (hl7.fhir.uv.extensions.r4#5.2.0)
-%to 3.0.0 from choices of 2.0.0 (hl7.terminology.r4#6.3.0), 3.0.0 (hl7.terminology.r4#7.1.0)
+# == Filter pinning information for upstream HL7 canonicals, matched without versions; pinning of hl7.eu artefacts stays visible ==
+%Pinned the version of http://hl7.org/fhir/%
+%Pinned the version of http://terminology.hl7.org/%
 
 # == Filter expected slicing match informations for Composition examples ==
 
 # == Filter expected slicing match informations for Bundle examples containing additional address extensions ==
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/Address-eu|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/Address-eu%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab%
 
 
 # == Filter expected slicing match informations for Bundle examples containing additional address extensions ==
 
 # == Filter binding expected binding information ==
-None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab|2.0.0), and a coding is recommended to come from this value set%
-None of the codings provided are in the value set 'Results Coded Values Laboratory/Pathology - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips|2.0.0), and a coding is recommended to come from this value set%
-None of the codings provided are in the value set 'Laboratory Presence and Absence Findings' (http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu-lab|2.0.0) specified in an additional binding, and a coding is recommended to come from this value set%
-None of the codings provided are in the value set 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab|2.0.0), and a coding is recommended to come from this value set%
-None of the codings provided are in the value set 'Specimen Types' (http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab|2.0.0), and a coding is recommended to come from this value set%
+%None of the codings provided are in the value set 'Laboratory Code' (http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab%
+%None of the codings provided are in the value set 'Results Coded Values Laboratory/Pathology - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips%
+%None of the codings provided are in the value set 'Laboratory Presence and Absence Findings' (http://hl7.eu/fhir/laboratory/ValueSet/lab-presenceAbsence-eu-lab%
+%None of the codings provided are in the value set 'Laboratory Order' (http://hl7.eu/fhir/laboratory/ValueSet/lab-orderCodes-eu-lab%
+%None of the codings provided are in the value set 'Specimen Types' (http://hl7.eu/fhir/laboratory/ValueSet/lab-specimenType-eu-lab%
 
 # == Filter informations for italian or CZ Loinc codes ==
 %for language(s) 'it-IT'.%
@@ -94,4 +94,4 @@ Wrong Display Name 'Turkey' for http://snomed.info/sct#425134008. Valid display 
 The html source has duplicate anchor Ids: 1
 
 # == Base uses the wrong valueR5 extension on component, filtering the warning for the example, to be removed after base is fixed
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab%

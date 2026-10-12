@@ -1,8 +1,9 @@
 {
   "package-id" : "hl7.fhir.eu.laboratory",
-  "version" : "2.0.0",
-  "path" : "http://hl7.eu/fhir/laboratory/2.0.0",
-  "desc" : "This publication represents a new STU release (version 2.0.0). It incorporates new profiles, references to new logical models, updated model-to-profile mapping tables, terminology updates, and general publication cleanup.",
+  "version" : "2.1.0",
+  "path" : "http://hl7.eu/fhir/laboratory/2.1.0",
+  "desc" : "This publication is an STU update (version 2.1.0) of the STU release 2.0.0. It adds a status reason to the observation and the report, comparators for exclusive reference range bounds, and further reference targets on Observation.focus, the specimen focus and the specimen collector. It corrects the specimen collection body site extension, the result value invariants, the report comparison invariants and the subject target types, and moves the Laboratory Accredited extension to the HL7 Europe Extensions IG with its canonical unchanged.",
+  "descmd" : "This publication is an STU update (version 2.1.0) of the HL7 Europe Laboratory Report IG",
   "status" : "trial-use",
   "sequence" : "STU 2",
   "mode": "milestone",
