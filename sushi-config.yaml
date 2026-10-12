@@ -91,6 +91,8 @@ pages:
     title: Copyright
   crossversionanalysis.md:
     title: Cross-version Analysis
+  microbiology.md:
+    title: Microbiology
 # ====  Map Pages begin ====
   modelmap.html:
     title: Mapping to Profiles
@@ -195,6 +197,7 @@ menu:
     Logical Models: logicalmodels.html
     Obligations: obligations.html
     Implementation notes: notes.html
+    Microbiology: microbiology.html
   Implementation:
     Mapping to Profiles: modelmap.html
   #  Profiles overview:  overview.html
