@@ -14,7 +14,7 @@ Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * code = $loinc#24357-6 "Urinalysis macro (dipstick) panel - Urine"
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
+* subject = Reference(pat-lab-example)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer[+].display = "Jan Laborant"
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value"
@@ -33,7 +33,7 @@ Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * code = $loinc#24357-6 "Urinalysis macro (dipstick) panel - Urine"
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
+* subject = Reference(pat-lab-example)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer[+].display = "Jan Laborant"
 * component[+].code = $loinc#5778-6 "Color of Urine"
@@ -53,7 +53,7 @@ Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * code = $loinc#24357-6 "Urinalysis macro (dipstick) panel - Urine"
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
+* subject = Reference(pat-lab-example)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer[+].display = "Jan Laborant"
 * component[+].code = $loinc#5778-6 "Color of Urine"
@@ -71,7 +71,7 @@ Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * code = $loinc#24357-6 "Urinalysis macro (dipstick) panel - Urine"
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
+* subject = Reference(pat-lab-example)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer[+].display = "Jan Laborant"
 * component[+].code = $loinc#5778-6 "Color of Urine"
