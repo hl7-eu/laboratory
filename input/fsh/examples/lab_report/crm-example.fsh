@@ -9,7 +9,7 @@ Usage: #example
 * code.coding[+] = http://loinc.org#20448-7	"Insulin [Units/volume] in Serum or Plasma"
 * code.coding[+] = http://npu-terminology.org#NPU02496 "P—Insulin; arb.subst.c.(IRP 66/304; proc.) = ? × 10-3 IU/L"
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
+* subject = Reference(pat-lab-example)
 * performer[+].display = "Jan Laborant" // ToDo: consider cardinality
 * valueQuantity = 50 'm[iU]/L' "mIU/L"
 * extension[ObservationCertifiedRefMaterialCodeable].valueCodeableConcept = $nibsc#66/304 "Insulin, human, for immunoassay, Lyophilized, 3 IU / ampoule."
