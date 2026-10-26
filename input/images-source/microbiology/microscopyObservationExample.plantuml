@@ -1,0 +1,50 @@
+@startuml
+skinparam linetype polyline
+' hide circle
+' hide stereotype
+hide empty members
+
+object "Microscopy Observation" as mo  {
+    <color:blue>Code = LOINC ("specific observation target", Specimen, PrID)
+    <color:blue>   system = Specimen</color>
+    <color:blue>   component = {specific target}</color>
+    <color:blue>   scale = PrID</color>
+    ..
+    <color:green>Code = NPU ("specific observation target", Syst(spec.), ???)
+    <color:green>   system = Syst(spec.)</color>
+    <color:green>   component = {specific target}</color>
+    <color:green>   property = ???</color>
+    ..
+    Method = SNOMED CT (< 278289002 | Microscopy technique (qualifier value))
+    ..
+    Result = SNOMED CT
+    <color:black>   </color>
+    <color:black>   </color>
+    ..
+    Interpretation = SNOMED CT ()
+    ..
+    Data Absent Reason =
+}
+
+object Specimen {
+    type = {SNOMED CT specimen type}
+}
+
+object "LOINC Observation codes Valueset" as loinc {
+    **Post-coordination** on system
+    Filter = Method:LP6429-7 (Organism specific culture) AND
+        System:LP7735-6 (XXX) AND Property:LP217195-9 (PrThr)
+    ..
+    **Pre-coordination**
+    Filter = Method:LP6429-7 (Organism specific culture) AND NOT
+        System:LP7735-6 (XXX) AND Property:LP217195-9 (PrThr)
+}
+
+object "NPU Observation codes Valueset" as npu {
+    Filter =
+}
+
+
+mo --> Specimen
+mo .. loinc : > Code (LOINC)
+mo .. npu: > Code (NPU)
