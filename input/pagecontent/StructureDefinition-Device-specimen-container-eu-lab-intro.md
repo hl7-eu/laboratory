@@ -1,0 +1,9 @@
+This profile describes the physical container used to collect or hold a laboratory specimen. Reference it from `Specimen.container.extension[device].valueReference` using the existing R5 container device extension. It is distinct from the Device: Specimen profile, which represents a device serving as the specimen source.
+
+Identifiers, container type, manufacturer, product name, UDI, model, lot, serial number, dates and additional characteristics remain optional. No Must Support requirements are introduced. Product names supplied by the manufacturer use `deviceName[productName]` with `type = manufacturer-name`; other device names remain permitted.
+
+`Device.type` has a **preferred** binding to the existing Specimen Container value set. Additional characteristics may be recorded in `Device.property`. Container capacity and the actual amount of specimen can be recorded in `Specimen.container.capacity` and `Specimen.container.specimenQuantity`, respectively. When container identifiers or types are recorded on both resources, they should be consistent.
+
+The temporary local [Specimen Container Device Additive extension](StructureDefinition-device-specimen-container-additive.html) is a complex extension supporting a `substanceConcept` (CodeableConcept), a `substanceReference` (Reference to Substance), or both, plus an optional `quantity` (SimpleQuantity). At least one substance representation is required. Repeat the extension for multiple additives. Omission means that the additive is unspecified; it does not mean that no additive is present. Additives introduced during processing of the specimen itself belong in `Specimen.processing.additive`.
+
+The additive extension is a temporary compatibility solution for R6 `Device.additive`. It is intended to be replaced by the standard R6-to-R4 cross-version extension once available and suitable for use. Its eventual replacement will require reviewing the canonical URL and migrating instances.
