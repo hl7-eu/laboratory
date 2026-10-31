@@ -52,7 +52,7 @@ Description: "Clinical document used to represent a Laboratory Report for the sc
   * ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Laboratory Report\" or any equivalent translation"
 
 * section 1..
-  * ^slicing.discriminator[+].type = #pattern
+  * ^slicing.discriminator[+].type = #value
   * ^slicing.discriminator[=].path = "$this.code"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
