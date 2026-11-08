@@ -25,7 +25,7 @@ The workgroup's target definition is system {Specimen} with one of the methods {
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and SYSTEM = "LP7735-6" and METHOD_TYP = "LP217197-5" and STATUS = "ACTIVE" // IA
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and SYSTEM = "LP7735-6" and METHOD_TYP = "LP6106-1" and STATUS = "ACTIVE"   // Aggl
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and SYSTEM = "LP7735-6" and METHOD_TYP exists false and STATUS = "ACTIVE" // no method
-// Wrongly classified as ABXBACT; Regenstrief has been asked to correct the class
+// Wrongly classified as ABXBACT; the class is to be corrected (code request #192)
 * $loinc#35492-8 "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
 
 // ----------------------------------------------------------------------------
@@ -80,7 +80,7 @@ Description: """Why a microbiological observation has no result, bound in all mi
 ValueSet: TargetedDetectionTechniqueEuVs
 Id: micro-targetedDetectionTechnique-eu-lab
 Title: "Targeted Detection Techniques"
-Description: """The technique of a targeted detection: the nucleic acid amplification techniques the white paper names (chapter Molecular Genetic Testing, category 1), with 1156878000 |Molecular nucleic acid amplification technique| as the fallback where the technique is not known, and the immunological techniques (workbook, sheets Direct Identification and molecular techniques new). The generic 258066000 |Polymerase chain reaction technique| is not included; SNOMED CT holds it beside, not below, 1156878000, so the value set is enumerated. Multiplex is a format, not a technique: a panel is a grouping observation with the panel code and hasMember. A SNOMED CT concept for NEAR has been requested and is added once it exists."""
+Description: """The technique of a targeted detection: the nucleic acid amplification techniques the white paper names (chapter Molecular Genetic Testing, category 1), with 1156878000 |Molecular nucleic acid amplification technique| as the fallback where the technique is not known, and the immunological techniques (workbook, sheets Direct Identification and molecular techniques new). The generic 258066000 |Polymerase chain reaction technique| is not included; SNOMED CT holds it beside, not below, 1156878000, so the value set is enumerated. Multiplex is a format, not a technique: a panel is a grouping observation with the panel code and hasMember. A SNOMED CT concept for NEAR is to be requested and is added once it exists."""
 * insert SNOMEDCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 // Nucleic acid amplification

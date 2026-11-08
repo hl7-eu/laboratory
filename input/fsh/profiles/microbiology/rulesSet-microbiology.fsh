@@ -60,8 +60,8 @@ RuleSet: MicrobiologyObservationCommonEu
 // findings") represents it as an Observation.component with the code
 // 103392008 |Semi-quantitative value|, keeping the finding and its amount
 // separately machine-processable. The workbook (sheet Microscopy, row 13)
-// notes that a dedicated LOINC code has been requested; it replaces the
-// SNOMED CT code once it exists.
+// proposes a dedicated LOINC code (code request #190); it would replace the
+// SNOMED CT code.
 // ----------------------------------------------------------------------------
 RuleSet: MicrobiologySemiquantitativeComponentEu
 * component ^slicing.discriminator[0].type = #pattern

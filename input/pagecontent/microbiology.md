@@ -218,8 +218,8 @@ not part of the value sets.
 **The amount is a component.** *Few Gram-negative bacilli* is two statements:
 the finding and its amount. `value[x]` carries the finding, the component with
 the code `103392008 |Semi-quantitative value|` carries the amount. The
-workgroup has requested a LOINC code for the component; it replaces the SNOMED
-CT code once it exists.
+workbook proposes a LOINC code for the component ([Issue #190](https://github.com/hl7-eu/laboratory/issues/190)); it
+would replace the SNOMED CT code.
 
 {% capture op_text %}
 The grades follow the workbook. Should `263865001 |Scanty|` be added? Grading schemes for acid-fast bacilli use it below *few*.
@@ -437,7 +437,8 @@ pregnancy. Its target is in the component of the code. It is reported with
 | unexpected growth (`PrThr`) | `Observation.hasMember` | a general culture with *Organism growth* |
 
 Codes for missing targets are to be requested from Regenstrief, e.g.
-*Adenovirus in Specimen by Organism specific culture* (minutes, approach 1).
+*Adenovirus in Specimen by Organism specific culture* (minutes, approach 1;
+[Issue #193](https://github.com/hl7-eu/laboratory/issues/193)).
 
 **Three use cases.** The workgroup discussed them on 2026-11-06. How they are
 represented depends on the property of the code:
@@ -534,8 +535,13 @@ identified.
 
 The phenotypic techniques are MALDI-TOF mass spectrometry
 (`83581000052107`), microscopy (`278289002` and its descendants), visual
-estimation (`258083009`) and automated biochemical identification. A SNOMED CT
-concept for the latter (VITEK and similar systems) has been requested.
+estimation (`258083009`) and automated biochemical identification such as VITEK
+(`53465007` *Microbial identification, automated and semiautomated methods*).
+
+{% capture op_text %}
+SNOMED CT has no technique for automated biochemical identification, but the procedure `53465007` *Microbial identification, automated and semiautomated methods*. FHIR admits procedures as methods, so this guide uses it instead of requesting a new technique; the other methods are techniques. Whether a mix of techniques and procedures is acceptable is open.
+{% endcapture %}
+{% include open-item.html issue=202 typ="interim" title="Procedure concepts as methods" text=op_text %}
 
 #### Identification by sequencing
 
@@ -548,7 +554,8 @@ profile with `1304162005 |Nucleic acid sequencing technique|` as method:
   Specimen by Sequencing|` and `101534-6 |Fungal 18s rRNA gene [Identifier] in
   Specimen by Sequencing|`.
 * **Whole genome sequencing** uses `41852-5` with the sequencing technique as
-  method until the requested LOINC code for the whole genome exists.
+  method until a LOINC code for the whole genome exists
+  ([Issue #191](https://github.com/hl7-eu/laboratory/issues/191)).
 
 The reporting of nucleotide sequences and metagenomic sequencing are out of
 scope.
@@ -592,7 +599,7 @@ The target is in the LOINC component — the nucleic acid of an organism or an
 antigen — and the property is `PrThr`.
 
 {% capture op_text %}
-Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method still catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`: LOINC has no property that tells antibodies from antigens. Regenstrief is to be asked for `{Specimen}` codes that keep them apart.
+Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method still catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`: LOINC has no property that tells antibodies from antigens. Regenstrief is to be asked for `{Specimen}` codes that keep them apart ([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)).
 {% endcapture %}
 {% include open-item.html issue=181 typ="interim" title="Antibody codes" text=op_text %}
 
@@ -655,7 +662,7 @@ The technique is always given in `Observation.method`:
   (`1303992007`), LAMP (`1259932009`), TMA (`1304048000`).
   `1156878000 |Molecular nucleic acid amplification technique|` is the
   fallback where the amplification technique is not known. A SNOMED CT concept
-  for NEAR has been requested.
+  for NEAR is to be requested ([Issue #199](https://github.com/hl7-eu/laboratory/issues/199)).
 * **Immunological techniques:** immunoassay (`726449005`), rapid immunoassay
   (`708099001`), rapid antigen detection immunoassay (`1156860005`),
   immunofluorescence (`703444002`), agglutination (`708104000`).
@@ -741,7 +748,7 @@ agreed:
   *context*. For it, the workbook lists the descendants of `1306540001
   |European Committee on Antimicrobial Susceptibility Testing category 2019|`,
   which are the EUCAST 2019 categories S, I and R; a counterpart for CLSI is to
-  be requested.
+  be requested ([Issue #200](https://github.com/hl7-eu/laboratory/issues/200)).
 * **If the result is S, I or R only,** the interpretation shall be given as
   well.
 
@@ -766,8 +773,8 @@ Where the interpretation standard is given is open as well. The workbook puts it
 The preferred binding is the LOINC codes with the property `Susc`, class
 `ABXBACT` and no method; the susceptibility method is post-coordinated. This
 makes it easy to query all susceptibility results. The codes `106843-6` and
-`103673-0` belong to this class as well; Regenstrief has been asked to
-correct their class.
+`103673-0` belong to this class as well; their class is to be corrected
+([Issue #192](https://github.com/hl7-eu/laboratory/issues/192)).
 
 #### Susceptibility methods
 
@@ -820,10 +827,13 @@ The workbook (sheet Phenotypic resistence) selects these LOINC codes:
 | `86930-5` | Carbapenemase [Presence] in Isolate |
 
 Codes for inducible clindamycin resistance, cefoxitin resistance and the PBP2a
-protein are to be requested from Regenstrief. The techniques are those of
-phenotypic susceptibility testing, plus `708099001 |Rapid immunoassay|`; a
-concept for targeted rapid biochemical detection is to be requested from
-SNOMED CT.
+protein are to be requested from Regenstrief ([Issue #195](https://github.com/hl7-eu/laboratory/issues/195)). The
+techniques are those of phenotypic susceptibility testing, plus
+`708099001 |Rapid immunoassay|`. For biochemical rapid tests the workbook asks
+for a new technique; SNOMED CT has procedures that fit, `61836004 |Beta
+lactamase susceptibility test|` and its children, e.g. `12736005 |Beta
+lactamase, acidimetric susceptibility test|` for Carba NP
+([Issue #202](https://github.com/hl7-eu/laboratory/issues/202)).
 
 {% capture op_text %}
 The carbapenemase codes pre-coordinate the method *Rapid immunoassay*. In direct identification the technique is post-coordinated in `Observation.method`. LOINC has no method-neutral codes for these enzymes yet; only the groups (`86930-5` carbapenemase, `104864-4` extended-spectrum beta-lactamase) have them.
@@ -935,15 +945,20 @@ of the workgroup.
 | [#186](https://github.com/hl7-eu/laboratory/issues/186) | Specific culture: property of the codes and result | [Culture](#op-issue-186) |
 | [#188](https://github.com/hl7-eu/laboratory/issues/188) | General culture: code and result | [Culture](#op-issue-188) |
 | [#189](https://github.com/hl7-eu/laboratory/issues/189) | Method and specimen type required | [Core principles](#op-issue-189) |
+| [#202](https://github.com/hl7-eu/laboratory/issues/202) | Procedure concepts as methods | [Identification](#op-issue-202) |
 
-**Codes requested** and not yet available:
+**Codes requested** and not yet available. Each request is tracked as an issue with its origin and the status of submission and availability; submitting is up to the workgroup.
 
-| Code system | Concept |
-|---|---|
-| LOINC | semi-quantitative value of a microscopy finding (component code) |
-| LOINC | *Parasite identified in Specimen* |
-| LOINC | microorganism whole genome identified; 16S, 18S and ITS identification without method |
-| LOINC | class correction for `35492-8`, `106843-6` and `103673-0` |
-| LOINC | organism specific culture codes for the missing targets |
-| SNOMED CT | automated biochemical identification (VITEK and similar) |
-| SNOMED CT | nicking enzyme amplification reaction (NEAR) |
+| Issue | Code system | Request | Origin |
+|---|---|---|---|
+| [#190](https://github.com/hl7-eu/laboratory/issues/190) | LOINC | semi-quantitative value of a microscopy finding (component code) | workbook; prepared for the workgroup, not yet discussed |
+| [#191](https://github.com/hl7-eu/laboratory/issues/191) | LOINC | whole genome and sequence identification; fungal ITS identification | workbook; prepared for the workgroup, not yet discussed |
+| [#192](https://github.com/hl7-eu/laboratory/issues/192) | LOINC | class correction of `35492-8`, `106843-6` and `103673-0` | decided by the workgroup |
+| [#193](https://github.com/hl7-eu/laboratory/issues/193) | LOINC | organism specific culture codes for missing targets | decided by the workgroup |
+| [#194](https://github.com/hl7-eu/laboratory/issues/194) | LOINC | `{Specimen}` codes for immunofluorescence, immunoassay and agglutination | decided by the workgroup; separation of antigens and antibodies proposed in this guide |
+| [#195](https://github.com/hl7-eu/laboratory/issues/195) | LOINC | inducible clindamycin resistance, cefoxitin resistance, PBP2a | decided by the workgroup |
+| [#196](https://github.com/hl7-eu/laboratory/issues/196) | LOINC | general culture code with the property `PrThr` | Berlin workshop |
+| [#197](https://github.com/hl7-eu/laboratory/issues/197) | LOINC | method-neutral carbapenemase codes | proposed in this guide |
+| [#199](https://github.com/hl7-eu/laboratory/issues/199) | SNOMED CT | nicking enzyme amplification reaction (NEAR) | white paper; workbook |
+| [#200](https://github.com/hl7-eu/laboratory/issues/200) | SNOMED CT | CLSI counterpart of the EUCAST categories | workbook; depends on the interpretation question |
+| [#201](https://github.com/hl7-eu/laboratory/issues/201) | SNOMED CT | promotion of two Dutch MIC techniques to the International Edition | proposed in this guide |

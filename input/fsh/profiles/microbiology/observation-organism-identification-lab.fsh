@@ -26,7 +26,7 @@ Where a predefined target is sought and the answer is whether it is present, use
 
 * code from OrganismIdentificationCodeEuVs (extensible)
 * code ^short = "The identification, preferably 41852-5"
-* code ^comment = "41852-5 |Microorganism or agent identified in Specimen| is the recommended code. The codes naming the sequencing target (16S, 18S rRNA) are accepted for sequencing-based identification. Whole genome sequencing uses 41852-5 with 1304162005 |Nucleic acid sequencing technique| as method until the requested LOINC code exists. Codes that pre-coordinate the culture (e.g. 11475-1 |... by Culture|) describe the culture step and belong to the culture observation, not to the identification."
+* code ^comment = "41852-5 |Microorganism or agent identified in Specimen| is the recommended code. The codes naming the sequencing target (16S, 18S rRNA) are accepted for sequencing-based identification. Whole genome sequencing uses 41852-5 with 1304162005 |Nucleic acid sequencing technique| as method until a LOINC code for the whole genome exists. Codes that pre-coordinate the culture (e.g. 11475-1 |... by Culture|) describe the culture step and belong to the culture observation, not to the identification."
 
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganismIdentificationResultEuVs (extensible)
@@ -35,6 +35,6 @@ Where a predefined target is sought and the answer is whether it is present, use
 
 * method from OrganismIdentificationTechniqueEuVs (extensible)
 * method ^short = "The identification technique, e.g. MALDI-TOF mass spectrometry"
-* method ^comment = "Where the identification was made by microscopy, by sequencing or by an automated biochemical system, the method says so. A SNOMED CT code for automated biochemical identification (VITEK and similar) has been requested by the workgroup."
+* method ^comment = "Where the identification was made by microscopy, by sequencing or by an automated biochemical system, the method says so. Automated biochemical identification (VITEK and similar systems) is given as 53465007 |Microbial identification, automated and semiautomated methods|."
 
 * extension[triggeredBy] ^comment = "An identification normally follows a culture whose growth it names and points back at that culture with type `reflex`."

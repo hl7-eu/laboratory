@@ -9,7 +9,7 @@
 ValueSet: OrganismIdentificationCodeEuVs
 Id: micro-organismIdentificationCode-eu-lab
 Title: "Organism Identification Codes"
-Description: """LOINC codes for the identification of a microorganism without a predefined target. 41852-5 |Microorganism or agent identified in Specimen| is the recommended code (workbook, sheet Phenotypic Identification, "preferred"). The sequencing codes name the sequencing target and lead to the same result. The kingdom-level codes (bacteria, fungus, virus identified) are not included. A code for *Parasite identified in Specimen* is missing in LOINC; parasites are reported with 41852-5. Whole genome sequencing uses 41852-5 with the sequencing technique as method until the requested LOINC code exists."""
+Description: """LOINC codes for the identification of a microorganism without a predefined target. 41852-5 |Microorganism or agent identified in Specimen| is the recommended code (workbook, sheet Phenotypic Identification, "preferred"). The sequencing codes name the sequencing target and lead to the same result. The kingdom-level codes (bacteria, fungus, virus identified) are not included. A code for *Parasite identified in Specimen* is missing in LOINC; parasites are reported with 41852-5. Whole genome sequencing uses 41852-5 with the sequencing technique as method until a LOINC code for the whole genome exists."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 // Preferred
@@ -54,13 +54,14 @@ Description: """The result of an organism identification: the organism, or 26041
 ValueSet: OrganismIdentificationTechniqueEuVs
 Id: micro-organismIdentificationTechnique-eu-lab
 Title: "Organism Identification Techniques"
-Description: """The technique by which an organism was identified (workbook, sheet Phenotypic Identification, "Method"; sheet Molecular techniques for sequencing). A SNOMED CT concept for automated biochemical identification (VITEK and similar systems) has been requested and is added once it exists."""
+Description: """The technique by which an organism was identified (workbook, sheet Phenotypic Identification, "Method"; sheet Molecular techniques for sequencing). Automated biochemical identification systems such as VITEK are given as 53465007 |Microbial identification, automated and semiautomated methods|; it is a procedure, the other members are techniques. SNOMED CT has no technique for it, and FHIR admits procedures as methods."""
 * insert SNOMEDCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 * include codes from system $sct where concept is-a #278289002 // Microscopy technique and its descendants
 * $sct#83581000052107 "Matrix assisted laser desorption ionization time of flight mass spectrometry technique"
 * $sct#258083009 "Visual estimation"
 * $sct#1304162005 "Nucleic acid sequencing technique"
+* $sct#53465007 "Microbial identification, automated and semiautomated methods" // procedure; VITEK and similar systems
 
 // ----------------------------------------------------------------------------
 
