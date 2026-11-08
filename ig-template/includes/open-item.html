@@ -1,0 +1,32 @@
+{%- comment -%}
+Box for an open point or an interim position, modelled on the open-item include of the mediCus IGs.
+Parameters:
+  issue  number of the GitHub issue (optional; without it the box says "no issue yet")
+  repo   GitHub repository URL (optional; default https://github.com/hl7-eu/laboratory)
+  title  short title (optional)
+  typ    "interim" for an interim position the guide follows until the workgroup decides; otherwise an open point
+  text   content, Markdown allowed (required; put longer texts into a capture block first)
+The box gets the anchor op-issue-<issue>, otherwise op-<title>.
+Usage:
+  {% capture op_text %}Markdown text{% endcapture %}
+  {% include open-item.html issue=166 typ="interim" title="Property of the specific codes" text=op_text %}
+{%- endcomment -%}
+{%- assign op_repo = include.repo | default: "https://github.com/hl7-eu/laboratory" -%}
+{%- if include.typ == "interim" -%}
+  {%- assign op_label = "Interim position" -%}
+  {%- assign op_note = "not decided by the workgroup" -%}
+  {%- assign op_class = "open-item interim" -%}
+{%- else -%}
+  {%- assign op_label = "Open point" -%}
+  {%- assign op_note = "" -%}
+  {%- assign op_class = "open-item" -%}
+{%- endif -%}
+{%- if include.issue -%}
+  {%- assign op_id = include.issue | prepend: "op-issue-" -%}
+{%- else -%}
+  {%- assign op_id = include.title | slugify | prepend: "op-" -%}
+{%- endif -%}
+<div class="{{ op_class }}" id="{{ op_id }}">
+<div class="op-head"><span class="op-label">{{ op_label }}</span>{% if op_note != "" %} <span class="op-note">{{ op_note }}</span>{% endif %}{% if include.issue %} <a class="op-issue" href="{{ op_repo }}/issues/{{ include.issue }}">Issue #{{ include.issue }}</a>{% else %} <span class="op-issue missing">no issue yet</span>{% endif %}{% if include.title %} <span class="op-title">{{ include.title }}</span>{% endif %}</div>
+<div class="op-text">{{ include.text | markdownify }}</div>
+</div>

@@ -261,3 +261,67 @@ caption {
       font-size: 1.4rem;
       line-height: 1;
     }
+
+/* Open points and interim positions (include: open-item.html), modelled on the mediCus IGs */
+.open-item {
+  display: flow-root;
+  margin: 1em 0;
+  padding: 10px 14px 10px 12px;
+  border: 1px solid #ad1f2f;
+  border-left-width: 6px;
+  border-radius: 3px;
+  background-color: #fff4f4;
+  color: #222222;
+}
+.open-item::before {
+  content: "";
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: 2px 12px 4px 0;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><circle cx='18' cy='18' r='16' fill='%23ad1f2f'/><text x='18' y='27' font-family='Arial,Helvetica,sans-serif' font-size='24' font-weight='bold' fill='white' text-anchor='middle'>?</text></svg>");
+}
+.open-item.interim {
+  border-color: #b8860b;
+  background-color: #fffbea;
+}
+.open-item.interim::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><circle cx='18' cy='18' r='16' fill='%23b8860b'/><text x='18' y='27' font-family='Arial,Helvetica,sans-serif' font-size='24' font-weight='bold' fill='white' text-anchor='middle'>!</text></svg>");
+}
+.open-item .op-head {
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+.open-item .op-label {
+  color: #ad1f2f;
+  font-size: 0.85em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.open-item.interim .op-label {
+  color: #8a6500;
+}
+.open-item .op-note {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.85em;
+  color: #555555;
+}
+.open-item .op-issue {
+  margin-left: 0.6em;
+  font-family: monospace;
+  white-space: nowrap;
+}
+.open-item .op-issue.missing {
+  color: #777777;
+  font-style: italic;
+  font-family: inherit;
+}
+.open-item .op-title {
+  margin-left: 0.6em;
+}
+.open-item .op-text > :last-child {
+  margin-bottom: 0;
+}
