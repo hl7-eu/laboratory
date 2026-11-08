@@ -47,6 +47,6 @@ Where the code names the target of the examination, e.g. *Plasmodium sp identifi
 
 * hasMember only Reference(ObservationMicroscopyGeneralEu or ObservationMicroscopySpecificEu)
 * hasMember ^short = "The individual findings of one microscopic examination"
-* hasMember ^comment = "One microscopic examination may yield several independent findings — Gram-negative rods and leukocytes on the same slide. Each finding is its own Observation; an Observation with the examination code, method and specimen but without a value groups them through hasMember. The members may be general or specific microscopies, e.g. a blood film negative for Plasmodium that shows Babesia. The amount of a single finding is a component of that finding, not a member."
+* hasMember ^comment = "One microscopic examination may yield several independent findings — Gram-negative rods and leukocytes on the same slide. Each finding is its own Observation; an Observation with the examination code, method and specimen but without a value groups them through hasMember. The amount of a single finding is a component of that finding, not a member."
 
 * interpretation ^comment = "The semi-quantitative amount is not an interpretation; it is carried in component[semiquantitative]. The workbook foresees no interpretation for microscopy."

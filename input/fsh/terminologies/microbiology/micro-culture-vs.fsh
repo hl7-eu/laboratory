@@ -1,9 +1,10 @@
 // ============================================================================
-// General culture — value sets
+// Culture — value sets
 // Source: white paper chapter "Culture and Detection by Culture"; workbook
-// sheet "Culture General". The code follows the white paper's principle 1
-// (distinct code sets for culture and identification), not the workbook's
-// preference for 41852-5 (question to the workgroup, SEM-22).
+// sheets "Culture General" and "Culture Specific"; minutes of the Lab Semantic
+// WG of 2026-11-06. The code of the general culture follows the white paper's
+// principle 1 (distinct code sets for culture and identification), not the
+// workbook's preference for 41852-5 (question to the workgroup, SEM-22).
 // ============================================================================
 
 ValueSet: CultureGeneralCodeEuVs
@@ -36,3 +37,50 @@ Description: """The culture technique of a general culture (workbook, sheet Cult
 * $sct#702658000 "Microbial culture" // condition not known or not meaningful
 * $sct#703750006 "Aerobic culture"
 * $sct#703751005 "Anaerobic culture"
+
+// ------------------------------------------------------------ specific culture
+
+ValueSet: CultureSpecificCodeEuVs
+Id: micro-cultureSpecificCode-eu-lab
+Title: "Specific Culture Codes"
+Description: """LOINC codes for a culture aimed at a target named in the code: method *Organism specific culture*, system XXX, {Specimen} or Isolate, property PrThr or PrId, active (minutes of 2026-11-06 and workbook, sheet Culture Specific). PrThr codes ask whether the target is present, e.g. 13317-3 |Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture|; PrId codes ask what was found, e.g. 9782-4 |Adenovirus sp identified in Specimen by Organism specific culture|. Codes with other properties, such as colony counts, are not included, because the result of the profile is coded. The numbered *Mycobacterium sp # 2* to *# 5* codes are excluded, as in the workbook's filter: each organism found is an observation of its own with the same code. LOINC has no codes with system {Specimen} for culture yet. Codes for missing targets are to be requested from Regenstrief. The preferred codes are in [Specific Culture Codes, preferred](ValueSet-micro-cultureSpecificCodePreferred-eu-lab.html)."""
+* insert LOINCCopyrightForVS
+* insert MicrobiologyDraftStatusEu
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP7735-6" and PROPERTY = "LP217195-9" and STATUS = "ACTIVE" // XXX, PrThr
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP7735-6" and PROPERTY = "LP6850-4" and STATUS = "ACTIVE" // XXX, PrId
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP451871-0" and PROPERTY = "LP217195-9" and STATUS = "ACTIVE" // {Specimen}, PrThr: no codes yet
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP451871-0" and PROPERTY = "LP6850-4" and STATUS = "ACTIVE" // {Specimen}, PrId: no codes yet
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP7370-2" and PROPERTY = "LP217195-9" and STATUS = "ACTIVE" // Isolate, PrThr
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP7370-2" and PROPERTY = "LP6850-4" and STATUS = "ACTIVE" // Isolate, PrId
+* exclude $loinc#44851-4 "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+* exclude $loinc#44852-2 "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+* exclude $loinc#44854-8 "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+* exclude $loinc#44855-5 "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"
+
+// ----------------------------------------------------------------------------
+
+ValueSet: CultureSpecificCodePreferredEuVs
+Id: micro-cultureSpecificCodePreferred-eu-lab
+Title: "Specific Culture Codes, preferred"
+Description: """The preferred codes of the specific culture: the codes of [Specific Culture Codes](ValueSet-micro-cultureSpecificCode-eu-lab.html) that leave the specimen to Specimen.type. The target are codes with system {Specimen}; LOINC has none for culture yet, so the codes with system XXX are preferred until it provides them. Once {Specimen} codes exist, this value set is revised, so that one test does not have two preferred codes. Codes with system Isolate are accepted; the isolate is then also given as Specimen.type 119303007 |Microbial isolate|."""
+* insert LOINCCopyrightForVS
+* insert MicrobiologyDraftStatusEu
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP451871-0" and PROPERTY = "LP217195-9" and STATUS = "ACTIVE" // {Specimen}, PrThr: the target, no codes yet
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP451871-0" and PROPERTY = "LP6850-4" and STATUS = "ACTIVE" // {Specimen}, PrId: the target, no codes yet
+// Interim: system XXX, until LOINC provides {Specimen} codes for culture
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP7735-6" and PROPERTY = "LP217195-9" and STATUS = "ACTIVE" // XXX, PrThr
+* include codes from system $loinc where METHOD_TYP = "LP6429-7" and SYSTEM = "LP7735-6" and PROPERTY = "LP6850-4" and STATUS = "ACTIVE" // XXX, PrId
+* exclude $loinc#44851-4 "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+* exclude $loinc#44852-2 "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+* exclude $loinc#44854-8 "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+* exclude $loinc#44855-5 "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"
+
+// ----------------------------------------------------------------------------
+
+ValueSet: CultureSpecificTechniqueEuVs
+Id: micro-cultureSpecificTechnique-eu-lab
+Title: "Specific Culture Techniques"
+Description: """The technique of a specific culture: 703752003 |Organism specific culture technique| (workbook, sheet Culture Specific, "Method")."""
+* insert SNOMEDCopyrightForVS
+* insert MicrobiologyDraftStatusEu
+* $sct#703752003 "Organism specific culture"

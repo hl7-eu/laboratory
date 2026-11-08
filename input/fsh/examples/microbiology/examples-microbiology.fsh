@@ -34,6 +34,28 @@ Usage: #example
 * collection.collectedDateTime = "2026-03-02T08:30:00+01:00"
 * processing[staining].procedure = $sct#104208006 "Giemsa stain method"
 
+Instance: spec-micro-blood-smear-negative
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: blood, Giemsa stained, examined for Plasmodium (negative case)"
+Description: "A second blood specimen, prepared as thick and thin films with a Giemsa stain, in which no Plasmodium is seen."
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood specimen"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-04T08:30:00+01:00"
+* processing[staining].procedure = $sct#104208006 "Giemsa stain method"
+
+Instance: spec-micro-blood-smear-babesia
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: blood, Giemsa stained, examined for Plasmodium (Babesia found)"
+Description: "A third blood specimen, prepared as thick and thin films with a Giemsa stain, examined for Plasmodium; it shows Babesia microti instead."
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood specimen"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-05T08:30:00+01:00"
+* processing[staining].procedure = $sct#104208006 "Giemsa stain method"
+
 Instance: spec-micro-stool
 InstanceOf: SpecimenMicrobiologyEu
 Title: "Specimen: stool for parasites"
@@ -127,6 +149,36 @@ Usage: #example
 * type = $sct#119376003 "Tissue specimen"
 * subject = Reference(pat-lab-example)
 * collection.collectedDateTime = "2026-03-02T11:20:00+01:00"
+
+Instance: spec-micro-nares-swab
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: anterior nares swab for MRSA screening"
+Description: "Anterior nares swab taken for an MRSA screening culture."
+Usage: #example
+* status = #available
+* type = $sct#697989009 "Anterior nares swab"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-06T09:00:00+01:00"
+
+Instance: spec-micro-nares-isolate
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: isolate from the MRSA screening culture"
+Description: "Isolate of the colonies that grew on the MRSA screening medium. It references the primary anterior nares swab through parent."
+Usage: #example
+* status = #available
+* type = $sct#119303007 "Microbial isolate"
+* subject = Reference(pat-lab-example)
+* parent = Reference(spec-micro-nares-swab)
+
+Instance: spec-micro-conjunctival-swab
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: conjunctival swab"
+Description: "Conjunctival swab for the culture of adenovirus."
+Usage: #example
+* status = #available
+* type = $sct#258498002 "Conjunctival swab"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-06T10:00:00+01:00"
 
 // --------------------------------------- general microscopy (white paper 1–6)
 
@@ -232,11 +284,11 @@ Usage: #example
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#105059-0 "Microscopic observation [Identifier] in Specimen"
 * subject = Reference(pat-lab-example)
-* effectiveDateTime = "2026-03-02T11:00:00+01:00"
+* effectiveDateTime = "2026-03-04T11:00:00+01:00"
 * performer[+].display = "Microbiology laboratory"
 * valueCodeableConcept = $sct#260415000 "Not detected"
 * method = $sct#702661004 "Light microscopy"
-* specimen = Reference(spec-micro-blood-smear)
+* specimen = Reference(spec-micro-blood-smear-negative)
 
 // Example 4 — direct microscopy for parasites
 Instance: obs-micro-stool-giardia
@@ -381,56 +433,113 @@ Usage: #example
 * specimen = Reference(spec-micro-stool)
 
 // PrThr with an unexpected finding: the targeted observation is Not detected,
-// the organism found is a general microscopy of its own; one examination
-// groups both through hasMember.
-Instance: obs-micro-blood-group
-InstanceOf: ObservationMicroscopyGeneralEu
-Title: "Observation: blood film examined for Plasmodium, grouping two results"
-Description: "A blood film is examined for Plasmodium and shows Babesia microti instead. The PrThr code admits presence or absence only, so the examination groups two observations through hasMember: Plasmodium not detected, and Babesia microti as a finding of the general microscopy."
-Usage: #example
-* status = #final
-* category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
-* code = $loinc#105059-0 "Microscopic observation [Identifier] in Specimen"
-* subject = Reference(pat-lab-example)
-* effectiveDateTime = "2026-03-02T11:30:00+01:00"
-* performer[+].display = "Microbiology laboratory"
-* method = $sct#702661004 "Light microscopy"
-* specimen = Reference(spec-micro-blood-smear)
-* hasMember[+] = Reference(obs-micro-spec-blood-plasmodium-presence)
-* hasMember[+] = Reference(obs-micro-blood-babesia)
-
+// the organism found is a general microscopy of its own, referenced through
+// hasMember.
 Instance: obs-micro-spec-blood-plasmodium-presence
 InstanceOf: ObservationMicroscopySpecificEu
-Title: "Observation: Plasmodium sp not detected in blood film (member)"
-Description: "Specific microscopy with a PrThr code: Plasmodium was sought and not found. The result is Not detected; the Babesia seen on the same film is not the value of this observation."
+Title: "Observation: Plasmodium sp not detected in blood film, Babesia seen"
+Description: "Specific microscopy with a PrThr code: Plasmodium was sought and not found. The result is Not detected; the Babesia microti seen on the same film is a general microscopy of its own, which this observation references through hasMember."
 Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#51587-4 "Plasmodium sp [Presence] in Blood by Light microscopy"
 * subject = Reference(pat-lab-example)
-* effectiveDateTime = "2026-03-02T11:30:00+01:00"
+* effectiveDateTime = "2026-03-05T11:30:00+01:00"
 * performer[+].display = "Microbiology laboratory"
 * valueCodeableConcept = $sct#260415000 "Not detected"
 * method = $sct#702661004 "Light microscopy"
-* specimen = Reference(spec-micro-blood-smear)
+* specimen = Reference(spec-micro-blood-smear-babesia)
+* hasMember[+] = Reference(obs-micro-blood-babesia)
 
 Instance: obs-micro-blood-babesia
 InstanceOf: ObservationMicroscopyGeneralEu
-Title: "Observation: Babesia microti in blood film (member)"
-Description: "The unexpected finding of the examination for Plasmodium, reported as a general microscopy: the code asks what was seen, the value is Babesia microti."
+Title: "Observation: Babesia microti in blood film (unexpected finding)"
+Description: "The unexpected finding of the examination for Plasmodium, reported as a general microscopy: the code asks what was seen, the value is Babesia microti. The specific microscopy references it through hasMember."
 Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#105059-0 "Microscopic observation [Identifier] in Specimen"
 * subject = Reference(pat-lab-example)
-* effectiveDateTime = "2026-03-02T11:30:00+01:00"
+* effectiveDateTime = "2026-03-05T11:30:00+01:00"
 * performer[+].display = "Microbiology laboratory"
 * valueCodeableConcept = $sct#76828008 "Babesia microti"
 * method = $sct#702661004 "Light microscopy"
-* specimen = Reference(spec-micro-blood-smear)
+* specimen = Reference(spec-micro-blood-smear-babesia)
+
+// ----------------------------------------------------------------- specific culture
+
+// PrThr with unexpected growth: the specific culture is Not detected and
+// references the growth through hasMember; the identification follows the
+// growth through triggeredBy.
+Instance: obs-micro-mrsa-culture
+InstanceOf: ObservationCultureSpecificEu
+Title: "Observation: MRSA screening culture, MRSA not detected, other growth"
+Description: "Specific culture with a PrThr code: MRSA was sought on a selective medium and not found. Something else grew on the same medium; that growth is a general culture of its own, which this observation references through hasMember."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#13317-3 "Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-07T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260415000 "Not detected"
+* method = $sct#703752003 "Organism specific culture"
+* specimen = Reference(spec-micro-nares-swab)
+* hasMember[+] = Reference(obs-micro-mrsa-culture-growth)
+
+Instance: obs-micro-mrsa-culture-growth
+InstanceOf: ObservationCultureGeneralEu
+Title: "Observation: unexpected growth in the MRSA screening culture"
+Description: "The growth on the MRSA screening medium, reported before the organism is identified. The specific culture references it through hasMember; the identification points back at it."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#11475-1 "Microorganism identified in Specimen by Culture"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-07T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#365698005 "Organism growth"
+* method = $sct#702658000 "Microbial culture"
+* specimen = Reference(spec-micro-nares-swab)
+
+Instance: obs-ident-mrsa-culture-sepidermidis
+InstanceOf: ObservationOrganismIdentificationEu
+Title: "Observation: Staphylococcus epidermidis identified from the MRSA screening culture"
+Description: "The organism that grew on the MRSA screening medium, identified by MALDI-TOF. The identification points back at the growth it names through triggeredBy."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* extension[triggeredBy].extension[observation].valueReference = Reference(obs-micro-mrsa-culture-growth)
+* extension[triggeredBy].extension[type].valueCode = #reflex
+* code = $loinc#41852-5 "Microorganism or agent identified in Specimen"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-07T14:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#60875001 "Staphylococcus epidermidis"
+* method = $sct#83581000052107 "Matrix assisted laser desorption ionization time of flight mass spectrometry technique"
+* specimen = Reference(spec-micro-nares-isolate)
+
+// PrId with the subtype as value.
+Instance: obs-micro-adenovirus-culture
+InstanceOf: ObservationCultureSpecificEu
+Title: "Observation: adenovirus culture, human adenovirus 8"
+Description: "Specific culture with a PrId code: adenovirus was sought and found, and the result names the subtype."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#9782-4 "Adenovirus sp identified in Specimen by Organism specific culture"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-12T10:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#46957004 "Human adenovirus 8"
+* method = $sct#703752003 "Organism specific culture"
+* specimen = Reference(spec-micro-conjunctival-swab)
 
 // ------------------------------------------------------ organism identification
 

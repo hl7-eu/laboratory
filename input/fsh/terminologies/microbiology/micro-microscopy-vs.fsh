@@ -63,7 +63,7 @@ Description: """LOINC codes for a microscopic examination aimed at a target name
 ValueSet: MicroscopySpecificCodePreferredEuVs
 Id: micro-microscopySpecificCodePreferred-eu-lab
 Title: "Specific Microscopy Codes, preferred"
-Description: """The preferred codes of the specific microscopy: the codes of [Specific Microscopy Codes](ValueSet-micro-microscopySpecificCode-eu-lab.html) that leave the specimen to Specimen.type, i.e. system XXX, e.g. 673-4 |Ova and parasites identified in Specimen by Light microscopy| (workbook, sheet Microscopy, Profile 2). The codes with system {Specimen} are included as well; LOINC has none for microscopy yet, the filter picks them up once they exist."""
+Description: """The preferred codes of the specific microscopy: the codes of [Specific Microscopy Codes](ValueSet-micro-microscopySpecificCode-eu-lab.html) that leave the specimen to Specimen.type, i.e. system XXX, e.g. 673-4 |Ova and parasites identified in Specimen by Light microscopy| (workbook, sheet Microscopy, Profile 2). The target are codes with system {Specimen}; LOINC has none for microscopy yet, so the codes with system XXX are preferred until it provides them. Once {Specimen} codes exist, this value set is revised, so that one test does not have two preferred codes."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 // PrId, system XXX
@@ -84,18 +84,6 @@ Description: """The preferred codes of the specific microscopy: the codes of [Sp
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and METHOD_TYP = "LP6398-4" and SYSTEM = "LP451871-0" and STATUS = "ACTIVE"
 // No target named: the open question of the general microscopy
 * exclude codes from system $loinc where COMPONENT = "LP442509-8" // Microscopic observation
-
-// ----------------------------------------------------------------------------
-
-ValueSet: MicroscopySpecificResultEuVs
-Id: micro-microscopySpecificResult-eu-lab
-Title: "Specific Microscopy Results"
-Description: """The result of a specific microscopy: 260373001 |Detected| or 260415000 |Not detected|, or, for a PrId code, the organism seen where it is more specific than the target or other than the target. Morphologies and host cells answer no targeted question; they are findings of the general microscopy."""
-* insert SNOMEDCopyrightForVS
-* insert MicrobiologyDraftStatusEu
-* $sct#260373001 "Detected"
-* $sct#260415000 "Not detected"
-* include codes from valueset MicroorganismEuVs
 
 // ------------------------------------------------------------ both profiles
 

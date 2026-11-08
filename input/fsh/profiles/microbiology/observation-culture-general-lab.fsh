@@ -36,9 +36,6 @@ Description: """General culture of a specimen with media and conditions that det
 * value[x] ^short = "No growth or Organism growth"
 * value[x] ^comment = "264868006 |No growth| or 365698005 |Organism growth|. The organism that grew is not the value of the culture; it is the value of the identification that follows. An indeterminate culture — contaminated, insufficient material — is not a value; it is given in dataAbsentReason."
 
-* dataAbsentReason from MicrobiologyDataAbsentReasonEuVs (extensible)
-* dataAbsentReason ^comment = "82334004 |Indeterminate| is available here for a culture that was performed but yielded no usable statement (workbook, sheet Culture General, \"Result missing reason\")."
-
 * method from CultureGeneralTechniqueEuVs (extensible)
 * method ^short = "The culture technique: aerobic, anaerobic, or microbial culture"
 * method ^comment = "Required, like in all microbiology profiles. 703750006 |Aerobic culture| or 703751005 |Anaerobic culture|; 702658000 |Microbial culture| where the condition is not known or not meaningful. Method holds one code, so a blood culture set with an aerobic and an anaerobic bottle gives one observation per bottle. Media, temperature and incubation time are not coded."

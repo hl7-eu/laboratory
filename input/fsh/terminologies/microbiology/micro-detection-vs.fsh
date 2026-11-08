@@ -11,7 +11,7 @@ Id: micro-targetedDetectionCodePreferred-eu-lab
 Title: "Targeted Detection Codes, preferred"
 Description: """The preferred LOINC codes of a targeted detection: class MICRO, property PrThr, active, with the target in the component — an organism, its DNA or RNA, or an antigen.
 
-The workgroup's target definition is system {Specimen} with one of the methods {Molgen}, IF, IA or Aggl, e.g. 105875-9 |Bordetella pertussis DNA [Presence] in Specimen by Molgen|. LOINC so far has {Specimen} codes for {Molgen} only. Until it has them for the immunological methods, the value set also contains the codes with system XXX and method IF, IA or Aggl, the codes with system XXX and no method, e.g. 105066-5 |SARS-CoV+SARS-CoV-2 (COVID-19) Ag [Presence] in Specimen|, and 35492-8, which LOINC files under class ABXBACT."""
+The workgroup's target definition is system {Specimen} with one of the methods {Molgen}, IF, IA or Aggl, e.g. 105875-9 |Bordetella pertussis DNA [Presence] in Specimen by Molgen|. LOINC so far has {Specimen} codes for {Molgen} only. Until it has them for the immunological methods, the value set also contains the codes with system XXX and method IF, IA or Aggl, the codes with system XXX and no method, e.g. 105066-5 |SARS-CoV+SARS-CoV-2 (COVID-19) Ag [Presence] in Specimen|, and 35492-8, which LOINC files under class ABXBACT. Antibody codes belong to serology and are not used here; the filters cannot exclude them, because LOINC has no property that tells antibodies from antigens."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 // Target definition (minutes 2026-11-06): PrThr, system {Specimen}
@@ -35,7 +35,7 @@ Id: micro-targetedDetectionCode-eu-lab
 Title: "Targeted Detection Codes"
 Description: """All LOINC codes admitted for a targeted detection: the [preferred codes](ValueSet-micro-targetedDetectionCodePreferred-eu-lab.html), plus the codes of class MICRO, property PrThr, active, that pre-coordinate the specimen or the method, with any system and with one of the molecular methods (Probe.amp.tar, Non-probe.amp.tar, Probe.amp, Probe.amp.sig, Molgen, {Molgen}), one of the immunological methods (IF, IA, Aggl) or no method. Pre-coordinated codes serve laboratories that cannot post-coordinate specimen or method (minutes 2026-11-06: "Allow for pre and post coordination. Prefer post-coordination").
 
-Culture codes and rapid immunoassay codes are not included: a targeted culture is reported with the culture, and a rapid antigen test uses the method-neutral antigen code with the rapid technique in Observation.method."""
+Culture codes and rapid immunoassay codes are not included: a targeted culture is reported with the culture, and a rapid antigen test uses the method-neutral antigen code with the rapid technique in Observation.method. Antibody codes belong to serology and are not used here; the filters cannot exclude them, because LOINC has no property that tells antibodies from antigens."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 * include codes from valueset TargetedDetectionCodePreferredEuVs
@@ -69,7 +69,7 @@ Description: """The result of a targeted detection (workbook, sheets Direct Iden
 ValueSet: MicrobiologyDataAbsentReasonEuVs
 Id: micro-dataAbsentReason-eu-lab
 Title: "Microbiology Data Absent Reasons"
-Description: """Why a microbiological observation has no result: the FHIR data-absent-reason codes, plus 82334004 |Indeterminate| for an examination that was performed but yielded no usable statement — an inhibited PCR, insufficient material (workbook, sheet Culture General, "Result missing reason")."""
+Description: """Why a microbiological observation has no result, bound in all microbiology profiles: the FHIR data-absent-reason codes, plus 82334004 |Indeterminate| for an examination that was performed but yielded no usable statement — an inhibited PCR, insufficient material (workbook, sheet Culture General, "Result missing reason")."""
 * insert SNOMEDCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 * include codes from valueset http://hl7.org/fhir/ValueSet/data-absent-reason

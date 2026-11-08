@@ -61,3 +61,15 @@ Description: """The technique by which an organism was identified (workbook, she
 * $sct#83581000052107 "Matrix assisted laser desorption ionization time of flight mass spectrometry technique"
 * $sct#258083009 "Visual estimation"
 * $sct#1304162005 "Nucleic acid sequencing technique"
+
+// ----------------------------------------------------------------------------
+
+ValueSet: SpecificResultEuVs
+Id: micro-specificResult-eu-lab
+Title: "Specific Examination Results"
+Description: """The result of a microscopy or culture aimed at a target named in the code: 260373001 |Detected| or 260415000 |Not detected|, or, for a code with the property PrId, the organism found where it is more specific than the target, other than the target, or a preliminary broad group such as *Bacteria*. Codes with the property PrThr use Detected and Not detected only. Morphologies and host cells answer no targeted question; growth and no growth are the result of the general culture."""
+* insert SNOMEDCopyrightForVS
+* insert MicrobiologyDraftStatusEu
+* $sct#260373001 "Detected"
+* $sct#260415000 "Not detected"
+* include codes from valueset MicroorganismEuVs

@@ -39,6 +39,12 @@ RuleSet: MicrobiologyObservationCommonEu
 * specimen ^short = "The specimen examined (required)"
 * specimen ^comment = "The specimen shall always be represented explicitly, with its type in Specimen.type, even if the material is pre-coordinated in the test code. The SpecimenMicrobiologyEu profile requires the type and adds the staining procedure and the link to the parent specimen (isolate, material from a positive culture)."
 
+// An indeterminate result is not a value (core principle): an examination that
+// was performed but yielded no usable statement carries 82334004
+// |Indeterminate| in dataAbsentReason, in every microbiology profile.
+* dataAbsentReason from MicrobiologyDataAbsentReasonEuVs (extensible)
+* dataAbsentReason ^comment = "82334004 |Indeterminate| is used for an examination that was performed but yielded no usable statement, e.g. an inhibited PCR, a contaminated culture or insufficient material. The other codes are those of the FHIR data-absent-reason value set."
+
 // The method is to be given consistently in Observation.method, also where the
 // LOINC code already pre-coordinates a broad method category (white paper,
 // core principles).

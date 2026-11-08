@@ -4,10 +4,10 @@ This page describes how microbiological results are represented in this
 guide. They follow the conventions of the HL7 Europe Laboratory Semantic
 Workgroup — the white paper *Conventions for FHIR based Microbiology Result
 Reporting* and its terminology workbook — and are organised along the
-microbiology workflow. Microscopy, the general culture, the identification of
-the organism and the targeted detection of a target are profiled. The specific
-culture, serology, susceptibility, resistance, organism properties and
-quantification are not profiled yet; their sections record the state of the
+microbiology workflow. Microscopy, culture, the identification of the organism
+and the targeted detection of a target are profiled. Serology,
+susceptibility, resistance, organism properties and quantification are not
+profiled yet; their sections record the state of the
 workgroup's conventions.
 
 ### Workflow
@@ -33,7 +33,7 @@ Each reported step has a section of its own:
 |---|---|---|
 | Specimen check, sampling, collection | [Specimen and pre-analytics](#specimen-and-pre-analytics) | [Specimen: microbiology](StructureDefinition-Specimen-microbiology-eu-lab.html) |
 | Staining, microscopy | [Microscopy](#microscopy) | [general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html), [specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) |
-| Inoculation, culture | [Culture](#culture) | [general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html); specific culture not profiled yet |
+| Inoculation, culture | [Culture](#culture) | [general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html), [specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html) |
 | Identification | [Identification](#identification) | [organism identification](StructureDefinition-Observation-organismIdentification-eu-lab.html) |
 | Direct identification (PCR, antigen detection) | [Direct identification](#direct-identification) | [targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) |
 | Indirect identification (antibody detection) | [Serology](#serology) | not profiled yet |
@@ -89,6 +89,7 @@ the technique used.
 | What is there to see? | [Observation Results: general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html) | `105059-0` | the finding: a morphology, an organism, host cells, or *not detected* |
 | Was the target seen? | [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) | a LOINC code naming the target, method microscopy, property `PrId` or `PrThr` | *detected* / *not detected*; for `PrId` also the organism seen |
 | Does anything grow? | [Observation Results: general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html) | `11475-1` | *no growth* / *organism growth* |
+| Was the target found in culture? | [Observation Results: specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html) | a LOINC code naming the target, method *Organism specific culture*, property `PrThr` or `PrId` | *detected* / *not detected*; for `PrId` also the organism found |
 | Which organism is it? | [Observation Results: organism identification](StructureDefinition-Observation-organismIdentification-eu-lab.html) | `41852-5` or a sequencing code | the organism, or *not detected* |
 | Is the target present? | [Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) | a LOINC code naming the target, property `PrThr` | *detected* / *not detected* |
 
@@ -97,8 +98,8 @@ The specimen of all of them is a
 
 **The names follow the workgroup's terms.** *General* and *specific* microscopy are
 the workgroup's pair for the open and the targeted microscopic examination
-(the workbook's "Profile 1" and "Profile 2"); the general culture follows the
-same pair. *Targeted detection* is the
+(the workbook's "Profile 1" and "Profile 2"); general and specific culture
+follow the same pair. *Targeted detection* is the
 profile for the molecular and immunological detection of a target; the
 workflow step it serves is called *direct identification*. *Specific* and
 *targeted* mean the same: aimed at a target named in the code.
@@ -161,14 +162,16 @@ Specimen: sputum (primary)
 | Specimen | Instance |
 |---|---|
 | mid-stream urine, Gram stained | [spec-micro-urine](Specimen-spec-micro-urine.html) |
-| blood, Giemsa stained | [spec-micro-blood-smear](Specimen-spec-micro-blood-smear.html) |
+| blood, Giemsa stained | [spec-micro-blood-smear](Specimen-spec-micro-blood-smear.html), [spec-micro-blood-smear-negative](Specimen-spec-micro-blood-smear-negative.html), [spec-micro-blood-smear-babesia](Specimen-spec-micro-blood-smear-babesia.html) |
 | stool | [spec-micro-stool](Specimen-spec-micro-stool.html) |
 | sputum, auramine stained | [spec-micro-sputum-afb](Specimen-spec-micro-sputum-afb.html) |
-| blood in blood culture bottle | [spec-micro-blood-culture](Specimen-spec-micro-blood-culture.html) |
+| blood in blood culture bottles, aerobic and anaerobic | [spec-micro-blood-culture](Specimen-spec-micro-blood-culture.html), [spec-micro-blood-culture-anaerobic](Specimen-spec-micro-blood-culture-anaerobic.html) |
 | material from the positive blood culture, derived | [spec-micro-blood-culture-derived](Specimen-spec-micro-blood-culture-derived.html) |
 | sputum, and the isolate derived from it | [spec-micro-sputum](Specimen-spec-micro-sputum.html), [spec-micro-isolate](Specimen-spec-micro-isolate.html) |
 | nasopharyngeal swab | [spec-micro-nasopharyngeal-swab](Specimen-spec-micro-nasopharyngeal-swab.html) |
 | tissue biopsy | [spec-micro-tissue](Specimen-spec-micro-tissue.html) |
+| anterior nares swab, and the isolate from its MRSA screening culture | [spec-micro-nares-swab](Specimen-spec-micro-nares-swab.html), [spec-micro-nares-isolate](Specimen-spec-micro-nares-isolate.html) |
+| conjunctival swab | [spec-micro-conjunctival-swab](Specimen-spec-micro-conjunctival-swab.html) |
 
 ### Microscopy
 
@@ -195,7 +198,7 @@ represented separately:
 | Aspect | Element | Coding |
 |---|---|---|
 | the question | `Observation.code` | LOINC: `105059-0` (general), or a code naming the target (specific) |
-| the result | `Observation.value[x]` | SNOMED CT: [Microscopic Findings](ValueSet-micro-microscopyFinding-eu-lab.html) (general), [Specific Microscopy Results](ValueSet-micro-microscopySpecificResult-eu-lab.html) (specific) |
+| the result | `Observation.value[x]` | SNOMED CT: [Microscopic Findings](ValueSet-micro-microscopyFinding-eu-lab.html) (general), [Specific Examination Results](ValueSet-micro-specificResult-eu-lab.html) (specific) |
 | the microscopy technique | `Observation.method` | SNOMED CT: [Microscopy Techniques](ValueSet-micro-microscopyTechnique-eu-lab.html), `278289002` or a descendant |
 | the staining | `Specimen.processing.procedure` | SNOMED CT: [Microbial Stain Methods](ValueSet-micro-stainMethod-eu-lab.html), `< 37926009` |
 | the amount | `Observation.component` with code `103392008` | SNOMED CT: [Semi-quantitative Microscopy Grades](ValueSet-micro-semiquantitative-eu-lab.html) |
@@ -278,7 +281,9 @@ Preferred are the codes with system `XXX`, which leave the specimen to
 Light microscopy|`
 ([Specific Microscopy Codes, preferred](ValueSet-micro-microscopySpecificCodePreferred-eu-lab.html)).
 Codes with the component *Microscopic observation* name no target and are
-excluded.
+excluded. The target are codes with system `{Specimen}`; LOINC has none for
+microscopy yet, so the codes with system `XXX` are preferred until it provides
+them.
 
 {% capture op_text %}
 `PrId` and `PrThr` are both admitted. Should one of them be preferred?
@@ -309,12 +314,12 @@ The organism is the value where it is more specific than the target or other tha
 
 **An unexpected finding with a `PrThr` code is an observation of its own.**
 The scale of a `PrThr` code admits presence or absence only. A blood film
-examined for *Plasmodium* that shows *Babesia microti* gives two observations,
-grouped under the examination:
+examined for *Plasmodium* that shows *Babesia microti* gives two observations:
+the specific microscopy says *Not detected* and references the finding through
+`hasMember`, so that it stays tied to the examination in which it was made.
 
 ```
-Observation: Microscopic observation (105059-0), method light microscopy, no value
-  hasMember → Observation: Plasmodium sp [Presence] in Blood (51587-4): Not detected
+Observation: Plasmodium sp [Presence] in Blood (51587-4): Not detected, method light microscopy
   hasMember → Observation: Microscopic observation (105059-0): Babesia microti
 ```
 
@@ -322,7 +327,7 @@ Observation: Microscopic observation (105059-0), method light microscopy, no val
 observation of its own with the same code.
 
 {% capture op_text %}
-With a `PrThr` code an unexpected organism is an observation of its own; with a `PrId` code it is the value. Target and another organism found together give one observation each, with the same code. The same rule is proposed for the specific culture and the direct identification.
+With a `PrThr` code an unexpected organism is an observation of its own, which the targeted observation references through `hasMember`; with a `PrId` code it is the value. Target and another organism found together give one observation each, with the same code. The same rule is proposed for the specific culture and the direct identification.
 {% endcapture %}
 {% include open-item.html issue=168 typ="interim" title="Unexpected finding" text=op_text %}
 
@@ -339,7 +344,7 @@ With a `PrThr` code an unexpected organism is an observation of its own; with a 
 | acid-fast bacilli in an auramine stain | [obs-micro-sputum-afb](Observation-obs-micro-sputum-afb.html) on [spec-micro-sputum-afb](Specimen-spec-micro-sputum-afb.html) |
 | specific microscopy, `PrId`, more specific than the target | [obs-micro-spec-blood-plasmodium](Observation-obs-micro-spec-blood-plasmodium.html) |
 | specific microscopy, `PrId`, preferred code | [obs-micro-spec-stool-op](Observation-obs-micro-spec-stool-op.html) |
-| specific microscopy, `PrThr`, unexpected finding | [obs-micro-blood-group](Observation-obs-micro-blood-group.html) with [obs-micro-spec-blood-plasmodium-presence](Observation-obs-micro-spec-blood-plasmodium-presence.html) and [obs-micro-blood-babesia](Observation-obs-micro-blood-babesia.html) |
+| specific microscopy, `PrThr`, unexpected finding | [obs-micro-spec-blood-plasmodium-presence](Observation-obs-micro-spec-blood-plasmodium-presence.html) with [obs-micro-blood-babesia](Observation-obs-micro-blood-babesia.html) |
 
 White paper examples 3 and 4 use the general code `105059-0`. The same
 examinations reported with a code naming the target are specific microscopies;
@@ -359,8 +364,9 @@ isolates, which are then identified (see
 internal step of the laboratory and is not reported on its own.
 
 The general culture is reported with
-[Observation Results: general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html).
-The specific culture is not profiled yet.
+[Observation Results: general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html),
+the specific culture with
+[Observation Results: specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html).
 
 #### Culture and identification
 
@@ -418,29 +424,61 @@ they are not standardised across laboratories.
 
 #### Specific culture
 
-**Not profiled yet.** A specific (taxon-targeted) culture tailors media and incubation to a target,
-e.g. *Mycobacterium*, *Nocardia* or *Streptococcus agalactiae* in pregnancy. Its
-target is in the component of the code.
+A specific (taxon-targeted) culture tailors media and incubation to a target,
+e.g. MRSA, *Mycobacterium*, *Nocardia* or *Streptococcus agalactiae* in
+pregnancy. Its target is in the component of the code. It is reported with
+[Observation Results: specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html).
 
-* **Codes:** LOINC codes with the method *Organism specific culture* and system
-  `XXX` or `Isolate`, not deprecated. Codes for missing targets are to be
-  requested from Regenstrief, e.g. *Adenovirus in Specimen by Organism specific
-  culture* (minutes, approach 1).
-* **Method:** `703752003 |Organism specific culture technique|`.
-* **Result:** growth or no growth of the target (workbook); the white paper
-  data model lists *Detected* and *Not detected*.
+| Aspect | Element | Coding |
+|---|---|---|
+| the question | `Observation.code` | LOINC, method *Organism specific culture*, system `XXX`, `{Specimen}` or `Isolate`, property `PrThr` or `PrId`, active ([Specific Culture Codes](ValueSet-micro-cultureSpecificCode-eu-lab.html)); preferred with system `{Specimen}`, until it exists with `XXX` ([preferred](ValueSet-micro-cultureSpecificCodePreferred-eu-lab.html)); with an `Isolate` code the isolate is also given as `Specimen.type` |
+| the result | `Observation.value[x]` | SNOMED CT: [Specific Examination Results](ValueSet-micro-specificResult-eu-lab.html) |
+| the technique | `Observation.method` | SNOMED CT `703752003` *Organism specific culture* |
+| unexpected growth (`PrThr`) | `Observation.hasMember` | a general culture with *Organism growth* |
 
-The workgroup discussed three use cases: the target detected or not detected,
-a subtype of the target, and unexpected growth. A `PrThr` code answers yes or
-no; a `PrId` code can report *nothing found* or what was found, including a
-subtype and an unexpected organism.
+Codes for missing targets are to be requested from Regenstrief, e.g.
+*Adenovirus in Specimen by Organism specific culture* (minutes, approach 1).
+
+**Three use cases.** The workgroup discussed them on 2026-11-06. How they are
+represented depends on the property of the code:
+
+| Use case | `PrThr`, e.g. `13317-3` *MRSA [Presence] … by Organism specific culture* | `PrId`, e.g. `9782-4` *Adenovirus sp identified … by Organism specific culture* |
+|---|---|---|
+| detected / not detected | *Detected* / *Not detected* | *Detected* / *Not detected* |
+| sub typing | not in this observation; the typing is an observation of its own that points back at the culture through `triggeredBy` | the subtype is the value, e.g. `46957004` *Human adenovirus 8* |
+| unexpected growth, before the identification | a general culture with *Organism growth*, referenced through `hasMember` | a broad group as value in a preliminary result, e.g. `409822003` *Domain Bacteria* |
+| unexpected growth, identified | an identification that points back at the growth through `triggeredBy` | the organism as value in the final result |
+
+A preliminary and a final result are versions of the same observation, told
+apart by `Observation.status`; they are not linked with `triggeredBy`.
+
+```
+Observation: MRSA [Presence] by Organism specific culture (13317-3): Not detected
+  hasMember → Observation: Microorganism identified by Culture (11475-1): Organism growth
+                ↑ triggeredBy (reflex)
+              Observation: Microorganism or agent identified (41852-5): Staphylococcus epidermidis
+```
+
+`triggeredBy` links a step to the step that caused it: the identification is
+made because something grew. The growth itself is not caused by the result of
+the specific culture; both are readings of the same culture, which is why
+`hasMember` links them.
 
 {% capture op_text %}
-Whether the specific culture codes have the property `PrThr`, `PrId` or both is under discussion in the workgroup (minutes of 2026-11-06), and with it the result: growth or no growth (workbook), or *Detected* and *Not detected* (white paper).
-{% endcapture %}
-{% include open-item.html issue=186 title="Property of the specific culture codes" text=op_text %}
+Whether the specific culture codes have the property `PrThr`, `PrId` or both is under discussion in the workgroup. Until it decides, this guide admits both and follows the discussion of 2026-11-06: *Detected* and *Not detected* rather than growth (workbook), and unexpected growth with a `PrThr` code as a general culture of its own. The white paper says that a specific culture shall be reported as such, not as a general culture; the reference through `hasMember` keeps the growth tied to the specific culture.
 
-**Unexpected growth.** The rule proposed for the specific microscopy is proposed for the specific culture as well ([Issue #168](#op-issue-168)): with a `PrId` code the organism found is the value, with a `PrThr` code it is an observation of its own. White paper example 2 of the specific culture reports *Staphylococcus epidermidis* as the value of the `PrThr` code `100897-8` and would change.
+The preferred codes are an interim as well. The target are codes with system `{Specimen}`, which leave the specimen open explicitly; LOINC has none for culture yet. Until it provides them, the codes with system `XXX` are preferred. When `{Specimen}` codes arrive, the value sets are revised, so that one test does not have two preferred codes.
+{% endcapture %}
+{% include open-item.html issue=186 typ="interim" title="Property and result of the specific culture" text=op_text %}
+
+**Unexpected growth** follows the rule proposed for the specific microscopy ([Issue #168](#op-issue-168)). White paper example 2 of the specific culture reports *Staphylococcus epidermidis* as the value of the `PrThr` code `100897-8` and would change.
+
+#### Specific culture examples
+
+| Example | Instances |
+|---|---|
+| MRSA not detected, unexpected growth identified | [obs-micro-mrsa-culture](Observation-obs-micro-mrsa-culture.html) with [obs-micro-mrsa-culture-growth](Observation-obs-micro-mrsa-culture-growth.html), identified by [obs-ident-mrsa-culture-sepidermidis](Observation-obs-ident-mrsa-culture-sepidermidis.html) on [spec-micro-nares-isolate](Specimen-spec-micro-nares-isolate.html) |
+| adenovirus culture with the subtype as value | [obs-micro-adenovirus-culture](Observation-obs-micro-adenovirus-culture.html) on [spec-micro-conjunctival-swab](Specimen-spec-micro-conjunctival-swab.html) |
 
 ### Identification
 
@@ -554,7 +592,7 @@ The target is in the LOINC component — the nucleic acid of an organism or an
 antigen — and the property is `PrThr`.
 
 {% capture op_text %}
-The filters for `IF`, `IA` and `Aggl` and the codes without method also catch antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`. They remain in the value sets for now; whether they belong to [serology](#serology) is to be decided with that chapter.
+Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method still catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`: LOINC has no property that tells antibodies from antigens. Regenstrief is to be asked for `{Specimen}` codes that keep them apart.
 {% endcapture %}
 {% include open-item.html issue=181 typ="interim" title="Antibody codes" text=op_text %}
 
@@ -678,7 +716,7 @@ pathogen itself or its antigens (see
 The workgroup's work on serology is ongoing; the workbook sheet *Serology
 techniques* is still empty.
 
-**Antibody codes.** The LOINC filters of the targeted detection also catch antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|` and `105911-2 |SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Specimen|`. They remain in those value sets for now and are to be decided together with this chapter ([Issue #181](#op-issue-181)).
+**Antibody codes.** The LOINC filters of the targeted detection also catch antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|` and `105911-2 |SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Specimen|`. They belong to this chapter and are not used with the targeted detection, although its value sets cannot exclude them yet ([Issue #181](#op-issue-181)).
 
 ### Susceptibility
 
