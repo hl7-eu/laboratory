@@ -54,4 +54,4 @@ Growth and no growth are the result of the general culture, not of this profile.
 * hasMember ^short = "Unexpected growth in this culture, or the members of a screening panel"
 * hasMember ^comment = "With a PrThr code the value can only say whether the target was found. Growth of something else in the same culture is a general culture of its own (365698005 |Organism growth|), referenced here, so that it stays tied to the specific culture in which it grew; it can be reported before the organism is identified. A panel code such as 100913-3 |Staph aureus and MRSA screening panel| references its specific cultures."
 
-* interpretation ^comment = "The specific culture has no interpretation; detected or not detected is the result itself."
+* interpretation ^comment = "The specific culture needs no interpretation; detected or not detected is the result itself."

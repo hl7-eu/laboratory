@@ -9,7 +9,7 @@
 // identification" and the workbook sheet "Phenotypic Identification":
 //
 //   Observation.code      41852-5 |Microorganism or agent identified in Specimen|
-//   Observation.value[x]  SNOMED CT organism, or Not detected
+//   Observation.value[x]  SNOMED CT organism, Not detected, or Normal flora
 //   Observation.method    MALDI-TOF, microscopy, sequencing, ...
 // ============================================================================
 
@@ -30,8 +30,8 @@ Where a predefined target is sought and the answer is whether it is present, use
 
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganismIdentificationResultEuVs (extensible)
-* value[x] ^short = "The organism identified, or Not detected"
-* value[x] ^comment = "The organism from the SNOMED CT organism hierarchies (bacteria, fungi, protozoa, viruses, prions, helminths, arthropods). If the examination was performed but no organism was identified, 260415000 |Not detected| is given. An indeterminate result is represented with dataAbsentReason, not with a value."
+* value[x] ^short = "The organism identified, Not detected, or Normal flora"
+* value[x] ^comment = "The organism from the SNOMED CT organism hierarchies (bacteria, fungi, protozoa, viruses, prions, helminths, arthropods). If the examination was performed but no organism was identified, 260415000 |Not detected| is given. A culture that grew only normal flora is identified as 23506009 |Normal flora|, a finding rather than an organism. An indeterminate result is represented with dataAbsentReason, not with a value."
 
 * method from OrganismIdentificationTechniqueEuVs (extensible)
 * method ^short = "The identification technique, e.g. MALDI-TOF mass spectrometry"

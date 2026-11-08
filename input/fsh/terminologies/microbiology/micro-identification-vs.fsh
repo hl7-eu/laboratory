@@ -43,11 +43,12 @@ Description: """The SNOMED CT hierarchies an identified organism or infectious a
 ValueSet: OrganismIdentificationResultEuVs
 Id: micro-organismIdentificationResult-eu-lab
 Title: "Organism Identification Results"
-Description: """The result of an organism identification: the organism, or 260415000 |Not detected| when the examination was performed and nothing was identified (workbook, sheet Phenotypic Identification, row 39). An indeterminate result is not a value; it is given in dataAbsentReason."""
+Description: """The result of an organism identification: the organism, or 260415000 |Not detected| when the examination was performed and nothing was identified (workbook, sheet Phenotypic Identification, row 39), or 23506009 |Normal flora| when a culture grew only normal flora; it is a finding rather than an organism, and neither the workbook nor the white paper mention it (question to the workgroup, SEM-22). An indeterminate result is not a value; it is given in dataAbsentReason."""
 * insert SNOMEDCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 * include codes from valueset MicroorganismEuVs
 * $sct#260415000 "Not detected"
+* $sct#23506009 "Normal flora" // finding; a culture that grew only normal flora (SEM-22)
 
 // ----------------------------------------------------------------------------
 

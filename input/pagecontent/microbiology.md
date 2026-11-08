@@ -398,12 +398,20 @@ anything grow?*
 | no result | `Observation.dataAbsentReason` | `82334004` *Indeterminate* and the FHIR data-absent-reason codes |
 
 {% capture op_text %}
-The workbook prefers `41852-5 |Microorganism or agent identified in Specimen|` for the general culture and allows `11475-1`. This guide uses `11475-1` only, so that culture and identification keep distinct codes (white paper, principle 1); `41852-5` stays the code of the identification. Open as well: whether the result is bound required, whether an interpretation is needed, and whether a general culture code with the property `PrThr`, as requested in Berlin, would replace `11475-1`.
+The workbook prefers `41852-5 |Microorganism or agent identified in Specimen|` for the general culture and allows `11475-1`. This guide uses `11475-1` only, so that culture and identification keep distinct codes (white paper, principle 1); `41852-5` stays the code of the identification. The result is bound required, as the workbook asks (sheet Culture General, H27). Normal flora, which neither the workbook nor the white paper mention, is the value of the identification, not of the culture. Open as well: whether an interpretation is needed, and whether a general culture code with the property `PrThr`, as requested in Berlin, would replace `11475-1`.
 {% endcapture %}
 {% include open-item.html issue=188 typ="interim" title="Code of the general culture" text=op_text %}
 
 **The organism is not the value of the culture.** *Organism growth* says that
 something grew. The organism is named by the identification that follows.
+The result is bound required: growth or no growth is a closed choice. The
+amount of growth belongs to the [Quantification](#quantification), an
+indeterminate culture to `dataAbsentReason`; local codes may be sent as
+additional codings.
+
+**Normal flora is reported by the identification.** A culture that grew only
+normal flora reports *Organism growth*; `23506009` *Normal flora*, a SNOMED CT
+finding, is the value of the identification that follows.
 
 **One observation per culture condition.** `Observation.method` holds one code.
 A blood culture set with an aerobic and an anaerobic bottle gives two
@@ -436,9 +444,8 @@ pregnancy. Its target is in the component of the code. It is reported with
 | the technique | `Observation.method` | SNOMED CT `703752003` *Organism specific culture* |
 | unexpected growth (`PrThr`) | `Observation.hasMember` | a general culture with *Organism growth* |
 
-Codes for missing targets are to be requested from Regenstrief, e.g.
-*Adenovirus in Specimen by Organism specific culture* (minutes, approach 1;
-[Issue #193](https://github.com/hl7-eu/laboratory/issues/193)).
+Codes for missing targets are to be requested from Regenstrief (minutes,
+approach 1; [Issue #193](https://github.com/hl7-eu/laboratory/issues/193)).
 
 **Three use cases.** The workgroup discussed them on 2026-11-06. How they are
 represented depends on the property of the code:
@@ -529,7 +536,8 @@ identified in Specimen*; parasites are reported with `41852-5`.
 
 **The result is the organism** from the SNOMED CT organism hierarchies, or
 `260415000 |Not detected|` when the examination was performed and nothing was
-identified.
+identified. A culture that grew only normal flora is identified as `23506009`
+*Normal flora*, a finding rather than an organism ([Issue #188](#op-issue-188)).
 
 #### Phenotypic identification
 

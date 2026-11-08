@@ -15,7 +15,7 @@
 //
 // Interim position: the workbook prefers 41852-5 for the general culture; this
 // guide keeps 41852-5 for the identification (question to the workgroup,
-// SEM-22). The specific (taxon-targeted) culture is not profiled yet.
+// SEM-22).
 // ============================================================================
 
 Profile: ObservationCultureGeneralEu
@@ -32,12 +32,12 @@ Description: """General culture of a specimen with media and conditions that det
 * code ^comment = "11475-1 |Microorganism identified in Specimen by Culture| keeps the culture apart from the identification, which uses 41852-5 |Microorganism or agent identified in Specimen|. The workbook prefers 41852-5 for the general culture as well; whether the workgroup confirms the distinct codes is an open point. Codes pre-coordinating the specimen are not used; the specimen is given in Specimen.type."
 
 * value[x] only CodeableConcept
-* valueCodeableConcept from CultureGrowthEuVs (extensible)
+* valueCodeableConcept from CultureGrowthEuVs (required)
 * value[x] ^short = "No growth or Organism growth"
-* value[x] ^comment = "264868006 |No growth| or 365698005 |Organism growth|. The organism that grew is not the value of the culture; it is the value of the identification that follows. An indeterminate culture — contaminated, insufficient material — is not a value; it is given in dataAbsentReason."
+* value[x] ^comment = "264868006 |No growth| or 365698005 |Organism growth|. The organism that grew is not the value of the culture; it is the value of the identification that follows. An indeterminate culture — contaminated, insufficient material — is not a value; it is given in dataAbsentReason. The binding is required: growth or no growth is a closed choice. The amount of growth belongs to the quantification; normal flora is the value of the identification that follows; local codes may be sent as additional codings."
 
 * method from CultureGeneralTechniqueEuVs (extensible)
 * method ^short = "The culture technique: aerobic, anaerobic, or microbial culture"
 * method ^comment = "Required, like in all microbiology profiles. 703750006 |Aerobic culture| or 703751005 |Anaerobic culture|; 702658000 |Microbial culture| where the condition is not known or not meaningful. Method holds one code, so a blood culture set with an aerobic and an anaerobic bottle gives one observation per bottle. Media, temperature and incubation time are not coded."
 
-* interpretation ^comment = "The general culture has no interpretation; growth or no growth is the result itself."
+* interpretation ^comment = "The general culture needs no interpretation; growth or no growth is the result itself."
