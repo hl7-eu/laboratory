@@ -26,7 +26,7 @@ Where a predefined target is sought and the answer is whether it is present, use
 
 * code from OrganismIdentificationCodeEuVs (extensible)
 * code ^short = "The identification, preferably 41852-5"
-* code ^comment = "41852-5 |Microorganism or agent identified in Specimen| is the recommended code. The codes naming the kingdom (bacteria, fungus, virus) or the sequencing target (16S, 18S rRNA) are accepted where the laboratory reports at that level. Codes that pre-coordinate the culture (e.g. 11475-1 |... by Culture|) describe the culture step and belong to the culture observation, not to the identification."
+* code ^comment = "41852-5 |Microorganism or agent identified in Specimen| is the recommended code. The codes naming the sequencing target (16S, 18S rRNA) are accepted for sequencing-based identification. Whole genome sequencing uses 41852-5 with 1304162005 |Nucleic acid sequencing technique| as method until the requested LOINC code exists. Codes that pre-coordinate the culture (e.g. 11475-1 |... by Culture|) describe the culture step and belong to the culture observation, not to the identification."
 
 * value[x] only CodeableConcept
 * valueCodeableConcept from OrganismIdentificationResultEuVs (extensible)

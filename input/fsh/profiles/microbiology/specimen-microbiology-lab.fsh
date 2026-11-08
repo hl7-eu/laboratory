@@ -19,6 +19,8 @@ Description: """A specimen examined in microbiology: the primary clinical specim
 * insert MicrobiologyDraftStatusEu
 * . ^short = "Microbiology specimen"
 
+* type 1..1
+* type ^short = "The specimen type, coded with SNOMED CT (required)"
 * type ^comment = "The specimen type is given here also where the test code pre-coordinates the material. For material taken from a positive blood culture a code such as 878861003 |Blood specimen in blood culture bottle| is used, for an isolate 119303007 |Microbial isolate|."
 
 * parent ^short = "The specimen this one was derived from (primary specimen of an isolate or of a positive culture)"

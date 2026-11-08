@@ -1,10 +1,11 @@
 // ============================================================================
-// Microbiology examples — microscopy and identification
+// Microbiology examples — microscopy, identification and targeted detection
 //
 // They follow the examples of the white paper chapter "Microscopy" (1–6) and
 // the identification examples of the chapters "Phenotypic Pathogen
-// Identification" and "Molecular Genetic Testing". The patient is the one of
-// the laboratory report examples (pat-lab-example).
+// Identification" and "Molecular Genetic Testing". The specific microscopy
+// examples use the codes the workbook gives for Profile 2 (sheet Microscopy).
+// The patient is the one of the laboratory report examples (pat-lab-example).
 // ============================================================================
 
 // ---------------------------------------------------------------- specimens
@@ -45,8 +46,18 @@ Usage: #example
 
 Instance: spec-micro-blood-culture
 InstanceOf: SpecimenMicrobiologyEu
-Title: "Specimen: blood in blood culture bottle"
-Description: "The primary specimen of the blood culture: blood inoculated into a blood culture bottle."
+Title: "Specimen: blood in aerobic blood culture bottle"
+Description: "The primary specimen of the blood culture: blood inoculated into the aerobic bottle of a blood culture set."
+Usage: #example
+* status = #available
+* type = $sct#878861003 "Blood specimen in blood culture bottle"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-01T22:40:00+01:00"
+
+Instance: spec-micro-blood-culture-anaerobic
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: blood in anaerobic blood culture bottle"
+Description: "The anaerobic bottle of the same blood culture set, inoculated from the same blood draw."
 Usage: #example
 * status = #available
 * type = $sct#878861003 "Blood specimen in blood culture bottle"
@@ -117,11 +128,11 @@ Usage: #example
 * subject = Reference(pat-lab-example)
 * collection.collectedDateTime = "2026-03-02T11:20:00+01:00"
 
-// ----------------------------------------------- microscopy (white paper 1–6)
+// --------------------------------------- general microscopy (white paper 1–6)
 
 // Example 1 — direct microscopy of a urine specimen
 Instance: obs-micro-urine-gram-gnb
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Gram-negative bacilli, few, in urine"
 Description: "White paper example 1: a mid-stream urine specimen examined by light microscopy after Gram staining shows Gram-negative bacilli in low quantity. The finding is the value, the amount a component, the technique the method, and the stain sits on the specimen."
 Usage: #example
@@ -140,7 +151,7 @@ Usage: #example
 
 // Example 2 — multiple findings from one examination
 Instance: obs-micro-urine-gram-group
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Gram stain of urine, grouping two findings"
 Description: "White paper example 2: one microscopic examination yields two independent findings, Gram-negative rods and leukocytes. The examination is an observation without a value of its own that carries code, method and specimen and references the findings through hasMember."
 Usage: #example
@@ -157,7 +168,7 @@ Usage: #example
 * hasMember[+] = Reference(obs-micro-urine-gram-leukocytes)
 
 Instance: obs-micro-urine-gram-gnr
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Gram-negative rods, few (member finding)"
 Description: "White paper example 2, first member: Gram-negative rods in low quantity."
 Usage: #example
@@ -175,9 +186,9 @@ Usage: #example
 * component[semiquantitative].valueCodeableConcept = $sct#57176003 "Few"
 
 Instance: obs-micro-urine-gram-leukocytes
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: leukocytes, many (member finding)"
-Description: "White paper example 2, second member: leukocytes in high quantity, reported as a finding of the open microscopic observation. The LOINC-coded alternative is a targeted detection with 72163-9, see obs-detect-leukocytes-gram."
+Description: "White paper example 2, second member: leukocytes in high quantity. Host cells are findings of the general microscopy."
 Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
@@ -194,7 +205,7 @@ Usage: #example
 
 // Example 3 — direct microscopy for Plasmodium
 Instance: obs-micro-blood-plasmodium
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Plasmodium falciparum in blood film, ++"
 Description: "White paper example 3: a Giemsa-stained blood film shows Plasmodium falciparum. The species is the finding, the amount a component."
 Usage: #example
@@ -212,7 +223,7 @@ Usage: #example
 * component[semiquantitative].valueCodeableConcept = $sct#260348001 "++"
 
 Instance: obs-micro-blood-plasmodium-negative
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: no Plasmodium seen in blood film"
 Description: "White paper example 3, negative case: the blood film was examined and no Plasmodium was detected. The observation carries the not-detected result rather than an organism."
 Usage: #example
@@ -229,7 +240,7 @@ Usage: #example
 
 // Example 4 — direct microscopy for parasites
 Instance: obs-micro-stool-giardia
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Giardia lamblia in stool"
 Description: "White paper example 4: a stool specimen examined microscopically for intestinal parasites shows Giardia lamblia."
 Usage: #example
@@ -246,9 +257,9 @@ Usage: #example
 
 // Example 5 — microscopy following culture
 Instance: obs-micro-blood-culture-positive
-InstanceOf: ObservationResultsLaboratoryEu
-Title: "Observation: blood culture, organism growth"
-Description: "The blood culture that signalled positive. It is the culture step — growth, not yet an organism — and the trigger of the Gram stain and the identification that follow. The culture profile is not part of this set; the laboratory result profile is used."
+InstanceOf: ObservationCultureGeneralEu
+Title: "Observation: blood culture, aerobic bottle, organism growth"
+Description: "The aerobic bottle of the blood culture set signalled positive. It is the culture step — growth, not yet an organism — and the trigger of the Gram stain and the identification that follow. The anaerobic bottle is an observation of its own."
 Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
@@ -258,10 +269,27 @@ Usage: #example
 * effectiveDateTime = "2026-03-02T13:50:00+01:00"
 * performer[+].display = "Microbiology laboratory"
 * valueCodeableConcept = $sct#365698005 "Organism growth"
+* method = $sct#703750006 "Aerobic culture"
 * specimen = Reference(spec-micro-blood-culture)
 
+Instance: obs-micro-blood-culture-anaerobic-negative
+InstanceOf: ObservationCultureGeneralEu
+Title: "Observation: blood culture, anaerobic bottle, no growth"
+Description: "The anaerobic bottle of the same blood culture set showed no growth. Method holds one code, so each culture condition is an observation of its own."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#11475-1 "Microorganism identified in Specimen by Culture"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-06T22:40:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#264868006 "No growth"
+* method = $sct#703751005 "Anaerobic culture"
+* specimen = Reference(spec-micro-blood-culture-anaerobic)
+
 Instance: obs-micro-blood-culture-gram
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Gram stain of the positive blood culture"
 Description: "White paper example 5: material from the positive blood culture is Gram stained and shows Gram-positive cocci in clusters. The observation references the derived specimen and points back at the culture that triggered it."
 Usage: #example
@@ -280,7 +308,7 @@ Usage: #example
 
 // Example 6 — microscopy of an isolate
 Instance: obs-micro-isolate-gram
-InstanceOf: ObservationMicroscopyEu
+InstanceOf: ObservationMicroscopyGeneralEu
 Title: "Observation: Gram stain of an isolate"
 Description: "White paper example 6: an isolate obtained from a sputum culture is Gram stained to characterise its morphology. The specimen is the isolate, which points at the primary sputum specimen through parent."
 Usage: #example
@@ -295,10 +323,119 @@ Usage: #example
 * method = $sct#702661004 "Light microscopy"
 * specimen = Reference(spec-micro-isolate)
 
+// Acid-fast bacilli in an auramine-stained sputum
+Instance: obs-micro-sputum-afb
+InstanceOf: ObservationMicroscopyGeneralEu
+Title: "Observation: acid-fast bacilli, ++, in auramine-stained sputum"
+Description: "Acid-fast bacilli are a finding of the general microscopy: the code asks what was seen, the value is the acid-fast bacillus, the amount a component, the fluorescence microscopy the method, and the auramine stain sits on the specimen."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#105059-0 "Microscopic observation [Identifier] in Specimen"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T13:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#243365003 "Acid-fast bacillus"
+* method = $sct#258099003 "Fluorescence microscopy"
+* specimen = Reference(spec-micro-sputum-afb)
+* component[semiquantitative].code = $sct#103392008 "Semi-quantitative"
+* component[semiquantitative].valueCodeableConcept = $sct#260348001 "++"
+
+// ------------------------------------------------------------ specific microscopy
+
+// Workbook Profile 2, PrId: the organism seen is more specific than the target
+Instance: obs-micro-spec-blood-plasmodium
+InstanceOf: ObservationMicroscopySpecificEu
+Title: "Observation: Plasmodium sp identified in blood film: Plasmodium falciparum, ++"
+Description: "Specific microscopy with a PrId code: the code asks for Plasmodium sp, the blood film shows Plasmodium falciparum. Because the finding is more specific than the target, the value is the species, not Detected. The amount is a component."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#32206-5 "Plasmodium sp identified in Blood by Light microscopy"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T11:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#30020004 "Plasmodium falciparum"
+* method = $sct#702661004 "Light microscopy"
+* specimen = Reference(spec-micro-blood-smear)
+* component[semiquantitative].code = $sct#103392008 "Semi-quantitative"
+* component[semiquantitative].valueCodeableConcept = $sct#260348001 "++"
+
+// Workbook Profile 2, preferred code with system XXX
+Instance: obs-micro-spec-stool-op
+InstanceOf: ObservationMicroscopySpecificEu
+Title: "Observation: ova and parasites in stool: Giardia lamblia"
+Description: "Specific microscopy with the preferred code 673-4 (system XXX, the specimen in Specimen.type): the stool is examined for ova and parasites and shows Giardia lamblia. The parasite found is the value."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#673-4 "Ova and parasites identified in Specimen by Light microscopy"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T12:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#78181009 "Giardia lamblia"
+* method = $sct#702661004 "Light microscopy"
+* specimen = Reference(spec-micro-stool)
+
+// PrThr with an unexpected finding: the targeted observation is Not detected,
+// the organism found is a general microscopy of its own; one examination
+// groups both through hasMember.
+Instance: obs-micro-blood-group
+InstanceOf: ObservationMicroscopyGeneralEu
+Title: "Observation: blood film examined for Plasmodium, grouping two results"
+Description: "A blood film is examined for Plasmodium and shows Babesia microti instead. The PrThr code admits presence or absence only, so the examination groups two observations through hasMember: Plasmodium not detected, and Babesia microti as a finding of the general microscopy."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#105059-0 "Microscopic observation [Identifier] in Specimen"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T11:30:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* method = $sct#702661004 "Light microscopy"
+* specimen = Reference(spec-micro-blood-smear)
+* hasMember[+] = Reference(obs-micro-spec-blood-plasmodium-presence)
+* hasMember[+] = Reference(obs-micro-blood-babesia)
+
+Instance: obs-micro-spec-blood-plasmodium-presence
+InstanceOf: ObservationMicroscopySpecificEu
+Title: "Observation: Plasmodium sp not detected in blood film (member)"
+Description: "Specific microscopy with a PrThr code: Plasmodium was sought and not found. The result is Not detected; the Babesia seen on the same film is not the value of this observation."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#51587-4 "Plasmodium sp [Presence] in Blood by Light microscopy"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T11:30:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260415000 "Not detected"
+* method = $sct#702661004 "Light microscopy"
+* specimen = Reference(spec-micro-blood-smear)
+
+Instance: obs-micro-blood-babesia
+InstanceOf: ObservationMicroscopyGeneralEu
+Title: "Observation: Babesia microti in blood film (member)"
+Description: "The unexpected finding of the examination for Plasmodium, reported as a general microscopy: the code asks what was seen, the value is Babesia microti."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#105059-0 "Microscopic observation [Identifier] in Specimen"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T11:30:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#76828008 "Babesia microti"
+* method = $sct#702661004 "Light microscopy"
+* specimen = Reference(spec-micro-blood-smear)
+
 // ------------------------------------------------------ organism identification
 
 Instance: obs-micro-sputum-culture-positive
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: ObservationCultureGeneralEu
 Title: "Observation: sputum culture, organism growth"
 Description: "The sputum culture whose growth was identified. The culture step; the identification that follows points back at it."
 Usage: #example
@@ -310,6 +447,7 @@ Usage: #example
 * effectiveDateTime = "2026-03-03T08:30:00+01:00"
 * performer[+].display = "Microbiology laboratory"
 * valueCodeableConcept = $sct#365698005 "Organism growth"
+* method = $sct#702658000 "Microbial culture"
 * specimen = Reference(spec-micro-sputum)
 
 Instance: obs-ident-maldi-kpneumoniae
@@ -367,12 +505,12 @@ Usage: #example
 Instance: obs-detect-pertussis-pcr
 InstanceOf: ObservationTargetedDetectionEu
 Title: "Observation: Bordetella pertussis DNA detected by real-time PCR"
-Description: "Targeted molecular detection in the preferred, post-coordinated form: a method-neutral LOINC code with the target in the component and system XXX, the specimen in Specimen.type, and the technique in Observation.method."
+Description: "Targeted molecular detection with a preferred code: the target in the component, system {Specimen} and method {Molgen}, with the specimen in Specimen.type and the technique in Observation.method."
 Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
-* code = $loinc#105875-9 "Bordetella pertussis DNA [Presence] in Specimen"
+* code = $loinc#105875-9 "Bordetella pertussis DNA [Presence] in Specimen by Molgen"
 * subject = Reference(pat-lab-example)
 * effectiveDateTime = "2026-03-02T15:00:00+01:00"
 * performer[+].display = "Microbiology laboratory"
@@ -388,7 +526,7 @@ Usage: #example
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
-* code = $loinc#105875-9 "Bordetella pertussis DNA [Presence] in Specimen"
+* code = $loinc#105875-9 "Bordetella pertussis DNA [Presence] in Specimen by Molgen"
 * subject = Reference(pat-lab-example)
 * effectiveDateTime = "2026-03-02T15:00:00+01:00"
 * performer[+].display = "Microbiology laboratory"
@@ -411,39 +549,3 @@ Usage: #example
 * valueCodeableConcept = $sct#260415000 "Not detected"
 * method = $sct#1156860005 "Rapid antigen detection immunoassay technique"
 * specimen = Reference(spec-micro-nasopharyngeal-swab)
-
-Instance: obs-detect-afb-auramine
-InstanceOf: ObservationTargetedDetectionEu
-Title: "Observation: acid-fast bacilli detected, ++ (auramine stain)"
-Description: "Targeted microscopic detection (workbook, sheet Microscopy, Profile 2): the object sought — acid-fast bacilli — is named in the code, the result is Detected, the amount is a component, the fluorescence microscopy is the method, and the auramine stain sits on the specimen."
-Usage: #example
-* status = #final
-* category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
-* code = $loinc#87243-2 "Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain"
-* subject = Reference(pat-lab-example)
-* effectiveDateTime = "2026-03-02T13:00:00+01:00"
-* performer[+].display = "Microbiology laboratory"
-* valueCodeableConcept = $sct#260373001 "Detected"
-* method = $sct#258099003 "Fluorescence microscopy technique"
-* specimen = Reference(spec-micro-sputum-afb)
-* component[semiquantitative].code = $sct#103392008 "Semi-quantitative"
-* component[semiquantitative].valueCodeableConcept = $sct#260348001 "++"
-
-Instance: obs-detect-leukocytes-gram
-InstanceOf: ObservationTargetedDetectionEu
-Title: "Observation: leukocytes detected in Gram stain, many"
-Description: "Host cells with the object named in the code: 72163-9 asks for leukocytes, the answer is Detected, the amount is a component. The alternative, the leukocytes as a finding of the open microscopic observation, is obs-micro-urine-gram-leukocytes."
-Usage: #example
-* status = #final
-* category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
-* code = $loinc#72163-9 "Leukocytes [Presence] in Specimen by Gram stain"
-* subject = Reference(pat-lab-example)
-* effectiveDateTime = "2026-03-02T10:30:00+01:00"
-* performer[+].display = "Microbiology laboratory"
-* valueCodeableConcept = $sct#260373001 "Detected"
-* method = $sct#702661004 "Light microscopy"
-* specimen = Reference(spec-micro-urine)
-* component[semiquantitative].code = $sct#103392008 "Semi-quantitative"
-* component[semiquantitative].valueCodeableConcept = $sct#260396001 "Numerous"

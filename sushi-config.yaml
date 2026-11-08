@@ -197,6 +197,7 @@ menu:
     Logical Models: logicalmodels.html
     Obligations: obligations.html
     Implementation notes: notes.html
+  Specialties:
     Microbiology: microbiology.html
   Implementation:
     Mapping to Profiles: modelmap.html

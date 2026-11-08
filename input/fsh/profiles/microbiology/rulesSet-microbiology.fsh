@@ -4,8 +4,8 @@
 // The microbiology profiles follow the conventions of the HL7 Europe Laboratory
 // Semantic Workgroup ("Conventions for FHIR based Microbiology Result
 // Reporting", white paper v0.4) and its terminology workbook. The rule sets
-// here carry what the three Observation profiles have in common, so that the
-// profiles state only what differs between them.
+// here carry what the microbiology Observation profiles have in common, so
+// that the profiles state only what differs between them.
 // ============================================================================
 
 // New content: maturity 1, standards status draft, resource status draft —
@@ -35,14 +35,16 @@ RuleSet: MicrobiologyObservationCommonEu
 // Specimen.type, coded with SNOMED CT, and the microscopy preparation
 // (staining) lives in Specimen.processing.
 * specimen 1..1
+* specimen only Reference(SpecimenMicrobiologyEu)
 * specimen ^short = "The specimen examined (required)"
-* specimen ^comment = "The specimen shall always be represented explicitly, even if the material is pre-coordinated in the test code. The SpecimenMicrobiologyEu profile adds the staining procedure and the link to the parent specimen (isolate, material from a positive culture)."
+* specimen ^comment = "The specimen shall always be represented explicitly, with its type in Specimen.type, even if the material is pre-coordinated in the test code. The SpecimenMicrobiologyEu profile requires the type and adds the staining procedure and the link to the parent specimen (isolate, material from a positive culture)."
 
 // The method is to be given consistently in Observation.method, also where the
 // LOINC code already pre-coordinates a broad method category (white paper,
 // core principles).
-* method ^short = "Technique used, coded with SNOMED CT"
-* method ^comment = "The method is given in Observation.method even if the test code pre-coordinates a method category. The LOINC method axis is broad (e.g. \"Molgen\"), SNOMED CT names the actual technique."
+* method 1..1
+* method ^short = "Technique used, coded with SNOMED CT (required)"
+* method ^comment = "The method is always given in Observation.method, also where an accepted test code pre-coordinates a method category: the LOINC method axis is broad (e.g. \"Molgen\"), SNOMED CT names the actual technique, and receivers can query by method only if every observation carries it. Where the technique is not known, the most general concept of the method value set is used (e.g. 278289002 |Microscopy technique|, 702658000 |Microbial culture|, 1156878000 |Molecular nucleic acid amplification technique|); where the value set has none, the data-absent-reason extension states that the method is unknown."
 
 // ----------------------------------------------------------------------------
 // Semi-quantitative amount of a single finding
@@ -70,3 +72,23 @@ RuleSet: MicrobiologySemiquantitativeComponentEu
 * component[semiquantitative].code = $sct#103392008
 * component[semiquantitative].value[x] only CodeableConcept
 * component[semiquantitative].valueCodeableConcept from MicroscopySemiquantitativeEuVs (extensible)
+
+// ----------------------------------------------------------------------------
+// Preferred codes within an extensible binding
+//
+// The workbook gives two value sets for the code of a profile: all admitted
+// codes, and the preferred ones that leave specimen and method to be
+// post-coordinated (sheet Microscopy, F4). The element is bound extensibly to
+// the first; the second is stated as an additional binding with the purpose
+// `preferred` (tools extension, the R4 form of the R5 binding.additional).
+// ----------------------------------------------------------------------------
+RuleSet: MicrobiologyPreferredBindingEu(element, valueSet, documentation)
+* {element} ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* {element} ^binding.extension[=].extension[+].url = "key"
+* {element} ^binding.extension[=].extension[=].valueId = "preferred"
+* {element} ^binding.extension[=].extension[+].url = "purpose"
+* {element} ^binding.extension[=].extension[=].valueCode = #preferred
+* {element} ^binding.extension[=].extension[+].url = "valueSet"
+* {element} ^binding.extension[=].extension[=].valueCanonical = Canonical({valueSet})
+* {element} ^binding.extension[=].extension[+].url = "documentation"
+* {element} ^binding.extension[=].extension[=].valueMarkdown = "{documentation}"

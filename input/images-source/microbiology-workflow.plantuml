@@ -1,0 +1,134 @@
+@startuml
+' Typical microbiology laboratory workflow, adapted from
+' "Figure 1: A simplified microbiology workflow" of the workgroup white paper.
+' Colour legend:
+'   light blue = status message
+'   green      = preliminary/final result report & status message
+'   white      = internal laboratory workflow step
+'   white/green gradient (Culture) = internal step whose results can also be reported
+
+left to right direction
+scale max 1100 width
+hide empty description
+skinparam roundCorner 0
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam ArrowColor black
+skinparam ActivityBarColor black
+skinparam ranksep 30
+skinparam nodesep 25
+skinparam state {
+  BackgroundColor white
+  BorderColor black
+  BorderThickness 1
+  FontColor black
+  StartColor black
+}
+skinparam note {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam titleBorderThickness 1
+skinparam titleBorderColor black
+skinparam titleFontSize 16
+skinparam legendBackgroundColor white
+skinparam legendBorderColor white
+
+title Typical microbiology lab workflow (real workflow may vary)
+
+' ---- start nodes -------------------------------------------------------
+state s1 <<start>>
+state s2 <<start>>
+note top of s1 : Specimen received\nand order known
+note top of s2 : No specimen received\nbut order known
+
+' ---- specimen handling (status messages) -----------------------------
+state "Check the specimen\nquality and fit for\norder (service\nrequest)" as check #CCFFFF
+state "Specimen sampling" as sampling #CCFFFF
+state "Appoint specimen\ncollection" as appoint #CCFFFF
+state "Blood sample" as blood #CCFFFF
+note top of check : Information about\nacceptance/rejection\nof the order (with\nreason)
+
+' ---- laboratory work -------------------------------------------------
+state fork1 <<fork>>
+state "Inoculation (0..*)" as inoculation
+state "Staining (0..*)" as staining
+state "Direct identification\n(PCR, NGS)" as directPcr #99FFCC
+state "Direct identification\n(Antigen detection)" as directAntigen #99FFCC
+state "Indirect identification\n(Antibody detection)" as indirect #99FFCC
+
+state "Culture (0..*)" as culture #white\99FFCC
+state "Microscopy (1..1)" as microscopy #99FFCC
+note left of culture : <color:red>Only negative results\n<color:red>will be reported
+note top of culture : Set of different\ncultivations can be\nperformed
+
+state "Identification (0..*)" as identification #99FFCC
+
+' ---- results after identification ------------------------------------
+state fork2 <<fork>>
+state "Susceptibility (0..*)" as susceptibility #99FFCC
+state "Organism properties\nidentification (0..*)" as orgProps1 #99FFCC
+state "Quantification (0..1)" as quantification #99FFCC
+note top of susceptibility : MIC and Disk\nDiffusion require\ndifferent susceptibility\nmethods
+note right of orgProps1 : Property like serotype,\ngenotype, virulence factor,\nresistance mechanism etc.
+
+state fork3 <<fork>>
+state "Resistance genes\n(0..*)" as resistanceGenes #99FFCC
+state "Organism properties\nidentification (0..*)" as orgProps2 #99FFCC
+
+' ---- layout helpers (invisible) ---------------------------------------
+' With "left to right direction", "->" keeps both ends in the same column
+' (first one on top) and every extra "-" in "-->" adds one column.
+s1 -[hidden]> s2
+appoint -[hidden]> blood
+inoculation -[hidden]> staining
+staining -[hidden]> directPcr
+directPcr -[hidden]> directAntigen
+directAntigen -[hidden]> indirect
+susceptibility -[hidden]> orgProps1
+orgProps1 -[hidden]> quantification
+quantification -[hidden]> resistanceGenes
+resistanceGenes -[hidden]> orgProps2
+' keeps Direct identification (PCR, NGS) above Direct identification (Antigen detection)
+directAntigen -[hidden]--> fork3
+
+' ---- flow --------------------------------------------------------------
+s1 -[#red]-> check
+s2 -[#red]-> appoint
+check <- sampling
+sampling <- appoint
+
+check --> fork1
+fork1 --> inoculation
+fork1 --> staining
+fork1 --> directPcr
+fork1 --> directAntigen
+
+inoculation --> culture
+culture --> identification
+note on link
+  Only in case
+  of positive
+  culture
+end note
+culture -> microscopy
+staining --> microscopy
+microscopy --> identification
+
+identification --> fork2
+fork2 --> susceptibility
+fork2 --> orgProps1
+fork2 --> quantification
+
+directPcr ----> fork3
+fork3 --> resistanceGenes
+fork3 --> orgProps2
+
+blood ---> indirect
+
+legend bottom right
+|<#CCFFFF>   status message   |<#99FFCC>   Preliminary/final result   \n   report & status message   |<#FFFFFF>   Internal laboratory   \n   workflow step   |
+endlegend
+
+@enduml

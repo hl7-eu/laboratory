@@ -9,5 +9,5 @@ microbiology conventions place on the specimen rather than on the observation:
   culture or of an isolate references the derived specimen, which points at the
   primary specimen.
 
-The conventions and the examples are described on the
-[Microbiology](microbiology.html) page.
+The conventions and the examples are described in the
+[Specimen and pre-analytics](microbiology.html#specimen-and-pre-analytics) section of the [Microbiology](microbiology.html) page.

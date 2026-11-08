@@ -9,15 +9,11 @@
 ValueSet: OrganismIdentificationCodeEuVs
 Id: micro-organismIdentificationCode-eu-lab
 Title: "Organism Identification Codes"
-Description: """LOINC codes for the identification of a microorganism without a predefined target. 41852-5 |Microorganism or agent identified in Specimen| is the recommended code (workbook, sheet Phenotypic Identification, "preferred"). The kingdom-level codes and the sequencing codes are accepted where the laboratory reports at that level. A code for *Parasite identified in Specimen* is missing in LOINC; parasites are reported with 41852-5."""
+Description: """LOINC codes for the identification of a microorganism without a predefined target. 41852-5 |Microorganism or agent identified in Specimen| is the recommended code (workbook, sheet Phenotypic Identification, "preferred"). The sequencing codes name the sequencing target and lead to the same result. The kingdom-level codes (bacteria, fungus, virus identified) are not included. A code for *Parasite identified in Specimen* is missing in LOINC; parasites are reported with 41852-5. Whole genome sequencing uses 41852-5 with the sequencing technique as method until the requested LOINC code exists."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 // Preferred
 * $loinc#41852-5 "Microorganism or agent identified in Specimen"
-// Kingdom level
-* $loinc#23667-9 "Bacteria identified in Specimen"
-* $loinc#42805-2 "Fungus identified in Specimen"
-* $loinc#41461-5 "Virus identified in Specimen"
 // Sequencing-based identification — same question, same result, another
 // technique (workbook, sheet Molecular techniques: "same value set as for
 // Phenotypic identification")
