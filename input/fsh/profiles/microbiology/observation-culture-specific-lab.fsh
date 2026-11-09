@@ -32,9 +32,9 @@ Where the open question *does anything grow?* is answered, use [Observation Resu
 * . ^short = "Specific culture: was the target found"
 
 * code from CultureSpecificCodeEuVs (extensible)
-* insert MicrobiologyPreferredBindingEu(code, CultureSpecificCodePreferredEuVs, [[Preferred are the codes that leave the specimen to Specimen.type: system {Specimen}, and system XXX until LOINC provides {Specimen} codes for culture.]])
+* insert MicrobiologyPreferredBindingEu(code, CultureSpecificCodePreferredEuVs, [[Preferred are the codes with system XXX, which leave the specimen to Specimen.type.]])
 * code ^short = "The specific culture; the target is in the LOINC component"
-* code ^comment = "A LOINC code with the method Organism specific culture, naming the target in the component. Codes with the property PrThr ask whether the target is present, e.g. 13317-3 |Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture|; codes with the property PrId ask what was found, e.g. 9782-4 |Adenovirus sp identified in Specimen by Organism specific culture|. Preferred are the codes with system {Specimen}; LOINC has none for culture yet, so until then the codes with system XXX. With a code with system Isolate the isolate is also given as Specimen.type 119303007 |Microbial isolate|."
+* code ^comment = "A LOINC code with the method Organism specific culture, naming the target in the component. Codes with the property PrThr ask whether the target is present, e.g. 13317-3 |Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture|; codes with the property PrId ask what was found, e.g. 9782-4 |Adenovirus sp identified in Specimen by Organism specific culture|. Preferred are the codes with system XXX; the specimen is given in Specimen.type. With a code with system Isolate the isolate is also given as Specimen.type 119303007 |Microbial isolate|."
 
 * value[x] only CodeableConcept
 * valueCodeableConcept from SpecificResultEuVs (extensible)

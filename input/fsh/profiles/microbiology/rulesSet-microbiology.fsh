@@ -17,27 +17,8 @@ RuleSet: MicrobiologyDraftStatusEu
 
 RuleSet: MicrobiologyObservationCommonEu
 * insert MicrobiologyDraftStatusEu
-
-// The workflow relationship between diagnostic steps (white paper, chapter
-// "Relationships between diagnostic steps"): the later observation points back
-// at the one that caused it, e.g. identification -> positive culture,
-// microscopy -> positive blood culture. The slice `triggeredBy` — the R5
-// element pre-adopted for R4 through the cross-version extension — is
-// inherited from the EU core medical test result; only its documentation is
-// sharpened here. It is not a grouping mechanism; grouping uses hasMember.
-* extension[triggeredBy]
-  * ^short = "The observation that caused this one (reflex, follow-up or add-on testing)"
-  * ^definition = "Identifies the observation(s) that triggered the performance of this observation, e.g. the positive culture that led to this identification. Recorded on the later observation and pointing back at the earlier one."
-  * ^comment = "Pre-adoption of Observation.triggeredBy from FHIR R5. The type is usually `reflex`. Grouping of findings that belong together is expressed with hasMember, derivation of a result from another result with derivedFrom."
-
-// The white paper asks for an explicit Specimen in every case, even where the
-// test code already names the material: the specimen type lives in
-// Specimen.type, coded with SNOMED CT, and the microscopy preparation
-// (staining) lives in Specimen.processing.
-* specimen 1..1
-* specimen only Reference(SpecimenMicrobiologyEu)
-* specimen ^short = "The specimen examined (required)"
-* specimen ^comment = "The specimen shall always be represented explicitly, with its type in Specimen.type, even if the material is pre-coordinated in the test code. The SpecimenMicrobiologyEu profile requires the type and adds the staining procedure and the link to the parent specimen (isolate, material from a positive culture)."
+* insert MicrobiologyTriggeredByEu
+* insert MicrobiologySpecimenEu
 
 // An indeterminate result is not a value (core principle): an examination that
 // was performed but yielded no usable statement carries 82334004
@@ -51,6 +32,29 @@ RuleSet: MicrobiologyObservationCommonEu
 * method 1..1
 * method ^short = "Technique used, coded with SNOMED CT (required)"
 * method ^comment = "The method is always given in Observation.method, also where an accepted test code pre-coordinates a method category: the LOINC method axis is broad (e.g. \"Molgen\"), SNOMED CT names the actual technique, and receivers can query by method only if every observation carries it. Where the technique is not known, the most general concept of the method value set is used (e.g. 278289002 |Microscopy technique|, 702658000 |Microbial culture|, 1156878000 |Molecular nucleic acid amplification technique|); where the value set has none, the data-absent-reason extension states that the method is unknown."
+
+RuleSet: MicrobiologyTriggeredByEu
+// The workflow relationship between diagnostic steps (white paper, chapter
+// "Relationships between diagnostic steps"): the later observation points back
+// at the one that caused it, e.g. identification -> positive culture,
+// microscopy -> positive blood culture. The slice `triggeredBy` — the R5
+// element pre-adopted for R4 through the cross-version extension — is
+// inherited from the EU core medical test result; only its documentation is
+// sharpened here. It is not a grouping mechanism; grouping uses hasMember.
+* extension[triggeredBy]
+  * ^short = "The observation that caused this one (reflex, follow-up or add-on testing)"
+  * ^definition = "Identifies the observation(s) that triggered the performance of this observation, e.g. the positive culture that led to this identification. Recorded on the later observation and pointing back at the earlier one."
+  * ^comment = "Pre-adoption of Observation.triggeredBy from FHIR R5. The type is usually `reflex`. Grouping of findings that belong together is expressed with hasMember, derivation of a result from another result with derivedFrom."
+
+RuleSet: MicrobiologySpecimenEu
+// The white paper asks for an explicit Specimen in every case, even where the
+// test code already names the material: the specimen type lives in
+// Specimen.type, coded with SNOMED CT, and the microscopy preparation
+// (staining) lives in Specimen.processing.
+* specimen 1..1
+* specimen only Reference(SpecimenMicrobiologyEu)
+* specimen ^short = "The specimen examined (required)"
+* specimen ^comment = "The specimen shall always be represented explicitly, with its type in Specimen.type, even if the material is pre-coordinated in the test code. The SpecimenMicrobiologyEu profile requires the type and adds the staining procedure and the link to the parent specimen (isolate, material from a positive culture)."
 
 // ----------------------------------------------------------------------------
 // Semi-quantitative amount of a single finding

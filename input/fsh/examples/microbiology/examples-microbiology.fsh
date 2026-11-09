@@ -658,3 +658,118 @@ Usage: #example
 * valueCodeableConcept = $sct#260415000 "Not detected"
 * method = $sct#1156860005 "Rapid antigen detection immunoassay technique"
 * specimen = Reference(spec-micro-nasopharyngeal-swab)
+
+// ------------------------------------------------------------- susceptibility
+//
+// White paper example (chapter Phenotypic Susceptibility): the multidrug
+// resistant Klebsiella pneumoniae identified by MALDI-TOF is tested with an
+// automated MIC panel for gram-negative bacteria and by disk diffusion. The
+// categories follow the EUCAST breakpoints for Enterobacterales, version 15.0.
+
+Instance: spec-micro-isolate-kpneumoniae
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: Klebsiella pneumoniae isolate for susceptibility testing"
+Description: "Isolate from the sputum culture, identified as Klebsiella pneumoniae, used for susceptibility testing. It references the primary sputum specimen through parent."
+Usage: #example
+* status = #available
+* type = $sct#119303007 "Microbial isolate"
+* subject = Reference(pat-lab-example)
+* parent = Reference(spec-micro-sputum)
+
+Instance: obs-micro-ast-panel-kpneumoniae
+InstanceOf: ObservationSusceptibilityPanelEu
+Title: "Observation: antibiogram of Klebsiella pneumoniae"
+Description: "The antibiogram groups the susceptibility results of the isolate through hasMember and points back at the identification of the organism through triggeredBy. It has no value of its own."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* extension[triggeredBy].extension[observation].valueReference = Reference(obs-ident-maldi-kpneumoniae)
+* extension[triggeredBy].extension[type].valueCode = #reflex
+* code = $loinc#29576-6 "Bacterial susceptibility panel"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+* hasMember[+] = Reference(obs-micro-ast-meropenem)
+* hasMember[+] = Reference(obs-micro-ast-cefepime)
+* hasMember[+] = Reference(obs-micro-ast-amikacin)
+* hasMember[+] = Reference(obs-micro-ast-sxt)
+
+Instance: obs-micro-ast-meropenem
+InstanceOf: ObservationSusceptibilityEu
+Title: "Observation: meropenem, MIC > 8 mg/L, resistant"
+Description: "The isolate grows at the highest meropenem concentration of the automated panel. The MIC is given with the comparator >; without it the value would read as an exact 8 mg/L, which is not resistant under a breakpoint R > 8 mg/L. The category is read from the EUCAST breakpoint table, version 15.0."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#18943-1 "Meropenem [Susceptibility]"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueQuantity = 8 'mg/L' "mg/L"
+* valueQuantity.comparator = #>
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
+* interpretation.extension[interpretationStandard].extension[standard].valueCodeableConcept = SusceptibilityStandardEuCs#EUCAST "EUCAST"
+* interpretation.extension[interpretationStandard].extension[version].valueString = "15.0"
+* method = $sct#708073008 "MIC"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+Instance: obs-micro-ast-cefepime
+InstanceOf: ObservationSusceptibilityEu
+Title: "Observation: cefepime, MIC 2 mg/L, susceptible, increased exposure (EUCAST)"
+Description: "An MIC in the EUCAST category I, susceptible, increased exposure. No HL7 v3 code covers this category; it is coded with SNOMED CT 1306583007."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#18879-7 "Cefepime [Susceptibility]"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueQuantity = 2 'mg/L' "mg/L"
+* interpretation = $sct#1306583007 "I (Susceptible, increased exposure) EUCAST (European Committee on Antimicrobial Susceptibility Testing) category 2019"
+* interpretation.extension[interpretationStandard].extension[standard].valueCodeableConcept = SusceptibilityStandardEuCs#EUCAST "EUCAST"
+* interpretation.extension[interpretationStandard].extension[version].valueString = "15.0"
+* method = $sct#708073008 "MIC"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+Instance: obs-micro-ast-amikacin
+InstanceOf: ObservationSusceptibilityEu
+Title: "Observation: amikacin, MIC <= 2 mg/L, susceptible"
+Description: "The isolate is inhibited at the lowest amikacin concentration of the automated panel. The MIC is given with the comparator <=."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#18860-7 "Amikacin [Susceptibility]"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueQuantity = 2 'mg/L' "mg/L"
+* valueQuantity.comparator = #<=
+* interpretation = $v3-ObservationInterpretation#S "Susceptible"
+* interpretation.extension[interpretationStandard].extension[standard].valueCodeableConcept = SusceptibilityStandardEuCs#EUCAST "EUCAST"
+* interpretation.extension[interpretationStandard].extension[version].valueString = "15.0"
+* method = $sct#708073008 "MIC"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+Instance: obs-micro-ast-sxt
+InstanceOf: ObservationSusceptibilityEu
+Title: "Observation: trimethoprim-sulfamethoxazole by disk diffusion, resistant (category only)"
+Description: "Disk diffusion result for which the laboratory system transmits the category only, not the zone diameter. The category is the value, coded like the interpretation, and repeated in the interpretation."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#18998-5 "Trimethoprim+Sulfamethoxazole [Susceptibility]"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $v3-ObservationInterpretation#R "Resistant"
+* interpretation = $v3-ObservationInterpretation#R "Resistant"
+* interpretation.extension[interpretationStandard].extension[standard].valueCodeableConcept = SusceptibilityStandardEuCs#EUCAST "EUCAST"
+* interpretation.extension[interpretationStandard].extension[version].valueString = "15.0"
+* method = $sct#1303975003 "Disk diffusion technique"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)

@@ -5,8 +5,8 @@ guide. They follow the conventions of the HL7 Europe Laboratory Semantic
 Workgroup — the white paper *Conventions for FHIR based Microbiology Result
 Reporting* and its terminology workbook — and are organised along the
 microbiology workflow. Microscopy, culture, the identification of the organism
-and the targeted detection of a target are profiled. Serology,
-susceptibility, resistance, organism properties and quantification are not
+the targeted detection of a target and the susceptibility are profiled.
+Serology, resistance, organism properties and quantification are not
 profiled yet; their sections record the state of the
 workgroup's conventions.
 
@@ -75,7 +75,7 @@ whole domain:
   through `derivedFrom`.
 
 {% capture op_text %}
-The white paper recommends giving specimen and method explicitly. This guide makes both required (`Observation.method` 1..1, `Specimen.type` 1..1), also where an accepted code pre-coordinates them. For an unknown identification method, which has no general concept, it uses the data-absent-reason extension.
+The white paper recommends giving specimen and method explicitly. This guide makes both required (`Observation.method` 1..1, `Specimen.type` 1..1), also where an accepted code pre-coordinates them. For an unknown identification or susceptibility method, which have no general technique, it uses the data-absent-reason extension. The antibiogram, which groups susceptibility results without a result of its own, has an optional method: its members can combine techniques, and each states its own.
 {% endcapture %}
 {% include open-item.html issue=189 typ="interim" title="Method and specimen type required" text=op_text %}
 
@@ -92,6 +92,8 @@ the technique used.
 | Was the target found in culture? | [Observation Results: specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html) | a LOINC code naming the target, method *Organism specific culture*, property `PrThr` or `PrId` | *detected* / *not detected*; for `PrId` also the organism found |
 | Which organism is it? | [Observation Results: organism identification](StructureDefinition-Observation-organismIdentification-eu-lab.html) | `41852-5` or a sequencing code | the organism, or *not detected* |
 | Is the target present? | [Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) | a LOINC code naming the target, property `PrThr` | *detected* / *not detected* |
+| How susceptible is the isolate to an antimicrobial? | [Observation Results: antimicrobial susceptibility](StructureDefinition-Observation-susceptibility-eu-lab.html) | a LOINC code naming the antimicrobial, property `Susc`, preferably without a method | the MIC or zone diameter, or the category; the category in `interpretation` |
+| Which antimicrobials were tested on the isolate? | [Observation Results: antibiogram](StructureDefinition-Observation-susceptibilityPanel-eu-lab.html) | `29576-6` | none; the results are members |
 
 The specimen of all of them is a
 [Specimen: microbiology](StructureDefinition-Specimen-microbiology-eu-lab.html).
@@ -439,7 +441,7 @@ pregnancy. Its target is in the component of the code. It is reported with
 
 | Aspect | Element | Coding |
 |---|---|---|
-| the question | `Observation.code` | LOINC, method *Organism specific culture*, system `XXX`, `{Specimen}` or `Isolate`, property `PrThr` or `PrId`, active ([Specific Culture Codes](ValueSet-micro-cultureSpecificCode-eu-lab.html)); preferred with system `{Specimen}`, until it exists with `XXX` ([preferred](ValueSet-micro-cultureSpecificCodePreferred-eu-lab.html)); with an `Isolate` code the isolate is also given as `Specimen.type` |
+| the question | `Observation.code` | LOINC, method *Organism specific culture*, system `XXX` or `Isolate`, property `PrThr` or `PrId`, active ([Specific Culture Codes](ValueSet-micro-cultureSpecificCode-eu-lab.html)); preferred with system `XXX` ([preferred](ValueSet-micro-cultureSpecificCodePreferred-eu-lab.html)); with an `Isolate` code the isolate is also given as `Specimen.type` |
 | the result | `Observation.value[x]` | SNOMED CT: [Specific Examination Results](ValueSet-micro-specificResult-eu-lab.html) |
 | the technique | `Observation.method` | SNOMED CT `703752003` *Organism specific culture* |
 | unexpected growth (`PrThr`) | `Observation.hasMember` | a general culture with *Organism growth* |
@@ -475,7 +477,7 @@ the specific culture; both are readings of the same culture, which is why
 {% capture op_text %}
 Whether the specific culture codes have the property `PrThr`, `PrId` or both is under discussion in the workgroup. Until it decides, this guide admits both and follows the discussion of 2026-11-06: *Detected* and *Not detected* rather than growth (workbook), and unexpected growth with a `PrThr` code as a general culture of its own. The white paper says that a specific culture shall be reported as such, not as a general culture; the reference through `hasMember` keeps the growth tied to the specific culture.
 
-The preferred codes are an interim as well. The target are codes with system `{Specimen}`, which leave the specimen open explicitly; LOINC has none for culture yet. Until it provides them, the codes with system `XXX` are preferred. When `{Specimen}` codes arrive, the value sets are revised, so that one test does not have two preferred codes.
+Preferred are the codes with system `XXX`, with the specimen in `Specimen.type`, as the minutes recommend for post-coordinating the specimen. Open is whether the workgroup wants LOINC codes with system `{Specimen}` for culture. LOINC has them only with the method `{Molgen}`; their list of permitted specimens contains both *Specimen* and *Isolate*, so one such code could replace the `XXX` and the `Isolate` code of a target.
 {% endcapture %}
 {% include open-item.html issue=186 typ="interim" title="Property and result of the specific culture" text=op_text %}
 
@@ -615,7 +617,11 @@ Antibody codes detect the patient's antibodies; they belong to [serology](#serol
 the methods `{Molgen}`, `IF`, `IA` or `Aggl`. The curly braces mean that
 specimen and method are given elsewhere: the specimen in `Specimen.type`, the
 technique in `Observation.method`. An example is `105875-9 |Bordetella
-pertussis DNA [Presence] in Specimen by Molgen|`.
+pertussis DNA [Presence] in Specimen by Molgen|`. For the serological and
+immunological methods the minutes ask LOINC for a new method in curly braces,
+analogous to `{Molgen}`, or for codes without a method
+([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)); once it
+exists, it takes the place of `IF`, `IA` and `Aggl` in the target definition.
 
 **Interim codes.** LOINC has `{Specimen}` codes for `{Molgen}` only, so far
 about a thousand. Until it has them for the immunological methods, the
@@ -632,7 +638,7 @@ preferred codes also contain:
 These additions are dropped once the `{Specimen}` codes exist.
 
 {% capture op_text %}
-The target definition is taken from the workgroup minutes of 2026-11-06. The codes with system `XXX` are an interim of this guide until LOINC provides `{Specimen}` codes for `IF`, `IA` and `Aggl`.
+The target definition is taken from the workgroup minutes of 2026-11-06. The codes with system `XXX` are an interim of this guide until LOINC provides `{Specimen}` codes for the immunological methods, through a new method in curly braces analogous to `{Molgen}` or as codes without a method. Open: which methods the new method covers, and whether it is requested separately for antigens and antibodies. The list of permitted methods of `{Molgen}` already names `IA`, *Immune stain* and *Flow cytometry*; the workgroup is asked whether `{Molgen}` is meant to cover the immunological methods.
 {% endcapture %}
 {% include open-item.html issue=171 typ="interim" title="Preferred codes" text=op_text %}
 
@@ -735,14 +741,48 @@ techniques* is still empty.
 
 ### Susceptibility
 
-**Not profiled yet.** This section records the state of the workgroup's
-conventions for phenotypic susceptibility testing.
-
 After the identification of a bacterial pathogen, its susceptibility to
 antimicrobials is tested: by disk diffusion, gradient strips, or manual or
 automated microdilution. The results are mostly quantitative and are
 interpreted against a standard such as EUCAST or CLSI. Molecular resistance
 testing is covered by [Resistance](#resistance).
+
+Each antimicrobial tested is an observation of its own, reported with
+[Observation Results: antimicrobial susceptibility](StructureDefinition-Observation-susceptibility-eu-lab.html).
+The results of one isolate are grouped by an
+[Observation Results: antibiogram](StructureDefinition-Observation-susceptibilityPanel-eu-lab.html).
+
+#### Representation of the susceptibility
+
+| Aspect | Element | Coding |
+|---|---|---|
+| the antimicrobial | `Observation.code` | LOINC, property `Susc`, class `ABXBACT` ([Susceptibility Codes](ValueSet-micro-susceptibilityCode-eu-lab.html)); preferred without a method ([preferred](ValueSet-micro-susceptibilityCodePreferred-eu-lab.html)), e.g. `18943-1` *Meropenem [Susceptibility]* |
+| the result | `Observation.value[x]` | the MIC or the zone diameter with UCUM ([Susceptibility Units](ValueSet-micro-susceptibilityUnit-eu-lab.html)), preferred; or the category ([Susceptibility Categories](ValueSet-micro-susceptibilityInterpretation-eu-lab.html)) |
+| the category | `Observation.interpretation` | [Susceptibility Categories](ValueSet-micro-susceptibilityInterpretation-eu-lab.html), with the extension [Interpretation standard](StructureDefinition-observation-interpretationStandard.html) |
+| the technique | `Observation.method` | [Susceptibility Techniques](ValueSet-micro-susceptibilityTechnique-eu-lab.html) |
+| the isolate | `Observation.specimen` | a Specimen with the type `119303007` *Microbial isolate* |
+| no result | `Observation.dataAbsentReason` | `82334004` *Indeterminate* and the FHIR data-absent-reason codes |
+
+**The quantitative result is preferred.** The MIC is given in mg/L (EUCAST) or
+ug/mL (CLSI), the zone diameter in mm.
+
+**A value outside the tested range carries the comparator.** An isolate
+inhibited at the lowest concentration tested has an MIC of `<=` that
+concentration, one growing at the highest an MIC of `>` it. Without
+`Quantity.comparator` the value reads as exact: with a breakpoint R > 8 mg/L,
+an MIC of > 8 is R, while an exact 8 is not.
+
+**The category is the interpretation.** Where only the category is available,
+it is the value as well, coded with the same code and repeated in
+`interpretation` (invariant `eu-lab-susc-1`). A quantitative result should be
+interpreted (invariant `eu-lab-susc-2`).
+
+**Every interpretation states its standard.** The extension
+*Interpretation standard* gives the standard, e.g. EUCAST, and preferably the
+version of its breakpoint table, e.g. 15.0: a category is valid only for the
+breakpoint table it was read from. It applies to a coded value as well, which
+repeats the interpretation. Each susceptibility observation carries its own,
+since the standard can differ per antimicrobial.
 
 #### Susceptibility principles in the workbook
 
@@ -755,8 +795,10 @@ agreed:
 * **The interpretation standard** is given in the Observation extension
   *context*. For it, the workbook lists the descendants of `1306540001
   |European Committee on Antimicrobial Susceptibility Testing category 2019|`,
-  which are the EUCAST 2019 categories S, I and R; a counterpart for CLSI is to
-  be requested ([Issue #200](https://github.com/hl7-eu/laboratory/issues/200)).
+  which are the EUCAST 2019 categories S, I and R, and asks for a CLSI
+  counterpart. This guide proposes the standard itself instead, see the box
+  below; concepts for the standards are requested
+  ([Issue #200](https://github.com/hl7-eu/laboratory/issues/200)).
 * **If the result is S, I or R only,** the interpretation shall be given as
   well.
 
@@ -770,11 +812,16 @@ FHIR binds `Observation.interpretation` extensibly to the HL7 v3 interpretation 
 | I (CLSI, intermediate) | v3 `I` |
 | I (EUCAST, susceptible, increased exposure) | SNOMED CT `1306583007` *I (Susceptible, increased exposure) EUCAST category 2019* |
 
-The white paper codes S and R with SNOMED CT only, although the v3 codes fit; a SNOMED CT coding may be added beside the v3 code.
+The white paper codes S and R with SNOMED CT only, although the v3 codes fit; a SNOMED CT coding may be added beside the v3 code. A coded result in `value[x]` uses the same codes and is repeated in `interpretation`, as in the workbook; the white paper's SNOMED CT values, repeated in `interpretation`, would not conform to the extensible binding of the FHIR core specification.
 
-Where the interpretation standard is given is open as well. The workbook puts it into an Observation extension *context* and lists the descendants of `1306540001 |EUCAST category 2019|`, which are the categories S, I and R themselves, not the standard. The white paper puts it into an extension of `Observation.interpretation`, with the codes EUCAST, CLSI and Other. Does the extension carry the standard or the category, and which extension is meant?
+The interpretation standard: the workbook puts it into an Observation extension *context* and lists the descendants of `1306540001 |EUCAST category 2019|`, which are the categories S, I and R themselves, not the standard. The white paper puts it into an extension of `Observation.interpretation`, with the codes EUCAST, CLSI and Other. This guide proposes an extension of `Observation.interpretation`, at most once per interpretation, with the standard and the version of the breakpoint table, e.g. EUCAST 15.0. It applies to a coded value as well, which repeats the interpretation, and the susceptibility profile requires it on every interpretation. Until SNOMED CT concepts for the standards exist ([Issue #200](https://github.com/hl7-eu/laboratory/issues/200)), the standard is coded with a code system of this guide (EUCAST, CLSI, other).
 {% endcapture %}
-{% include open-item.html issue=183 title="Interpretation codes" text=op_text %}
+{% include open-item.html issue=183 typ="interim" title="Interpretation codes" text=op_text %}
+
+{% capture op_text %}
+A quantitative result is given in `valueQuantity` with UCUM, in the units of the white paper (`mg/L`, `ug/mL`, `mm`, `[arb'U]/mL`, `1/mL`). A value outside the tested range SHALL be given with `Quantity.comparator`: `<=` below the lowest, `>` above the highest tested concentration, e.g. an MIC of `> 8` mg/L. Without it the value reads as exact; with a breakpoint R > 8 mg/L, an exact 8 is not R. Neither source says how to represent such values.
+{% endcapture %}
+{% include open-item.html issue=205 typ="interim" title="Quantitative result" text=op_text %}
 
 #### Susceptibility codes
 
@@ -784,27 +831,70 @@ makes it easy to query all susceptibility results. The codes `106843-6` and
 `103673-0` belong to this class as well; their class is to be corrected
 ([Issue #192](https://github.com/hl7-eu/laboratory/issues/192)).
 
+{% capture op_text %}
+The workbook admits all codes with the property `Susc` and the class `ABXBACT`. This guide excludes the 97 codes with the method *Genotype*, e.g. `30287-7 |Abacavir [Susceptibility] by Genotype method|` or `89488-1 |Isoniazid [Susceptibility] by Genotype method|`: they infer the susceptibility from resistance mutations and belong to molecular resistance testing, see [Resistance](#resistance). The codes with the method *Phenotype* remain. Open: where genotypic susceptibility results are reported.
+{% endcapture %}
+{% include open-item.html issue=206 typ="interim" title="Genotype methods" text=op_text %}
+
 #### Susceptibility methods
 
-| Code | Technique |
-|---|---|
-| `263696007` | Broth dilution |
-| `1303975003` | Disk diffusion technique |
-| `260111000146108` | Manual minimum inhibitory concentration microdilution susceptibility test technique |
-| `260101000146106` | Automated minimum inhibitory concentration microdilution susceptibility test technique |
-| `703442003` | Gradient strip susceptibility test technique |
+The method corresponds to the method axis of LOINC, so that a methodless code
+with `Observation.method` means the same as the code that pre-coordinates the
+method.
+
+| Technique | `Observation.method` | LOINC method |
+|---|---|---|
+| MIC by dilution, manual or automated | `708073008` *Minimum inhibitory concentration susceptibility test technique* and its descendants | MIC |
+| Gradient strip | `703442003` *Gradient strip susceptibility test technique* | Gradient strip |
+| Disk diffusion | `1303975003` *Disk diffusion technique* | Disk diffusion (KB) |
+| minimum bactericidal concentration, serum bactericidal titer, slow-growing mycobacteria | procedures under `14788002` *Antimicrobial susceptibility test*, e.g. `1035002`, `104235002`, `84787003` | MLC, Serum bactericidal titer, Method for slow-growing mycobacteria |
+
+Where the technique is not known, the data-absent-reason extension states that
+the method is unknown; there is no general technique for susceptibility
+testing ([Issue #189](#op-issue-189)). The workbook lists `263696007` *Broth
+dilution* and two techniques of the Dutch edition of SNOMED CT instead of
+`708073008`:
 
 {% capture op_text %}
-`260111000146108` and `260101000146106` exist only in the Dutch edition of SNOMED CT, not in the International Edition. Both are children of `708073008 |Minimum inhibitory concentration susceptibility test technique|`, which this guide proposes instead; a Dutch laboratory adds its concept as a second coding.
+`260111000146108` and `260101000146106` exist only in the Dutch edition of SNOMED CT, not in the International Edition. Both are children of `708073008 |Minimum inhibitory concentration susceptibility test technique|`, which this guide proposes instead; a Dutch laboratory adds its concept as a second coding. Open as well: in the International Edition, `708073008` subsumes neither `263696007` *Broth dilution* nor the gradient strip, so a broth microdilution could be coded in two ways.
 {% endcapture %}
-{% include open-item.html issue=185 title="Methods from the Dutch extension" text=op_text %}
+{% include open-item.html issue=185 typ="interim" title="Methods from the Dutch extension" text=op_text %}
+
+{% capture op_text %}
+The workbook lists techniques, the white paper procedures under `14788002 |Antimicrobial susceptibility test|`. This guide proposes techniques for the three main LOINC methods, so that a methodless code with `Observation.method` means the same as the code that pre-coordinates the method: `708073008` and its descendants for every MIC by dilution, manual or automated; `703442003` for the gradient strip; `1303975003` for disk diffusion. Procedures under `14788002` are used where no technique exists: the MBC and MLC tests, the serum bactericidal titer and the methods for slow-growing mycobacteria. `263696007` *Broth dilution* and `258087005` *Agar dilution* are left out, because a dilution yields an MIC. An unknown method is given with the data-absent-reason extension.
+{% endcapture %}
+{% include open-item.html issue=204 typ="interim" title="Techniques or procedures" text=op_text %}
 
 #### Antibiogram
 
 The white paper reports one observation per antimicrobial tested. An
-observation with the code `29576-6 |Bacterial susceptibility panel|` groups
-them through `hasMember` and points back at the identification of the tested
-organism through `triggeredBy`.
+[Observation Results: antibiogram](StructureDefinition-Observation-susceptibilityPanel-eu-lab.html)
+with the code `29576-6 |Bacterial susceptibility panel|` groups them through
+`hasMember` and points back at the identification of the tested organism
+through `triggeredBy`. It has no value and no interpretation of its own. Its
+method is optional: the members can combine techniques, and each states its
+own.
+
+```
+Observation: Bacterial susceptibility panel (29576-6), specimen: the isolate
+  triggeredBy → Observation: Microorganism or agent identified (41852-5): Klebsiella pneumoniae
+  hasMember → Observation: Meropenem [Susceptibility] (18943-1): > 8 mg/L, method MIC
+                interpretation R, EUCAST 15.0
+  hasMember → Observation: Cefepime [Susceptibility] (18879-7): 2 mg/L, method MIC
+                interpretation 1306583007 (I, susceptible, increased exposure), EUCAST 15.0
+  hasMember → Observation: Trimethoprim+Sulfamethoxazole [Susceptibility] (18998-5): R, method disk diffusion
+                interpretation R, EUCAST 15.0
+```
+
+#### Susceptibility examples
+
+| Example | Instances |
+|---|---|
+| antibiogram of *Klebsiella pneumoniae*, following the identification by MALDI-TOF | [obs-micro-ast-panel-kpneumoniae](Observation-obs-micro-ast-panel-kpneumoniae.html) on [spec-micro-isolate-kpneumoniae](Specimen-spec-micro-isolate-kpneumoniae.html), triggered by [obs-ident-maldi-kpneumoniae](Observation-obs-ident-maldi-kpneumoniae.html) |
+| MIC above the tested range, with comparator | [obs-micro-ast-meropenem](Observation-obs-micro-ast-meropenem.html) |
+| EUCAST category I, susceptible, increased exposure | [obs-micro-ast-cefepime](Observation-obs-micro-ast-cefepime.html) |
+| MIC below the tested range, with comparator | [obs-micro-ast-amikacin](Observation-obs-micro-ast-amikacin.html) |
+| category only, repeated in the interpretation | [obs-micro-ast-sxt](Observation-obs-micro-ast-sxt.html) |
 
 ### Resistance
 
@@ -954,6 +1044,9 @@ of the workgroup.
 | [#188](https://github.com/hl7-eu/laboratory/issues/188) | General culture: code and result | [Culture](#op-issue-188) |
 | [#189](https://github.com/hl7-eu/laboratory/issues/189) | Method and specimen type required | [Core principles](#op-issue-189) |
 | [#202](https://github.com/hl7-eu/laboratory/issues/202) | Procedure concepts as methods | [Identification](#op-issue-202) |
+| [#204](https://github.com/hl7-eu/laboratory/issues/204) | Susceptibility methods: techniques or procedures | [Susceptibility](#op-issue-204) |
+| [#205](https://github.com/hl7-eu/laboratory/issues/205) | Susceptibility: quantitative result | [Susceptibility](#op-issue-205) |
+| [#206](https://github.com/hl7-eu/laboratory/issues/206) | Susceptibility codes: genotype methods | [Susceptibility](#op-issue-206) |
 
 **Codes requested** and not yet available. Each request is tracked as an issue with its origin and the status of submission and availability; submitting is up to the workgroup.
 
@@ -963,10 +1056,10 @@ of the workgroup.
 | [#191](https://github.com/hl7-eu/laboratory/issues/191) | LOINC | whole genome and sequence identification; fungal ITS identification | workbook; prepared for the workgroup, not yet discussed |
 | [#192](https://github.com/hl7-eu/laboratory/issues/192) | LOINC | class correction of `35492-8`, `106843-6` and `103673-0` | decided by the workgroup |
 | [#193](https://github.com/hl7-eu/laboratory/issues/193) | LOINC | organism specific culture codes for missing targets | decided by the workgroup |
-| [#194](https://github.com/hl7-eu/laboratory/issues/194) | LOINC | `{Specimen}` codes for immunofluorescence, immunoassay and agglutination | decided by the workgroup; separation of antigens and antibodies proposed in this guide |
+| [#194](https://github.com/hl7-eu/laboratory/issues/194) | LOINC | method in curly braces for the serological and immunological methods, with system `{Specimen}` | decided by the workgroup; separation of antigens and antibodies proposed in this guide |
 | [#195](https://github.com/hl7-eu/laboratory/issues/195) | LOINC | inducible clindamycin resistance, cefoxitin resistance, PBP2a | decided by the workgroup |
 | [#196](https://github.com/hl7-eu/laboratory/issues/196) | LOINC | general culture code with the property `PrThr` | Berlin workshop |
 | [#197](https://github.com/hl7-eu/laboratory/issues/197) | LOINC | method-neutral carbapenemase codes | proposed in this guide |
 | [#199](https://github.com/hl7-eu/laboratory/issues/199) | SNOMED CT | nicking enzyme amplification reaction (NEAR) | white paper; workbook |
-| [#200](https://github.com/hl7-eu/laboratory/issues/200) | SNOMED CT | CLSI counterpart of the EUCAST categories | workbook; depends on the interpretation question |
+| [#200](https://github.com/hl7-eu/laboratory/issues/200) | SNOMED CT | concepts for the interpretation standards EUCAST and CLSI | workbook; white paper; proposed in this guide |
 | [#201](https://github.com/hl7-eu/laboratory/issues/201) | SNOMED CT | promotion of two Dutch MIC techniques to the International Edition | proposed in this guide |
