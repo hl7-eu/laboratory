@@ -5,8 +5,8 @@ guide. They follow the conventions of the HL7 Europe Laboratory Semantic
 Workgroup — the white paper *Conventions for FHIR based Microbiology Result
 Reporting* and its terminology workbook — and are organised along the
 microbiology workflow. Microscopy, culture, the identification of the organism
-the targeted detection of a target and the susceptibility are profiled.
-Serology, resistance, organism properties and quantification are not
+the targeted detection of a target, the susceptibility and the resistance
+are profiled. Serology, organism properties and quantification are not
 profiled yet; their sections record the state of the
 workgroup's conventions.
 
@@ -94,6 +94,7 @@ the technique used.
 | Is the target present? | [Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) | a LOINC code naming the target, property `PrThr` | *detected* / *not detected* |
 | How susceptible is the isolate to an antimicrobial? | [Observation Results: antimicrobial susceptibility](StructureDefinition-Observation-susceptibility-eu-lab.html) | a LOINC code naming the antimicrobial, property `Susc`, preferably without a method | the MIC or zone diameter, or the category; the category in `interpretation` |
 | Which antimicrobials were tested on the isolate? | [Observation Results: antibiogram](StructureDefinition-Observation-susceptibilityPanel-eu-lab.html) | `29576-6` | none; the results are members |
+| Is a resistance mechanism or gene present? | [Observation Results: resistance](StructureDefinition-Observation-resistance-eu-lab.html) | a LOINC code naming the mechanism, enzyme or gene, property `PrThr` | *detected* / *not detected* |
 
 The specimen of all of them is a
 [Specimen: microbiology](StructureDefinition-Specimen-microbiology-eu-lab.html).
@@ -898,15 +899,57 @@ Observation: Bacterial susceptibility panel (29576-6), specimen: the isolate
 
 ### Resistance
 
-**Not profiled yet.** This section records the state of the workgroup's
-conventions for the detection of resistance mechanisms and resistance genes.
-
 Besides the phenotypic susceptibility (see
 [Susceptibility](#susceptibility)), the resistance of an
 isolate is determined by detecting a resistance mechanism, e.g. an
 extended-spectrum beta-lactamase or a carbapenemase, or a resistance gene,
 e.g. *mecA*. The question is whether a named mechanism or gene is present, and
 the result is `260373001 |Detected|` or `260415000 |Not detected|`.
+Mechanisms and genes are reported with one profile,
+[Observation Results: resistance](StructureDefinition-Observation-resistance-eu-lab.html);
+the technique is given in `Observation.method`.
+
+#### Representation of the resistance
+
+| Aspect | Element | Coding |
+|---|---|---|
+| the mechanism, enzyme or gene | `Observation.code` | LOINC, property `PrThr` ([Resistance Codes](ValueSet-micro-resistanceCode-eu-lab.html)); preferred are the codes that fix neither material nor technique ([preferred](ValueSet-micro-resistanceCodePreferred-eu-lab.html)) |
+| the result | `Observation.value[x]` | SNOMED CT `260373001` *Detected*, `260415000` *Not detected* |
+| the technique | `Observation.method` | [Resistance Techniques](ValueSet-micro-resistanceTechnique-eu-lab.html): PCR and the other techniques of the targeted detection, sequencing, rapid immunoassay, mCIM, the techniques of susceptibility testing, biochemical tests |
+| the specimen | `Observation.specimen` | the isolate, `119303007` *Microbial isolate*, or for a detection directly from a specimen the primary specimen |
+| no result | `Observation.dataAbsentReason` | `82334004` *Indeterminate* and the FHIR data-absent-reason codes |
+
+**One observation per target.** A test kit with several targets gives one
+observation per target, so that the report shows which targets were tested
+(white paper).
+
+**No interpretation.** *Detected* or *not detected* is the result itself.
+
+**A mechanism read from a test is reported with the technique of that test.**
+The ESBL confirmation by combination disk and the D-test for inducible
+clindamycin resistance use `1303975003` *Disk diffusion technique*, the expert
+rule of an automated susceptibility system `708073008`, the carbapenem
+inactivation method `782518009` *Modified carbapenem inactivation technique*.
+
+**Relations.** A resistance test points back at what caused it through
+`triggeredBy`: the identification of the organism, or a susceptibility result,
+e.g. a carbapenemase test after an elevated meropenem MIC. The antibiogram
+groups susceptibility results only. A multiplex panel tested directly from a
+specimen groups its targets through `hasMember`, as in the
+[targeted detection](#direct-identification).
+
+```
+Observation: Meropenem [Susceptibility] (18943-1): > 8 mg/L, R
+  ↑ triggeredBy (reflex)
+Observation: OXA-48-like carbapenemase [Presence] … by Rapid immunoassay (101674-0): Detected
+  ↑ triggeredBy (reflex)
+Observation: Carbapenem resistance bla OXA-48-like gene [Presence] (85827-4): Detected, method real-time PCR
+```
+
+{% capture op_text %}
+This guide reports resistance mechanisms and genes with one profile, without an interpretation. The white paper repeats the result in the interpretation with the SNOMED CT codes; the FHIR core specification binds the interpretation extensibly to the v3 codes, among which `DET` and `ND` fit. A mechanism read from a phenotypic test is reported with the technique of that test. Open: whether a derived resistance category status (MRSA, VRE, multidrug resistance) is needed, as the German core data set module microbiology defines it, and how a multiplex panel from a specimen states which organism carries a gene.
+{% endcapture %}
+{% include open-item.html issue=210 typ="interim" title="Data model of resistance" text=op_text %}
 
 #### Phenotypic resistance mechanisms
 
@@ -924,8 +967,8 @@ The workbook (sheet Phenotypic resistence) selects these LOINC codes:
 | `105038-4` | OXA-40 and OXA-58 carbapenemase [Presence] by Rapid immunoassay |
 | `86930-5` | Carbapenemase [Presence] in Isolate |
 
-Codes for inducible clindamycin resistance, cefoxitin resistance and the PBP2a
-protein are to be requested from Regenstrief ([Issue #195](https://github.com/hl7-eu/laboratory/issues/195)). The
+Method-neutral codes for inducible clindamycin resistance, cefoxitin
+resistance, the PBP2a protein and AmpC are to be requested from Regenstrief ([Issue #195](https://github.com/hl7-eu/laboratory/issues/195)). The
 techniques are those of phenotypic susceptibility testing, plus
 `708099001 |Rapid immunoassay|`. For biochemical rapid tests the workbook asks
 for a new technique; SNOMED CT has procedures that fit, `61836004 |Beta
@@ -934,9 +977,9 @@ lactamase, acidimetric susceptibility test|` for Carba NP
 ([Issue #202](https://github.com/hl7-eu/laboratory/issues/202)).
 
 {% capture op_text %}
-The carbapenemase codes pre-coordinate the method *Rapid immunoassay*. In direct identification the technique is post-coordinated in `Observation.method`. LOINC has no method-neutral codes for these enzymes yet; only the groups (`86930-5` carbapenemase, `104864-4` extended-spectrum beta-lactamase) have them.
+The carbapenemase codes pre-coordinate the method *Rapid immunoassay*. In direct identification the technique is post-coordinated in `Observation.method`. LOINC has no method-neutral codes for these enzymes yet; only the groups (`86930-5` carbapenemase, `104864-4` extended-spectrum beta-lactamase) have them. This guide prefers method-neutral codes and requests them ([Issue #197](https://github.com/hl7-eu/laboratory/issues/197)); until they exist, the `IA.rapid` codes are preferred as well, and the technique is given in `Observation.method` with them too.
 {% endcapture %}
-{% include open-item.html issue=184 title="Rapid immunoassay codes" text=op_text %}
+{% include open-item.html issue=184 typ="interim" title="Rapid immunoassay codes" text=op_text %}
 
 #### Resistance genes
 
@@ -950,10 +993,24 @@ The workbook (sheet Molecular resistance) proposes as preferred codes those
 with a resistance component, property `PrThr` and system `XXX` or
 `{Specimen}`, not deprecated. They follow the pattern of
 `115376-6 |Methicillin resistance mecA+mecC genes [Presence] in Specimen by
-Molgen|`, with system `{Specimen}` and method `{Molgen}`. An alternative binding without the system restriction is still
-under discussion. The methods are those of the
-[targeted detection](#detection-methods), with
-sequencing for genotypic resistance.
+Molgen|`, with system `{Specimen}` and method `{Molgen}`. Codes with any system
+and method are allowed. The methods are those of the
+[targeted detection](#detection-methods), with sequencing for genotypic
+resistance.
+
+{% capture op_text %}
+The workbook prefers `system:(XXX or specimen)`; Stan answers that LOINC would follow the pattern `in {Specimen} by {Molgen}` of `115376-6 |Methicillin resistance mecA+mecC genes [Presence] in Specimen by Molgen|`. As in the direct identification, this pattern is the target, and the missing codes are requested ([Issue #209](https://github.com/hl7-eu/laboratory/issues/209)). Until they exist, the 110 codes with system `Isolate/Specimen` and method `Molgen`, which fix neither material nor technique either, e.g. `105016-0 |Bacterial Carbapenem resistance blaKPC-18 gene [Presence] by Molecular method|`, are preferred as well; codes with a fixed material or a specific method are allowed. Open: how resistance determined by sequencing is reported.
+{% endcapture %}
+{% include open-item.html issue=208 typ="interim" title="Codes of molecular resistance" text=op_text %}
+
+#### Resistance examples
+
+| Example | Instances |
+|---|---|
+| carbapenemase by rapid immunoassay, triggered by the meropenem MIC | [obs-micro-res-oxa48-rapid](Observation-obs-micro-res-oxa48-rapid.html), triggered by [obs-micro-ast-meropenem](Observation-obs-micro-ast-meropenem.html) |
+| the gene confirmed by real-time PCR | [obs-micro-res-oxa48-pcr](Observation-obs-micro-res-oxa48-pcr.html) |
+| ESBL confirmation by combination disk, reported with disk diffusion | [obs-micro-res-esbl](Observation-obs-micro-res-esbl.html), triggered by [obs-micro-ast-cefepime](Observation-obs-micro-ast-cefepime.html) |
+| *mecA*/*mecC* directly from a nares swab, code in `{Specimen}` by `{Molgen}` | [obs-micro-res-meca-nares](Observation-obs-micro-res-meca-nares.html) on [spec-micro-nares-swab](Specimen-spec-micro-nares-swab.html) |
 
 ### Organism properties
 
@@ -1047,6 +1104,8 @@ of the workgroup.
 | [#204](https://github.com/hl7-eu/laboratory/issues/204) | Susceptibility methods: techniques or procedures | [Susceptibility](#op-issue-204) |
 | [#205](https://github.com/hl7-eu/laboratory/issues/205) | Susceptibility: quantitative result | [Susceptibility](#op-issue-205) |
 | [#206](https://github.com/hl7-eu/laboratory/issues/206) | Susceptibility codes: genotype methods | [Susceptibility](#op-issue-206) |
+| [#208](https://github.com/hl7-eu/laboratory/issues/208) | Molecular resistance: codes | [Resistance](#op-issue-208) |
+| [#210](https://github.com/hl7-eu/laboratory/issues/210) | Resistance: data model | [Resistance](#op-issue-210) |
 
 **Codes requested** and not yet available. Each request is tracked as an issue with its origin and the status of submission and availability; submitting is up to the workgroup.
 
@@ -1057,9 +1116,10 @@ of the workgroup.
 | [#192](https://github.com/hl7-eu/laboratory/issues/192) | LOINC | class correction of `35492-8`, `106843-6` and `103673-0` | decided by the workgroup |
 | [#193](https://github.com/hl7-eu/laboratory/issues/193) | LOINC | organism specific culture codes for missing targets | decided by the workgroup |
 | [#194](https://github.com/hl7-eu/laboratory/issues/194) | LOINC | method in curly braces for the serological and immunological methods, with system `{Specimen}` | decided by the workgroup; separation of antigens and antibodies proposed in this guide |
-| [#195](https://github.com/hl7-eu/laboratory/issues/195) | LOINC | inducible clindamycin resistance, cefoxitin resistance, PBP2a | decided by the workgroup |
+| [#195](https://github.com/hl7-eu/laboratory/issues/195) | LOINC | inducible clindamycin resistance, cefoxitin resistance, PBP2a, AmpC | decided by the workgroup; AmpC proposed in this guide (white paper) |
 | [#196](https://github.com/hl7-eu/laboratory/issues/196) | LOINC | general culture code with the property `PrThr` | Berlin workshop |
 | [#197](https://github.com/hl7-eu/laboratory/issues/197) | LOINC | method-neutral carbapenemase codes | proposed in this guide |
 | [#199](https://github.com/hl7-eu/laboratory/issues/199) | SNOMED CT | nicking enzyme amplification reaction (NEAR) | white paper; workbook |
 | [#200](https://github.com/hl7-eu/laboratory/issues/200) | SNOMED CT | concepts for the interpretation standards EUCAST and CLSI | workbook; white paper; proposed in this guide |
 | [#201](https://github.com/hl7-eu/laboratory/issues/201) | SNOMED CT | promotion of two Dutch MIC techniques to the International Edition | proposed in this guide |
+| [#209](https://github.com/hl7-eu/laboratory/issues/209) | LOINC | resistance gene codes in `{Specimen}` by `{Molgen}` | workbook; Stan offers them in the minutes; proposed in this guide |

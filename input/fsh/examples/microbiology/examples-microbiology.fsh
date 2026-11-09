@@ -773,3 +773,80 @@ Usage: #example
 * interpretation.extension[interpretationStandard].extension[version].valueString = "15.0"
 * method = $sct#1303975003 "Disk diffusion technique"
 * specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+// ----------------------------------------------------------------- resistance
+//
+// The meropenem-resistant Klebsiella pneumoniae of the antibiogram is tested
+// for a carbapenemase by rapid immunoassay, the gene is confirmed by PCR, and
+// the elevated cefepime MIC leads to an ESBL confirmation test. A separate
+// screening tests a nares swab for mecA/mecC directly.
+
+Instance: obs-micro-res-oxa48-rapid
+InstanceOf: ObservationResistanceEu
+Title: "Observation: OXA-48-like carbapenemase detected by rapid immunoassay"
+Description: "Carbapenemase test of the isolate, triggered by the meropenem MIC above the tested range. The code pre-coordinates the rapid immunoassay, which is also given in method; a method-neutral code is requested."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* extension[triggeredBy].extension[observation].valueReference = Reference(obs-micro-ast-meropenem)
+* extension[triggeredBy].extension[type].valueCode = #reflex
+* code = $loinc#101674-0 "OXA-48-like carbapenemase [Presence] in Isolate by Rapid immunoassay"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T11:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260373001 "Detected"
+* method = $sct#708099001 "Rapid immunoassay"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+Instance: obs-micro-res-oxa48-pcr
+InstanceOf: ObservationResistanceEu
+Title: "Observation: blaOXA-48-like gene detected by real-time PCR"
+Description: "The gene is confirmed by real-time PCR. The code has the system Isolate/Specimen and the method Molgen, which fix neither material nor technique; the technique is given in method."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* extension[triggeredBy].extension[observation].valueReference = Reference(obs-micro-res-oxa48-rapid)
+* extension[triggeredBy].extension[type].valueCode = #reflex
+* code = $loinc#85827-4 "Carbapenem resistance bla OXA-48-like gene [Presence] by Molecular method"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-04T15:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260373001 "Detected"
+* method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+Instance: obs-micro-res-esbl
+InstanceOf: ObservationResistanceEu
+Title: "Observation: extended-spectrum beta-lactamase detected by combination disk test"
+Description: "ESBL confirmation, triggered by the elevated cefepime MIC. The mechanism is read from a phenotypic test and reported with the technique of that test, disk diffusion."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* extension[triggeredBy].extension[observation].valueReference = Reference(obs-micro-ast-cefepime)
+* extension[triggeredBy].extension[type].valueCode = #reflex
+* code = $loinc#104864-4 "Beta lactamase.extended spectrum [Presence]"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-05T09:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260373001 "Detected"
+* method = $sct#1303975003 "Disk diffusion technique"
+* specimen = Reference(spec-micro-isolate-kpneumoniae)
+
+Instance: obs-micro-res-meca-nares
+InstanceOf: ObservationResistanceEu
+Title: "Observation: mecA/mecC genes not detected in a nares swab"
+Description: "Screening directly from the anterior nares swab by real-time PCR, with a code in the pattern in {Specimen} by {Molgen}, which leaves specimen and technique to Specimen.type and method."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#115376-6 "Methicillin resistance mecA+mecC genes [Presence] in Specimen by Molgen"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-06T13:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260415000 "Not detected"
+* method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
+* specimen = Reference(spec-micro-nares-swab)
