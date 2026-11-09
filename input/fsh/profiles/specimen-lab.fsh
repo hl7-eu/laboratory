@@ -48,7 +48,7 @@ When the specimen was collected by the patient or by a related person, the refer
   * type from LabSpecimenContainerEu (preferred)
   * additive[x] 0..0
   * extension contains $specimen-container-device-r5 named device 1..1
-  * extension[device].valueReference only Reference(Device)
+  * extension[device].valueReference only Reference(DeviceSpecimenContainerEuLab)
 
 // ----------------------------------------
 
