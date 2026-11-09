@@ -32,15 +32,15 @@ Each reported step has a section of its own:
 | Workflow step | Section | Profiles |
 |---|---|---|
 | Specimen check, sampling, collection | [Specimen and pre-analytics](#specimen-and-pre-analytics) | [Specimen: microbiology](StructureDefinition-Specimen-microbiology-eu-lab.html) |
-| Staining, microscopy | [Microscopy](#microscopy) | [general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html), [specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) |
 | Inoculation, culture | [Culture](#culture) | [general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html), [specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html) |
 | Identification | [Identification](#identification) | [organism identification](StructureDefinition-Observation-organismIdentification-eu-lab.html) |
-| Direct identification (PCR, antigen detection) | [Direct identification](#direct-identification) | [targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) |
-| Indirect identification (antibody detection) | [Serology](#serology) | not profiled yet |
-| Susceptibility | [Susceptibility](#susceptibility) | not profiled yet |
-| Resistance genes, resistance mechanisms | [Resistance](#resistance) | not profiled yet |
+| Susceptibility | [Susceptibility](#susceptibility) | [antimicrobial susceptibility](StructureDefinition-Observation-susceptibility-eu-lab.html), [antibiogram](StructureDefinition-Observation-susceptibilityPanel-eu-lab.html) |
+| Resistance genes, resistance mechanisms | [Resistance](#resistance) | [resistance](StructureDefinition-Observation-resistance-eu-lab.html) |
 | Organism properties | [Organism properties](#organism-properties) | not profiled yet |
+| Staining, microscopy | [Microscopy](#microscopy) | [general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html), [specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) |
+| Direct identification (PCR, antigen detection) | [Direct identification](#direct-identification) | [targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) |
 | Quantification | [Quantification](#quantification) | not profiled yet |
+| Indirect identification (antibody detection) | [Serology](#serology) | not profiled yet |
 
 ### Core principles
 
@@ -86,15 +86,15 @@ the technique used.
 
 | Question | Profile | `Observation.code` | `Observation.value[x]` |
 |---|---|---|---|
-| What is there to see? | [Observation Results: general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html) | `105059-0` | the finding: a morphology, an organism, host cells, or *not detected* |
-| Was the target seen? | [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) | a LOINC code naming the target, method microscopy, property `PrId` or `PrThr` | *detected* / *not detected*; for `PrId` also the organism seen |
 | Does anything grow? | [Observation Results: general culture](StructureDefinition-Observation-cultureGeneral-eu-lab.html) | `11475-1` | *no growth* / *organism growth* |
 | Was the target found in culture? | [Observation Results: specific culture](StructureDefinition-Observation-cultureSpecific-eu-lab.html) | a LOINC code naming the target, method *Organism specific culture*, property `PrThr` or `PrId` | *detected* / *not detected*; for `PrId` also the organism found |
 | Which organism is it? | [Observation Results: organism identification](StructureDefinition-Observation-organismIdentification-eu-lab.html) | `41852-5` or a sequencing code | the organism, or *not detected* |
-| Is the target present? | [Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) | a LOINC code naming the target, property `PrThr` | *detected* / *not detected* |
 | How susceptible is the isolate to an antimicrobial? | [Observation Results: antimicrobial susceptibility](StructureDefinition-Observation-susceptibility-eu-lab.html) | a LOINC code naming the antimicrobial, property `Susc`, preferably without a method | the MIC or zone diameter, or the category; the category in `interpretation` |
 | Which antimicrobials were tested on the isolate? | [Observation Results: antibiogram](StructureDefinition-Observation-susceptibilityPanel-eu-lab.html) | `29576-6` | none; the results are members |
 | Is a resistance mechanism or gene present? | [Observation Results: resistance](StructureDefinition-Observation-resistance-eu-lab.html) | a LOINC code naming the mechanism, enzyme or gene, property `PrThr` | *detected* / *not detected* |
+| What is there to see? | [Observation Results: general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html) | `105059-0` | the finding: a morphology, an organism, host cells, or *not detected* |
+| Was the target seen? | [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) | a LOINC code naming the target, method microscopy, property `PrId` or `PrThr` | *detected* / *not detected*; for `PrId` also the organism seen |
+| Is the target present? | [Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) | a LOINC code naming the target, property `PrThr` | *detected* / *not detected* |
 
 The specimen of all of them is a
 [Specimen: microbiology](StructureDefinition-Specimen-microbiology-eu-lab.html).
@@ -175,188 +175,6 @@ Specimen: sputum (primary)
 | tissue biopsy | [spec-micro-tissue](Specimen-spec-micro-tissue.html) |
 | anterior nares swab, and the isolate from its MRSA screening culture | [spec-micro-nares-swab](Specimen-spec-micro-nares-swab.html), [spec-micro-nares-isolate](Specimen-spec-micro-nares-isolate.html) |
 | conjunctival swab | [spec-micro-conjunctival-swab](Specimen-spec-micro-conjunctival-swab.html) |
-
-### Microscopy
-
-This section covers the staining and the microscopic examination of a specimen,
-of material from a positive culture or of an isolate. Staining is an internal
-step of the laboratory; it is represented on the specimen. The microscopic
-result is reported with one of two profiles:
-
-* [Observation Results: general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html)
-  answers the open question *what is there to see?* (workbook, "Profile 1").
-* [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html)
-  answers whether a target named in the code was seen (workbook, "Profile 2").
-
-The code decides the profile. `105059-0 |Microscopic observation [Identifier]
-in Specimen|` asks the open question; a code naming the target, such as
-`32206-5 |Plasmodium sp identified in Blood by Light microscopy|`, asks the
-targeted one.
-
-#### Representation of microscopy
-
-The microscopic result describes what is observed. Its aspects are
-represented separately:
-
-| Aspect | Element | Coding |
-|---|---|---|
-| the question | `Observation.code` | LOINC: `105059-0` (general), or a code naming the target (specific) |
-| the result | `Observation.value[x]` | SNOMED CT: [Microscopic Findings](ValueSet-micro-microscopyFinding-eu-lab.html) (general), [Specific Examination Results](ValueSet-micro-specificResult-eu-lab.html) (specific) |
-| the microscopy technique | `Observation.method` | SNOMED CT: [Microscopy Techniques](ValueSet-micro-microscopyTechnique-eu-lab.html), `278289002` or a descendant |
-| the staining | `Specimen.processing.procedure` | SNOMED CT: [Microbial Stain Methods](ValueSet-micro-stainMethod-eu-lab.html), `< 37926009` |
-| the amount | `Observation.component` with code `103392008` | SNOMED CT: [Semi-quantitative Microscopy Grades](ValueSet-micro-semiquantitative-eu-lab.html) |
-
-{% capture op_text %}
-The root concept `278289002 |Microscopy technique|` is admitted as a method, standing for *microscopy, technique not specified*. The workbook admits its descendants only.
-{% endcapture %}
-{% include open-item.html issue=180 typ="interim" title="Microscopy technique: root concept" text=op_text %}
-
-**Staining is specimen processing,** not the observation method. Light
-microscopy may be applied to a Gram-stained and to an auramine-stained
-preparation of the same material; representing the two aspects separately
-keeps both readable. The stain is not pre-coordinated in the code: codes such
-as `664-3 |Microscopic observation [Identifier] in Specimen by Gram stain|` are
-not part of the value sets.
-
-**The amount is a component.** *Few Gram-negative bacilli* is two statements:
-the finding and its amount. `value[x]` carries the finding, the component with
-the code `103392008 |Semi-quantitative value|` carries the amount. The
-workbook proposes a LOINC code for the component ([Issue #190](https://github.com/hl7-eu/laboratory/issues/190)); it
-would replace the SNOMED CT code.
-
-{% capture op_text %}
-The grades follow the workbook. Should `263865001 |Scanty|` be added? Grading schemes for acid-fast bacilli use it below *few*.
-{% endcapture %}
-{% include open-item.html issue=178 typ="interim" title="Semi-quantitative grades" text=op_text %}
-
-**Microscopy after culture references the derived material.** The Gram stain
-of a positive blood culture or of an isolate references a specimen that points
-at the primary specimen through `Specimen.parent`, and the observation points
-at the culture that triggered it through `triggeredBy`.
-
-#### General microscopy
-
-The code is `105059-0`. The result is what was seen:
-
-* a morphological finding the white paper lists, e.g.
-  `70003006 |Gram-positive cocci in clusters|`;
-* an organism, or a morphological group that SNOMED CT holds in the organism
-  hierarchy, e.g. `87172008 |Gram-negative bacillus|`,
-  `243365003 |Acid-fast bacillus|`, a *Plasmodium* species;
-* host cells, e.g. `52501007 |Leukocyte|`;
-* `260415000 |Not detected|` if nothing was found. The observation is not
-  omitted.
-
-{% capture op_text %}
-The findings are limited to the scope of the white paper: its eight morphologies, leukocytes, the organisms and *Not detected*. A broader list is expected from the workgroup. Further findings, such as erythrocytes, epithelial cells or clue cells, remain possible through the extensible binding.
-{% endcapture %}
-{% include open-item.html issue=176 typ="interim" title="Scope of the findings" text=op_text %}
-
-**Several findings of one examination are several observations.** A Gram
-stain may show Gram-negative rods and leukocytes. Each finding is its own
-observation; the examination is an observation with the same code, method and
-specimen, no value of its own, and `hasMember` references to the findings.
-
-```
-Observation: Microscopic observation (105059-0), method light microscopy, no value
-  hasMember → Observation: Gram-negative bacillus, component Few
-  hasMember → Observation: Leukocyte, component Numerous
-```
-
-**Host cells and acid-fast bacilli are findings.** They are reported as the
-value of a general microscopy, not with the LOINC codes that name them
-(`72163-9 |Leukocytes [Presence] in Specimen by Gram stain|`,
-`87243-2 |Microscopic observation [Presence] in Specimen by Auramine
-fluorochrome stain|`), which no workgroup filter admits.
-
-{% capture op_text %}
-Host cells and acid-fast bacilli are reported as findings of the general microscopy only; the LOINC codes `72163-9`, `72162-1`, `72161-3` and `87243-2` are not used.
-{% endcapture %}
-{% include open-item.html issue=177 typ="interim" title="Host cells and acid-fast bacilli" text=op_text %}
-
-#### Specific microscopy
-
-The code names the target: LOINC class `MICRO`, property `PrId` or `PrThr`,
-method *Microscopy*, *Microscopy.light* or *Microscopy.electron*, active
-([Specific Microscopy Codes](ValueSet-micro-microscopySpecificCode-eu-lab.html)).
-Preferred are the codes with system `XXX`, which leave the specimen to
-`Specimen.type`, e.g. `673-4 |Ova and parasites identified in Specimen by
-Light microscopy|`
-([Specific Microscopy Codes, preferred](ValueSet-micro-microscopySpecificCodePreferred-eu-lab.html)).
-Codes with the component *Microscopic observation* name no target and are
-excluded. The target are codes with system `{Specimen}`; LOINC has none for
-microscopy yet, so the codes with system `XXX` are preferred until it provides
-them.
-
-{% capture op_text %}
-`PrId` and `PrThr` are both admitted. Should one of them be preferred?
-{% endcapture %}
-{% include open-item.html issue=166 typ="interim" title="Property of the specific codes" text=op_text %}
-
-{% capture op_text %}
-The *Microscopic observation* codes are excluded from the specific microscopy, because they answer the open question. As the general microscopy admits `105059-0` only, stain pre-coordinated codes such as `664-3 |Microscopic observation [Identifier] in Specimen by Gram stain|` are not admitted at all, although they are widely used.
-{% endcapture %}
-{% include open-item.html issue=170 typ="interim" title="Codes without a named target" text=op_text %}
-
-**The result depends on the property of the code.**
-
-| Property | Target not found | Found as named | Found more specifically | Something else found |
-|---|---|---|---|---|
-| `PrId` | `260415000` *Not detected* | `260373001` *Detected* | the organism, e.g. `30020004` *Plasmodium falciparum* for *Plasmodium sp* | the organism found |
-| `PrThr` | `260415000` *Not detected* | `260373001` *Detected* | `260373001` *Detected* | an observation of its own |
-
-The more specific result is the usual case for codes naming a genus or a
-group: malaria microscopy differentiates the species, and an examination for
-*ova and parasites* reports the parasite found. For codes naming a species,
-*Detected* or *Not detected* is the natural answer.
-
-{% capture op_text %}
-The organism is the value where it is more specific than the target or other than the target. A result under a *Plasmodium* code may then name *Babesia*; is that acceptable for queries?
-{% endcapture %}
-{% include open-item.html issue=167 typ="interim" title="Result of a PrId code" text=op_text %}
-
-**An unexpected finding with a `PrThr` code is an observation of its own.**
-The scale of a `PrThr` code admits presence or absence only. A blood film
-examined for *Plasmodium* that shows *Babesia microti* gives two observations:
-the specific microscopy says *Not detected* and references the finding through
-`hasMember`, so that it stays tied to the examination in which it was made.
-
-```
-Observation: Plasmodium sp [Presence] in Blood (51587-4): Not detected, method light microscopy
-  hasMember → Observation: Microscopic observation (105059-0): Babesia microti
-```
-
-**Target and another organism both found:** each is reported in an
-observation of its own with the same code.
-
-{% capture op_text %}
-With a `PrThr` code an unexpected organism is an observation of its own, which the targeted observation references through `hasMember`; with a `PrId` code it is the value. Target and another organism found together give one observation each, with the same code. The same rule is proposed for the specific culture and the direct identification.
-{% endcapture %}
-{% include open-item.html issue=168 typ="interim" title="Unexpected finding" text=op_text %}
-
-#### Microscopy examples
-
-| Example | Instances |
-|---|---|
-| White paper 1 — direct microscopy of a urine specimen | [obs-micro-urine-gram-gnb](Observation-obs-micro-urine-gram-gnb.html), [spec-micro-urine](Specimen-spec-micro-urine.html) |
-| White paper 2 — multiple findings from direct microscopy | [obs-micro-urine-gram-group](Observation-obs-micro-urine-gram-group.html) with [obs-micro-urine-gram-gnr](Observation-obs-micro-urine-gram-gnr.html) and [obs-micro-urine-gram-leukocytes](Observation-obs-micro-urine-gram-leukocytes.html) |
-| White paper 3 — direct microscopy for Plasmodium | [obs-micro-blood-plasmodium](Observation-obs-micro-blood-plasmodium.html), [obs-micro-blood-plasmodium-negative](Observation-obs-micro-blood-plasmodium-negative.html) |
-| White paper 4 — direct microscopy for parasites | [obs-micro-stool-giardia](Observation-obs-micro-stool-giardia.html) |
-| White paper 5 — microscopy following culture | [obs-micro-blood-culture-gram](Observation-obs-micro-blood-culture-gram.html) triggered by [obs-micro-blood-culture-positive](Observation-obs-micro-blood-culture-positive.html), on [spec-micro-blood-culture-derived](Specimen-spec-micro-blood-culture-derived.html) |
-| White paper 6 — microscopy of an isolate | [obs-micro-isolate-gram](Observation-obs-micro-isolate-gram.html) on [spec-micro-isolate](Specimen-spec-micro-isolate.html) |
-| acid-fast bacilli in an auramine stain | [obs-micro-sputum-afb](Observation-obs-micro-sputum-afb.html) on [spec-micro-sputum-afb](Specimen-spec-micro-sputum-afb.html) |
-| specific microscopy, `PrId`, more specific than the target | [obs-micro-spec-blood-plasmodium](Observation-obs-micro-spec-blood-plasmodium.html) |
-| specific microscopy, `PrId`, preferred code | [obs-micro-spec-stool-op](Observation-obs-micro-spec-stool-op.html) |
-| specific microscopy, `PrThr`, unexpected finding | [obs-micro-spec-blood-plasmodium-presence](Observation-obs-micro-spec-blood-plasmodium-presence.html) with [obs-micro-blood-babesia](Observation-obs-micro-blood-babesia.html) |
-
-White paper examples 3 and 4 use the general code `105059-0`. The same
-examinations reported with a code naming the target are specific microscopies;
-both representations are valid, and the code decides the profile.
-
-{% capture op_text %}
-The scenarios of white paper examples 3 and 4 describe a targeted examination but use the general code. Should they be reworded, or a targeted variant be added?
-{% endcapture %}
-{% include open-item.html issue=169 typ="interim" title="White paper examples 3 and 4" text=op_text %}
 
 ### Culture
 
@@ -577,168 +395,6 @@ scope.
 |---|---|
 | identification by MALDI-TOF after culture | [obs-ident-maldi-kpneumoniae](Observation-obs-ident-maldi-kpneumoniae.html) triggered by [obs-micro-sputum-culture-positive](Observation-obs-micro-sputum-culture-positive.html) |
 | identification by 16S sequencing on a biopsy | [obs-ident-16s-sequencing](Observation-obs-ident-16s-sequencing.html), [obs-ident-not-detected](Observation-obs-ident-not-detected.html) |
-
-### Direct identification
-
-*Direct identification* is the workflow step that detects a predefined target
-in a specimen without a culture: by nucleic acid amplification (PCR) or by
-antigen detection. The result says whether the target is present. It is
-reported with
-[Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html).
-
-The profile is named after its question, not after the workflow step: it
-answers *is the target present?*, and it applies to isolates as well. Two
-cases of the workflow step use other profiles:
-
-* **Sequencing directly on a specimen** (16S or 18S rRNA on a biopsy) names the
-  organism. It is an [identification](#identification).
-* **Microscopy aimed at a named target** is a specific microscopy, see
-  [Microscopy](#microscopy).
-
-#### Representation of the detection
-
-| Aspect | Element | Coding |
-|---|---|---|
-| the question | `Observation.code` | LOINC, class `MICRO`, property `PrThr`: [Targeted Detection Codes](ValueSet-micro-targetedDetectionCode-eu-lab.html), preferred [Targeted Detection Codes, preferred](ValueSet-micro-targetedDetectionCodePreferred-eu-lab.html) |
-| the result | `Observation.value[x]` | SNOMED CT: [Detected and Not Detected](ValueSet-micro-detectedNotDetected-eu-lab.html) |
-| no result | `Observation.dataAbsentReason` | [Microbiology Data Absent Reasons](ValueSet-micro-dataAbsentReason-eu-lab.html) |
-| the technique | `Observation.method` | SNOMED CT: [Targeted Detection Techniques](ValueSet-micro-targetedDetectionTechnique-eu-lab.html) |
-
-#### Detection codes
-
-The target is in the LOINC component — the nucleic acid of an organism or an
-antigen — and the property is `PrThr`.
-
-{% capture op_text %}
-Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method still catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`: LOINC has no property that tells antibodies from antigens. Regenstrief is to be asked for `{Specimen}` codes that keep them apart ([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)).
-{% endcapture %}
-{% include open-item.html issue=181 typ="interim" title="Antibody codes" text=op_text %}
-
-**The workgroup's target definition** is the system `{Specimen}` with one of
-the methods `{Molgen}`, `IF`, `IA` or `Aggl`. The curly braces mean that
-specimen and method are given elsewhere: the specimen in `Specimen.type`, the
-technique in `Observation.method`. An example is `105875-9 |Bordetella
-pertussis DNA [Presence] in Specimen by Molgen|`. For the serological and
-immunological methods the minutes ask LOINC for a new method in curly braces,
-analogous to `{Molgen}`, or for codes without a method
-([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)); once it
-exists, it takes the place of `IF`, `IA` and `Aggl` in the target definition.
-
-**Interim codes.** LOINC has `{Specimen}` codes for `{Molgen}` only, so far
-about a thousand. Until it has them for the immunological methods, the
-preferred codes also contain:
-
-* the codes with system `XXX` and method `IF`, `IA` or `Aggl`;
-* the codes with system `XXX` and no method, e.g. `105066-5 |SARS-CoV+SARS-CoV-2
-  (COVID-19) Ag [Presence] in Specimen|` or `105904-7 |Vancomycin resistant
-  enterococcus [Presence] in Specimen|`;
-* `35492-8 |Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence]
-  in Specimen by NAA with probe detection|`, which LOINC files under the wrong
-  class.
-
-These additions are dropped once the `{Specimen}` codes exist.
-
-{% capture op_text %}
-The target definition is taken from the workgroup minutes of 2026-11-06. The codes with system `XXX` are an interim of this guide until LOINC provides `{Specimen}` codes for the immunological methods, through a new method in curly braces analogous to `{Molgen}` or as codes without a method. Open: which methods the new method covers, and whether it is requested separately for antigens and antibodies. The list of permitted methods of `{Molgen}` already names `IA`, *Immune stain* and *Flow cytometry*; the workgroup is asked whether `{Molgen}` is meant to cover the immunological methods.
-{% endcapture %}
-{% include open-item.html issue=171 typ="interim" title="Preferred codes" text=op_text %}
-
-**Pre-coordinated codes are accepted.** The workgroup allows pre- and
-post-coordination of specimen and method and prefers post-coordination. A
-laboratory that cannot post-coordinate uses a code that pre-coordinates the
-specimen or the method: `Probe.amp.tar`, `Non-probe.amp.tar`, `Probe.amp`,
-`Probe.amp.sig`, `Molgen`, `IF`, `IA` or `Aggl`. The code is bound extensibly
-to all of them; the preferred codes are named in an additional binding.
-
-**Not accepted** are the culture codes — a targeted culture is reported with
-the [culture](#culture) — and the rapid immunoassay codes
-(`IA.rapid`).
-
-#### Detection result
-
-The result is `260373001 |Detected|` or `260415000 |Not detected|`. An organism
-other than the target is reported in an observation of its own, not as the
-value ([interim position](#op-issue-168)). An indeterminate result — an inhibited PCR, insufficient material — is
-not a value: it is given in `dataAbsentReason` as `82334004 |Indeterminate|`.
-
-{% capture op_text %}
-An indeterminate result is a `dataAbsentReason`, as in the workbook. The white paper tables *Data model for specific culture* and *Data model for specific identification* list `82334004 |Indeterminate|` as a value.
-{% endcapture %}
-{% include open-item.html issue=179 typ="interim" title="Indeterminate" text=op_text %}
-
-A qualitative result read from a Ct value points at the observation with the
-Ct value through `derivedFrom` (see [Quantification](#quantification)).
-
-#### Detection methods
-
-The technique is always given in `Observation.method`:
-
-* **Nucleic acid amplification:** real-time PCR (`70601000052104`), digital PCR
-  (`1303992007`), LAMP (`1259932009`), TMA (`1304048000`).
-  `1156878000 |Molecular nucleic acid amplification technique|` is the
-  fallback where the amplification technique is not known. A SNOMED CT concept
-  for NEAR is to be requested ([Issue #199](https://github.com/hl7-eu/laboratory/issues/199)).
-* **Immunological techniques:** immunoassay (`726449005`), rapid immunoassay
-  (`708099001`), rapid antigen detection immunoassay (`1156860005`),
-  immunofluorescence (`703444002`), agglutination (`708104000`).
-
-**The generic *PCR* is not recommended.** It does not distinguish real-time
-from classic gel-based PCR and does not cover the isothermal techniques.
-SNOMED CT holds `258066000 |Polymerase chain reaction technique|` beside, not
-below, `1156878000`, so the method value set is enumerated.
-
-{% capture op_text %}
-Generic PCR (`258066000`), multiplex PCR (`1303998006`), probe with target amplification (`702675006`) and sequencing (`1304162005`) are not admitted; `1156878000` is the fallback. The white paper's table *Data model for specific identification* still lists them.
-{% endcapture %}
-{% include open-item.html issue=172 typ="interim" title="Methods" text=op_text %}
-
-**A rapid antigen test** uses the method-neutral antigen code with
-`708099001 |Rapid immunoassay|` or
-`1156860005 |Rapid antigen detection immunoassay technique|` as method.
-
-{% capture op_text %}
-The `IA.rapid` codes are not admitted; the method-neutral code with the rapid technique as method is used instead.
-{% endcapture %}
-{% include open-item.html issue=173 typ="interim" title="Rapid antigen tests" text=op_text %}
-
-**A panel is not a method.** A multiplex panel tests several targets in one
-run. Each target is an observation of its own with the actual technique; an
-observation with the panel code groups them through `hasMember`.
-
-```
-Observation: respiratory pathogen panel, no value
-  hasMember → Observation: Influenza virus A RNA [Presence]: Not detected, method real-time PCR
-  hasMember → Observation: SARS-CoV-2 RNA [Presence]: Detected, method real-time PCR
-```
-
-{% capture op_text %}
-`703752003 |Organism specific culture technique|` is not a detection method; a targeted culture is reported with the [culture](#culture).
-{% endcapture %}
-{% include open-item.html issue=174 typ="interim" title="Organism specific culture technique" text=op_text %}
-
-#### Detection examples
-
-| Example | Instances |
-|---|---|
-| molecular detection with a preferred code | [obs-detect-pertussis-pcr](Observation-obs-detect-pertussis-pcr.html) |
-| indeterminate result | [obs-detect-pertussis-pcr-indeterminate](Observation-obs-detect-pertussis-pcr-indeterminate.html) |
-| rapid antigen test | [obs-detect-sarscov2-ag-rapid](Observation-obs-detect-sarscov2-ag-rapid.html) |
-
-### Serology
-
-**Not profiled yet.** This section records the state of the workgroup's
-conventions for serology.
-
-Serology identifies an infection indirectly, by detecting the antibodies the
-patient has formed against a pathogen. In the workflow it starts from a blood
-sample and is separate from the direct identification, which detects the
-pathogen itself or its antigens (see
-[Direct identification](#direct-identification)).
-
-The workgroup's work on serology is ongoing; the workbook sheet *Serology
-techniques* is still empty.
-
-**Antibody codes.** The LOINC filters of the targeted detection also catch antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|` and `105911-2 |SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Specimen|`. They belong to this chapter and are not used with the targeted detection, although its value sets cannot exclude them yet ([Issue #181](#op-issue-181)).
 
 ### Susceptibility
 
@@ -1032,6 +688,334 @@ well; they are covered by [Resistance](#resistance).
 The workgroup has put the clarification of these properties on its agenda; it
 has not yet discussed them. The workbook has no sheet for them yet.
 
+### Microscopy
+
+This section covers the staining and the microscopic examination of a specimen,
+of material from a positive culture or of an isolate. Staining is an internal
+step of the laboratory; it is represented on the specimen. The microscopic
+result is reported with one of two profiles:
+
+* [Observation Results: general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html)
+  answers the open question *what is there to see?* (workbook, "Profile 1").
+* [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html)
+  answers whether a target named in the code was seen (workbook, "Profile 2").
+
+The code decides the profile. `105059-0 |Microscopic observation [Identifier]
+in Specimen|` asks the open question; a code naming the target, such as
+`32206-5 |Plasmodium sp identified in Blood by Light microscopy|`, asks the
+targeted one.
+
+#### Representation of microscopy
+
+The microscopic result describes what is observed. Its aspects are
+represented separately:
+
+| Aspect | Element | Coding |
+|---|---|---|
+| the question | `Observation.code` | LOINC: `105059-0` (general), or a code naming the target (specific) |
+| the result | `Observation.value[x]` | SNOMED CT: [Microscopic Findings](ValueSet-micro-microscopyFinding-eu-lab.html) (general), [Specific Examination Results](ValueSet-micro-specificResult-eu-lab.html) (specific) |
+| the microscopy technique | `Observation.method` | SNOMED CT: [Microscopy Techniques](ValueSet-micro-microscopyTechnique-eu-lab.html), `278289002` or a descendant |
+| the staining | `Specimen.processing.procedure` | SNOMED CT: [Microbial Stain Methods](ValueSet-micro-stainMethod-eu-lab.html), `< 37926009` |
+| the amount | `Observation.component` with code `103392008` | SNOMED CT: [Semi-quantitative Microscopy Grades](ValueSet-micro-semiquantitative-eu-lab.html) |
+
+{% capture op_text %}
+The root concept `278289002 |Microscopy technique|` is admitted as a method, standing for *microscopy, technique not specified*. The workbook admits its descendants only.
+{% endcapture %}
+{% include open-item.html issue=180 typ="interim" title="Microscopy technique: root concept" text=op_text %}
+
+**Staining is specimen processing,** not the observation method. Light
+microscopy may be applied to a Gram-stained and to an auramine-stained
+preparation of the same material; representing the two aspects separately
+keeps both readable. The stain is not pre-coordinated in the code: codes such
+as `664-3 |Microscopic observation [Identifier] in Specimen by Gram stain|` are
+not part of the value sets.
+
+**The amount is a component.** *Few Gram-negative bacilli* is two statements:
+the finding and its amount. `value[x]` carries the finding, the component with
+the code `103392008 |Semi-quantitative value|` carries the amount. The
+workbook proposes a LOINC code for the component ([Issue #190](https://github.com/hl7-eu/laboratory/issues/190)); it
+would replace the SNOMED CT code.
+
+{% capture op_text %}
+The grades follow the workbook. Should `263865001 |Scanty|` be added? Grading schemes for acid-fast bacilli use it below *few*.
+{% endcapture %}
+{% include open-item.html issue=178 typ="interim" title="Semi-quantitative grades" text=op_text %}
+
+**Microscopy after culture references the derived material.** The Gram stain
+of a positive blood culture or of an isolate references a specimen that points
+at the primary specimen through `Specimen.parent`, and the observation points
+at the culture that triggered it through `triggeredBy`.
+
+#### General microscopy
+
+The code is `105059-0`. The result is what was seen:
+
+* a morphological finding the white paper lists, e.g.
+  `70003006 |Gram-positive cocci in clusters|`;
+* an organism, or a morphological group that SNOMED CT holds in the organism
+  hierarchy, e.g. `87172008 |Gram-negative bacillus|`,
+  `243365003 |Acid-fast bacillus|`, a *Plasmodium* species;
+* host cells, e.g. `52501007 |Leukocyte|`;
+* `260415000 |Not detected|` if nothing was found. The observation is not
+  omitted.
+
+{% capture op_text %}
+The findings are limited to the scope of the white paper: its eight morphologies, leukocytes, the organisms and *Not detected*. A broader list is expected from the workgroup. Further findings, such as erythrocytes, epithelial cells or clue cells, remain possible through the extensible binding.
+{% endcapture %}
+{% include open-item.html issue=176 typ="interim" title="Scope of the findings" text=op_text %}
+
+**Several findings of one examination are several observations.** A Gram
+stain may show Gram-negative rods and leukocytes. Each finding is its own
+observation; the examination is an observation with the same code, method and
+specimen, no value of its own, and `hasMember` references to the findings.
+
+```
+Observation: Microscopic observation (105059-0), method light microscopy, no value
+  hasMember → Observation: Gram-negative bacillus, component Few
+  hasMember → Observation: Leukocyte, component Numerous
+```
+
+**Host cells and acid-fast bacilli are findings.** They are reported as the
+value of a general microscopy, not with the LOINC codes that name them
+(`72163-9 |Leukocytes [Presence] in Specimen by Gram stain|`,
+`87243-2 |Microscopic observation [Presence] in Specimen by Auramine
+fluorochrome stain|`), which no workgroup filter admits.
+
+{% capture op_text %}
+Host cells and acid-fast bacilli are reported as findings of the general microscopy only; the LOINC codes `72163-9`, `72162-1`, `72161-3` and `87243-2` are not used.
+{% endcapture %}
+{% include open-item.html issue=177 typ="interim" title="Host cells and acid-fast bacilli" text=op_text %}
+
+#### Specific microscopy
+
+The code names the target: LOINC class `MICRO`, property `PrId` or `PrThr`,
+method *Microscopy*, *Microscopy.light* or *Microscopy.electron*, active
+([Specific Microscopy Codes](ValueSet-micro-microscopySpecificCode-eu-lab.html)).
+Preferred are the codes with system `XXX`, which leave the specimen to
+`Specimen.type`, e.g. `673-4 |Ova and parasites identified in Specimen by
+Light microscopy|`
+([Specific Microscopy Codes, preferred](ValueSet-micro-microscopySpecificCodePreferred-eu-lab.html)).
+Codes with the component *Microscopic observation* name no target and are
+excluded. The target are codes with system `{Specimen}`; LOINC has none for
+microscopy yet, so the codes with system `XXX` are preferred until it provides
+them.
+
+{% capture op_text %}
+`PrId` and `PrThr` are both admitted. Should one of them be preferred?
+{% endcapture %}
+{% include open-item.html issue=166 typ="interim" title="Property of the specific codes" text=op_text %}
+
+{% capture op_text %}
+The *Microscopic observation* codes are excluded from the specific microscopy, because they answer the open question. As the general microscopy admits `105059-0` only, stain pre-coordinated codes such as `664-3 |Microscopic observation [Identifier] in Specimen by Gram stain|` are not admitted at all, although they are widely used.
+{% endcapture %}
+{% include open-item.html issue=170 typ="interim" title="Codes without a named target" text=op_text %}
+
+**The result depends on the property of the code.**
+
+| Property | Target not found | Found as named | Found more specifically | Something else found |
+|---|---|---|---|---|
+| `PrId` | `260415000` *Not detected* | `260373001` *Detected* | the organism, e.g. `30020004` *Plasmodium falciparum* for *Plasmodium sp* | the organism found |
+| `PrThr` | `260415000` *Not detected* | `260373001` *Detected* | `260373001` *Detected* | an observation of its own |
+
+The more specific result is the usual case for codes naming a genus or a
+group: malaria microscopy differentiates the species, and an examination for
+*ova and parasites* reports the parasite found. For codes naming a species,
+*Detected* or *Not detected* is the natural answer.
+
+{% capture op_text %}
+The organism is the value where it is more specific than the target or other than the target. A result under a *Plasmodium* code may then name *Babesia*; is that acceptable for queries?
+{% endcapture %}
+{% include open-item.html issue=167 typ="interim" title="Result of a PrId code" text=op_text %}
+
+**An unexpected finding with a `PrThr` code is an observation of its own.**
+The scale of a `PrThr` code admits presence or absence only. A blood film
+examined for *Plasmodium* that shows *Babesia microti* gives two observations:
+the specific microscopy says *Not detected* and references the finding through
+`hasMember`, so that it stays tied to the examination in which it was made.
+
+```
+Observation: Plasmodium sp [Presence] in Blood (51587-4): Not detected, method light microscopy
+  hasMember → Observation: Microscopic observation (105059-0): Babesia microti
+```
+
+**Target and another organism both found:** each is reported in an
+observation of its own with the same code.
+
+{% capture op_text %}
+With a `PrThr` code an unexpected organism is an observation of its own, which the targeted observation references through `hasMember`; with a `PrId` code it is the value. Target and another organism found together give one observation each, with the same code. The same rule is proposed for the specific culture and the direct identification.
+{% endcapture %}
+{% include open-item.html issue=168 typ="interim" title="Unexpected finding" text=op_text %}
+
+#### Microscopy examples
+
+| Example | Instances |
+|---|---|
+| White paper 1 — direct microscopy of a urine specimen | [obs-micro-urine-gram-gnb](Observation-obs-micro-urine-gram-gnb.html), [spec-micro-urine](Specimen-spec-micro-urine.html) |
+| White paper 2 — multiple findings from direct microscopy | [obs-micro-urine-gram-group](Observation-obs-micro-urine-gram-group.html) with [obs-micro-urine-gram-gnr](Observation-obs-micro-urine-gram-gnr.html) and [obs-micro-urine-gram-leukocytes](Observation-obs-micro-urine-gram-leukocytes.html) |
+| White paper 3 — direct microscopy for Plasmodium | [obs-micro-blood-plasmodium](Observation-obs-micro-blood-plasmodium.html), [obs-micro-blood-plasmodium-negative](Observation-obs-micro-blood-plasmodium-negative.html) |
+| White paper 4 — direct microscopy for parasites | [obs-micro-stool-giardia](Observation-obs-micro-stool-giardia.html) |
+| White paper 5 — microscopy following culture | [obs-micro-blood-culture-gram](Observation-obs-micro-blood-culture-gram.html) triggered by [obs-micro-blood-culture-positive](Observation-obs-micro-blood-culture-positive.html), on [spec-micro-blood-culture-derived](Specimen-spec-micro-blood-culture-derived.html) |
+| White paper 6 — microscopy of an isolate | [obs-micro-isolate-gram](Observation-obs-micro-isolate-gram.html) on [spec-micro-isolate](Specimen-spec-micro-isolate.html) |
+| acid-fast bacilli in an auramine stain | [obs-micro-sputum-afb](Observation-obs-micro-sputum-afb.html) on [spec-micro-sputum-afb](Specimen-spec-micro-sputum-afb.html) |
+| specific microscopy, `PrId`, more specific than the target | [obs-micro-spec-blood-plasmodium](Observation-obs-micro-spec-blood-plasmodium.html) |
+| specific microscopy, `PrId`, preferred code | [obs-micro-spec-stool-op](Observation-obs-micro-spec-stool-op.html) |
+| specific microscopy, `PrThr`, unexpected finding | [obs-micro-spec-blood-plasmodium-presence](Observation-obs-micro-spec-blood-plasmodium-presence.html) with [obs-micro-blood-babesia](Observation-obs-micro-blood-babesia.html) |
+
+White paper examples 3 and 4 use the general code `105059-0`. The same
+examinations reported with a code naming the target are specific microscopies;
+both representations are valid, and the code decides the profile.
+
+{% capture op_text %}
+The scenarios of white paper examples 3 and 4 describe a targeted examination but use the general code. Should they be reworded, or a targeted variant be added?
+{% endcapture %}
+{% include open-item.html issue=169 typ="interim" title="White paper examples 3 and 4" text=op_text %}
+
+### Direct identification
+
+*Direct identification* is the workflow step that detects a predefined target
+in a specimen without a culture: by nucleic acid amplification (PCR) or by
+antigen detection. The result says whether the target is present. It is
+reported with
+[Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html).
+
+The profile is named after its question, not after the workflow step: it
+answers *is the target present?*, and it applies to isolates as well. Two
+cases of the workflow step use other profiles:
+
+* **Sequencing directly on a specimen** (16S or 18S rRNA on a biopsy) names the
+  organism. It is an [identification](#identification).
+* **Microscopy aimed at a named target** is a specific microscopy, see
+  [Microscopy](#microscopy).
+
+#### Representation of the detection
+
+| Aspect | Element | Coding |
+|---|---|---|
+| the question | `Observation.code` | LOINC, class `MICRO`, property `PrThr`: [Targeted Detection Codes](ValueSet-micro-targetedDetectionCode-eu-lab.html), preferred [Targeted Detection Codes, preferred](ValueSet-micro-targetedDetectionCodePreferred-eu-lab.html) |
+| the result | `Observation.value[x]` | SNOMED CT: [Detected and Not Detected](ValueSet-micro-detectedNotDetected-eu-lab.html) |
+| no result | `Observation.dataAbsentReason` | [Microbiology Data Absent Reasons](ValueSet-micro-dataAbsentReason-eu-lab.html) |
+| the technique | `Observation.method` | SNOMED CT: [Targeted Detection Techniques](ValueSet-micro-targetedDetectionTechnique-eu-lab.html) |
+
+#### Detection codes
+
+The target is in the LOINC component — the nucleic acid of an organism or an
+antigen — and the property is `PrThr`.
+
+{% capture op_text %}
+Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method still catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`: LOINC has no property that tells antibodies from antigens. Regenstrief is to be asked for `{Specimen}` codes that keep them apart ([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)).
+{% endcapture %}
+{% include open-item.html issue=181 typ="interim" title="Antibody codes" text=op_text %}
+
+**The workgroup's target definition** is the system `{Specimen}` with one of
+the methods `{Molgen}`, `IF`, `IA` or `Aggl`. The curly braces mean that
+specimen and method are given elsewhere: the specimen in `Specimen.type`, the
+technique in `Observation.method`. An example is `105875-9 |Bordetella
+pertussis DNA [Presence] in Specimen by Molgen|`. For the serological and
+immunological methods the minutes ask LOINC for a new method in curly braces,
+analogous to `{Molgen}`, or for codes without a method
+([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)); once it
+exists, it takes the place of `IF`, `IA` and `Aggl` in the target definition.
+
+**Interim codes.** LOINC has `{Specimen}` codes for `{Molgen}` only, so far
+about a thousand. Until it has them for the immunological methods, the
+preferred codes also contain:
+
+* the codes with system `XXX` and method `IF`, `IA` or `Aggl`;
+* the codes with system `XXX` and no method, e.g. `105066-5 |SARS-CoV+SARS-CoV-2
+  (COVID-19) Ag [Presence] in Specimen|` or `105904-7 |Vancomycin resistant
+  enterococcus [Presence] in Specimen|`;
+* `35492-8 |Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence]
+  in Specimen by NAA with probe detection|`, which LOINC files under the wrong
+  class.
+
+These additions are dropped once the `{Specimen}` codes exist.
+
+{% capture op_text %}
+The target definition is taken from the workgroup minutes of 2026-11-06. The codes with system `XXX` are an interim of this guide until LOINC provides `{Specimen}` codes for the immunological methods, through a new method in curly braces analogous to `{Molgen}` or as codes without a method. Open: which methods the new method covers, and whether it is requested separately for antigens and antibodies. The list of permitted methods of `{Molgen}` already names `IA`, *Immune stain* and *Flow cytometry*; the workgroup is asked whether `{Molgen}` is meant to cover the immunological methods.
+{% endcapture %}
+{% include open-item.html issue=171 typ="interim" title="Preferred codes" text=op_text %}
+
+**Pre-coordinated codes are accepted.** The workgroup allows pre- and
+post-coordination of specimen and method and prefers post-coordination. A
+laboratory that cannot post-coordinate uses a code that pre-coordinates the
+specimen or the method: `Probe.amp.tar`, `Non-probe.amp.tar`, `Probe.amp`,
+`Probe.amp.sig`, `Molgen`, `IF`, `IA` or `Aggl`. The code is bound extensibly
+to all of them; the preferred codes are named in an additional binding.
+
+**Not accepted** are the culture codes — a targeted culture is reported with
+the [culture](#culture) — and the rapid immunoassay codes
+(`IA.rapid`).
+
+#### Detection result
+
+The result is `260373001 |Detected|` or `260415000 |Not detected|`. An organism
+other than the target is reported in an observation of its own, not as the
+value ([interim position](#op-issue-168)). An indeterminate result — an inhibited PCR, insufficient material — is
+not a value: it is given in `dataAbsentReason` as `82334004 |Indeterminate|`.
+
+{% capture op_text %}
+An indeterminate result is a `dataAbsentReason`, as in the workbook. The white paper tables *Data model for specific culture* and *Data model for specific identification* list `82334004 |Indeterminate|` as a value.
+{% endcapture %}
+{% include open-item.html issue=179 typ="interim" title="Indeterminate" text=op_text %}
+
+A qualitative result read from a Ct value points at the observation with the
+Ct value through `derivedFrom` (see [Quantification](#quantification)).
+
+#### Detection methods
+
+The technique is always given in `Observation.method`:
+
+* **Nucleic acid amplification:** real-time PCR (`70601000052104`), digital PCR
+  (`1303992007`), LAMP (`1259932009`), TMA (`1304048000`).
+  `1156878000 |Molecular nucleic acid amplification technique|` is the
+  fallback where the amplification technique is not known. A SNOMED CT concept
+  for NEAR is to be requested ([Issue #199](https://github.com/hl7-eu/laboratory/issues/199)).
+* **Immunological techniques:** immunoassay (`726449005`), rapid immunoassay
+  (`708099001`), rapid antigen detection immunoassay (`1156860005`),
+  immunofluorescence (`703444002`), agglutination (`708104000`).
+
+**The generic *PCR* is not recommended.** It does not distinguish real-time
+from classic gel-based PCR and does not cover the isothermal techniques.
+SNOMED CT holds `258066000 |Polymerase chain reaction technique|` beside, not
+below, `1156878000`, so the method value set is enumerated.
+
+{% capture op_text %}
+Generic PCR (`258066000`), multiplex PCR (`1303998006`), probe with target amplification (`702675006`) and sequencing (`1304162005`) are not admitted; `1156878000` is the fallback. The white paper's table *Data model for specific identification* still lists them.
+{% endcapture %}
+{% include open-item.html issue=172 typ="interim" title="Methods" text=op_text %}
+
+**A rapid antigen test** uses the method-neutral antigen code with
+`708099001 |Rapid immunoassay|` or
+`1156860005 |Rapid antigen detection immunoassay technique|` as method.
+
+{% capture op_text %}
+The `IA.rapid` codes are not admitted; the method-neutral code with the rapid technique as method is used instead.
+{% endcapture %}
+{% include open-item.html issue=173 typ="interim" title="Rapid antigen tests" text=op_text %}
+
+**A panel is not a method.** A multiplex panel tests several targets in one
+run. Each target is an observation of its own with the actual technique; an
+observation with the panel code groups them through `hasMember`.
+
+```
+Observation: respiratory pathogen panel, no value
+  hasMember → Observation: Influenza virus A RNA [Presence]: Not detected, method real-time PCR
+  hasMember → Observation: SARS-CoV-2 RNA [Presence]: Detected, method real-time PCR
+```
+
+{% capture op_text %}
+`703752003 |Organism specific culture technique|` is not a detection method; a targeted culture is reported with the [culture](#culture).
+{% endcapture %}
+{% include open-item.html issue=174 typ="interim" title="Organism specific culture technique" text=op_text %}
+
+#### Detection examples
+
+| Example | Instances |
+|---|---|
+| molecular detection with a preferred code | [obs-detect-pertussis-pcr](Observation-obs-detect-pertussis-pcr.html) |
+| indeterminate result | [obs-detect-pertussis-pcr-indeterminate](Observation-obs-detect-pertussis-pcr-indeterminate.html) |
+| rapid antigen test | [obs-detect-sarscov2-ag-rapid](Observation-obs-detect-sarscov2-ag-rapid.html) |
+
 ### Quantification
 
 **Not profiled yet.** This section records the state of the workgroup's
@@ -1067,6 +1051,22 @@ real-time PCR only, not to digital PCR or isothermal techniques. Where it is
 reported, it is an observation of its own with a Ct value code and a decimal
 value. The qualitative result read from it points at that observation through
 `derivedFrom` (see [Direct identification](#detection-result)).
+
+### Serology
+
+**Not profiled yet.** This section records the state of the workgroup's
+conventions for serology.
+
+Serology identifies an infection indirectly, by detecting the antibodies the
+patient has formed against a pathogen. In the workflow it starts from a blood
+sample and is separate from the direct identification, which detects the
+pathogen itself or its antigens (see
+[Direct identification](#direct-identification)).
+
+The workgroup's work on serology is ongoing; the workbook sheet *Serology
+techniques* is still empty.
+
+**Antibody codes.** The LOINC filters of the targeted detection also catch antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|` and `105911-2 |SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Specimen|`. They belong to this chapter and are not used with the targeted detection, although its value sets cannot exclude them yet ([Issue #181](#op-issue-181)).
 
 ### Open points
 
