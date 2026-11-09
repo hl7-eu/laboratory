@@ -626,6 +626,7 @@ Usage: #example
 * valueCodeableConcept = $sct#260373001 "Detected"
 * method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
 * specimen = Reference(spec-micro-nasopharyngeal-swab)
+* derivedFrom = Reference(obs-micro-ct-pertussis)
 
 Instance: obs-detect-pertussis-pcr-indeterminate
 InstanceOf: ObservationTargetedDetectionEu
@@ -850,3 +851,105 @@ Usage: #example
 * valueCodeableConcept = $sct#260415000 "Not detected"
 * method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
 * specimen = Reference(spec-micro-nares-swab)
+
+// ------------------------------------------------------------- quantification
+//
+// A cytomegalovirus load monitored in plasma at three points in time: a load
+// within the measuring range, a load detected below the limit of
+// quantification, and no target detected. The Ct value belongs to the
+// qualitative pertussis PCR of the targeted detection examples.
+
+Instance: spec-micro-plasma-1
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: plasma, first CMV load"
+Description: "EDTA plasma for the monitoring of the cytomegalovirus load."
+Usage: #example
+* status = #available
+* type = $sct#119361006 "Plasma specimen"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-10T08:00:00+01:00"
+
+Instance: spec-micro-plasma-2
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: plasma, second CMV load"
+Description: "EDTA plasma for the monitoring of the cytomegalovirus load, two weeks later."
+Usage: #example
+* status = #available
+* type = $sct#119361006 "Plasma specimen"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-03-24T08:00:00+01:00"
+
+Instance: spec-micro-plasma-3
+InstanceOf: SpecimenMicrobiologyEu
+Title: "Specimen: plasma, third CMV load"
+Description: "EDTA plasma for the monitoring of the cytomegalovirus load, four weeks after the first."
+Usage: #example
+* status = #available
+* type = $sct#119361006 "Plasma specimen"
+* subject = Reference(pat-lab-example)
+* collection.collectedDateTime = "2026-04-07T08:00:00+01:00"
+
+Instance: obs-micro-load-cmv
+InstanceOf: ObservationPathogenLoadEu
+Title: "Observation: cytomegalovirus load 12400 IU/mL"
+Description: "A load within the measuring range, measured by real-time PCR against the WHO international standard. The code leaves the specimen to Specimen.type."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#34720-3 "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-10T08:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueQuantity = 12400 '[IU]/mL' "IU/mL"
+* method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
+* specimen = Reference(spec-micro-plasma-1)
+
+Instance: obs-micro-load-cmv-below-loq
+InstanceOf: ObservationPathogenLoadEu
+Title: "Observation: cytomegalovirus detected below the limit of quantification"
+Description: "The target is detected, but below the limit of quantification of 35 IU/mL. The load is given with the comparator <, not as Not detected."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#34720-3 "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-24T08:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueQuantity = 35 '[IU]/mL' "IU/mL"
+* valueQuantity.comparator = #<
+* method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
+* specimen = Reference(spec-micro-plasma-2)
+
+Instance: obs-micro-load-cmv-not-detected
+InstanceOf: ObservationPathogenLoadEu
+Title: "Observation: cytomegalovirus DNA not detected"
+Description: "No target detected: the result is the code Not detected, not a quantity."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#34720-3 "Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-04-07T08:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueCodeableConcept = $sct#260415000 "Not detected"
+* method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
+* specimen = Reference(spec-micro-plasma-3)
+
+Instance: obs-micro-ct-pertussis
+InstanceOf: ObservationCtValueEu
+Title: "Observation: Ct value 28.4 of the pertussis PCR"
+Description: "The Ct value of the real-time PCR whose qualitative result, Bordetella pertussis DNA detected, points at it through derivedFrom."
+Usage: #example
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#85799-5 "Bordetella pertussis+bronchiseptica+holmesii IS481 DNA [Cycle Threshold #] in Specimen by NAA with probe detection"
+* subject = Reference(pat-lab-example)
+* effectiveDateTime = "2026-03-02T15:00:00+01:00"
+* performer[+].display = "Microbiology laboratory"
+* valueQuantity = 28.4 '1' "Ct"
+* method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
+* specimen = Reference(spec-micro-nasopharyngeal-swab)

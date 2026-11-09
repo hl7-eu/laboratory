@@ -5,8 +5,8 @@ guide. They follow the conventions of the HL7 Europe Laboratory Semantic
 Workgroup — the white paper *Conventions for FHIR based Microbiology Result
 Reporting* and its terminology workbook — and are organised along the
 microbiology workflow. Microscopy, culture, the identification of the organism
-the targeted detection of a target, the susceptibility and the resistance
-are profiled. Serology, organism properties and quantification are not
+the targeted detection of a target, the susceptibility, the resistance and
+the quantification are profiled. Serology and organism properties are not
 profiled yet; their sections record the state of the
 workgroup's conventions.
 
@@ -38,8 +38,8 @@ Each reported step has a section of its own:
 | Resistance genes, resistance mechanisms | [Resistance](#resistance) | [resistance](StructureDefinition-Observation-resistance-eu-lab.html) |
 | Organism properties | [Organism properties](#organism-properties) | not profiled yet |
 | Staining, microscopy | [Microscopy](#microscopy) | [general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html), [specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) |
-| Direct identification (PCR, antigen detection) | [Direct identification](#direct-identification) | [targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) |
-| Quantification | [Quantification](#quantification) | not profiled yet |
+| Direct identification (PCR, antigen detection) | [Direct identification](#direct-identification) | [targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html), [Ct value](StructureDefinition-Observation-ctValue-eu-lab.html) |
+| Quantification | [Quantification](#quantification) | [pathogen load](StructureDefinition-Observation-pathogenLoad-eu-lab.html) |
 | Indirect identification (antibody detection) | [Serology](#serology) | not profiled yet |
 
 ### Core principles
@@ -95,6 +95,8 @@ the technique used.
 | What is there to see? | [Observation Results: general microscopy](StructureDefinition-Observation-microscopyGeneral-eu-lab.html) | `105059-0` | the finding: a morphology, an organism, host cells, or *not detected* |
 | Was the target seen? | [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html) | a LOINC code naming the target, method microscopy, property `PrId` or `PrThr` | *detected* / *not detected*; for `PrId` also the organism seen |
 | Is the target present? | [Observation Results: targeted detection](StructureDefinition-Observation-targetedDetection-eu-lab.html) | a LOINC code naming the target, property `PrThr` | *detected* / *not detected* |
+| At which cycle did the real-time PCR reach its threshold? | [Observation Results: Ct value](StructureDefinition-Observation-ctValue-eu-lab.html) | a LOINC code naming the target, property `ThreshNum` | the Ct value |
+| How much of the pathogen is in the specimen? | [Observation Results: pathogen load](StructureDefinition-Observation-pathogenLoad-eu-lab.html) | a LOINC code naming the pathogen, property `ACnc` or `NCnc` | the load in IU/mL or copies/mL, or *not detected* |
 
 The specimen of all of them is a
 [Specimen: microbiology](StructureDefinition-Specimen-microbiology-eu-lab.html).
@@ -959,7 +961,36 @@ An indeterminate result is a `dataAbsentReason`, as in the workbook. The white p
 {% include open-item.html issue=179 typ="interim" title="Indeterminate" text=op_text %}
 
 A qualitative result read from a Ct value points at the observation with the
-Ct value through `derivedFrom` (see [Quantification](#quantification)).
+Ct value through `derivedFrom` (see [Ct value](#ct-value)).
+
+#### Ct value
+
+The Ct value of a qualitative real-time PCR — the number of cycles until the
+signal threshold is reached — is a proxy for the amount of target (white paper:
+"a second loinc with treshnum property"). Where it is reported, it is an
+observation of its own,
+[Observation Results: Ct value](StructureDefinition-Observation-ctValue-eu-lab.html),
+and the qualitative result read from it points at it through `derivedFrom`.
+
+| Aspect | Element | Coding |
+|---|---|---|
+| the target | `Observation.code` | LOINC, property `ThreshNum` ([Ct Value Codes](ValueSet-micro-ctValueCode-eu-lab.html)); preferred with system `XXX` ([preferred](ValueSet-micro-ctValueCodePreferred-eu-lab.html)) |
+| the Ct value | `Observation.value[x]` | `valueQuantity` with UCUM `1`, e.g. 28.4 |
+| the technique | `Observation.method` | fixed: `70601000052104` *Real-time polymerase chain reaction technique* |
+
+```
+Observation: Bordetella pertussis DNA [Presence] in Specimen by Molgen (105875-9): Detected
+  derivedFrom → Observation: B. pertussis+bronchiseptica+holmesii IS481 DNA [Cycle Threshold #] (85799-5): 28.4
+```
+
+Only real-time PCR yields a Ct value, not digital PCR or isothermal techniques.
+A negative PCR has no Ct value; only the qualitative result is reported. A Ct
+value is reported only where the manufacturer of the assay provides for it; it
+is not comparable between assays and is not a load (see
+[Quantification](#quantification)). The white paper gives
+`Observation.valueDecimal`, which FHIR R4 does not have.
+
+Example: [obs-micro-ct-pertussis](Observation-obs-micro-ct-pertussis.html), the Ct value of [obs-detect-pertussis-pcr](Observation-obs-detect-pertussis-pcr.html).
 
 #### Detection methods
 
@@ -1018,39 +1049,57 @@ Observation: respiratory pathogen panel, no value
 
 ### Quantification
 
-**Not profiled yet.** This section records the state of the workgroup's
-conventions for quantitative molecular results.
-
 Quantitative nucleic acid amplification measures the load of a pathogen, e.g.
-the CMV load in blood in IU/mL or copies/mL (white paper, chapter *Molecular
-Microbiology Genetic Testing*, category 2). The Ct value of a qualitative
-real-time PCR is covered here as well.
+the cytomegalovirus load in plasma in IU/mL or copies/mL (white paper, chapter
+*Molecular Microbiology Genetic Testing*, category 2). It is reported with
+[Observation Results: pathogen load](StructureDefinition-Observation-pathogenLoad-eu-lab.html).
+The Ct value of a qualitative real-time PCR is not a load; it belongs to the
+qualitative detection, see [Ct value](#ct-value).
 
-#### Load
+#### Representation of the load
 
-* **Code:** a LOINC code with a quantitative scale and a property matching the
-  unit: `ACnc` for IU/mL, `NCnc` for copies/mL. Log-transformed results need
-  other codes and are not covered in the first edition.
-* **Method:** post-coordinated, as for the qualitative detection: real-time PCR,
-  which quantifies against a calibrated standard curve, or digital PCR, which
-  quantifies absolutely without a standard curve.
-* **Specimen:** post-coordinated (system `XXX`). Pre-coordination may be
-  practical for viral loads, where the number of relevant specimen types is
-  small.
+| Aspect | Element | Coding |
+|---|---|---|
+| the pathogen and the quantity | `Observation.code` | LOINC, DNA or RNA, property `ACnc` (IU/mL) or `NCnc` (copies/mL) ([Pathogen Load Codes](ValueSet-micro-pathogenLoadCode-eu-lab.html)); preferred with system `XXX` or `{Specimen}` ([preferred](ValueSet-micro-pathogenLoadCodePreferred-eu-lab.html)), e.g. `34720-3` *Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection* |
+| the load | `Observation.value[x]` | `valueQuantity` with UCUM `[IU]/mL` or `{copies}/mL` ([Pathogen Load Units](ValueSet-micro-pathogenLoadUnit-eu-lab.html)); `valueCodeableConcept` `260415000` *Not detected* |
+| the technique | `Observation.method` | [Pathogen Load Techniques](ValueSet-micro-pathogenLoadTechnique-eu-lab.html): real-time PCR, digital PCR, TMA |
+| the specimen | `Observation.specimen` | the primary specimen, e.g. plasma, blood, cerebrospinal fluid |
+| no result | `Observation.dataAbsentReason` | `82334004` *Indeterminate* and the FHIR data-absent-reason codes |
 
-The workbook (sheet molecular techniques new) drafts the preferred codes as
-class `MICRO`, system `XXX`, scale `Qn`, component DNA or RNA, without method,
-and an alternative with any method. The workgroup has not discussed the draft
-yet.
+**Four kinds of result.**
 
-#### Ct value
+```
+not detected:                 valueCodeableConcept = 260415000 Not detected
+below the limit of quantif.:  valueQuantity = < 35 [IU]/mL
+within the measuring range:   valueQuantity = 12400 [IU]/mL
+above the measuring range:    valueQuantity = > 100000000 [IU]/mL
+```
 
-The Ct value — the number of cycles until the signal threshold is reached —
-is a proxy for the load in a qualitative real-time PCR. It applies to
-real-time PCR only, not to digital PCR or isothermal techniques. Where it is
-reported, it is an observation of its own with a Ct value code and a decimal
-value. The qualitative result read from it points at that observation through
-`derivedFrom` (see [Direct identification](#detection-result)).
+A value outside the measuring range SHALL carry `Quantity.comparator`, as for
+the susceptibility ([Issue #205](#op-issue-205)): a target detected but not
+quantifiable is a load with `<`, not *Not detected*.
+
+**Codes.** Preferred are the codes with system `XXX`, which leave the specimen to
+`Specimen.type`; codes with a fixed material, e.g. in serum or plasma, are
+accepted, as the white paper finds pre-coordination practical for viral loads.
+Log-transformed results need other codes and are not covered in this edition.
+
+**Relations.** A quantification that follows a positive qualitative detection
+points back at it through `triggeredBy`. A load ordered directly, e.g. for
+monitoring, stands on its own.
+
+{% capture op_text %}
+The workbook groups load and Ct value in one block, *Quantification Procedure*; this guide has two profiles, as the white paper puts the Ct value with the qualitative detection and their rules differ: a load is a concentration measured by real-time PCR, digital PCR or transcription-mediated amplification, a Ct value a unitless value of real-time PCR only. Widely used quantitative assays run on transcription-mediated amplification, although the white paper counts isothermal techniques as qualitative only. LOINC has two load codes without method and none with `{Specimen}`; whether such codes are to be requested from Regenstrief is open. In the minutes Stan asks what is being quantified; the example below answers it.
+{% endcapture %}
+{% include open-item.html issue=211 typ="interim" title="Pathogen load and Ct value" text=op_text %}
+
+#### Quantification examples
+
+| Example | Instances |
+|---|---|
+| cytomegalovirus load within the measuring range | [obs-micro-load-cmv](Observation-obs-micro-load-cmv.html) on [spec-micro-plasma-1](Specimen-spec-micro-plasma-1.html) |
+| detected below the limit of quantification, with comparator | [obs-micro-load-cmv-below-loq](Observation-obs-micro-load-cmv-below-loq.html) |
+| not detected | [obs-micro-load-cmv-not-detected](Observation-obs-micro-load-cmv-not-detected.html) |
 
 ### Serology
 
@@ -1106,6 +1155,7 @@ of the workgroup.
 | [#206](https://github.com/hl7-eu/laboratory/issues/206) | Susceptibility codes: genotype methods | [Susceptibility](#op-issue-206) |
 | [#208](https://github.com/hl7-eu/laboratory/issues/208) | Molecular resistance: codes | [Resistance](#op-issue-208) |
 | [#210](https://github.com/hl7-eu/laboratory/issues/210) | Resistance: data model | [Resistance](#op-issue-210) |
+| [#211](https://github.com/hl7-eu/laboratory/issues/211) | Quantification: pathogen load and Ct value | [Quantification](#op-issue-211) |
 
 **Codes requested** and not yet available. Each request is tracked as an issue with its origin and the status of submission and availability; submitting is up to the workgroup.
 
