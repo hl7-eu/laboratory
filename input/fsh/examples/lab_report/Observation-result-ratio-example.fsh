@@ -12,7 +12,7 @@ Usage: #example
 * code.coding[+] = http://loinc.org#1755-8 "Albumin [Mass/time] in 24 hour Urine"
 * code.text = "Albumin (24H U) [Mass/Time]"
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* subject = Reference(urn:uuid:de17bfd2-8d73-45fa-b0bb-8eb0e463ddb8)
+* subject = Reference(pat-lab-example)
 * performer[+].display = "Jan Laborant" // ToDo: consider cardinality
 * valueRatio
   * numerator = 15 'mg' "mg"

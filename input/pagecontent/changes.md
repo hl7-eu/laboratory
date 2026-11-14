@@ -1,5 +1,9 @@
 This page summarizes the main changes applied to this version of the guide.
 
+### Since 2.1.0
+
+* Technical corrections
+  * The standalone Observation examples `ObservationInvariantTopLevelValueExtension`, `ObservationInvariantComponentValueExtension`, `ObservationInvariantComponentValueDataAbsentReason`, `ObservationInvariantMixedComponents`, `CRMObservtionResult` and the ratio result example now reference `pat-lab-example` as their subject. They referenced a patient that exists only inside the `SimpleChemistryResultReport` Bundle, so the reference did not resolve outside it ([#151](https://github.com/hl7-eu/laboratory/issues/151)).
 
 ### From 2.0.0 to 2.1.0
 
