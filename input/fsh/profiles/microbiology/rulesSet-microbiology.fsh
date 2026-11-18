@@ -84,21 +84,24 @@ RuleSet: MicrobiologySemiquantitativeComponentEu
 * component[semiquantitative].valueCodeableConcept from MicroscopySemiquantitativeEuVs (extensible)
 
 // ----------------------------------------------------------------------------
-// Preferred codes within an extensible binding
+// Preferred codes bound extensibly, all admitted codes required
 //
 // The workbook gives two value sets for the code of a profile: all admitted
 // codes, and the preferred ones that leave specimen and method to be
 // post-coordinated (sheet Microscopy, F4). The element is bound extensibly to
-// the first; the second is stated as an additional binding with the purpose
-// `preferred` (tools extension, the R4 form of the R5 binding.additional).
+// the preferred codes; all admitted codes are an additional binding with the
+// purpose `required` (tools extension, the R4 form of the R5
+// binding.additional). This is what a maximum binding expresses; the purpose
+// `maximum` and the R4 extension elementdefinition-maxValueSet are deprecated.
+// Interim position, SEM-31 (#212).
 // ----------------------------------------------------------------------------
-RuleSet: MicrobiologyPreferredBindingEu(element, valueSet, documentation)
+RuleSet: MicrobiologyAdmittedCodesBindingEu(element, valueSet)
 * {element} ^binding.extension[+].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * {element} ^binding.extension[=].extension[+].url = "key"
-* {element} ^binding.extension[=].extension[=].valueId = "preferred"
+* {element} ^binding.extension[=].extension[=].valueId = "admitted"
 * {element} ^binding.extension[=].extension[+].url = "purpose"
-* {element} ^binding.extension[=].extension[=].valueCode = #preferred
+* {element} ^binding.extension[=].extension[=].valueCode = #required
 * {element} ^binding.extension[=].extension[+].url = "valueSet"
 * {element} ^binding.extension[=].extension[=].valueCanonical = Canonical({valueSet})
 * {element} ^binding.extension[=].extension[+].url = "documentation"
-* {element} ^binding.extension[=].extension[=].valueMarkdown = "{documentation}"
+* {element} ^binding.extension[=].extension[=].valueMarkdown = "All admitted codes. A code that is not among the preferred codes is used where no preferred code applies; otherwise it may only be sent in addition to the preferred code."

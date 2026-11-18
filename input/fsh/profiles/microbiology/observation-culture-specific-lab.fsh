@@ -31,8 +31,9 @@ Where the open question *does anything grow?* is answered, use [Observation Resu
 * ^purpose = "This profile constrains the laboratory Observation for the culture aimed at a target named in the test code, following the conventions of the HL7 Europe Laboratory Semantic Workgroup."
 * . ^short = "Specific culture: was the target found"
 
-* code from CultureSpecificCodeEuVs (extensible)
-* insert MicrobiologyPreferredBindingEu(code, CultureSpecificCodePreferredEuVs, [[Preferred are the codes with system XXX, which leave the specimen to Specimen.type.]])
+* code from CultureSpecificCodePreferredEuVs (extensible)
+* code ^binding.description = "Preferred are the codes with system XXX, which leave the specimen to Specimen.type."
+* insert MicrobiologyAdmittedCodesBindingEu(code, CultureSpecificCodeEuVs)
 * code ^short = "The specific culture; the target is in the LOINC component"
 * code ^comment = "A LOINC code with the method Organism specific culture, naming the target in the component. Codes with the property PrThr ask whether the target is present, e.g. 13317-3 |Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture|; codes with the property PrId ask what was found, e.g. 9782-4 |Adenovirus sp identified in Specimen by Organism specific culture|. Preferred are the codes with system XXX; the specimen is given in Specimen.type. With a code with system Isolate the isolate is also given as Specimen.type 119303007 |Microbial isolate|."
 
