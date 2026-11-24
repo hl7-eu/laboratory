@@ -26,7 +26,7 @@ Profile: ObservationTargetedDetectionEu
 Parent: ObservationResultsLaboratoryEu
 Id: Observation-targetedDetection-eu-lab
 Title: "Observation Results: targeted detection"
-Description: """Qualitative detection of a predefined target — the nucleic acid of a microorganism or an antigen — answering the targeted question *is X present?* The target is named in the test code, the result is `Detected` or `Not detected`, and the technique is given in `method`: nucleic acid amplification, immunoassay, immunofluorescence or agglutination. Antibody codes belong to serology and are not used with this profile, although the value sets cannot exclude them yet.
+Description: """Qualitative detection of a predefined target — the nucleic acid of a microorganism or an antigen — answering the targeted question *is X present?* The target is named in the test code, the result is `Detected` or `Not detected`, and the technique is given in `method`: nucleic acid amplification, immunoassay, immunofluorescence or agglutination. Antibody codes belong to serology and are excluded from the value sets.
 
 Where no target is predefined and the result is the organism itself, use [Observation Results: organism identification](StructureDefinition-Observation-organismIdentification-eu-lab.html); for the microscopic examination aimed at a named target, use [Observation Results: specific microscopy](StructureDefinition-Observation-microscopySpecific-eu-lab.html)."""
 * insert MicrobiologyObservationCommonEu

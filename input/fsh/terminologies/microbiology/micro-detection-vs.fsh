@@ -11,7 +11,7 @@ Id: micro-targetedDetectionCodePreferred-eu-lab
 Title: "Targeted Detection Codes, preferred"
 Description: """The preferred LOINC codes of a targeted detection: class MICRO, property PrThr, active, with the target in the component — an organism, its DNA or RNA, or an antigen.
 
-The workgroup's target definition is system {Specimen} with one of the methods {Molgen}, IF, IA or Aggl, e.g. 105875-9 |Bordetella pertussis DNA [Presence] in Specimen by Molgen|. LOINC so far has {Specimen} codes for {Molgen} only. The minutes ask for a new method in curly braces for the serological and immunological methods, analogous to {Molgen} (code request #194); once it exists, the target definition takes it in place of IF, IA and Aggl. Until then, the value set also contains the codes with system XXX and method IF, IA or Aggl, the codes with system XXX and no method, e.g. 105066-5 |SARS-CoV+SARS-CoV-2 (COVID-19) Ag [Presence] in Specimen|, and 35492-8, which LOINC files under class ABXBACT. Antibody codes belong to serology and are not used here; the filters cannot exclude them, because LOINC has no property that tells antibodies from antigens."""
+The workgroup's target definition is system {Specimen} with one of the methods {Molgen}, IF, IA or Aggl, e.g. 105875-9 |Bordetella pertussis DNA [Presence] in Specimen by Molgen|. LOINC so far has {Specimen} codes for {Molgen} only. The minutes ask for a new method in curly braces for the serological and immunological methods, analogous to {Molgen} (code request #194); once it exists, the target definition takes it in place of IF, IA and Aggl. Until then, the value set also contains the codes with system XXX and method IF, IA or Aggl, the codes with system XXX and no method, e.g. 105066-5 |SARS-CoV+SARS-CoV-2 (COVID-19) Ag [Presence] in Specimen|, and 35492-8, which LOINC files under class ABXBACT. Antibody codes belong to serology and are excluded: LOINC names an antibody in the component as *Ab* (e.g. *Rubella virus Ab.IgG*), which a regular expression on the component catches (SEM-16). This also excludes the combined antigen and antibody tests (SEM-32)."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 // Target definition (minutes 2026-11-06): PrThr, system {Specimen}
@@ -29,6 +29,7 @@ The workgroup's target definition is system {Specimen} with one of the methods {
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and SYSTEM = "LP7735-6" and METHOD_TYP exists false and STATUS = "ACTIVE" // no method
 // Wrongly classified as ABXBACT; the class is to be corrected (code request #192)
 * $loinc#35492-8 "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
+* exclude codes from system $loinc where COMPONENT regex ".*\\bAb\\b.*" // antibodies belong to serology (SEM-16)
 
 // ----------------------------------------------------------------------------
 
@@ -37,7 +38,7 @@ Id: micro-targetedDetectionCode-eu-lab
 Title: "Targeted Detection Codes"
 Description: """All LOINC codes admitted for a targeted detection: the [preferred codes](ValueSet-micro-targetedDetectionCodePreferred-eu-lab.html), plus the codes of class MICRO, property PrThr, active, that pre-coordinate the specimen or the method, with any system and with one of the molecular methods (Probe.amp.tar, Non-probe.amp.tar, Probe.amp, Probe.amp.sig, Molgen, {Molgen}), one of the immunological methods (IF, IA, Aggl) or no method. Pre-coordinated codes serve laboratories that cannot post-coordinate specimen or method (minutes 2026-11-06: "Allow for pre and post coordination. Prefer post-coordination").
 
-Culture codes and rapid immunoassay codes are not included: a targeted culture is reported with the culture, and a rapid antigen test uses the method-neutral antigen code with the rapid technique in Observation.method. Antibody codes belong to serology and are not used here; the filters cannot exclude them, because LOINC has no property that tells antibodies from antigens."""
+Culture codes and rapid immunoassay codes are not included: a targeted culture is reported with the culture, and a rapid antigen test uses the method-neutral antigen code with the rapid technique in Observation.method. Antibody codes belong to serology and are excluded: LOINC names an antibody in the component as *Ab* (e.g. *Rubella virus Ab.IgG*), which a regular expression on the component catches (SEM-16). This also excludes the combined antigen and antibody tests (SEM-32)."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 * include codes from valueset TargetedDetectionCodePreferredEuVs
@@ -54,6 +55,7 @@ Culture codes and rapid immunoassay codes are not included: a targeted culture i
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and METHOD_TYP = "LP6106-1" and STATUS = "ACTIVE"   // Aggl
 // No method, any system
 * include codes from system $loinc where CLASS = "LP7819-8" and PROPERTY = "LP217195-9" and METHOD_TYP exists false and STATUS = "ACTIVE"
+* exclude codes from system $loinc where COMPONENT regex ".*\\bAb\\b.*" // antibodies belong to serology (SEM-16)
 
 // ----------------------------------------------------------------------------
 

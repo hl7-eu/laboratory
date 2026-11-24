@@ -114,6 +114,11 @@ The workgroup is asked to confirm the names *general microscopy*, *specific micr
 {% endcapture %}
 {% include open-item.html issue=182 typ="interim" title="Profile names" text=op_text %}
 
+{% capture op_text %}
+Several profiles ask the same kind of question with the same type of answer: specific culture, specific microscopy, targeted detection, resistance and the planned serology antibody detection answer *Detected* / *Not detected* for a target named in the code; pathogen load, the planned antibody quantity and the planned colony count are quantities with UCUM. The white paper's *Specific Determination* and the MII core data set module microbiology combine molecular, immunological and culture-based targeted tests in one profile. This draft keeps the profiles separate, so that each has narrow bindings for codes, units and methods and rules of its own; whether to merge them is asked once the serology and colony count profiles exist.
+{% endcapture %}
+{% include open-item.html issue=215 typ="interim" title="Separate profiles" text=op_text %}
+
 ### Specimen and pre-analytics
 
 This section covers the specimen examined in microbiology and the steps of the
@@ -904,7 +909,7 @@ The target is in the LOINC component — the nucleic acid of an organism or an
 antigen — and the property is `PrThr`.
 
 {% capture op_text %}
-Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method still catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`: LOINC has no property that tells antibodies from antigens. Regenstrief is to be asked for `{Specimen}` codes that keep them apart ([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)).
+Antibody codes detect the patient's antibodies; they belong to [serology](#serology) and are not used with the targeted detection. The filters for `IF`, `IA` and `Aggl` and the codes without method would catch them, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|`; LOINC has no property that tells antibodies from antigens, but it names an antibody in the component as `Ab` (e.g. *Rubella virus Ab.IgG*). The value sets exclude these codes through a regular expression on the component; on tx.fhir.org it removes exactly the antibody codes (2017 of 6610), including the combined antigen and antibody tests. As the code is bound extensibly, an antibody code in the targeted detection is reported as a warning. Regenstrief is still to be asked for `{Specimen}` codes that keep them apart ([Issue #194](https://github.com/hl7-eu/laboratory/issues/194)).
 {% endcapture %}
 {% include open-item.html issue=181 typ="interim" title="Antibody codes" text=op_text %}
 
@@ -1054,7 +1059,14 @@ the cytomegalovirus load in plasma in IU/mL or copies/mL (white paper, chapter
 *Molecular Microbiology Genetic Testing*, category 2). It is reported with
 [Observation Results: pathogen load](StructureDefinition-Observation-pathogenLoad-eu-lab.html).
 The Ct value of a qualitative real-time PCR is not a load; it belongs to the
-qualitative detection, see [Ct value](#ct-value).
+qualitative detection, see [Ct value](#ct-value). The colony count of a
+culture, e.g. in CFU/mL, is not profiled yet; it is reported with
+[Observation Results: laboratory](StructureDefinition-Observation-resultslab-eu-lab.html).
+
+{% capture op_text %}
+The colony count is a concept of its own: the amount of growth of one organism, e.g. the colony forming units per mL that decide whether a urine culture is significant. Neither the workbook nor the white paper describes it; the minutes list "bacteria count" in a prepared matrix as an observation type of its own, next to cultivation and identification. This guide drafts a profile following the MII core data set module microbiology: one observation per organism, linked to its identification, e.g. `49223-1 |Colony count [#/volume] in Specimen by Visual count|` in `[CFU]/mL`. Open is whether it also covers the semi-quantitative amount of growth. Until the profile exists, a count is reported with [Observation Results: laboratory](StructureDefinition-Observation-resultslab-eu-lab.html).
+{% endcapture %}
+{% include open-item.html issue=214 typ="interim" title="Colony count" text=op_text %}
 
 #### Representation of the load
 
@@ -1113,9 +1125,15 @@ pathogen itself or its antigens (see
 [Direct identification](#direct-identification)).
 
 The workgroup's work on serology is ongoing; the workbook sheet *Serology
-techniques* is still empty.
+techniques* is still empty. Until a profile exists, serology results are
+reported with [Observation Results: laboratory](StructureDefinition-Observation-resultslab-eu-lab.html).
 
-**Antibody codes.** The LOINC filters of the targeted detection also catch antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|` and `105911-2 |SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Specimen|`. They belong to this chapter and are not used with the targeted detection, although its value sets cannot exclude them yet ([Issue #181](#op-issue-181)).
+{% capture op_text %}
+This guide drafts serology profiles of its own, cut by the type of the answer: antibody detection (`[Presence]`), antigen or antibody quantity (`[Units/volume]`, `[Mass/volume]`) and antigen or antibody titer (`[Titer]`). As in the other microbiology profiles, the specimen with its type and the method are always given; where the code pre-coordinates them, they are taken from the code. Unlike most of them, there is no preferred subset of codes: the white paper's serology chapter accepts a pre-coordinated specimen, and only 160 of 1283 antibody targets have a LOINC code with system XXX. Antibody codes are not used with the targeted detection. Qualitative antigen tests stay with the [direct identification](#direct-identification), as the white paper's workflow (Figure 1) shows; quantitative antigen results, e.g. hepatitis B surface antigen in IU/mL, and antigen titers use the serology profiles. The white paper's serology chapter counts all antigen tests to serology. Avidity, interpretation and identifier codes are not profiled yet. Until the profiles exist, serology results are reported with [Observation Results: laboratory](StructureDefinition-Observation-resultslab-eu-lab.html).
+{% endcapture %}
+{% include open-item.html issue=213 typ="interim" title="Serology profiles" text=op_text %}
+
+**Antibody codes.** Antibody codes, e.g. `105055-8 |Rubella virus IgG Ab [Presence] in Specimen|` and `105911-2 |SARS-CoV-2 (COVID-19) IgG Ab [Presence] in Specimen|`, belong to this chapter; the value sets of the targeted detection exclude them ([Issue #181](#op-issue-181)).
 
 ### Open points
 
@@ -1156,6 +1174,9 @@ of the workgroup.
 | [#208](https://github.com/hl7-eu/laboratory/issues/208) | Molecular resistance: codes | [Resistance](#op-issue-208) |
 | [#210](https://github.com/hl7-eu/laboratory/issues/210) | Resistance: data model | [Resistance](#op-issue-210) |
 | [#211](https://github.com/hl7-eu/laboratory/issues/211) | Quantification: pathogen load and Ct value | [Quantification](#op-issue-211) |
+| [#213](https://github.com/hl7-eu/laboratory/issues/213) | Serology: profiles and the place of antigen tests | [Serology](#op-issue-213) |
+| [#214](https://github.com/hl7-eu/laboratory/issues/214) | Colony count | [Quantification](#op-issue-214) |
+| [#215](https://github.com/hl7-eu/laboratory/issues/215) | Merging profiles with the same question and answer type | [Profiles](#op-issue-215) |
 
 **Codes requested** and not yet available. Each request is tracked as an issue with its origin and the status of submission and availability; submitting is up to the workgroup.
 
