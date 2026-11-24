@@ -32,9 +32,8 @@ The susceptibility to an antimicrobial is reported with [Observation Results: an
 * ^purpose = "This profile constrains the laboratory Observation for the detection of a resistance mechanism or gene, following the conventions of the HL7 Europe Laboratory Semantic Workgroup."
 * . ^short = "Resistance: is a resistance mechanism or gene present"
 
-* code from ResistanceCodePreferredEuVs (extensible)
-* code ^binding.description = "Preferred are the codes that fix neither material nor technique: for genes the pattern in {Specimen} by {Molgen} and, until LOINC provides it, the codes with system Isolate/Specimen and method Molgen; for enzymes and mechanisms the method-neutral codes and, until they exist, the carbapenemase codes by rapid immunoassay."
-* insert MicrobiologyAdmittedCodesBindingEu(code, ResistanceCodeEuVs)
+* code from ResistanceCodeEuVs (extensible)
+* insert MicrobiologyPreferredBindingEu(code, ResistanceCodePreferredEuVs, [[Preferred are the codes that fix neither material nor technique: for genes the pattern in {Specimen} by {Molgen} and, until LOINC provides it, the codes with system Isolate/Specimen and method Molgen; for enzymes and mechanisms the method-neutral codes and, until they exist, the carbapenemase codes by rapid immunoassay.]])
 * code ^short = "The mechanism, enzyme or gene, as a LOINC PrThr code"
 * code ^comment = "One observation per target, also for a test kit with several targets, so that the report shows which targets were tested (white paper). Genes, e.g. 85827-4 |Carbapenem resistance bla OXA-48-like gene [Presence] by Molecular method| or 115376-6 |Methicillin resistance mecA+mecC genes [Presence] in Specimen by Molgen|; enzymes and mechanisms, e.g. 104864-4 |Beta lactamase.extended spectrum [Presence]| or 101674-0 |OXA-48-like carbapenemase [Presence] in Isolate by Rapid immunoassay|. Codes that fix a material or a technique are accepted; the specimen and the technique are given in Specimen.type and Observation.method in any case."
 

@@ -59,12 +59,11 @@ whole domain:
   concept of the method value set is used, e.g. `702658000 |Microbial
   culture|`; where the value set has none, the data-absent-reason extension
   says that the method is unknown.
-* **Preferred codes first; pre-coordinated codes where the workgroup admits
-  them.** The code of a profile is bound extensibly to the preferred codes and,
-  in an additional binding, as required to all admitted codes. Where a preferred code applies, it
-  SHALL be used, and a pre-coordinated code may be added to it; where none
-  applies, an admitted pre-coordinated code is used. Specimen and method are
-  represented explicitly in either case.
+* **Pre-coordinated codes are accepted where the workgroup admits them.** The
+  code of a profile is bound extensibly to all admitted codes; the preferred
+  codes are named in an additional binding. A laboratory that cannot yet
+  post-coordinate uses a pre-coordinated code and still represents specimen and
+  method explicitly.
 * **SNOMED CT carries the nominal answers,** the specimen, the staining and
   the method.
 * **An indeterminate result is not a value.** An examination that was
@@ -79,11 +78,6 @@ whole domain:
 The white paper recommends giving specimen and method explicitly. This guide makes both required (`Observation.method` 1..1, `Specimen.type` 1..1), also where an accepted code pre-coordinates them. For an unknown identification or susceptibility method, which have no general technique, it uses the data-absent-reason extension. The antibiogram, which groups susceptibility results without a result of its own, has an optional method: its members can combine techniques, and each states its own.
 {% endcapture %}
 {% include open-item.html issue=189 typ="interim" title="Method and specimen type required" text=op_text %}
-
-{% capture op_text %}
-The workbook gives two value sets per code: all admitted codes and the preferred ones. This guide binds the code extensibly to the preferred codes and binds it to all admitted codes as required in an additional binding (purpose `required`, which expresses a maximum binding; the purpose `maximum` is deprecated). A code from outside the admitted codes is not conformant, also a local code alone; a code missing in LOINC is bridged by [Microbiology Codes Pending in LOINC](CodeSystem-micro-pendingCode-eu-lab.html) until LOINC has it, so far PBP2a, cefoxitin resistance and inducible clindamycin resistance for the resistance profile (code request #195). The validator reports a code outside the admitted codes as an error; whether a preferred code would have applied is left to human review.
-{% endcapture %}
-{% include open-item.html issue=212 typ="interim" title="Preferred codes and admitted codes" text=op_text %}
 
 ### Profiles
 
@@ -490,8 +484,8 @@ A quantitative result is given in `valueQuantity` with UCUM, in the units of the
 
 #### Susceptibility codes
 
-The code is bound extensibly to the LOINC codes with the property `Susc`,
-class `ABXBACT` and no method; the susceptibility method is post-coordinated. This
+The preferred binding is the LOINC codes with the property `Susc`, class
+`ABXBACT` and no method; the susceptibility method is post-coordinated. This
 makes it easy to query all susceptibility results. The codes `106843-6` and
 `103673-0` belong to this class as well; their class is to be corrected
 ([Issue #192](https://github.com/hl7-eu/laboratory/issues/192)).
@@ -632,9 +626,7 @@ The workbook (sheet Phenotypic resistence) selects these LOINC codes:
 | `86930-5` | Carbapenemase [Presence] in Isolate |
 
 Method-neutral codes for inducible clindamycin resistance, cefoxitin
-resistance, the PBP2a protein and AmpC are requested from Regenstrief ([Issue #195](https://github.com/hl7-eu/laboratory/issues/195)); until
-they exist, the first three are coded with temporary codes of this guide
-([temporary codes](#op-issue-195)). The
+resistance, the PBP2a protein and AmpC are to be requested from Regenstrief ([Issue #195](https://github.com/hl7-eu/laboratory/issues/195)). The
 techniques are those of phenotypic susceptibility testing, plus
 `708099001 |Rapid immunoassay|`. For biochemical rapid tests the workbook asks
 for a new technique; SNOMED CT has procedures that fit, `61836004 |Beta
@@ -646,11 +638,6 @@ lactamase, acidimetric susceptibility test|` for Carba NP
 The carbapenemase codes pre-coordinate the method *Rapid immunoassay*. In direct identification the technique is post-coordinated in `Observation.method`. LOINC has no method-neutral codes for these enzymes yet; only the groups (`86930-5` carbapenemase, `104864-4` extended-spectrum beta-lactamase) have them. This guide prefers method-neutral codes and requests them ([Issue #197](https://github.com/hl7-eu/laboratory/issues/197)); until they exist, the `IA.rapid` codes are preferred as well, and the technique is given in `Observation.method` with them too.
 {% endcapture %}
 {% include open-item.html issue=184 typ="interim" title="Rapid immunoassay codes" text=op_text %}
-
-{% capture op_text %}
-LOINC has no codes for inducible clindamycin resistance, cefoxitin resistance and the PBP2a protein as a resistance mechanism; they are requested ([Issue #195](https://github.com/hl7-eu/laboratory/issues/195)). Until they exist, this guide codes them with [Microbiology Codes Pending in LOINC](CodeSystem-micro-pendingCode-eu-lab.html): `pbp2a`, `cefoxitin-resistance` and `inducible-clindamycin-resistance`. These codes are temporary. Once LOINC publishes the codes, a later version of this guide replaces them by the LOINC codes, and the temporary concepts point to their successors; systems should be prepared for the switch. AmpC is coded with `85046-1` or an AmpC gene code until a method-neutral code exists.
-{% endcapture %}
-{% include open-item.html issue=195 typ="interim" title="Temporary codes for missing LOINC codes" text=op_text %}
 
 #### Resistance genes
 
@@ -950,14 +937,12 @@ The target definition is taken from the workgroup minutes of 2026-11-06. The cod
 {% endcapture %}
 {% include open-item.html issue=171 typ="interim" title="Preferred codes" text=op_text %}
 
-**Pre-coordinated codes are admitted.** The workgroup allows pre- and
-post-coordination of specimen and method and prefers post-coordination. The
-code is bound extensibly to the preferred codes; codes that pre-coordinate the
-specimen or the method (`Probe.amp.tar`, `Non-probe.amp.tar`, `Probe.amp`,
-`Probe.amp.sig`, `Molgen`, `IF`, `IA` or `Aggl`) are admitted through the
-additional required binding to all admitted codes. They are used where no preferred code applies, otherwise only
-in addition to the preferred code ([preferred and admitted
-codes](#op-issue-212)).
+**Pre-coordinated codes are accepted.** The workgroup allows pre- and
+post-coordination of specimen and method and prefers post-coordination. A
+laboratory that cannot post-coordinate uses a code that pre-coordinates the
+specimen or the method: `Probe.amp.tar`, `Non-probe.amp.tar`, `Probe.amp`,
+`Probe.amp.sig`, `Molgen`, `IF`, `IA` or `Aggl`. The code is bound extensibly
+to all of them; the preferred codes are named in an additional binding.
 
 **Not accepted** are the culture codes — a targeted culture is reported with
 the [culture](#culture) — and the rapid immunoassay codes
@@ -1171,7 +1156,6 @@ of the workgroup.
 | [#208](https://github.com/hl7-eu/laboratory/issues/208) | Molecular resistance: codes | [Resistance](#op-issue-208) |
 | [#210](https://github.com/hl7-eu/laboratory/issues/210) | Resistance: data model | [Resistance](#op-issue-210) |
 | [#211](https://github.com/hl7-eu/laboratory/issues/211) | Quantification: pathogen load and Ct value | [Quantification](#op-issue-211) |
-| [#212](https://github.com/hl7-eu/laboratory/issues/212) | Code binding: preferred codes extensible, all admitted codes required; codes missing in LOINC | [Core principles](#op-issue-212) |
 
 **Codes requested** and not yet available. Each request is tracked as an issue with its origin and the status of submission and availability; submitting is up to the workgroup.
 

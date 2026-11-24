@@ -25,9 +25,8 @@ A Ct value is reported only where the manufacturer of the assay provides for it.
 * ^purpose = "This profile constrains the laboratory Observation for the Ct value of a real-time PCR, following the conventions of the HL7 Europe Laboratory Semantic Workgroup."
 * . ^short = "Ct value of a real-time PCR"
 
-* code from CtValueCodePreferredEuVs (extensible)
-* code ^binding.description = "Preferred are the codes with system XXX, which leave the specimen to Specimen.type."
-* insert MicrobiologyAdmittedCodesBindingEu(code, CtValueCodeEuVs)
+* code from CtValueCodeEuVs (extensible)
+* insert MicrobiologyPreferredBindingEu(code, CtValueCodePreferredEuVs, [[Preferred are the codes with system XXX, which leave the specimen to Specimen.type.]])
 * code ^short = "The target, as a LOINC code with property ThreshNum"
 * code ^comment = "A LOINC Cycle Threshold code naming the target, e.g. 85799-5 |Bordetella pertussis+bronchiseptica+holmesii IS481 DNA [Cycle Threshold #] in Specimen by NAA with probe detection|. Their method, NAA with probe detection, follows from the Ct value itself."
 

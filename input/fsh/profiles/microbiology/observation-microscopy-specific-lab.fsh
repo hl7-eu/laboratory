@@ -37,9 +37,8 @@ Where the open question *what is there to see?* is answered, use [Observation Re
 * ^purpose = "This profile constrains the laboratory Observation for the microscopic examination aimed at a target named in the test code, following the conventions of the HL7 Europe Laboratory Semantic Workgroup."
 * . ^short = "Specific microscopy: was the target seen"
 
-* code from MicroscopySpecificCodePreferredEuVs (extensible)
-* code ^binding.description = "Preferred are the codes with system XXX, which leave the specimen to Specimen.type."
-* insert MicrobiologyAdmittedCodesBindingEu(code, MicroscopySpecificCodeEuVs)
+* code from MicroscopySpecificCodeEuVs (extensible)
+* insert MicrobiologyPreferredBindingEu(code, MicroscopySpecificCodePreferredEuVs, [[Preferred are the codes with system XXX, which leave the specimen to Specimen.type.]])
 * code ^short = "The specific microscopy; the target is in the LOINC component"
 * code ^comment = "A LOINC code of class MICRO with property PrId or PrThr and a microscopy method, naming the target in the component, e.g. 32206-5 |Plasmodium sp identified in Blood by Light microscopy|. Preferred are the codes with system XXX, e.g. 673-4 |Ova and parasites identified in Specimen by Light microscopy|, with the specimen in Specimen.type. Codes with the component *Microscopic observation* name no target and belong to the general microscopy."
 

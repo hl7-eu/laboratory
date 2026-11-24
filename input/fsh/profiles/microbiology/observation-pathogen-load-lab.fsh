@@ -24,9 +24,8 @@ The Ct value of a qualitative real-time PCR is not a load; it is reported with [
 * ^purpose = "This profile constrains the laboratory Observation for the quantitative molecular measurement of a pathogen load, following the conventions of the HL7 Europe Laboratory Semantic Workgroup."
 * . ^short = "Pathogen load: how much of the pathogen's nucleic acid is in the specimen"
 
-* code from PathogenLoadCodePreferredEuVs (extensible)
-* code ^binding.description = "Preferred are the codes with system XXX or {Specimen}, which leave the specimen to Specimen.type; the target are codes that leave the method open as well."
-* insert MicrobiologyAdmittedCodesBindingEu(code, PathogenLoadCodeEuVs)
+* code from PathogenLoadCodeEuVs (extensible)
+* insert MicrobiologyPreferredBindingEu(code, PathogenLoadCodePreferredEuVs, [[Preferred are the codes with system XXX or {Specimen}, which leave the specimen to Specimen.type; the target are codes that leave the method open as well.]])
 * code ^short = "The pathogen and the quantity measured, as a LOINC code with property ACnc or NCnc"
 * code ^comment = "ACnc for a load in IU/mL, NCnc for copies/mL, e.g. 34720-3 |Cytomegalovirus DNA [Units/volume] (viral load) in Specimen by NAA with probe detection|. Preferred are the codes with system XXX; codes with a fixed material, e.g. in serum or plasma, are accepted, as the white paper finds pre-coordination practical for viral loads. The specimen is given in Specimen.type in any case. Log-transformed results are not covered in this edition."
 

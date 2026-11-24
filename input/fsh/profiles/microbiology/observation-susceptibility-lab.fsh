@@ -28,9 +28,8 @@ The susceptibility results of one isolate are grouped by an [Observation Results
 * . ^short = "Susceptibility of an isolate to one antimicrobial"
 * obeys eu-lab-susc-1 and eu-lab-susc-2
 
-* code from SusceptibilityCodePreferredEuVs (extensible)
-* code ^binding.description = "Preferred are the codes without a method; the method is given in Observation.method, which makes it easy to query all susceptibility results."
-* insert MicrobiologyAdmittedCodesBindingEu(code, SusceptibilityCodeEuVs)
+* code from SusceptibilityCodeEuVs (extensible)
+* insert MicrobiologyPreferredBindingEu(code, SusceptibilityCodePreferredEuVs, [[Preferred are the codes without a method; the method is given in Observation.method, which makes it easy to query all susceptibility results.]])
 * code ^short = "The antimicrobial tested, as a LOINC Susc code"
 * code ^comment = "A LOINC code with the property Susc and the class ABXBACT, naming the antimicrobial in the component, e.g. 18943-1 |Meropenem [Susceptibility]|. Preferred are the codes without a method; a code that pre-coordinates the method, e.g. 6652-2 |Meropenem [Susceptibility] by Minimum inhibitory concentration (MIC)|, is accepted, and the method is given in Observation.method as well. Codes for differential breakpoints name the route or the site of infection, e.g. 35783-0 |Cefuroxime.oral [Susceptibility]| or 103672-2 |Amoxicillin+Clavulanate [Susceptibility] for UTI|."
 

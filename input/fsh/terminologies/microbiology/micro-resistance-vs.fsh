@@ -16,7 +16,7 @@
 ValueSet: ResistanceCodeEuVs
 Id: micro-resistanceCode-eu-lab
 Title: "Resistance Codes"
-Description: """LOINC codes for the detection of a resistance mechanism or gene: property PrThr, "resistance" in the component, class MICRO or ABXBACT, active (workbook, sheet Molecular resistance, D4), and the codes of the workbook sheet Phenotypic resistence, which name the enzyme or mechanism without the word: extended-spectrum beta-lactamase, the carbapenemases, AmpC. PBP2a, cefoxitin resistance and inducible clindamycin resistance, which LOINC has no code for yet, come from [Microbiology Codes Pending in LOINC](CodeSystem-micro-pendingCode-eu-lab.html) until the requested codes exist (#195). 92246-8 and 108153-8 name no target and are excluded (workbook, D7). PrId codes such as 63368-5 |Carbapenem resistance genes [Identifier] by NAA with probe detection| are not admitted (SEM-28). The preferred codes are in [Resistance Codes, preferred](ValueSet-micro-resistanceCodePreferred-eu-lab.html)."""
+Description: """LOINC codes for the detection of a resistance mechanism or gene: property PrThr, "resistance" in the component, class MICRO or ABXBACT, active (workbook, sheet Molecular resistance, D4), and the codes of the workbook sheet Phenotypic resistence, which name the enzyme or mechanism without the word: extended-spectrum beta-lactamase, the carbapenemases, AmpC. 92246-8 and 108153-8 name no target and are excluded (workbook, D7). PrId codes such as 63368-5 |Carbapenem resistance genes [Identifier] by NAA with probe detection| are not admitted (SEM-28). The preferred codes are in [Resistance Codes, preferred](ValueSet-micro-resistanceCodePreferred-eu-lab.html)."""
 * insert LOINCCopyrightForVS
 * insert MicrobiologyDraftStatusEu
 * include codes from system $loinc where COMPONENT regex ".*[Rr]esistance.*" and PROPERTY = "LP217195-9" and CLASS = "LP7819-8" and STATUS = "ACTIVE" // MICRO
@@ -33,10 +33,6 @@ Description: """LOINC codes for the detection of a resistance mechanism or gene:
 * $loinc#105038-4 "OXA-40 and OXA-58 carbapenemase [Presence] by Rapid immunoassay"
 // AmpC as a phenotypic test; a method-neutral code is requested (#195)
 * $loinc#85046-1 "AmpC beta-lactamase by cefoTEtan to cefoTEtan+cloxacillin inhibitory concentration ratio [Presence] by ARD gradient strip"
-// Not in LOINC yet; requested (#195), codes of this guide until then (SEM-31)
-* MicrobiologyPendingCodeEuCs#pbp2a "PBP2a protein [Presence] in Isolate"
-* MicrobiologyPendingCodeEuCs#cefoxitin-resistance "Cefoxitin resistance [Presence]"
-* MicrobiologyPendingCodeEuCs#inducible-clindamycin-resistance "Inducible clindamycin resistance [Presence]"
 // No target named (workbook, D7)
 * exclude $loinc#92246-8 "Microorganism resistance mutation detected [Presence] by Molecular method"
 * exclude $loinc#108153-8 "Genetic determinants of antimicrobial resistance [Presence] in Specimen by NAA with non-probe detection"
