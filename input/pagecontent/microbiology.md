@@ -301,7 +301,9 @@ the specific culture; both are readings of the same culture, which is why
 `hasMember` links them.
 
 {% capture op_text %}
-Whether the specific culture codes have the property `PrThr`, `PrId` or both is under discussion in the workgroup. Until it decides, this guide admits both and follows the discussion of 2026-11-06: *Detected* and *Not detected* rather than growth (workbook), and unexpected growth with a `PrThr` code as a general culture of its own. The white paper says that a specific culture shall be reported as such, not as a general culture; the reference through `hasMember` keeps the growth tied to the specific culture.
+Whether the specific culture codes have the property `PrThr`, `PrId` or both is under discussion in the workgroup. Until it decides, this guide admits both.
+
+The result follows the discussion of 2026-11-06 and the table of the white paper's data model: *Detected* or *Not detected*, which say whether the target named in the code was found. The workbook, the diagram of the white paper's data model, its culture chapter and an example of the Berlin workshop give *No growth* and *Organism growth* instead; growth on a medium favouring the target need not be the target. Unexpected growth with a `PrThr` code is a general culture of its own. The white paper says that a specific culture shall be reported as such, not as a general culture; the reference through `hasMember` keeps the growth tied to the specific culture.
 
 Preferred are the codes with system `XXX`, with the specimen in `Specimen.type`, as the minutes recommend for post-coordinating the specimen. Open is whether the workgroup wants LOINC codes with system `{Specimen}` for culture. LOINC has them only with the method `{Molgen}`; their list of permitted specimens contains both *Specimen* and *Isolate*, so one such code could replace the `XXX` and the `Isolate` code of a target.
 {% endcapture %}
